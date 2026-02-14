@@ -7,7 +7,7 @@
 
 **CodeVerse** is a free, open-source, multi-language programming education platform built with pure HTML, CSS, and JavaScript. It features interactive tutorials, embedded video lessons, quizzes with instant feedback, progress tracking, dark mode, and a fully responsive design — all running entirely in the browser with zero dependencies.
 
-🔗 **[Live Demo →](https://mab-barket.github.io/Aict-Project/)**
+🔗 **[Live Demo →](https://mab-barket.github.io/CodeVerse/)**
 
 ---
 
@@ -119,12 +119,12 @@ CodeVerse/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/mAB-Barket/Aict-Project.git
+   git clone https://github.com/mAB-Barket/CodeVerse.git
    ```
 
 2. **Open in browser:**
    ```bash
-   cd Aict-Project
+   cd CodeVerse
    open index.html
    ```
    Or simply double-click `index.html` — no server, no build tools, no dependencies required.
@@ -160,7 +160,7 @@ Contributions are welcome! Here's how you can help:
 
 ```bash
 # Fork and clone
-git clone https://github.com/YOUR-USERNAME/Aict-Project.git
+git clone https://github.com/YOUR-USERNAME/CodeVerse.git
 
 # Create a feature branch
 git checkout -b feature/new-tutorial
