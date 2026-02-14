@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Python functions — defining, calling, parameters, return values, and lambda expressions.">
+    <title>Functions &amp; Lambdas - Python - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="python-functions">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html" class="active">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Python Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="lists.html"><span class="lesson-number">4</span> Lists &amp; Dicts</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html" class="active"><span class="lesson-number">7</span> Functions</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 7 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="87" style="width:87%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Python</a> &rsaquo; <span>Functions &amp; Lambdas</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 7</span>
+                <span class="reading-time">&#128338; 16 min read</span>
+                <span class="difficulty">&#128293; Intermediate</span>
+            </div>
+
+            <h1>Functions &amp; Lambdas</h1>
+
+            <div class="content-body">
+                <h2>What Are Functions?</h2>
+                <p>Functions are reusable blocks of code that perform a specific task. They are the building blocks of well-organized, maintainable software. Instead of writing the same code multiple times, you define it once in a function and call it whenever you need it. Functions help you follow the <strong>DRY (Don't Repeat Yourself)</strong> principle.</p>
+
+                <p>In Python, functions are defined using the <code>def</code> keyword followed by the function name, parentheses containing any parameters, and a colon. The function body is indented. Functions can accept inputs (parameters), perform operations, and return results. Python functions are <strong>first-class objects</strong> — they can be assigned to variables, passed as arguments to other functions, and returned from functions.</p>
+
+                <p>Python also comes with many useful built-in functions like <code>print()</code>, <code>len()</code>, <code>range()</code>, <code>type()</code>, <code>input()</code>, <code>sorted()</code>, and <code>enumerate()</code>. Understanding how to create your own functions alongside these built-ins is essential to becoming proficient in Python.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Defining and calling a basic function</span>
+<span class="keyword">def</span> <span class="function">greet</span>(name):
+    <span class="string">"""Greet a person by name."""</span>
+    <span class="function">print</span>(<span class="string">f"Hello, <span class="keyword">{name}</span>! Welcome to Python."</span>)
+
+<span class="function">greet</span>(<span class="string">"Alice"</span>)   <span class="comment"># Hello, Alice! Welcome to Python.</span>
+<span class="function">greet</span>(<span class="string">"Bob"</span>)     <span class="comment"># Hello, Bob! Welcome to Python.</span>
+
+<span class="comment"># Function with return value</span>
+<span class="keyword">def</span> <span class="function">add</span>(a, b):
+    <span class="string">"""Return the sum of two numbers."""</span>
+    <span class="keyword">return</span> a <span class="operator">+</span> b
+
+result <span class="operator">=</span> <span class="function">add</span>(<span class="number">3</span>, <span class="number">7</span>)
+<span class="function">print</span>(<span class="string">f"3 + 7 = <span class="keyword">{result}</span>"</span>)  <span class="comment"># 3 + 7 = 10</span>
+
+<span class="comment"># Function with multiple return values (returns a tuple)</span>
+<span class="keyword">def</span> <span class="function">divide</span>(a, b):
+    <span class="string">"""Return quotient and remainder."""</span>
+    quotient <span class="operator">=</span> a <span class="operator">//</span> b
+    remainder <span class="operator">=</span> a <span class="operator">%</span> b
+    <span class="keyword">return</span> quotient, remainder
+
+q, r <span class="operator">=</span> <span class="function">divide</span>(<span class="number">17</span>, <span class="number">5</span>)
+<span class="function">print</span>(<span class="string">f"17 ÷ 5 = <span class="keyword">{q}</span> remainder <span class="keyword">{r}</span>"</span>)  <span class="comment"># 17 ÷ 5 = 3 remainder 2</span></code></pre>
+                </div>
+
+                <h2>Parameters &amp; Arguments</h2>
+                <p>Python functions support several types of parameters, giving you tremendous flexibility in how you design your function interfaces:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Default parameter values</span>
+<span class="keyword">def</span> <span class="function">power</span>(base, exponent<span class="operator">=</span><span class="number">2</span>):
+    <span class="string">"""Raise base to exponent (default: squared)."""</span>
+    <span class="keyword">return</span> base <span class="operator">**</span> exponent
+
+<span class="function">print</span>(<span class="function">power</span>(<span class="number">5</span>))       <span class="comment"># 25 (uses default exponent=2)</span>
+<span class="function">print</span>(<span class="function">power</span>(<span class="number">2</span>, <span class="number">10</span>))  <span class="comment"># 1024</span>
+
+<span class="comment"># Keyword arguments — order doesn't matter</span>
+<span class="keyword">def</span> <span class="function">create_profile</span>(name, age, city<span class="operator">=</span><span class="string">"Unknown"</span>):
+    <span class="keyword">return</span> {<span class="string">"name"</span>: name, <span class="string">"age"</span>: age, <span class="string">"city"</span>: city}
+
+profile <span class="operator">=</span> <span class="function">create_profile</span>(age<span class="operator">=</span><span class="number">25</span>, name<span class="operator">=</span><span class="string">"Alice"</span>, city<span class="operator">=</span><span class="string">"NYC"</span>)
+<span class="function">print</span>(profile)
+<span class="comment"># {'name': 'Alice', 'age': 25, 'city': 'NYC'}</span>
+
+<span class="comment"># *args — accept any number of positional arguments</span>
+<span class="keyword">def</span> <span class="function">sum_all</span>(<span class="operator">*</span>args):
+    <span class="string">"""Sum any number of arguments."""</span>
+    <span class="function">print</span>(<span class="string">f"Received: <span class="keyword">{args}</span>"</span>)  <span class="comment"># args is a tuple</span>
+    <span class="keyword">return</span> <span class="function">sum</span>(args)
+
+<span class="function">print</span>(<span class="function">sum_all</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))        <span class="comment"># 6</span>
+<span class="function">print</span>(<span class="function">sum_all</span>(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>))  <span class="comment"># 100</span>
+
+<span class="comment"># **kwargs — accept any number of keyword arguments</span>
+<span class="keyword">def</span> <span class="function">print_info</span>(<span class="operator">**</span>kwargs):
+    <span class="string">"""Print all keyword arguments."""</span>
+    <span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.<span class="function">items</span>():
+        <span class="function">print</span>(<span class="string">f"<span class="keyword">{key}</span>: <span class="keyword">{value}</span>"</span>)
+
+<span class="function">print_info</span>(name<span class="operator">=</span><span class="string">"Alice"</span>, language<span class="operator">=</span><span class="string">"Python"</span>, level<span class="operator">=</span><span class="string">"Expert"</span>)</code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Write <strong>docstrings</strong> for your functions! The triple-quoted string right after <code>def</code> becomes the function's documentation. You can access it with <code>help(function_name)</code> or <code>function_name.__doc__</code>. Good docstrings make your code professional and self-documenting.</p>
+                </div>
+
+                <h2>Scope &amp; the global Keyword</h2>
+                <p>Variables defined inside a function are <strong>local</strong> to that function — they only exist within the function's scope. Variables defined outside functions are <strong>global</strong>. Python follows the <strong>LEGB rule</strong> for name resolution: Local → Enclosing → Global → Built-in:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code>x <span class="operator">=</span> <span class="number">10</span>  <span class="comment"># Global variable</span>
+
+<span class="keyword">def</span> <span class="function">my_function</span>():
+    x <span class="operator">=</span> <span class="number">20</span>  <span class="comment"># Local variable — shadows the global</span>
+    <span class="function">print</span>(<span class="string">f"Inside function: x = <span class="keyword">{x}</span>"</span>)  <span class="comment"># 20</span>
+
+<span class="function">my_function</span>()
+<span class="function">print</span>(<span class="string">f"Outside function: x = <span class="keyword">{x}</span>"</span>)  <span class="comment"># 10 (unchanged)</span>
+
+<span class="comment"># Using 'global' to modify a global variable</span>
+counter <span class="operator">=</span> <span class="number">0</span>
+
+<span class="keyword">def</span> <span class="function">increment</span>():
+    <span class="keyword">global</span> counter
+    counter <span class="operator">+=</span> <span class="number">1</span>
+
+<span class="function">increment</span>()
+<span class="function">increment</span>()
+<span class="function">print</span>(counter)  <span class="comment"># 2</span>
+
+<span class="comment"># Nested functions — closures (enclosing scope)</span>
+<span class="keyword">def</span> <span class="function">outer</span>():
+    message <span class="operator">=</span> <span class="string">"Hello from outer!"</span>
+    
+    <span class="keyword">def</span> <span class="function">inner</span>():
+        <span class="function">print</span>(message)  <span class="comment"># Accesses enclosing scope</span>
+    
+    <span class="keyword">return</span> inner
+
+my_func <span class="operator">=</span> <span class="function">outer</span>()
+<span class="function">my_func</span>()  <span class="comment"># "Hello from outer!" — closure remembers the value</span></code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Best Practice:</strong> Avoid using <code>global</code> variables when possible. They make code harder to understand, test, and debug because any function can modify them. Instead, pass values as arguments and return results.</p>
+                </div>
+
+                <h2>Lambda Functions</h2>
+                <p>Lambda functions are small, anonymous functions defined with the <code>lambda</code> keyword. They can have any number of parameters but only a single expression (no statements, no multi-line bodies). Lambdas are most useful as short, throwaway functions passed as arguments to higher-order functions like <code>sorted()</code>, <code>map()</code>, and <code>filter()</code>:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Lambda syntax: lambda parameters: expression</span>
+square <span class="operator">=</span> <span class="keyword">lambda</span> x: x <span class="operator">**</span> <span class="number">2</span>
+<span class="function">print</span>(<span class="function">square</span>(<span class="number">5</span>))  <span class="comment"># 25</span>
+
+add <span class="operator">=</span> <span class="keyword">lambda</span> a, b: a <span class="operator">+</span> b
+<span class="function">print</span>(<span class="function">add</span>(<span class="number">3</span>, <span class="number">7</span>))  <span class="comment"># 10</span>
+
+<span class="comment"># Sorting with lambda as the key function</span>
+students <span class="operator">=</span> [
+    {<span class="string">"name"</span>: <span class="string">"Alice"</span>, <span class="string">"gpa"</span>: <span class="number">3.9</span>},
+    {<span class="string">"name"</span>: <span class="string">"Bob"</span>, <span class="string">"gpa"</span>: <span class="number">3.5</span>},
+    {<span class="string">"name"</span>: <span class="string">"Charlie"</span>, <span class="string">"gpa"</span>: <span class="number">3.7</span>},
+]
+<span class="comment"># Sort by GPA descending</span>
+sorted_students <span class="operator">=</span> <span class="function">sorted</span>(students, key<span class="operator">=</span><span class="keyword">lambda</span> s: s[<span class="string">"gpa"</span>], reverse<span class="operator">=</span><span class="keyword">True</span>)
+<span class="keyword">for</span> s <span class="keyword">in</span> sorted_students:
+    <span class="function">print</span>(<span class="string">f"<span class="keyword">{s['name']}</span>: <span class="keyword">{s['gpa']}</span>"</span>)
+
+<span class="comment"># map() — apply a function to every item</span>
+nums <span class="operator">=</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+doubled <span class="operator">=</span> <span class="function">list</span>(<span class="function">map</span>(<span class="keyword">lambda</span> x: x <span class="operator">*</span> <span class="number">2</span>, nums))
+<span class="function">print</span>(doubled)  <span class="comment"># [2, 4, 6, 8, 10]</span>
+
+<span class="comment"># filter() — keep items that satisfy a condition</span>
+evens <span class="operator">=</span> <span class="function">list</span>(<span class="function">filter</span>(<span class="keyword">lambda</span> x: x <span class="operator">%</span> <span class="number">2</span> <span class="operator">==</span> <span class="number">0</span>, nums))
+<span class="function">print</span>(evens)  <span class="comment"># [2, 4]</span></code></pre>
+                </div>
+
+                <h2>Decorators</h2>
+                <p>Decorators are a powerful Python feature that allow you to modify or enhance functions without changing their code. A decorator is a function that takes another function as input and returns a new function with added behavior. They're widely used in frameworks like Flask and Django:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">import</span> time
+
+<span class="comment"># Creating a decorator that measures execution time</span>
+<span class="keyword">def</span> <span class="function">timer</span>(func):
+    <span class="string">"""Decorator that prints how long a function takes."""</span>
+    <span class="keyword">def</span> <span class="function">wrapper</span>(<span class="operator">*</span>args, <span class="operator">**</span>kwargs):
+        start <span class="operator">=</span> time.<span class="function">time</span>()
+        result <span class="operator">=</span> <span class="function">func</span>(<span class="operator">*</span>args, <span class="operator">**</span>kwargs)
+        end <span class="operator">=</span> time.<span class="function">time</span>()
+        <span class="function">print</span>(<span class="string">f"<span class="keyword">{func.__name__}</span> took <span class="keyword">{end - start:.4f}</span>s"</span>)
+        <span class="keyword">return</span> result
+    <span class="keyword">return</span> wrapper
+
+<span class="comment"># Using the decorator with @ syntax</span>
+<span class="decorator">@timer</span>
+<span class="keyword">def</span> <span class="function">slow_function</span>():
+    <span class="string">"""Simulate a slow operation."""</span>
+    time.<span class="function">sleep</span>(<span class="number">1</span>)
+    <span class="function">print</span>(<span class="string">"Done!"</span>)
+
+<span class="function">slow_function</span>()
+<span class="comment"># Output:</span>
+<span class="comment"># Done!</span>
+<span class="comment"># slow_function took 1.0012s</span>
+
+<span class="comment"># Another practical decorator: retry on failure</span>
+<span class="keyword">def</span> <span class="function">retry</span>(max_attempts<span class="operator">=</span><span class="number">3</span>):
+    <span class="keyword">def</span> <span class="function">decorator</span>(func):
+        <span class="keyword">def</span> <span class="function">wrapper</span>(<span class="operator">*</span>args, <span class="operator">**</span>kwargs):
+            <span class="keyword">for</span> attempt <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, max_attempts <span class="operator">+</span> <span class="number">1</span>):
+                <span class="keyword">try</span>:
+                    <span class="keyword">return</span> <span class="function">func</span>(<span class="operator">*</span>args, <span class="operator">**</span>kwargs)
+                <span class="keyword">except</span> <span class="type">Exception</span> <span class="keyword">as</span> e:
+                    <span class="function">print</span>(<span class="string">f"Attempt <span class="keyword">{attempt}</span> failed: <span class="keyword">{e}</span>"</span>)
+            <span class="keyword">return</span> <span class="keyword">None</span>
+        <span class="keyword">return</span> wrapper
+    <span class="keyword">return</span> decorator
+
+<span class="decorator">@retry</span>(max_attempts<span class="operator">=</span><span class="number">3</span>)
+<span class="keyword">def</span> <span class="function">risky_operation</span>():
+    <span class="comment"># Some operation that might fail</span>
+    <span class="keyword">pass</span></code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> The <code>@decorator</code> syntax is just shorthand. Writing <code>@timer</code> above a function is equivalent to writing <code>slow_function = timer(slow_function)</code> after the function definition. The <code>@</code> syntax is cleaner and more readable.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> What does a function return if it has no <code>return</code> statement?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> 0</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> ""</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> None</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Error</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> What does <code>**kwargs</code> collect?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> Positional arguments as a list</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Positional arguments as a tuple</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> Keyword arguments as a dictionary</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> All arguments as a set</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is the output of <code>(lambda x, y: x * y)(3, 4)</code>?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> 7</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> 12</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> 34</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Error</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="loops.html" class="prev-link">&larr; Loops</a>
+                <a href="oop.html" class="next-link">Object-Oriented Programming &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

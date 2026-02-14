@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get started with Java — what it is, JVM, JDK setup, and writing your first Java program.">
+    <title>Introduction to Java - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="java-introduction">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html" class="active">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Java Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html" class="active"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays &amp; Collections</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="methods.html"><span class="lesson-number">7</span> Methods</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 1 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="12" style="width:12%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Java</a> &rsaquo; <span>Introduction</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 1</span>
+                <span class="reading-time">&#128338; 12 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Introduction to Java</h1>
+
+            <div class="content-body">
+                <h2>What is Java?</h2>
+                <p>Java is a high-level, class-based, object-oriented programming language that was designed to have as few implementation dependencies as possible. It follows the principle of <strong>"Write Once, Run Anywhere" (WORA)</strong>, meaning that compiled Java code can run on any platform that supports Java without the need for recompilation. Java is used in a vast range of applications — from Android mobile apps and enterprise web servers to scientific computing and cloud-based platforms.</p>
+
+                <p>Java was created by <strong>James Gosling</strong> at <strong>Sun Microsystems</strong> and was first released in <strong>1995</strong>. Originally called "Oak" and later "Green," the language was eventually renamed Java, inspired by Java coffee from Indonesia. Sun Microsystems was later acquired by Oracle Corporation in 2010, which now maintains and develops the language. Java has since become one of the most widely adopted programming languages in history, powering billions of devices worldwide.</p>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Fun Fact:</strong> Java was originally designed for interactive television, but the technology was too advanced for the digital cable television industry at the time. It later found its perfect home in web and enterprise development.</p>
+                </div>
+
+                <h2>Key Features of Java</h2>
+                <p>Java offers several powerful features that have contributed to its enduring popularity:</p>
+                <ul>
+                    <li><strong>Write Once, Run Anywhere (WORA):</strong> Java source code is compiled into platform-independent bytecode that runs on any system with a Java Virtual Machine (JVM).</li>
+                    <li><strong>Object-Oriented Programming (OOP):</strong> Java is built on OOP principles — encapsulation, inheritance, polymorphism, and abstraction — enabling modular, reusable, and maintainable code.</li>
+                    <li><strong>Platform Independence:</strong> Unlike C or C++, Java programs are not compiled to a specific processor architecture. The JVM abstracts away hardware differences.</li>
+                    <li><strong>Automatic Garbage Collection:</strong> Java automatically manages memory by reclaiming objects that are no longer in use, reducing the risk of memory leaks and dangling pointers.</li>
+                    <li><strong>Strong Typing:</strong> Java enforces strict type checking at compile time, catching many errors before your code ever runs. Every variable must be declared with a specific data type.</li>
+                    <li><strong>Rich Standard Library:</strong> Java comes with an extensive standard library (Java API) covering data structures, networking, file I/O, concurrency, and much more.</li>
+                    <li><strong>Multithreading:</strong> Java has built-in support for concurrent programming, allowing multiple threads of execution within a single program.</li>
+                </ul>
+
+                <h2>Java vs Other Languages</h2>
+                <p>Java occupies a unique position among programming languages. Unlike Python, which is interpreted and dynamically typed, Java is compiled to bytecode and statically typed, offering better performance and earlier error detection. Compared to C++, Java trades some raw performance for automatic memory management and platform independence. Unlike JavaScript, which runs primarily in web browsers, Java is a general-purpose language used on servers, desktops, and mobile devices. Java's combination of performance, portability, and robustness makes it the backbone of enterprise software development.</p>
+
+                <h2>JDK, JRE, and JVM</h2>
+                <p>Understanding the Java ecosystem requires knowing three key components:</p>
+                <ul>
+                    <li><strong>JVM (Java Virtual Machine):</strong> The engine that executes Java bytecode. Each operating system has its own JVM implementation, which is what makes Java platform-independent. The JVM reads the compiled <code>.class</code> files and translates the bytecode into machine-specific instructions at runtime.</li>
+                    <li><strong>JRE (Java Runtime Environment):</strong> The JRE includes the JVM plus the core class libraries needed to run Java applications. If you only need to <em>run</em> Java programs, the JRE is sufficient.</li>
+                    <li><strong>JDK (Java Development Kit):</strong> The JDK is the complete development toolkit. It includes the JRE, the Java compiler (<code>javac</code>), the debugger, and other development tools. You need the JDK to <em>write and compile</em> Java programs.</li>
+                </ul>
+
+                <p>To start developing in Java, download the latest JDK from <strong>oracle.com</strong> or use an open-source distribution like <strong>OpenJDK</strong>. After installation, verify it by opening your terminal and typing:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Check your Java version in the terminal</span>
+<span class="comment">// Type these commands in your terminal (not in a Java file):</span>
+<span class="comment">// java --version</span>
+<span class="comment">// javac --version</span>
+
+<span class="comment">// You should see output like:</span>
+<span class="comment">// java 21.0.1 2023-10-17 LTS</span>
+<span class="comment">// javac 21.0.1</span></code></pre>
+                </div>
+
+                <h2>Your First Java Program</h2>
+                <p>Every programmer's journey begins with "Hello, World!" — a simple program that displays text on the screen. In Java, every application must have at least one class, and execution begins in the <code>main</code> method. Create a new file called <strong>HelloWorld.java</strong> (the filename must match the class name) and type the following:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// My first Java program</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="type">HelloWorld</span> {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="function">main</span>(<span class="type">String</span>[] args) {
+        System.out.<span class="function">println</span>(<span class="string">"Hello, World!"</span>);
+    }
+}</code></pre>
+                </div>
+
+                <p>To compile and run this program, open your terminal, navigate to the directory containing your file, and type:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Step 1: Compile the source code into bytecode</span>
+<span class="comment">// javac HelloWorld.java</span>
+
+<span class="comment">// Step 2: Run the compiled bytecode with the JVM</span>
+<span class="comment">// java HelloWorld</span>
+
+<span class="comment">// Output:</span>
+<span class="comment">// Hello, World!</span></code></pre>
+                </div>
+
+                <p>The <code>javac</code> command compiles your <code>.java</code> source file into a <code>.class</code> file containing bytecode. The <code>java</code> command then launches the JVM, which loads and executes that bytecode. Notice how Java requires a class wrapper and a <code>main</code> method — this is the entry point for every Java application. The <code>public</code> keyword makes the class and method accessible from anywhere, <code>static</code> means the method belongs to the class itself (not an instance), and <code>void</code> indicates the method doesn't return a value.</p>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> In Java, the filename <strong>must</strong> match the public class name exactly (including case). If your class is called <code>HelloWorld</code>, the file must be named <code>HelloWorld.java</code>. Java is case-sensitive, so <code>helloworld.java</code> would cause a compilation error.</p>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Important:</strong> Every statement in Java must end with a <strong>semicolon (<code>;</code>)</strong>. Unlike Python, which uses indentation to define code blocks, Java uses <strong>curly braces <code>{}</code></strong>. While indentation is not required by the compiler, it is strongly recommended for readability.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> Who created Java?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> James Gosling</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Dennis Ritchie</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Guido van Rossum</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Bjarne Stroustrup</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> What does JVM stand for?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> Java Virtual Machine</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Java Visual Manager</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Java Version Module</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Java Variable Memory</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is Java's "Write Once, Run Anywhere" principle?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> Java code compiled to bytecode runs on any platform with a JVM</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Java only runs on Windows</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Java code must be rewritten for each OS</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Java doesn't support cross-platform</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <div></div>
+                <a href="variables.html" class="next-link">Variables &amp; Data Types &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

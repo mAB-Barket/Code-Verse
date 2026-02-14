@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn DOM manipulation with JavaScript — selecting elements, events, and dynamic page updates.">
+    <title>DOM Manipulation - JavaScript - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="javascript-dom">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="index.html" class="active">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">JavaScript Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="dom.html" class="active"><span class="lesson-number">8</span> DOM</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 8 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="100" style="width:100%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">JavaScript</a> &rsaquo; <span>DOM Manipulation</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 8</span>
+                <span class="reading-time">&#128338; 15 min read</span>
+                <span class="difficulty">&#127793; Intermediate</span>
+            </div>
+
+            <h1>DOM Manipulation</h1>
+
+            <div class="content-body">
+                <h2>What is the DOM?</h2>
+                <p>The <strong>Document Object Model (DOM)</strong> is a programming interface that represents an HTML document as a tree of objects. Every HTML element becomes a node in this tree, and JavaScript can access, modify, add, or remove any of these nodes. The DOM is what makes web pages interactive — without it, JavaScript couldn't change what you see on the screen.</p>
+
+                <p>When a browser loads an HTML page, it parses the markup and constructs the DOM tree. The root of this tree is the <code>document</code> object, which represents the entire page. From there, you can traverse to any element using methods like <code>querySelector()</code>, <code>getElementById()</code>, or <code>getElementsByClassName()</code>. The DOM is not part of JavaScript itself — it's a Web API provided by the browser that JavaScript can interact with.</p>
+
+                <p>Modern DOM manipulation revolves around a few core operations: <strong>selecting</strong> elements, <strong>reading and modifying</strong> their content and attributes, <strong>creating and removing</strong> elements, and <strong>listening for events</strong>. Understanding these four operations gives you the power to build any interactive web feature from scratch.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// === SELECTING ELEMENTS ===</span>
+
+<span class="comment">// querySelector — returns the FIRST matching element</span>
+<span class="keyword">const</span> heading <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">"h1"</span>);
+<span class="keyword">const</span> btn <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">".submit-btn"</span>);
+<span class="keyword">const</span> nav <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">"#mainNav"</span>);
+
+<span class="comment">// querySelectorAll — returns ALL matching elements (NodeList)</span>
+<span class="keyword">const</span> allLinks <span class="operator">=</span> document.<span class="function">querySelectorAll</span>(<span class="string">"a"</span>);
+<span class="keyword">const</span> cards <span class="operator">=</span> document.<span class="function">querySelectorAll</span>(<span class="string">".card"</span>);
+
+<span class="comment">// Older methods (still valid but less flexible)</span>
+<span class="keyword">const</span> byId <span class="operator">=</span> document.<span class="function">getElementById</span>(<span class="string">"mainNav"</span>);
+<span class="keyword">const</span> byClass <span class="operator">=</span> document.<span class="function">getElementsByClassName</span>(<span class="string">"card"</span>);
+<span class="keyword">const</span> byTag <span class="operator">=</span> document.<span class="function">getElementsByTagName</span>(<span class="string">"p"</span>);
+
+<span class="comment">// Loop over NodeList results</span>
+allLinks.<span class="function">forEach</span>(link <span class="operator">=&gt;</span> {
+    console.<span class="function">log</span>(link.<span class="type">href</span>);
+});</code></pre>
+                </div>
+
+                <h2>Modifying Content &amp; Attributes</h2>
+                <p>Once you've selected an element, you can read or change its content using properties like <code>textContent</code> (plain text), <code>innerHTML</code> (HTML markup), and <code>innerText</code> (rendered text). You can also modify any HTML attribute, toggle CSS classes, and dynamically change inline styles — all without reloading the page.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// === MODIFYING CONTENT ===</span>
+<span class="keyword">const</span> title <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">"h1"</span>);
+
+<span class="comment">// Read content</span>
+console.<span class="function">log</span>(title.<span class="type">textContent</span>);    <span class="comment">// "Original Title"</span>
+
+<span class="comment">// Change content</span>
+title.<span class="type">textContent</span> <span class="operator">=</span> <span class="string">"New Title"</span>;
+title.<span class="type">innerHTML</span> <span class="operator">=</span> <span class="string">"&lt;em&gt;Italic&lt;/em&gt; Title"</span>;  <span class="comment">// Parses HTML</span>
+
+<span class="comment">// === MODIFYING STYLES ===</span>
+title.<span class="type">style</span>.<span class="type">color</span> <span class="operator">=</span> <span class="string">"blue"</span>;
+title.<span class="type">style</span>.<span class="type">fontSize</span> <span class="operator">=</span> <span class="string">"2rem"</span>;       <span class="comment">// camelCase, not kebab-case</span>
+title.<span class="type">style</span>.<span class="type">backgroundColor</span> <span class="operator">=</span> <span class="string">"#f0f0f0"</span>;
+
+<span class="comment">// === MODIFYING CLASSES (recommended over inline styles) ===</span>
+title.<span class="type">classList</span>.<span class="function">add</span>(<span class="string">"highlight"</span>);
+title.<span class="type">classList</span>.<span class="function">remove</span>(<span class="string">"old-class"</span>);
+title.<span class="type">classList</span>.<span class="function">toggle</span>(<span class="string">"active"</span>);     <span class="comment">// Add if missing, remove if present</span>
+title.<span class="type">classList</span>.<span class="function">contains</span>(<span class="string">"highlight"</span>); <span class="comment">// true</span>
+
+<span class="comment">// === MODIFYING ATTRIBUTES ===</span>
+<span class="keyword">const</span> link <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">"a"</span>);
+link.<span class="function">setAttribute</span>(<span class="string">"href"</span>, <span class="string">"https://example.com"</span>);
+link.<span class="function">setAttribute</span>(<span class="string">"target"</span>, <span class="string">"_blank"</span>);
+console.<span class="function">log</span>(link.<span class="function">getAttribute</span>(<span class="string">"href"</span>));
+link.<span class="function">removeAttribute</span>(<span class="string">"target"</span>);</code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Best Practice:</strong> Prefer <code>classList.add()</code> / <code>classList.toggle()</code> over directly setting <code>style</code> properties. This keeps styling in CSS where it belongs and makes your JavaScript cleaner. Only use inline styles for truly dynamic values (like calculated positions or sizes).</p>
+                </div>
+
+                <h2>Creating Elements &amp; Handling Events</h2>
+                <p>JavaScript can dynamically create new HTML elements, insert them into the page, and remove existing ones. Combined with <strong>event listeners</strong>, you can build fully interactive interfaces. Events are actions or occurrences — clicks, key presses, form submissions, scrolls, hovers — that your code can respond to. The <code>addEventListener()</code> method is the modern, recommended way to handle events.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// === CREATING &amp; INSERTING ELEMENTS ===</span>
+<span class="keyword">const</span> newDiv <span class="operator">=</span> document.<span class="function">createElement</span>(<span class="string">"div"</span>);
+newDiv.<span class="type">textContent</span> <span class="operator">=</span> <span class="string">"I was created by JavaScript!"</span>;
+newDiv.<span class="type">className</span> <span class="operator">=</span> <span class="string">"dynamic-card"</span>;
+
+<span class="comment">// Append to the end of body</span>
+document.<span class="type">body</span>.<span class="function">appendChild</span>(newDiv);
+
+<span class="comment">// Insert before a specific element</span>
+<span class="keyword">const</span> container <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">".container"</span>);
+<span class="keyword">const</span> firstChild <span class="operator">=</span> container.<span class="type">firstElementChild</span>;
+container.<span class="function">insertBefore</span>(newDiv, firstChild);
+
+<span class="comment">// Remove an element</span>
+<span class="keyword">const</span> oldElement <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">".remove-me"</span>);
+oldElement<span class="operator">?.</span><span class="function">remove</span>();  <span class="comment">// Safe removal with optional chaining</span>
+
+<span class="comment">// === EVENT HANDLING ===</span>
+<span class="keyword">const</span> button <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">"#myButton"</span>);
+
+<span class="comment">// addEventListener — the modern, recommended approach</span>
+button.<span class="function">addEventListener</span>(<span class="string">"click"</span>, (event) <span class="operator">=&gt;</span> {
+    console.<span class="function">log</span>(<span class="string">"Button clicked!"</span>);
+    console.<span class="function">log</span>(<span class="string">"Target:"</span>, event.<span class="type">target</span>);
+    event.<span class="type">target</span>.<span class="type">textContent</span> <span class="operator">=</span> <span class="string">"Clicked!"</span>;
+});
+
+<span class="comment">// Common events: click, input, submit, keydown, mouseover, scroll</span>
+<span class="keyword">const</span> input <span class="operator">=</span> document.<span class="function">querySelector</span>(<span class="string">"#searchInput"</span>);
+input<span class="operator">?.</span><span class="function">addEventListener</span>(<span class="string">"input"</span>, (e) <span class="operator">=&gt;</span> {
+    console.<span class="function">log</span>(<span class="string">`User typed: <span class="keyword">${e.<span class="type">target</span>.<span class="type">value</span>}</span>`</span>);
+});
+
+<span class="comment">// Event delegation — handle events on parent</span>
+document.<span class="function">querySelector</span>(<span class="string">".card-list"</span>)<span class="operator">?.</span><span class="function">addEventListener</span>(<span class="string">"click"</span>, (e) <span class="operator">=&gt;</span> {
+    <span class="keyword">if</span> (e.<span class="type">target</span>.<span class="function">matches</span>(<span class="string">".card"</span>)) {
+        console.<span class="function">log</span>(<span class="string">"Card clicked:"</span>, e.<span class="type">target</span>.<span class="type">textContent</span>);
+    }
+});</code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Security Warning:</strong> Be cautious with <code>innerHTML</code> — it parses HTML, which means it can execute scripts if you insert user-provided content. This is a <strong>Cross-Site Scripting (XSS)</strong> vulnerability. For user-generated text, always use <code>textContent</code> instead, which treats everything as plain text.</p>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> Place your <code>&lt;script&gt;</code> tag at the bottom of the <code>&lt;body&gt;</code>, or use the <code>defer</code> attribute: <code>&lt;script src="app.js" defer&gt;&lt;/script&gt;</code>. This ensures the DOM is fully loaded before your JavaScript runs. Otherwise, <code>querySelector()</code> will return <code>null</code> because the elements don't exist yet.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> Which method selects the first matching element in the DOM?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> querySelectorAll()</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> querySelector()</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> getElementsByClassName()</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> getElementsByTagName()</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> Which property should you use to safely set text content (avoiding XSS)?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> innerHTML</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> textContent</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> outerHTML</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> innerText</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is the modern, recommended way to handle events?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> onclick attribute in HTML</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> element.onclick = function</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> element.addEventListener()</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> jQuery .on()</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4.</strong> What does <code>document.createElement("div")</code> do?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q4"> Selects an existing div</label>
+                            <label class="quiz-option"><input type="radio" name="q4" data-correct="true"> Creates a new div element in memory</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> Creates and appends a div to the page</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> Deletes all div elements</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="functions.html" class="prev-link">&larr; Functions &amp; Closures</a>
+                <a href="index.html" class="next-link">Course Overview &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curated developer resources — official docs, IDEs, practice platforms, YouTube channels, books, and structured learning paths for every programming language.">
+    <meta name="keywords" content="programming resources, coding tools, learn to code, developer tools, IDE, documentation">
+    <meta property="og:title" content="Developer Resources - CodeVerse">
+    <meta property="og:description" content="A curated collection of the best programming resources, tools, and learning paths.">
+    <title>Resources - CodeVerse</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <style>
+        /* Resources Page Specific Styles */
+        .resources-hero {
+            padding: 5rem 0 3rem;
+            background: linear-gradient(135deg, var(--surface-secondary) 0%, rgba(168, 85, 247, 0.06) 40%, rgba(0, 113, 227, 0.06) 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .resources-hero::before {
+            content: '';
+            position: absolute;
+            bottom: -40%; left: -20%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+            opacity: 0.3;
+            animation: heroFloat 18s ease-in-out infinite;
+        }
+        .resources-hero .container { position: relative; z-index: 1; }
+        .resources-hero h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); margin-bottom: 1rem; }
+        .resources-hero .subtitle {
+            font-size: 1.15rem; color: var(--text-tertiary);
+            max-width: 660px; margin: 0 auto 2rem; line-height: 1.7;
+        }
+        .resource-category-nav {
+            display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
+        }
+        .resource-category-nav a {
+            padding: 0.5rem 1.25rem;
+            border: 1.5px solid var(--border-primary);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem; font-weight: 500;
+            color: var(--text-secondary);
+            transition: all var(--transition-fast);
+        }
+        .resource-category-nav a:hover {
+            border-color: var(--lcd-blue);
+            color: var(--lcd-blue);
+            background: rgba(0, 113, 227, 0.06);
+        }
+
+        /* Resource cards */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .resource-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            padding: 1.75rem;
+            transition: all var(--transition-base);
+            display: flex; flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+        .resource-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--lcd-blue), var(--lcd-purple));
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .resource-card:hover::before { opacity: 1; }
+
+        .resource-card-header {
+            display: flex; align-items: center;
+            gap: 1rem; margin-bottom: 1rem;
+        }
+        .resource-icon {
+            width: 52px; height: 52px;
+            border-radius: var(--radius-lg);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; flex-shrink: 0;
+        }
+        .resource-card-header h3 { font-size: 1.1rem; margin-bottom: 0.15rem; }
+        .resource-card .description {
+            color: var(--text-tertiary); font-size: 0.9rem;
+            line-height: 1.6; flex-grow: 1; margin-bottom: 1rem;
+        }
+        .resource-card .resource-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 0.85rem;
+            border-top: 1px solid var(--border-secondary);
+            font-size: 0.8rem;
+        }
+        .resource-card .resource-tags {
+            display: flex; gap: 0.35rem; flex-wrap: wrap;
+        }
+        .resource-tag {
+            padding: 0.15rem 0.5rem;
+            background: var(--surface-tertiary);
+            border-radius: var(--radius-sm);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-tertiary);
+        }
+        .resource-link {
+            color: var(--lcd-blue);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .resource-link:hover { text-decoration: underline; }
+
+        [data-theme="dark"] .resource-card { background: var(--surface-tertiary); }
+
+        /* Learning Path Cards */
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .path-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all var(--transition-base);
+        }
+        .path-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .path-card-header {
+            padding: 1.5rem 1.5rem 1rem;
+            background: linear-gradient(135deg, rgba(0, 113, 227, 0.06), rgba(168, 85, 247, 0.06));
+        }
+        .path-card-header .path-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .path-card-header h3 { margin-bottom: 0.25rem; }
+        .path-card-header p { font-size: 0.85rem; color: var(--text-tertiary); margin: 0; }
+        .path-card-body {
+            padding: 1.25rem 1.5rem 1.5rem;
+        }
+        .path-step {
+            display: flex; gap: 0.75rem; align-items: flex-start;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem; color: var(--text-secondary);
+        }
+        .path-step:last-child { margin-bottom: 0; }
+        .path-step-num {
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            background: rgba(0, 113, 227, 0.1);
+            color: var(--lcd-blue);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; font-weight: 700;
+            flex-shrink: 0;
+        }
+        .path-step span { padding-top: 2px; }
+
+        [data-theme="dark"] .path-card { background: var(--surface-tertiary); }
+        [data-theme="dark"] .path-card-header {
+            background: linear-gradient(135deg, var(--surface-secondary), var(--surface-tertiary));
+        }
+
+        /* YouTube Cards */
+        .youtube-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+        .youtube-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all var(--transition-base);
+            text-decoration: none;
+            color: inherit;
+        }
+        .youtube-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: #ff0000;
+        }
+        .youtube-icon {
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            background: #fee2e2;
+            margin: 0 auto 1rem;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            transition: all var(--transition-base);
+        }
+        .youtube-card:hover .youtube-icon { background: #ff0000; }
+        .youtube-card:hover .youtube-icon span { filter: brightness(10); }
+        .youtube-card h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .youtube-card .yt-subs {
+            font-size: 0.8rem; color: var(--text-tertiary);
+            margin-bottom: 0.5rem;
+        }
+        .youtube-card p { font-size: 0.8rem; color: var(--text-tertiary); margin: 0; }
+
+        [data-theme="dark"] .youtube-card { background: var(--surface-tertiary); }
+
+        /* Books Section */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        .book-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            display: flex; gap: 1.25rem; align-items: flex-start;
+            transition: all var(--transition-base);
+        }
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(0, 113, 227, 0.2);
+        }
+        .book-icon {
+            width: 48px; height: 64px;
+            border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; flex-shrink: 0;
+            border: 2px solid var(--border-primary);
+        }
+        .book-info h4 { font-size: 0.95rem; margin-bottom: 0.15rem; }
+        .book-info .author {
+            font-size: 0.8rem; color: var(--lcd-blue);
+            font-weight: 500; margin-bottom: 0.35rem;
+        }
+        .book-info p { font-size: 0.8rem; color: var(--text-tertiary); margin: 0; }
+
+        [data-theme="dark"] .book-card { background: var(--surface-tertiary); }
+
+        /* Cheat sheet cards */
+        .cheatsheet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .cheatsheet-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem;
+            text-align: center;
+            transition: all var(--transition-base);
+            text-decoration: none;
+            color: inherit;
+        }
+        .cheatsheet-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(0, 113, 227, 0.3);
+        }
+        .cheatsheet-card .cs-icon {
+            font-size: 2rem; margin-bottom: 0.5rem; display: block;
+        }
+        .cheatsheet-card h4 { font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .cheatsheet-card p { font-size: 0.75rem; color: var(--text-tertiary); margin: 0; }
+
+        [data-theme="dark"] .cheatsheet-card { background: var(--surface-tertiary); }
+
+        @media (max-width: 768px) {
+            .resource-grid, .path-grid, .youtube-grid, .book-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body data-page="resources">
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">&lt;/&gt;</div>
+                <span>CodeVerse</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#languages">Languages &#9662;</a>
+                    <div class="nav-dropdown-content">
+                        <a href="cpp/index.html"><span class="lang-dot" style="background:var(--cpp-color)"></span> C++</a>
+                        <a href="python/index.html"><span class="lang-dot" style="background:var(--python-color)"></span> Python</a>
+                        <a href="javascript/index.html"><span class="lang-dot" style="background:var(--javascript-color)"></span> JavaScript</a>
+                        <a href="java/index.html"><span class="lang-dot" style="background:var(--java-color)"></span> Java</a>
+                        <a href="csharp/index.html"><span class="lang-dot" style="background:var(--csharp-color)"></span> C#</a>
+                        <a href="webdev/index.html"><span class="lang-dot" style="background:var(--html-color)"></span> Web Dev</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="resources.html" class="active">Resources</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="resources-hero">
+        <div class="container">
+            <span class="badge badge-success">&#128218; Curated Collection</span>
+            <h1>Developer <span class="gradient-text">Resources</span></h1>
+            <p class="subtitle">A hand-picked collection of official documentation, tools, practice platforms, YouTube channels, books, and structured learning paths to accelerate your programming journey.</p>
+            <div class="resource-category-nav">
+                <a href="#docs">&#128196; Documentation</a>
+                <a href="#tools">&#128295; IDEs &amp; Tools</a>
+                <a href="#practice">&#127919; Practice</a>
+                <a href="#youtube">&#127909; YouTube</a>
+                <a href="#books">&#128218; Books</a>
+                <a href="#paths">&#128640; Learning Paths</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OFFICIAL DOCUMENTATION ===== -->
+    <section id="docs" class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Official Documentation</h2>
+                <p>The best place to learn any language is its official documentation. Bookmark these.</p>
+            </div>
+            <div class="resource-grid">
+                <a href="https://en.cppreference.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e8f0fe;color:var(--cpp-color);">C++</div>
+                        <div>
+                            <h3>C++ Reference</h3>
+                            <span class="badge badge-primary">Official</span>
+                        </div>
+                    </div>
+                    <p class="description">Comprehensive C++ language and standard library reference. The go-to resource for every C++ developer.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">C++</span><span class="resource-tag">STL</span></div>
+                        <span class="resource-link">Visit &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fef3c7;color:var(--python-color);">Py</div>
+                        <div>
+                            <h3>Python 3 Docs</h3>
+                            <span class="badge badge-success">Beginner Friendly</span>
+                        </div>
+                    </div>
+                    <p class="description">Official Python 3 documentation with tutorials, library reference, and language specification. Beginner-friendly and well-organized.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Python</span><span class="resource-tag">Tutorial</span></div>
+                        <span class="resource-link">Visit &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fef9c3;color:var(--javascript-dark);">JS</div>
+                        <div>
+                            <h3>MDN JavaScript</h3>
+                            <span class="badge badge-warning">Essential</span>
+                        </div>
+                    </div>
+                    <p class="description">Mozilla Developer Network — the gold standard for JavaScript, HTML, and CSS documentation. Trusted by millions of developers.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">JS</span><span class="resource-tag">Web</span><span class="resource-tag">CSS</span></div>
+                        <span class="resource-link">Visit &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://docs.oracle.com/en/java/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fef3c7;color:var(--java-color);">Ja</div>
+                        <div>
+                            <h3>Java Documentation</h3>
+                            <span class="badge badge-primary">Enterprise</span>
+                        </div>
+                    </div>
+                    <p class="description">Oracle's official Java SE documentation, API reference, and developer guides. Comprehensive and authoritative.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Java</span><span class="resource-tag">API</span></div>
+                        <span class="resource-link">Visit &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://doc.rust-lang.org/book/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fee2e2;color:var(--rust-color);">Rs</div>
+                        <div>
+                            <h3>The Rust Book</h3>
+                            <span class="badge badge-warning">Must Read</span>
+                        </div>
+                    </div>
+                    <p class="description">The official Rust programming language book. Often regarded as one of the best-written programming books available online — for free.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Rust</span><span class="resource-tag">Book</span></div>
+                        <span class="resource-link">Visit &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://go.dev/doc/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e0f7fa;color:var(--go-color);">Go</div>
+                        <div>
+                            <h3>Go Documentation</h3>
+                            <span class="badge badge-success">Beginner Friendly</span>
+                        </div>
+                    </div>
+                    <p class="description">Official Go docs with an interactive tour, effective Go guide, and standard library reference. Clean and pragmatic.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Go</span><span class="resource-tag">Tour</span></div>
+                        <span class="resource-link">Visit &#8594;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== IDEs & TOOLS ===== -->
+    <section id="tools" class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>IDEs &amp; Code Editors</h2>
+                <p>The right tools make all the difference. Here are the best code editors for every language.</p>
+            </div>
+            <div class="resource-grid">
+                <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e0e7ff;color:#007ACC;">&#9997;</div>
+                        <div>
+                            <h3>Visual Studio Code</h3>
+                            <span class="badge badge-success">Free &amp; #1 Pick</span>
+                        </div>
+                    </div>
+                    <p class="description">Microsoft's free, lightweight, incredibly powerful code editor. Supports every language with extensions. Our #1 recommendation for beginners and pros alike.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">All Languages</span><span class="resource-tag">Free</span></div>
+                        <span class="resource-link">Download &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fce4ec;color:#E91E63;">&#128736;</div>
+                        <div>
+                            <h3>JetBrains IDEs</h3>
+                            <span class="badge badge-warning">Pro</span>
+                        </div>
+                    </div>
+                    <p class="description">Professional IDEs: IntelliJ (Java), PyCharm (Python), WebStorm (JS), CLion (C++). Free community editions available for most products.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Java</span><span class="resource-tag">Python</span><span class="resource-tag">C++</span></div>
+                        <span class="resource-link">Learn More &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://www.sublimetext.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fff3e0;color:#FF9800;">&#9889;</div>
+                        <div>
+                            <h3>Sublime Text</h3>
+                            <span class="badge badge-primary">Fast</span>
+                        </div>
+                    </div>
+                    <p class="description">A sophisticated, lightning-fast text editor with a focus on speed and minimalism. Supports multiple languages with plugins and has a distraction-free writing mode.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">All Languages</span><span class="resource-tag">Fast</span></div>
+                        <span class="resource-link">Download &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://replit.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e8f5e9;color:#4CAF50;">&#127760;</div>
+                        <div>
+                            <h3>Replit</h3>
+                            <span class="badge badge-success">Online IDE</span>
+                        </div>
+                    </div>
+                    <p class="description">A browser-based IDE that lets you write and run code instantly — no installation required. Great for beginners, learning, and collaborative coding sessions.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">All Languages</span><span class="resource-tag">Online</span></div>
+                        <span class="resource-link">Try Free &#8594;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRACTICE PLATFORMS ===== -->
+    <section id="practice" class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Practice Platforms</h2>
+                <p>Reading tutorials is great, but nothing beats hands-on practice. Sharpen your skills here.</p>
+            </div>
+            <div class="resource-grid">
+                <a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e8f5e9;color:#2EC866;">&#128187;</div>
+                        <div>
+                            <h3>HackerRank</h3>
+                            <span class="badge badge-success">Free</span>
+                        </div>
+                    </div>
+                    <p class="description">Practice coding challenges, prepare for interviews, and earn certificates. Supports C++, Python, Java, JavaScript, and 30+ languages.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Challenges</span><span class="resource-tag">Certificates</span></div>
+                        <span class="resource-link">Start Practicing &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fff8e1;color:#FFA000;">&#128293;</div>
+                        <div>
+                            <h3>LeetCode</h3>
+                            <span class="badge badge-warning">Interview Prep</span>
+                        </div>
+                    </div>
+                    <p class="description">The #1 platform for coding interview preparation. Over 2,500 problems with solutions, discussions, and company-specific question banks.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Interviews</span><span class="resource-tag">DSA</span></div>
+                        <span class="resource-link">Solve Problems &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://www.codewars.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e3f2fd;color:#1976D2;">&#128081;</div>
+                        <div>
+                            <h3>Codewars</h3>
+                            <span class="badge badge-primary">Gamified</span>
+                        </div>
+                    </div>
+                    <p class="description">Level up your skills with kata (coding challenges) ranked by difficulty. Earn honor, climb ranks, and learn from community solutions.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Gamified</span><span class="resource-tag">Community</span></div>
+                        <span class="resource-link">Train Now &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://codeforces.com/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#fce4ec;color:#E91E63;">&#127942;</div>
+                        <div>
+                            <h3>Codeforces</h3>
+                            <span class="badge badge-warning">Competitive</span>
+                        </div>
+                    </div>
+                    <p class="description">The premier competitive programming platform. Weekly contests, editorial solutions, and a global ranking system for serious problem solvers.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Competitive</span><span class="resource-tag">Contests</span></div>
+                        <span class="resource-link">Compete &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://exercism.org/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e0e7ff;color:var(--lcd-blue);">&#128170;</div>
+                        <div>
+                            <h3>Exercism</h3>
+                            <span class="badge badge-success">Mentored</span>
+                        </div>
+                    </div>
+                    <p class="description">Free coding practice with mentorship. Submit solutions and get feedback from experienced developers. Supports 65+ languages.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Mentorship</span><span class="resource-tag">65+ Languages</span></div>
+                        <span class="resource-link">Join Free &#8594;</span>
+                    </div>
+                </a>
+                <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer" class="resource-card animate-on-scroll">
+                    <div class="resource-card-header">
+                        <div class="resource-icon" style="background:#e8f5e9;color:#0a0a23;">&#9978;</div>
+                        <div>
+                            <h3>freeCodeCamp</h3>
+                            <span class="badge badge-success">Free &amp; Certified</span>
+                        </div>
+                    </div>
+                    <p class="description">Learn to code for free with interactive lessons and earn verified certifications. Over 30,000 hours of curriculum content available.</p>
+                    <div class="resource-footer">
+                        <div class="resource-tags"><span class="resource-tag">Free</span><span class="resource-tag">Certifications</span></div>
+                        <span class="resource-link">Start Learning &#8594;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== YOUTUBE CHANNELS ===== -->
+    <section id="youtube" class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Top YouTube Channels</h2>
+                <p>Learn programming visually from the best educators on YouTube.</p>
+            </div>
+            <div class="youtube-grid">
+                <a href="https://www.youtube.com/@TraversyMedia" target="_blank" rel="noopener noreferrer" class="youtube-card animate-on-scroll">
+                    <div class="youtube-icon"><span>&#9654;</span></div>
+                    <h4>Traversy Media</h4>
+                    <div class="yt-subs">2.2M subscribers</div>
+                    <p>Web development tutorials — HTML, CSS, JS, React, Node.js, and more. Beginner-friendly crash courses.</p>
+                </a>
+                <a href="https://www.youtube.com/@TheCodingTrain" target="_blank" rel="noopener noreferrer" class="youtube-card animate-on-scroll">
+                    <div class="youtube-icon"><span>&#9654;</span></div>
+                    <h4>The Coding Train</h4>
+                    <div class="yt-subs">1.9M subscribers</div>
+                    <p>Creative coding, algorithms, and programming challenges with infectious enthusiasm. Fun and educational.</p>
+                </a>
+                <a href="https://www.youtube.com/@Fireship" target="_blank" rel="noopener noreferrer" class="youtube-card animate-on-scroll">
+                    <div class="youtube-icon"><span>&#9654;</span></div>
+                    <h4>Fireship</h4>
+                    <div class="yt-subs">3.3M subscribers</div>
+                    <p>"X in 100 seconds" — fast-paced, high-quality tech explanations. Perfect for quick concept overviews.</p>
+                </a>
+                <a href="https://www.youtube.com/@CS50" target="_blank" rel="noopener noreferrer" class="youtube-card animate-on-scroll">
+                    <div class="youtube-icon"><span>&#9654;</span></div>
+                    <h4>CS50 (Harvard)</h4>
+                    <div class="yt-subs">1.4M subscribers</div>
+                    <p>Harvard's legendary CS50 course. The gold standard for computer science fundamentals, taught by David Malan.</p>
+                </a>
+                <a href="https://www.youtube.com/@programmingwithmosh" target="_blank" rel="noopener noreferrer" class="youtube-card animate-on-scroll">
+                    <div class="youtube-icon"><span>&#9654;</span></div>
+                    <h4>Programming with Mosh</h4>
+                    <div class="yt-subs">4.1M subscribers</div>
+                    <p>In-depth tutorials for Python, JavaScript, Java, React, and more. Clear explanations with great production quality.</p>
+                </a>
+                <a href="https://www.youtube.com/@NetworkChuck" target="_blank" rel="noopener noreferrer" class="youtube-card animate-on-scroll">
+                    <div class="youtube-icon"><span>&#9654;</span></div>
+                    <h4>NetworkChuck</h4>
+                    <div class="yt-subs">4.2M subscribers</div>
+                    <p>IT, networking, Python, Linux, and cybersecurity. Energetic, entertaining, and incredibly engaging content.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RECOMMENDED BOOKS ===== -->
+    <section id="books" class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Recommended Books</h2>
+                <p>Timeless programming books that every developer should read.</p>
+            </div>
+            <div class="book-grid">
+                <div class="book-card animate-on-scroll">
+                    <div class="book-icon">&#128214;</div>
+                    <div class="book-info">
+                        <h4>Clean Code</h4>
+                        <div class="author">Robert C. Martin</div>
+                        <p>The handbook of software craftsmanship. Learn to write clean, readable, and maintainable code.</p>
+                    </div>
+                </div>
+                <div class="book-card animate-on-scroll">
+                    <div class="book-icon">&#128218;</div>
+                    <div class="book-info">
+                        <h4>Eloquent JavaScript</h4>
+                        <div class="author">Marijn Haverbeke</div>
+                        <p>A modern introduction to programming with JavaScript. Available free online. Covers language fundamentals to Node.js.</p>
+                    </div>
+                </div>
+                <div class="book-card animate-on-scroll">
+                    <div class="book-icon">&#128213;</div>
+                    <div class="book-info">
+                        <h4>Automate the Boring Stuff</h4>
+                        <div class="author">Al Sweigart</div>
+                        <p>Practical Python programming for beginners. Learn to automate real tasks — free to read online.</p>
+                    </div>
+                </div>
+                <div class="book-card animate-on-scroll">
+                    <div class="book-icon">&#128216;</div>
+                    <div class="book-info">
+                        <h4>The Pragmatic Programmer</h4>
+                        <div class="author">D. Thomas &amp; A. Hunt</div>
+                        <p>A classic guide to becoming a better developer. Covers everything from career advice to code design principles.</p>
+                    </div>
+                </div>
+                <div class="book-card animate-on-scroll">
+                    <div class="book-icon">&#128217;</div>
+                    <div class="book-info">
+                        <h4>Head First Java</h4>
+                        <div class="author">Kathy Sierra &amp; Bert Bates</div>
+                        <p>The most engaging introductory Java book. Visual learning with a unique approach that makes OOP click.</p>
+                    </div>
+                </div>
+                <div class="book-card animate-on-scroll">
+                    <div class="book-icon">&#128215;</div>
+                    <div class="book-info">
+                        <h4>C++ Primer</h4>
+                        <div class="author">Stanley B. Lippman</div>
+                        <p>The definitive C++ book. Covers modern C++ (C++11/14/17) with thorough explanations and exercises.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHEATSHEETS ===== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Quick Reference Cheat Sheets</h2>
+                <p>Handy cheat sheets for quick syntax lookups across popular languages.</p>
+            </div>
+            <div class="cheatsheet-grid">
+                <a href="https://quickref.me/cpp" target="_blank" rel="noopener noreferrer" class="cheatsheet-card animate-on-scroll">
+                    <span class="cs-icon">&#128196;</span>
+                    <h4>C++ Cheat Sheet</h4>
+                    <p>Syntax, STL, pointers, references</p>
+                </a>
+                <a href="https://quickref.me/python" target="_blank" rel="noopener noreferrer" class="cheatsheet-card animate-on-scroll">
+                    <span class="cs-icon">&#128221;</span>
+                    <h4>Python Cheat Sheet</h4>
+                    <p>Syntax, builtins, data structures</p>
+                </a>
+                <a href="https://quickref.me/javascript" target="_blank" rel="noopener noreferrer" class="cheatsheet-card animate-on-scroll">
+                    <span class="cs-icon">&#128203;</span>
+                    <h4>JavaScript Cheat Sheet</h4>
+                    <p>ES6+, DOM, arrays, promises</p>
+                </a>
+                <a href="https://quickref.me/java" target="_blank" rel="noopener noreferrer" class="cheatsheet-card animate-on-scroll">
+                    <span class="cs-icon">&#128209;</span>
+                    <h4>Java Cheat Sheet</h4>
+                    <p>Syntax, OOP, collections, streams</p>
+                </a>
+                <a href="https://quickref.me/css" target="_blank" rel="noopener noreferrer" class="cheatsheet-card animate-on-scroll">
+                    <span class="cs-icon">&#127912;</span>
+                    <h4>CSS Cheat Sheet</h4>
+                    <p>Selectors, Flexbox, Grid, animations</p>
+                </a>
+                <a href="https://quickref.me/git" target="_blank" rel="noopener noreferrer" class="cheatsheet-card animate-on-scroll">
+                    <span class="cs-icon">&#128229;</span>
+                    <h4>Git Cheat Sheet</h4>
+                    <p>Commands, branching, merging, stash</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LEARNING PATHS ===== -->
+    <section id="paths" class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Structured Learning Paths</h2>
+                <p>Not sure where to start? Follow these curated roadmaps based on your career goals.</p>
+            </div>
+            <div class="path-grid">
+                <div class="path-card animate-on-scroll">
+                    <div class="path-card-header" style="background:linear-gradient(135deg, #fef3c7, rgba(0, 113, 227, 0.06));">
+                        <span class="path-emoji">&#129302;</span>
+                        <h3>AI &amp; Data Science</h3>
+                        <p>Build intelligent systems with Python and machine learning.</p>
+                    </div>
+                    <div class="path-card-body">
+                        <div class="path-step"><span class="path-step-num">1</span><span>Python Fundamentals</span></div>
+                        <div class="path-step"><span class="path-step-num">2</span><span>Data Structures &amp; Algorithms</span></div>
+                        <div class="path-step"><span class="path-step-num">3</span><span>NumPy &amp; Pandas</span></div>
+                        <div class="path-step"><span class="path-step-num">4</span><span>Machine Learning (scikit-learn)</span></div>
+                        <div class="path-step"><span class="path-step-num">5</span><span>Deep Learning (TensorFlow / PyTorch)</span></div>
+                    </div>
+                </div>
+                <div class="path-card animate-on-scroll">
+                    <div class="path-card-header" style="background:linear-gradient(135deg, #fef9c3, rgba(168, 85, 247, 0.06));">
+                        <span class="path-emoji">&#127760;</span>
+                        <h3>Full-Stack Web Dev</h3>
+                        <p>Build modern websites and web applications from front to back.</p>
+                    </div>
+                    <div class="path-card-body">
+                        <div class="path-step"><span class="path-step-num">1</span><span>HTML &amp; CSS Basics</span></div>
+                        <div class="path-step"><span class="path-step-num">2</span><span>JavaScript Fundamentals</span></div>
+                        <div class="path-step"><span class="path-step-num">3</span><span>DOM Manipulation &amp; APIs</span></div>
+                        <div class="path-step"><span class="path-step-num">4</span><span>React or Vue.js</span></div>
+                        <div class="path-step"><span class="path-step-num">5</span><span>Node.js &amp; Express Backend</span></div>
+                    </div>
+                </div>
+                <div class="path-card animate-on-scroll">
+                    <div class="path-card-header" style="background:linear-gradient(135deg, #e8f0fe, #fce4ec);">
+                        <span class="path-emoji">&#127918;</span>
+                        <h3>Game Development</h3>
+                        <p>Create games with C++, C#, and industry-standard engines.</p>
+                    </div>
+                    <div class="path-card-body">
+                        <div class="path-step"><span class="path-step-num">1</span><span>C++ Fundamentals</span></div>
+                        <div class="path-step"><span class="path-step-num">2</span><span>Object-Oriented Programming</span></div>
+                        <div class="path-step"><span class="path-step-num">3</span><span>Data Structures &amp; Math</span></div>
+                        <div class="path-step"><span class="path-step-num">4</span><span>Unreal Engine (C++) or Unity (C#)</span></div>
+                        <div class="path-step"><span class="path-step-num">5</span><span>Build &amp; Publish Your First Game</span></div>
+                    </div>
+                </div>
+                <div class="path-card animate-on-scroll">
+                    <div class="path-card-header" style="background:linear-gradient(135deg, rgba(168, 85, 247, 0.06), #e0f7fa);">
+                        <span class="path-emoji">&#128241;</span>
+                        <h3>Mobile App Dev</h3>
+                        <p>Build Android, iOS, or cross-platform mobile applications.</p>
+                    </div>
+                    <div class="path-card-body">
+                        <div class="path-step"><span class="path-step-num">1</span><span>Java or JavaScript Fundamentals</span></div>
+                        <div class="path-step"><span class="path-step-num">2</span><span>Object-Oriented Programming</span></div>
+                        <div class="path-step"><span class="path-step-num">3</span><span>Android SDK or React Native</span></div>
+                        <div class="path-step"><span class="path-step-num">4</span><span>API Integration &amp; State Management</span></div>
+                        <div class="path-step"><span class="path-step-num">5</span><span>Deploy Your First App</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box animate-on-scroll">
+                <h2>Start Learning Today</h2>
+                <p>Pick a language, follow the tutorials, and build something amazing. It's all free.</p>
+                <a href="index.html#languages" class="btn btn-primary btn-lg">Browse All Courses &#8594;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">&lt;/&gt;</div>
+                    <span>CodeVerse</span>
+                </a>
+                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="cpp/index.html">C++</a>
+                <a href="python/index.html">Python</a>
+                <a href="javascript/index.html">JavaScript</a>
+                <a href="java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="csharp/index.html">C#</a>
+                <a href="webdev/index.html">Web Development</a>
+                <a href="rust/index.html">Rust</a>
+                <a href="go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="about.html">About Us</a>
+                <a href="resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

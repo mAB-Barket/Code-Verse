@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Python basics — what Python is, why it's popular, and how to write your first Python program.">
+    <title>Introduction to Python - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="python-introduction">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html" class="active">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Python Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html" class="active"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="lists.html"><span class="lesson-number">4</span> Lists &amp; Dicts</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 1 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="12" style="width:12%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Python</a> &rsaquo; <span>Introduction</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 1</span>
+                <span class="reading-time">&#128338; 10 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Introduction to Python</h1>
+
+            <div class="content-body">
+                <h2>What is Python?</h2>
+                <p>Python is a high-level, interpreted, general-purpose programming language created by Guido van Rossum and first released in 1991. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically typed and garbage-collected, supporting multiple programming paradigms including structured, object-oriented, and functional programming.</p>
+
+                <p>Python consistently ranks as one of the most popular programming languages in the world. It powers everything from Instagram and Spotify to scientific research at NASA and CERN. Its simplicity and versatility have made it the language of choice for beginners and experts alike, especially in the booming fields of data science, artificial intelligence, and machine learning.</p>
+
+                <p>Unlike compiled languages such as C++ or Java, Python is an <strong>interpreted language</strong>. This means you don't need to compile your code into machine language before running it. The Python interpreter reads and executes your code line by line, making development faster and debugging easier. However, this comes with a trade-off in execution speed compared to compiled languages.</p>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Fun Fact:</strong> Python is named after the BBC comedy series "Monty Python's Flying Circus," not the snake! Guido van Rossum was a fan of the show and wanted a short, unique, and slightly mysterious name for his new language.</p>
+                </div>
+
+                <h2>Why Choose Python?</h2>
+                <p>Python offers numerous advantages that make it an outstanding choice for both new and experienced programmers:</p>
+                <ul>
+                    <li><strong>Readable Syntax:</strong> Python code reads almost like English, making it easier to learn and understand.</li>
+                    <li><strong>Massive Ecosystem:</strong> Over 400,000 packages on PyPI (Python Package Index) for virtually any task.</li>
+                    <li><strong>Cross-Platform:</strong> Python runs on Windows, macOS, Linux, and many other platforms without modification.</li>
+                    <li><strong>Versatile:</strong> Web development (Django, Flask), data science (pandas, NumPy), AI/ML (TensorFlow, PyTorch), automation, scripting, and much more.</li>
+                    <li><strong>Strong Community:</strong> One of the largest and most welcoming programming communities in the world.</li>
+                </ul>
+
+                <h2>Installing Python</h2>
+                <p>To start coding in Python, you need to install the Python interpreter on your machine. Visit <strong>python.org</strong> and download the latest version of Python 3. During installation on Windows, make sure to check the box that says <em>"Add Python to PATH"</em> — this allows you to run Python from the command line.</p>
+
+                <p>After installation, open your terminal or command prompt and verify the installation:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Check your Python version in the terminal</span>
+<span class="comment"># Type this command in your terminal (not in a Python file):</span>
+<span class="comment"># python --version</span>
+<span class="comment"># or</span>
+<span class="comment"># python3 --version</span>
+
+<span class="comment"># You should see output like:</span>
+<span class="comment"># Python 3.12.1</span></code></pre>
+                </div>
+
+                <h2>Your First Python Program</h2>
+                <p>Every programmer's journey begins with "Hello, World!" — a simple program that displays text on the screen. In Python, this is incredibly straightforward compared to other languages. Create a new file called <strong>hello.py</strong> and type the following:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># My first Python program</span>
+<span class="function">print</span>(<span class="string">"Hello, World!"</span>)
+<span class="function">print</span>(<span class="string">"Welcome to Python programming!"</span>)
+
+<span class="comment"># You can also do basic math</span>
+<span class="function">print</span>(<span class="string">"2 + 3 ="</span>, <span class="number">2</span> <span class="operator">+</span> <span class="number">3</span>)
+<span class="function">print</span>(<span class="string">"10 * 5 ="</span>, <span class="number">10</span> <span class="operator">*</span> <span class="number">5</span>)
+
+<span class="comment"># Get user input</span>
+name <span class="operator">=</span> <span class="function">input</span>(<span class="string">"What is your name? "</span>)
+<span class="function">print</span>(<span class="string">f"Nice to meet you, <span class="keyword">{name}</span>!"</span>)</code></pre>
+                </div>
+
+                <p>To run this program, open your terminal, navigate to the directory containing your file, and type <code>python hello.py</code>. The <code>print()</code> function outputs text to the console, while <code>input()</code> prompts the user for text input. Notice how Python doesn't require semicolons at the end of lines or curly braces around code blocks — indentation is what matters in Python.</p>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> Python uses indentation (spaces or tabs) to define code blocks instead of braces <code>{}</code>. The standard convention is to use <strong>4 spaces</strong> per indentation level. Most code editors can be configured to insert 4 spaces when you press the Tab key.</p>
+                </div>
+
+                <h2>The Python Interactive Shell</h2>
+                <p>One of Python's standout features is its interactive shell (also called the REPL — Read, Eval, Print, Loop). You can start it by simply typing <code>python</code> or <code>python3</code> in your terminal. The interactive shell lets you type Python code line by line and see results immediately, which is perfect for experimenting and learning:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># In the Python interactive shell (REPL)</span>
+<span class="operator">&gt;&gt;&gt;</span> <span class="number">2</span> <span class="operator">**</span> <span class="number">10</span>
+<span class="number">1024</span>
+<span class="operator">&gt;&gt;&gt;</span> <span class="function">len</span>(<span class="string">"Python"</span>)
+<span class="number">6</span>
+<span class="operator">&gt;&gt;&gt;</span> <span class="string">"Python"</span>.<span class="function">upper</span>()
+<span class="string">'PYTHON'</span>
+<span class="operator">&gt;&gt;&gt;</span> <span class="keyword">import</span> math
+<span class="operator">&gt;&gt;&gt;</span> math.<span class="function">sqrt</span>(<span class="number">144</span>)
+<span class="number">12.0</span></code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Important:</strong> Make sure you're using <strong>Python 3</strong>, not Python 2. Python 2 reached end-of-life on January 1, 2020 and no longer receives updates or security patches. All modern Python development should use Python 3.8 or later.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> Who created the Python programming language?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> James Gosling</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> Guido van Rossum</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Bjarne Stroustrup</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Dennis Ritchie</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> Which function is used to display output in Python?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> echo()</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> console.log()</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> print()</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> System.out.println()</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> Python is an _______ language.</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> compiled</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> interpreted</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> assembled</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> machine-level</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4.</strong> What does Python use to define code blocks?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q4"> Curly braces {}</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> Parentheses ()</label>
+                            <label class="quiz-option"><input type="radio" name="q4" data-correct="true"> Indentation</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> Square brackets []</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="index.html" class="prev-link">&larr; Course Overview</a>
+                <a href="variables.html" class="next-link">Variables &amp; Data Types &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

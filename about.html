@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About CodeVerse — our mission, story, team, and vision for making programming education free and accessible to everyone.">
+    <meta name="keywords" content="about CodeVerse, free coding platform, programming education, open source learning">
+    <meta property="og:title" content="About CodeVerse - Our Mission">
+    <meta property="og:description" content="Learn about our mission to make programming education free, accessible, and interactive for everyone.">
+    <title>About Us - CodeVerse</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            padding: 5rem 0 3rem;
+            background: linear-gradient(135deg, var(--surface-secondary) 0%, rgba(0, 113, 227, 0.06) 40%, rgba(168, 85, 247, 0.06) 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -20%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.2) 0%, transparent 70%);
+            opacity: 0.3;
+            animation: heroFloat 20s ease-in-out infinite;
+        }
+        .about-hero .container { position: relative; z-index: 1; }
+        .about-hero h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); margin-bottom: 1rem; }
+        .about-hero .subtitle {
+            font-size: 1.2rem; color: var(--text-tertiary);
+            max-width: 680px; margin: 0 auto 2rem; line-height: 1.7;
+        }
+        .about-hero-badges {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+        }
+        .about-hero-badges .badge {
+            padding: 0.4rem 1rem; font-size: 0.85rem;
+        }
+
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.75rem;
+        }
+        .value-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+        .value-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--lcd-blue), var(--lcd-purple));
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .value-card:hover::before { opacity: 1; }
+        .value-icon {
+            width: 72px; height: 72px;
+            margin: 0 auto 1.25rem;
+            border-radius: var(--radius-xl);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+            background: rgba(0, 113, 227, 0.06);
+        }
+        .value-card h3 { margin-bottom: 0.5rem; }
+        .value-card p { font-size: 0.9rem; color: var(--text-tertiary); margin: 0; }
+
+        [data-theme="dark"] .value-card { background: var(--surface-tertiary); }
+
+        /* Story Section */
+        .story-section { padding: 5rem 0; }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .story-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .story-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .story-visual {
+            background: linear-gradient(135deg, rgba(0, 113, 227, 0.06), rgba(168, 85, 247, 0.06));
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-2xl);
+            padding: 2.5rem;
+            text-align: center;
+        }
+        .story-visual .big-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .story-visual .caption {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Timeline */
+        .timeline-section { padding: 5rem 0; background: var(--surface-primary); }
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, rgba(0, 113, 227, 0.4), var(--lcd-purple));
+            border-radius: 3px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 72px;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot {
+            position: absolute;
+            left: 16px;
+            top: 4px;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--lcd-blue);
+            border: 4px solid var(--surface-primary);
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+            z-index: 1;
+        }
+        .timeline-item:last-child .timeline-dot {
+            background: var(--lcd-purple);
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+        }
+        .timeline-date {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--lcd-blue);
+            margin-bottom: 0.25rem;
+        }
+        .timeline-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.35rem;
+        }
+        .timeline-item p {
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+            margin: 0;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tech-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+        .tech-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(0, 113, 227, 0.2);
+        }
+        .tech-card .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .tech-card h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .tech-card p { font-size: 0.8rem; color: var(--text-tertiary); margin: 0; }
+
+        [data-theme="dark"] .tech-card { background: var(--surface-tertiary); }
+
+        /* Contributors */
+        .contributors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contributor-card {
+            background: var(--surface-primary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+        .contributor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .contributor-avatar {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--lcd-blue), var(--lcd-purple));
+            margin: 0 auto 1rem;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; color: white;
+        }
+        .contributor-card h4 { margin-bottom: 0.25rem; }
+        .contributor-card .role {
+            font-size: 0.85rem; color: var(--lcd-blue);
+            font-weight: 500; margin-bottom: 0.5rem;
+        }
+        .contributor-card p { font-size: 0.8rem; color: var(--text-tertiary); margin: 0; }
+
+        [data-theme="dark"] .contributor-card { background: var(--surface-tertiary); }
+
+        /* Open Source CTA */
+        .open-source-section { padding: 4rem 0; }
+        .open-source-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1d1d1f, #002d5c);
+            border-radius: var(--radius-2xl);
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .open-source-box::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -25%;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, var(--lcd-blue) 0%, transparent 70%);
+            opacity: 0.15;
+        }
+        .open-source-box h2 { color: white; margin-bottom: 0.75rem; position: relative; }
+        .open-source-box p {
+            color: rgba(255,255,255,0.7);
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+        .open-source-box .btn-primary { position: relative; }
+
+        @media (max-width: 768px) {
+            .story-grid { grid-template-columns: 1fr; }
+            .story-visual { order: -1; }
+            .timeline::before { left: 20px; }
+            .timeline-item { padding-left: 58px; }
+            .timeline-dot { left: 8px; width: 24px; height: 24px; }
+        }
+    </style>
+</head>
+<body data-page="about">
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">&lt;/&gt;</div>
+                <span>CodeVerse</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#languages">Languages &#9662;</a>
+                    <div class="nav-dropdown-content">
+                        <a href="cpp/index.html"><span class="lang-dot" style="background:var(--cpp-color)"></span> C++</a>
+                        <a href="python/index.html"><span class="lang-dot" style="background:var(--python-color)"></span> Python</a>
+                        <a href="javascript/index.html"><span class="lang-dot" style="background:var(--javascript-color)"></span> JavaScript</a>
+                        <a href="java/index.html"><span class="lang-dot" style="background:var(--java-color)"></span> Java</a>
+                        <a href="csharp/index.html"><span class="lang-dot" style="background:var(--csharp-color)"></span> C#</a>
+                        <a href="webdev/index.html"><span class="lang-dot" style="background:var(--html-color)"></span> Web Dev</a>
+                    </div>
+                </div>
+                <a href="about.html" class="active">About</a>
+                <a href="resources.html">Resources</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="about-hero">
+        <div class="container">
+            <span class="badge badge-primary">&#128161; Our Story</span>
+            <h1>Building the Future of<br><span class="gradient-text">Free Code Education</span></h1>
+            <p class="subtitle">CodeVerse started as a classroom project and grew into a mission — to give every aspiring programmer access to high-quality, interactive, and completely free coding tutorials.</p>
+            <div class="about-hero-badges">
+                <span class="badge badge-success">&#10003; 100% Free</span>
+                <span class="badge badge-primary">&#10003; Open Source</span>
+                <span class="badge badge-warning">&#10003; 8+ Languages</span>
+                <span class="badge badge-success">&#10003; 50+ Tutorials</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CORE VALUES ===== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>What We Believe In</h2>
+                <p>The principles that guide everything we build at CodeVerse.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">&#127793;</div>
+                    <h3>Education for All</h3>
+                    <p>Financial barriers should never prevent someone from learning to code. Every tutorial on CodeVerse is free — no subscriptions, no paywalls, no hidden costs.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">&#9997;</div>
+                    <h3>Learn by Doing</h3>
+                    <p>We believe the best way to learn programming is by writing code. That's why every lesson includes code examples, interactive quizzes, and hands-on practice.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">&#128301;</div>
+                    <h3>Open &amp; Transparent</h3>
+                    <p>Our entire codebase is open source on GitHub. Anyone can contribute, suggest improvements, or fork the project to build something new.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">&#128640;</div>
+                    <h3>Always Evolving</h3>
+                    <p>We're constantly adding new languages, topics, and features. CodeVerse grows with the developer community, shaped by feedback and contributions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OUR STORY ===== -->
+    <section class="story-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>How It All Started</h2>
+                <p>From a simple homework project to a full-scale learning platform.</p>
+            </div>
+            <div class="story-grid">
+                <div class="story-text animate-on-scroll">
+                    <h3>&#127793; A Classroom Idea</h3>
+                    <p>CodeVerse began as a C++ tutorial website — a class project at AICT, built to help students learn programming fundamentals. The idea was simple: create clear, well-structured lessons that anyone could follow along with.</p>
+                    <br>
+                    <h3>&#128640; Growing Beyond C++</h3>
+                    <p>As the project evolved, we realized the need for free programming resources extended far beyond one language. What started as 7 C++ lessons grew into a comprehensive multi-language platform covering <strong>Python, JavaScript, Java</strong>, and more — with <strong>50+ tutorials</strong>, interactive quizzes, and embedded video lessons.</p>
+                </div>
+                <div class="story-visual animate-on-scroll">
+                    <span class="big-emoji">&#128187;</span>
+                    <div class="caption">Code. Learn. Build. Repeat.</div>
+                    <div style="margin-top:1.5rem; display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+                        <span class="badge badge-primary">C++</span>
+                        <span class="badge badge-success">Python</span>
+                        <span class="badge badge-warning">JavaScript</span>
+                        <span class="badge badge-primary">Java</span>
+                        <span class="badge badge-success">C#</span>
+                        <span class="badge badge-warning">Rust</span>
+                        <span class="badge badge-primary">Go</span>
+                        <span class="badge badge-success">Web Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Journey</h2>
+                <p>Key milestones in the evolution of CodeVerse.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Phase 1</div>
+                    <h3>C++ Tutorial Site</h3>
+                    <p>Started as a simple HTML/CSS website with 7 C++ lessons covering variables, arrays, functions, loops, and more.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Phase 2</div>
+                    <h3>Design System Overhaul</h3>
+                    <p>Complete redesign with a professional CSS design system, dark mode, responsive layout, and modern component architecture.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Phase 3</div>
+                    <h3>Multi-Language Expansion</h3>
+                    <p>Added Python (8 tutorials), JavaScript (8 tutorials), and Java (8 tutorials) with full quiz systems and video integration.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Phase 4</div>
+                    <h3>Platform Polish</h3>
+                    <p>Professional branding, SVG favicon, restructured project architecture, and additional language placeholders for C#, Rust, Go, and Web Dev.</p>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Coming Next</div>
+                    <h3>Interactive Playground</h3>
+                    <p>Browser-based code editor, live execution, community contributions, downloadable cheat sheets, and advanced topic modules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>How CodeVerse Works</h2>
+                <p>A structured approach to learning programming, designed for all skill levels.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon" style="background:rgba(168, 85, 247, 0.06);">&#128214;</div>
+                    <h3>Step-by-Step Tutorials</h3>
+                    <p>Each lesson covers a single concept with clear explanations, multiple code examples, and practical context you can apply immediately.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon" style="background:#fef3c7;">&#127909;</div>
+                    <h3>Video Lessons</h3>
+                    <p>Watch curated video tutorials embedded directly within each lesson page. Learn visually and code along at your own pace.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon" style="background:#fce4ec;">&#128221;</div>
+                    <h3>Interactive Quizzes</h3>
+                    <p>Test your knowledge at the end of every lesson with instant feedback scoring. Quizzes save your progress so you never lose track.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon" style="background:rgba(0, 113, 227, 0.06);">&#128200;</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Your scores are saved locally in your browser. Resume any course right where you left off — no account required.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon" style="background:rgba(168, 85, 247, 0.06);">&#127769;</div>
+                    <h3>Dark Mode</h3>
+                    <p>Switch between light and dark themes with one click. Comfortable coding at any hour of the day or night.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon" style="background:#fef3c7;">&#128241;</div>
+                    <h3>Fully Responsive</h3>
+                    <p>Works perfectly on desktop, tablet, and mobile. Learn to code on any device, anywhere in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Built With</h2>
+                <p>CodeVerse is built with pure web technologies — no frameworks, no build tools, no server required.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card animate-on-scroll">
+                    <span class="tech-icon">&#127912;</span>
+                    <h4>HTML5</h4>
+                    <p>Semantic markup with accessibility best practices</p>
+                </div>
+                <div class="tech-card animate-on-scroll">
+                    <span class="tech-icon">&#127752;</span>
+                    <h4>CSS3</h4>
+                    <p>Custom properties, Grid, Flexbox, dark mode, animations</p>
+                </div>
+                <div class="tech-card animate-on-scroll">
+                    <span class="tech-icon">&#9889;</span>
+                    <h4>Vanilla JavaScript</h4>
+                    <p>Quiz engine, themes, progress tracking, animations</p>
+                </div>
+                <div class="tech-card animate-on-scroll">
+                    <span class="tech-icon">&#128295;</span>
+                    <h4>GitHub Pages</h4>
+                    <p>Free static hosting with Git-based deployments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="8" data-suffix="+">0</span>
+                    <span class="stat-label">Programming Languages</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="50" data-suffix="+">0</span>
+                    <span class="stat-label">In-Depth Tutorials</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="200" data-suffix="+">0</span>
+                    <span class="stat-label">Quiz Questions</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="100" data-suffix="%">0</span>
+                    <span class="stat-label">Free Forever</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTRIBUTORS ===== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>The People Behind CodeVerse</h2>
+                <p>Built by passionate developers and open to contributions from anyone.</p>
+            </div>
+            <div class="contributors-grid">
+                <div class="contributor-card animate-on-scroll">
+                    <div class="contributor-avatar">&#128104;&#8205;&#128187;</div>
+                    <h4>Project Creator</h4>
+                    <div class="role">Lead Developer</div>
+                    <p>Designed and built the entire CodeVerse platform from the ground up.</p>
+                </div>
+                <div class="contributor-card animate-on-scroll">
+                    <div class="contributor-avatar" style="background:linear-gradient(135deg, var(--lcd-purple), #06b6d4);">&#127760;</div>
+                    <h4>Community</h4>
+                    <div class="role">Open Source Contributors</div>
+                    <p>CodeVerse is open source — anyone can contribute tutorials, fixes, and improvements.</p>
+                </div>
+                <div class="contributor-card animate-on-scroll">
+                    <div class="contributor-avatar" style="background:linear-gradient(135deg, #f59e0b, #ef4444);">&#128640;</div>
+                    <h4>You?</h4>
+                    <div class="role">Future Contributor</div>
+                    <p>We'd love your help! Check out our GitHub to get started contributing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OPEN SOURCE CTA ===== -->
+    <section class="open-source-section">
+        <div class="container">
+            <div class="open-source-box animate-on-scroll">
+                <h2>&#128301; Fully Open Source</h2>
+                <p>CodeVerse is available on GitHub under an open license. Fork it, contribute to it, or use it as inspiration for your own projects.</p>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">View on GitHub &#8594;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box animate-on-scroll">
+                <h2>Ready to Start Learning?</h2>
+                <p>Jump into any language and begin your programming journey today. No sign-up required.</p>
+                <a href="index.html#languages" class="btn btn-primary btn-lg">Browse All Languages &#8594;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">&lt;/&gt;</div>
+                    <span>CodeVerse</span>
+                </a>
+                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="cpp/index.html">C++</a>
+                <a href="python/index.html">Python</a>
+                <a href="javascript/index.html">JavaScript</a>
+                <a href="java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="csharp/index.html">C#</a>
+                <a href="webdev/index.html">Web Development</a>
+                <a href="rust/index.html">Rust</a>
+                <a href="go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="about.html">About Us</a>
+                <a href="resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

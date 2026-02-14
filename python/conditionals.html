@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Understand Python conditionals — if, elif, else statements, comparison operators, and logical expressions.">
+    <title>Conditionals - Python - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="python-conditionals">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html" class="active">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Python Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="lists.html"><span class="lesson-number">4</span> Lists &amp; Dicts</a>
+                <a href="conditionals.html" class="active"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 5 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="62" style="width:62%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Python</a> &rsaquo; <span>Conditionals</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 5</span>
+                <span class="reading-time">&#128338; 12 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Conditionals: if, elif, else</h1>
+
+            <div class="content-body">
+                <h2>Making Decisions in Code</h2>
+                <p>Conditional statements allow your program to make decisions and execute different blocks of code based on whether certain conditions are true or false. They are fundamental to all programming — without them, programs would always do the exact same thing regardless of input. In Python, the primary conditional keywords are <code>if</code>, <code>elif</code> (short for "else if"), and <code>else</code>.</p>
+
+                <p>Python uses indentation to define code blocks rather than braces or keywords. The standard is 4 spaces per indentation level. A condition is followed by a colon <code>:</code>, and all indented lines beneath it are part of that block. This enforced structure makes Python code visually clean and consistently readable.</p>
+
+                <p>Conditions in Python are expressions that evaluate to either <code>True</code> or <code>False</code>. You can use comparison operators (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>), logical operators (<code>and</code>, <code>or</code>, <code>not</code>), and membership operators (<code>in</code>, <code>not in</code>) to construct conditions.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Basic if/elif/else</span>
+age <span class="operator">=</span> <span class="number">18</span>
+
+<span class="keyword">if</span> age <span class="operator">&lt;</span> <span class="number">13</span>:
+    <span class="function">print</span>(<span class="string">"You are a child."</span>)
+<span class="keyword">elif</span> age <span class="operator">&lt;</span> <span class="number">18</span>:
+    <span class="function">print</span>(<span class="string">"You are a teenager."</span>)
+<span class="keyword">elif</span> age <span class="operator">&lt;</span> <span class="number">65</span>:
+    <span class="function">print</span>(<span class="string">"You are an adult."</span>)
+<span class="keyword">else</span>:
+    <span class="function">print</span>(<span class="string">"You are a senior."</span>)
+
+<span class="comment"># Output: You are an adult.</span>
+
+<span class="comment"># Using logical operators</span>
+temperature <span class="operator">=</span> <span class="number">25</span>
+is_sunny <span class="operator">=</span> <span class="keyword">True</span>
+
+<span class="keyword">if</span> temperature <span class="operator">&gt;</span> <span class="number">20</span> <span class="keyword">and</span> is_sunny:
+    <span class="function">print</span>(<span class="string">"Great day for a walk!"</span>)
+<span class="keyword">elif</span> temperature <span class="operator">&gt;</span> <span class="number">20</span> <span class="keyword">or</span> is_sunny:
+    <span class="function">print</span>(<span class="string">"Decent weather."</span>)
+<span class="keyword">else</span>:
+    <span class="function">print</span>(<span class="string">"Stay inside."</span>)</code></pre>
+                </div>
+
+                <h2>Comparison &amp; Logical Operators</h2>
+                <p>Python provides a comprehensive set of operators for building conditions:</p>
+                <ul>
+                    <li><strong>Comparison:</strong> <code>==</code> (equal), <code>!=</code> (not equal), <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+                    <li><strong>Logical:</strong> <code>and</code>, <code>or</code>, <code>not</code></li>
+                    <li><strong>Identity:</strong> <code>is</code>, <code>is not</code> (check if objects are the same in memory)</li>
+                    <li><strong>Membership:</strong> <code>in</code>, <code>not in</code> (check if a value is in a sequence)</li>
+                </ul>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Python supports <strong>chained comparisons</strong> — you can write <code>1 &lt; x &lt; 10</code> instead of <code>x &gt; 1 and x &lt; 10</code>. This is a clean, mathematical way to express range checks that most languages don't support natively.</p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Chained comparisons</span>
+x <span class="operator">=</span> <span class="number">15</span>
+<span class="keyword">if</span> <span class="number">10</span> <span class="operator">&lt;=</span> x <span class="operator">&lt;=</span> <span class="number">20</span>:
+    <span class="function">print</span>(<span class="string">"x is between 10 and 20"</span>)
+
+<span class="comment"># Membership operator</span>
+fruits <span class="operator">=</span> [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>]
+<span class="keyword">if</span> <span class="string">"banana"</span> <span class="keyword">in</span> fruits:
+    <span class="function">print</span>(<span class="string">"We have bananas!"</span>)
+
+<span class="comment"># Identity operator (is vs ==)</span>
+a <span class="operator">=</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+b <span class="operator">=</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+c <span class="operator">=</span> a
+<span class="function">print</span>(a <span class="operator">==</span> b)   <span class="comment"># True (same values)</span>
+<span class="function">print</span>(a <span class="keyword">is</span> b)   <span class="comment"># False (different objects)</span>
+<span class="function">print</span>(a <span class="keyword">is</span> c)   <span class="comment"># True (same object)</span>
+
+<span class="comment"># Checking for None — always use 'is'</span>
+result <span class="operator">=</span> <span class="keyword">None</span>
+<span class="keyword">if</span> result <span class="keyword">is</span> <span class="keyword">None</span>:
+    <span class="function">print</span>(<span class="string">"No result yet."</span>)</code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Common Mistake:</strong> Use <code>is</code> to compare with <code>None</code>, not <code>==</code>. Writing <code>if x is None:</code> is the correct Pythonic way. The <code>==</code> operator checks value equality, while <code>is</code> checks identity — and since <code>None</code> is a singleton, identity checking is more appropriate and reliable.</p>
+                </div>
+
+                <h2>Truthiness and Falsy Values</h2>
+                <p>In Python, every value has a "truthiness" — it evaluates to either <code>True</code> or <code>False</code> in a boolean context. This allows you to write very clean conditional code without explicit comparisons. The following values are considered <strong>falsy</strong> (evaluate to <code>False</code>):</p>
+                <ul>
+                    <li><code>False</code>, <code>None</code>, <code>0</code>, <code>0.0</code></li>
+                    <li>Empty sequences: <code>""</code>, <code>[]</code>, <code>()</code>, <code>{}</code>, <code>set()</code></li>
+                </ul>
+                <p>Everything else is <strong>truthy</strong>.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Truthy/Falsy in practice</span>
+name <span class="operator">=</span> <span class="string">""</span>
+<span class="keyword">if</span> name:
+    <span class="function">print</span>(<span class="string">f"Hello, <span class="keyword">{name}</span>!"</span>)
+<span class="keyword">else</span>:
+    <span class="function">print</span>(<span class="string">"Name is empty!"</span>)  <span class="comment"># This runs</span>
+
+<span class="comment"># Checking if a list has items</span>
+items <span class="operator">=</span> []
+<span class="keyword">if</span> <span class="keyword">not</span> items:
+    <span class="function">print</span>(<span class="string">"The list is empty."</span>)
+
+<span class="comment"># Practical pattern: default values</span>
+user_input <span class="operator">=</span> <span class="string">""</span>
+username <span class="operator">=</span> user_input <span class="keyword">or</span> <span class="string">"Anonymous"</span>
+<span class="function">print</span>(username)  <span class="comment"># "Anonymous"</span></code></pre>
+                </div>
+
+                <h2>Ternary (Conditional) Expression</h2>
+                <p>Python supports a concise one-line conditional expression, sometimes called the ternary operator. It lets you assign a value based on a condition in a single line:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Ternary / conditional expression</span>
+age <span class="operator">=</span> <span class="number">20</span>
+status <span class="operator">=</span> <span class="string">"adult"</span> <span class="keyword">if</span> age <span class="operator">&gt;=</span> <span class="number">18</span> <span class="keyword">else</span> <span class="string">"minor"</span>
+<span class="function">print</span>(status)  <span class="comment"># "adult"</span>
+
+<span class="comment"># Useful in expressions and assignments</span>
+score <span class="operator">=</span> <span class="number">85</span>
+grade <span class="operator">=</span> <span class="string">"Pass"</span> <span class="keyword">if</span> score <span class="operator">&gt;=</span> <span class="number">60</span> <span class="keyword">else</span> <span class="string">"Fail"</span>
+<span class="function">print</span>(<span class="string">f"Grade: <span class="keyword">{grade}</span>"</span>)  <span class="comment"># Grade: Pass</span>
+
+<span class="comment"># Can be used in list comprehensions</span>
+numbers <span class="operator">=</span> [<span class="number">1</span>, <span class="number">-2</span>, <span class="number">3</span>, <span class="number">-4</span>, <span class="number">5</span>]
+signs <span class="operator">=</span> [<span class="string">"positive"</span> <span class="keyword">if</span> n <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> <span class="string">"negative"</span> <span class="keyword">for</span> n <span class="keyword">in</span> numbers]
+<span class="function">print</span>(signs)  <span class="comment"># ['positive', 'negative', 'positive', 'negative', 'positive']</span></code></pre>
+                </div>
+
+                <h2>Match Statement (Python 3.10+)</h2>
+                <p>Python 3.10 introduced structural pattern matching with the <code>match</code> statement — similar to switch/case in other languages, but far more powerful. It can match patterns, destructure data, and even add conditions:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Match statement (Python 3.10+)</span>
+command <span class="operator">=</span> <span class="string">"quit"</span>
+
+<span class="keyword">match</span> command:
+    <span class="keyword">case</span> <span class="string">"start"</span>:
+        <span class="function">print</span>(<span class="string">"Starting the program..."</span>)
+    <span class="keyword">case</span> <span class="string">"stop"</span> <span class="operator">|</span> <span class="string">"quit"</span> <span class="operator">|</span> <span class="string">"exit"</span>:
+        <span class="function">print</span>(<span class="string">"Goodbye!"</span>)
+    <span class="keyword">case</span> <span class="string">"help"</span>:
+        <span class="function">print</span>(<span class="string">"Available commands: start, stop, help"</span>)
+    <span class="keyword">case</span> _:
+        <span class="function">print</span>(<span class="string">f"Unknown command: <span class="keyword">{command}</span>"</span>)
+
+<span class="comment"># Pattern matching with destructuring</span>
+point <span class="operator">=</span> (<span class="number">0</span>, <span class="number">5</span>)
+
+<span class="keyword">match</span> point:
+    <span class="keyword">case</span> (<span class="number">0</span>, <span class="number">0</span>):
+        <span class="function">print</span>(<span class="string">"Origin"</span>)
+    <span class="keyword">case</span> (<span class="number">0</span>, y):
+        <span class="function">print</span>(<span class="string">f"On the Y-axis at y=<span class="keyword">{y}</span>"</span>)
+    <span class="keyword">case</span> (x, <span class="number">0</span>):
+        <span class="function">print</span>(<span class="string">f"On the X-axis at x=<span class="keyword">{x}</span>"</span>)
+    <span class="keyword">case</span> (x, y):
+        <span class="function">print</span>(<span class="string">f"Point at (<span class="keyword">{x}</span>, <span class="keyword">{y}</span>)"</span>)</code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> The <code>match</code> statement requires Python 3.10 or later. If you're using an older version, use <code>if/elif/else</code> chains instead. The underscore <code>_</code> in a <code>case</code> acts as a wildcard that matches anything (like <code>default</code> in other languages).</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> What keyword does Python use instead of "else if"?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> elseif</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> elif</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> else if</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> elsif</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> Which of the following is falsy in Python?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> "False"</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> [0]</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> []</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> " "</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is the result of <code>"minor" if 15 &lt; 18 else "adult"</code>?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> "adult"</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> "minor"</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> True</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Error</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="lists.html" class="prev-link">&larr; Lists, Tuples &amp; Dicts</a>
+                <a href="loops.html" class="next-link">Loops &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -3,256 +3,567 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeMaster - C++ Programming Tutorials</title>
-    <style>
-        /* Reset default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Variables */
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --background-color: #f8fafc;
-            --text-color: #1e293b;
-            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1rem 0;
-            box-shadow: var(--card-shadow);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .header-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .header-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: white;
-            padding: 1rem 0;
-            box-shadow: var(--card-shadow);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        .tutorial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .tutorial-card {
-            background-color: white;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .tutorial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .tutorial-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .tutorial-card p {
-            margin-bottom: 1rem;
-            color: #64748b;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 0.5rem;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .tutorial-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <meta name="description" content="CodeVerse - Your comprehensive platform to learn C++, Python, JavaScript, Java, and more programming languages with interactive tutorials, quizzes, and video lessons.">
+    <meta name="keywords" content="learn programming, C++, Python, JavaScript, Java, coding tutorials, programming courses, learn to code">
+    <meta name="author" content="CodeVerse Team">
+    <meta property="og:title" content="CodeVerse - Learn Any Programming Language">
+    <meta property="og:description" content="Master programming with interactive tutorials, video lessons, and hands-on quizzes across multiple languages.">
+    <meta property="og:type" content="website">
+    <title>CodeVerse - Learn Any Programming Language | Interactive Tutorials</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>Master C++ Programming</h1>
-            <p>Learn C++ from basics to advanced with our comprehensive video tutorials and interactive quizzes</p>
+<body data-page="home">
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">&lt;/&gt;</div>
+                <span>CodeVerse</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="active">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#languages">Languages &#9662;</a>
+                    <div class="nav-dropdown-content">
+                        <a href="cpp/index.html"><span class="lang-dot" style="background:var(--cpp-color)"></span> C++</a>
+                        <a href="python/index.html"><span class="lang-dot" style="background:var(--python-color)"></span> Python</a>
+                        <a href="javascript/index.html"><span class="lang-dot" style="background:var(--javascript-color)"></span> JavaScript</a>
+                        <a href="java/index.html"><span class="lang-dot" style="background:var(--java-color)"></span> Java</a>
+                        <a href="csharp/index.html"><span class="lang-dot" style="background:var(--csharp-color)"></span> C#</a>
+                        <a href="webdev/index.html"><span class="lang-dot" style="background:var(--html-color)"></span> Web Dev</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </button>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <div class="nav-container">
-            <ul>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="variables.html">Variables</a></li>
-                <li><a href="comments.html">Comments</a></li>
-                <li><a href="arrays.html">Arrays</a></li>
-                <li><a href="functions.html">Functions</a></li>
-                <li><a href="loops.html">Loops</a></li>
-                <li><a href="ifelse.html">If & If Else</a></li>
-            </ul>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <div class="tutorial-grid">
-            <div class="tutorial-card">
-                <h3>1. Introduction to C++</h3>
-                <p>Learn the fundamentals of C++ programming language and its powerful features for system and software development.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/j8nAHeVKL08" allowfullscreen></iframe>
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge badge-primary">&#127891; Free & Open Source</span>
+                <h1>Master Any<br><span class="gradient-text">Programming Language</span></h1>
+                <p class="subtitle">From C++ to Python, JavaScript to Java — learn to code with interactive tutorials, real-world projects, video lessons, and hands-on quizzes. Built by developers, for developers.</p>
+                <div class="hero-actions">
+                    <a href="#languages" class="btn btn-primary btn-lg">Start Learning &#8594;</a>
+                    <a href="about.html" class="btn btn-secondary btn-lg">How It Works</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="8" data-suffix="+">0</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50" data-suffix="+">0</span>
+                        <span class="stat-label">Tutorials</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="200" data-suffix="+">0</span>
+                        <span class="stat-label">Quiz Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="100" data-suffix="%">0</span>
+                        <span class="stat-label">Free Forever</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="tutorial-card">
-                <h3>2. Variables in C++</h3>
-                <p>Master the concept of variables, data types, and memory management in C++ programming.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/JrnQ-915czY" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="tutorial-card">
-                <h3>3. Comments</h3>
-                <p>Learn how to write effective comments to make your code more readable and maintainable.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/1-OKPH1y4EA" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="tutorial-card">
-                <h3>4. Arrays</h3>
-                <p>Understand arrays and how to work with collections of data in C++.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ePJxpxsnkGw" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="tutorial-card">
-                <h3>5. Functions</h3>
-                <p>Learn to create and use functions for better code organization and reusability.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/RFLFX1boGwo" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="tutorial-card">
-                <h3>6. Loops</h3>
-                <p>Master different types of loops for efficient program flow control.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/a7dfSBrTZtE" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="tutorial-card">
-                <h3>7. If & If Else</h3>
-                <p>Learn decision-making in programming using conditional statements.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/AY96XFqb934" allowfullscreen></iframe>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-window-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-window-title">hello_world.py</span>
+                    </div>
+                    <div class="code-window-body">
+<span class="ln">1</span> <span class="comment"># Welcome to CodeVerse!</span>
+<span class="ln">2</span> <span class="keyword">def</span> <span class="function">learn</span>(<span class="param">language</span>):
+<span class="ln">3</span>     <span class="keyword">if</span> language <span class="operator">==</span> <span class="string">"Python"</span>:
+<span class="ln">4</span>         <span class="keyword">return</span> <span class="string">"Easy &amp; Powerful!"</span>
+<span class="ln">5</span>     <span class="keyword">elif</span> language <span class="operator">==</span> <span class="string">"C++"</span>:
+<span class="ln">6</span>         <span class="keyword">return</span> <span class="string">"Fast &amp; Efficient!"</span>
+<span class="ln">7</span>     <span class="keyword">else</span>:
+<span class="ln">8</span>         <span class="keyword">return</span> <span class="string">"Let's code!"</span>
+<span class="ln">9</span>
+<span class="ln">10</span> <span class="builtin">print</span>(<span class="function">learn</span>(<span class="string">"Python"</span>))
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 CodeMaster - C++ Tutorials. All rights reserved.</p>
+    <!-- ========== LANGUAGES SECTION ========== -->
+    <section id="languages" class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Choose Your Language</h2>
+                <p>We offer comprehensive tutorials for the world's most popular programming languages, from beginner to advanced.</p>
+            </div>
+
+            <div class="search-container animate-on-scroll">
+                <span class="search-icon">&#128269;</span>
+                <input type="text" class="search-input" placeholder="Search languages, topics, or tutorials..." aria-label="Search">
+            </div>
+
+            <div class="language-grid stagger-children">
+                <!-- C++ -->
+                <a href="cpp/index.html" class="language-card lang-cpp animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#e8f0fe;color:var(--cpp-color);">C++</div>
+                        <div>
+                            <h3>C++ Programming</h3>
+                            <span class="badge badge-primary">Popular</span>
+                        </div>
+                    </div>
+                    <p class="description">Master system-level programming, game development, and high-performance applications with C++.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 7 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                            </div>
+                            Intermediate
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Python -->
+                <a href="python/index.html" class="language-card lang-python animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#fef3c7;color:var(--python-color);">Py</div>
+                        <div>
+                            <h3>Python</h3>
+                            <span class="badge badge-success">Beginner Friendly</span>
+                        </div>
+                    </div>
+                    <p class="description">Learn the most versatile language — from web development and data science to AI and automation.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 8 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            Beginner
+                        </span>
+                    </div>
+                </a>
+
+                <!-- JavaScript -->
+                <a href="javascript/index.html" class="language-card lang-javascript animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#fef9c3;color:var(--javascript-dark);">JS</div>
+                        <div>
+                            <h3>JavaScript</h3>
+                            <span class="badge badge-warning">Web Essential</span>
+                        </div>
+                    </div>
+                    <p class="description">Build interactive websites, web apps, servers, and mobile applications with JavaScript.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 8 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            Beginner
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Java -->
+                <a href="java/index.html" class="language-card lang-java animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#fef3c7;color:var(--java-color);">Ja</div>
+                        <div>
+                            <h3>Java</h3>
+                            <span class="badge badge-primary">Enterprise</span>
+                        </div>
+                    </div>
+                    <p class="description">Build enterprise applications, Android apps, and scalable backend systems with Java.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 8 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                            </div>
+                            Intermediate
+                        </span>
+                    </div>
+                </a>
+
+                <!-- C# -->
+                <a href="csharp/index.html" class="language-card lang-csharp animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#f3e8ff;color:var(--csharp-color);">C#</div>
+                        <div>
+                            <h3>C#</h3>
+                            <span class="badge badge-primary">Game Dev</span>
+                        </div>
+                    </div>
+                    <p class="description">Create games with Unity, build Windows apps, and develop enterprise solutions with C#.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 7 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                            </div>
+                            Intermediate
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Web Development -->
+                <a href="webdev/index.html" class="language-card lang-html animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#fee2e2;color:var(--html-color);">&lt;/&gt;</div>
+                        <div>
+                            <h3>Web Development</h3>
+                            <span class="badge badge-success">Beginner Friendly</span>
+                        </div>
+                    </div>
+                    <p class="description">Learn HTML, CSS, and responsive design to build beautiful, modern websites from scratch.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 6 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            Beginner
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Rust -->
+                <a href="rust/index.html" class="language-card lang-rust animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#fee2e2;color:var(--rust-color);">Rs</div>
+                        <div>
+                            <h3>Rust</h3>
+                            <span class="badge badge-warning">Advanced</span>
+                        </div>
+                    </div>
+                    <p class="description">Write memory-safe, blazing-fast systems software with Rust's ownership model and zero-cost abstractions.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 6 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                            </div>
+                            Advanced
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Go -->
+                <a href="go/index.html" class="language-card lang-go animate-on-scroll">
+                    <div class="language-card-header">
+                        <div class="language-icon" style="background:#e0f7fa;color:var(--go-color);">Go</div>
+                        <div>
+                            <h3>Go (Golang)</h3>
+                            <span class="badge badge-primary">Cloud Native</span>
+                        </div>
+                    </div>
+                    <p class="description">Build fast, scalable microservices and cloud-native applications with Google's Go language.</p>
+                    <div class="language-meta">
+                        <span class="lessons">&#128218; 6 Lessons</span>
+                        <span class="level">
+                            <div class="difficulty-dots">
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span class="filled"></span>
+                                <span></span>
+                            </div>
+                            Intermediate
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Why Learn With CodeVerse?</h2>
+                <p>Everything you need to go from zero to confident developer, completely free.</p>
+            </div>
+
+            <div class="features-grid stagger-children">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#128187;</div>
+                    <h3>Interactive Tutorials</h3>
+                    <p>Step-by-step lessons with code examples, explanations, and real-world context for every concept.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#127909;</div>
+                    <h3>Video Lessons</h3>
+                    <p>Curated video tutorials embedded directly into each lesson so you can watch, learn, and code along.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#9997;</div>
+                    <h3>Quizzes & Assessments</h3>
+                    <p>Test your understanding after every lesson with interactive quizzes that give instant feedback.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#128200;</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Your quiz scores and learning progress are saved locally so you can pick up where you left off.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#127760;</div>
+                    <h3>Multi-Language</h3>
+                    <p>Learn 8+ programming languages in one place — from beginner-friendly Python to advanced Rust.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">&#128241;</div>
+                    <h3>Fully Responsive</h3>
+                    <p>Works perfectly on desktop, tablet, and mobile. Learn anywhere, anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STATS ========== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="8" data-suffix="+">0</span>
+                    <span class="stat-label">Programming Languages</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="50" data-suffix="+">0</span>
+                    <span class="stat-label">In-Depth Tutorials</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="200" data-suffix="+">0</span>
+                    <span class="stat-label">Practice Questions</span>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <span class="stat-number" data-count="40" data-suffix="+">0</span>
+                    <span class="stat-label">Video Lessons</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEARNING ROADMAP ========== -->
+    <section class="roadmap-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Your Learning Roadmap</h2>
+                <p>Follow our structured path to go from complete beginner to confident programmer.</p>
+            </div>
+
+            <div class="roadmap">
+                <div class="roadmap-item animate-on-scroll" data-step="1">
+                    <div class="roadmap-item-content">
+                        <h3>&#127793; Pick Your First Language</h3>
+                        <p>Start with Python or JavaScript if you're a beginner. Choose C++ or Java if you want a challenge.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item animate-on-scroll" data-step="2">
+                    <div class="roadmap-item-content">
+                        <h3>&#128214; Learn the Fundamentals</h3>
+                        <p>Variables, data types, conditionals, loops, and functions — the building blocks every programmer needs.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item animate-on-scroll" data-step="3">
+                    <div class="roadmap-item-content">
+                        <h3>&#128221; Practice With Quizzes</h3>
+                        <p>After each lesson, test your knowledge with our interactive quizzes and track your score.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item animate-on-scroll" data-step="4">
+                    <div class="roadmap-item-content">
+                        <h3>&#127909; Watch & Code Along</h3>
+                        <p>Follow along with embedded video tutorials to reinforce what you've learned.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item animate-on-scroll" data-step="5">
+                    <div class="roadmap-item-content">
+                        <h3>&#128640; Level Up & Expand</h3>
+                        <p>Move to advanced topics, learn a second language, and start building real projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMPARISON TABLE ========== -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Language Comparison</h2>
+                <p>Not sure which language to learn? Compare their strengths at a glance.</p>
+            </div>
+
+            <div class="animate-on-scroll" style="overflow-x:auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Best For</th>
+                            <th>Difficulty</th>
+                            <th>Type System</th>
+                            <th>Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>C++</td>
+                            <td>Systems, Games, Embedded</td>
+                            <td><span class="badge badge-warning">Intermediate</span></td>
+                            <td>Static</td>
+                            <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>AI, Data Science, Web, Scripting</td>
+                            <td><span class="badge badge-success">Beginner</span></td>
+                            <td>Dynamic</td>
+                            <td>&#9733;&#9733;&#9734;&#9734;&#9734;</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Web Front/Backend, Mobile</td>
+                            <td><span class="badge badge-success">Beginner</span></td>
+                            <td>Dynamic</td>
+                            <td>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>Enterprise, Android, Backend</td>
+                            <td><span class="badge badge-warning">Intermediate</span></td>
+                            <td>Static</td>
+                            <td>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                        </tr>
+                        <tr>
+                            <td>C#</td>
+                            <td>Games (Unity), Windows, Web</td>
+                            <td><span class="badge badge-warning">Intermediate</span></td>
+                            <td>Static</td>
+                            <td>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                        </tr>
+                        <tr>
+                            <td>Rust</td>
+                            <td>Systems, Embedded, WebAssembly</td>
+                            <td><span class="badge badge-warning">Advanced</span></td>
+                            <td>Static</td>
+                            <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+                        </tr>
+                        <tr>
+                            <td>Go</td>
+                            <td>Cloud, Microservices, DevOps</td>
+                            <td><span class="badge badge-warning">Intermediate</span></td>
+                            <td>Static</td>
+                            <td>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                        </tr>
+                        <tr>
+                            <td>HTML/CSS</td>
+                            <td>Web Pages, UI, Design</td>
+                            <td><span class="badge badge-success">Beginner</span></td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box animate-on-scroll">
+                <h2>Ready to Start Coding?</h2>
+                <p>Jump into any language and start your programming journey today. It's completely free — no sign-up required.</p>
+                <a href="#languages" class="btn btn-primary btn-lg">Browse All Languages &#8594;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">&lt;/&gt;</div>
+                    <span>CodeVerse</span>
+                </a>
+                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes. Built with passion for the developer community.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="cpp/index.html">C++</a>
+                <a href="python/index.html">Python</a>
+                <a href="javascript/index.html">JavaScript</a>
+                <a href="java/index.html">Java</a>
+                <a href="csharp/index.html">C#</a>
+            </div>
+            <div class="footer-column">
+                <h4>More Languages</h4>
+                <a href="webdev/index.html">Web Development</a>
+                <a href="rust/index.html">Rust</a>
+                <a href="go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="about.html">About Us</a>
+                <a href="resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="assets/js/script.js"></script>
 </body>
-</html>`                        
+</html>

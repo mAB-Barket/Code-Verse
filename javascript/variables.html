@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn JavaScript variables — var, let, const, data types, and scope rules.">
+    <title>Variables &amp; Data Types - JavaScript - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="javascript-variables">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="index.html" class="active">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">JavaScript Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html" class="active"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="dom.html"><span class="lesson-number">8</span> DOM</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 2 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="25" style="width:25%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">JavaScript</a> &rsaquo; <span>Variables &amp; Data Types</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 2</span>
+                <span class="reading-time">&#128338; 12 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Variables &amp; Data Types</h1>
+
+            <div class="content-body">
+                <h2>Declaring Variables: var, let, and const</h2>
+                <p>JavaScript provides three keywords for declaring variables: <code>var</code>, <code>let</code>, and <code>const</code>. Understanding the differences between them is one of the most important fundamentals of modern JavaScript. In early JavaScript, <code>var</code> was the only option, but ES6 (2015) introduced <code>let</code> and <code>const</code> to address its shortcomings.</p>
+
+                <p><code>let</code> declares a block-scoped variable that can be reassigned. <code>const</code> declares a block-scoped variable that cannot be reassigned after initialization — it must be given a value when declared. <code>var</code> is function-scoped (not block-scoped), gets hoisted to the top of its scope, and can lead to subtle bugs. Modern best practice is to <strong>always use <code>const</code> by default</strong>, and only use <code>let</code> when you need to reassign the variable. Avoid <code>var</code> entirely in new code.</p>
+
+                <p>Block scope means the variable only exists within the nearest pair of curly braces <code>{}</code>. This prevents variables from leaking into outer scopes and makes your code more predictable. The old <code>var</code> keyword ignores block scope entirely, which is why it's considered problematic.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// const — cannot be reassigned (use by default)</span>
+<span class="keyword">const</span> PI <span class="operator">=</span> <span class="number">3.14159</span>;
+<span class="keyword">const</span> APP_NAME <span class="operator">=</span> <span class="string">"CodeVerse"</span>;
+<span class="comment">// PI = 3.14;  // ❌ TypeError: Assignment to constant variable</span>
+
+<span class="comment">// let — can be reassigned (use when value will change)</span>
+<span class="keyword">let</span> score <span class="operator">=</span> <span class="number">0</span>;
+score <span class="operator">=</span> <span class="number">10</span>;           <span class="comment">// ✅ Reassignment is allowed</span>
+score <span class="operator">+=</span> <span class="number">5</span>;           <span class="comment">// ✅ score is now 15</span>
+
+<span class="comment">// var — function-scoped, avoid in modern code</span>
+<span class="keyword">var</span> oldStyle <span class="operator">=</span> <span class="string">"legacy"</span>;  <span class="comment">// ❌ Avoid — use let or const instead</span>
+
+<span class="comment">// Block scope difference</span>
+<span class="keyword">if</span> (<span class="keyword">true</span>) {
+    <span class="keyword">let</span> blockScoped <span class="operator">=</span> <span class="string">"inside"</span>;
+    <span class="keyword">var</span> notBlockScoped <span class="operator">=</span> <span class="string">"leaks out"</span>;
+}
+<span class="comment">// console.log(blockScoped);     // ❌ ReferenceError</span>
+console.<span class="function">log</span>(notBlockScoped);  <span class="comment">// ✅ "leaks out" — var ignores block scope!</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Best Practice:</strong> Use <code>const</code> for everything by default. Only switch to <code>let</code> when you know the value needs to change (counters, accumulators, state). Never use <code>var</code> in modern JavaScript. This makes your code more predictable and easier to debug.</p>
+                </div>
+
+                <h2>JavaScript Data Types</h2>
+                <p>JavaScript is a <strong>dynamically typed</strong> language, meaning variables don't have fixed types — the type is determined by the value assigned. JavaScript has 8 data types, divided into <strong>primitive types</strong> (immutable) and <strong>reference types</strong> (mutable objects).</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// === Primitive Data Types ===</span>
+
+<span class="comment">// Number — integers and decimals (64-bit floating point)</span>
+<span class="keyword">const</span> age <span class="operator">=</span> <span class="number">25</span>;
+<span class="keyword">const</span> price <span class="operator">=</span> <span class="number">19.99</span>;
+<span class="keyword">const</span> negative <span class="operator">=</span> <span class="operator">-</span><span class="number">42</span>;
+<span class="keyword">const</span> infinity <span class="operator">=</span> <span class="number">Infinity</span>;
+<span class="keyword">const</span> notANumber <span class="operator">=</span> <span class="number">NaN</span>;           <span class="comment">// "Not a Number"</span>
+
+<span class="comment">// String — text data</span>
+<span class="keyword">const</span> greeting <span class="operator">=</span> <span class="string">"Hello, World!"</span>;
+<span class="keyword">const</span> single <span class="operator">=</span> <span class="string">'Single quotes work too'</span>;
+<span class="keyword">const</span> template <span class="operator">=</span> <span class="string">`Backticks allow <span class="keyword">${age}</span> interpolation`</span>;
+
+<span class="comment">// Boolean — true or false</span>
+<span class="keyword">const</span> isActive <span class="operator">=</span> <span class="keyword">true</span>;
+<span class="keyword">const</span> isDeleted <span class="operator">=</span> <span class="keyword">false</span>;
+
+<span class="comment">// Undefined — declared but not assigned</span>
+<span class="keyword">let</span> uninitialised;
+console.<span class="function">log</span>(uninitialised);       <span class="comment">// undefined</span>
+
+<span class="comment">// Null — intentional absence of value</span>
+<span class="keyword">const</span> emptyValue <span class="operator">=</span> <span class="keyword">null</span>;
+
+<span class="comment">// Symbol — unique identifier (ES6)</span>
+<span class="keyword">const</span> id <span class="operator">=</span> <span class="function">Symbol</span>(<span class="string">"id"</span>);
+
+<span class="comment">// BigInt — arbitrary-precision integers (ES2020)</span>
+<span class="keyword">const</span> huge <span class="operator">=</span> <span class="number">9007199254740991n</span>;
+
+<span class="comment">// === typeof operator — check a value's type ===</span>
+console.<span class="function">log</span>(<span class="keyword">typeof</span> age);          <span class="comment">// "number"</span>
+console.<span class="function">log</span>(<span class="keyword">typeof</span> greeting);     <span class="comment">// "string"</span>
+console.<span class="function">log</span>(<span class="keyword">typeof</span> isActive);     <span class="comment">// "boolean"</span>
+console.<span class="function">log</span>(<span class="keyword">typeof</span> <span class="keyword">undefined</span>);    <span class="comment">// "undefined"</span>
+console.<span class="function">log</span>(<span class="keyword">typeof</span> <span class="keyword">null</span>);         <span class="comment">// "object" (known JS quirk!)</span></code></pre>
+                </div>
+
+                <h2>Type Conversion &amp; Coercion</h2>
+                <p>JavaScript performs <strong>type coercion</strong> automatically in many situations — silently converting one type to another. This can lead to surprising results if you're not careful. You can also perform <strong>explicit conversion</strong> (type casting) using built-in functions like <code>Number()</code>, <code>String()</code>, and <code>Boolean()</code>.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Explicit type conversion</span>
+<span class="keyword">const</span> str <span class="operator">=</span> <span class="string">"42"</span>;
+<span class="keyword">const</span> num <span class="operator">=</span> <span class="function">Number</span>(str);        <span class="comment">// 42 (number)</span>
+<span class="keyword">const</span> back <span class="operator">=</span> <span class="function">String</span>(num);       <span class="comment">// "42" (string)</span>
+<span class="keyword">const</span> bool <span class="operator">=</span> <span class="function">Boolean</span>(<span class="number">1</span>);        <span class="comment">// true</span>
+<span class="keyword">const</span> parsed <span class="operator">=</span> <span class="function">parseInt</span>(<span class="string">"100px"</span>); <span class="comment">// 100</span>
+
+<span class="comment">// Implicit coercion (automatic — be careful!)</span>
+console.<span class="function">log</span>(<span class="string">"5"</span> <span class="operator">+</span> <span class="number">3</span>);            <span class="comment">// "53" (string concatenation!)</span>
+console.<span class="function">log</span>(<span class="string">"5"</span> <span class="operator">-</span> <span class="number">3</span>);            <span class="comment">// 2 (numeric subtraction)</span>
+console.<span class="function">log</span>(<span class="string">"5"</span> <span class="operator">*</span> <span class="number">2</span>);            <span class="comment">// 10 (numeric multiplication)</span>
+console.<span class="function">log</span>(<span class="keyword">true</span> <span class="operator">+</span> <span class="number">1</span>);           <span class="comment">// 2 (true becomes 1)</span>
+
+<span class="comment">// Strict vs. loose equality</span>
+console.<span class="function">log</span>(<span class="number">5</span> <span class="operator">==</span> <span class="string">"5"</span>);          <span class="comment">// true (loose — coerces types)</span>
+console.<span class="function">log</span>(<span class="number">5</span> <span class="operator">===</span> <span class="string">"5"</span>);         <span class="comment">// false (strict — no coercion) ✅</span>
+console.<span class="function">log</span>(<span class="keyword">null</span> <span class="operator">==</span> <span class="keyword">undefined</span>);  <span class="comment">// true (loose)</span>
+console.<span class="function">log</span>(<span class="keyword">null</span> <span class="operator">===</span> <span class="keyword">undefined</span>); <span class="comment">// false (strict)</span></code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Important:</strong> Always use strict equality <code>===</code> and strict inequality <code>!==</code> instead of <code>==</code> and <code>!=</code>. Loose equality performs type coercion which can cause hard-to-find bugs. For example, <code>0 == ""</code> is <code>true</code>, and <code>false == ""</code> is <code>true</code> — almost certainly not what you intend.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> Which keyword should you use by default for declaring variables?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> var</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> let</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> const</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> static</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> What does <code>typeof null</code> return in JavaScript?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> "null"</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> "object"</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> "undefined"</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> "boolean"</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is the result of <code>"5" + 3</code> in JavaScript?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> 8</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> "53"</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> NaN</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Error</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4.</strong> Which equality operator checks both value AND type?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q4"> ==</label>
+                            <label class="quiz-option"><input type="radio" name="q4" data-correct="true"> ===</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> !=</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> =</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="introduction.html" class="prev-link">&larr; Introduction</a>
+                <a href="strings.html" class="next-link">Strings &amp; Template Literals &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

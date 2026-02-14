@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in C++ - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-variables">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html" class="active"><span class="lesson-number">2</span> Variables</a>
+                <a href="comments.html"><span class="lesson-number">3</span> Comments</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="functions.html"><span class="lesson-number">5</span> Functions</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 2 / 7</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="28" style="width:28%"></div></div>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Variables
+                </div>
+                <h1>2. Variables in C++</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 2 of 7</span>
+                    <span>&#9201; 12 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <p>Variables are fundamental building blocks in C++ programming that store data values which can be manipulated during program execution. Each variable must be declared with a specific data type that determines what kind of data it can hold.</p>
+
+                <div class="code-example">
+                    <pre><code>// Basic variable declaration and initialization
+int age = 25;
+float price = 99.99;
+char grade = 'A';
+bool isActive = true;</code></pre>
+                </div>
+
+                <p>Variables can have different scopes and lifetimes:</p>
+                <ul>
+                    <li>Local variables: Declared inside functions</li>
+                    <li>Global variables: Declared outside functions</li>
+                    <li>Static variables: Retain values between function calls</li>
+                    <li>Constants: Values that cannot be changed</li>
+                </ul>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JrnQ-915czY"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <section class="quiz-section">
+                <h2>Test Your Knowledge</h2>
+                <div class="quiz-question">
+                    <h3>1. Which of the following is a valid variable declaration in C++?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">int number = 42;</div>
+                        <div class="quiz-option">123variable = 10;</div>
+                        <div class="quiz-option">float 1.5 = price;</div>
+                        <div class="quiz-option">char @symbol = '$';</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>2. What is the purpose of the 'const' keyword in C++?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">To declare a variable whose value cannot be changed</div>
+                        <div class="quiz-option">To create a temporary variable</div>
+                        <div class="quiz-option">To declare a global variable</div>
+                        <div class="quiz-option">To create a pointer variable</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>3. Which of these is NOT a valid data type in C++?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option">int</div>
+                        <div class="quiz-option">float</div>
+                        <div class="quiz-option" data-correct="true">string</div>
+                        <div class="quiz-option">char</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>4. What is the scope of a local variable in C++?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">Within the block or function where it is declared</div>
+                        <div class="quiz-option">Throughout the entire program</div>
+                        <div class="quiz-option">Only in the main function</div>
+                        <div class="quiz-option">Within the header file</div>
+                    </div>
+                </div>
+
+                <button class="submit-quiz">Submit Answers</button>
+            </section>
+
+            <div class="tutorial-nav">
+                <a href="introduction.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Introduction to C++</span>
+                </a>
+                <a href="comments.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Comments</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Development</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About Us</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

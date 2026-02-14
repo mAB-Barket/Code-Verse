@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Java strings — String class methods, StringBuilder, comparison, and formatting.">
+    <title>Strings in Java - Java - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="java-strings">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html" class="active">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Java Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html" class="active"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays &amp; Collections</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="methods.html"><span class="lesson-number">7</span> Methods</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 3 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="38" style="width:38%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Java</a> &rsaquo; <span>Strings</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 3</span>
+                <span class="reading-time">&#128338; 10 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Strings in Java</h1>
+
+            <div class="content-body">
+                <h2>Creating Strings</h2>
+                <p>In Java, a <code>String</code> is not a primitive type — it's a <strong>reference type</strong> (an object of the <code>java.lang.String</code> class). Strings are one of the most commonly used types in Java and represent sequences of characters. There are two main ways to create a String: using a <strong>string literal</strong> or the <code>new</code> keyword.</p>
+
+                <p>When you create a string using a literal, Java checks the <strong>String Pool</strong> (a special area in memory) to see if an identical string already exists. If it does, Java reuses it instead of creating a new object — this saves memory. When you use the <code>new</code> keyword, a new String object is always created in heap memory, even if an identical string exists in the pool.</p>
+
+                <p>Like Python, strings in Java are <strong>immutable</strong> — once a String object is created, its content cannot be changed. Any operation that appears to modify a string actually creates a new String object. This immutability makes strings thread-safe and allows for safe sharing across your program.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Creating strings — two approaches</span>
+<span class="keyword">String</span> s1 <span class="operator">=</span> <span class="string">"Hello"</span>;                  <span class="comment">// string literal (uses String Pool)</span>
+<span class="keyword">String</span> s2 <span class="operator">=</span> <span class="keyword">new</span> <span class="type">String</span>(<span class="string">"Hello"</span>);     <span class="comment">// new object (uses heap memory)</span>
+
+<span class="comment">// Both hold the same text, but are stored differently</span>
+<span class="keyword">String</span> greeting <span class="operator">=</span> <span class="string">"Hello, World!"</span>;
+<span class="keyword">String</span> language <span class="operator">=</span> <span class="string">"Java"</span>;
+<span class="keyword">String</span> empty <span class="operator">=</span> <span class="string">""</span>;                    <span class="comment">// empty string</span>
+
+<span class="comment">// Strings are immutable — cannot change characters in place</span>
+<span class="comment">// greeting[0] = 'h';  // ERROR! Strings are immutable</span>
+
+<span class="comment">// String length</span>
+System.<span class="function">out</span>.<span class="function">println</span>(greeting.<span class="function">length</span>());  <span class="comment">// 13</span>
+
+<span class="comment">// Accessing characters</span>
+System.<span class="function">out</span>.<span class="function">println</span>(greeting.<span class="function">charAt</span>(<span class="number">0</span>));  <span class="comment">// H</span>
+System.<span class="function">out</span>.<span class="function">println</span>(greeting.<span class="function">charAt</span>(<span class="number">7</span>));  <span class="comment">// W</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Always prefer string literals (<code>"Hello"</code>) over <code>new String("Hello")</code>. Literals are more memory-efficient because they use the String Pool, and your code will be cleaner and faster.</p>
+                </div>
+
+                <h2>String Methods</h2>
+                <p>Java's <code>String</code> class comes with a rich set of built-in methods for manipulating and inspecting text. Since strings are immutable, these methods always return a <strong>new</strong> String — the original string remains unchanged.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">String</span> text <span class="operator">=</span> <span class="string">"  Hello, Java World!  "</span>;
+
+<span class="comment">// Length</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">length</span>());           <span class="comment">// 22</span>
+
+<span class="comment">// Character access</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">charAt</span>(<span class="number">2</span>));            <span class="comment">// H</span>
+
+<span class="comment">// Substring extraction</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">substring</span>(<span class="number">2</span>, <span class="number">7</span>));      <span class="comment">// Hello</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">substring</span>(<span class="number">9</span>));         <span class="comment">// Java World!  </span>
+
+<span class="comment">// Case conversion</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">toUpperCase</span>());       <span class="comment">// "  HELLO, JAVA WORLD!  "</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">toLowerCase</span>());       <span class="comment">// "  hello, java world!  "</span>
+
+<span class="comment">// Search</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">contains</span>(<span class="string">"Java"</span>));    <span class="comment">// true</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">indexOf</span>(<span class="string">"Java"</span>));     <span class="comment">// 9</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">indexOf</span>(<span class="string">"Python"</span>));   <span class="comment">// -1 (not found)</span>
+
+<span class="comment">// Whitespace removal</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">trim</span>());              <span class="comment">// "Hello, Java World!"</span>
+
+<span class="comment">// Replace</span>
+System.<span class="function">out</span>.<span class="function">println</span>(text.<span class="function">replace</span>(<span class="string">"Java"</span>, <span class="string">"Python"</span>));  <span class="comment">// "  Hello, Python World!  "</span>
+
+<span class="comment">// Check start and end</span>
+<span class="keyword">String</span> clean <span class="operator">=</span> text.<span class="function">trim</span>();
+System.<span class="function">out</span>.<span class="function">println</span>(clean.<span class="function">startsWith</span>(<span class="string">"Hello"</span>));  <span class="comment">// true</span>
+System.<span class="function">out</span>.<span class="function">println</span>(clean.<span class="function">endsWith</span>(<span class="string">"!"</span>));        <span class="comment">// true</span>
+
+<span class="comment">// Equality check</span>
+System.<span class="function">out</span>.<span class="function">println</span>(clean.<span class="function">equals</span>(<span class="string">"Hello, Java World!"</span>));       <span class="comment">// true</span>
+System.<span class="function">out</span>.<span class="function">println</span>(clean.<span class="function">equalsIgnoreCase</span>(<span class="string">"hello, java world!"</span>)); <span class="comment">// true</span></code></pre>
+                </div>
+
+                <h2>String Concatenation</h2>
+                <p>There are several ways to combine strings in Java. The simplest approach is using the <code>+</code> operator, which is intuitive and works well for small concatenations. You can also use the <code>concat()</code> method, which joins two strings together.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// String concatenation with + operator</span>
+<span class="keyword">String</span> firstName <span class="operator">=</span> <span class="string">"John"</span>;
+<span class="keyword">String</span> lastName <span class="operator">=</span> <span class="string">"Doe"</span>;
+<span class="keyword">String</span> fullName <span class="operator">=</span> firstName <span class="operator">+</span> <span class="string">" "</span> <span class="operator">+</span> lastName;
+System.<span class="function">out</span>.<span class="function">println</span>(fullName);  <span class="comment">// John Doe</span>
+
+<span class="comment">// Concatenation with numbers — auto-converts to string</span>
+<span class="keyword">int</span> age <span class="operator">=</span> <span class="number">25</span>;
+System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"Age: "</span> <span class="operator">+</span> age);  <span class="comment">// Age: 25</span>
+
+<span class="comment">// concat() method</span>
+<span class="keyword">String</span> hello <span class="operator">=</span> <span class="string">"Hello"</span>;
+<span class="keyword">String</span> world <span class="operator">=</span> hello.<span class="function">concat</span>(<span class="string">", "</span>).<span class="function">concat</span>(<span class="string">"World!"</span>);
+System.<span class="function">out</span>.<span class="function">println</span>(world);  <span class="comment">// Hello, World!</span>
+
+<span class="comment">// String.format() — similar to printf</span>
+<span class="keyword">String</span> formatted <span class="operator">=</span> <span class="keyword">String</span>.<span class="function">format</span>(<span class="string">"Name: %s, Age: %d"</span>, firstName, age);
+System.<span class="function">out</span>.<span class="function">println</span>(formatted);  <span class="comment">// Name: John, Age: 25</span></code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Caution:</strong> Using <code>+</code> to concatenate strings inside a loop is <strong>inefficient</strong> because each concatenation creates a new String object. For repeated concatenation, use <code>StringBuilder</code> instead — it can be orders of magnitude faster.</p>
+                </div>
+
+                <h2>StringBuilder</h2>
+                <p>Unlike <code>String</code>, <code>StringBuilder</code> is <strong>mutable</strong> — you can modify its content without creating new objects. This makes it much more efficient for building strings dynamically, especially in loops. <code>StringBuilder</code> provides methods like <code>append()</code>, <code>insert()</code>, <code>delete()</code>, and <code>reverse()</code>.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Creating a StringBuilder</span>
+<span class="type">StringBuilder</span> sb <span class="operator">=</span> <span class="keyword">new</span> <span class="type">StringBuilder</span>(<span class="string">"Hello"</span>);
+
+<span class="comment">// append() — add to the end</span>
+sb.<span class="function">append</span>(<span class="string">", "</span>);
+sb.<span class="function">append</span>(<span class="string">"World!"</span>);
+System.<span class="function">out</span>.<span class="function">println</span>(sb);  <span class="comment">// Hello, World!</span>
+
+<span class="comment">// insert() — add at specific position</span>
+sb.<span class="function">insert</span>(<span class="number">5</span>, <span class="string">" Java"</span>);
+System.<span class="function">out</span>.<span class="function">println</span>(sb);  <span class="comment">// Hello Java, World!</span>
+
+<span class="comment">// reverse() — reverse the entire string</span>
+<span class="type">StringBuilder</span> rev <span class="operator">=</span> <span class="keyword">new</span> <span class="type">StringBuilder</span>(<span class="string">"Java"</span>);
+rev.<span class="function">reverse</span>();
+System.<span class="function">out</span>.<span class="function">println</span>(rev);  <span class="comment">// avaJ</span>
+
+<span class="comment">// Efficient string building in a loop</span>
+<span class="type">StringBuilder</span> csv <span class="operator">=</span> <span class="keyword">new</span> <span class="type">StringBuilder</span>();
+<span class="keyword">String</span>[] fruits <span class="operator">=</span> {<span class="string">"Apple"</span>, <span class="string">"Banana"</span>, <span class="string">"Cherry"</span>};
+<span class="keyword">for</span> (<span class="keyword">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> fruits.length; i<span class="operator">++</span>) {
+    csv.<span class="function">append</span>(fruits[i]);
+    <span class="keyword">if</span> (i <span class="operator">&lt;</span> fruits.length <span class="operator">-</span> <span class="number">1</span>) {
+        csv.<span class="function">append</span>(<span class="string">", "</span>);
+    }
+}
+System.<span class="function">out</span>.<span class="function">println</span>(csv.<span class="function">toString</span>());  <span class="comment">// Apple, Banana, Cherry</span></code></pre>
+                </div>
+
+                <h2>String Comparison</h2>
+                <p>Comparing strings in Java requires special attention. The <code>==</code> operator compares <strong>references</strong> (whether two variables point to the same object in memory), not the actual content. To compare the <strong>content</strong> of strings, you must use the <code>.equals()</code> method. This is one of the most common mistakes Java beginners make.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">String</span> a <span class="operator">=</span> <span class="string">"Hello"</span>;
+<span class="keyword">String</span> b <span class="operator">=</span> <span class="string">"Hello"</span>;
+<span class="keyword">String</span> c <span class="operator">=</span> <span class="keyword">new</span> <span class="type">String</span>(<span class="string">"Hello"</span>);
+
+<span class="comment">// == compares references (memory addresses)</span>
+System.<span class="function">out</span>.<span class="function">println</span>(a <span class="operator">==</span> b);        <span class="comment">// true  (same pool object)</span>
+System.<span class="function">out</span>.<span class="function">println</span>(a <span class="operator">==</span> c);        <span class="comment">// false (different objects!)</span>
+
+<span class="comment">// .equals() compares content — ALWAYS use this!</span>
+System.<span class="function">out</span>.<span class="function">println</span>(a.<span class="function">equals</span>(b));   <span class="comment">// true</span>
+System.<span class="function">out</span>.<span class="function">println</span>(a.<span class="function">equals</span>(c));   <span class="comment">// true</span>
+
+<span class="comment">// .equalsIgnoreCase() — case-insensitive comparison</span>
+<span class="keyword">String</span> upper <span class="operator">=</span> <span class="string">"HELLO"</span>;
+System.<span class="function">out</span>.<span class="function">println</span>(a.<span class="function">equalsIgnoreCase</span>(upper));  <span class="comment">// true</span>
+
+<span class="comment">// .compareTo() — lexicographic comparison</span>
+System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"Apple"</span>.<span class="function">compareTo</span>(<span class="string">"Banana"</span>));  <span class="comment">// negative (A &lt; B)</span>
+System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"Banana"</span>.<span class="function">compareTo</span>(<span class="string">"Apple"</span>));  <span class="comment">// positive (B &gt; A)</span>
+System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"Hello"</span>.<span class="function">compareTo</span>(<span class="string">"Hello"</span>));  <span class="comment">// 0 (equal)</span></code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Remember:</strong> Always use <code>.equals()</code> to compare string content in Java. Using <code>==</code> will work sometimes (when strings come from the pool) but fail in other cases — this creates hard-to-find bugs. Make <code>.equals()</code> your default habit!</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> Strings in Java are...</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> Immutable</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Mutable</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Primitive</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Volatile</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> Which method should you use to check if two strings have the same content?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> .equals()</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> ==</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> .compare()</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> .match()</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> StringBuilder is used for...</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> Efficient string modification</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Creating immutable strings</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Comparing strings</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Formatting output</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="variables.html" class="prev-link">&larr; Variables &amp; Data Types</a>
+                <a href="arrays.html" class="next-link">Arrays &amp; Collections &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

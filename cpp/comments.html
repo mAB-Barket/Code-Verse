@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments in C++ - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-comments">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="comments.html" class="active"><span class="lesson-number">3</span> Comments</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="functions.html"><span class="lesson-number">5</span> Functions</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 3 / 7</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="42" style="width:42%"></div></div>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Comments
+                </div>
+                <h1>3. Comments in C++</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 3 of 7</span>
+                    <span>&#9201; 8 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <p>Comments in C++ are used to make code more readable and to document program functionality. They are ignored by the compiler and don't affect program execution.</p>
+
+                <h3>Types of Comments</h3>
+
+                <div class="code-example">
+                    <pre><code>// This is a single-line comment
+int x = 5;
+
+/*
+This is a multi-line comment
+It can span several lines
+Useful for longer explanations
+*/
+double pi = 3.14159;</code></pre>
+                </div>
+
+                <p>Comments serve several important purposes:</p>
+                <ul>
+                    <li>Documentation of code functionality</li>
+                    <li>Explanation of complex algorithms</li>
+                    <li>Temporary code disabling for debugging</li>
+                    <li>Making code more maintainable</li>
+                </ul>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/1-OKPH1y4EA"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <section class="quiz-section">
+                <h2>Test Your Knowledge</h2>
+                <div class="quiz-question">
+                    <h3>1. Which symbol is used for single-line comments in C++?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">//</div>
+                        <div class="quiz-option">/* */</div>
+                        <div class="quiz-option">#</div>
+                        <div class="quiz-option">--</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>2. What happens to comments during program execution?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">They are ignored by the compiler</div>
+                        <div class="quiz-option">They are executed as code</div>
+                        <div class="quiz-option">They cause errors</div>
+                        <div class="quiz-option">They slow down the program</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>3. Which of these is a valid multi-line comment?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">/* This is a
+multi-line comment */</div>
+                        <div class="quiz-option">// This is a
+multi-line comment //</div>
+                        <div class="quiz-option"># This is a
+multi-line comment #</div>
+                        <div class="quiz-option">''' This is a
+multi-line comment '''</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>4. What is a common use of comments in C++?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option">To make the program run faster</div>
+                        <div class="quiz-option" data-correct="true">To document code functionality</div>
+                        <div class="quiz-option">To declare variables</div>
+                        <div class="quiz-option">To compile the program</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>5. Which tool can be used to generate documentation from C++ comments?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">Doxygen</div>
+                        <div class="quiz-option">GitHub</div>
+                        <div class="quiz-option">VSCode</div>
+                        <div class="quiz-option">DevC++</div>
+                    </div>
+                </div>
+
+                <button class="submit-quiz">Submit Answers</button>
+            </section>
+
+            <div class="tutorial-nav">
+                <a href="variables.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Variables &amp; Data Types</span>
+                </a>
+                <a href="arrays.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Arrays</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Development</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About Us</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

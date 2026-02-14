@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Java loops — for, while, do-while, enhanced for, break, and continue.">
+    <title>Loops in Java - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="java-loops">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html" class="active">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Java Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html" class="active"><span class="lesson-number">6</span> Loops</a>
+                <a href="methods.html"><span class="lesson-number">7</span> Methods</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 6 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="75" style="width:75%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Java</a> &rsaquo; Loops
+                </div>
+                <div class="tutorial-meta">
+                    <span class="lesson-badge">Lesson 6</span>
+                    <span class="reading-time">&#128338; 12 min read</span>
+                    <span class="difficulty">&#127793; Beginner</span>
+                </div>
+                <h1>Loops in Java</h1>
+            </div>
+
+            <div class="content-body">
+                <p>Loops allow you to execute a block of code repeatedly based on a condition. Java provides several loop constructs&mdash;<strong>for</strong>, <strong>while</strong>, <strong>do-while</strong>, and the <strong>enhanced for (for-each)</strong>&mdash;each suited for different scenarios. Mastering loops is essential for iterating over data, automating repetitive tasks, and building efficient programs.</p>
+
+                <h2>for Loop</h2>
+                <p>The <code>for</code> loop is ideal when you know the exact number of iterations in advance. It combines initialization, condition checking, and iteration into a single, compact statement.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Print numbers 0 through 4</span>
+<span class="keyword">for</span> (<span class="keyword">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> <span class="number">5</span>; i<span class="operator">++</span>) {
+    System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"i = "</span> <span class="operator">+</span> i);
+}
+
+<span class="comment">// Output:</span>
+<span class="comment">// i = 0</span>
+<span class="comment">// i = 1</span>
+<span class="comment">// i = 2</span>
+<span class="comment">// i = 3</span>
+<span class="comment">// i = 4</span></code></pre>
+                </div>
+
+                <p>The loop header contains three parts separated by semicolons: <strong>initialization</strong> (<code>int i = 0</code>), <strong>condition</strong> (<code>i &lt; 5</code>), and <strong>update</strong> (<code>i++</code>). The loop body executes as long as the condition evaluates to <code>true</code>.</p>
+
+                <h2>while Loop</h2>
+                <p>The <code>while</code> loop repeats a block of code as long as a given condition remains <code>true</code>. It is best used when the number of iterations is not known ahead of time.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">int</span> count <span class="operator">=</span> <span class="number">0</span>;
+
+<span class="keyword">while</span> (count <span class="operator">&lt;</span> <span class="number">5</span>) {
+    System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"count = "</span> <span class="operator">+</span> count);
+    count<span class="operator">++</span>;
+}
+
+<span class="comment">// Output:</span>
+<span class="comment">// count = 0</span>
+<span class="comment">// count = 1</span>
+<span class="comment">// count = 2</span>
+<span class="comment">// count = 3</span>
+<span class="comment">// count = 4</span></code></pre>
+                </div>
+
+                <p>The condition is evaluated <strong>before</strong> each iteration. If the condition is <code>false</code> from the start, the loop body never executes.</p>
+
+                <h2>do-while Loop</h2>
+                <p>The <code>do-while</code> loop is similar to the <code>while</code> loop, but the condition is checked <strong>after</strong> the loop body executes. This guarantees the body runs <strong>at least once</strong>, even if the condition is initially <code>false</code>.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">int</span> num <span class="operator">=</span> <span class="number">10</span>;
+
+<span class="keyword">do</span> {
+    System.<span class="function">out</span>.<span class="function">println</span>(<span class="string">"num = "</span> <span class="operator">+</span> num);
+    num<span class="operator">++</span>;
+} <span class="keyword">while</span> (num <span class="operator">&lt;</span> <span class="number">5</span>);
+
+<span class="comment">// Output:</span>
+<span class="comment">// num = 10</span>
+<span class="comment">// (executes once even though 10 &lt; 5 is false)</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Use <code>do-while</code> when you need the loop body to execute at least once, for example when prompting the user for valid input before checking the condition.</p>
+                </div>
+
+                <h2>Enhanced for Loop (for-each)</h2>
+                <p>The enhanced <code>for</code> loop provides a cleaner syntax for iterating over arrays and collections. You don't need to manage an index variable&mdash;Java handles the traversal automatically.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">String</span>[] fruits <span class="operator">=</span> {<span class="string">"Apple"</span>, <span class="string">"Banana"</span>, <span class="string">"Cherry"</span>, <span class="string">"Date"</span>};
+
+<span class="comment">// Enhanced for loop (for-each)</span>
+<span class="keyword">for</span> (<span class="keyword">String</span> fruit <span class="operator">:</span> fruits) {
+    System.<span class="function">out</span>.<span class="function">println</span>(fruit);
+}
+
+<span class="comment">// Output:</span>
+<span class="comment">// Apple</span>
+<span class="comment">// Banana</span>
+<span class="comment">// Cherry</span>
+<span class="comment">// Date</span>
+
+<span class="comment">// Works with any Iterable (ArrayList, HashSet, etc.)</span>
+<span class="keyword">import</span> java.util.ArrayList;
+
+ArrayList<span class="operator">&lt;</span><span class="keyword">Integer</span><span class="operator">&gt;</span> numbers <span class="operator">=</span> <span class="keyword">new</span> ArrayList<span class="operator">&lt;&gt;</span>();
+numbers.<span class="function">add</span>(<span class="number">10</span>);
+numbers.<span class="function">add</span>(<span class="number">20</span>);
+numbers.<span class="function">add</span>(<span class="number">30</span>);
+
+<span class="keyword">for</span> (<span class="keyword">int</span> n <span class="operator">:</span> numbers) {
+    System.<span class="function">out</span>.<span class="function">println</span>(n);
+}</code></pre>
+                </div>
+
+                <h2>break and continue</h2>
+                <p>Java provides two keywords to alter the normal flow of loops. <code>break</code> immediately terminates the loop, while <code>continue</code> skips the rest of the current iteration and moves to the next one.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// break — exit the loop when i equals 3</span>
+<span class="keyword">for</span> (<span class="keyword">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> <span class="number">10</span>; i<span class="operator">++</span>) {
+    <span class="keyword">if</span> (i <span class="operator">==</span> <span class="number">3</span>) {
+        <span class="keyword">break</span>;
+    }
+    System.<span class="function">out</span>.<span class="function">println</span>(i);
+}
+<span class="comment">// Output: 0  1  2</span>
+
+<span class="comment">// continue — skip even numbers</span>
+<span class="keyword">for</span> (<span class="keyword">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> <span class="number">6</span>; i<span class="operator">++</span>) {
+    <span class="keyword">if</span> (i <span class="operator">%</span> <span class="number">2</span> <span class="operator">==</span> <span class="number">0</span>) {
+        <span class="keyword">continue</span>;
+    }
+    System.<span class="function">out</span>.<span class="function">println</span>(i);
+}
+<span class="comment">// Output: 1  3  5</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Use <code>break</code> and <code>continue</code> sparingly. Overusing them can make your loop logic harder to follow. In most cases, a well-structured condition is clearer than a loop peppered with control-flow jumps.</p>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <iframe src="about:blank"
+                        title="Java Loops Tutorial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <section class="quiz-section">
+                <h2>Test Your Knowledge</h2>
+                <div class="quiz-question">
+                    <p><strong>1.</strong> Which loop always executes at least once?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> do-while</label>
+                        <label class="quiz-option"><input type="radio" name="q1"> for</label>
+                        <label class="quiz-option"><input type="radio" name="q1"> while</label>
+                        <label class="quiz-option"><input type="radio" name="q1"> enhanced for</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>2.</strong> What does the <code>continue</code> statement do?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> Skips the current iteration</label>
+                        <label class="quiz-option"><input type="radio" name="q2"> Exits the loop</label>
+                        <label class="quiz-option"><input type="radio" name="q2"> Restarts the loop</label>
+                        <label class="quiz-option"><input type="radio" name="q2"> Pauses the loop</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>3.</strong> The enhanced for loop is used for?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> Iterating over collections and arrays</label>
+                        <label class="quiz-option"><input type="radio" name="q3"> Running a loop infinitely</label>
+                        <label class="quiz-option"><input type="radio" name="q3"> Looping a fixed number of times</label>
+                        <label class="quiz-option"><input type="radio" name="q3"> Replacing while loops</label>
+                    </div>
+                </div>
+
+                <button class="submit-quiz">Submit Answers</button>
+            </section>
+
+            <div class="tutorial-nav">
+                <a href="conditionals.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Conditionals</span>
+                </a>
+                <a href="methods.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Methods</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Python loops — for loops, while loops, range(), break, continue, and nested loops.">
+    <title>Loops - Python - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="python-loops">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html" class="active">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Python Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="lists.html"><span class="lesson-number">4</span> Lists &amp; Dicts</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html" class="active"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 6 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="75" style="width:75%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Python</a> &rsaquo; <span>Loops</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 6</span>
+                <span class="reading-time">&#128338; 14 min read</span>
+                <span class="difficulty">&#127793; Beginner-Intermediate</span>
+            </div>
+
+            <h1>Loops: for &amp; while</h1>
+
+            <div class="content-body">
+                <h2>What Are Loops?</h2>
+                <p>Loops allow you to execute a block of code repeatedly, which is one of the most powerful concepts in programming. Without loops, you'd have to write the same code over and over. Python provides two main types of loops: <code>for</code> loops for iterating over sequences, and <code>while</code> loops for repeating code as long as a condition is true.</p>
+
+                <p>Python's <code>for</code> loop is different from the traditional C-style for loop. Instead of using a counter variable, Python iterates directly over items in a sequence (list, string, range, etc.). This design makes Python loops more readable, less error-prone, and more Pythonic.</p>
+
+                <p>Understanding loops is critical because almost every real-world program involves repetition — processing items in a list, reading lines from a file, waiting for user input, or running a game loop. Mastering loops will unlock the ability to write powerful, efficient programs.</p>
+
+                <h2>The for Loop</h2>
+                <p>The <code>for</code> loop iterates over any iterable object — lists, strings, tuples, dictionaries, ranges, files, and more. On each iteration, the loop variable takes on the value of the next item in the sequence:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Iterating over a list</span>
+fruits <span class="operator">=</span> [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>]
+<span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:
+    <span class="function">print</span>(<span class="string">f"I like <span class="keyword">{fruit}</span>"</span>)
+
+<span class="comment"># Using range() for numeric loops</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">5</span>):          <span class="comment"># 0, 1, 2, 3, 4</span>
+    <span class="function">print</span>(i, end<span class="operator">=</span><span class="string">" "</span>)
+<span class="function">print</span>()  <span class="comment"># Output: 0 1 2 3 4</span>
+
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">2</span>, <span class="number">10</span>, <span class="number">2</span>):   <span class="comment"># start=2, stop=10, step=2</span>
+    <span class="function">print</span>(i, end<span class="operator">=</span><span class="string">" "</span>)
+<span class="function">print</span>()  <span class="comment"># Output: 2 4 6 8</span>
+
+<span class="comment"># Iterating over a string</span>
+<span class="keyword">for</span> char <span class="keyword">in</span> <span class="string">"Python"</span>:
+    <span class="function">print</span>(char, end<span class="operator">=</span><span class="string">"-"</span>)
+<span class="function">print</span>()  <span class="comment"># Output: P-y-t-h-o-n-</span>
+
+<span class="comment"># Iterating over a dictionary</span>
+scores <span class="operator">=</span> {<span class="string">"Alice"</span>: <span class="number">95</span>, <span class="string">"Bob"</span>: <span class="number">87</span>, <span class="string">"Charlie"</span>: <span class="number">92</span>}
+<span class="keyword">for</span> name, score <span class="keyword">in</span> scores.<span class="function">items</span>():
+    <span class="function">print</span>(<span class="string">f"<span class="keyword">{name}</span>: <span class="keyword">{score}</span>"</span>)</code></pre>
+                </div>
+
+                <h2>Useful Loop Functions</h2>
+                <p>Python provides several built-in functions that make loops more powerful and Pythonic. These are essential tools every Python programmer should know:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># enumerate() — get index AND value</span>
+colors <span class="operator">=</span> [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>]
+<span class="keyword">for</span> index, color <span class="keyword">in</span> <span class="function">enumerate</span>(colors):
+    <span class="function">print</span>(<span class="string">f"<span class="keyword">{index}</span>: <span class="keyword">{color}</span>"</span>)
+<span class="comment"># 0: red</span>
+<span class="comment"># 1: green</span>
+<span class="comment"># 2: blue</span>
+
+<span class="comment"># zip() — iterate over multiple sequences in parallel</span>
+names <span class="operator">=</span> [<span class="string">"Alice"</span>, <span class="string">"Bob"</span>, <span class="string">"Charlie"</span>]
+ages <span class="operator">=</span> [<span class="number">25</span>, <span class="number">30</span>, <span class="number">35</span>]
+<span class="keyword">for</span> name, age <span class="keyword">in</span> <span class="function">zip</span>(names, ages):
+    <span class="function">print</span>(<span class="string">f"<span class="keyword">{name}</span> is <span class="keyword">{age}</span>"</span>)
+
+<span class="comment"># reversed() — iterate in reverse order</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">reversed</span>(<span class="function">range</span>(<span class="number">5</span>)):
+    <span class="function">print</span>(i, end<span class="operator">=</span><span class="string">" "</span>)
+<span class="function">print</span>()  <span class="comment"># Output: 4 3 2 1 0</span>
+
+<span class="comment"># sorted() — iterate in sorted order</span>
+nums <span class="operator">=</span> [<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>]
+<span class="keyword">for</span> n <span class="keyword">in</span> <span class="function">sorted</span>(nums):
+    <span class="function">print</span>(n, end<span class="operator">=</span><span class="string">" "</span>)
+<span class="function">print</span>()  <span class="comment"># Output: 1 1 3 4 5 9</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Avoid using <code>range(len(list))</code> to get indices. Instead, use <code>enumerate()</code> — it's cleaner and more Pythonic. Compare: <code>for i in range(len(items))</code> vs. <code>for i, item in enumerate(items)</code>.</p>
+                </div>
+
+                <h2>The while Loop</h2>
+                <p>The <code>while</code> loop executes a block of code repeatedly as long as a given condition remains <code>True</code>. It's useful when you don't know in advance how many iterations are needed — for example, waiting for user input or processing data until a condition is met:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Basic while loop</span>
+count <span class="operator">=</span> <span class="number">0</span>
+<span class="keyword">while</span> count <span class="operator">&lt;</span> <span class="number">5</span>:
+    <span class="function">print</span>(<span class="string">f"Count: <span class="keyword">{count}</span>"</span>)
+    count <span class="operator">+=</span> <span class="number">1</span>
+
+<span class="comment"># Input validation loop</span>
+<span class="keyword">while</span> <span class="keyword">True</span>:
+    answer <span class="operator">=</span> <span class="function">input</span>(<span class="string">"Enter 'yes' or 'no': "</span>).<span class="function">lower</span>()
+    <span class="keyword">if</span> answer <span class="keyword">in</span> (<span class="string">"yes"</span>, <span class="string">"no"</span>):
+        <span class="keyword">break</span>
+    <span class="function">print</span>(<span class="string">"Invalid input! Try again."</span>)
+
+<span class="comment"># Countdown</span>
+n <span class="operator">=</span> <span class="number">10</span>
+<span class="keyword">while</span> n <span class="operator">&gt;</span> <span class="number">0</span>:
+    <span class="function">print</span>(n, end<span class="operator">=</span><span class="string">" "</span>)
+    n <span class="operator">-=</span> <span class="number">1</span>
+<span class="function">print</span>(<span class="string">"Liftoff! 🚀"</span>)</code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Warning:</strong> Be careful with <code>while</code> loops — if the condition never becomes <code>False</code>, you'll create an <strong>infinite loop</strong> that runs forever. Always ensure that something inside the loop changes the condition, or use <code>break</code> to exit. If you accidentally create an infinite loop, press <code>Ctrl+C</code> to stop it.</p>
+                </div>
+
+                <h2>break, continue, and else</h2>
+                <p>Python provides three special keywords for controlling loop flow:</p>
+                <ul>
+                    <li><strong>break</strong> — Exit the loop immediately</li>
+                    <li><strong>continue</strong> — Skip the rest of the current iteration and move to the next</li>
+                    <li><strong>else</strong> — Execute a block if the loop completes without hitting <code>break</code></li>
+                </ul>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># break — exit the loop early</span>
+<span class="keyword">for</span> num <span class="keyword">in</span> <span class="function">range</span>(<span class="number">100</span>):
+    <span class="keyword">if</span> num <span class="operator">==</span> <span class="number">5</span>:
+        <span class="function">print</span>(<span class="string">"Found 5! Stopping."</span>)
+        <span class="keyword">break</span>
+    <span class="function">print</span>(num, end<span class="operator">=</span><span class="string">" "</span>)
+<span class="comment"># Output: 0 1 2 3 4 Found 5! Stopping.</span>
+
+<span class="comment"># continue — skip current iteration</span>
+<span class="keyword">for</span> num <span class="keyword">in</span> <span class="function">range</span>(<span class="number">10</span>):
+    <span class="keyword">if</span> num <span class="operator">%</span> <span class="number">2</span> <span class="operator">==</span> <span class="number">0</span>:
+        <span class="keyword">continue</span>  <span class="comment"># Skip even numbers</span>
+    <span class="function">print</span>(num, end<span class="operator">=</span><span class="string">" "</span>)
+<span class="comment"># Output: 1 3 5 7 9</span>
+
+<span class="comment"># for...else — else runs if loop didn't break</span>
+<span class="keyword">def</span> <span class="function">find_prime</span>(n):
+    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">2</span>, n):
+        <span class="keyword">if</span> n <span class="operator">%</span> i <span class="operator">==</span> <span class="number">0</span>:
+            <span class="function">print</span>(<span class="string">f"<span class="keyword">{n}</span> is NOT prime (divisible by <span class="keyword">{i}</span>)"</span>)
+            <span class="keyword">break</span>
+    <span class="keyword">else</span>:
+        <span class="comment"># This runs only if the loop completed without break</span>
+        <span class="function">print</span>(<span class="string">f"<span class="keyword">{n}</span> IS prime!"</span>)
+
+<span class="function">find_prime</span>(<span class="number">7</span>)   <span class="comment"># 7 IS prime!</span>
+<span class="function">find_prime</span>(<span class="number">12</span>)  <span class="comment"># 12 is NOT prime (divisible by 2)</span></code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> The <code>for...else</code> and <code>while...else</code> pattern is unique to Python. The <code>else</code> block runs only if the loop finishes naturally (without <code>break</code>). It's a great tool for search operations — "did we find it, or not?"</p>
+                </div>
+
+                <h2>Nested Loops &amp; Performance</h2>
+                <p>You can place loops inside other loops (nested loops). While powerful, be mindful of performance — a nested loop with two lists of size <i>n</i> runs <i>n²</i> iterations. For large data sets, consider using built-in functions, list comprehensions, or libraries like NumPy instead.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Multiplication table with nested loops</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">6</span>):
+    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">6</span>):
+        <span class="function">print</span>(<span class="string">f"<span class="keyword">{i*j:3}</span>"</span>, end<span class="operator">=</span><span class="string">" "</span>)
+    <span class="function">print</span>()
+<span class="comment"># Output:</span>
+<span class="comment">#   1   2   3   4   5</span>
+<span class="comment">#   2   4   6   8  10</span>
+<span class="comment">#   3   6   9  12  15</span>
+<span class="comment">#   4   8  12  16  20</span>
+<span class="comment">#   5  10  15  20  25</span>
+
+<span class="comment"># Practical: find common elements</span>
+list_a <span class="operator">=</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+list_b <span class="operator">=</span> [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]
+
+<span class="comment"># Better: use set intersection instead of nested loops</span>
+common <span class="operator">=</span> <span class="function">set</span>(list_a) <span class="operator">&</span> <span class="function">set</span>(list_b)
+<span class="function">print</span>(<span class="string">f"Common elements: <span class="keyword">{common}</span>"</span>)  <span class="comment"># {4, 5}</span></code></pre>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> What does <code>range(2, 10, 3)</code> produce?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> [2, 3, 4, 5, 6, 7, 8, 9]</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> [2, 5, 8]</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> [2, 5, 8, 11]</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> [3, 6, 9]</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> What does <code>continue</code> do inside a loop?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> Exits the loop entirely</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> Skips the rest of the current iteration</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Restarts the loop from the beginning</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Pauses the loop</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> When does the <code>else</code> block of a <code>for...else</code> execute?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> When the loop encounters an error</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> When break is called</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> When the loop completes without break</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> On every iteration</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="conditionals.html" class="prev-link">&larr; Conditionals</a>
+                <a href="functions.html" class="next-link">Functions &amp; Lambdas &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

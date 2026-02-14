@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Python string operations — slicing, formatting, methods, and string manipulation techniques.">
+    <title>Strings &amp; String Methods - Python - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="python-strings">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html" class="active">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Python Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html" class="active"><span class="lesson-number">3</span> Strings</a>
+                <a href="lists.html"><span class="lesson-number">4</span> Lists &amp; Dicts</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 3 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="37" style="width:37%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Python</a> &rsaquo; <span>Strings</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 3</span>
+                <span class="reading-time">&#128338; 14 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Strings &amp; String Methods</h1>
+
+            <div class="content-body">
+                <h2>Working with Strings</h2>
+                <p>Strings are one of the most widely used data types in Python. A string is a sequence of characters enclosed in quotes — either single quotes (<code>'hello'</code>), double quotes (<code>"hello"</code>), or triple quotes (<code>'''hello'''</code> or <code>"""hello"""</code>) for multi-line strings. Strings are <strong>immutable</strong> in Python, meaning once created, they cannot be modified in place — any "modification" actually creates a new string.</p>
+
+                <p>Python provides an extraordinarily rich set of built-in string methods that make text processing a breeze. Whether you need to search within strings, transform case, split text into parts, or format output, Python has you covered without needing any external libraries.</p>
+
+                <p>Strings in Python are also <strong>sequences</strong>, which means you can access individual characters using indexing, extract substrings using slicing, iterate over characters with loops, and use many of the same operations you'd use with lists.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Creating strings</span>
+single <span class="operator">=</span> <span class="string">'Hello, World!'</span>
+double <span class="operator">=</span> <span class="string">"Hello, World!"</span>
+multi_line <span class="operator">=</span> <span class="string">"""This is a
+multi-line string that spans
+across several lines."""</span>
+
+<span class="comment"># String indexing (0-based)</span>
+greeting <span class="operator">=</span> <span class="string">"Python"</span>
+<span class="function">print</span>(greeting[<span class="number">0</span>])    <span class="comment"># P (first character)</span>
+<span class="function">print</span>(greeting[<span class="number">-1</span>])   <span class="comment"># n (last character)</span>
+<span class="function">print</span>(greeting[<span class="number">2</span>])    <span class="comment"># t (third character)</span>
+
+<span class="comment"># String slicing [start:end:step]</span>
+<span class="function">print</span>(greeting[<span class="number">0</span>:<span class="number">3</span>])  <span class="comment"># Pyt (characters 0, 1, 2)</span>
+<span class="function">print</span>(greeting[<span class="number">2</span>:])   <span class="comment"># thon (from index 2 to end)</span>
+<span class="function">print</span>(greeting[::<span class="number">2</span>])  <span class="comment"># Pto (every 2nd character)</span>
+<span class="function">print</span>(greeting[::<span class="number">-1</span>]) <span class="comment"># nohtyP (reversed string)</span>
+
+<span class="comment"># String length</span>
+<span class="function">print</span>(<span class="function">len</span>(greeting))   <span class="comment"># 6</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Use triple-quoted strings (<code>"""..."""</code>) for multi-line strings and documentation strings (docstrings). They preserve line breaks and are commonly used to document functions and classes in Python.</p>
+                </div>
+
+                <h2>String Methods</h2>
+                <p>Python strings come with dozens of powerful built-in methods. These methods don't modify the original string (since strings are immutable) — they return a new string instead. Here are the most commonly used ones:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code>text <span class="operator">=</span> <span class="string">"  Hello, Python World!  "</span>
+
+<span class="comment"># Case methods</span>
+<span class="function">print</span>(text.<span class="function">upper</span>())       <span class="comment"># "  HELLO, PYTHON WORLD!  "</span>
+<span class="function">print</span>(text.<span class="function">lower</span>())       <span class="comment"># "  hello, python world!  "</span>
+<span class="function">print</span>(text.<span class="function">title</span>())       <span class="comment"># "  Hello, Python World!  "</span>
+<span class="function">print</span>(text.<span class="function">swapcase</span>())    <span class="comment"># "  hELLO, pYTHON wORLD!  "</span>
+
+<span class="comment"># Whitespace removal</span>
+<span class="function">print</span>(text.<span class="function">strip</span>())       <span class="comment"># "Hello, Python World!"</span>
+<span class="function">print</span>(text.<span class="function">lstrip</span>())      <span class="comment"># "Hello, Python World!  "</span>
+<span class="function">print</span>(text.<span class="function">rstrip</span>())      <span class="comment"># "  Hello, Python World!"</span>
+
+<span class="comment"># Search and check</span>
+<span class="function">print</span>(text.<span class="function">find</span>(<span class="string">"Python"</span>))    <span class="comment"># 9 (index of first occurrence)</span>
+<span class="function">print</span>(text.<span class="function">count</span>(<span class="string">"l"</span>))       <span class="comment"># 2</span>
+<span class="function">print</span>(text.<span class="function">startswith</span>(<span class="string">"  H"</span>)) <span class="comment"># True</span>
+<span class="function">print</span>(text.<span class="function">endswith</span>(<span class="string">"!  "</span>))   <span class="comment"># True</span>
+<span class="function">print</span>(<span class="string">"Python"</span> <span class="keyword">in</span> text)      <span class="comment"># True (membership test)</span>
+
+<span class="comment"># Replace and split</span>
+<span class="function">print</span>(text.<span class="function">replace</span>(<span class="string">"Python"</span>, <span class="string">"Java"</span>))  <span class="comment"># "  Hello, Java World!  "</span>
+
+words <span class="operator">=</span> <span class="string">"apple,banana,cherry"</span>
+<span class="function">print</span>(words.<span class="function">split</span>(<span class="string">","</span>))    <span class="comment"># ['apple', 'banana', 'cherry']</span>
+
+fruits <span class="operator">=</span> [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>]
+<span class="function">print</span>(<span class="string">" &amp; "</span>.<span class="function">join</span>(fruits))  <span class="comment"># "apple &amp; banana &amp; cherry"</span></code></pre>
+                </div>
+
+                <h2>String Formatting</h2>
+                <p>Python offers multiple ways to format strings. The modern and preferred approach is <strong>f-strings</strong> (formatted string literals), introduced in Python 3.6. They provide a concise, readable way to embed expressions inside strings:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code>name <span class="operator">=</span> <span class="string">"Alice"</span>
+age <span class="operator">=</span> <span class="number">30</span>
+gpa <span class="operator">=</span> <span class="number">3.856</span>
+
+<span class="comment"># f-strings (Python 3.6+) — the preferred way</span>
+<span class="function">print</span>(<span class="string">f"My name is <span class="keyword">{name}</span> and I'm <span class="keyword">{age}</span> years old."</span>)
+<span class="function">print</span>(<span class="string">f"Next year I'll be <span class="keyword">{age + 1}</span>."</span>)  <span class="comment"># Expressions allowed!</span>
+<span class="function">print</span>(<span class="string">f"GPA: <span class="keyword">{gpa:.2f}</span>"</span>)              <span class="comment"># GPA: 3.86 (2 decimal places)</span>
+<span class="function">print</span>(<span class="string">f"Name: <span class="keyword">{name:&gt;15}</span>"</span>)            <span class="comment"># Right-aligned in 15 chars</span>
+<span class="function">print</span>(<span class="string">f"Name: <span class="keyword">{name:&lt;15}</span>"</span>)            <span class="comment"># Left-aligned in 15 chars</span>
+<span class="function">print</span>(<span class="string">f"Name: <span class="keyword">{name:^15}</span>"</span>)            <span class="comment"># Center-aligned in 15 chars</span>
+
+<span class="comment"># .format() method (older style, still widely used)</span>
+<span class="function">print</span>(<span class="string">"Hello, {}! You are {} years old."</span>.<span class="function">format</span>(name, age))
+<span class="function">print</span>(<span class="string">"Hello, {0}! {0} is {1}."</span>.<span class="function">format</span>(name, age))
+
+<span class="comment"># %-formatting (oldest style, C-like)</span>
+<span class="function">print</span>(<span class="string">"Hello, %s! You are %d years old."</span> <span class="operator">%</span> (name, age))</code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> F-strings are not just more readable — they're also <strong>faster</strong> than <code>.format()</code> and <code>%</code> formatting because they're evaluated at runtime by the interpreter rather than calling a method. Always prefer f-strings in modern Python code.</p>
+                </div>
+
+                <h2>Escape Characters &amp; Raw Strings</h2>
+                <p>Escape characters let you include special characters in strings that would otherwise be difficult or impossible to type directly. Python also supports raw strings (prefixed with <code>r</code>) that treat backslashes as literal characters:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">python</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment"># Common escape characters</span>
+<span class="function">print</span>(<span class="string">"Line 1\nLine 2"</span>)        <span class="comment"># \n = newline</span>
+<span class="function">print</span>(<span class="string">"Column1\tColumn2"</span>)      <span class="comment"># \t = tab</span>
+<span class="function">print</span>(<span class="string">"She said \"hi!\""</span>)       <span class="comment"># \" = double quote</span>
+<span class="function">print</span>(<span class="string">"Backslash: \\"</span>)          <span class="comment"># \\ = literal backslash</span>
+
+<span class="comment"># Raw strings — backslashes are treated literally</span>
+path <span class="operator">=</span> <span class="string">r"C:\Users\name\Desktop"</span>
+<span class="function">print</span>(path)  <span class="comment"># C:\Users\name\Desktop (no escaping)</span>
+
+<span class="comment"># Useful for regex patterns</span>
+<span class="keyword">import</span> re
+pattern <span class="operator">=</span> <span class="string">r"\d{3}-\d{4}"</span>   <span class="comment"># Phone number pattern</span>
+<span class="function">print</span>(re.<span class="function">findall</span>(pattern, <span class="string">"Call 555-1234 or 555-5678"</span>))
+<span class="comment"># ['555-1234', '555-5678']</span></code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Remember:</strong> Strings are <strong>immutable</strong> in Python. You cannot change individual characters of a string. Operations like <code>upper()</code> and <code>replace()</code> always return a <strong>new</strong> string; the original remains unchanged.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> What does <code>"Python"[::-1]</code> return?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> "Python"</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> "nohtyP"</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> "Pytho"</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Error</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> Which method removes whitespace from both ends of a string?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2"> trim()</label>
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> strip()</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> clean()</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> remove()</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is the output of <code>f"{'hello':>10}"</code>?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> "hello     "</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> "     hello"</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> "  hello   "</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> Error</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>4.</strong> Are strings mutable or immutable in Python?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q4"> Mutable</label>
+                            <label class="quiz-option"><input type="radio" name="q4" data-correct="true"> Immutable</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> Depends on the content</label>
+                            <label class="quiz-option"><input type="radio" name="q4"> Both</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="variables.html" class="prev-link">&larr; Variables &amp; Data Types</a>
+                <a href="lists.html" class="next-link">Lists, Tuples &amp; Dicts &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

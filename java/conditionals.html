@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Understand Java conditionals — if/else, switch statements, and comparison operators.">
+    <title>Conditionals - Java - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="java-conditionals">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html" class="active">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">Java Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays &amp; Collections</a>
+                <a href="conditionals.html" class="active"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="methods.html"><span class="lesson-number">7</span> Methods</a>
+                <a href="oop.html"><span class="lesson-number">8</span> OOP</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 5 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="63" style="width:63%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Java</a> &rsaquo; <span>Conditionals</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 5</span>
+                <span class="reading-time">&#128338; 10 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Conditional Statements</h1>
+
+            <div class="content-body">
+                <h2>if Statement</h2>
+                <p>The <code>if</code> statement is the most basic form of decision making in Java. It evaluates a boolean expression inside parentheses, and if the condition is <code>true</code>, the code block inside the curly braces is executed. If the condition is <code>false</code>, the block is skipped entirely.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="type">int</span> temperature <span class="operator">=</span> <span class="number">35</span>;
+
+<span class="keyword">if</span> (temperature <span class="operator">&gt;</span> <span class="number">30</span>) {
+    <span class="function">System.out.println</span>(<span class="string">"It's a hot day!"</span>);
+    <span class="function">System.out.println</span>(<span class="string">"Stay hydrated."</span>);
+}
+
+<span class="comment">// Output:</span>
+<span class="comment">// It's a hot day!</span>
+<span class="comment">// Stay hydrated.</span></code></pre>
+                </div>
+
+                <h2>if-else Statement</h2>
+                <p>The <code>if-else</code> statement adds an alternative path. When the condition is <code>true</code>, the first block runs; when it's <code>false</code>, the <code>else</code> block runs instead. This guarantees that exactly one of the two blocks will execute.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="type">int</span> age <span class="operator">=</span> <span class="number">16</span>;
+
+<span class="keyword">if</span> (age <span class="operator">&gt;=</span> <span class="number">18</span>) {
+    <span class="function">System.out.println</span>(<span class="string">"You can vote."</span>);
+} <span class="keyword">else</span> {
+    <span class="function">System.out.println</span>(<span class="string">"You are too young to vote."</span>);
+}
+
+<span class="comment">// Output: You are too young to vote.</span></code></pre>
+                </div>
+
+                <h2>else-if Chain</h2>
+                <p>When you have multiple conditions to test, use an <code>else if</code> chain. Java checks each condition in order from top to bottom. As soon as one condition is <code>true</code>, its block executes and the rest of the chain is skipped. The final <code>else</code> is optional and acts as a catch-all for any remaining cases.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="type">int</span> score <span class="operator">=</span> <span class="number">82</span>;
+<span class="type">char</span> grade;
+
+<span class="keyword">if</span> (score <span class="operator">&gt;=</span> <span class="number">90</span>) {
+    grade <span class="operator">=</span> <span class="string">'A'</span>;
+} <span class="keyword">else</span> <span class="keyword">if</span> (score <span class="operator">&gt;=</span> <span class="number">80</span>) {
+    grade <span class="operator">=</span> <span class="string">'B'</span>;
+} <span class="keyword">else</span> <span class="keyword">if</span> (score <span class="operator">&gt;=</span> <span class="number">70</span>) {
+    grade <span class="operator">=</span> <span class="string">'C'</span>;
+} <span class="keyword">else</span> <span class="keyword">if</span> (score <span class="operator">&gt;=</span> <span class="number">60</span>) {
+    grade <span class="operator">=</span> <span class="string">'D'</span>;
+} <span class="keyword">else</span> {
+    grade <span class="operator">=</span> <span class="string">'F'</span>;
+}
+
+<span class="function">System.out.println</span>(<span class="string">"Grade: "</span> <span class="operator">+</span> grade);
+<span class="comment">// Output: Grade: B</span></code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Tip:</strong> Order your <code>else if</code> conditions from most specific to most general. Placing a broad condition first may cause it to match before a more specific one gets a chance to be evaluated.</p>
+                </div>
+
+                <h2>switch Statement</h2>
+                <p>The <code>switch</code> statement provides a cleaner alternative to long <code>else if</code> chains when you need to compare a single variable against many possible values. It supports <code>int</code>, <code>char</code>, <code>String</code>, and enum types. Each <code>case</code> ends with a <code>break</code> to prevent fall-through, and <code>default</code> handles any unmatched values.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="type">String</span> day <span class="operator">=</span> <span class="string">"Wednesday"</span>;
+
+<span class="keyword">switch</span> (day) {
+    <span class="keyword">case</span> <span class="string">"Monday"</span>:
+        <span class="function">System.out.println</span>(<span class="string">"Start of the work week."</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="string">"Wednesday"</span>:
+        <span class="function">System.out.println</span>(<span class="string">"Midweek!"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="string">"Friday"</span>:
+        <span class="function">System.out.println</span>(<span class="string">"Almost weekend!"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="string">"Saturday"</span>:
+    <span class="keyword">case</span> <span class="string">"Sunday"</span>:
+        <span class="function">System.out.println</span>(<span class="string">"Weekend! Enjoy!"</span>);
+        <span class="keyword">break</span>;
+    <span class="keyword">default</span>:
+        <span class="function">System.out.println</span>(<span class="string">"A regular day."</span>);
+        <span class="keyword">break</span>;
+}
+
+<span class="comment">// Output: Midweek!</span></code></pre>
+                </div>
+
+                <div class="info-box warning">
+                    <span class="icon">&#9888;</span>
+                    <p><strong>Common Mistake:</strong> Forgetting the <code>break</code> keyword in a <code>switch</code> case causes <strong>fall-through</strong> — execution continues into the next case regardless of whether it matches. This is intentional in the Saturday/Sunday example above, but is usually a bug when unintended.</p>
+                </div>
+
+                <h2>Ternary Operator</h2>
+                <p>The ternary operator is a compact, one-line way to write simple <code>if-else</code> statements. It evaluates a condition and returns one of two values. The syntax is: <code>condition ? valueIfTrue : valueIfFalse</code>. It's great for assignments and inline expressions, but avoid nesting them as it hurts readability.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">java</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="type">int</span> age <span class="operator">=</span> <span class="number">20</span>;
+
+<span class="comment">// Ternary operator</span>
+<span class="type">String</span> status <span class="operator">=</span> (age <span class="operator">&gt;=</span> <span class="number">18</span>) <span class="operator">?</span> <span class="string">"Adult"</span> <span class="operator">:</span> <span class="string">"Minor"</span>;
+<span class="function">System.out.println</span>(status);  <span class="comment">// Adult</span>
+
+<span class="comment">// Using ternary in a print statement</span>
+<span class="type">int</span> score <span class="operator">=</span> <span class="number">75</span>;
+<span class="function">System.out.println</span>(score <span class="operator">&gt;=</span> <span class="number">60</span> <span class="operator">?</span> <span class="string">"Pass"</span> <span class="operator">:</span> <span class="string">"Fail"</span>);  <span class="comment">// Pass</span>
+
+<span class="comment">// Ternary to find the larger number</span>
+<span class="type">int</span> a <span class="operator">=</span> <span class="number">15</span>, b <span class="operator">=</span> <span class="number">22</span>;
+<span class="type">int</span> max <span class="operator">=</span> (a <span class="operator">&gt;</span> b) <span class="operator">?</span> a <span class="operator">:</span> b;
+<span class="function">System.out.println</span>(<span class="string">"Max: "</span> <span class="operator">+</span> max);  <span class="comment">// Max: 22</span></code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> The ternary operator is an expression, not a statement — it returns a value. This means you can use it inside method arguments, string concatenation, and variable assignments. Keep it simple: if the logic is complex, use a regular <code>if-else</code> instead.</p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> What keyword is used for multi-way branching in Java?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> switch</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> case</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> branch</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> select</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> What happens if you omit <code>break</code> in a <code>switch</code> case?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> Fall-through to the next case</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Compilation error</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> Nothing happens</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> It loops back to the first case</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> What is the correct syntax for the ternary operator?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> condition ? val1 : val2</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> condition : val1 ? val2</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> if condition then val1 else val2</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> condition ?? val1 :: val2</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="arrays.html" class="prev-link">&larr; Arrays &amp; Collections</a>
+                <a href="loops.html" class="next-link">Loops &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

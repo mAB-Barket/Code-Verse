@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master JavaScript strings — template literals, methods, and string manipulation.">
+    <title>Strings &amp; Template Literals - JavaScript - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="javascript-strings">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="index.html" class="active">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">JavaScript Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="strings.html" class="active"><span class="lesson-number">3</span> Strings</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="conditionals.html"><span class="lesson-number">5</span> Conditionals</a>
+                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
+                <a href="functions.html"><span class="lesson-number">7</span> Functions</a>
+                <a href="dom.html"><span class="lesson-number">8</span> DOM</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 3 / 8</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="38" style="width:38%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a> &rsaquo; <a href="index.html">JavaScript</a> &rsaquo; <span>Strings &amp; Template Literals</span>
+            </div>
+
+            <div class="tutorial-meta">
+                <span class="lesson-badge">Lesson 3</span>
+                <span class="reading-time">&#128338; 12 min read</span>
+                <span class="difficulty">&#127793; Beginner</span>
+            </div>
+
+            <h1>Strings &amp; Template Literals</h1>
+
+            <div class="content-body">
+                <h2>Creating Strings</h2>
+                <p>Strings in JavaScript represent textual data and are one of the most frequently used data types. You can create strings using single quotes (<code>'...'</code>), double quotes (<code>"..."</code>), or backticks (<code>`...`</code>). Single and double quotes are functionally identical, but backticks unlock <strong>template literals</strong> — a powerful ES6 feature that allows embedded expressions and multi-line strings.</p>
+
+                <p>Strings in JavaScript are <strong>immutable</strong> — once created, a string's characters cannot be changed in place. Methods like <code>toUpperCase()</code> or <code>replace()</code> always return a <em>new</em> string rather than modifying the original. Strings are also zero-indexed, meaning the first character has index 0, the second has index 1, and so on.</p>
+
+                <p>JavaScript strings are sequences of UTF-16 code units, which means they fully support Unicode characters, including emoji. You can access individual characters using bracket notation (<code>str[0]</code>) or the <code>charAt()</code> method, and find the length of any string using the <code>.length</code> property.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Three ways to create strings</span>
+<span class="keyword">const</span> single <span class="operator">=</span> <span class="string">'Hello, World!'</span>;
+<span class="keyword">const</span> double <span class="operator">=</span> <span class="string">"Hello, World!"</span>;
+<span class="keyword">const</span> backtick <span class="operator">=</span> <span class="string">`Hello, World!`</span>;
+
+<span class="comment">// String properties and access</span>
+<span class="keyword">const</span> language <span class="operator">=</span> <span class="string">"JavaScript"</span>;
+console.<span class="function">log</span>(language.<span class="type">length</span>);     <span class="comment">// 10</span>
+console.<span class="function">log</span>(language[<span class="number">0</span>]);          <span class="comment">// "J"</span>
+console.<span class="function">log</span>(language[<span class="number">4</span>]);          <span class="comment">// "S"</span>
+console.<span class="function">log</span>(language.<span class="function">charAt</span>(<span class="number">0</span>));   <span class="comment">// "J"</span>
+
+<span class="comment">// Escape characters</span>
+<span class="keyword">const</span> withQuotes <span class="operator">=</span> <span class="string">"She said \"hello\""</span>;
+<span class="keyword">const</span> withNewline <span class="operator">=</span> <span class="string">"Line 1\nLine 2"</span>;
+<span class="keyword">const</span> withTab <span class="operator">=</span> <span class="string">"Col1\tCol2"</span>;</code></pre>
+                </div>
+
+                <h2>Template Literals (Backtick Strings)</h2>
+                <p>Template literals, introduced in ES6, are one of the most useful additions to JavaScript. They use backticks (<code>`</code>) instead of quotes and provide two killer features: <strong>string interpolation</strong> with <code>${expression}</code> syntax, and <strong>multi-line strings</strong> without needing escape characters. Template literals make building dynamic strings clean and readable.</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// String interpolation with template literals</span>
+<span class="keyword">const</span> name <span class="operator">=</span> <span class="string">"Alice"</span>;
+<span class="keyword">const</span> age <span class="operator">=</span> <span class="number">28</span>;
+
+<span class="comment">// Old way (concatenation) — messy</span>
+<span class="keyword">const</span> old <span class="operator">=</span> <span class="string">"My name is "</span> <span class="operator">+</span> name <span class="operator">+</span> <span class="string">" and I am "</span> <span class="operator">+</span> age <span class="operator">+</span> <span class="string">" years old."</span>;
+
+<span class="comment">// New way (template literals) — clean! ✅</span>
+<span class="keyword">const</span> modern <span class="operator">=</span> <span class="string">`My name is <span class="keyword">${name}</span> and I am <span class="keyword">${age}</span> years old.`</span>;
+
+<span class="comment">// Expressions inside ${} are fully evaluated</span>
+console.<span class="function">log</span>(<span class="string">`Next year I'll be <span class="keyword">${age <span class="operator">+</span> <span class="number">1</span>}</span>`</span>);       <span class="comment">// "Next year I'll be 29"</span>
+console.<span class="function">log</span>(<span class="string">`Is adult: <span class="keyword">${age <span class="operator">>=</span> <span class="number">18</span>}</span>`</span>);              <span class="comment">// "Is adult: true"</span>
+console.<span class="function">log</span>(<span class="string">`Uppercase: <span class="keyword">${name.<span class="function">toUpperCase</span>()}</span>`</span>);   <span class="comment">// "Uppercase: ALICE"</span>
+
+<span class="comment">// Multi-line strings (no \n needed)</span>
+<span class="keyword">const</span> html <span class="operator">=</span> <span class="string">`
+  &lt;div class="card"&gt;
+    &lt;h2&gt;<span class="keyword">${name}</span>&lt;/h2&gt;
+    &lt;p&gt;Age: <span class="keyword">${age}</span>&lt;/p&gt;
+  &lt;/div&gt;
+`</span>;
+console.<span class="function">log</span>(html);</code></pre>
+                </div>
+
+                <div class="info-box tip">
+                    <span class="icon">&#128161;</span>
+                    <p><strong>Pro Tip:</strong> Template literals are especially useful when building HTML strings, constructing URLs, or creating log messages. Anything inside <code>${}</code> is evaluated as a JavaScript expression — you can call functions, use ternary operators, and even nest template literals inside each other.</p>
+                </div>
+
+                <h2>Essential String Methods</h2>
+                <p>JavaScript strings come with a rich set of built-in methods for searching, extracting, transforming, and manipulating text. Since strings are immutable, all these methods return new strings without modifying the original. Here are the most commonly used methods every JavaScript developer should know:</p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-lang">javascript</span>
+                        <button class="code-copy-btn">&#128203; Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">const</span> str <span class="operator">=</span> <span class="string">"  Hello, JavaScript World!  "</span>;
+
+<span class="comment">// Searching</span>
+str.<span class="function">includes</span>(<span class="string">"JavaScript"</span>);     <span class="comment">// true</span>
+str.<span class="function">startsWith</span>(<span class="string">"  Hello"</span>);     <span class="comment">// true</span>
+str.<span class="function">endsWith</span>(<span class="string">"!  "</span>);            <span class="comment">// true</span>
+str.<span class="function">indexOf</span>(<span class="string">"JavaScript"</span>);      <span class="comment">// 9</span>
+
+<span class="comment">// Transforming</span>
+str.<span class="function">toUpperCase</span>();               <span class="comment">// "  HELLO, JAVASCRIPT WORLD!  "</span>
+str.<span class="function">toLowerCase</span>();               <span class="comment">// "  hello, javascript world!  "</span>
+str.<span class="function">trim</span>();                      <span class="comment">// "Hello, JavaScript World!"</span>
+str.<span class="function">trimStart</span>();                 <span class="comment">// "Hello, JavaScript World!  "</span>
+str.<span class="function">trimEnd</span>();                   <span class="comment">// "  Hello, JavaScript World!"</span>
+
+<span class="comment">// Extracting</span>
+str.<span class="function">slice</span>(<span class="number">2</span>, <span class="number">7</span>);                <span class="comment">// "Hello"</span>
+str.<span class="function">slice</span>(<span class="operator">-</span><span class="number">8</span>);                  <span class="comment">// "World!  "</span>
+str.<span class="function">substring</span>(<span class="number">2</span>, <span class="number">7</span>);            <span class="comment">// "Hello"</span>
+
+<span class="comment">// Replacing</span>
+str.<span class="function">replace</span>(<span class="string">"JavaScript"</span>, <span class="string">"JS"</span>);  <span class="comment">// "  Hello, JS World!  "</span>
+str.<span class="function">replaceAll</span>(<span class="string">" "</span>, <span class="string">"-"</span>);          <span class="comment">// "--Hello,-JavaScript-World!--"</span>
+
+<span class="comment">// Splitting and joining</span>
+<span class="keyword">const</span> words <span class="operator">=</span> <span class="string">"apple,banana,cherry"</span>.<span class="function">split</span>(<span class="string">","</span>);
+console.<span class="function">log</span>(words);              <span class="comment">// ["apple", "banana", "cherry"]</span>
+console.<span class="function">log</span>(words.<span class="function">join</span>(<span class="string">" | "</span>));  <span class="comment">// "apple | banana | cherry"</span>
+
+<span class="comment">// Repeating and padding</span>
+<span class="string">"ha"</span>.<span class="function">repeat</span>(<span class="number">3</span>);                  <span class="comment">// "hahaha"</span>
+<span class="string">"5"</span>.<span class="function">padStart</span>(<span class="number">3</span>, <span class="string">"0"</span>);            <span class="comment">// "005"</span>
+<span class="string">"5"</span>.<span class="function">padEnd</span>(<span class="number">3</span>, <span class="string">"0"</span>);              <span class="comment">// "500"</span></code></pre>
+                </div>
+
+                <div class="info-box note">
+                    <span class="icon">&#128221;</span>
+                    <p><strong>Note:</strong> Remember that strings are <strong>immutable</strong> in JavaScript. Every string method returns a new string — the original is never modified. If you want to keep the result, you must assign it to a variable: <code>const trimmed = str.trim();</code></p>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder"><div class="play-icon">&#9654;</div><p>Video Coming Soon</p></div>
+                </div>
+
+                <div class="quiz-section">
+                    <h2>&#127919; Quiz — Test Your Knowledge</h2>
+
+                    <div class="quiz-question">
+                        <p><strong>1.</strong> Which quote style enables string interpolation with ${} syntax?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q1"> Single quotes ('')</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> Double quotes ("")</label>
+                            <label class="quiz-option"><input type="radio" name="q1" data-correct="true"> Backticks (``)</label>
+                            <label class="quiz-option"><input type="radio" name="q1"> All of the above</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>2.</strong> What does <code>"hello".toUpperCase()</code> return?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q2" data-correct="true"> "HELLO"</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> "Hello"</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> "hello"</label>
+                            <label class="quiz-option"><input type="radio" name="q2"> undefined</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>3.</strong> Which method splits a string into an array?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="q3"> slice()</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> substring()</label>
+                            <label class="quiz-option"><input type="radio" name="q3" data-correct="true"> split()</label>
+                            <label class="quiz-option"><input type="radio" name="q3"> splice()</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="variables.html" class="prev-link">&larr; Variables &amp; Data Types</a>
+                <a href="arrays.html" class="next-link">Arrays &amp; Array Methods &rarr;</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2025-2026 CodeVerse. All rights reserved.</p><div class="footer-socials"><a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a></div></div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

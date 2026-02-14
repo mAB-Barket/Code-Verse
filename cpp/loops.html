@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in C++ - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-loops">
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
+                <a href="comments.html"><span class="lesson-number">3</span> Comments</a>
+                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
+                <a href="functions.html"><span class="lesson-number">5</span> Functions</a>
+                <a href="loops.html" class="active"><span class="lesson-number">6</span> Loops</a>
+                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 6 / 7</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="85" style="width:85%"></div></div>
+            </div>
+        </aside>
+
+        <div class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Loops
+                </div>
+                <h1>6. Loops in C++</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 6 of 7</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <p>In C++, loops are used to repeatedly execute a block of code as long as a specific condition is met. Loops are essential for tasks that require repetition, such as iterating through arrays, performing calculations, or handling user input. C++ supports three primary types of loops: for, while, and do-while.</p>
+
+                <p>The <strong>for loop</strong> is the most commonly used loop when the number of iterations is known in advance. It has three parts: initialization, condition, and iteration. The <strong>while loop</strong> is used when the number of iterations is unknown and the loop should continue as long as a condition is true. The condition is checked before each iteration.</p>
+
+                <p>The <strong>do-while loop</strong> is similar to the while loop, but the condition is checked after the loop executes, ensuring that the loop runs at least once.</p>
+
+                <p>Loops can be controlled using keywords like <code>break</code> and <code>continue</code>. The <code>break</code> statement immediately terminates the loop, while the <code>continue</code> statement skips the current iteration and moves to the next one.</p>
+
+                <p>Nested loops are loops inside other loops. This is useful when working with multi-dimensional data structures like matrices.</p>
+
+                <p>In summary, loops in C++ are essential tools for repetition, making it easier to handle repetitive tasks efficiently. They come in three main types&mdash;for, while, and do-while&mdash;each suited for different use cases. With control statements like break and continue, loops become even more flexible and powerful. Whether you are working with simple iterations or nested structures, loops are fundamental for writing effective C++ programs.</p>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/a7dfSBrTZtE?si=ldSnyx22edR5eUxd"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <section class="quiz-section">
+                <h2>Test Your Knowledge</h2>
+                <div class="quiz-question">
+                    <h3>1. Which loop is best suited when the number of iterations is known in advance?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">for loop</div>
+                        <div class="quiz-option">while loop</div>
+                        <div class="quiz-option">do-while loop</div>
+                        <div class="quiz-option">all of the above</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>2. What is the difference between break and continue statements?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">break exits the loop, continue skips current iteration</div>
+                        <div class="quiz-option">break skips current iteration, continue exits the loop</div>
+                        <div class="quiz-option">They are the same thing</div>
+                        <div class="quiz-option">None of the above</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>3. Which loop executes at least once before checking the condition?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option">for loop</div>
+                        <div class="quiz-option">while loop</div>
+                        <div class="quiz-option" data-correct="true">do-while loop</div>
+                        <div class="quiz-option">none of the above</div>
+                    </div>
+                </div>
+
+                <button class="submit-quiz">Submit Answers</button>
+            </section>
+
+            <div class="tutorial-nav">
+                <a href="functions.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Functions</span>
+                </a>
+                <a href="ifelse.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">If &amp; If Else</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Development</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About Us</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Aict-Project" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
