@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Testing &amp; Assertions - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-testing">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html" class="active"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 54 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="98" style="width:98%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Testing &amp; Assertions
+                </div>
+                <h1>54. Testing &amp; Assertions</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 54 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== Why Testing Matters ===== -->
+                <h2>Why Testing Matters</h2>
+                <p>Every C++ project, from a small command-line utility to a multi-million-line codebase, benefits from automated testing. Tests catch bugs early, document expected behaviour, and give developers the confidence to refactor without fear of breaking existing functionality.</p>
+                <p>Without tests, the only way to verify that code works is to run the application manually &ndash; a slow, error-prone process that does not scale. Automated tests, on the other hand, can run in seconds, be repeated thousands of times, and be integrated into continuous-integration (CI) pipelines so that every commit is validated automatically.</p>
+                <p>Consider a real-world scenario: you fix a bug in a sorting function. Without tests, you have no way to know if your fix accidentally breaks the search function that depends on sorted data. With a comprehensive test suite, the failing test would alert you <em>immediately</em> &ndash; before the code ever reaches production.</p>
+                <p>Key reasons to test your code:</p>
+                <ul>
+                    <li><strong>Bug prevention</strong> &ndash; Tests catch regressions the moment they are introduced.</li>
+                    <li><strong>Design feedback</strong> &ndash; Hard-to-test code is often poorly designed; writing tests encourages cleaner architecture.</li>
+                    <li><strong>Living documentation</strong> &ndash; A test suite shows exactly how each component is intended to be used.</li>
+                    <li><strong>Refactoring safety net</strong> &ndash; With good test coverage you can restructure code confidently.</li>
+                    <li><strong>Faster development</strong> &ndash; Automated tests ultimately save far more time than they cost to write.</li>
+                    <li><strong>Team confidence</strong> &ndash; New contributors can modify code knowing the test suite will catch mistakes.</li>
+                    <li><strong>Continuous integration</strong> &ndash; Automated tests integrate with CI/CD pipelines to validate every commit.</li>
+                </ul>
+
+                <!-- ===== Types of Testing ===== -->
+                <h2>Types of Testing</h2>
+                <p>Software testing is typically organised into several levels, each targeting a different scope:</p>
+
+                <h3>Unit Testing</h3>
+                <p>A <strong>unit test</strong> exercises the smallest testable unit of code &ndash; usually a single function or method &ndash; in isolation from the rest of the system. Dependencies are replaced with <em>test doubles</em> (stubs, mocks, or fakes) so the test focuses entirely on the unit under test.</p>
+
+                <h3>Integration Testing</h3>
+                <p><strong>Integration tests</strong> verify that two or more units work correctly together. For example, you might test that your <code>Database</code> class and your <code>UserService</code> class interact correctly through a shared interface.</p>
+
+                <h3>System Testing</h3>
+                <p><strong>System tests</strong> (also called <em>end-to-end</em> tests) validate the entire application as a whole, often by simulating real user actions. These tests are slower and more brittle but provide the highest level of confidence.</p>
+
+                <h3>Regression Testing</h3>
+                <p><strong>Regression tests</strong> are re-run after every change to ensure that previously fixed bugs have not been reintroduced. Any test can serve as a regression test &ndash; the term refers to <em>when</em> and <em>why</em> you run it, not how it is written.</p>
+
+                <h3>Other Testing Types</h3>
+                <p>Beyond the four main levels, you may also encounter:</p>
+                <ul>
+                    <li><strong>Smoke testing</strong> &ndash; A quick sanity check that the most critical paths work after a build.</li>
+                    <li><strong>Performance testing</strong> &ndash; Measures response times, throughput, and resource usage under load.</li>
+                    <li><strong>Fuzz testing</strong> &ndash; Feeds random or semi-random data to your program to find crashes and security vulnerabilities.</li>
+                    <li><strong>Acceptance testing</strong> &ndash; Validates that the software meets the requirements defined by the stakeholders.</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>&#128161; The Testing Pyramid:</strong> Aim for many fast unit tests at the base, fewer integration tests in the middle, and only a small number of slow, high-level system tests at the top. This gives the best balance of speed and coverage.
+                </div>
+
+                <!-- ===== assert() Macro ===== -->
+                <h2>The <code>assert()</code> Macro</h2>
+                <p>The simplest testing tool in C++ is the <code>assert()</code> macro defined in the <code>&lt;cassert&gt;</code> header (or <code>&lt;assert.h&gt;</code> in C). It evaluates an expression at run time, and if the expression is <code>false</code> (zero), the program prints a diagnostic message and calls <code>std::abort()</code>.</p>
+                <pre><code>#include &lt;cassert&gt;
+#include &lt;cmath&gt;
+
+double squareRoot(double x) {
+    assert(x &gt;= 0.0 &amp;&amp; "squareRoot requires non-negative input");
+    return std::sqrt(x);
+}
+
+int main() {
+    assert(squareRoot(25.0) == 5.0);   // passes
+    assert(squareRoot(0.0) == 0.0);    // passes
+    // assert(squareRoot(-1.0));        // would abort
+    return 0;
+}</code></pre>
+                <p>Important characteristics of <code>assert()</code>:</p>
+                <ul>
+                    <li>It is a <strong>macro</strong>, not a function &ndash; it expands to an <code>if</code> check and <code>abort()</code>.</li>
+                    <li>It is completely <strong>removed</strong> when the macro <code>NDEBUG</code> is defined (typically in release builds). Therefore, never put expressions with side effects inside <code>assert()</code>.</li>
+                    <li>The string trick <code>assert(expr &amp;&amp; "message")</code> lets you attach a descriptive message, because a non-null string pointer is always truthy.</li>
+                    <li>When an assertion fails, the diagnostic message typically includes the expression text, the source file name, and the line number.</li>
+                    <li><code>assert()</code> is best used for <em>programmer errors</em> (invariants that should never be violated) rather than for validating user input.</li>
+                </ul>
+
+                <p>Here is a more complete example showing multiple assertions:</p>
+                <pre><code>#include &lt;cassert&gt;
+#include &lt;vector&gt;
+
+int sumVector(const std::vector&lt;int&gt;&amp; v) {
+    assert(!v.empty() &amp;&amp; "sumVector requires non-empty vector");
+    int total = 0;
+    for (int x : v) total += x;
+    assert(total &gt;= 0 &amp;&amp; "overflow detected");
+    return total;
+}
+
+int main() {
+    std::vector&lt;int&gt; nums = {10, 20, 30};
+    assert(sumVector(nums) == 60);
+    return 0;
+}</code></pre>
+                <div class="warning-box">
+                    <strong>&#9888; Warning:</strong> Never write <code>assert(importantFunction())</code> if <code>importantFunction()</code> has side effects. In release builds with <code>NDEBUG</code>, the call will be stripped out entirely, changing your program&rsquo;s behaviour.
+                </div>
+
+                <!-- ===== static_assert ===== -->
+                <h2><code>static_assert</code> &ndash; Compile-Time Assertions</h2>
+                <p>C++11 introduced <code>static_assert</code>, which evaluates a constant expression <strong>at compile time</strong>. If the expression is <code>false</code>, the compiler issues an error with the message you provide &ndash; the program never even finishes compiling.</p>
+                <pre><code>#include &lt;type_traits&gt;
+
+// Ensure the platform has 8-bit bytes
+static_assert(sizeof(char) == 1, "char must be exactly 1 byte");
+
+// Ensure int is at least 4 bytes (32 bits)
+static_assert(sizeof(int) &gt;= 4, "int must be at least 4 bytes");
+
+template &lt;typename T&gt;
+T safeAdd(T a, T b) {
+    static_assert(std::is_arithmetic&lt;T&gt;::value,
+                  "safeAdd requires an arithmetic type");
+    return a + b;
+}
+
+int main() {
+    auto result = safeAdd(3, 4);       // OK &ndash; int is arithmetic
+    // auto bad = safeAdd("a", "b");   // compile error
+    return 0;
+}</code></pre>
+                <p>Since C++17, the message string is optional &ndash; the compiler will generate a reasonable diagnostic on its own:</p>
+                <pre><code>static_assert(sizeof(long long) &gt;= 8); // C++17 &ndash; no message needed</code></pre>
+                <p>Common uses of <code>static_assert</code>:</p>
+                <ul>
+                    <li>Verifying platform assumptions (type sizes, alignment).</li>
+                    <li>Constraining template parameters using type traits.</li>
+                    <li>Ensuring compile-time constants have valid values.</li>
+                    <li>Enforcing ABI compatibility between library versions.</li>
+                    <li>Validating struct layout or packing requirements for serialisation.</li>
+                </ul>
+
+                <p>Here is a practical example combining <code>static_assert</code> with type traits in a template:</p>
+                <pre><code>#include &lt;type_traits&gt;
+#include &lt;string&gt;
+
+template &lt;typename Container&gt;
+void processContainer(const Container&amp; c) {
+    // Require that the container holds integral values
+    static_assert(
+        std::is_integral&lt;typename Container::value_type&gt;::value,
+        "Container must hold integral types"
+    );
+    // ... process elements ...
+}
+
+int main() {
+    std::vector&lt;int&gt; vi = {1, 2, 3};
+    processContainer(vi);  // OK
+
+    // std::vector&lt;std::string&gt; vs = {"a"};
+    // processContainer(vs);  // compile error!
+    return 0;
+}</code></pre>
+
+                <div class="info-box">
+                    <strong>&#128161; <code>static_assert</code> vs. <code>assert()</code>:</strong> Use <code>static_assert</code> for things that can be checked at compile time (type properties, <code>sizeof</code>, <code>constexpr</code> values). Use <code>assert()</code> for run-time invariants that depend on actual data.
+                </div>
+
+                <!-- ===== Introduction to Unit Testing Frameworks ===== -->
+                <h2>Introduction to Unit Testing Frameworks</h2>
+                <p>While <code>assert()</code> and <code>static_assert</code> are useful, they are not sufficient for serious testing. A proper unit testing framework provides:</p>
+                <ul>
+                    <li><strong>Test discovery</strong> &ndash; Automatically finds and runs all tests.</li>
+                    <li><strong>Rich assertions</strong> &ndash; Equality, inequality, near-equality for floating point, string matching, exception checking, etc.</li>
+                    <li><strong>Test fixtures</strong> &ndash; Shared setup and teardown code.</li>
+                    <li><strong>Detailed reporting</strong> &ndash; Clear pass/fail summaries, coloured output, XML/JSON reports for CI.</li>
+                    <li><strong>Non-fatal failures</strong> &ndash; A failing assertion does not necessarily abort the entire test run.</li>
+                </ul>
+                <p>The two most popular C++ testing frameworks are <strong>Google Test (GTest)</strong> and <strong>Catch2</strong>. Both are free, open source, and header-only or easily integrated with CMake.</p>
+
+                <p>Other notable frameworks include:</p>
+                <ul>
+                    <li><strong>Boost.Test</strong> &ndash; Part of the Boost library collection; feature-rich but heavier.</li>
+                    <li><strong>CppUnit</strong> &ndash; A port of the JUnit framework; older and less commonly used today.</li>
+                    <li><strong>doctest</strong> &ndash; A lightweight alternative to Catch2 with faster compilation.</li>
+                </ul>
+
+                <!-- ===== Google Test (GTest) Basics ===== -->
+                <h2>Google Test (GTest) Basics</h2>
+                <p><strong>Google Test</strong> (also known as <em>GTest</em>) is a mature, widely used framework maintained by Google. It integrates seamlessly with CMake and most IDEs.</p>
+
+                <h3>A Minimal GTest Example</h3>
+                <pre><code>#include &lt;gtest/gtest.h&gt;
+
+int add(int a, int b) { return a + b; }
+
+TEST(MathTest, AddPositiveNumbers) {
+    EXPECT_EQ(add(2, 3), 5);
+}
+
+TEST(MathTest, AddNegativeNumbers) {
+    EXPECT_EQ(add(-1, -1), -2);
+}
+
+TEST(MathTest, AddMixed) {
+    EXPECT_EQ(add(-1, 1), 0);
+}</code></pre>
+                <p>Key GTest macros:</p>
+                <ul>
+                    <li><code>TEST(TestSuiteName, TestName)</code> &ndash; Defines a test case.</li>
+                    <li><code>EXPECT_EQ(a, b)</code> &ndash; Non-fatal assertion: checks <code>a == b</code>. The test continues even if this fails.</li>
+                    <li><code>ASSERT_EQ(a, b)</code> &ndash; Fatal assertion: checks <code>a == b</code>. The test <strong>aborts</strong> if this fails.</li>
+                    <li><code>EXPECT_NE</code>, <code>EXPECT_LT</code>, <code>EXPECT_GT</code>, <code>EXPECT_LE</code>, <code>EXPECT_GE</code> &ndash; Other comparison macros.</li>
+                    <li><code>EXPECT_TRUE(cond)</code> / <code>EXPECT_FALSE(cond)</code> &ndash; Boolean assertions.</li>
+                    <li><code>EXPECT_THROW(stmt, ExType)</code> &ndash; Expects that <code>stmt</code> throws an exception of type <code>ExType</code>.</li>
+                    <li><code>EXPECT_NEAR(a, b, tolerance)</code> &ndash; For floating-point comparisons.</li>
+                </ul>
+
+                <h3>Test Fixtures</h3>
+                <p>A <strong>fixture</strong> lets you share setup and teardown logic across multiple tests. You create a class that inherits from <code>testing::Test</code> and override <code>SetUp()</code> and/or <code>TearDown()</code>.</p>
+                <pre><code>#include &lt;gtest/gtest.h&gt;
+#include &lt;vector&gt;
+
+class VectorTest : public testing::Test {
+protected:
+    std::vector&lt;int&gt; v;
+
+    void SetUp() override {
+        v = {1, 2, 3, 4, 5};
+    }
+};
+
+TEST_F(VectorTest, SizeIsFive) {
+    EXPECT_EQ(v.size(), 5);
+}
+
+TEST_F(VectorTest, FrontIsOne) {
+    EXPECT_EQ(v.front(), 1);
+}
+
+TEST_F(VectorTest, PopBackReducesSize) {
+    v.pop_back();
+    EXPECT_EQ(v.size(), 4);
+}</code></pre>
+                <p>Note the use of <code>TEST_F</code> (not <code>TEST</code>) when using a fixture class.</p>
+
+                <h3>Integrating GTest with CMake</h3>
+                <p>The most common way to add Google Test to a project is through CMake&rsquo;s <code>FetchContent</code> module:</p>
+                <pre><code>cmake_minimum_required(VERSION 3.14)
+project(MyProject)
+
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG        v1.14.0
+)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_executable(my_tests tests.cpp)
+target_link_libraries(my_tests GTest::gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(my_tests)</code></pre>
+                <p>After configuring, you can run all tests with <code>ctest</code> from the build directory.</p>
+
+                <!-- ===== Catch2 Framework ===== -->
+                <h2>Catch2 Framework</h2>
+                <p><strong>Catch2</strong> is a modern, header-only (v2) or linkable (v3) test framework known for its expressive, natural syntax. It requires no registration step &ndash; tests are automatically discovered.</p>
+
+                <h3>A Minimal Catch2 Example</h3>
+                <pre><code>#define CATCH_CONFIG_MAIN   // provides main()
+#include &lt;catch2/catch.hpp&gt;
+
+int factorial(int n) {
+    return (n &lt;= 1) ? 1 : n * factorial(n - 1);
+}
+
+TEST_CASE("Factorial of 0 is 1", "[factorial]") {
+    REQUIRE(factorial(0) == 1);
+}
+
+TEST_CASE("Factorials of small numbers", "[factorial]") {
+    REQUIRE(factorial(1) == 1);
+    REQUIRE(factorial(2) == 2);
+    REQUIRE(factorial(3) == 6);
+    REQUIRE(factorial(10) == 3628800);
+}</code></pre>
+                <p>Key Catch2 macros:</p>
+                <ul>
+                    <li><code>TEST_CASE("description", "[tags]")</code> &ndash; Defines a test case with a human-readable description and optional tags.</li>
+                    <li><code>REQUIRE(expr)</code> &ndash; Fatal assertion: if <code>expr</code> is false, the test aborts immediately.</li>
+                    <li><code>CHECK(expr)</code> &ndash; Non-fatal assertion: the test continues even if <code>expr</code> fails.</li>
+                    <li><code>REQUIRE_THROWS_AS(expr, ExType)</code> &ndash; Requires that <code>expr</code> throws a specific exception type.</li>
+                    <li><code>REQUIRE_NOTHROW(expr)</code> &ndash; Requires that <code>expr</code> does not throw.</li>
+                </ul>
+
+                <h3>Sections</h3>
+                <p>Catch2&rsquo;s <code>SECTION</code> macro is a powerful alternative to fixtures. Each section runs from the beginning of the <code>TEST_CASE</code>, so setup code is naturally shared:</p>
+                <pre><code>TEST_CASE("Vector operations", "[vector]") {
+    std::vector&lt;int&gt; v = {1, 2, 3};
+
+    SECTION("push_back increases size") {
+        v.push_back(4);
+        REQUIRE(v.size() == 4);
+    }
+
+    SECTION("pop_back decreases size") {
+        v.pop_back();
+        REQUIRE(v.size() == 2);
+    }
+
+    SECTION("clear empties the vector") {
+        v.clear();
+        REQUIRE(v.empty());
+    }
+}</code></pre>
+                <p>Each <code>SECTION</code> gets its own fresh copy of <code>v</code> because Catch2 re-enters the <code>TEST_CASE</code> once for every leaf <code>SECTION</code>.</p>
+
+                <h3>Running Catch2 Tests</h3>
+                <p>When you run a Catch2 test executable, you can filter tests by name or tag:</p>
+                <pre><code># Run all tests
+./tests
+
+# Run only tests tagged [vector]
+./tests "[vector]"
+
+# Run tests matching a name pattern
+./tests "Factorial*"
+
+# Verbose output
+./tests -s</code></pre>
+                <p>Catch2 also supports reporters for different output formats (console, XML, JUnit, compact), which integrate easily with CI systems.</p>
+
+                <!-- ===== Test-Driven Development (TDD) ===== -->
+                <h2>Test-Driven Development (TDD)</h2>
+                <p><strong>Test-Driven Development</strong> is a disciplined workflow where you write the test <em>before</em> the production code. The cycle consists of three steps, often called <strong>Red &ndash; Green &ndash; Refactor</strong>:</p>
+                <ol>
+                    <li><strong>Red</strong> &ndash; Write a failing test that describes the desired behaviour.</li>
+                    <li><strong>Green</strong> &ndash; Write the simplest production code that makes the test pass.</li>
+                    <li><strong>Refactor</strong> &ndash; Clean up the production code (and the test) while keeping all tests green.</li>
+                </ol>
+                <pre><code>// Step 1 (Red) &ndash; Write a failing test
+TEST(StringUtilTest, ToUpperConvertsLowercase) {
+    EXPECT_EQ(toUpper("hello"), "HELLO");
+}
+
+// Step 2 (Green) &ndash; Minimal implementation
+std::string toUpper(const std::string&amp; s) {
+    std::string result = s;
+    for (auto&amp; c : result) c = std::toupper(c);
+    return result;
+}
+
+// Step 3 (Refactor) &ndash; Improve if needed, all tests must still pass</code></pre>
+                <p>Benefits of TDD:</p>
+                <ul>
+                    <li>Forces you to think about the <em>interface</em> before the implementation.</li>
+                    <li>Every feature starts with a test, so coverage is naturally high.</li>
+                    <li>The tight feedback loop catches design issues early.</li>
+                    <li>Provides immediate confidence that new code works as intended.</li>
+                    <li>Creates a comprehensive regression suite as a natural by-product of development.</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>&#128161; TDD in practice:</strong> TDD works best for well-defined logic (algorithms, business rules, data transformations). It is less practical for exploratory prototyping or UI code where the requirements are still being discovered.
+                </div>
+
+                <!-- ===== Writing Testable Code ===== -->
+                <h2>Writing Testable Code</h2>
+                <p>Not all code is easy to test. The following principles make your C++ code more testable:</p>
+
+                <h3>Dependency Injection</h3>
+                <p>Instead of hard-coding dependencies, pass them via constructors or function parameters. This lets tests substitute real dependencies with test doubles.</p>
+                <pre><code>// Hard to test &ndash; directly creates a database connection
+class UserService {
+    Database db;  // tightly coupled
+public:
+    User getUser(int id) { return db.findById(id); }
+};
+
+// Testable &ndash; accepts an interface via dependency injection
+class IDatabase {
+public:
+    virtual ~IDatabase() = default;
+    virtual User findById(int id) = 0;
+};
+
+class UserService {
+    IDatabase&amp; db;
+public:
+    explicit UserService(IDatabase&amp; database) : db(database) {}
+    User getUser(int id) { return db.findById(id); }
+};</code></pre>
+
+                <h3>Prefer Pure Functions</h3>
+                <p>A <strong>pure function</strong> depends only on its inputs and produces no side effects. Pure functions are the easiest code to test &ndash; the same inputs always produce the same output.</p>
+
+                <h3>Keep Functions Small</h3>
+                <p>Small, single-responsibility functions are easier to test exhaustively. If a function does many things, split it into smaller helpers.</p>
+
+                <h3>Use Interfaces (Abstract Base Classes)</h3>
+                <p>Define abstract interfaces for components that interact with the external world (file system, network, database). In tests, replace these with fake implementations.</p>
+                <pre><code>// Interface
+class ILogger {
+public:
+    virtual ~ILogger() = default;
+    virtual void log(const std::string&amp; msg) = 0;
+};
+
+// Production implementation
+class FileLogger : public ILogger {
+public:
+    void log(const std::string&amp; msg) override {
+        // write to file ...
+    }
+};
+
+// Test double
+class FakeLogger : public ILogger {
+public:
+    std::vector&lt;std::string&gt; messages;
+    void log(const std::string&amp; msg) override {
+        messages.push_back(msg);
+    }
+};</code></pre>
+
+                <h3>Avoid Global State</h3>
+                <p>Global and static mutable variables make tests unpredictable because one test can leave behind state that affects another. Prefer passing state through function parameters or class members.</p>
+
+                <!-- ===== Code Coverage ===== -->
+                <h2>Code Coverage</h2>
+                <p><strong>Code coverage</strong> measures how much of your source code is exercised by your test suite. Common metrics include:</p>
+                <ul>
+                    <li><strong>Line coverage</strong> &ndash; Percentage of lines executed during testing.</li>
+                    <li><strong>Branch coverage</strong> &ndash; Percentage of <code>if</code>/<code>else</code> branches taken.</li>
+                    <li><strong>Function coverage</strong> &ndash; Percentage of functions called at least once.</li>
+                    <li><strong>Condition coverage</strong> &ndash; Whether each boolean sub-expression has been evaluated to both <code>true</code> and <code>false</code>.</li>
+                </ul>
+                <p>With GCC or Clang, you can generate coverage data using the <code>--coverage</code> flag:</p>
+                <pre><code># Compile with coverage instrumentation
+g++ --coverage -o tests tests.cpp -lgtest -lgtest_main -pthread
+
+# Run the tests
+./tests
+
+# Generate a coverage report
+gcov tests.cpp
+lcov --capture --directory . --output-file coverage.info
+genhtml coverage.info --output-directory coverage_report</code></pre>
+                <div class="info-box">
+                    <strong>&#128161; Coverage is a guide, not a goal:</strong> 100&percnt; line coverage does not mean your code is bug-free. It only means every line was executed &ndash; it says nothing about whether the <em>right</em> assertions were checked. Aim for meaningful tests, not just high numbers.
+                </div>
+
+                <!-- ===== Mocking ===== -->
+                <h2>Mocking (Brief Overview)</h2>
+                <p>A <strong>mock object</strong> is a test double that records how it was called and lets you verify that certain interactions took place. Google Mock (part of the Google Test suite) is the most popular mocking library for C++.</p>
+                <pre><code>#include &lt;gmock/gmock.h&gt;
+
+class MockDatabase : public IDatabase {
+public:
+    MOCK_METHOD(User, findById, (int id), (override));
+};
+
+TEST(UserServiceTest, ReturnsCorrectUser) {
+    MockDatabase mockDb;
+    UserService service(mockDb);
+
+    User expected{"Alice", 42};
+    EXPECT_CALL(mockDb, findById(42))
+        .WillOnce(testing::Return(expected));
+
+    User result = service.getUser(42);
+    EXPECT_EQ(result.name, "Alice");
+}</code></pre>
+                <p>When to use mocks:</p>
+                <ul>
+                    <li>The real dependency is slow (database, network).</li>
+                    <li>The real dependency is non-deterministic (random number generator, clock).</li>
+                    <li>You want to verify that a dependency was called with specific arguments or a specific number of times.</li>
+                </ul>
+                <div class="warning-box">
+                    <strong>&#9888; Don&rsquo;t over-mock:</strong> Mocking every dependency leads to tests that are tightly coupled to the implementation. Prefer using real objects or simple fakes when possible, and reserve mocks for verifying important interactions.
+                </div>
+
+                <!-- ===== Best Practices for Testing ===== -->
+                <h2>Best Practices for Testing</h2>
+                <ol>
+                    <li><strong>Name tests clearly</strong> &ndash; A good test name describes the scenario and the expected outcome: <code>AddPositiveNumbers_ReturnsSum</code>.</li>
+                    <li><strong>Follow the AAA pattern</strong> &ndash; <em>Arrange</em> (set up), <em>Act</em> (call the code), <em>Assert</em> (check the result).</li>
+                    <li><strong>One logical assertion per test</strong> &ndash; Multiple related <code>EXPECT</code> calls are fine, but testing unrelated things in one test makes failures hard to diagnose.</li>
+                    <li><strong>Keep tests independent</strong> &ndash; Tests must not depend on the order they run or on shared mutable state.</li>
+                    <li><strong>Keep tests fast</strong> &ndash; A slow test suite is a test suite that nobody runs. Unit tests should finish in milliseconds.</li>
+                    <li><strong>Test edge cases</strong> &ndash; Empty inputs, zero, negative numbers, maximum values, null pointers.</li>
+                    <li><strong>Test failure paths</strong> &ndash; Verify that your code handles errors correctly, not just the happy path.</li>
+                    <li><strong>Run tests automatically</strong> &ndash; Integrate tests into your build system (CMake&rsquo;s <code>ctest</code>, CI pipelines).</li>
+                    <li><strong>Don&rsquo;t test implementation details</strong> &ndash; Test the <em>what</em>, not the <em>how</em>. If you refactor internals, tests should still pass.</li>
+                    <li><strong>Fix broken tests immediately</strong> &ndash; A failing test that is ignored erodes trust in the entire suite.</li>
+                </ol>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>assert()</code> is a simple run-time check from <code>&lt;cassert&gt;</code>; it aborts the program on failure and is stripped in release builds (<code>NDEBUG</code>).</li>
+                    <li><code>static_assert</code> (C++11) catches errors <strong>at compile time</strong>, making it ideal for template constraints and platform checks.</li>
+                    <li><strong>Unit tests</strong> exercise individual functions in isolation; <strong>integration tests</strong> verify component interactions; <strong>system tests</strong> validate the whole application.</li>
+                    <li><strong>Google Test</strong> uses <code>TEST</code>/<code>TEST_F</code> and <code>EXPECT_*</code>/<code>ASSERT_*</code> macros. <code>EXPECT</code> is non-fatal; <code>ASSERT</code> is fatal.</li>
+                    <li><strong>Catch2</strong> uses <code>TEST_CASE</code>/<code>SECTION</code> with <code>REQUIRE</code> (fatal) and <code>CHECK</code> (non-fatal) assertions.</li>
+                    <li><strong>TDD</strong> follows a Red &ndash; Green &ndash; Refactor cycle: write a failing test first, then make it pass, then refactor.</li>
+                    <li>Write <strong>testable code</strong> by using dependency injection, interfaces, pure functions, and small single-responsibility functions.</li>
+                    <li><strong>Code coverage</strong> is a useful metric but not a substitute for thoughtful test design.</li>
+                    <li><strong>Mocking</strong> (e.g., Google Mock) lets you isolate units from slow or unpredictable dependencies.</li>
+                    <li>Follow the <strong>AAA pattern</strong> (Arrange&ndash;Act&ndash;Assert) and keep tests fast, independent, and clearly named.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/nbFXI9SDfbk" title="C++ Testing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is the primary purpose of automated testing?","o":["To replace manual code review","To catch bugs early and prevent regressions","To eliminate the need for debugging","To increase compile times"],"a":1},
+                {"q":"Which header provides the <code>assert()</code> macro in C++?","o":["<code>&lt;ctest&gt;</code>","<code>&lt;cassert&gt;</code>","<code>&lt;ccheck&gt;</code>","<code>&lt;cassume&gt;</code>"],"a":1},
+                {"q":"What happens when <code>assert(false)</code> is evaluated at run time?","o":["The program continues","An exception is thrown","The program calls <code>std::abort()</code>","A compiler warning is issued"],"a":2},
+                {"q":"Which macro, when defined, disables all <code>assert()</code> checks?","o":["<code>RELEASE</code>","<code>NO_ASSERT</code>","<code>NDEBUG</code>","<code>DISABLE_ASSERT</code>"],"a":2},
+                {"q":"Why should you avoid side effects inside <code>assert()</code>?","o":["It causes undefined behaviour","The expression is removed in release builds with <code>NDEBUG</code>","It slows compilation","Side effects are always bugs"],"a":1},
+                {"q":"The string trick <code>assert(x &gt; 0 &amp;&amp; &quot;x must be positive&quot;)</code> works because:","o":["<code>assert()</code> accepts two arguments","A non-null string literal is always truthy","The compiler ignores the string","The string is printed by default"],"a":1},
+                {"q":"<code>static_assert</code> was introduced in which C++ standard?","o":["C++03","C++11","C++14","C++20"],"a":1},
+                {"q":"When does <code>static_assert</code> evaluate its condition?","o":["At run time","At link time","At compile time","At preprocessing time"],"a":2},
+                {"q":"Since C++17, the message string in <code>static_assert</code> is:","o":["Required","Optional","Deprecated","Removed"],"a":1},
+                {"q":"What type of expression must the first argument of <code>static_assert</code> be?","o":["Any expression","A constant (constexpr) expression","A string literal","A boolean variable"],"a":1},
+                {"q":"Which level of testing exercises the smallest unit of code in isolation?","o":["System testing","Integration testing","Unit testing","Regression testing"],"a":2},
+                {"q":"Integration tests verify that:","o":["Individual functions work","Two or more components work together correctly","The entire application works end-to-end","Old bugs have not returned"],"a":1},
+                {"q":"System tests are also known as:","o":["Smoke tests","End-to-end tests","Fuzz tests","Micro tests"],"a":1},
+                {"q":"The &ldquo;testing pyramid&rdquo; recommends having the most tests at which level?","o":["System","Integration","Unit","Acceptance"],"a":2},
+                {"q":"Regression tests are specifically run to:","o":["Test new features only","Find performance bottlenecks","Ensure previously fixed bugs have not returned","Measure code coverage"],"a":2},
+                {"q":"Which macro defines a Google Test test case?","o":["<code>TEST_CASE</code>","<code>UNIT_TEST</code>","<code>TEST</code>","<code>DEFINE_TEST</code>"],"a":2},
+                {"q":"In Google Test, <code>EXPECT_EQ(a, b)</code> is a _____ assertion.","o":["Fatal","Non-fatal","Compile-time","Deprecated"],"a":1},
+                {"q":"In Google Test, <code>ASSERT_EQ(a, b)</code> is a _____ assertion.","o":["Non-fatal","Fatal","Compile-time","Warning"],"a":1},
+                {"q":"What happens when an <code>ASSERT_*</code> macro fails in Google Test?","o":["The test continues","A warning is logged","The current test aborts immediately","The entire test suite aborts"],"a":2},
+                {"q":"What happens when an <code>EXPECT_*</code> macro fails in Google Test?","o":["The test aborts immediately","The failure is recorded but the test continues","The program calls <code>abort()</code>","Nothing"],"a":1},
+                {"q":"Which Google Test macro checks floating-point near-equality?","o":["<code>EXPECT_FLOAT</code>","<code>EXPECT_CLOSE</code>","<code>EXPECT_NEAR</code>","<code>EXPECT_APPROX</code>"],"a":2},
+                {"q":"Which Google Test macro verifies that a statement throws a specific exception?","o":["<code>EXPECT_THROW</code>","<code>EXPECT_EXCEPTION</code>","<code>ASSERT_CATCHES</code>","<code>TEST_THROW</code>"],"a":0},
+                {"q":"To use a test fixture in Google Test, tests are declared with:","o":["<code>TEST</code>","<code>TEST_F</code>","<code>TEST_P</code>","<code>FIXTURE_TEST</code>"],"a":1},
+                {"q":"A Google Test fixture class inherits from:","o":["<code>testing::Fixture</code>","<code>testing::Test</code>","<code>gtest::Base</code>","<code>testing::Suite</code>"],"a":1},
+                {"q":"Which methods can be overridden in a Google Test fixture?","o":["<code>init()</code> and <code>cleanup()</code>","<code>SetUp()</code> and <code>TearDown()</code>","<code>before()</code> and <code>after()</code>","<code>Setup()</code> and <code>Teardown()</code>"],"a":1},
+                {"q":"Which test framework uses <code>TEST_CASE</code> and <code>SECTION</code>?","o":["Google Test","Boost.Test","Catch2","CppUnit"],"a":2},
+                {"q":"In Catch2, <code>REQUIRE</code> is a _____ assertion.","o":["Non-fatal","Fatal","Compile-time","Conditional"],"a":1},
+                {"q":"In Catch2, <code>CHECK</code> is a _____ assertion.","o":["Fatal","Non-fatal","Compile-time","Skipped"],"a":1},
+                {"q":"How does Catch2&rsquo;s <code>SECTION</code> mechanism handle shared setup?","o":["It uses a static initialiser","It re-runs the <code>TEST_CASE</code> from the top for each section","It copies the fixture object","It uses dependency injection"],"a":1},
+                {"q":"What does <code>#define CATCH_CONFIG_MAIN</code> do in Catch2 v2?","o":["Disables test discovery","Provides a <code>main()</code> function automatically","Enables mocking","Turns on verbose output"],"a":1},
+                {"q":"TDD stands for:","o":["Type-Driven Design","Test-Driven Development","Total Debug Deployment","Thread-Dependent Dispatch"],"a":1},
+                {"q":"The TDD cycle is:","o":["Plan &ndash; Code &ndash; Ship","Red &ndash; Green &ndash; Refactor","Write &ndash; Test &ndash; Deploy","Design &ndash; Implement &ndash; Verify"],"a":1},
+                {"q":"In TDD, the &ldquo;Red&rdquo; step means:","o":["Deleting failing code","Writing a failing test","Running the debugger","Reviewing code"],"a":1},
+                {"q":"In TDD, the &ldquo;Green&rdquo; step means:","o":["Optimising the code","Writing documentation","Writing the minimum code to pass the test","Deploying to production"],"a":2},
+                {"q":"What makes code easier to test?","o":["Long functions with many responsibilities","Hard-coded dependencies","Dependency injection and interfaces","Global mutable state"],"a":2},
+                {"q":"Dependency injection improves testability by:","o":["Making code faster","Allowing real dependencies to be replaced with test doubles","Eliminating the need for constructors","Removing all side effects"],"a":1},
+                {"q":"A pure function is easy to test because:","o":["It always modifies global state","It depends only on its inputs and has no side effects","It throws exceptions","It uses dynamic memory"],"a":1},
+                {"q":"What does code coverage measure?","o":["How fast the tests run","How much source code is executed by the test suite","How many bugs exist","How well the code is documented"],"a":1},
+                {"q":"Line coverage measures:","o":["Number of tests written","Percentage of lines executed during testing","Percentage of branches taken","Number of functions called"],"a":1},
+                {"q":"Branch coverage measures:","o":["Percentage of lines executed","Percentage of <code>if</code>/<code>else</code> branches taken during testing","Number of files tested","Percentage of templates instantiated"],"a":1},
+                {"q":"Which compiler flag enables coverage instrumentation with GCC?","o":["<code>-O2</code>","<code>--coverage</code>","<code>-Wall</code>","<code>-ftest</code>"],"a":1},
+                {"q":"100&percnt; line coverage guarantees:","o":["Zero bugs","Every line was executed at least once, but not that results are correct","All edge cases are tested","The code is ready for production"],"a":1},
+                {"q":"A mock object is used to:","o":["Speed up compilation","Record interactions and verify specific calls were made","Replace the compiler","Measure performance"],"a":1},
+                {"q":"Google Mock uses which macro to declare a mock method?","o":["<code>MOCK_FUNCTION</code>","<code>MOCK_METHOD</code>","<code>GMOCK_DEFINE</code>","<code>CREATE_MOCK</code>"],"a":1},
+                {"q":"<code>EXPECT_CALL</code> in Google Mock:","o":["Calls the real method","Specifies an expectation for how a mock method is called","Creates a new mock object","Disables a mock"],"a":1},
+                {"q":"Over-mocking leads to:","o":["Faster tests","Tests tightly coupled to implementation details","Better code coverage","Cleaner code"],"a":1},
+                {"q":"The AAA pattern stands for:","o":["Assert &ndash; Act &ndash; Arrange","Arrange &ndash; Act &ndash; Assert","Assume &ndash; Apply &ndash; Affirm","Allocate &ndash; Assign &ndash; Audit"],"a":1},
+                {"q":"Tests should be _____ of each other.","o":["Dependent","Ordered","Independent","Duplicates"],"a":2},
+                {"q":"Which tool generates HTML coverage reports from <code>gcov</code> data?","o":["<code>gprof</code>","<code>genhtml</code>","<code>valgrind</code>","<code>gdb</code>"],"a":1},
+                {"q":"Which Catch2 macro verifies that an expression does NOT throw?","o":["<code>REQUIRE_NOTHROW</code>","<code>CHECK_SAFE</code>","<code>ASSERT_NOTHROW</code>","<code>EXPECT_NOTHROW</code>"],"a":0},
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="version-control.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Version Control with Git</span>
+                </a>
+                <a href="projects.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Practice Projects</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

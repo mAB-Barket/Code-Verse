@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Abstraction - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-abstraction">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html" class="active"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 36 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="65" style="width:65%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Abstraction
+                </div>
+                <h1>36. Abstraction</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 36 of 55</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Abstraction? ===== -->
+                <h2>What Is Abstraction?</h2>
+                <p><strong>Abstraction</strong> is one of the four fundamental pillars of Object-Oriented Programming (OOP), alongside encapsulation, inheritance, and polymorphism. It means <strong>hiding complex implementation details</strong> and <strong>showing only the essential features</strong> of an object to the outside world.</p>
+                <p>When you drive a car, you interact with the steering wheel, pedals, and gear stick &mdash; you don&rsquo;t need to understand the internal combustion process happening under the hood. That is abstraction in everyday life.</p>
+                <p>In C++, abstraction is achieved primarily through:</p>
+                <ul>
+                    <li><strong>Abstract classes</strong> &mdash; classes that contain at least one <strong>pure virtual function</strong>.</li>
+                    <li><strong>Interfaces</strong> &mdash; classes composed <em>entirely</em> of pure virtual functions (no data members, no implemented methods).</li>
+                    <li><strong>Access specifiers</strong> &mdash; <code>public</code>, <code>private</code>, and <code>protected</code> control what is visible to users of a class.</li>
+                </ul>
+                <p>The key benefits of abstraction include:</p>
+                <ul>
+                    <li><strong>Reduced complexity</strong> &mdash; users interact with a clean, simplified interface.</li>
+                    <li><strong>Loose coupling</strong> &mdash; code depends on abstractions rather than concrete implementations.</li>
+                    <li><strong>Easier maintenance</strong> &mdash; internal changes don&rsquo;t break code that relies on the public interface.</li>
+                    <li><strong>Improved security</strong> &mdash; sensitive implementation details remain hidden.</li>
+                </ul>
+
+                <!-- ===== Abstraction vs Encapsulation ===== -->
+                <h2>Abstraction vs Encapsulation</h2>
+                <p>These two concepts are closely related but serve <strong>different purposes</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>Comparison</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Abstraction   &mdash; WHAT an object does (the interface)</span>
+<span class="comment">// Encapsulation &mdash; HOW an object does it (the implementation)</span>
+
+<span class="comment">// Example: a TV remote</span>
+<span class="comment">// Abstraction:   power(), volumeUp(), channelNext()</span>
+<span class="comment">//                You know WHAT buttons to press.</span>
+<span class="comment">// Encapsulation: infrared signals, circuit boards, firmware</span>
+<span class="comment">//                You don't know HOW it works inside.</span></code></pre>
+                </div>
+                <table class="info-table" style="width:100%; border-collapse:collapse; margin:1rem 0;">
+                    <tr>
+                        <th style="text-align:left; padding:0.5rem;">Aspect</th>
+                        <th style="text-align:left; padding:0.5rem;">Abstraction</th>
+                        <th style="text-align:left; padding:0.5rem;">Encapsulation</th>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Focus</strong></td>
+                        <td style="padding:0.5rem;">Hiding complexity, showing essentials</td>
+                        <td style="padding:0.5rem;">Bundling data &amp; methods, restricting access</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Level</strong></td>
+                        <td style="padding:0.5rem;">Design level</td>
+                        <td style="padding:0.5rem;">Implementation level</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Mechanism</strong></td>
+                        <td style="padding:0.5rem;">Abstract classes, interfaces</td>
+                        <td style="padding:0.5rem;">Access specifiers (private, protected, public)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Goal</strong></td>
+                        <td style="padding:0.5rem;">Define <em>what</em> to do</td>
+                        <td style="padding:0.5rem;">Control <em>how</em> it&rsquo;s done</td>
+                    </tr>
+                </table>
+                <p>In practice, abstraction and encapsulation work <strong>hand-in-hand</strong>: abstraction defines the contract, while encapsulation enforces it.</p>
+
+                <!-- ===== Abstract Classes ===== -->
+                <h2>Abstract Classes</h2>
+                <p>An <strong>abstract class</strong> is a class that has at least one <strong>pure virtual function</strong>. You <strong>cannot</strong> create objects of an abstract class directly &mdash; it exists solely to be a base class for other classes.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">public</span>:
+    <span class="comment">// Pure virtual functions &mdash; make Shape abstract</span>
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">area</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">draw</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+
+    <span class="comment">// Regular method &mdash; shared by all shapes</span>
+    <span class="keyword">void</span> <span class="function">describe</span>() <span class="keyword">const</span> {
+        cout &lt;&lt; <span class="string">"I am a shape with area: "</span> &lt;&lt; <span class="function">area</span>() &lt;&lt; endl;
+    }
+
+    <span class="keyword">virtual</span> ~<span class="function">Shape</span>() = <span class="keyword">default</span>;
+};
+
+<span class="comment">// Shape s;  // ERROR: cannot instantiate abstract class</span></code></pre>
+                </div>
+                <p>Key rules for abstract classes:</p>
+                <ul>
+                    <li>A class with <strong>at least one</strong> pure virtual function is abstract.</li>
+                    <li>You <strong>cannot instantiate</strong> an abstract class.</li>
+                    <li>You <strong>can</strong> declare pointers and references to an abstract class.</li>
+                    <li>A derived class <strong>must override all</strong> pure virtual functions to become concrete (non-abstract).</li>
+                    <li>Abstract classes <strong>can have</strong> constructors, data members, and regular (non-virtual) methods.</li>
+                </ul>
+
+                <!-- ===== Pure Virtual Functions ===== -->
+                <h2>Pure Virtual Functions</h2>
+                <p>A <strong>pure virtual function</strong> is declared by assigning <code>= 0</code> at the end of the function declaration. It tells derived classes: <em>&ldquo;you <strong>must</strong> provide your own implementation of this function.&rdquo;</em></p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="comment">// Pure virtual function &mdash; syntax</span>
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+
+    <span class="comment">// Pure virtual with a body (allowed but rare)</span>
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">type</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+
+    <span class="keyword">virtual</span> ~<span class="function">Animal</span>() = <span class="keyword">default</span>;
+};</code></pre>
+                </div>
+                <p>Rules for pure virtual functions:</p>
+                <ul>
+                    <li>Syntax: <code>virtual ReturnType functionName(params) = 0;</code></li>
+                    <li>A pure virtual function <strong>may</strong> have a body (definition), but derived classes must still override it. The base body can be called explicitly via <code>Base::functionName()</code>.</li>
+                    <li>If a derived class does <strong>not</strong> override all inherited pure virtual functions, it too becomes abstract.</li>
+                    <li>Pure virtual <strong>destructors</strong> are allowed but <strong>must</strong> have a body (definition outside the class).</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">Animal</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const override</span> {
+        cout &lt;&lt; <span class="string">"Woof!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Cat</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const override</span> {
+        cout &lt;&lt; <span class="string">"Meow!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// Animal a;        // ERROR: abstract class</span>
+    <span class="type">Animal</span>* d = <span class="keyword">new</span> <span class="type">Dog</span>();
+    <span class="type">Animal</span>* c = <span class="keyword">new</span> <span class="type">Cat</span>();
+    d-&gt;<span class="function">speak</span>();   <span class="comment">// Woof!</span>
+    c-&gt;<span class="function">speak</span>();   <span class="comment">// Meow!</span>
+    <span class="keyword">delete</span> d;
+    <span class="keyword">delete</span> c;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Woof!
+Meow!</code></pre>
+                </div>
+
+                <!-- ===== Interfaces in C++ ===== -->
+                <h2>Interfaces in C++</h2>
+                <p>Unlike Java or C#, C++ does not have a dedicated <code>interface</code> keyword. Instead, an <strong>interface</strong> is simply a class that contains <strong>only</strong> pure virtual functions (and optionally a virtual destructor). It has <strong>no data members</strong> and <strong>no implemented methods</strong>.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">IDrawable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">draw</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">colour</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">IDrawable</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">IResizable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">resize</span>(<span class="type">double</span> factor) = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">scale</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">IResizable</span>() = <span class="keyword">default</span>;
+};</code></pre>
+                </div>
+                <p>Convention: many C++ developers prefix interface names with <strong>I</strong> (e.g., <code>IDrawable</code>, <code>ISerializable</code>) to distinguish them from concrete classes.</p>
+
+                <!-- ===== Implementing an Interface ===== -->
+                <h2>Implementing an Interface</h2>
+                <p>A class &ldquo;implements&rdquo; an interface by inheriting from it and overriding <strong>every</strong> pure virtual function:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">IPrintable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">toString</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">IPrintable</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">Employee</span> : <span class="keyword">public</span> <span class="type">IPrintable</span> {
+    <span class="type">string</span> name;
+    <span class="type">int</span> id;
+<span class="keyword">public</span>:
+    <span class="function">Employee</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; n, <span class="type">int</span> i) : name(n), id(i) {}
+
+    <span class="type">string</span> <span class="function">toString</span>() <span class="keyword">const override</span> {
+        <span class="keyword">return</span> <span class="string">"Employee["</span> + name + <span class="string">", ID: "</span> + to_string(id) + <span class="string">"]"</span>;
+    }
+};
+
+<span class="keyword">void</span> <span class="function">print</span>(<span class="keyword">const</span> <span class="type">IPrintable</span>&amp; obj) {
+    cout &lt;&lt; obj.<span class="function">toString</span>() &lt;&lt; endl;
+}
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Employee</span> emp(<span class="string">"Alice"</span>, <span class="number">101</span>);
+    <span class="function">print</span>(emp);  <span class="comment">// Employee[Alice, ID: 101]</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Employee[Alice, ID: 101]</code></pre>
+                </div>
+
+                <!-- ===== Multiple Interfaces ===== -->
+                <h2>Multiple Interfaces</h2>
+                <p>Because C++ supports <strong>multiple inheritance</strong>, a class can implement <strong>several interfaces</strong> at once. This is the primary safe use-case for multiple inheritance:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">IDrawable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">draw</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">IDrawable</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">ISerializable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">serialize</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">ISerializable</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">Circle</span> : <span class="keyword">public</span> <span class="type">IDrawable</span>, <span class="keyword">public</span> <span class="type">ISerializable</span> {
+    <span class="type">double</span> radius;
+<span class="keyword">public</span>:
+    <span class="function">Circle</span>(<span class="type">double</span> r) : radius(r) {}
+
+    <span class="keyword">void</span> <span class="function">draw</span>() <span class="keyword">const override</span> {
+        cout &lt;&lt; <span class="string">"Drawing circle with radius "</span> &lt;&lt; radius &lt;&lt; endl;
+    }
+
+    <span class="type">string</span> <span class="function">serialize</span>() <span class="keyword">const override</span> {
+        <span class="keyword">return</span> <span class="string">"{\"type\":\"circle\",\"radius\":"</span> + to_string(radius) + <span class="string">"}"</span>;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Circle</span> c(<span class="number">5.0</span>);
+
+    <span class="comment">// Use through IDrawable pointer</span>
+    <span class="type">IDrawable</span>* drawable = &amp;c;
+    drawable-&gt;<span class="function">draw</span>();
+
+    <span class="comment">// Use through ISerializable pointer</span>
+    <span class="type">ISerializable</span>* serializable = &amp;c;
+    cout &lt;&lt; serializable-&gt;<span class="function">serialize</span>() &lt;&lt; endl;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Drawing circle with radius 5.000000
+{"type":"circle","radius":5.000000}</code></pre>
+                </div>
+                <p>Multiple interfaces let you compose different <strong>capabilities</strong> into a single class without the diamond-problem pitfalls of multiple concrete inheritance.</p>
+
+                <!-- ===== Abstract Class vs Interface Comparison ===== -->
+                <h2>Abstract Class vs Interface</h2>
+                <table class="info-table" style="width:100%; border-collapse:collapse; margin:1rem 0;">
+                    <tr>
+                        <th style="text-align:left; padding:0.5rem;">Feature</th>
+                        <th style="text-align:left; padding:0.5rem;">Abstract Class</th>
+                        <th style="text-align:left; padding:0.5rem;">Interface (Pure Abstract)</th>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Pure virtual functions</strong></td>
+                        <td style="padding:0.5rem;">At least one</td>
+                        <td style="padding:0.5rem;">All functions are pure virtual</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Data members</strong></td>
+                        <td style="padding:0.5rem;">Can have data members</td>
+                        <td style="padding:0.5rem;">No data members (by convention)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Implemented methods</strong></td>
+                        <td style="padding:0.5rem;">Can provide default implementations</td>
+                        <td style="padding:0.5rem;">No implementations (except destructor)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Constructors</strong></td>
+                        <td style="padding:0.5rem;">Can have constructors</td>
+                        <td style="padding:0.5rem;">Usually no constructors</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Multiple inheritance</strong></td>
+                        <td style="padding:0.5rem;">Possible but risky (diamond problem)</td>
+                        <td style="padding:0.5rem;">Safe for multiple inheritance</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Use case</strong></td>
+                        <td style="padding:0.5rem;">Shared base behaviour + required extensions</td>
+                        <td style="padding:0.5rem;">Define a pure contract / capability</td>
+                    </tr>
+                </table>
+
+                <!-- ===== When to Use Abstract Classes ===== -->
+                <h2>When to Use Abstract Classes</h2>
+                <p>Choose an <strong>abstract class</strong> when:</p>
+                <ul>
+                    <li>You want to provide <strong>shared default behaviour</strong> that derived classes can reuse or override.</li>
+                    <li>You need to store <strong>common data members</strong> in the base class.</li>
+                    <li>There is a clear <strong>&ldquo;is-a&rdquo;</strong> relationship (e.g., <code>Dog</code> <em>is-a</em> <code>Animal</code>).</li>
+                    <li>You want to enforce a <strong>template method</strong> pattern where the base defines the algorithm skeleton.</li>
+                </ul>
+                <p>Choose an <strong>interface</strong> when:</p>
+                <ul>
+                    <li>You want to define a <strong>pure contract</strong> with no shared state or default behaviour.</li>
+                    <li>A class needs to implement <strong>multiple unrelated capabilities</strong> (e.g., <code>IDrawable</code> + <code>ISerializable</code>).</li>
+                    <li>You want to achieve <strong>loose coupling</strong> &mdash; code depends only on the interface, not the implementation.</li>
+                    <li>You are designing a <strong>plugin architecture</strong> or <strong>dependency injection</strong> system.</li>
+                </ul>
+
+                <!-- ===== Complete Example: Payment System ===== -->
+                <h2>Complete Example: Payment System</h2>
+                <p>This example demonstrates abstraction with a real-world payment processing system. The abstract base class defines the contract, and concrete classes (<code>CreditCard</code>, <code>PayPal</code>, <code>BankTransfer</code>) provide the implementations:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;memory&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Abstract base class &mdash; defines the payment contract</span>
+<span class="keyword">class</span> <span class="type">PaymentMethod</span> {
+<span class="keyword">protected</span>:
+    <span class="type">string</span> ownerName;
+<span class="keyword">public</span>:
+    <span class="function">PaymentMethod</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; owner) : ownerName(owner) {}
+
+    <span class="comment">// Pure virtual functions &mdash; every payment method must implement these</span>
+    <span class="keyword">virtual</span> <span class="type">bool</span> <span class="function">authorize</span>(<span class="type">double</span> amount) = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">processPayment</span>(<span class="type">double</span> amount) = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">methodName</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+
+    <span class="comment">// Regular method &mdash; shared by all payment methods</span>
+    <span class="keyword">void</span> <span class="function">receipt</span>(<span class="type">double</span> amount) <span class="keyword">const</span> {
+        cout &lt;&lt; <span class="string">"--- Receipt ---"</span> &lt;&lt; endl;
+        cout &lt;&lt; <span class="string">"Method: "</span> &lt;&lt; <span class="function">methodName</span>() &lt;&lt; endl;
+        cout &lt;&lt; <span class="string">"Owner:  "</span> &lt;&lt; ownerName &lt;&lt; endl;
+        cout &lt;&lt; <span class="string">"Amount: $"</span> &lt;&lt; amount &lt;&lt; endl;
+        cout &lt;&lt; <span class="string">"---------------"</span> &lt;&lt; endl;
+    }
+
+    <span class="keyword">virtual</span> ~<span class="function">PaymentMethod</span>() = <span class="keyword">default</span>;
+};
+
+<span class="comment">// Concrete: Credit Card</span>
+<span class="keyword">class</span> <span class="type">CreditCard</span> : <span class="keyword">public</span> <span class="type">PaymentMethod</span> {
+    <span class="type">string</span> cardNumber;
+    <span class="type">double</span> creditLimit;
+    <span class="type">double</span> balance;
+<span class="keyword">public</span>:
+    <span class="function">CreditCard</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; owner, <span class="keyword">const</span> <span class="type">string</span>&amp; card, <span class="type">double</span> limit)
+        : <span class="function">PaymentMethod</span>(owner), cardNumber(card),
+          creditLimit(limit), balance(<span class="number">0</span>) {}
+
+    <span class="type">bool</span> <span class="function">authorize</span>(<span class="type">double</span> amount) <span class="keyword">override</span> {
+        <span class="keyword">return</span> (balance + amount) &lt;= creditLimit;
+    }
+
+    <span class="keyword">void</span> <span class="function">processPayment</span>(<span class="type">double</span> amount) <span class="keyword">override</span> {
+        <span class="keyword">if</span> (<span class="function">authorize</span>(amount)) {
+            balance += amount;
+            cout &lt;&lt; <span class="string">"Credit card charged: $"</span> &lt;&lt; amount &lt;&lt; endl;
+            <span class="function">receipt</span>(amount);
+        } <span class="keyword">else</span> {
+            cout &lt;&lt; <span class="string">"Credit card declined: limit exceeded."</span> &lt;&lt; endl;
+        }
+    }
+
+    <span class="type">string</span> <span class="function">methodName</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"Credit Card"</span>; }
+};
+
+<span class="comment">// Concrete: PayPal</span>
+<span class="keyword">class</span> <span class="type">PayPal</span> : <span class="keyword">public</span> <span class="type">PaymentMethod</span> {
+    <span class="type">string</span> email;
+    <span class="type">double</span> walletBalance;
+<span class="keyword">public</span>:
+    <span class="function">PayPal</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; owner, <span class="keyword">const</span> <span class="type">string</span>&amp; mail, <span class="type">double</span> bal)
+        : <span class="function">PaymentMethod</span>(owner), email(mail), walletBalance(bal) {}
+
+    <span class="type">bool</span> <span class="function">authorize</span>(<span class="type">double</span> amount) <span class="keyword">override</span> {
+        <span class="keyword">return</span> amount &lt;= walletBalance;
+    }
+
+    <span class="keyword">void</span> <span class="function">processPayment</span>(<span class="type">double</span> amount) <span class="keyword">override</span> {
+        <span class="keyword">if</span> (<span class="function">authorize</span>(amount)) {
+            walletBalance -= amount;
+            cout &lt;&lt; <span class="string">"PayPal payment: $"</span> &lt;&lt; amount &lt;&lt; endl;
+            <span class="function">receipt</span>(amount);
+        } <span class="keyword">else</span> {
+            cout &lt;&lt; <span class="string">"PayPal: insufficient balance."</span> &lt;&lt; endl;
+        }
+    }
+
+    <span class="type">string</span> <span class="function">methodName</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"PayPal"</span>; }
+};
+
+<span class="comment">// Concrete: Bank Transfer</span>
+<span class="keyword">class</span> <span class="type">BankTransfer</span> : <span class="keyword">public</span> <span class="type">PaymentMethod</span> {
+    <span class="type">string</span> accountNo;
+    <span class="type">double</span> accountBalance;
+<span class="keyword">public</span>:
+    <span class="function">BankTransfer</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; owner, <span class="keyword">const</span> <span class="type">string</span>&amp; acc, <span class="type">double</span> bal)
+        : <span class="function">PaymentMethod</span>(owner), accountNo(acc), accountBalance(bal) {}
+
+    <span class="type">bool</span> <span class="function">authorize</span>(<span class="type">double</span> amount) <span class="keyword">override</span> {
+        <span class="keyword">return</span> amount &lt;= accountBalance;
+    }
+
+    <span class="keyword">void</span> <span class="function">processPayment</span>(<span class="type">double</span> amount) <span class="keyword">override</span> {
+        <span class="keyword">if</span> (<span class="function">authorize</span>(amount)) {
+            accountBalance -= amount;
+            cout &lt;&lt; <span class="string">"Bank transfer: $"</span> &lt;&lt; amount &lt;&lt; endl;
+            <span class="function">receipt</span>(amount);
+        } <span class="keyword">else</span> {
+            cout &lt;&lt; <span class="string">"Bank transfer failed: insufficient funds."</span> &lt;&lt; endl;
+        }
+    }
+
+    <span class="type">string</span> <span class="function">methodName</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"Bank Transfer"</span>; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    vector&lt;unique_ptr&lt;<span class="type">PaymentMethod</span>&gt;&gt; methods;
+    methods.<span class="function">push_back</span>(make_unique&lt;<span class="type">CreditCard</span>&gt;(<span class="string">"Alice"</span>, <span class="string">"4111-1111"</span>, <span class="number">5000</span>));
+    methods.<span class="function">push_back</span>(make_unique&lt;<span class="type">PayPal</span>&gt;(<span class="string">"Bob"</span>, <span class="string">"bob@mail.com"</span>, <span class="number">200</span>));
+    methods.<span class="function">push_back</span>(make_unique&lt;<span class="type">BankTransfer</span>&gt;(<span class="string">"Charlie"</span>, <span class="string">"ACC-9876"</span>, <span class="number">1500</span>));
+
+    <span class="type">double</span> amounts[] = {<span class="number">150.0</span>, <span class="number">75.50</span>, <span class="number">500.0</span>};
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) {
+        methods[i]-&gt;<span class="function">processPayment</span>(amounts[i]);
+        cout &lt;&lt; endl;
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Credit card charged: $150
+--- Receipt ---
+Method: Credit Card
+Owner:  Alice
+Amount: $150
+---------------
+
+PayPal payment: $75.5
+--- Receipt ---
+Method: PayPal
+Owner:  Bob
+Amount: $75.5
+---------------
+
+Bank transfer: $500
+--- Receipt ---
+Method: Bank Transfer
+Owner:  Charlie
+Amount: $500
+---------------</code></pre>
+                </div>
+                <p>Notice how the <code>main()</code> function works <strong>entirely through the abstract base class pointer</strong>. It has no knowledge of credit cards, PayPal, or bank transfers &mdash; that is abstraction in action.</p>
+
+                <!-- ===== Complete Example: Database Interface ===== -->
+                <h2>Complete Example: Database Interface</h2>
+                <p>This example shows a pure interface (<code>IDatabase</code>) that different database engines implement. Client code programs against the interface, making it trivial to swap backends:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;memory&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Interface: pure abstract class</span>
+<span class="keyword">class</span> <span class="type">IDatabase</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">connect</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; connStr) = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">disconnect</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">execute</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; query) = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">name</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">IDatabase</span>() = <span class="keyword">default</span>;
+};
+
+<span class="comment">// Concrete: MySQL</span>
+<span class="keyword">class</span> <span class="type">MySQLDatabase</span> : <span class="keyword">public</span> <span class="type">IDatabase</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">connect</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; connStr) <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"[MySQL] Connecting to: "</span> &lt;&lt; connStr &lt;&lt; endl;
+    }
+    <span class="keyword">void</span> <span class="function">disconnect</span>() <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"[MySQL] Disconnected."</span> &lt;&lt; endl;
+    }
+    <span class="keyword">void</span> <span class="function">execute</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; query) <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"[MySQL] Executing: "</span> &lt;&lt; query &lt;&lt; endl;
+    }
+    <span class="type">string</span> <span class="function">name</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"MySQL"</span>; }
+};
+
+<span class="comment">// Concrete: PostgreSQL</span>
+<span class="keyword">class</span> <span class="type">PostgreSQLDatabase</span> : <span class="keyword">public</span> <span class="type">IDatabase</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">connect</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; connStr) <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"[PostgreSQL] Connecting to: "</span> &lt;&lt; connStr &lt;&lt; endl;
+    }
+    <span class="keyword">void</span> <span class="function">disconnect</span>() <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"[PostgreSQL] Disconnected."</span> &lt;&lt; endl;
+    }
+    <span class="keyword">void</span> <span class="function">execute</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; query) <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"[PostgreSQL] Executing: "</span> &lt;&lt; query &lt;&lt; endl;
+    }
+    <span class="type">string</span> <span class="function">name</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"PostgreSQL"</span>; }
+};
+
+<span class="comment">// Client code &mdash; depends ONLY on IDatabase</span>
+<span class="keyword">void</span> <span class="function">runMigration</span>(<span class="type">IDatabase</span>&amp; db) {
+    db.<span class="function">connect</span>(<span class="string">"host=localhost;port=3306"</span>);
+    db.<span class="function">execute</span>(<span class="string">"CREATE TABLE users (id INT, name VARCHAR(100))"</span>);
+    db.<span class="function">execute</span>(<span class="string">"INSERT INTO users VALUES (1, 'Alice')"</span>);
+    db.<span class="function">disconnect</span>();
+}
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">MySQLDatabase</span> mysql;
+    <span class="type">PostgreSQLDatabase</span> pg;
+
+    cout &lt;&lt; <span class="string">"=== Using "</span> &lt;&lt; mysql.<span class="function">name</span>() &lt;&lt; <span class="string">" ==="</span> &lt;&lt; endl;
+    <span class="function">runMigration</span>(mysql);
+
+    cout &lt;&lt; endl;
+
+    cout &lt;&lt; <span class="string">"=== Using "</span> &lt;&lt; pg.<span class="function">name</span>() &lt;&lt; <span class="string">" ==="</span> &lt;&lt; endl;
+    <span class="function">runMigration</span>(pg);
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>=== Using MySQL ===
+[MySQL] Connecting to: host=localhost;port=3306
+[MySQL] Executing: CREATE TABLE users (id INT, name VARCHAR(100))
+[MySQL] Executing: INSERT INTO users VALUES (1, 'Alice')
+[MySQL] Disconnected.
+
+=== Using PostgreSQL ===
+[PostgreSQL] Connecting to: host=localhost;port=3306
+[PostgreSQL] Executing: CREATE TABLE users (id INT, name VARCHAR(100))
+[PostgreSQL] Executing: INSERT INTO users VALUES (1, 'Alice')
+[PostgreSQL] Disconnected.</code></pre>
+                </div>
+                <p>The <code>runMigration()</code> function doesn&rsquo;t know or care which database it talks to &mdash; it works through the <code>IDatabase</code> abstraction. Swapping MySQL for PostgreSQL requires <strong>zero changes</strong> to the client code.</p>
+
+                <!-- ===== Real-World Analogy ===== -->
+                <h2>Real-World Analogy: Remote Control</h2>
+                <p>Think of a <strong>TV remote control</strong> as an abstraction:</p>
+                <ul>
+                    <li>The <strong>remote</strong> is the abstract interface &mdash; it exposes buttons like <em>Power</em>, <em>Volume Up</em>, <em>Channel Next</em>.</li>
+                    <li>The <strong>TV</strong> is the concrete implementation &mdash; it handles infrared signals, adjusts speakers, switches tuners.</li>
+                    <li>You (the user) interact <strong>only</strong> with the remote. You don&rsquo;t rewire circuits to change the channel.</li>
+                    <li>If you replace the TV with a different brand, the remote still works the same way (as long as it implements the same interface).</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>Analogy in Code</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// The &ldquo;remote control&rdquo; interface</span>
+<span class="keyword">class</span> <span class="type">IRemote</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">power</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">volumeUp</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">volumeDown</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">channelNext</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">IRemote</span>() = <span class="keyword">default</span>;
+};
+
+<span class="comment">// Samsung TV implements the remote interface</span>
+<span class="keyword">class</span> <span class="type">SamsungTV</span> : <span class="keyword">public</span> <span class="type">IRemote</span> {
+    <span class="type">bool</span> isOn = <span class="keyword">false</span>;
+    <span class="type">int</span> volume = <span class="number">10</span>;
+    <span class="type">int</span> channel = <span class="number">1</span>;
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">power</span>() <span class="keyword">override</span>      { isOn = !isOn; }
+    <span class="keyword">void</span> <span class="function">volumeUp</span>() <span class="keyword">override</span>   { <span class="keyword">if</span>(isOn) volume++; }
+    <span class="keyword">void</span> <span class="function">volumeDown</span>() <span class="keyword">override</span> { <span class="keyword">if</span>(isOn &amp;&amp; volume &gt; <span class="number">0</span>) volume--; }
+    <span class="keyword">void</span> <span class="function">channelNext</span>() <span class="keyword">override</span>{ <span class="keyword">if</span>(isOn) channel++; }
+};
+
+<span class="comment">// User only knows about IRemote &mdash; pure abstraction</span></code></pre>
+                </div>
+                <p>This is exactly how abstraction works in software: <strong>hide the complexity, expose a clean interface</strong>.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Abstraction</strong> means hiding complex details and exposing only what is necessary.</li>
+                    <li><strong>Abstract classes</strong> have at least one pure virtual function (<code>= 0</code>) and <strong>cannot be instantiated</strong>.</li>
+                    <li><strong>Pure virtual functions</strong> force derived classes to provide their own implementations.</li>
+                    <li>An <strong>interface</strong> in C++ is a class with <em>only</em> pure virtual functions and no data members.</li>
+                    <li>C++ supports <strong>multiple interfaces</strong> via multiple inheritance, which is safe when using pure abstract classes.</li>
+                    <li>Abstraction and encapsulation are complementary: abstraction defines <em>what</em>, encapsulation controls <em>how</em>.</li>
+                    <li>Program against <strong>abstractions, not implementations</strong> &mdash; this produces flexible, maintainable, and extensible code.</li>
+                    <li>Always use a <strong>virtual destructor</strong> in abstract classes to avoid undefined behaviour when deleting through base pointers.</li>
+                    <li>Real-world analogies (remote controls, ATMs, steering wheels) illustrate abstraction perfectly &mdash; you use the interface without knowing the internals.</li>
+                    <li>Use abstract classes for shared behaviour; use interfaces for defining pure contracts.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Vtv1MNXkFdw" title="C++ Abstraction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is abstraction in OOP?","o":["Copying objects","Hiding complex details and showing only essentials","Deleting unused variables","Making all members public"],"a":1},
+                {"q":"Which OOP pillar is abstraction?","o":["One of the four fundamental pillars","A deprecated concept","Only used in Python","A compiler optimisation"],"a":0},
+                {"q":"How is abstraction primarily achieved in C++?","o":["Using macros","Using abstract classes and interfaces","Using global variables","Using goto statements"],"a":1},
+                {"q":"What is an abstract class in C++?","o":["A class with no methods","A class with at least one pure virtual function","A class with only private members","A class that uses templates"],"a":1},
+                {"q":"Can you create an object of an abstract class?","o":["Yes, always","Only with new","No, abstract classes cannot be instantiated","Only in main()"],"a":2},
+                {"q":"What is a pure virtual function?","o":["A virtual function with = 0 and usually no implementation in the base","A function with an empty body","A static function","A function that returns void"],"a":0},
+                {"q":"What is the syntax for a pure virtual function?","o":["<code>virtual void f() = 0;</code>","<code>abstract void f();</code>","<code>pure virtual void f();</code>","<code>void f() = pure;</code>"],"a":0},
+                {"q":"Can a pure virtual function have a body?","o":["No, never","Yes, but derived classes must still override it","Only if it is private","Only in structs"],"a":1},
+                {"q":"What happens if a derived class does not override all pure virtual functions?","o":["The program crashes","The derived class also becomes abstract","A warning is issued but it compiles","Nothing happens"],"a":1},
+                {"q":"What is the difference between abstraction and encapsulation?","o":["They are the same thing","Abstraction hides complexity (what); encapsulation bundles data and restricts access (how)","Abstraction is faster than encapsulation","Encapsulation is a type of abstraction"],"a":1},
+                {"q":"What does an interface in C++ look like?","o":["A class with the interface keyword","A class with only pure virtual functions and no data members","A struct with all public members","A namespace with functions"],"a":1},
+                {"q":"Does C++ have a dedicated <code>interface</code> keyword?","o":["Yes","No, interfaces are classes with only pure virtual functions","Only in C++20","Only in MSVC"],"a":1},
+                {"q":"What is the common naming convention for C++ interfaces?","o":["Suffix with Impl","Prefix with I (e.g., IDrawable)","Suffix with Base","Prefix with Abstract"],"a":1},
+                {"q":"Can a class implement multiple interfaces in C++?","o":["No, C++ does not support it","Yes, through multiple inheritance","Only with templates","Only two interfaces at most"],"a":1},
+                {"q":"Why is multiple inheritance safe with interfaces?","o":["Because interfaces have no data members, avoiding the diamond problem","Because C++ handles it automatically","Because interfaces use virtual inheritance","It is never safe"],"a":0},
+                {"q":"Can an abstract class have constructors?","o":["No","Yes, abstract classes can have constructors","Only default constructors","Only copy constructors"],"a":1},
+                {"q":"Can an abstract class have data members?","o":["No","Yes, abstract classes can have data members","Only static members","Only const members"],"a":1},
+                {"q":"Can an abstract class have non-virtual methods?","o":["No, all methods must be virtual","Yes, abstract classes can have regular methods","Only static methods","Only inline methods"],"a":1},
+                {"q":"Why should abstract classes have a virtual destructor?","o":["For performance","To ensure proper cleanup when deleting through a base pointer","Virtual destructors are optional","To make the class abstract"],"a":1},
+                {"q":"Can a destructor be pure virtual?","o":["No","Yes, but it must still have a definition (body)","Only in interfaces","Only in template classes"],"a":1},
+                {"q":"What is the benefit of programming against abstractions?","o":["Faster compilation","Loose coupling and easier maintenance","More memory usage","Longer code"],"a":1},
+                {"q":"In the payment system example, what does <code>PaymentMethod</code> represent?","o":["A concrete credit card class","An abstract base class defining the payment contract","A global function","A template class"],"a":1},
+                {"q":"What does the <code>receipt()</code> method in <code>PaymentMethod</code> demonstrate?","o":["A pure virtual function","A shared non-virtual method in an abstract class","An operator overload","A constructor"],"a":1},
+                {"q":"How does the payment system demonstrate abstraction?","o":["By using global variables","By processing payments through base class pointers without knowing the concrete type","By using if-else chains","By making all methods static"],"a":1},
+                {"q":"In the database example, what is <code>IDatabase</code>?","o":["A concrete MySQL class","A pure abstract interface for database operations","A template class","A namespace"],"a":1},
+                {"q":"What advantage does <code>runMigration(IDatabase&amp; db)</code> have?","o":["It only works with MySQL","It works with any class that implements IDatabase","It is faster than direct calls","It avoids using references"],"a":1},
+                {"q":"What is the remote control analogy for abstraction?","o":["The remote shows all circuit details","The remote hides complexity and exposes simple buttons (interface)","The remote controls only one brand","The remote has no buttons"],"a":1},
+                {"q":"Which access specifier helps achieve abstraction?","o":["Only public","private and protected hide implementation; public exposes the interface","Only static","Only friend"],"a":1},
+                {"q":"Can you declare a pointer to an abstract class?","o":["No","Yes, abstract class pointers are valid and often used for polymorphism","Only in C++11","Only with smart pointers"],"a":1},
+                {"q":"Can you declare a reference to an abstract class?","o":["No","Yes, abstract class references are valid","Only to concrete classes","Only with const"],"a":1},
+                {"q":"What keyword makes a function pure virtual?","o":["pure","abstract","= 0 after the declaration","override"],"a":2},
+                {"q":"If class <code>A</code> has two pure virtual functions and class <code>B</code> inherits from <code>A</code> but overrides only one, what is <code>B</code>?","o":["A concrete class","An abstract class","A template class","An interface"],"a":1},
+                {"q":"What is a concrete class?","o":["A class with at least one pure virtual function","A class with no pure virtual functions (all are implemented)","A class with no methods","A static class"],"a":1},
+                {"q":"When should you use an abstract class over an interface?","o":["When you need shared default behaviour and common data members","When you want no implementation at all","When you want to use macros","When you need static methods only"],"a":0},
+                {"q":"When should you use an interface over an abstract class?","o":["When you need shared data members","When you want to define a pure contract with no shared state","When you need constructors","When you need operator overloading"],"a":1},
+                {"q":"What design principle does abstraction support?","o":["Write everything in main()","Program to an interface, not an implementation","Avoid using classes","Use global variables"],"a":1},
+                {"q":"Can an abstract class inherit from another abstract class?","o":["No","Yes, and it may remain abstract if it does not override all pure virtual functions","Only in C++17","Only with virtual inheritance"],"a":1},
+                {"q":"Which of the following is an example of abstraction in everyday life?","o":["Seeing all engine parts while driving","Using an ATM without knowing its internal banking protocols","Reading the CPU instruction manual before browsing","Writing assembly to send an email"],"a":1},
+                {"q":"What happens if you try to compile <code>Shape s;</code> when <code>Shape</code> is abstract?","o":["It compiles fine","A compile-time error occurs","A runtime error occurs","A warning is issued"],"a":1},
+                {"q":"How does abstraction improve security?","o":["By encrypting source code","By hiding sensitive implementation details behind a public interface","By deleting private members","By using random variable names"],"a":1},
+                {"q":"What is the relationship between virtual functions and abstraction?","o":["They are unrelated","Virtual functions (especially pure virtual) are the primary mechanism for abstraction in C++","Virtual functions prevent abstraction","Abstraction replaces virtual functions"],"a":1},
+                {"q":"Can a struct be abstract in C++?","o":["No, only classes can be abstract","Yes, a struct with a pure virtual function is abstract","Only in C++20","Only with the abstract keyword"],"a":1},
+                {"q":"In a plugin architecture, why are interfaces useful?","o":["They make code slower","Plugins implement the interface so the host can use them without knowing their concrete type","Interfaces prevent plugins from working","They require global state"],"a":1},
+                {"q":"What is dependency injection related to abstraction?","o":["Nothing","Client code receives its dependencies as abstractions (interfaces), not concrete types","It replaces abstraction entirely","It only works with templates"],"a":1},
+                {"q":"Can abstract classes be used with <code>std::unique_ptr</code>?","o":["No","Yes, <code>unique_ptr&lt;AbstractBase&gt;</code> can hold derived objects","Only with raw pointers","Only with shared_ptr"],"a":1},
+                {"q":"What is the template method pattern?","o":["Using C++ templates","An abstract class defines an algorithm skeleton and lets subclasses override certain steps","A method that returns a template","A static method pattern"],"a":1},
+                {"q":"Which OOP principle says &lsquo;depend on abstractions, not concretions&rsquo;?","o":["Single Responsibility","Open/Closed Principle","Dependency Inversion Principle","Liskov Substitution"],"a":2},
+                {"q":"What does &lsquo;loose coupling&rsquo; mean in the context of abstraction?","o":["Classes are tightly connected","Classes depend on abstract interfaces rather than concrete implementations","Classes share all data","All methods are public"],"a":1},
+                {"q":"Can you pass an abstract class by value to a function?","o":["Yes","No, because abstract classes cannot be instantiated; use pointers or references","Only with move semantics","Only with copy constructors"],"a":1},
+                {"q":"What is the main advantage of abstraction in large codebases?","o":["Shorter variable names","Reduced complexity, easier maintenance, and flexible architecture","Faster compile times","Fewer files"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="polymorphism.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Polymorphism</span>
+                </a>
+                <a href="function-templates.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Function Templates</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Classes &amp; Objects - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-classes-objects">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html" class="active"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 30 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="55" style="width:55%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Classes &amp; Objects
+                </div>
+                <h1>30. Classes &amp; Objects</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 30 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Object-Oriented Programming? ===== -->
+                <h2>What Is Object-Oriented Programming?</h2>
+                <p><strong>Object-Oriented Programming (OOP)</strong> is a programming paradigm that organises software around <strong>objects</strong> rather than plain functions and logic. An object bundles together <em>data</em> (attributes) and <em>behaviour</em> (methods) into a single, self-contained unit.</p>
+                <p>Before OOP, C programmers relied on <em>procedural</em> programming &mdash; writing sequences of functions that operate on loose collections of variables. This works for small programs, but as projects grow, keeping track of which functions modify which data quickly becomes unmanageable.</p>
+                <p>OOP addresses this by grouping related data and the functions that act on that data into cohesive units. The four pillars of OOP are:</p>
+                <ul>
+                    <li><strong>Encapsulation:</strong> Bundling data and methods together and restricting direct access to internal details.</li>
+                    <li><strong>Abstraction:</strong> Hiding complex implementation details behind a simple interface.</li>
+                    <li><strong>Inheritance:</strong> Creating new classes from existing ones, reusing and extending behaviour.</li>
+                    <li><strong>Polymorphism:</strong> Allowing objects of different classes to be treated through a common interface.</li>
+                </ul>
+                <p>C++ is a <strong>multi-paradigm</strong> language &mdash; it supports procedural, object-oriented, and generic programming. Starting with this lesson, we step into OOP territory by learning about <strong>classes</strong> and <strong>objects</strong>.</p>
+
+                <!-- ===== Classes vs Objects ===== -->
+                <h2>Classes vs Objects</h2>
+                <p>The relationship between a class and an object is like the relationship between a <strong>blueprint</strong> and a <strong>house</strong>:</p>
+                <ul>
+                    <li>A <strong>class</strong> is the blueprint &mdash; it defines what data the object will hold and what operations it can perform, but it does not occupy memory for actual object data on its own.</li>
+                    <li>An <strong>object</strong> is a house built from that blueprint &mdash; it is a concrete instance of the class that lives in memory and stores real values.</li>
+                </ul>
+                <p>You can build many houses from a single blueprint. Likewise, you can create many objects from a single class, and each object has its own independent copy of the member data.</p>
+                <div class="code-block">
+<pre><code>// Blueprint (class)
+class Car {
+    string brand;
+    int year;
+    void drive();
+};
+
+// Houses (objects)
+Car myCar;      // object 1
+Car yourCar;    // object 2
+Car rentalCar;  // object 3</code></pre>
+                </div>
+
+                <!-- ===== Defining a Class ===== -->
+                <h2>Defining a Class</h2>
+                <p>A class definition starts with the keyword <code>class</code>, followed by the class name, a pair of braces, and a semicolon after the closing brace. Inside the braces you declare <strong>member variables</strong> (data) and <strong>member functions</strong> (behaviour).</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Dog {
+public:                   // access specifier &ndash; more on this later
+    string name;          // member variable
+    string breed;         // member variable
+    int age;              // member variable
+
+    void bark() {         // member function
+        cout &lt;&lt; name &lt;&lt; " says: Woof!" &lt;&lt; endl;
+    }
+
+    void info() {         // member function
+        cout &lt;&lt; "Name: "  &lt;&lt; name  &lt;&lt; endl;
+        cout &lt;&lt; "Breed: " &lt;&lt; breed &lt;&lt; endl;
+        cout &lt;&lt; "Age: "   &lt;&lt; age   &lt;&lt; " years" &lt;&lt; endl;
+    }
+};</code></pre>
+                </div>
+                <p><strong>Key points:</strong></p>
+                <ul>
+                    <li>The <code>public:</code> label makes the members accessible from outside the class. Without it, members default to <code>private</code> in a class.</li>
+                    <li>Member variables describe the <em>state</em> of each object.</li>
+                    <li>Member functions describe the <em>behaviour</em> of each object.</li>
+                    <li>Don&rsquo;t forget the <strong>semicolon</strong> after the closing brace &mdash; it is required.</li>
+                </ul>
+
+                <!-- ===== Creating Objects ===== -->
+                <h2>Creating Objects</h2>
+                <p>Creating an object from a class is called <strong>instantiation</strong>. You declare an object the same way you declare any variable &mdash; the class name acts as the type:</p>
+                <div class="code-block">
+<pre><code>int main() {
+    Dog myDog;              // create an object of type Dog
+    myDog.name  = "Buddy";
+    myDog.breed = "Golden Retriever";
+    myDog.age   = 3;
+
+    myDog.bark();           // Buddy says: Woof!
+    myDog.info();           // prints name, breed, age
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>When <code>Dog myDog;</code> executes, the compiler allocates memory for all of <code>Dog</code>&rsquo;s member variables (<code>name</code>, <code>breed</code>, <code>age</code>). The object <code>myDog</code> now exists in memory and is ready to use.</p>
+
+                <!-- ===== Accessing Members with the Dot Operator ===== -->
+                <h2>Accessing Members with the Dot Operator</h2>
+                <p>The <strong>dot operator</strong> (<code>.</code>) connects an object to its members. Use it to read or write member variables and to call member functions:</p>
+                <div class="code-block">
+<pre><code>myDog.name = "Max";        // write a member variable
+cout &lt;&lt; myDog.name;        // read a member variable
+myDog.bark();              // call a member function</code></pre>
+                </div>
+                <p>If you have a <strong>pointer</strong> to an object, you use the <strong>arrow operator</strong> (<code>-&gt;</code>) instead:</p>
+                <div class="code-block">
+<pre><code>Dog* ptr = &amp;myDog;
+ptr-&gt;bark();               // same as (*ptr).bark()
+cout &lt;&lt; ptr-&gt;name;         // same as (*ptr).name</code></pre>
+                </div>
+
+                <!-- ===== Member Functions Inside and Outside the Class ===== -->
+                <h2>Member Functions Inside and Outside the Class</h2>
+                <p>You can define member functions in two ways:</p>
+
+                <h3>1. Inside the Class (Inline)</h3>
+                <p>When you write the function body directly inside the class definition, the compiler treats it as an inline suggestion:</p>
+                <div class="code-block">
+<pre><code>class Circle {
+public:
+    double radius;
+
+    double area() {                      // defined inside
+        return 3.14159 * radius * radius;
+    }
+};</code></pre>
+                </div>
+
+                <h3>2. Outside the Class (Scope Resolution Operator <code>::</code>)</h3>
+                <p>For larger functions, it is cleaner to declare the function inside the class and define it outside using the <strong>scope resolution operator <code>::</code></strong>:</p>
+                <div class="code-block">
+<pre><code>class Circle {
+public:
+    double radius;
+
+    double area();          // declaration only
+    double circumference(); // declaration only
+};
+
+// Definition outside the class
+double Circle::area() {
+    return 3.14159 * radius * radius;
+}
+
+double Circle::circumference() {
+    return 2 * 3.14159 * radius;
+}</code></pre>
+                </div>
+                <p>The syntax <code>Circle::area()</code> tells the compiler that <code>area()</code> belongs to the <code>Circle</code> class. This is the preferred style in production code because it keeps the class definition concise and readable.</p>
+
+                <!-- ===== Multiple Objects from One Class ===== -->
+                <h2>Multiple Objects from One Class</h2>
+                <p>Each object has its <strong>own copy</strong> of the member variables. Changing one object does not affect another:</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Car {
+public:
+    string brand;
+    string model;
+    int year;
+
+    void display() {
+        cout &lt;&lt; year &lt;&lt; " " &lt;&lt; brand &lt;&lt; " " &lt;&lt; model &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Car car1;
+    car1.brand = "Toyota";
+    car1.model = "Corolla";
+    car1.year  = 2022;
+
+    Car car2;
+    car2.brand = "Honda";
+    car2.model = "Civic";
+    car2.year  = 2023;
+
+    Car car3;
+    car3.brand = "Ford";
+    car3.model = "Mustang";
+    car3.year  = 2024;
+
+    car1.display();  // 2022 Toyota Corolla
+    car2.display();  // 2023 Honda Civic
+    car3.display();  // 2024 Ford Mustang
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>All three objects share the same <em>structure</em> (brand, model, year, display) but hold completely <em>independent data</em>.</p>
+
+                <!-- ===== The this Pointer ===== -->
+                <h2>The <code>this</code> Pointer</h2>
+                <p>Every non-static member function has an implicit pointer called <code>this</code> that points to the object on which the function was called. The compiler passes it automatically &mdash; you never see it in the parameter list, but you can use it explicitly:</p>
+                <div class="code-block">
+<pre><code>class Rectangle {
+public:
+    double width;
+    double height;
+
+    void setDimensions(double width, double height) {
+        // Parameter names shadow member names.
+        // Use this-&gt; to refer to the member variables.
+        this-&gt;width  = width;
+        this-&gt;height = height;
+    }
+
+    double area() {
+        return this-&gt;width * this-&gt;height;   // explicit, but optional here
+    }
+};</code></pre>
+                </div>
+                <p><strong>Common uses of <code>this</code>:</strong></p>
+                <ul>
+                    <li><strong>Disambiguation:</strong> When a parameter name shadows a member variable, <code>this-&gt;member</code> removes ambiguity.</li>
+                    <li><strong>Returning the current object:</strong> <code>return *this;</code> enables method chaining.</li>
+                    <li><strong>Passing the current object</strong> to another function.</li>
+                </ul>
+                <div class="code-block">
+<pre><code>class Builder {
+public:
+    int x = 0, y = 0, z = 0;
+
+    Builder&amp; setX(int x) { this-&gt;x = x; return *this; }
+    Builder&amp; setY(int y) { this-&gt;y = y; return *this; }
+    Builder&amp; setZ(int z) { this-&gt;z = z; return *this; }
+};
+
+int main() {
+    Builder b;
+    b.setX(1).setY(2).setZ(3);  // method chaining via *this
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Class vs Struct in C++ ===== -->
+                <h2>Class vs Struct in C++</h2>
+                <p>In C++, <code>struct</code> and <code>class</code> are almost identical. The <strong>only technical difference</strong> is the <strong>default access level</strong>:</p>
+                <table>
+                    <thead>
+                        <tr><th>Feature</th><th><code>class</code></th><th><code>struct</code></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Default member access</td><td><code>private</code></td><td><code>public</code></td></tr>
+                        <tr><td>Default inheritance access</td><td><code>private</code></td><td><code>public</code></td></tr>
+                        <tr><td>Can have methods?</td><td>Yes</td><td>Yes</td></tr>
+                        <tr><td>Can have constructors?</td><td>Yes</td><td>Yes</td></tr>
+                        <tr><td>Can use inheritance?</td><td>Yes</td><td>Yes</td></tr>
+                    </tbody>
+                </table>
+                <div class="code-block">
+<pre><code>struct Point {
+    double x;   // public by default
+    double y;   // public by default
+};
+
+class Point2 {
+    double x;   // private by default &ndash; not accessible outside
+    double y;   // private by default
+};</code></pre>
+                </div>
+                <p><strong>Convention:</strong> Use <code>struct</code> for simple data holders (PODs) with no invariants. Use <code>class</code> when you have member functions, encapsulation, or complex behaviour.</p>
+
+                <!-- ===== Separating Declaration and Implementation ===== -->
+                <h2>Separating Declaration and Implementation</h2>
+                <p>In real-world C++ projects, you almost always split a class across two files:</p>
+                <ul>
+                    <li>A <strong>header file</strong> (<code>.h</code> or <code>.hpp</code>) &mdash; contains the class <strong>declaration</strong> (member variables and function prototypes).</li>
+                    <li>A <strong>source file</strong> (<code>.cpp</code>) &mdash; contains the <strong>definitions</strong> (function bodies).</li>
+                </ul>
+
+                <h3>student.h &mdash; Header File</h3>
+                <div class="code-block">
+<pre><code>#ifndef STUDENT_H
+#define STUDENT_H
+
+#include &lt;string&gt;
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int id;
+    double gpa;
+
+    void display();
+    bool isHonorRoll();
+};
+
+#endif</code></pre>
+                </div>
+                <p>The <code>#ifndef</code> / <code>#define</code> / <code>#endif</code> pattern is called an <strong>include guard</strong>. It prevents the header from being included more than once, which would cause duplicate-definition errors.</p>
+
+                <h3>student.cpp &mdash; Source File</h3>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include "student.h"   // include the header
+
+void Student::display() {
+    cout &lt;&lt; "ID: "   &lt;&lt; id   &lt;&lt; endl;
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; "GPA: "  &lt;&lt; gpa  &lt;&lt; endl;
+}
+
+bool Student::isHonorRoll() {
+    return gpa &gt;= 3.5;
+}</code></pre>
+                </div>
+
+                <h3>main.cpp &mdash; Using the Class</h3>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include "student.h"
+
+int main() {
+    Student s;
+    s.name = "Alice";
+    s.id   = 1001;
+    s.gpa  = 3.85;
+
+    s.display();
+
+    if (s.isHonorRoll()) {
+        cout &lt;&lt; s.name &lt;&lt; " is on the Honor Roll!" &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>This separation has practical benefits: compile times improve because only the <code>.cpp</code> file that changes needs to be recompiled, and the header provides a clean <em>interface</em> for other files to use.</p>
+
+                <!-- ===== Complete Example: A Student Class ===== -->
+                <h2>Complete Example: A Student Class</h2>
+                <p>Let&rsquo;s put everything together in a single, self-contained program that demonstrates class definition, multiple objects, member functions defined outside the class, and the <code>this</code> pointer:</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int id;
+    double grades[5];
+
+    // Declare member functions
+    void setInfo(string name, int id);
+    double average();
+    void display();
+    string letterGrade();
+};
+
+// ---- Definitions outside the class ----
+
+void Student::setInfo(string name, int id) {
+    this-&gt;name = name;   // use this-&gt; to disambiguate
+    this-&gt;id   = id;
+}
+
+double Student::average() {
+    double sum = 0;
+    for (int i = 0; i &lt; 5; i++) {
+        sum += grades[i];
+    }
+    return sum / 5.0;
+}
+
+string Student::letterGrade() {
+    double avg = average();
+    if (avg &gt;= 90) return "A";
+    if (avg &gt;= 80) return "B";
+    if (avg &gt;= 70) return "C";
+    if (avg &gt;= 60) return "D";
+    return "F";
+}
+
+void Student::display() {
+    cout &lt;&lt; "=========================" &lt;&lt; endl;
+    cout &lt;&lt; "Student ID : " &lt;&lt; id      &lt;&lt; endl;
+    cout &lt;&lt; "Name       : " &lt;&lt; name    &lt;&lt; endl;
+    cout &lt;&lt; "Grades     : ";
+    for (int i = 0; i &lt; 5; i++) {
+        cout &lt;&lt; grades[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Average    : " &lt;&lt; average()     &lt;&lt; endl;
+    cout &lt;&lt; "Letter     : " &lt;&lt; letterGrade() &lt;&lt; endl;
+    cout &lt;&lt; "=========================" &lt;&lt; endl;
+}
+
+int main() {
+    Student s1;
+    s1.setInfo("Alice", 1001);
+    s1.grades[0] = 92; s1.grades[1] = 88;
+    s1.grades[2] = 95; s1.grades[3] = 79;
+    s1.grades[4] = 85;
+
+    Student s2;
+    s2.setInfo("Bob", 1002);
+    s2.grades[0] = 72; s2.grades[1] = 65;
+    s2.grades[2] = 80; s2.grades[3] = 58;
+    s2.grades[4] = 70;
+
+    s1.display();
+    s2.display();
+
+    // Compare averages
+    if (s1.average() &gt; s2.average()) {
+        cout &lt;&lt; s1.name &lt;&lt; " has a higher average." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; s2.name &lt;&lt; " has a higher average." &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+<pre><code>=========================
+Student ID : 1001
+Name       : Alice
+Grades     : 92 88 95 79 85
+Average    : 87.8
+Letter     : B
+=========================
+=========================
+Student ID : 1002
+Name       : Bob
+Grades     : 72 65 80 58 70
+Average    : 69
+Letter     : D
+=========================
+Alice has a higher average.</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>A <strong>class</strong> is a user-defined type that bundles data (<em>member variables</em>) and behaviour (<em>member functions</em>) together.</li>
+                    <li>An <strong>object</strong> is a concrete instance of a class &mdash; it occupies memory and holds actual values.</li>
+                    <li>Use the <strong>dot operator</strong> (<code>.</code>) to access members of an object, and the <strong>arrow operator</strong> (<code>-&gt;</code>) for pointers to objects.</li>
+                    <li>Member functions can be defined <strong>inside</strong> the class (inline) or <strong>outside</strong> using the scope resolution operator <code>::</code>.</li>
+                    <li>The <code>this</code> pointer is an implicit pointer to the current object; use it to disambiguate names or enable method chaining.</li>
+                    <li>In C++, <code>struct</code> and <code>class</code> differ only in default access: <code>struct</code> defaults to <code>public</code>, <code>class</code> defaults to <code>private</code>.</li>
+                    <li>Real-world projects separate declaration (<code>.h</code>) and implementation (<code>.cpp</code>) for cleaner code and faster compilation.</li>
+                    <li>You can create <strong>many objects</strong> from a single class, each with independent data.</li>
+                    <li>Classes are the foundation of OOP in C++; upcoming lessons on constructors, access specifiers, inheritance, and polymorphism all build on this concept.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/2BP8NhxjrO0" title="C++ Classes &amp; Objects" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a class in C++?","o":["A built-in data type","A user-defined type that bundles data and functions","A type of loop","A preprocessor directive"],"a":1},
+                {"q":"What is an object?","o":["A synonym for a class","An instance of a class","A pointer to a function","A header file"],"a":1},
+                {"q":"Which keyword is used to define a class in C++?","o":["object","struct (only)","class","define"],"a":2},
+                {"q":"What is the default access level of members in a <code>class</code>?","o":["public","private","protected","static"],"a":1},
+                {"q":"What is the default access level of members in a <code>struct</code>?","o":["private","protected","public","static"],"a":2},
+                {"q":"Which operator is used to access members of an object?","o":["::","->",".","&amp;"],"a":2},
+                {"q":"Which operator is used to access members through a pointer to an object?","o":[".","::","->","*"],"a":2},
+                {"q":"What must appear after the closing brace of a class definition?","o":["A colon","A semicolon","A comma","Nothing"],"a":1},
+                {"q":"What does <em>instantiation</em> mean?","o":["Defining a class","Creating an object from a class","Deleting an object","Declaring a function"],"a":1},
+                {"q":"What is <code>this</code> in C++?","o":["A global variable","A pointer to the current object","A reference to the class","A macro"],"a":1},
+                {"q":"When is <code>this-&gt;</code> typically used?","o":["When accessing global variables","When a parameter name shadows a member variable","When defining a class","When using arrays"],"a":1},
+                {"q":"What does the scope resolution operator <code>::</code> do?","o":["Accesses a member of an object","Associates a function definition with its class","Creates a new object","Dereferences a pointer"],"a":1},
+                {"q":"Which is the correct syntax to define a member function outside the class?","o":["void display() { }","void Class.display() { }","void Class::display() { }","Class-&gt;void display() { }"],"a":2},
+                {"q":"Can a struct have member functions in C++?","o":["No","Yes","Only static functions","Only constructors"],"a":1},
+                {"q":"What is an include guard?","o":["A firewall setting","A pattern that prevents a header from being included twice","A runtime check","A compiler extension"],"a":1},
+                {"q":"Which preprocessor directives form an include guard?","o":["#include / #define","#ifndef / #define / #endif","#pragma once / #include","#ifdef / #undef"],"a":1},
+                {"q":"Where should member function <em>declarations</em> be placed in a multi-file project?","o":["In the .cpp file","In the header (.h) file","In main.cpp","In a .txt file"],"a":1},
+                {"q":"Where should member function <em>definitions</em> be placed in a multi-file project?","o":["In the header (.h) file","In the .cpp source file","In the main function","In a namespace"],"a":1},
+                {"q":"What is the output?<br><code>class Box { public: int size; }; Box b; b.size = 5; cout &lt;&lt; b.size;</code>","o":["0","5","Compile error","Undefined"],"a":1},
+                {"q":"How many objects can you create from one class?","o":["Only one","Exactly two","Any number","It depends on the compiler"],"a":2},
+                {"q":"Do different objects of the same class share data?","o":["Yes, always","No, each has its own copy","Only if they use static members","Only for pointers"],"a":1},
+                {"q":"What does <code>return *this;</code> do inside a member function?","o":["Returns a copy of the class definition","Returns the current object by reference","Deletes the object","Returns nullptr"],"a":1},
+                {"q":"Method chaining is possible because member functions:","o":["Are inline","Return <code>*this</code> by reference","Return void","Use recursion"],"a":1},
+                {"q":"Which OOP pillar bundles data and methods together?","o":["Inheritance","Polymorphism","Encapsulation","Abstraction"],"a":2},
+                {"q":"Which OOP pillar lets you create a new class from an existing one?","o":["Encapsulation","Inheritance","Abstraction","Composition"],"a":1},
+                {"q":"Is <code>Dog myDog;</code> a valid way to create an object?","o":["Yes","No, you need new","No, you need parentheses","Only in C"],"a":0},
+                {"q":"What is the purpose of the <code>public:</code> label inside a class?","o":["It makes members accessible from outside the class","It makes members static","It defines a namespace","It is optional decoration"],"a":0},
+                {"q":"What is a member variable?","o":["A global variable used inside a class","A variable declared inside a class that holds object state","A pointer to a function","A compile-time constant"],"a":1},
+                {"q":"What is a member function?","o":["Any function in the program","A function declared inside a class that operates on its data","A function that takes no parameters","A static method"],"a":1},
+                {"q":"What happens if you try to access a private member from outside the class?","o":["It works normally","A compile-time error occurs","A runtime exception is thrown","The member returns 0"],"a":1},
+                {"q":"Which of these correctly creates an object on the heap?","o":["Car c;","Car* c = new Car();","Car c = Car::create();","heap Car c;"],"a":1},
+                {"q":"When you create an object on the heap, how do you access its members?","o":["Using the dot operator","Using the arrow operator","Using the scope resolution operator","Using the address-of operator"],"a":1},
+                {"q":"What is the blueprint analogy for a class?","o":["A class is the house, an object is the blueprint","A class is the blueprint, an object is the house","Both are blueprints","Neither is a blueprint"],"a":1},
+                {"q":"Can you have an array of objects?","o":["No","Yes","Only with pointers","Only in C++17"],"a":1},
+                {"q":"What does <code>Dog dogs[3];</code> create?","o":["Three classes","Three objects of type Dog","A pointer to Dog","A single Dog with 3 members"],"a":1},
+                {"q":"Which is true about functions defined inside a class body?","o":["They are automatically virtual","They are implicitly inline","They cannot access member variables","They must return void"],"a":1},
+                {"q":"What are the four pillars of OOP?","o":["Variables, Functions, Loops, Arrays","Encapsulation, Abstraction, Inheritance, Polymorphism","Syntax, Semantics, Pragmatics, Style","Header, Source, Object, Linker"],"a":1},
+                {"q":"In <code>void Student::display()</code>, what does <code>Student::</code> indicate?","o":["display is a global function","display belongs to the Student class","Student inherits display","display returns a Student"],"a":1},
+                {"q":"Which is a valid reason to separate .h and .cpp files?","o":["Faster compile times when only .cpp changes","Required by the C++ standard","To avoid using classes","To make code unreadable"],"a":0},
+                {"q":"What is the type of <code>this</code> inside a <code>const</code> member function of class <code>Foo</code>?","o":["Foo*","const Foo*","Foo&amp;","const Foo&amp;"],"a":1},
+                {"q":"Can you assign one object to another of the same class?","o":["No","Yes &ndash; it copies all member values","Only with a custom operator","Only for primitive members"],"a":1},
+                {"q":"What does it mean that C++ is multi-paradigm?","o":["It only supports OOP","It supports procedural, OOP, and generic programming","It supports only procedural programming","It has no paradigm"],"a":1},
+                {"q":"Which syntax defines a class named <code>Animal</code> correctly?","o":["class Animal { };","Animal class { };","define Animal { };","new class Animal;"],"a":0},
+                {"q":"What is the output?<br><code>class Counter { public: int n = 0; void inc() { n++; } }; Counter c; c.inc(); c.inc(); cout &lt;&lt; c.n;</code>","o":["0","1","2","Compile error"],"a":2},
+                {"q":"Can a member function call another member function of the same class?","o":["No","Yes","Only if both are public","Only via this pointer"],"a":1},
+                {"q":"What is OOP primarily designed to improve?","o":["Execution speed","Code organisation and reusability","Memory allocation","Compiler performance"],"a":1},
+                {"q":"What does <code>(*ptr).name</code> do when <code>ptr</code> is a pointer to an object?","o":["Accesses the name member &ndash; same as ptr-&gt;name","Creates a new object","Deletes the pointer","Declares a reference"],"a":0},
+                {"q":"Can a class have zero member variables?","o":["No, at least one is required","Yes","Only if it is a struct","Only if it has no functions"],"a":1},
+                {"q":"What is the minimum size of an empty class object in C++?","o":["0 bytes","1 byte","4 bytes","8 bytes"],"a":1},
+                {"q":"Which best describes the relationship between class and object?","o":["An object defines a class","A class is a template; objects are instances of it","They are identical concepts","A class is an instance of an object"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="references.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">References</span>
+                </a>
+                <a href="constructors.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Constructors &amp; Destructors</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

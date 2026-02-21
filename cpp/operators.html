@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Operators - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-operators">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html" class="active"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 8 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="15" style="width:15%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Operators
+                </div>
+                <h1>8. Operators</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 8 of 55</span>
+                    <span>&#9201; 25 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ==================== INTRODUCTION ==================== -->
+                <h2>What Are Operators?</h2>
+                <p>Operators are special symbols or keywords in C++ that perform operations on one or more operands (values or variables). They are the building blocks of every expression you write&mdash;from simple arithmetic to complex logical comparisons. Understanding operators is essential because nearly every line of C++ code uses at least one.</p>
+                <p>C++ provides a rich set of operators that can be grouped into several categories:</p>
+                <ul>
+                    <li><strong>Arithmetic operators</strong> &ndash; perform mathematical calculations</li>
+                    <li><strong>Assignment operators</strong> &ndash; assign values to variables</li>
+                    <li><strong>Comparison (relational) operators</strong> &ndash; compare two values</li>
+                    <li><strong>Logical operators</strong> &ndash; combine boolean expressions</li>
+                    <li><strong>Increment/Decrement operators</strong> &ndash; increase or decrease a value by one</li>
+                    <li><strong>Bitwise operators</strong> &ndash; operate on individual bits</li>
+                    <li><strong>Ternary operator</strong> &ndash; shorthand conditional</li>
+                    <li><strong>sizeof operator</strong> &ndash; determine the size of a type or variable</li>
+                    <li><strong>Type casting operators</strong> &ndash; convert between types</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>An <strong>operand</strong> is a value that an operator acts upon. A <strong>unary</strong> operator takes one operand, a <strong>binary</strong> operator takes two, and a <strong>ternary</strong> operator takes three.</p>
+                </div>
+
+                <!-- ==================== ARITHMETIC OPERATORS ==================== -->
+                <h2>Arithmetic Operators</h2>
+                <p>Arithmetic operators perform standard mathematical operations on numeric values. C++ supports the following arithmetic operators:</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Name</th><th>Example</th><th>Result</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3</code></td><td><code>8</code></td></tr>
+                        <tr><td><code>-</code></td><td>Subtraction</td><td><code>10 - 4</code></td><td><code>6</code></td></tr>
+                        <tr><td><code>*</code></td><td>Multiplication</td><td><code>6 * 7</code></td><td><code>42</code></td></tr>
+                        <tr><td><code>/</code></td><td>Division</td><td><code>15 / 4</code></td><td><code>3</code> (integer division)</td></tr>
+                        <tr><td><code>%</code></td><td>Modulus (remainder)</td><td><code>15 % 4</code></td><td><code>3</code></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Basic Arithmetic Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 20, b = 7;
+
+    cout &lt;&lt; "a + b = " &lt;&lt; a + b &lt;&lt; endl;   // 27
+    cout &lt;&lt; "a - b = " &lt;&lt; a - b &lt;&lt; endl;   // 13
+    cout &lt;&lt; "a * b = " &lt;&lt; a * b &lt;&lt; endl;   // 140
+    cout &lt;&lt; "a / b = " &lt;&lt; a / b &lt;&lt; endl;   // 2  (integer division)
+    cout &lt;&lt; "a % b = " &lt;&lt; a % b &lt;&lt; endl;   // 6
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>When you divide two integers in C++, the result is always an integer&mdash;the fractional part is discarded (truncated toward zero). To get a decimal result, at least one operand must be a floating-point type (<code>float</code> or <code>double</code>).</p>
+                </div>
+
+                <h3>Integer vs. Floating-Point Division</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 15, y = 4;
+
+    // Integer division - fractional part is truncated
+    cout &lt;&lt; "15 / 4 = " &lt;&lt; x / y &lt;&lt; endl;          // Output: 3
+
+    // Floating-point division
+    double a = 15.0, b = 4.0;
+    cout &lt;&lt; "15.0 / 4.0 = " &lt;&lt; a / b &lt;&lt; endl;      // Output: 3.75
+
+    // Mixed: int and double - int is promoted to double
+    cout &lt;&lt; "15 / 4.0 = " &lt;&lt; x / b &lt;&lt; endl;        // Output: 3.75
+
+    return 0;
+}</pre></div>
+
+                <h3>The Modulus Operator (%)</h3>
+                <p>The modulus operator returns the remainder after integer division. It works only with integer types.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "10 % 3 = " &lt;&lt; 10 % 3 &lt;&lt; endl;   // 1
+    cout &lt;&lt; "20 % 5 = " &lt;&lt; 20 % 5 &lt;&lt; endl;   // 0
+    cout &lt;&lt; "7 % 2 = "  &lt;&lt; 7 % 2  &lt;&lt; endl;   // 1
+
+    // Common use: check if a number is even or odd
+    int num = 42;
+    if (num % 2 == 0) {
+        cout &lt;&lt; num &lt;&lt; " is even" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; num &lt;&lt; " is odd" &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Use <code>num % 2 == 0</code> to check if a number is even, and <code>num % 2 != 0</code> to check if it is odd. This is one of the most common uses of the modulus operator.</p>
+                </div>
+
+                <!-- ==================== ASSIGNMENT OPERATORS ==================== -->
+                <h2>Assignment Operators</h2>
+                <p>Assignment operators store a value in a variable. The basic assignment operator is <code>=</code>, but C++ also provides compound assignment operators that combine an arithmetic or bitwise operation with assignment.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Example</th><th>Equivalent To</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>=</code></td><td><code>x = 10</code></td><td><code>x = 10</code></td></tr>
+                        <tr><td><code>+=</code></td><td><code>x += 5</code></td><td><code>x = x + 5</code></td></tr>
+                        <tr><td><code>-=</code></td><td><code>x -= 3</code></td><td><code>x = x - 3</code></td></tr>
+                        <tr><td><code>*=</code></td><td><code>x *= 2</code></td><td><code>x = x * 2</code></td></tr>
+                        <tr><td><code>/=</code></td><td><code>x /= 4</code></td><td><code>x = x / 4</code></td></tr>
+                        <tr><td><code>%=</code></td><td><code>x %= 3</code></td><td><code>x = x % 3</code></td></tr>
+                        <tr><td><code>&amp;=</code></td><td><code>x &amp;= 0xF</code></td><td><code>x = x &amp; 0xF</code></td></tr>
+                        <tr><td><code>|=</code></td><td><code>x |= 0x1</code></td><td><code>x = x | 0x1</code></td></tr>
+                        <tr><td><code>^=</code></td><td><code>x ^= 0xFF</code></td><td><code>x = x ^ 0xFF</code></td></tr>
+                        <tr><td><code>&lt;&lt;=</code></td><td><code>x &lt;&lt;= 2</code></td><td><code>x = x &lt;&lt; 2</code></td></tr>
+                        <tr><td><code>&gt;&gt;=</code></td><td><code>x &gt;&gt;= 1</code></td><td><code>x = x &gt;&gt; 1</code></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Assignment Operators in Action</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 100;
+    cout &lt;&lt; "Initial: x = " &lt;&lt; x &lt;&lt; endl;  // 100
+
+    x += 25;   // x = x + 25
+    cout &lt;&lt; "x += 25 : " &lt;&lt; x &lt;&lt; endl;      // 125
+
+    x -= 10;   // x = x - 10
+    cout &lt;&lt; "x -= 10 : " &lt;&lt; x &lt;&lt; endl;      // 115
+
+    x *= 2;    // x = x * 2
+    cout &lt;&lt; "x *= 2  : " &lt;&lt; x &lt;&lt; endl;      // 230
+
+    x /= 5;    // x = x / 5
+    cout &lt;&lt; "x /= 5  : " &lt;&lt; x &lt;&lt; endl;      // 46
+
+    x %= 7;    // x = x % 7
+    cout &lt;&lt; "x %= 7  : " &lt;&lt; x &lt;&lt; endl;      // 4
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Compound assignment operators like <code>+=</code> are not just shorter to write&mdash;they also make your intent clearer. Instead of repeating the variable name, you communicate &ldquo;add this value to the existing variable.&rdquo;</p>
+                </div>
+
+                <!-- ==================== COMPARISON OPERATORS ==================== -->
+                <h2>Comparison (Relational) Operators</h2>
+                <p>Comparison operators compare two values and return a boolean result: <code>true</code> (1) or <code>false</code> (0). These are fundamental to decision-making in programs.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Name</th><th>Example</th><th>Result</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>==</code></td><td>Equal to</td><td><code>5 == 5</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>!=</code></td><td>Not equal to</td><td><code>5 != 3</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&lt;</code></td><td>Less than</td><td><code>3 &lt; 5</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&gt;</code></td><td>Greater than</td><td><code>5 &gt; 3</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&lt;=</code></td><td>Less than or equal to</td><td><code>5 &lt;= 5</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&gt;=</code></td><td>Greater than or equal to</td><td><code>7 &gt;= 3</code></td><td><code>true</code></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Comparison Operators Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 20;
+
+    cout &lt;&lt; "a == b : " &lt;&lt; (a == b) &lt;&lt; endl;   // 0 (false)
+    cout &lt;&lt; "a != b : " &lt;&lt; (a != b) &lt;&lt; endl;   // 1 (true)
+    cout &lt;&lt; "a &lt; b  : " &lt;&lt; (a &lt; b)  &lt;&lt; endl;   // 1 (true)
+    cout &lt;&lt; "a &gt; b  : " &lt;&lt; (a &gt; b)  &lt;&lt; endl;   // 0 (false)
+    cout &lt;&lt; "a &lt;= b : " &lt;&lt; (a &lt;= b) &lt;&lt; endl;   // 1 (true)
+    cout &lt;&lt; "a &gt;= b : " &lt;&lt; (a &gt;= b) &lt;&lt; endl;   // 0 (false)
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Be careful not to confuse the assignment operator <code>=</code> with the equality operator <code>==</code>. Writing <code>if (x = 5)</code> assigns 5 to <code>x</code> and always evaluates to <code>true</code>, which is almost certainly a bug. Use <code>if (x == 5)</code> to compare.</p>
+                </div>
+
+                <h3>Using Comparison Operators with Conditions</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+
+    if (age &gt;= 18) {
+        cout &lt;&lt; "You are an adult." &lt;&lt; endl;
+    } else if (age &gt;= 13) {
+        cout &lt;&lt; "You are a teenager." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "You are a child." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <!-- ==================== LOGICAL OPERATORS ==================== -->
+                <h2>Logical Operators</h2>
+                <p>Logical operators combine multiple boolean expressions into a single result. They are essential for building complex conditions in <code>if</code> statements and loops.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Name</th><th>Description</th><th>Example</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>&amp;&amp;</code></td><td>Logical AND</td><td>Returns <code>true</code> if <strong>both</strong> operands are true</td><td><code>(5 &gt; 3) &amp;&amp; (8 &gt; 6)</code> &rarr; <code>true</code></td></tr>
+                        <tr><td><code>||</code></td><td>Logical OR</td><td>Returns <code>true</code> if <strong>at least one</strong> operand is true</td><td><code>(5 &gt; 3) || (8 &lt; 6)</code> &rarr; <code>true</code></td></tr>
+                        <tr><td><code>!</code></td><td>Logical NOT</td><td>Reverses the boolean value</td><td><code>!(5 &gt; 3)</code> &rarr; <code>false</code></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Logical Operators Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    bool hasLicense = true;
+
+    // AND: both conditions must be true
+    if (age &gt;= 18 &amp;&amp; hasLicense) {
+        cout &lt;&lt; "You can drive." &lt;&lt; endl;
+    }
+
+    // OR: at least one condition must be true
+    int day = 6; // Saturday
+    if (day == 6 || day == 0) {
+        cout &lt;&lt; "It's the weekend!" &lt;&lt; endl;
+    }
+
+    // NOT: invert the condition
+    bool isRaining = false;
+    if (!isRaining) {
+        cout &lt;&lt; "No umbrella needed." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ uses <strong>short-circuit evaluation</strong> for logical operators. With <code>&amp;&amp;</code>, if the left operand is <code>false</code>, the right operand is never evaluated. With <code>||</code>, if the left operand is <code>true</code>, the right operand is skipped. This can improve performance and prevent errors such as null pointer dereferences.</p>
+                </div>
+
+                <h3>Truth Tables</h3>
+                <p>Here are the truth tables for the logical AND and OR operators:</p>
+
+                <h4>AND (&amp;&amp;)</h4>
+                <table>
+                    <thead>
+                        <tr><th>A</th><th>B</th><th>A &amp;&amp; B</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>true</td><td>true</td><td>true</td></tr>
+                        <tr><td>true</td><td>false</td><td>false</td></tr>
+                        <tr><td>false</td><td>true</td><td>false</td></tr>
+                        <tr><td>false</td><td>false</td><td>false</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>OR (||)</h4>
+                <table>
+                    <thead>
+                        <tr><th>A</th><th>B</th><th>A || B</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>true</td><td>true</td><td>true</td></tr>
+                        <tr><td>true</td><td>false</td><td>true</td></tr>
+                        <tr><td>false</td><td>true</td><td>true</td></tr>
+                        <tr><td>false</td><td>false</td><td>false</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- ==================== INCREMENT / DECREMENT ==================== -->
+                <h2>Increment and Decrement Operators</h2>
+                <p>The increment (<code>++</code>) and decrement (<code>--</code>) operators increase or decrease an integer value by 1. They come in two forms: <strong>prefix</strong> and <strong>postfix</strong>.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Name</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>++x</code></td><td>Pre-increment</td><td>Increments <code>x</code>, then returns the <strong>new</strong> value</td></tr>
+                        <tr><td><code>x++</code></td><td>Post-increment</td><td>Returns the <strong>current</strong> value, then increments <code>x</code></td></tr>
+                        <tr><td><code>--x</code></td><td>Pre-decrement</td><td>Decrements <code>x</code>, then returns the <strong>new</strong> value</td></tr>
+                        <tr><td><code>x--</code></td><td>Post-decrement</td><td>Returns the <strong>current</strong> value, then decrements <code>x</code></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Pre-increment vs. Post-increment</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 5;
+
+    // Post-increment: use current value, then increment
+    cout &lt;&lt; "a++ = " &lt;&lt; a++ &lt;&lt; endl;   // prints 5
+    cout &lt;&lt; "a   = " &lt;&lt; a   &lt;&lt; endl;   // prints 6 (a is now 6)
+
+    int b = 5;
+
+    // Pre-increment: increment first, then use new value
+    cout &lt;&lt; "++b = " &lt;&lt; ++b &lt;&lt; endl;   // prints 6
+    cout &lt;&lt; "b   = " &lt;&lt; b   &lt;&lt; endl;   // prints 6
+
+    return 0;
+}</pre></div>
+
+                <h3>Pre-decrement vs. Post-decrement</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 10;
+
+    cout &lt;&lt; "x-- = " &lt;&lt; x-- &lt;&lt; endl;   // prints 10
+    cout &lt;&lt; "x   = " &lt;&lt; x   &lt;&lt; endl;   // prints 9
+
+    int y = 10;
+    cout &lt;&lt; "--y = " &lt;&lt; --y &lt;&lt; endl;   // prints 9
+    cout &lt;&lt; "y   = " &lt;&lt; y   &lt;&lt; endl;   // prints 9
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>When the return value isn&rsquo;t used (e.g., a standalone <code>i++;</code> or <code>++i;</code>), both forms have the same effect. In loops like <code>for (int i = 0; i &lt; n; ++i)</code>, prefer pre-increment for consistency, though modern compilers optimize both equally for primitive types.</p>
+                </div>
+
+                <h3>Common Use in Loops</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Increment in a for loop
+    for (int i = 0; i &lt; 5; ++i) {
+        cout &lt;&lt; i &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;  // Output: 0 1 2 3 4
+
+    // Decrement in a while loop
+    int countdown = 5;
+    while (countdown &gt; 0) {
+        cout &lt;&lt; countdown-- &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;  // Output: 5 4 3 2 1
+
+    return 0;
+}</pre></div>
+
+                <!-- ==================== BITWISE OPERATORS ==================== -->
+                <h2>Bitwise Operators</h2>
+                <p>Bitwise operators work at the binary (bit) level of integer values. They are commonly used in low-level programming, embedded systems, graphics, networking, and performance-critical code.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Name</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>&amp;</code></td><td>Bitwise AND</td><td>Sets each bit to 1 if both bits are 1</td></tr>
+                        <tr><td><code>|</code></td><td>Bitwise OR</td><td>Sets each bit to 1 if at least one bit is 1</td></tr>
+                        <tr><td><code>^</code></td><td>Bitwise XOR</td><td>Sets each bit to 1 if only one of the bits is 1</td></tr>
+                        <tr><td><code>~</code></td><td>Bitwise NOT</td><td>Inverts all the bits (one&rsquo;s complement)</td></tr>
+                        <tr><td><code>&lt;&lt;</code></td><td>Left shift</td><td>Shifts bits to the left, filling with zeros</td></tr>
+                        <tr><td><code>&gt;&gt;</code></td><td>Right shift</td><td>Shifts bits to the right</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Bitwise AND, OR, XOR</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 12;  // Binary: 1100
+    int b = 10;  // Binary: 1010
+
+    cout &lt;&lt; "a &amp; b  = " &lt;&lt; (a &amp; b)  &lt;&lt; endl;  // 8   (1000)
+    cout &lt;&lt; "a | b  = " &lt;&lt; (a | b)  &lt;&lt; endl;  // 14  (1110)
+    cout &lt;&lt; "a ^ b  = " &lt;&lt; (a ^ b)  &lt;&lt; endl;  // 6   (0110)
+
+    return 0;
+}</pre></div>
+
+                <h3>Bitwise NOT</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    unsigned char x = 0b00001111;  // 15 in decimal
+
+    unsigned char result = ~x;     // Inverts all bits: 11110000
+    cout &lt;&lt; "~15 = " &lt;&lt; (int)result &lt;&lt; endl;  // 240
+
+    return 0;
+}</pre></div>
+
+                <h3>Left Shift and Right Shift</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 5;  // Binary: 0101
+
+    // Left shift: shifts bits left, fills with 0s
+    cout &lt;&lt; "5 &lt;&lt; 1 = " &lt;&lt; (x &lt;&lt; 1) &lt;&lt; endl;  // 10  (1010)
+    cout &lt;&lt; "5 &lt;&lt; 2 = " &lt;&lt; (x &lt;&lt; 2) &lt;&lt; endl;  // 20  (10100)
+    cout &lt;&lt; "5 &lt;&lt; 3 = " &lt;&lt; (x &lt;&lt; 3) &lt;&lt; endl;  // 40  (101000)
+
+    // Right shift: shifts bits right
+    int y = 40;  // Binary: 101000
+    cout &lt;&lt; "40 &gt;&gt; 1 = " &lt;&lt; (y &gt;&gt; 1) &lt;&lt; endl;  // 20
+    cout &lt;&lt; "40 &gt;&gt; 2 = " &lt;&lt; (y &gt;&gt; 2) &lt;&lt; endl;  // 10
+    cout &lt;&lt; "40 &gt;&gt; 3 = " &lt;&lt; (y &gt;&gt; 3) &lt;&lt; endl;  // 5
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Left-shifting a number by <code>n</code> positions is equivalent to multiplying by 2<sup>n</sup>. Right-shifting by <code>n</code> positions is equivalent to dividing by 2<sup>n</sup> (for unsigned integers). For example, <code>5 &lt;&lt; 3</code> equals <code>5 &times; 8 = 40</code>.</p>
+                </div>
+
+                <h3>Practical Bitwise Example: Checking and Setting Flags</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Using bits as flags
+    const int READ    = 1;  // 001
+    const int WRITE   = 2;  // 010
+    const int EXECUTE = 4;  // 100
+
+    int permissions = 0;
+
+    // Set permissions using OR
+    permissions |= READ;
+    permissions |= WRITE;
+    cout &lt;&lt; "Permissions: " &lt;&lt; permissions &lt;&lt; endl;  // 3 (011)
+
+    // Check permissions using AND
+    if (permissions &amp; READ) {
+        cout &lt;&lt; "Read permission granted." &lt;&lt; endl;
+    }
+    if (permissions &amp; EXECUTE) {
+        cout &lt;&lt; "Execute permission granted." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "No execute permission." &lt;&lt; endl;
+    }
+
+    // Remove a permission using AND with NOT
+    permissions &amp;= ~WRITE;
+    cout &lt;&lt; "After removing WRITE: " &lt;&lt; permissions &lt;&lt; endl;  // 1 (001)
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Bitwise operations are extremely fast because they map directly to CPU instructions. They are commonly used for flags, masks, color manipulation, cryptography, and network protocols.</p>
+                </div>
+
+                <!-- ==================== TERNARY OPERATOR ==================== -->
+                <h2>Ternary Operator (? :)</h2>
+                <p>The ternary operator is the only operator in C++ that takes three operands. It is a compact alternative to a simple <code>if-else</code> statement.</p>
+
+                <h3>Syntax</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>condition ? expression_if_true : expression_if_false;</pre></div>
+
+                <h3>Ternary Operator Examples</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 20;
+
+    // Simple ternary
+    string status = (age &gt;= 18) ? "Adult" : "Minor";
+    cout &lt;&lt; status &lt;&lt; endl;  // Adult
+
+    // Ternary in output
+    int score = 85;
+    cout &lt;&lt; "Grade: " &lt;&lt; ((score &gt;= 90) ? "A" : (score &gt;= 80) ? "B" : "C") &lt;&lt; endl;
+
+    // Finding the maximum of two numbers
+    int a = 15, b = 22;
+    int max = (a &gt; b) ? a : b;
+    cout &lt;&lt; "Max: " &lt;&lt; max &lt;&lt; endl;  // 22
+
+    // Finding the absolute value
+    int x = -7;
+    int absVal = (x &lt; 0) ? -x : x;
+    cout &lt;&lt; "Absolute value: " &lt;&lt; absVal &lt;&lt; endl;  // 7
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>While the ternary operator can make code more concise, avoid nesting multiple ternary operators deeply as it reduces readability. For complex conditions, a standard <code>if-else</code> block is preferred.</p>
+                </div>
+
+                <!-- ==================== OPERATOR PRECEDENCE ==================== -->
+                <h2>Operator Precedence and Associativity</h2>
+                <p>When an expression contains multiple operators, C++ uses <strong>precedence</strong> (priority) and <strong>associativity</strong> (direction) rules to determine the order of evaluation. Operators with higher precedence are evaluated first.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Precedence</th><th>Operator</th><th>Description</th><th>Associativity</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1 (highest)</td><td><code>::</code></td><td>Scope resolution</td><td>Left to right</td></tr>
+                        <tr><td>2</td><td><code>++ --</code> (postfix), <code>()</code>, <code>[]</code>, <code>.</code>, <code>-&gt;</code></td><td>Postfix operators</td><td>Left to right</td></tr>
+                        <tr><td>3</td><td><code>++ --</code> (prefix), <code>+ -</code> (unary), <code>! ~</code>, <code>(type)</code>, <code>*</code>, <code>&amp;</code>, <code>sizeof</code></td><td>Unary / Prefix</td><td>Right to left</td></tr>
+                        <tr><td>4</td><td><code>* / %</code></td><td>Multiplicative</td><td>Left to right</td></tr>
+                        <tr><td>5</td><td><code>+ -</code></td><td>Additive</td><td>Left to right</td></tr>
+                        <tr><td>6</td><td><code>&lt;&lt; &gt;&gt;</code></td><td>Bitwise shift</td><td>Left to right</td></tr>
+                        <tr><td>7</td><td><code>&lt; &lt;= &gt; &gt;=</code></td><td>Relational</td><td>Left to right</td></tr>
+                        <tr><td>8</td><td><code>== !=</code></td><td>Equality</td><td>Left to right</td></tr>
+                        <tr><td>9</td><td><code>&amp;</code></td><td>Bitwise AND</td><td>Left to right</td></tr>
+                        <tr><td>10</td><td><code>^</code></td><td>Bitwise XOR</td><td>Left to right</td></tr>
+                        <tr><td>11</td><td><code>|</code></td><td>Bitwise OR</td><td>Left to right</td></tr>
+                        <tr><td>12</td><td><code>&amp;&amp;</code></td><td>Logical AND</td><td>Left to right</td></tr>
+                        <tr><td>13</td><td><code>||</code></td><td>Logical OR</td><td>Left to right</td></tr>
+                        <tr><td>14</td><td><code>?:</code></td><td>Ternary conditional</td><td>Right to left</td></tr>
+                        <tr><td>15</td><td><code>= += -= *= /= %= &lt;&lt;= &gt;&gt;= &amp;= ^= |=</code></td><td>Assignment</td><td>Right to left</td></tr>
+                        <tr><td>16 (lowest)</td><td><code>,</code></td><td>Comma</td><td>Left to right</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Precedence in Action</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Multiplication has higher precedence than addition
+    int result1 = 2 + 3 * 4;
+    cout &lt;&lt; "2 + 3 * 4 = " &lt;&lt; result1 &lt;&lt; endl;   // 14, not 20
+
+    // Use parentheses to override precedence
+    int result2 = (2 + 3) * 4;
+    cout &lt;&lt; "(2 + 3) * 4 = " &lt;&lt; result2 &lt;&lt; endl; // 20
+
+    // Comparison vs. assignment
+    int x = 5;
+    bool check = x &gt; 3 &amp;&amp; x &lt; 10;
+    // Evaluated as: (x &gt; 3) &amp;&amp; (x &lt; 10) = true &amp;&amp; true = true
+    cout &lt;&lt; "5 &gt; 3 &amp;&amp; 5 &lt; 10 : " &lt;&lt; check &lt;&lt; endl; // 1
+
+    // Shift vs. addition (shift has lower precedence!)
+    int val = 1 &lt;&lt; 2 + 3;
+    // Evaluated as: 1 &lt;&lt; (2 + 3) = 1 &lt;&lt; 5 = 32
+    cout &lt;&lt; "1 &lt;&lt; 2 + 3 = " &lt;&lt; val &lt;&lt; endl;  // 32
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>When in doubt, use parentheses! They make your intentions explicit and prevent subtle bugs. Code like <code>(a + b) * c</code> is clearer than relying on precedence rules alone.</p>
+                </div>
+
+                <!-- ==================== SIZEOF OPERATOR ==================== -->
+                <h2>The sizeof Operator</h2>
+                <p>The <code>sizeof</code> operator returns the size (in bytes) of a type or variable at compile time. It is especially useful when working with arrays, dynamic memory, and platform-dependent data types.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // sizeof with data types
+    cout &lt;&lt; "Size of char:      " &lt;&lt; sizeof(char)      &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 1
+    cout &lt;&lt; "Size of short:     " &lt;&lt; sizeof(short)     &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 2
+    cout &lt;&lt; "Size of int:       " &lt;&lt; sizeof(int)       &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 4
+    cout &lt;&lt; "Size of long:      " &lt;&lt; sizeof(long)      &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 4 or 8
+    cout &lt;&lt; "Size of long long: " &lt;&lt; sizeof(long long) &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 8
+    cout &lt;&lt; "Size of float:     " &lt;&lt; sizeof(float)     &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 4
+    cout &lt;&lt; "Size of double:    " &lt;&lt; sizeof(double)    &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 8
+    cout &lt;&lt; "Size of bool:      " &lt;&lt; sizeof(bool)      &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 1
+
+    // sizeof with variables
+    int arr[10];
+    cout &lt;&lt; "Size of arr: " &lt;&lt; sizeof(arr) &lt;&lt; " bytes" &lt;&lt; endl;           // 40
+    cout &lt;&lt; "Number of elements: " &lt;&lt; sizeof(arr) / sizeof(arr[0]) &lt;&lt; endl; // 10
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>The expression <code>sizeof(arr) / sizeof(arr[0])</code> is a classic C/C++ idiom for calculating the number of elements in a statically allocated array. In modern C++ (C++17), you can also use <code>std::size(arr)</code>.</p>
+                </div>
+
+                <!-- ==================== TYPE CASTING OPERATORS ==================== -->
+                <h2>Type Casting Operators</h2>
+                <p>Type casting allows you to convert a value from one data type to another. C++ provides both C-style casts and safer, more specific C++ casting operators.</p>
+
+                <h3>C-Style Cast (Implicit and Explicit)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Implicit conversion (automatic)
+    int a = 10;
+    double b = a;  // int is automatically converted to double
+    cout &lt;&lt; "Implicit: " &lt;&lt; b &lt;&lt; endl;  // 10.0
+
+    // C-style explicit cast
+    double pi = 3.14159;
+    int truncated = (int)pi;
+    cout &lt;&lt; "C-style cast: " &lt;&lt; truncated &lt;&lt; endl;  // 3
+
+    // Division fix using cast
+    int x = 7, y = 2;
+    double result = (double)x / y;
+    cout &lt;&lt; "7 / 2 = " &lt;&lt; result &lt;&lt; endl;  // 3.5
+
+    return 0;
+}</pre></div>
+
+                <h3>C++ Casting Operators</h3>
+                <p>C++ introduces four named casting operators that provide greater control and safety:</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Purpose</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>static_cast&lt;T&gt;(expr)</code></td><td>General-purpose cast for well-defined conversions (most common)</td></tr>
+                        <tr><td><code>dynamic_cast&lt;T&gt;(expr)</code></td><td>Safe downcasting in polymorphic class hierarchies</td></tr>
+                        <tr><td><code>const_cast&lt;T&gt;(expr)</code></td><td>Add or remove <code>const</code> or <code>volatile</code> qualifiers</td></tr>
+                        <tr><td><code>reinterpret_cast&lt;T&gt;(expr)</code></td><td>Low-level reinterpretation of bit patterns (use with caution)</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>static_cast Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Convert int to double for accurate division
+    int a = 7, b = 2;
+    double result = static_cast&lt;double&gt;(a) / b;
+    cout &lt;&lt; "7 / 2 = " &lt;&lt; result &lt;&lt; endl;  // 3.5
+
+    // Convert double to int (truncation)
+    double pi = 3.14159;
+    int whole = static_cast&lt;int&gt;(pi);
+    cout &lt;&lt; "Truncated pi: " &lt;&lt; whole &lt;&lt; endl;  // 3
+
+    // Convert char to int (ASCII value)
+    char ch = 'A';
+    int ascii = static_cast&lt;int&gt;(ch);
+    cout &lt;&lt; "ASCII of 'A': " &lt;&lt; ascii &lt;&lt; endl;  // 65
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Prefer <code>static_cast</code> over C-style casts. It is checked at compile time, making your intentions clear and catching invalid conversions. C-style casts can silently perform dangerous conversions that <code>static_cast</code> would reject.</p>
+                </div>
+
+                <!-- ==================== OPERATOR OVERLOADING ==================== -->
+                <h2>Introduction to Operator Overloading</h2>
+                <p>C++ allows you to redefine how operators work for user-defined types (classes and structs). This is called <strong>operator overloading</strong>. It lets you use natural syntax like <code>a + b</code> with your own objects.</p>
+
+                <h3>Basic Operator Overloading Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+class Vector2D {
+public:
+    double x, y;
+
+    Vector2D(double x = 0, double y = 0) : x(x), y(y) {}
+
+    // Overload the + operator
+    Vector2D operator+(const Vector2D&amp; other) const {
+        return Vector2D(x + other.x, y + other.y);
+    }
+
+    // Overload the == operator
+    bool operator==(const Vector2D&amp; other) const {
+        return x == other.x &amp;&amp; y == other.y;
+    }
+
+    // Overload the &lt;&lt; operator (as a friend function)
+    friend ostream&amp; operator&lt;&lt;(ostream&amp; os, const Vector2D&amp; v) {
+        os &lt;&lt; "(" &lt;&lt; v.x &lt;&lt; ", " &lt;&lt; v.y &lt;&lt; ")";
+        return os;
+    }
+};
+
+int main() {
+    Vector2D a(3, 4);
+    Vector2D b(1, 2);
+
+    Vector2D c = a + b;  // Uses overloaded +
+    cout &lt;&lt; "a + b = " &lt;&lt; c &lt;&lt; endl;  // (4, 6)
+
+    cout &lt;&lt; "a == b? " &lt;&lt; (a == b) &lt;&lt; endl;  // 0 (false)
+
+    Vector2D d(3, 4);
+    cout &lt;&lt; "a == d? " &lt;&lt; (a == d) &lt;&lt; endl;  // 1 (true)
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Not all operators can be overloaded. You cannot overload <code>::</code>, <code>.</code>, <code>.*</code>, <code>?:</code>, or <code>sizeof</code>. Also, operator overloading should make semantic sense&mdash;don&rsquo;t overload <code>+</code> to mean subtraction, or you&rsquo;ll confuse everyone (including yourself).</p>
+                </div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Operator overloading is a powerful feature that will be covered in much greater depth in later lessons on classes and OOP. For now, just understand that C++ lets you customize how operators work with your own types.</p>
+                </div>
+
+                <!-- ==================== SUMMARY ==================== -->
+                <h2>Summary</h2>
+                <p>In this lesson, you learned about the comprehensive set of operators available in C++:</p>
+                <ul>
+                    <li><strong>Arithmetic operators</strong> (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>) for mathematical calculations</li>
+                    <li><strong>Assignment operators</strong> (<code>=</code>, <code>+=</code>, <code>-=</code>, etc.) for storing and updating values</li>
+                    <li><strong>Comparison operators</strong> (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>) for comparing values</li>
+                    <li><strong>Logical operators</strong> (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>) for combining boolean conditions</li>
+                    <li><strong>Increment/Decrement</strong> (<code>++</code>, <code>--</code>) with prefix and postfix behavior</li>
+                    <li><strong>Bitwise operators</strong> (<code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code>) for bit-level manipulation</li>
+                    <li><strong>Ternary operator</strong> (<code>?:</code>) for concise conditionals</li>
+                    <li><strong>Operator precedence</strong> determines the order of evaluation</li>
+                    <li><strong>sizeof</strong> for determining the byte size of types</li>
+                    <li><strong>Type casting operators</strong> (<code>static_cast</code>, etc.) for safe conversions</li>
+                    <li><strong>Operator overloading</strong> for customizing operators on user-defined types</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/iBMoO4gJcKs" title="C++ Operators" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which operator is used for addition in C++?","o":["+","-","*","&"],"a":0},
+                {"q":"What is the result of 17 / 5 when both operands are integers?","o":["3.4","3","4","2"],"a":1},
+                {"q":"Which operator returns the remainder of a division?","o":["/","%","//","mod"],"a":1},
+                {"q":"What is the result of 10 % 3?","o":["3","1","0","3.33"],"a":1},
+                {"q":"What does the *= operator do?","o":["Multiplies and assigns","Exponentiation","Pointer dereference","Comparison"],"a":0},
+                {"q":"Which is the equality comparison operator in C++?","o":["=","==","===","!="],"a":1},
+                {"q":"What is the output of: cout << (5 > 3);","o":["true","false","1","0"],"a":2},
+                {"q":"Which logical operator returns true only if both operands are true?","o":["||","&&","!","^"],"a":1},
+                {"q":"What does the ! operator do?","o":["Bitwise NOT","Logical NOT","Factorial","Assignment"],"a":1},
+                {"q":"What is the result of !true in C++?","o":["true","false","1","-1"],"a":1},
+                {"q":"What is the difference between ++x and x++?","o":["No difference","++x increments before use, x++ increments after use","x++ is faster","++x is only for loops"],"a":1},
+                {"q":"If int x = 5; what does cout << x++; print?","o":["5","6","4","Error"],"a":0},
+                {"q":"If int x = 5; what does cout << ++x; print?","o":["5","6","4","Error"],"a":1},
+                {"q":"Which operator performs bitwise AND?","o":["&&","&","and","&&="],"a":1},
+                {"q":"What is 12 & 10 in decimal?","o":["8","10","14","6"],"a":0},
+                {"q":"What is 12 | 10 in decimal?","o":["8","10","14","6"],"a":2},
+                {"q":"What is 12 ^ 10 in decimal?","o":["8","14","6","2"],"a":2},
+                {"q":"What does the ~ operator do?","o":["Bitwise NOT","Logical NOT","Destructor","Complement"],"a":0},
+                {"q":"What is 5 << 1?","o":["10","2","25","5"],"a":0},
+                {"q":"What is 20 >> 2?","o":["5","10","40","80"],"a":0},
+                {"q":"Which operator is the ternary operator?","o":["::","?:","<>","=>"],"a":1},
+                {"q":"What does sizeof(int) typically return on a 32/64-bit system?","o":["2","4","8","1"],"a":1},
+                {"q":"Which C++ cast operator is used for general-purpose safe casts?","o":["dynamic_cast","const_cast","static_cast","reinterpret_cast"],"a":2},
+                {"q":"What is the result of (true && false)?","o":["true","false","1","Error"],"a":1},
+                {"q":"What is the result of (true || false)?","o":["true","false","0","Error"],"a":0},
+                {"q":"Which operator has the highest precedence?","o":["+ (addition)","* (multiplication)",":: (scope resolution)","= (assignment)"],"a":2},
+                {"q":"What does the expression (a > b) ? a : b return?","o":["The larger of a and b","The smaller of a and b","Always a","Always b"],"a":0},
+                {"q":"If int x = 10; what is x after x += 5;?","o":["10","15","5","50"],"a":1},
+                {"q":"If int x = 10; what is x after x -= 3;?","o":["7","13","3","30"],"a":0},
+                {"q":"If int x = 10; what is x after x /= 3;?","o":["3","3.33","4","0"],"a":0},
+                {"q":"What is the result of 7 % 2?","o":["3","1","0","3.5"],"a":1},
+                {"q":"What is 0 % 5?","o":["0","5","Error","Undefined"],"a":0},
+                {"q":"Which of these is NOT an arithmetic operator?","o":["+","-","&&","/"],"a":2},
+                {"q":"What happens when you divide an integer by zero in C++?","o":["Returns 0","Returns infinity","Undefined behavior","Compile error"],"a":2},
+                {"q":"Which operator is used for the modulus operation?","o":["mod","%","//","\\"],"a":1},
+                {"q":"Can the % operator be used with floating-point numbers?","o":["Yes","No","Only with double","Only with float"],"a":1},
+                {"q":"What is the result of -7 % 3 in C++?","o":["-1","2","1","-2"],"a":0},
+                {"q":"Which assignment operator would you use to add 10 to a variable?","o":["+=","+==","=+","add="],"a":0},
+                {"q":"What is x after: int x = 8; x %= 3;?","o":["2","3","1","0"],"a":0},
+                {"q":"Which comparison operator checks for inequality?","o":["==","!=","<>","=/="],"a":1},
+                {"q":"What is the boolean result of 5 <= 5?","o":["true","false","5","Error"],"a":0},
+                {"q":"What is the boolean result of 5 < 5?","o":["true","false","5","Error"],"a":1},
+                {"q":"In C++, what value represents true?","o":["0","1","Any non-zero value","Both B and C"],"a":3},
+                {"q":"What does short-circuit evaluation mean for &&?","o":["Both sides are always evaluated","If left is false, right is skipped","If left is true, right is skipped","It evaluates right to left"],"a":1},
+                {"q":"What does short-circuit evaluation mean for ||?","o":["Both sides are always evaluated","If left is false, right is skipped","If left is true, right is skipped","It evaluates right to left"],"a":2},
+                {"q":"What is the output of: cout << (10 == 10);","o":["true","false","1","10"],"a":2},
+                {"q":"Which operator would you use to check if a number is NOT equal to zero?","o":["x == 0","x != 0","x <> 0","x >< 0"],"a":1},
+                {"q":"What is the value of !(5 > 3 && 2 < 1)?","o":["true","false","0","Error"],"a":0},
+                {"q":"If int a = 3; what is a after a++;?","o":["3","4","2","Error"],"a":1},
+                {"q":"If int a = 3; what is a after --a;?","o":["3","4","2","Error"],"a":2},
+                {"q":"What is the value of 5 << 0?","o":["0","5","10","1"],"a":1},
+                {"q":"What is the value of 1 << 4?","o":["4","8","16","32"],"a":2},
+                {"q":"What is the value of 32 >> 3?","o":["4","8","16","2"],"a":0},
+                {"q":"Which bitwise operator can be used to toggle a specific bit?","o":["& (AND)","| (OR)","^ (XOR)","~ (NOT)"],"a":2},
+                {"q":"Which bitwise operator is used to set a specific bit to 1?","o":["& (AND)","| (OR)","^ (XOR)","~ (NOT)"],"a":1},
+                {"q":"Which bitwise operator is used to clear (set to 0) a specific bit?","o":["| (OR)","& with ~","^ (XOR)","<< (shift)"],"a":1},
+                {"q":"What is ~0 in a typical 32-bit integer system?","o":["0","1","-1","2147483647"],"a":2},
+                {"q":"What is the result of 0xFF & 0x0F?","o":["0xFF","0x0F","0xF0","0x00"],"a":1},
+                {"q":"What is the result of 0xF0 | 0x0F?","o":["0xFF","0x0F","0xF0","0x00"],"a":0},
+                {"q":"What does the expression (x > 0) ? \"positive\" : \"non-positive\" do?","o":["Always returns positive","Returns positive if x > 0, else non-positive","Causes a compile error","Returns x"],"a":1},
+                {"q":"Which operator has higher precedence: * or +?","o":["+ is higher","* is higher","They are equal","Depends on compiler"],"a":1},
+                {"q":"Which operator has higher precedence: && or ||?","o":["|| is higher","&& is higher","They are equal","Depends on context"],"a":1},
+                {"q":"What is the associativity of the assignment operator =?","o":["Left to right","Right to left","None","Both"],"a":1},
+                {"q":"What is 2 + 3 * 4?","o":["20","14","24","11"],"a":1},
+                {"q":"What is (2 + 3) * 4?","o":["20","14","24","11"],"a":0},
+                {"q":"What does sizeof(char) always return in C++?","o":["0","1","2","Depends on platform"],"a":1},
+                {"q":"What does sizeof return?","o":["The value of a variable","The size in bytes","The number of elements","The data type"],"a":1},
+                {"q":"What is the primary purpose of static_cast?","o":["Dynamic type checking","Safe compile-time type conversion","Removing const","Reinterpreting memory"],"a":1},
+                {"q":"Which cast operator is used for safe downcasting with polymorphic types?","o":["static_cast","dynamic_cast","const_cast","reinterpret_cast"],"a":1},
+                {"q":"Which cast operator removes the const qualifier?","o":["static_cast","dynamic_cast","const_cast","reinterpret_cast"],"a":2},
+                {"q":"Which cast should be used with extreme caution as it reinterprets bit patterns?","o":["static_cast","dynamic_cast","const_cast","reinterpret_cast"],"a":3},
+                {"q":"What is the result of static_cast<int>(3.99)?","o":["4","3","3.99","Error"],"a":1},
+                {"q":"Can you overload the :: operator in C++?","o":["Yes","No","Only in classes","Only in namespaces"],"a":1},
+                {"q":"Can you overload the + operator for a custom class?","o":["Yes","No","Only for integers","Only with friend functions"],"a":0},
+                {"q":"What does the expression a += b; do?","o":["Adds a and b, stores in b","Adds a and b, stores in a","Compares a and b","Subtracts b from a"],"a":1},
+                {"q":"In the expression x = y = z = 5;, what is the order of evaluation?","o":["Left to right","Right to left","Random","Compiler-dependent"],"a":1},
+                {"q":"Which of these operators cannot be overloaded?","o":["+","==","?:","-"],"a":2},
+                {"q":"What is the result of 15 / 4 with float division (15.0 / 4)?","o":["3","3.75","4","3.5"],"a":1},
+                {"q":"What type does a comparison operator return?","o":["int","float","bool","string"],"a":2},
+                {"q":"Which operator is used for scope resolution?","o":["::","->",".","::>"],"a":0},
+                {"q":"What is the comma operator?","o":["Separates function arguments","Evaluates both operands and returns the last","Creates tuples","Array delimiter"],"a":1},
+                {"q":"What is the result of (3, 5, 7) using the comma operator?","o":["3","5","7","15"],"a":2},
+                {"q":"Which unary operator returns the address of a variable?","o":["*","&","->","@"],"a":1},
+                {"q":"Which unary operator dereferences a pointer?","o":["*","&","->","@"],"a":0},
+                {"q":"What does the -> operator do?","o":["Accesses member through a pointer","Compares two pointers","Creates a pointer","Arrow function"],"a":0},
+                {"q":"What is the output of cout << boolalpha << (5 > 3);?","o":["1","0","true","false"],"a":2},
+                {"q":"Which operator is evaluated first: == or &&?","o":["&&","==","They have equal precedence","Depends on parentheses"],"a":1},
+                {"q":"What is the result of 1 | 2 | 4?","o":["7","3","6","124"],"a":0},
+                {"q":"What is true ^ true in C++?","o":["true","false","1","Error"],"a":1},
+                {"q":"What is false ^ true in C++?","o":["true","false","0","Error"],"a":0},
+                {"q":"How do you check if the 3rd bit (bit index 2) is set in variable x?","o":["x & 4","x | 4","x ^ 4","x << 2"],"a":0},
+                {"q":"What is 1 << 10?","o":["10","100","512","1024"],"a":3},
+                {"q":"How do you multiply a number by 8 using bitwise shift?","o":["x << 3","x >> 3","x << 8","x >> 8"],"a":0},
+                {"q":"How do you divide a number by 4 using bitwise shift?","o":["x << 2","x >> 2","x << 4","x >> 4"],"a":1},
+                {"q":"What is the implicit conversion when mixing int and double in an expression?","o":["double converts to int","int converts to double","Both stay the same","Compile error"],"a":1},
+                {"q":"What does (int)3.14 evaluate to?","o":["3","3.14","4","3.1"],"a":0},
+                {"q":"What is the correct way to use static_cast?","o":["static_cast(int, x)","static_cast<int>(x)","(static_cast)int(x)","static_cast[int](x)"],"a":1},
+                {"q":"What is the result of 5 + 2 * 3 - 1?","o":["10","20","12","6"],"a":0},
+                {"q":"What is the result of (5 + 2) * (3 - 1)?","o":["10","14","20","12"],"a":1},
+                {"q":"In the expression a = b + c * d, which operation happens first?","o":["a = b","b + c","c * d","Depends on values"],"a":2},
+                {"q":"What does the expression x <<= 3; do?","o":["Compares x with 3","Shifts x left by 3 and assigns","Assigns 3 to x","Shifts x right by 3"],"a":1},
+                {"q":"What does x &= 0xFF; do?","o":["Sets x to 0xFF","Keeps only the lowest 8 bits of x","Clears x","Compares x with 0xFF"],"a":1},
+                {"q":"What is the result of true && true && false?","o":["true","false","1","Error"],"a":1},
+                {"q":"What is the result of false || false || true?","o":["true","false","0","Error"],"a":0},
+                {"q":"Which of these is a valid compound assignment operator?","o":["+=","=>","=+","++"],"a":0},
+                {"q":"What is the purpose of parentheses in expressions?","o":["Declare functions","Override operator precedence","Create arrays","Define variables"],"a":1},
+                {"q":"If x = 10, what is x after x = x ^ x;?","o":["10","0","20","-10"],"a":1},
+                {"q":"XOR of a number with itself always gives:","o":["The same number","0","1","-1"],"a":1},
+                {"q":"XOR of a number with 0 always gives:","o":["0","1","The same number","Inverted number"],"a":2},
+                {"q":"What is sizeof(double) typically?","o":["4 bytes","8 bytes","2 bytes","16 bytes"],"a":1},
+                {"q":"What is sizeof(bool) in C++?","o":["0 bytes","1 byte","4 bytes","1 bit"],"a":1},
+                {"q":"Can sizeof be used with an expression?","o":["Yes","No","Only constants","Only variables"],"a":0},
+                {"q":"Is sizeof a function or an operator?","o":["Function","Operator","Macro","Keyword only"],"a":1},
+                {"q":"What does cout << (10 > 5 ? 'Y' : 'N'); output?","o":["Y","N","true","1"],"a":0},
+                {"q":"In a ternary operator, what comes after the ?","o":["The condition","The false expression","The true expression","A semicolon"],"a":2},
+                {"q":"Which is valid: x+++y or x++ +y?","o":["Only the first","Only the second","Both are valid (same meaning)","Neither is valid"],"a":2},
+                {"q":"What is the result of 255 & 15?","o":["15","255","240","0"],"a":0},
+                {"q":"What is the result of 240 | 15?","o":["15","255","240","0"],"a":1},
+                {"q":"What is the result of 255 ^ 255?","o":["255","0","510","-1"],"a":1},
+                {"q":"Which operator returns the size of a data type in bytes?","o":["typeof","sizeof","size","length"],"a":1},
+                {"q":"What is static_cast<double>(5) / 2?","o":["2","2.0","2.5","Error"],"a":2},
+                {"q":"Can you use ++ on a float variable?","o":["Yes","No","Only with static_cast","Only in C"],"a":0},
+                {"q":"What is the output if int x = 5; cout << x-- << \" \" << x;?","o":["5 4","4 4","5 5","Undefined behavior"],"a":3},
+                {"q":"What does the unary + operator do to a numeric value?","o":["Makes it positive","No change (identity)","Increments by 1","Absolute value"],"a":1},
+                {"q":"What does the unary - operator do?","o":["Decrements by 1","Negates the value","Makes it negative only if positive","Subtraction"],"a":1},
+                {"q":"What is the result of ~0x00 for an unsigned 8-bit value?","o":["0x00","0xFF","0x01","0xFE"],"a":1},
+                {"q":"What are the two forms of the increment operator?","o":["Pre and post","Left and right","Static and dynamic","Signed and unsigned"],"a":0},
+                {"q":"What is the output of: int x = 0; cout << !x;?","o":["0","1","true","false"],"a":1},
+                {"q":"Which operator has lower precedence: + or <<?","o":["<<","+ (addition)","They are equal","Depends on operands"],"a":1},
+                {"q":"What is the value of 3 & 5?","o":["1","7","3","5"],"a":0},
+                {"q":"What is the value of 3 | 5?","o":["1","7","3","5"],"a":1},
+                {"q":"What is the value of 3 ^ 5?","o":["6","7","1","8"],"a":0},
+                {"q":"How do you swap two variables without a temp variable using XOR?","o":["a ^= b; b ^= a; a ^= b;","a |= b; b |= a; a |= b;","a &= b; b &= a; a &= b;","a += b; b += a; a += b;"],"a":0},
+                {"q":"What happens if you right-shift a negative signed integer?","o":["It is always zero-filled","The behavior is implementation-defined","It causes undefined behavior","It becomes positive"],"a":1},
+                {"q":"What is the result of sizeof(sizeof(int))?","o":["4","8","size_t size (usually 4 or 8)","Error"],"a":2},
+                {"q":"Which operator would you use to check if two conditions are BOTH false?","o":["!a && !b","a && b","a || b","a ^ b"],"a":0},
+                {"q":"What is static_cast<char>(65)?","o":["'A'","65","'a'","Error"],"a":0},
+                {"q":"What is the result of 100 % 10?","o":["10","0","1","100"],"a":1},
+                {"q":"Which is more readable for complex conditions: nested ternary or if-else?","o":["Nested ternary","if-else","They are equal","Depends on compiler"],"a":1},
+                {"q":"What is the precedence order from highest to lowest: *, +, =?","o":["=, +, *","+, *, =","*, +, =","*, =, +"],"a":2},
+                {"q":"What does a >>= 1; do to the variable a?","o":["Divides a by 2 (integer)","Multiplies a by 2","Compares a with 1","Assigns 1 to a"],"a":0},
+                {"q":"How many operands does the ternary operator take?","o":["1","2","3","4"],"a":2},
+                {"q":"What category does ++ belong to?","o":["Binary operator","Unary operator","Ternary operator","Quaternary operator"],"a":1},
+                {"q":"What is the output of: int a = 10; cout << (a > 5 && a < 20);?","o":["true","false","1","0"],"a":2},
+                {"q":"If int x = 7; what is x after x ^= 0xFF;?","o":["0","248","255","7"],"a":1},
+                {"q":"What does dynamic_cast require the base class to have?","o":["A default constructor","At least one virtual function","A destructor","A copy constructor"],"a":1},
+                {"q":"Which operator overloading uses the keyword 'friend'?","o":["Member function overloading","Non-member operator overloading","Both","Neither"],"a":1},
+                {"q":"What is the output: cout << (4 | 0);?","o":["0","4","1","Error"],"a":1},
+                {"q":"What is the difference between & and && in C++?","o":["No difference","& is bitwise AND, && is logical AND","& is logical AND, && is bitwise AND","& is address-of only"],"a":1},
+                {"q":"What is the result of !0 in C++?","o":["0","1","-1","Error"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="input-output.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Input/Output</span>
+                </a>
+                <a href="comments.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Comments</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

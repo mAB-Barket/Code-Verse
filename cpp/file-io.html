@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ File I/O - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-file-io">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html" class="active"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 45 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="82" style="width:82%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; File I/O
+                </div>
+                <h1>45. File I/O</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 45 of 55</span>
+                    <span>&#9201; 17 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is File I/O? ===== -->
+                <h2>What Is File I/O?</h2>
+                <p><strong>File I/O</strong> (Input/Output) refers to the process of reading data from files and writing data to files on disk. Nearly every real-world program needs persistent storage&mdash;configuration files, databases, logs, user data, save games&mdash;and C++ provides a powerful, stream-based mechanism to accomplish this.</p>
+                <p>C++ file streams work exactly like the console streams you already know (<code>std::cin</code> and <code>std::cout</code>). Instead of reading from the keyboard or writing to the screen, file streams read from and write to files using the same <code>&lt;&lt;</code> and <code>&gt;&gt;</code> operators.</p>
+                <p>Core concepts:</p>
+                <ul>
+                    <li><strong>Stream</strong> &mdash; an abstraction representing a sequence of bytes flowing between your program and an external device (keyboard, screen, file, network socket).</li>
+                    <li><strong>Input stream</strong> &mdash; data flows <em>into</em> your program (reading).</li>
+                    <li><strong>Output stream</strong> &mdash; data flows <em>out of</em> your program (writing).</li>
+                    <li><strong>File stream</strong> &mdash; a stream whose source or destination is a file on disk.</li>
+                </ul>
+
+                <!-- ===== The <fstream> Header ===== -->
+                <h2>The &lt;fstream&gt; Header</h2>
+                <p>All file-stream classes live in the <code>&lt;fstream&gt;</code> header. There are three primary classes:</p>
+                <table>
+                    <thead>
+                        <tr><th>Class</th><th>Purpose</th><th>Base Class</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>std::ifstream</code></td><td>Read from files (input)</td><td><code>std::istream</code></td></tr>
+                        <tr><td><code>std::ofstream</code></td><td>Write to files (output)</td><td><code>std::ostream</code></td></tr>
+                        <tr><td><code>std::fstream</code></td><td>Read <em>and</em> write (both)</td><td><code>std::iostream</code></td></tr>
+                    </tbody>
+                </table>
+                <p>Because these classes inherit from the standard stream classes, every technique you use with <code>std::cin</code>/<code>std::cout</code>&mdash;formatted extraction, insertion, manipulators&mdash;works identically with file streams.</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;   // ifstream, ofstream, fstream
+#include &lt;iostream&gt;  // cout
+#include &lt;string&gt;    // string, getline</code></pre></div>
+
+                <!-- ===== Opening and Closing Files ===== -->
+                <h2>Opening and Closing Files</h2>
+                <p>You can open a file in two ways:</p>
+                <ol>
+                    <li><strong>Constructor</strong> &mdash; pass the file name (and optional mode) when creating the stream object.</li>
+                    <li><strong><code>open()</code> method</strong> &mdash; call <code>open()</code> on an already-constructed stream object.</li>
+                </ol>
+<div class="code-block"><pre><code>// Method 1 &ndash; open via constructor
+std::ofstream outFile("output.txt");
+
+// Method 2 &ndash; open via member function
+std::ofstream outFile2;
+outFile2.open("output.txt");
+
+// Always check that the file opened successfully
+if (!outFile.is_open()) {
+    std::cerr &lt;&lt; "Failed to open file!\n";
+    return 1;
+}
+
+// Close the file when done
+outFile.close();</code></pre></div>
+                <p><strong>Important:</strong> When a file-stream object goes out of scope, its destructor automatically calls <code>close()</code>. This is RAII in action&mdash;you rarely need to call <code>close()</code> explicitly, but it is good practice when you want to release the file before the object is destroyed.</p>
+
+                <!-- ===== Writing to Files with ofstream ===== -->
+                <h2>Writing to Files with ofstream</h2>
+                <p>Use <code>std::ofstream</code> to write data to a file. By default, opening a file with <code>ofstream</code> <strong>truncates</strong> (empties) it if it already exists, or creates a new file if it does not.</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::ofstream outFile("greeting.txt");
+
+    if (!outFile) {
+        std::cerr &lt;&lt; "Error opening file for writing.\n";
+        return 1;
+    }
+
+    outFile &lt;&lt; "Hello, File I/O!\n";
+    outFile &lt;&lt; "C++ makes file handling easy.\n";
+    outFile &lt;&lt; "Number: " &lt;&lt; 42 &lt;&lt; "\n";
+    outFile &lt;&lt; "Pi: " &lt;&lt; 3.14159 &lt;&lt; "\n";
+
+    outFile.close();
+    std::cout &lt;&lt; "Data written successfully.\n";
+    return 0;
+}</code></pre></div>
+                <p><strong>greeting.txt</strong> will contain:</p>
+<div class="code-block"><pre><code>Hello, File I/O!
+C++ makes file handling easy.
+Number: 42
+Pi: 3.14159</code></pre></div>
+
+                <!-- ===== Reading from Files with ifstream ===== -->
+                <h2>Reading from Files with ifstream</h2>
+                <p>Use <code>std::ifstream</code> to read data. There are several common techniques:</p>
+
+                <h3>Word-by-Word Reading</h3>
+                <p>The extraction operator <code>&gt;&gt;</code> reads one whitespace-delimited token at a time:</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream inFile("greeting.txt");
+
+    if (!inFile) {
+        std::cerr &lt;&lt; "Cannot open file.\n";
+        return 1;
+    }
+
+    std::string word;
+    while (inFile &gt;&gt; word) {
+        std::cout &lt;&lt; "[" &lt;&lt; word &lt;&lt; "] ";
+    }
+    // Output: [Hello,] [File] [I/O!] [C++] [makes] ...
+
+    return 0;
+}</code></pre></div>
+
+                <h3>Line-by-Line Reading</h3>
+                <p>Use <code>std::getline()</code> to read an entire line, including spaces:</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::ifstream inFile("greeting.txt");
+
+    if (!inFile) {
+        std::cerr &lt;&lt; "Cannot open file.\n";
+        return 1;
+    }
+
+    std::string line;
+    int lineNum = 1;
+    while (std::getline(inFile, line)) {
+        std::cout &lt;&lt; lineNum++ &lt;&lt; ": " &lt;&lt; line &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre></div>
+
+                <h3>Reading into Variables</h3>
+                <p>You can read structured data directly into typed variables:</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::ifstream inFile("data.txt");
+    // data.txt contains: Alice 25 3.9
+
+    std::string name;
+    int age;
+    double gpa;
+
+    inFile &gt;&gt; name &gt;&gt; age &gt;&gt; gpa;
+    std::cout &lt;&lt; name &lt;&lt; " is " &lt;&lt; age
+              &lt;&lt; " with GPA " &lt;&lt; gpa &lt;&lt; "\n";
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== File Open Modes ===== -->
+                <h2>File Open Modes</h2>
+                <p>The second argument to a file-stream constructor (or <code>open()</code>) is a bitmask that controls <em>how</em> the file is opened. Modes can be combined with the bitwise OR operator <code>|</code>.</p>
+                <table>
+                    <thead>
+                        <tr><th>Mode Flag</th><th>Meaning</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>std::ios::in</code></td><td>Open for reading (default for <code>ifstream</code>)</td></tr>
+                        <tr><td><code>std::ios::out</code></td><td>Open for writing (default for <code>ofstream</code>)</td></tr>
+                        <tr><td><code>std::ios::app</code></td><td>Append &mdash; all writes go to the end of the file</td></tr>
+                        <tr><td><code>std::ios::trunc</code></td><td>Truncate &mdash; discard existing content on open</td></tr>
+                        <tr><td><code>std::ios::binary</code></td><td>Open in binary mode (no newline translation)</td></tr>
+                        <tr><td><code>std::ios::ate</code></td><td>Seek to the end of the file immediately after opening</td></tr>
+                    </tbody>
+                </table>
+                <p>Examples of combined modes:</p>
+<div class="code-block"><pre><code>// Append to an existing file (do not erase)
+std::ofstream log("log.txt", std::ios::app);
+
+// Read and write in binary mode
+std::fstream binFile("data.bin", std::ios::in | std::ios::out | std::ios::binary);
+
+// Open for writing, truncate any existing content (default for ofstream)
+std::ofstream fresh("output.txt", std::ios::out | std::ios::trunc);
+
+// Open for reading, start at end (useful for getting file size)
+std::ifstream sizeCheck("file.txt", std::ios::ate);
+auto fileSize = sizeCheck.tellg(); // position = file size</code></pre></div>
+
+                <!-- ===== Checking File State ===== -->
+                <h2>Checking File State</h2>
+                <p>Every stream maintains a set of <strong>state flags</strong> that tell you whether operations succeeded or why they failed.</p>
+                <table>
+                    <thead>
+                        <tr><th>Method</th><th>Returns <code>true</code> when&hellip;</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>is_open()</code></td><td>The file was opened successfully</td></tr>
+                        <tr><td><code>good()</code></td><td>No errors have occurred (goodbit is set)</td></tr>
+                        <tr><td><code>eof()</code></td><td>End-of-file has been reached</td></tr>
+                        <tr><td><code>fail()</code></td><td>A logical error occurred (e.g., type mismatch on extraction)</td></tr>
+                        <tr><td><code>bad()</code></td><td>A serious I/O error occurred (e.g., disk failure)</td></tr>
+                    </tbody>
+                </table>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::ifstream inFile("missing.txt");
+
+    if (!inFile.is_open()) {
+        std::cerr &lt;&lt; "File not found!\n";
+        return 1;
+    }
+
+    int value;
+    inFile &gt;&gt; value;
+
+    if (inFile.fail()) {
+        std::cerr &lt;&lt; "Read failed (type mismatch?).\n";
+        inFile.clear();  // reset error flags
+    }
+
+    if (inFile.eof()) {
+        std::cout &lt;&lt; "Reached end of file.\n";
+    }
+
+    if (inFile.bad()) {
+        std::cerr &lt;&lt; "Critical I/O error!\n";
+    }
+
+    return 0;
+}</code></pre></div>
+                <p>The stream itself converts to <code>bool</code> in a boolean context, returning <code>true</code> when <code>good()</code> (no errors). This is why <code>while (inFile &gt;&gt; word)</code> and <code>if (!outFile)</code> work.</p>
+
+                <!-- ===== Read and Write with fstream ===== -->
+                <h2>Read and Write with fstream</h2>
+                <p><code>std::fstream</code> can both read <em>and</em> write. You must specify the open mode explicitly because there is no single default that enables both directions:</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    // Create and write
+    std::fstream file("demo.txt", std::ios::out);
+    file &lt;&lt; "Line 1\n";
+    file &lt;&lt; "Line 2\n";
+    file.close();
+
+    // Reopen for reading and writing
+    file.open("demo.txt", std::ios::in | std::ios::out);
+    if (!file) {
+        std::cerr &lt;&lt; "Cannot reopen file.\n";
+        return 1;
+    }
+
+    // Read existing content
+    std::string line;
+    while (std::getline(file, line)) {
+        std::cout &lt;&lt; line &lt;&lt; "\n";
+    }
+
+    // Clear EOF flag, seek to end, append new data
+    file.clear();
+    file.seekp(0, std::ios::end);
+    file &lt;&lt; "Line 3\n";
+    file.close();
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== File Position ===== -->
+                <h2>File Position (seekg, seekp, tellg, tellp)</h2>
+                <p>File streams maintain internal <strong>position pointers</strong> that track where the next read or write will occur. You can query and manipulate them:</p>
+                <table>
+                    <thead>
+                        <tr><th>Function</th><th>Purpose</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>tellg()</code></td><td>Returns the current <strong>get</strong> (read) position</td></tr>
+                        <tr><td><code>tellp()</code></td><td>Returns the current <strong>put</strong> (write) position</td></tr>
+                        <tr><td><code>seekg(pos)</code></td><td>Sets the get position to an absolute offset</td></tr>
+                        <tr><td><code>seekp(pos)</code></td><td>Sets the put position to an absolute offset</td></tr>
+                        <tr><td><code>seekg(off, dir)</code></td><td>Sets the get position relative to <code>dir</code></td></tr>
+                        <tr><td><code>seekp(off, dir)</code></td><td>Sets the put position relative to <code>dir</code></td></tr>
+                    </tbody>
+                </table>
+                <p>The <code>dir</code> parameter is one of:</p>
+                <ul>
+                    <li><code>std::ios::beg</code> &mdash; beginning of the file</li>
+                    <li><code>std::ios::cur</code> &mdash; current position</li>
+                    <li><code>std::ios::end</code> &mdash; end of the file</li>
+                </ul>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::fstream file("positions.txt", std::ios::out);
+    file &lt;&lt; "ABCDEFGHIJ";
+    file.close();
+
+    file.open("positions.txt", std::ios::in);
+
+    // Read current position
+    std::cout &lt;&lt; "Start pos: " &lt;&lt; file.tellg() &lt;&lt; "\n"; // 0
+
+    // Seek to position 5
+    file.seekg(5);
+    char ch;
+    file.get(ch);
+    std::cout &lt;&lt; "Char at 5: " &lt;&lt; ch &lt;&lt; "\n"; // F
+
+    // Seek 2 bytes back from current position
+    file.seekg(-2, std::ios::cur);
+    file.get(ch);
+    std::cout &lt;&lt; "After -2:  " &lt;&lt; ch &lt;&lt; "\n"; // E
+
+    // Seek to 3 bytes before the end
+    file.seekg(-3, std::ios::end);
+    file.get(ch);
+    std::cout &lt;&lt; "Near end:  " &lt;&lt; ch &lt;&lt; "\n"; // H
+
+    // Get file size
+    file.seekg(0, std::ios::end);
+    std::cout &lt;&lt; "File size: " &lt;&lt; file.tellg() &lt;&lt; " bytes\n"; // 10
+
+    file.close();
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Binary File I/O ===== -->
+                <h2>Binary File I/O</h2>
+                <p>Text mode (the default) may translate newline characters between the OS representation and <code>\n</code>. <strong>Binary mode</strong> performs no translation&mdash;bytes are read and written exactly as they are in memory.</p>
+                <p>Use <code>write()</code> and <code>read()</code> with <code>reinterpret_cast&lt;char*&gt;</code> to transfer raw bytes:</p>
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+struct Record {
+    int id;
+    double score;
+    char name[32];
+};
+
+int main() {
+    // ---- Write binary data ----
+    Record r1 = {1, 95.5, "Alice"};
+    Record r2 = {2, 87.3, "Bob"};
+
+    std::ofstream outBin("records.bin", std::ios::binary);
+    outBin.write(reinterpret_cast&lt;const char*&gt;(&amp;r1), sizeof(Record));
+    outBin.write(reinterpret_cast&lt;const char*&gt;(&amp;r2), sizeof(Record));
+    outBin.close();
+
+    // ---- Read binary data ----
+    std::ifstream inBin("records.bin", std::ios::binary);
+    Record r;
+    while (inBin.read(reinterpret_cast&lt;char*&gt;(&amp;r), sizeof(Record))) {
+        std::cout &lt;&lt; r.id &lt;&lt; " | "
+                  &lt;&lt; r.name &lt;&lt; " | "
+                  &lt;&lt; r.score &lt;&lt; "\n";
+    }
+    inBin.close();
+    return 0;
+}</code></pre></div>
+                <p><strong>Output:</strong></p>
+<div class="code-block"><pre><code>1 | Alice | 95.5
+2 | Bob | 87.3</code></pre></div>
+                <p><strong>Warning:</strong> Binary files are not portable across different compilers, platforms, or architectures due to differences in struct padding, endianness, and data type sizes. For cross-platform serialisation, consider libraries like Protocol Buffers, FlatBuffers, or JSON.</p>
+
+                <!-- ===== String Streams ===== -->
+                <h2>String Streams</h2>
+                <p>The <code>&lt;sstream&gt;</code> header provides stream classes that use <code>std::string</code> as their backing store instead of a file:</p>
+                <table>
+                    <thead>
+                        <tr><th>Class</th><th>Purpose</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>std::istringstream</code></td><td>Read from a string (input)</td></tr>
+                        <tr><td><code>std::ostringstream</code></td><td>Write to a string (output)</td></tr>
+                        <tr><td><code>std::stringstream</code></td><td>Read and write (both)</td></tr>
+                    </tbody>
+                </table>
+                <p>String streams are extremely useful for parsing lines of text and for building formatted strings.</p>
+<div class="code-block"><pre><code>#include &lt;sstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    // --- istringstream: parse a string ---
+    std::string data = "42 3.14 Hello";
+    std::istringstream iss(data);
+
+    int n;
+    double d;
+    std::string s;
+    iss &gt;&gt; n &gt;&gt; d &gt;&gt; s;
+    std::cout &lt;&lt; n &lt;&lt; " | " &lt;&lt; d &lt;&lt; " | " &lt;&lt; s &lt;&lt; "\n";
+    // Output: 42 | 3.14 | Hello
+
+    // --- ostringstream: build a string ---
+    std::ostringstream oss;
+    oss &lt;&lt; "The answer is " &lt;&lt; n &lt;&lt; " and pi is " &lt;&lt; d;
+    std::string result = oss.str();
+    std::cout &lt;&lt; result &lt;&lt; "\n";
+    // Output: The answer is 42 and pi is 3.14
+
+    // --- stringstream: parse CSV fields ---
+    std::string csvLine = "Alice,25,3.9";
+    std::stringstream ss(csvLine);
+    std::string field;
+    while (std::getline(ss, field, ',')) {
+        std::cout &lt;&lt; "[" &lt;&lt; field &lt;&lt; "] ";
+    }
+    // Output: [Alice] [25] [3.9]
+    std::cout &lt;&lt; "\n";
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Practical Example: CSV File Reader ===== -->
+                <h2>Practical Example: CSV File Reader</h2>
+                <p>Let&rsquo;s build a program that reads a CSV (comma-separated values) file, parses each row into a struct, and prints a summary.</p>
+                <p>Suppose <strong>students.csv</strong> contains:</p>
+<div class="code-block"><pre><code>Name,Age,GPA
+Alice,20,3.9
+Bob,22,3.5
+Charlie,21,3.7
+Diana,23,3.8</code></pre></div>
+
+<div class="code-block"><pre><code>#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+struct Student {
+    std::string name;
+    int age;
+    double gpa;
+};
+
+std::vector&lt;Student&gt; readCSV(const std::string&amp; filename) {
+    std::vector&lt;Student&gt; students;
+    std::ifstream file(filename);
+
+    if (!file.is_open()) {
+        std::cerr &lt;&lt; "Error: Cannot open " &lt;&lt; filename &lt;&lt; "\n";
+        return students;
+    }
+
+    std::string line;
+    std::getline(file, line); // skip header row
+
+    while (std::getline(file, line)) {
+        std::stringstream ss(line);
+        Student s;
+        std::string ageStr, gpaStr;
+
+        std::getline(ss, s.name, ',');
+        std::getline(ss, ageStr, ',');
+        std::getline(ss, gpaStr, ',');
+
+        s.age = std::stoi(ageStr);
+        s.gpa = std::stod(gpaStr);
+        students.push_back(s);
+    }
+    return students;
+}
+
+int main() {
+    auto students = readCSV("students.csv");
+
+    std::cout &lt;&lt; "Student Report\n";
+    std::cout &lt;&lt; "==============\n";
+    for (const auto&amp; s : students) {
+        std::cout &lt;&lt; s.name &lt;&lt; " | Age: " &lt;&lt; s.age
+                  &lt;&lt; " | GPA: " &lt;&lt; s.gpa &lt;&lt; "\n";
+    }
+
+    // Calculate average GPA
+    double total = 0.0;
+    for (const auto&amp; s : students) {
+        total += s.gpa;
+    }
+    if (!students.empty()) {
+        std::cout &lt;&lt; "\nAverage GPA: "
+                  &lt;&lt; total / students.size() &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre></div>
+                <p><strong>Output:</strong></p>
+<div class="code-block"><pre><code>Student Report
+==============
+Alice | Age: 20 | GPA: 3.9
+Bob | Age: 22 | GPA: 3.5
+Charlie | Age: 21 | GPA: 3.7
+Diana | Age: 23 | GPA: 3.8
+
+Average GPA: 3.725</code></pre></div>
+
+                <!-- ===== Common Mistakes and Best Practices ===== -->
+                <h2>Common Mistakes and Best Practices</h2>
+
+                <h3>Common Mistakes</h3>
+                <ol>
+                    <li><strong>Not checking if the file opened.</strong> Always verify with <code>is_open()</code> or the boolean conversion before performing I/O operations.</li>
+                    <li><strong>Using <code>eof()</code> as the loop condition.</strong> The <code>eof()</code> flag is set <em>after</em> a failed read, which means the loop body runs one extra time with garbage data:
+<div class="code-block"><pre><code>// BAD &ndash; processes one extra iteration
+while (!inFile.eof()) {
+    inFile &gt;&gt; word;
+    std::cout &lt;&lt; word &lt;&lt; "\n";
+}
+
+// GOOD &ndash; extraction returns the stream, which converts to false on failure
+while (inFile &gt;&gt; word) {
+    std::cout &lt;&lt; word &lt;&lt; "\n";
+}</code></pre></div>
+                    </li>
+                    <li><strong>Forgetting to clear error flags.</strong> After a stream enters a fail state, all subsequent operations silently fail. Call <code>clear()</code> to reset.</li>
+                    <li><strong>Mixing <code>&gt;&gt;</code> and <code>getline()</code>.</strong> The extraction operator leaves a trailing newline in the buffer, causing the next <code>getline()</code> to read an empty string. Use <code>inFile.ignore()</code> or <code>std::ws</code> between them:
+<div class="code-block"><pre><code>int num;
+std::string line;
+inFile &gt;&gt; num;
+inFile.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(), '\n');
+std::getline(inFile, line);</code></pre></div>
+                    </li>
+                    <li><strong>Assuming binary file portability.</strong> Struct layout varies between compilers and platforms. Use serialisation formats for cross-platform data.</li>
+                </ol>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li><strong>Prefer RAII:</strong> Let stream destructors close files automatically. Avoid manual <code>close()</code> unless you need to reopen the file in the same scope.</li>
+                    <li><strong>Use <code>std::getline()</code></strong> for line-oriented input. It handles spaces, empty lines, and delimiters gracefully.</li>
+                    <li><strong>Use string streams</strong> to parse complex lines&mdash;read the whole line first, then extract fields from a <code>std::stringstream</code>.</li>
+                    <li><strong>Check for errors</strong> after every critical I/O operation, especially in production code.</li>
+                    <li><strong>Use <code>&lt;filesystem&gt;</code></strong> (C++17) for path manipulation, file existence checks, and directory traversal.</li>
+                    <li><strong>Prefer text formats</strong> (CSV, JSON, XML) over raw binary for data interchange.</li>
+                    <li><strong>Buffer large writes:</strong> Build output in a <code>std::ostringstream</code> and write it in one operation for better performance.</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>&lt;fstream&gt;</code> provides <code>ifstream</code> (read), <code>ofstream</code> (write), and <code>fstream</code> (read/write) for file operations.</li>
+                    <li>File streams use the same <code>&lt;&lt;</code> and <code>&gt;&gt;</code> operators as console I/O.</li>
+                    <li>Open modes (<code>ios::in</code>, <code>ios::out</code>, <code>ios::app</code>, <code>ios::trunc</code>, <code>ios::binary</code>, <code>ios::ate</code>) control how files are opened and can be combined with <code>|</code>.</li>
+                    <li>Always check stream state with <code>is_open()</code>, <code>good()</code>, <code>fail()</code>, <code>eof()</code>, or <code>bad()</code>.</li>
+                    <li><code>seekg()</code>/<code>seekp()</code> and <code>tellg()</code>/<code>tellp()</code> let you jump to arbitrary file positions.</li>
+                    <li>Binary I/O uses <code>read()</code> and <code>write()</code> with <code>reinterpret_cast&lt;char*&gt;</code>, but is not portable.</li>
+                    <li><code>&lt;sstream&gt;</code> string streams (<code>istringstream</code>, <code>ostringstream</code>, <code>stringstream</code>) let you parse and build strings using stream syntax.</li>
+                    <li>Never use <code>while (!file.eof())</code>&mdash;use <code>while (file &gt;&gt; var)</code> or <code>while (std::getline(file, line))</code> instead.</li>
+                    <li>RAII ensures files are automatically closed when stream objects go out of scope.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/EaHFhms_Shw" title="C++ File I/O" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header provides file stream classes in C++?","o":["<code>&lt;iostream&gt;</code>","<code>&lt;fstream&gt;</code>","<code>&lt;fileio&gt;</code>","<code>&lt;cstdio&gt;</code>"],"a":1},
+                {"q":"Which class is used to <strong>write</strong> to a file?","o":["<code>std::ifstream</code>","<code>std::ofstream</code>","<code>std::fstream</code>","<code>std::ostream</code>"],"a":1},
+                {"q":"Which class is used to <strong>read</strong> from a file?","o":["<code>std::ofstream</code>","<code>std::ifstream</code>","<code>std::fstream</code>","<code>std::istream</code>"],"a":1},
+                {"q":"Which class supports both reading and writing?","o":["<code>std::ifstream</code>","<code>std::ofstream</code>","<code>std::fstream</code>","<code>std::iostream</code>"],"a":2},
+                {"q":"What is the default open mode for <code>std::ofstream</code>?","o":["<code>ios::in</code>","<code>ios::out | ios::trunc</code>","<code>ios::app</code>","<code>ios::binary</code>"],"a":1},
+                {"q":"What is the default open mode for <code>std::ifstream</code>?","o":["<code>ios::in</code>","<code>ios::out</code>","<code>ios::in | ios::out</code>","<code>ios::binary</code>"],"a":0},
+                {"q":"How do you check if a file opened successfully?","o":["<code>file.opened()</code>","<code>file.is_open()</code>","<code>file.check()</code>","<code>file.status()</code>"],"a":1},
+                {"q":"What does <code>std::ios::app</code> do?","o":["Opens a file in ASCII mode","Appends all writes to the end of the file","Truncates the file","Opens the file for reading only"],"a":1},
+                {"q":"What does <code>std::ios::trunc</code> do?","o":["Truncates the file, discarding existing content","Opens the file in text mode","Appends data to the file","Reads from the end"],"a":0},
+                {"q":"What does <code>std::ios::binary</code> do?","o":["Converts the file to binary format","Disables newline translation during I/O","Encrypts the file","Compresses the file data"],"a":1},
+                {"q":"What does <code>std::ios::ate</code> do?","o":["Opens the file in append mode","Seeks to the end of the file immediately after opening","Truncates the file","Enables asynchronous I/O"],"a":1},
+                {"q":"How do you combine multiple open modes?","o":["Using the <code>+</code> operator","Using the <code>|</code> (bitwise OR) operator","Using the <code>&amp;</code> operator","Using commas"],"a":1},
+                {"q":"What happens when an <code>ofstream</code> object goes out of scope?","o":["The file remains open","The destructor calls <code>close()</code> automatically","A memory leak occurs","The data is lost"],"a":1},
+                {"q":"Which method resets error flags on a stream?","o":["<code>reset()</code>","<code>clear()</code>","<code>flush()</code>","<code>restore()</code>"],"a":1},
+                {"q":"What does <code>stream.good()</code> return?","o":["<code>true</code> if end-of-file is reached","<code>true</code> if no errors have occurred","<code>true</code> if the file is open","<code>true</code> if the stream is empty"],"a":1},
+                {"q":"When is <code>stream.eof()</code> set to <code>true</code>?","o":["Before the first read","After a read operation attempts to read past end-of-file","When the file is opened","When the stream is created"],"a":1},
+                {"q":"What does <code>stream.fail()</code> indicate?","o":["The stream was closed","A logical error occurred (e.g., type mismatch)","End-of-file was reached","The file does not exist"],"a":1},
+                {"q":"What does <code>stream.bad()</code> indicate?","o":["The file was not found","A serious I/O error occurred (e.g., disk failure)","The stream is in a good state","End-of-file was reached"],"a":1},
+                {"q":"Why is <code>while (!file.eof())</code> considered a bug?","o":["It causes a compile error","<code>eof()</code> is set after a failed read, causing one extra loop iteration with bad data","It reads the file backwards","It skips the first line"],"a":1},
+                {"q":"What is the correct way to read a file word by word?","o":["<code>while (!file.eof()) { file &gt;&gt; word; }</code>","<code>while (file &gt;&gt; word) { ... }</code>","<code>for (file &gt;&gt; word; ; ) { ... }</code>","<code>do { file &gt;&gt; word; } while (true);</code>"],"a":1},
+                {"q":"Which function reads an entire line from a file?","o":["<code>file.readLine()</code>","<code>std::getline(file, str)</code>","<code>file.getLine(str)</code>","<code>std::readline(file)</code>"],"a":1},
+                {"q":"What is the third optional parameter of <code>std::getline()</code>?","o":["The maximum line length","The delimiter character (default <code>'\n'</code>)","The file encoding","The buffer size"],"a":1},
+                {"q":"What does <code>tellg()</code> return?","o":["The put (write) position","The get (read) position","The file size","The number of lines read"],"a":1},
+                {"q":"What does <code>tellp()</code> return?","o":["The get (read) position","The put (write) position","The number of bytes written","The file permissions"],"a":1},
+                {"q":"What does <code>seekg(0, std::ios::end)</code> do?","o":["Moves the read position to the beginning","Moves the read position to the end of the file","Deletes the file content","Closes the file"],"a":1},
+                {"q":"Which seek direction constant represents the beginning of a file?","o":["<code>std::ios::cur</code>","<code>std::ios::beg</code>","<code>std::ios::end</code>","<code>std::ios::start</code>"],"a":1},
+                {"q":"How can you determine a file&rsquo;s size using streams?","o":["<code>file.size()</code>","Seek to the end with <code>seekg(0, ios::end)</code> then call <code>tellg()</code>","<code>file.length()</code>","<code>sizeof(file)</code>"],"a":1},
+                {"q":"Which function writes raw binary data to a file?","o":["<code>file &lt;&lt; data</code>","<code>file.write(ptr, size)</code>","<code>file.put(data)</code>","<code>file.send(data)</code>"],"a":1},
+                {"q":"Which function reads raw binary data from a file?","o":["<code>file &gt;&gt; data</code>","<code>file.read(ptr, size)</code>","<code>file.get(data)</code>","<code>file.recv(data)</code>"],"a":1},
+                {"q":"What cast is used for binary <code>read()</code>/<code>write()</code> on structs?","o":["<code>static_cast&lt;char*&gt;</code>","<code>reinterpret_cast&lt;char*&gt;</code>","<code>dynamic_cast&lt;char*&gt;</code>","<code>const_cast&lt;char*&gt;</code>"],"a":1},
+                {"q":"Why are binary files not portable across platforms?","o":["Different file systems use different characters","Struct padding, endianness, and data type sizes differ","Binary mode is non-standard","Compilers do not support binary files"],"a":1},
+                {"q":"Which header provides string stream classes?","o":["<code>&lt;string&gt;</code>","<code>&lt;sstream&gt;</code>","<code>&lt;strstream&gt;</code>","<code>&lt;stringio&gt;</code>"],"a":1},
+                {"q":"What does <code>std::istringstream</code> do?","o":["Writes to a string","Reads (extracts) from a string using stream syntax","Reads from a file","Converts a string to uppercase"],"a":1},
+                {"q":"What does <code>std::ostringstream</code> do?","o":["Reads from a string","Writes (inserts) into a string using stream syntax","Writes to a file","Sorts a string"],"a":1},
+                {"q":"How do you retrieve the built string from an <code>ostringstream</code>?","o":["<code>oss.get()</code>","<code>oss.str()</code>","<code>oss.string()</code>","<code>oss.value()</code>"],"a":1},
+                {"q":"Which class can both read from and write to a string?","o":["<code>std::istringstream</code>","<code>std::ostringstream</code>","<code>std::stringstream</code>","<code>std::string</code>"],"a":2},
+                {"q":"What problem occurs when mixing <code>&gt;&gt;</code> and <code>getline()</code>?","o":["A compile error","The leftover newline causes <code>getline()</code> to read an empty string","The file is closed automatically","Data is written instead of read"],"a":1},
+                {"q":"How do you fix the <code>&gt;&gt;</code>/<code>getline()</code> mixing problem?","o":["Close and reopen the file","Call <code>file.ignore()</code> to discard the leftover newline","Use <code>file.reset()</code>","Switch to binary mode"],"a":1},
+                {"q":"What does <code>file.ignore(n, delim)</code> do?","o":["Ignores errors on the stream","Discards up to <code>n</code> characters or until <code>delim</code> is found","Skips <code>n</code> files","Closes thenfile"],"a":1},
+                {"q":"What is RAII in the context of file I/O?","o":["A file compression algorithm","Resource Acquisition Is Initialisation &mdash; destructors automatically close files","A read-ahead buffering technique","A binary encoding scheme"],"a":1},
+                {"q":"If you write <code>outFile &lt;&lt; 42;</code>, what is written to the file in text mode?","o":["The binary representation of 42","The characters <code>'4'</code> and <code>'2'</code>","Nothing, integers cannot be written","An error code"],"a":1},
+                {"q":"What does <code>file.flush()</code> do?","o":["Closes the file","Forces any buffered output to be written to the file immediately","Clears the file contents","Resets the read position"],"a":1},
+                {"q":"Which of these correctly opens a file for appending?","o":["<code>std::ofstream f(\"log.txt\", std::ios::trunc);</code>","<code>std::ofstream f(\"log.txt\", std::ios::app);</code>","<code>std::ifstream f(\"log.txt\", std::ios::app);</code>","<code>std::ofstream f(\"log.txt\", std::ios::in);</code>"],"a":1},
+                {"q":"What does <code>std::endl</code> do compared to <code>'\n'</code>?","o":["They are identical","<code>std::endl</code> outputs a newline <em>and</em> flushes the buffer","<code>std::endl</code> outputs two newlines","<code>'\n'</code> flushes the buffer but <code>std::endl</code> does not"],"a":1},
+                {"q":"Which C++17 header provides utilities for file paths and directory operations?","o":["<code>&lt;fstream&gt;</code>","<code>&lt;filesystem&gt;</code>","<code>&lt;directory&gt;</code>","<code>&lt;pathlib&gt;</code>"],"a":1},
+                {"q":"How do you parse a CSV line using string streams?","o":["Use <code>iss &gt;&gt; field</code> with comma delimiter","Use <code>std::getline(ss, field, ',')</code> repeatedly","Use <code>ss.split(',')</code>","Use <code>ss.tokenize(',')</code>"],"a":1},
+                {"q":"Which function converts a string to an integer?","o":["<code>std::to_int()</code>","<code>std::stoi()</code>","<code>std::atoi()</code> (C-style) or <code>std::stoi()</code>","Both B and C are valid"],"a":3},
+                {"q":"What happens if you try to read from a file that does not exist?","o":["The program crashes immediately","The stream enters a fail state and <code>is_open()</code> returns <code>false</code>","An empty file is created automatically","A default value is returned"],"a":1},
+                {"q":"What is the advantage of using <code>ostringstream</code> to build output before writing to a file?","o":["It compresses the data","It reduces disk I/O by writing all data in one operation","It encrypts the output","It automatically formats the data as JSON"],"a":1},
+                {"q":"Which statement correctly describes <code>std::ios::in | std::ios::out</code>?","o":["Opens the file for reading only","Opens the file for writing only","Opens the file for both reading and writing","Creates a new file and deletes the old one"],"a":2}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="exceptions.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Exception Handling</span>
+                </a>
+                <a href="namespaces.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Namespaces</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

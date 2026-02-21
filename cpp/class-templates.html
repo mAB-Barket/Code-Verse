@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Class Templates - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-class-templates">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html" class="active"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 38 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="69" style="width:69%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Class Templates
+                </div>
+                <h1>38. Class Templates</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 38 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Class Templates? ===== -->
+                <h2>What Are Class Templates?</h2>
+                <p>In the previous lesson you learned how <strong>function templates</strong> let you write type-independent functions. <strong>Class templates</strong> extend the same idea to entire classes. A class template is a <strong>blueprint for generating classes</strong> that can operate on any data type.</p>
+                <p>Instead of writing separate <code>IntBox</code>, <code>DoubleBox</code>, and <code>StringBox</code> classes, you write a single <code>Box&lt;T&gt;</code> template and let the compiler stamp out the version you need:</p>
+                <ul>
+                    <li><strong>Code reuse</strong> &mdash; one class definition works for unlimited types.</li>
+                    <li><strong>Type safety</strong> &mdash; the compiler enforces types at compile time.</li>
+                    <li><strong>Zero runtime cost</strong> &mdash; templates are resolved entirely at compile time.</li>
+                    <li><strong>Foundation of the STL</strong> &mdash; <code>std::vector&lt;T&gt;</code>, <code>std::map&lt;K,V&gt;</code>, <code>std::pair&lt;T1,T2&gt;</code>, and every other container is a class template.</li>
+                </ul>
+
+                <!-- ===== Class Template Syntax ===== -->
+                <h2>Class Template Syntax</h2>
+                <p>The basic syntax mirrors function templates but applies to an entire class:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Box</span> {
+<span class="keyword">private</span>:
+    <span class="type">T</span> value;
+
+<span class="keyword">public</span>:
+    <span class="type">Box</span>(<span class="type">T</span> v) : value(v) {}
+
+    <span class="type">T</span> <span class="function">getValue</span>() <span class="keyword">const</span> { <span class="keyword">return</span> value; }
+    <span class="keyword">void</span> <span class="function">setValue</span>(<span class="type">T</span> v) { value = v; }
+};</code></pre>
+                </div>
+                <p><code>T</code> is a <strong>placeholder type</strong>. When you create a <code>Box&lt;int&gt;</code>, the compiler replaces every <code>T</code> with <code>int</code>. When you create a <code>Box&lt;std::string&gt;</code>, it replaces every <code>T</code> with <code>std::string</code>.</p>
+                <p><strong>Note:</strong> You can use <code>typename</code> or <code>class</code> interchangeably in the parameter list &mdash; both mean &ldquo;any type.&rdquo;</p>
+
+                <!-- ===== Creating Objects from Class Templates ===== -->
+                <h2>Creating Objects from Class Templates</h2>
+                <p>Unlike function templates, you must <strong>explicitly specify the type argument</strong> when creating objects (until C++17 introduced class template argument deduction &mdash; CTAD):</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Box</span>&lt;<span class="keyword">int</span>&gt; intBox(<span class="number">42</span>);
+    <span class="type">Box</span>&lt;<span class="keyword">double</span>&gt; dblBox(<span class="number">3.14</span>);
+    <span class="type">Box</span>&lt;<span class="type">string</span>&gt; strBox(<span class="string">"Hello"</span>);
+
+    cout &lt;&lt; intBox.<span class="function">getValue</span>() &lt;&lt; endl;   <span class="comment">// 42</span>
+    cout &lt;&lt; dblBox.<span class="function">getValue</span>() &lt;&lt; endl;   <span class="comment">// 3.14</span>
+    cout &lt;&lt; strBox.<span class="function">getValue</span>() &lt;&lt; endl;   <span class="comment">// Hello</span>
+
+    <span class="comment">// C++17 CTAD &mdash; compiler deduces the type:</span>
+    <span class="type">Box</span> autoBox(<span class="number">99</span>);  <span class="comment">// Box&lt;int&gt;</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Member Functions Defined Outside the Class ===== -->
+                <h2>Member Functions of Class Templates</h2>
+                <p>You can define member functions <strong>inside</strong> the class body (as shown above) or <strong>outside</strong>. When defined outside, you must repeat the template prefix and qualify the class name with <code>&lt;T&gt;</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Container</span> {
+<span class="keyword">private</span>:
+    <span class="type">T</span> data;
+    <span class="keyword">int</span> size;
+
+<span class="keyword">public</span>:
+    <span class="type">Container</span>(<span class="type">T</span> d, <span class="keyword">int</span> s);          <span class="comment">// declaration</span>
+    <span class="type">T</span> <span class="function">getData</span>() <span class="keyword">const</span>;               <span class="comment">// declaration</span>
+    <span class="keyword">void</span> <span class="function">display</span>() <span class="keyword">const</span>;            <span class="comment">// declaration</span>
+};
+
+<span class="comment">// Constructor defined outside</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">Container</span>&lt;<span class="type">T</span>&gt;::<span class="function">Container</span>(<span class="type">T</span> d, <span class="keyword">int</span> s) : data(d), size(s) {}
+
+<span class="comment">// Member function defined outside</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="type">Container</span>&lt;<span class="type">T</span>&gt;::<span class="function">getData</span>() <span class="keyword">const</span> {
+    <span class="keyword">return</span> data;
+}
+
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">void</span> <span class="type">Container</span>&lt;<span class="type">T</span>&gt;::<span class="function">display</span>() <span class="keyword">const</span> {
+    cout &lt;&lt; <span class="string">"Data: "</span> &lt;&lt; data &lt;&lt; <span class="string">", Size: "</span> &lt;&lt; size &lt;&lt; endl;
+}</code></pre>
+                </div>
+                <p><strong>Important:</strong> Like function templates, class template definitions (including out-of-line member function definitions) must be placed in <strong>header files</strong> so the compiler can see the full body at every point of instantiation.</p>
+
+                <!-- ===== Multiple Type Parameters ===== -->
+                <h2>Class Templates with Multiple Type Parameters</h2>
+                <p>A class template can accept <strong>two or more type parameters</strong>, separated by commas:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">K</span>, <span class="keyword">typename</span> <span class="type">V</span>&gt;
+<span class="keyword">class</span> <span class="type">KeyValue</span> {
+<span class="keyword">private</span>:
+    <span class="type">K</span> key;
+    <span class="type">V</span> val;
+
+<span class="keyword">public</span>:
+    <span class="type">KeyValue</span>(<span class="type">K</span> k, <span class="type">V</span> v) : key(k), val(v) {}
+
+    <span class="type">K</span> <span class="function">getKey</span>()   <span class="keyword">const</span> { <span class="keyword">return</span> key; }
+    <span class="type">V</span> <span class="function">getValue</span>() <span class="keyword">const</span> { <span class="keyword">return</span> val; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">KeyValue</span>&lt;<span class="type">string</span>, <span class="keyword">int</span>&gt; age(<span class="string">"Alice"</span>, <span class="number">30</span>);
+    <span class="type">KeyValue</span>&lt;<span class="keyword">int</span>, <span class="keyword">double</span>&gt; score(<span class="number">1</span>, <span class="number">95.5</span>);
+
+    cout &lt;&lt; age.<span class="function">getKey</span>() &lt;&lt; <span class="string">": "</span> &lt;&lt; age.<span class="function">getValue</span>() &lt;&lt; endl;
+    cout &lt;&lt; score.<span class="function">getKey</span>() &lt;&lt; <span class="string">": "</span> &lt;&lt; score.<span class="function">getValue</span>() &lt;&lt; endl;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Non-Type Template Parameters ===== -->
+                <h2>Non-Type Template Parameters</h2>
+                <p>Besides types, you can pass <strong>compile-time constant values</strong> as template arguments. This is how <code>std::array&lt;T, N&gt;</code> knows its size at compile time:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>, <span class="keyword">int</span> <span class="type">Size</span>&gt;
+<span class="keyword">class</span> <span class="type">StaticArray</span> {
+<span class="keyword">private</span>:
+    <span class="type">T</span> arr[<span class="type">Size</span>];
+
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">set</span>(<span class="keyword">int</span> index, <span class="type">T</span> value) {
+        <span class="keyword">if</span> (index &gt;= <span class="number">0</span> &amp;&amp; index &lt; <span class="type">Size</span>)
+            arr[index] = value;
+    }
+
+    <span class="type">T</span> <span class="function">get</span>(<span class="keyword">int</span> index) <span class="keyword">const</span> {
+        <span class="keyword">return</span> arr[index];
+    }
+
+    <span class="keyword">int</span> <span class="function">getSize</span>() <span class="keyword">const</span> { <span class="keyword">return</span> <span class="type">Size</span>; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">StaticArray</span>&lt;<span class="keyword">int</span>, <span class="number">5</span>&gt; nums;
+    nums.<span class="function">set</span>(<span class="number">0</span>, <span class="number">10</span>);
+    nums.<span class="function">set</span>(<span class="number">1</span>, <span class="number">20</span>);
+
+    cout &lt;&lt; nums.<span class="function">get</span>(<span class="number">0</span>) &lt;&lt; endl;       <span class="comment">// 10</span>
+    cout &lt;&lt; <span class="string">"Size: "</span> &lt;&lt; nums.<span class="function">getSize</span>() &lt;&lt; endl;  <span class="comment">// 5</span>
+
+    <span class="type">StaticArray</span>&lt;<span class="type">string</span>, <span class="number">3</span>&gt; names;
+    names.<span class="function">set</span>(<span class="number">0</span>, <span class="string">"Alice"</span>);
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>Non-type parameters must be <strong>compile-time constants</strong>: integral types, pointers, references, or (since C++20) floating-point and literal class types.</p>
+
+                <!-- ===== Template Specialization ===== -->
+                <h2>Template Specialization (Full Specialization)</h2>
+                <p>Sometimes a generic implementation doesn&rsquo;t work well for a specific type. <strong>Full specialization</strong> lets you provide a completely custom class definition for one particular type:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Primary template</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Printer</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">print</span>(<span class="type">T</span> value) {
+        cout &lt;&lt; <span class="string">"Generic: "</span> &lt;&lt; value &lt;&lt; endl;
+    }
+};
+
+<span class="comment">// Full specialization for const char*</span>
+<span class="keyword">template</span> &lt;&gt;
+<span class="keyword">class</span> <span class="type">Printer</span>&lt;<span class="keyword">const</span> <span class="keyword">char</span>*&gt; {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">print</span>(<span class="keyword">const</span> <span class="keyword">char</span>* value) {
+        cout &lt;&lt; <span class="string">"C-String: \"" </span> &lt;&lt; value &lt;&lt; <span class="string">"\""</span> &lt;&lt; endl;
+    }
+};
+
+<span class="comment">// Full specialization for bool</span>
+<span class="keyword">template</span> &lt;&gt;
+<span class="keyword">class</span> <span class="type">Printer</span>&lt;<span class="keyword">bool</span>&gt; {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">print</span>(<span class="keyword">bool</span> value) {
+        cout &lt;&lt; <span class="string">"Bool: "</span> &lt;&lt; (value ? <span class="string">"true"</span> : <span class="string">"false"</span>) &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Printer</span>&lt;<span class="keyword">int</span>&gt; p1;
+    p1.<span class="function">print</span>(<span class="number">42</span>);            <span class="comment">// Generic: 42</span>
+
+    <span class="type">Printer</span>&lt;<span class="keyword">const</span> <span class="keyword">char</span>*&gt; p2;
+    p2.<span class="function">print</span>(<span class="string">"Hello"</span>);       <span class="comment">// C-String: "Hello"</span>
+
+    <span class="type">Printer</span>&lt;<span class="keyword">bool</span>&gt; p3;
+    p3.<span class="function">print</span>(<span class="keyword">true</span>);          <span class="comment">// Bool: true</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>The empty <code>template &lt;&gt;</code> tells the compiler: &ldquo;I&rsquo;m providing a specialization &mdash; all type parameters are explicitly specified.&rdquo;</p>
+
+                <!-- ===== Partial Specialization ===== -->
+                <h2>Partial Specialization</h2>
+                <p><strong>Partial specialization</strong> lets you specialize a template for a <em>category</em> of types rather than just one. For example, you can specialize for all pointer types:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Primary template</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Storage</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">describe</span>() {
+        cout &lt;&lt; <span class="string">"General Storage for value type"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="comment">// Partial specialization for pointer types</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Storage</span>&lt;<span class="type">T</span>*&gt; {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">describe</span>() {
+        cout &lt;&lt; <span class="string">"Specialized Storage for pointer type"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="comment">// Partial specialization for two same types in a pair-like template</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T1</span>, <span class="keyword">typename</span> <span class="type">T2</span>&gt;
+<span class="keyword">class</span> <span class="type">Duo</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">info</span>() { cout &lt;&lt; <span class="string">"Different types"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Duo</span>&lt;<span class="type">T</span>, <span class="type">T</span>&gt; {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">info</span>() { cout &lt;&lt; <span class="string">"Same types"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Storage</span>&lt;<span class="keyword">int</span>&gt; s1;
+    s1.<span class="function">describe</span>();        <span class="comment">// General Storage for value type</span>
+
+    <span class="type">Storage</span>&lt;<span class="keyword">int</span>*&gt; s2;
+    s2.<span class="function">describe</span>();        <span class="comment">// Specialized Storage for pointer type</span>
+
+    <span class="type">Duo</span>&lt;<span class="keyword">int</span>, <span class="keyword">double</span>&gt; d1;
+    d1.<span class="function">info</span>();            <span class="comment">// Different types</span>
+
+    <span class="type">Duo</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; d2;
+    d2.<span class="function">info</span>();            <span class="comment">// Same types</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Key rule:</strong> Partial specialization is available for <strong>class templates only</strong> &mdash; function templates must use overloading instead.</p>
+
+                <!-- ===== std::pair and std::tuple ===== -->
+                <h2>std::pair and std::tuple as Template Examples</h2>
+                <p>The Standard Library ships with class templates you already use all the time. <code>std::pair</code> and <code>std::tuple</code> are perfect real-world examples:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;utility&gt;</span>   <span class="comment">// std::pair</span>
+<span class="keyword">#include</span> <span class="string">&lt;tuple&gt;</span>     <span class="comment">// std::tuple</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// std::pair &mdash; a class template with two type parameters</span>
+    pair&lt;<span class="type">string</span>, <span class="keyword">int</span>&gt; student(<span class="string">"Alice"</span>, <span class="number">95</span>);
+    cout &lt;&lt; student.first &lt;&lt; <span class="string">": "</span> &lt;&lt; student.second &lt;&lt; endl;
+
+    <span class="comment">// make_pair uses template argument deduction</span>
+    <span class="keyword">auto</span> coord = <span class="function">make_pair</span>(<span class="number">3.5</span>, <span class="number">7.2</span>);
+    cout &lt;&lt; <span class="string">"("</span> &lt;&lt; coord.first &lt;&lt; <span class="string">", "</span> &lt;&lt; coord.second &lt;&lt; <span class="string">")"</span> &lt;&lt; endl;
+
+    <span class="comment">// std::tuple &mdash; a class template with any number of type parameters</span>
+    tuple&lt;<span class="type">string</span>, <span class="keyword">int</span>, <span class="keyword">double</span>&gt; record(<span class="string">"Bob"</span>, <span class="number">22</span>, <span class="number">3.85</span>);
+    cout &lt;&lt; <span class="function">get</span>&lt;<span class="number">0</span>&gt;(record) &lt;&lt; <span class="string">", age "</span>
+         &lt;&lt; <span class="function">get</span>&lt;<span class="number">1</span>&gt;(record) &lt;&lt; <span class="string">", GPA "</span>
+         &lt;&lt; <span class="function">get</span>&lt;<span class="number">2</span>&gt;(record) &lt;&lt; endl;
+
+    <span class="comment">// Structured bindings (C++17)</span>
+    <span class="keyword">auto</span> [name, age, gpa] = record;
+    cout &lt;&lt; name &lt;&lt; <span class="string">" is "</span> &lt;&lt; age &lt;&lt; <span class="string">" with GPA "</span> &lt;&lt; gpa &lt;&lt; endl;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>Both <code>std::pair</code> and <code>std::tuple</code> are implemented as class templates internally &mdash; exactly the kind of generic class you are now learning to build yourself.</p>
+
+                <!-- ===== Class Templates and Inheritance ===== -->
+                <h2>Class Templates and Inheritance</h2>
+                <p>Templates work seamlessly with inheritance. You can:</p>
+                <ul>
+                    <li>Derive a <strong>non-template class</strong> from a class template instantiation.</li>
+                    <li>Derive a <strong>template class</strong> from another template class.</li>
+                    <li>Derive a <strong>template class</strong> from a regular class.</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// 1) Template base class</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Base</span> {
+<span class="keyword">protected</span>:
+    <span class="type">T</span> data;
+<span class="keyword">public</span>:
+    <span class="type">Base</span>(<span class="type">T</span> d) : data(d) {}
+    <span class="keyword">void</span> <span class="function">show</span>() { cout &lt;&lt; <span class="string">"Base: "</span> &lt;&lt; data &lt;&lt; endl; }
+};
+
+<span class="comment">// 2) Template class derived from a template class</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">public</span> <span class="type">Base</span>&lt;<span class="type">T</span>&gt; {
+<span class="keyword">public</span>:
+    <span class="type">Derived</span>(<span class="type">T</span> d) : <span class="type">Base</span>&lt;<span class="type">T</span>&gt;(d) {}
+    <span class="keyword">void</span> <span class="function">display</span>() {
+        cout &lt;&lt; <span class="string">"Derived: "</span> &lt;&lt; <span class="keyword">this</span>-&gt;data &lt;&lt; endl;
+    }
+};
+
+<span class="comment">// 3) Non-template class from a specific instantiation</span>
+<span class="keyword">class</span> <span class="type">IntDerived</span> : <span class="keyword">public</span> <span class="type">Base</span>&lt;<span class="keyword">int</span>&gt; {
+<span class="keyword">public</span>:
+    <span class="type">IntDerived</span>(<span class="keyword">int</span> d) : <span class="type">Base</span>&lt;<span class="keyword">int</span>&gt;(d) {}
+    <span class="keyword">void</span> <span class="function">doubled</span>() {
+        cout &lt;&lt; <span class="string">"Doubled: "</span> &lt;&lt; data * <span class="number">2</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Derived</span>&lt;<span class="type">string</span>&gt; d(<span class="string">"Hello"</span>);
+    d.<span class="function">show</span>();        <span class="comment">// Base: Hello</span>
+    d.<span class="function">display</span>();     <span class="comment">// Derived: Hello</span>
+
+    <span class="type">IntDerived</span> id(<span class="number">21</span>);
+    id.<span class="function">show</span>();       <span class="comment">// Base: 21</span>
+    id.<span class="function">doubled</span>();    <span class="comment">// Doubled: 42</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Tip:</strong> Inside a derived template class, use <code>this-&gt;member</code> or <code>Base&lt;T&gt;::member</code> to access inherited members &mdash; the compiler needs explicit guidance for <strong>dependent names</strong>.</p>
+
+                <!-- ===== Common Use Cases ===== -->
+                <h2>Common Use Cases</h2>
+                <p>Class templates shine when you need <strong>generic data structures</strong>. Here are three classic examples:</p>
+
+                <h3>1. Stack Implementation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>, <span class="keyword">int</span> <span class="type">MaxSize</span> = <span class="number">100</span>&gt;
+<span class="keyword">class</span> <span class="type">Stack</span> {
+<span class="keyword">private</span>:
+    <span class="type">T</span> arr[<span class="type">MaxSize</span>];
+    <span class="keyword">int</span> top;
+
+<span class="keyword">public</span>:
+    <span class="type">Stack</span>() : top(<span class="number">-1</span>) {}
+
+    <span class="keyword">void</span> <span class="function">push</span>(<span class="type">T</span> value) {
+        <span class="keyword">if</span> (top &lt; <span class="type">MaxSize</span> - <span class="number">1</span>)
+            arr[++top] = value;
+    }
+
+    <span class="type">T</span> <span class="function">pop</span>() {
+        <span class="keyword">if</span> (top &gt;= <span class="number">0</span>)
+            <span class="keyword">return</span> arr[top--];
+        <span class="keyword">throw</span> <span class="function">runtime_error</span>(<span class="string">"Stack underflow"</span>);
+    }
+
+    <span class="type">T</span> <span class="function">peek</span>() <span class="keyword">const</span> { <span class="keyword">return</span> arr[top]; }
+    <span class="keyword">bool</span> <span class="function">isEmpty</span>() <span class="keyword">const</span> { <span class="keyword">return</span> top == <span class="number">-1</span>; }
+    <span class="keyword">int</span> <span class="function">getSize</span>() <span class="keyword">const</span> { <span class="keyword">return</span> top + <span class="number">1</span>; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Stack</span>&lt;<span class="keyword">int</span>, <span class="number">50</span>&gt; intStack;
+    intStack.<span class="function">push</span>(<span class="number">10</span>);
+    intStack.<span class="function">push</span>(<span class="number">20</span>);
+    cout &lt;&lt; intStack.<span class="function">pop</span>() &lt;&lt; endl;  <span class="comment">// 20</span>
+
+    <span class="type">Stack</span>&lt;<span class="type">string</span>&gt; strStack;  <span class="comment">// uses default MaxSize = 100</span>
+    strStack.<span class="function">push</span>(<span class="string">"Hello"</span>);
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <h3>2. Queue Implementation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">Queue</span> {
+<span class="keyword">private</span>:
+    <span class="keyword">struct</span> <span class="type">Node</span> {
+        <span class="type">T</span> data;
+        <span class="type">Node</span>* next;
+        <span class="type">Node</span>(<span class="type">T</span> d) : data(d), next(<span class="keyword">nullptr</span>) {}
+    };
+    <span class="type">Node</span>* front;
+    <span class="type">Node</span>* rear;
+
+<span class="keyword">public</span>:
+    <span class="type">Queue</span>() : front(<span class="keyword">nullptr</span>), rear(<span class="keyword">nullptr</span>) {}
+
+    <span class="keyword">void</span> <span class="function">enqueue</span>(<span class="type">T</span> value) {
+        <span class="type">Node</span>* newNode = <span class="keyword">new</span> <span class="type">Node</span>(value);
+        <span class="keyword">if</span> (!rear) { front = rear = newNode; <span class="keyword">return</span>; }
+        rear-&gt;next = newNode;
+        rear = newNode;
+    }
+
+    <span class="type">T</span> <span class="function">dequeue</span>() {
+        <span class="keyword">if</span> (!front) <span class="keyword">throw</span> <span class="function">runtime_error</span>(<span class="string">"Queue empty"</span>);
+        <span class="type">Node</span>* temp = front;
+        <span class="type">T</span> val = temp-&gt;data;
+        front = front-&gt;next;
+        <span class="keyword">if</span> (!front) rear = <span class="keyword">nullptr</span>;
+        <span class="keyword">delete</span> temp;
+        <span class="keyword">return</span> val;
+    }
+
+    <span class="keyword">bool</span> <span class="function">isEmpty</span>() <span class="keyword">const</span> { <span class="keyword">return</span> front == <span class="keyword">nullptr</span>; }
+
+    ~<span class="type">Queue</span>() {
+        <span class="keyword">while</span> (front) {
+            <span class="type">Node</span>* temp = front;
+            front = front-&gt;next;
+            <span class="keyword">delete</span> temp;
+        }
+    }
+};</code></pre>
+                </div>
+
+                <h3>3. Linked List Implementation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="keyword">class</span> <span class="type">LinkedList</span> {
+<span class="keyword">private</span>:
+    <span class="keyword">struct</span> <span class="type">Node</span> {
+        <span class="type">T</span> data;
+        <span class="type">Node</span>* next;
+        <span class="type">Node</span>(<span class="type">T</span> d) : data(d), next(<span class="keyword">nullptr</span>) {}
+    };
+    <span class="type">Node</span>* head;
+
+<span class="keyword">public</span>:
+    <span class="type">LinkedList</span>() : head(<span class="keyword">nullptr</span>) {}
+
+    <span class="keyword">void</span> <span class="function">pushFront</span>(<span class="type">T</span> value) {
+        <span class="type">Node</span>* newNode = <span class="keyword">new</span> <span class="type">Node</span>(value);
+        newNode-&gt;next = head;
+        head = newNode;
+    }
+
+    <span class="keyword">void</span> <span class="function">printAll</span>() <span class="keyword">const</span> {
+        <span class="type">Node</span>* current = head;
+        <span class="keyword">while</span> (current) {
+            cout &lt;&lt; current-&gt;data &lt;&lt; <span class="string">" -&gt; "</span>;
+            current = current-&gt;next;
+        }
+        cout &lt;&lt; <span class="string">"null"</span> &lt;&lt; endl;
+    }
+
+    ~<span class="type">LinkedList</span>() {
+        <span class="keyword">while</span> (head) {
+            <span class="type">Node</span>* temp = head;
+            head = head-&gt;next;
+            <span class="keyword">delete</span> temp;
+        }
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">LinkedList</span>&lt;<span class="keyword">int</span>&gt; list;
+    list.<span class="function">pushFront</span>(<span class="number">30</span>);
+    list.<span class="function">pushFront</span>(<span class="number">20</span>);
+    list.<span class="function">pushFront</span>(<span class="number">10</span>);
+    list.<span class="function">printAll</span>();  <span class="comment">// 10 -&gt; 20 -&gt; 30 -&gt; null</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Class templates</strong> are blueprints for creating <strong>type-independent classes</strong> &mdash; one definition serves any compatible type.</li>
+                    <li>Syntax: <code>template &lt;typename T&gt; class ClassName { ... };</code></li>
+                    <li>You must specify the type argument explicitly when creating objects: <code>ClassName&lt;int&gt; obj;</code> (C++17 CTAD can sometimes deduce it).</li>
+                    <li>Member functions defined outside the class need the full template prefix: <code>template&lt;typename T&gt; ReturnType ClassName&lt;T&gt;::func()</code>.</li>
+                    <li>Templates can have <strong>multiple type parameters</strong> (<code>K</code>, <code>V</code>) and <strong>non-type parameters</strong> (<code>int Size</code>).</li>
+                    <li><strong>Full specialization</strong> (<code>template&lt;&gt;</code>) provides a complete custom implementation for one specific type.</li>
+                    <li><strong>Partial specialization</strong> targets a <em>category</em> of types (e.g., all pointer types) and is only available for class templates.</li>
+                    <li><code>std::pair</code>, <code>std::tuple</code>, <code>std::vector</code>, and all STL containers are class templates.</li>
+                    <li>Class templates work with <strong>inheritance</strong> &mdash; you can derive template or non-template classes from template bases.</li>
+                    <li>Always define class templates in <strong>header files</strong> so the compiler has the full definition at every point of instantiation.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/9KTBBSuNdgI" title="C++ Class Templates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a class template in C++?","o":["A pre-built class in the standard library","A blueprint for creating classes that can work with any data type","A class that runs only at runtime","A macro that generates classes"],"a":1},
+                {"q":"Which keyword introduces a class template parameter list?","o":["generic","class","template","typedef"],"a":2},
+                {"q":"What is the correct syntax to declare a class template?","o":["<code>template &lt;typename T&gt; class MyClass { };</code>","<code>class template MyClass&lt;T&gt; { };</code>","<code>generic&lt;T&gt; class MyClass { };</code>","<code>class MyClass&lt;typename T&gt; { };</code>"],"a":0},
+                {"q":"Are <code>typename</code> and <code>class</code> interchangeable in a template parameter list?","o":["No, class only works with class types","Yes, both declare a type parameter","Only in C++20 and later","Only with struct types"],"a":1},
+                {"q":"How do you create an object from <code>Box&lt;T&gt;</code> for <code>int</code>?","o":["<code>Box obj(42);</code> (before C++17)","<code>Box&lt;int&gt; obj(42);</code>","<code>Box&lt;&gt; obj(42);</code>","<code>template Box obj(42);</code>"],"a":1},
+                {"q":"What is CTAD in C++17?","o":["Compile-Time Argument Deduction &mdash; not related to templates","Class Template Argument Deduction &mdash; lets the compiler deduce template arguments from constructor arguments","A debugging tool","A type alias mechanism"],"a":1},
+                {"q":"When defining a member function outside a class template, what must appear before the function?","o":["The virtual keyword","<code>template &lt;typename T&gt;</code> and the class name qualified with <code>&lt;T&gt;</code>","Only the class name","Nothing extra is needed"],"a":1},
+                {"q":"Which is the correct out-of-line definition for <code>Box&lt;T&gt;::getValue()</code>?","o":["<code>T Box::getValue() { ... }</code>","<code>template&lt;typename T&gt; T Box&lt;T&gt;::getValue() { ... }</code>","<code>T Box&lt;T&gt;::getValue() { ... }</code>","<code>template Box&lt;T&gt;::getValue() { ... }</code>"],"a":1},
+                {"q":"Can a class template have multiple type parameters?","o":["No, only one is allowed","Yes, e.g. <code>template&lt;typename K, typename V&gt;</code>","Only with partial specialization","Only in C++20"],"a":1},
+                {"q":"What does <code>template &lt;typename K, typename V&gt; class Map { };</code> declare?","o":["Two separate classes","A class template with two type parameters","A specialization","An abstract class"],"a":1},
+                {"q":"What is a non-type template parameter?","o":["A parameter with no name","A compile-time constant value (like <code>int N</code>) used as a template parameter","A type that cannot be named","A pointer parameter"],"a":1},
+                {"q":"Which of these is a valid non-type template parameter declaration?","o":["<code>template&lt;int N&gt; class Arr { };</code>","<code>template&lt;string s&gt; class Arr { };</code> (before C++20)","<code>template&lt;double d&gt; class Arr { };</code> (before C++20)","<code>template&lt;vector v&gt; class Arr { };</code>"],"a":0},
+                {"q":"How does <code>std::array</code> know its size at compile time?","o":["It uses a runtime variable","It uses a non-type template parameter: <code>std::array&lt;T, N&gt;</code>","It reads from a config file","It always has size 256"],"a":1},
+                {"q":"What is full (explicit) template specialization?","o":["Defining a template with no parameters","Providing a completely custom class definition for one specific type","Partially constraining template parameters","A way to delete a template"],"a":1},
+                {"q":"What is the syntax for a full specialization of <code>Printer&lt;T&gt;</code> for <code>bool</code>?","o":["<code>template&lt;bool&gt; class Printer { };</code>","<code>template&lt;&gt; class Printer&lt;bool&gt; { };</code>","<code>class Printer&lt;bool&gt; template&lt;&gt; { };</code>","<code>specialize Printer&lt;bool&gt; { };</code>"],"a":1},
+                {"q":"What does the empty <code>template&lt;&gt;</code> in a specialization indicate?","o":["A partial specialization","All template parameters are explicitly specified (full specialization)","A default template","An error"],"a":1},
+                {"q":"Must the primary template be declared before its specialization?","o":["No, order does not matter","Yes, the primary template must come first","Only for function templates","Only in header files"],"a":1},
+                {"q":"What is partial specialization?","o":["Specializing a template for a category of types rather than one specific type","Partially defining a class","A deprecated feature","Same as full specialization"],"a":0},
+                {"q":"Can function templates be partially specialized?","o":["Yes, freely","No, only class templates support partial specialization","Only in C++20","Only with two parameters"],"a":1},
+                {"q":"Which is a valid partial specialization of <code>Storage&lt;T&gt;</code> for pointer types?","o":["<code>template&lt;typename T&gt; class Storage&lt;T*&gt; { };</code>","<code>template&lt;&gt; class Storage&lt;T*&gt; { };</code>","<code>template&lt;typename T&gt; class Storage&lt;*T&gt; { };</code>","<code>partial template class Storage&lt;T*&gt; { };</code>"],"a":0},
+                {"q":"What STL class template stores a pair of values?","o":["<code>std::duo</code>","<code>std::couple</code>","<code>std::pair</code>","<code>std::two</code>"],"a":2},
+                {"q":"How do you access the first element of <code>std::pair&lt;string,int&gt; p</code>?","o":["<code>p[0]</code>","<code>p.first</code>","<code>p.get(0)</code>","<code>p.key</code>"],"a":1},
+                {"q":"What STL class template can hold an arbitrary number of differently-typed values?","o":["<code>std::vector</code>","<code>std::array</code>","<code>std::tuple</code>","<code>std::list</code>"],"a":2},
+                {"q":"How do you access the second element of a <code>std::tuple</code>?","o":["<code>t[1]</code>","<code>t.second</code>","<code>std::get&lt;1&gt;(t)</code>","<code>t.at(1)</code>"],"a":2},
+                {"q":"What C++17 feature lets you unpack a tuple into named variables?","o":["Range-based for","Structured bindings: <code>auto [a, b, c] = t;</code>","Lambda captures","Fold expressions"],"a":1},
+                {"q":"Can a non-template class inherit from a class template instantiation?","o":["No, only template classes can inherit from templates","Yes, e.g. <code>class IntBox : public Box&lt;int&gt; { };</code>","Only if the base is abstract","Only in C++20"],"a":1},
+                {"q":"Can a template class inherit from another template class?","o":["No","Yes, e.g. <code>template&lt;typename T&gt; class D : public B&lt;T&gt; { };</code>","Only with the same type parameter name","Only using virtual inheritance"],"a":1},
+                {"q":"Why do you need <code>this-&gt;</code> to access base members inside a derived template class?","o":["For performance","Because the compiler needs guidance for dependent names in templates","It is optional but recommended","Because all members are private"],"a":1},
+                {"q":"Where should class template definitions be placed?","o":["In .cpp files only","In header files so the compiler sees the full definition at each instantiation point","In a separate template file","Anywhere &mdash; it does not matter"],"a":1},
+                {"q":"What happens if you define a class template in a .cpp file and use it in another .cpp file?","o":["It works fine","A linker error occurs because the template cannot be instantiated","A runtime crash","A warning but it compiles"],"a":1},
+                {"q":"Do class templates cause runtime overhead?","o":["Yes, significant overhead","No, they are resolved at compile time with zero runtime overhead","Only with specializations","Only with non-type parameters"],"a":1},
+                {"q":"What is a potential downside of heavy template usage?","o":["Slower runtime performance","Increased compile time and larger binary size (code bloat)","Memory leaks","Thread-safety issues"],"a":1},
+                {"q":"What is code bloat in the context of templates?","o":["Too many comments in code","The compiler generating many similar class instantiations, increasing binary size","Using too many variables","Having too many headers"],"a":1},
+                {"q":"Can a class template have default template arguments?","o":["No","Yes, e.g. <code>template&lt;typename T = int&gt; class C { };</code>","Only function templates can","Only in C++20"],"a":1},
+                {"q":"What is the default value of <code>MaxSize</code> in <code>template&lt;typename T, int MaxSize = 100&gt; class Stack</code>?","o":["0","50","100","No default"],"a":2},
+                {"q":"Can you use <code>Stack&lt;int&gt;</code> without specifying <code>MaxSize</code> if a default is provided?","o":["No, all parameters must be specified","Yes, the default value is used","Only in C++17","Only if MaxSize is the first parameter"],"a":1},
+                {"q":"What is instantiated when you write <code>Box&lt;double&gt; b(3.14);</code>?","o":["A runtime object only","A compile-time generated class <code>Box</code> with <code>T = double</code>","A function template","A macro expansion"],"a":1},
+                {"q":"How many class instantiations does the compiler generate for <code>Box&lt;int&gt;</code> and <code>Box&lt;double&gt;</code>?","o":["One","Two &mdash; one for each distinct type argument","Three","None until runtime"],"a":1},
+                {"q":"Which STL container is a class template?","o":["<code>std::vector</code>","<code>std::cout</code>","<code>std::endl</code>","<code>std::cin</code>"],"a":0},
+                {"q":"Can you nest a struct inside a class template?","o":["No","Yes, the nested struct can also use the template parameter <code>T</code>","Only in C++20","Only if it is public"],"a":1},
+                {"q":"In a template Queue, what type is each <code>Node</code>&rsquo;s <code>data</code> member?","o":["Always int","The template parameter <code>T</code>","void*","auto"],"a":1},
+                {"q":"What happens if no code ever uses a class template?","o":["A linker error","Nothing &mdash; the compiler does not instantiate it","A warning is issued","The template is compiled anyway"],"a":1},
+                {"q":"Can class templates have static members?","o":["No","Yes, each instantiation gets its own copy of the static member","Only in C++17","Only with full specialization"],"a":1},
+                {"q":"If <code>Box&lt;T&gt;</code> has a static member <code>count</code>, do <code>Box&lt;int&gt;</code> and <code>Box&lt;double&gt;</code> share it?","o":["Yes, they share one count","No, each instantiation has its own separate count","Only if declared extern","It depends on the compiler"],"a":1},
+                {"q":"What is an advantage of using a class template Stack over a void* based stack?","o":["Void* is faster","The template version provides type safety at compile time","They are equivalent","Void* uses less memory"],"a":1},
+                {"q":"Can a class template be a friend of another class?","o":["No","Yes, using a friend declaration with the template syntax","Only in C++20","Only if both are templates"],"a":1},
+                {"q":"What does <code>template&lt;typename T&gt; class Duo&lt;T, T&gt;</code> represent?","o":["A full specialization","A partial specialization where both parameters are the same type","A primary template","A syntax error"],"a":1},
+                {"q":"Which C++ standard introduced class templates?","o":["C++98","C++11","C++14","C++17"],"a":0},
+                {"q":"What is the relationship between class templates and generic programming?","o":["They are unrelated","Class templates are the primary mechanism for generic programming in C++","Generic programming only uses macros","Class templates replaced generic programming"],"a":1},
+                {"q":"Can you have a template parameter that is itself a template (template template parameter)?","o":["No","Yes, e.g. <code>template&lt;template&lt;typename&gt; class Container&gt;</code>","Only in C++20","Only for function templates"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="function-templates.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Function Templates</span>
+                </a>
+                <a href="vectors.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">STL Vectors</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

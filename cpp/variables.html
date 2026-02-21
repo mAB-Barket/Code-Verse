@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables in C++ - CodeVerse</title>
+    <title>C++ Variables & Constants - CodeVerse</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 </head>
 <body data-page="cpp-variables">
+    <div class="scroll-progress"></div>
     <header class="site-header">
         <div class="header-inner">
             <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
@@ -31,123 +32,650 @@
             <div class="sidebar-title">C++ Lessons</div>
             <nav class="sidebar-nav">
                 <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
-                <a href="variables.html" class="active"><span class="lesson-number">2</span> Variables</a>
-                <a href="comments.html"><span class="lesson-number">3</span> Comments</a>
-                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
-                <a href="functions.html"><span class="lesson-number">5</span> Functions</a>
-                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
-                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html" class="active"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
             </nav>
             <div class="sidebar-progress">
-                <span class="progress-text">Progress: 2 / 7</span>
-                <div class="progress-bar"><div class="progress-fill" data-progress="28" style="width:28%"></div></div>
+                <span class="progress-text">Progress: 5 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="9" style="width:9%"></div></div>
             </div>
         </aside>
 
-        <div class="tutorial-content">
+        <main class="tutorial-content">
             <div class="tutorial-header">
                 <div class="breadcrumb">
-                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Variables
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Variables &amp; Constants
                 </div>
-                <h1>2. Variables in C++</h1>
+                <h1>5. Variables &amp; Constants</h1>
                 <div class="tutorial-meta">
-                    <span>&#128218; Lesson 2 of 7</span>
-                    <span>&#9201; 12 min read</span>
+                    <span>&#128218; Lesson 5 of 55</span>
+                    <span>&#9201; 20 min read</span>
                     <span>&#127793; Beginner</span>
                 </div>
             </div>
 
             <div class="content-body">
-                <p>Variables are fundamental building blocks in C++ programming that store data values which can be manipulated during program execution. Each variable must be declared with a specific data type that determines what kind of data it can hold.</p>
 
-                <div class="code-example">
-                    <pre><code>// Basic variable declaration and initialization
-int age = 25;
-float price = 99.99;
-char grade = 'A';
-bool isActive = true;</code></pre>
+                <h2>What Are Variables?</h2>
+                <p>A <strong>variable</strong> is a named storage location in the computer's memory that holds a value. Think of a variable like a labeled box: the label is the variable's name, and the content of the box is the value stored in it. Variables allow your program to store, retrieve, and manipulate data during execution.</p>
+                <p>In C++, every variable has three key properties:</p>
+                <ul>
+                    <li><strong>Name</strong> &mdash; A unique identifier you choose (e.g., <code>age</code>, <code>temperature</code>, <code>studentName</code>)</li>
+                    <li><strong>Type</strong> &mdash; The kind of data it stores (e.g., <code>int</code>, <code>double</code>, <code>char</code>, <code>string</code>)</li>
+                    <li><strong>Value</strong> &mdash; The actual data stored in the variable</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Declaring a variable
+    int age;          // Declaration: creates a variable of type int
+
+    // Assigning a value
+    age = 25;         // Assignment: stores 25 in the variable age
+
+    // Using the variable
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;  // Output: Age: 25
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>A variable is a named memory location that stores data. Every C++ variable must be declared with a type before use. Declaration tells the compiler what kind of data the variable will hold and how much memory to allocate for it.</p>
                 </div>
 
-                <p>Variables can have different scopes and lifetimes:</p>
+                <h2>Declaring Variables</h2>
+                <p>In C++, you must <strong>declare</strong> a variable before you can use it. Declaration tells the compiler the variable's name and type. There are several ways to declare variables:</p>
+
+                <h3>Method 1: Declaration Then Assignment</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int age;           // Declaration
+age = 25;          // Assignment (later)</pre></div>
+
+                <h3>Method 2: Declaration With Initialization</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int age = 25;              // Copy initialization
+int height(180);           // Direct initialization
+int weight{75};            // Brace initialization (C++11, preferred)
+int score = {100};         // Copy-list initialization</pre></div>
+
+                <h3>Method 3: Multiple Variables</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int x = 5, y = 10, z = 15;   // Multiple variables of the same type
+double pi = 3.14, e = 2.71;  // Multiple doubles</pre></div>
+
+                <h3>Method 4: Using auto (C++11)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>auto name = "Alice";     // auto deduces type as const char*
+auto count = 42;         // auto deduces type as int
+auto price = 9.99;       // auto deduces type as double
+auto letter = 'A';       // auto deduces type as char</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++11 introduced brace initialization <code>int x{5};</code> which is the safest form because it prevents narrowing conversions (e.g., assigning a double to an int). The <code>auto</code> keyword lets the compiler deduce the type automatically from the initializer.</p>
+                </div>
+
+                <h2>Variable Naming Rules</h2>
+                <p>C++ has strict rules for naming variables:</p>
                 <ul>
-                    <li>Local variables: Declared inside functions</li>
-                    <li>Global variables: Declared outside functions</li>
-                    <li>Static variables: Retain values between function calls</li>
-                    <li>Constants: Values that cannot be changed</li>
+                    <li><strong>Must start with</strong> a letter (a-z, A-Z) or underscore (_)</li>
+                    <li><strong>Can contain</strong> letters, digits (0-9), and underscores</li>
+                    <li><strong>Cannot start with</strong> a digit</li>
+                    <li><strong>Cannot use</strong> C++ reserved keywords (like <code>int</code>, <code>return</code>, <code>class</code>, <code>if</code>)</li>
+                    <li><strong>Case-sensitive</strong>: <code>Age</code>, <code>age</code>, and <code>AGE</code> are three different variables</li>
+                    <li><strong>No spaces</strong> allowed in variable names</li>
                 </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// VALID variable names
+int age = 25;
+int _count = 0;
+int student_name = 1;
+int myAge = 30;
+int MAX_VALUE = 100;
+int item2 = 50;
+
+// INVALID variable names
+// int 2ndItem = 10;     // Cannot start with a digit
+// int my age = 20;      // No spaces allowed
+// int class = 5;        // 'class' is a reserved keyword
+// int my-var = 3;       // Hyphens not allowed</pre></div>
+
+                <h3>Naming Conventions</h3>
+                <p>While C++ doesn't enforce a naming style, the community follows common conventions:</p>
+                <ul>
+                    <li><strong>camelCase</strong> for variables and functions: <code>studentAge</code>, <code>totalScore</code>, <code>calculateArea</code></li>
+                    <li><strong>PascalCase</strong> for classes and structs: <code>StudentRecord</code>, <code>GameEngine</code></li>
+                    <li><strong>UPPER_SNAKE_CASE</strong> for constants and macros: <code>MAX_SIZE</code>, <code>PI</code>, <code>DEFAULT_COLOR</code></li>
+                    <li><strong>snake_case</strong> is also common (used by the C++ Standard Library): <code>student_age</code>, <code>total_score</code></li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Choose descriptive, meaningful names for your variables. A name like <code>studentAge</code> is far better than <code>x</code> or <code>sa</code>. Good naming makes code self-documenting and easier to understand.</p>
+                </div>
+
+                <h2>Variable Types Overview</h2>
+                <p>C++ provides several fundamental data types for variables. Here is a quick overview (we'll cover these in depth in the next lesson):</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Type</th><th>Description</th><th>Example</th><th>Size (typical)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>int</code></td><td>Integer numbers</td><td><code>int age = 25;</code></td><td>4 bytes</td></tr>
+                        <tr><td><code>double</code></td><td>Floating-point numbers</td><td><code>double pi = 3.14;</code></td><td>8 bytes</td></tr>
+                        <tr><td><code>float</code></td><td>Single-precision float</td><td><code>float temp = 98.6f;</code></td><td>4 bytes</td></tr>
+                        <tr><td><code>char</code></td><td>Single character</td><td><code>char grade = 'A';</code></td><td>1 byte</td></tr>
+                        <tr><td><code>bool</code></td><td>Boolean (true/false)</td><td><code>bool isValid = true;</code></td><td>1 byte</td></tr>
+                        <tr><td><code>string</code></td><td>Text string</td><td><code>string name = "Alice";</code></td><td>Varies</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    double gpa = 3.95;
+    float temperature = 98.6f;
+    char grade = 'A';
+    bool isEnrolled = true;
+    string name = "Alice Johnson";
+
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "GPA: " &lt;&lt; gpa &lt;&lt; endl;
+    cout &lt;&lt; "Temperature: " &lt;&lt; temperature &lt;&lt; endl;
+    cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; endl;
+    cout &lt;&lt; "Enrolled: " &lt;&lt; boolalpha &lt;&lt; isEnrolled &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h2>Constants</h2>
+                <p>A <strong>constant</strong> is a variable whose value cannot be changed after initialization. Constants are used to represent values that should remain fixed throughout the program, like mathematical constants (PI), configuration values, or limits.</p>
+
+                <h3>The const Keyword</h3>
+                <p>The most common way to create a constant in C++ is using the <code>const</code> keyword:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    const double PI = 3.14159265358979;
+    const int MAX_STUDENTS = 30;
+    const string SCHOOL_NAME = "CodeVerse Academy";
+
+    cout &lt;&lt; "PI = " &lt;&lt; PI &lt;&lt; endl;
+    cout &lt;&lt; "Max students: " &lt;&lt; MAX_STUDENTS &lt;&lt; endl;
+    cout &lt;&lt; "School: " &lt;&lt; SCHOOL_NAME &lt;&lt; endl;
+
+    // PI = 3.0;  // ERROR! Cannot modify a const variable
+    // MAX_STUDENTS = 50;  // ERROR!
+
+    return 0;
+}</pre></div>
+
+                <h3>constexpr (C++11)</h3>
+                <p>The <code>constexpr</code> keyword declares a constant whose value is computed at <strong>compile time</strong>. This is more restrictive than <code>const</code> but can enable optimizations:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+constexpr double PI = 3.14159265358979;
+constexpr int SQUARE(int x) { return x * x; }
+
+int main() {
+    constexpr int SIZE = 100;
+    constexpr double AREA = PI * SQUARE(5);  // Computed at compile time
+
+    cout &lt;&lt; "Area: " &lt;&lt; AREA &lt;&lt; endl;  // Output: Area: 78.5398
+
+    // These are evaluated at compile time, producing faster code
+    int arr[SIZE];  // Works because SIZE is a compile-time constant
+
+    return 0;
+}</pre></div>
+
+                <h3>#define Macros (Legacy)</h3>
+                <p>In older C++ code, you may see <code>#define</code> used for constants. This is a preprocessor directive that performs text substitution:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#define PI 3.14159
+#define MAX_SIZE 100
+
+// Modern C++ discourages #define for constants.
+// Prefer const or constexpr instead.
+// #define has no type safety and can cause subtle bugs.</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use <code>const</code> for runtime constants and <code>constexpr</code> for compile-time constants. Avoid <code>#define</code> for constants in modern C++ because it lacks type safety. Constants should be named in UPPER_SNAKE_CASE by convention.</p>
+                </div>
+
+                <h2>Variable Scope</h2>
+                <p><strong>Scope</strong> determines where a variable is accessible in your code. C++ has several types of scope:</p>
+
+                <h3>Local Scope (Block Scope)</h3>
+                <p>Variables declared inside a function or block <code>{}</code> are local to that block. They are created when the block is entered and destroyed when the block is exited:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 10;  // x is local to main()
+
+    {
+        int y = 20;  // y is local to this inner block
+        cout &lt;&lt; x &lt;&lt; endl;  // OK: x is visible here
+        cout &lt;&lt; y &lt;&lt; endl;  // OK: y is visible here
+    }
+
+    cout &lt;&lt; x &lt;&lt; endl;  // OK: x is still in scope
+    // cout &lt;&lt; y &lt;&lt; endl;  // ERROR: y is out of scope
+
+    return 0;
+}</pre></div>
+
+                <h3>Global Scope</h3>
+                <p>Variables declared outside all functions have global scope. They are accessible from any function in the file:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int globalVar = 100;  // Global variable
+
+void display() {
+    cout &lt;&lt; "Global in display(): " &lt;&lt; globalVar &lt;&lt; endl;
+}
+
+int main() {
+    cout &lt;&lt; "Global in main(): " &lt;&lt; globalVar &lt;&lt; endl;
+    display();
+
+    int globalVar = 50;  // Local variable SHADOWS the global one
+    cout &lt;&lt; "Local in main(): " &lt;&lt; globalVar &lt;&lt; endl;    // 50
+    cout &lt;&lt; "Global via :: " &lt;&lt; ::globalVar &lt;&lt; endl;     // 100
+
+    return 0;
+}</pre></div>
+
+                <h3>Static Variables</h3>
+                <p>A <code>static</code> local variable retains its value between function calls:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void counter() {
+    static int count = 0;  // Initialized only once
+    count++;
+    cout &lt;&lt; "Count: " &lt;&lt; count &lt;&lt; endl;
+}
+
+int main() {
+    counter();  // Count: 1
+    counter();  // Count: 2
+    counter();  // Count: 3
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Local variables exist only within their block <code>{}</code>. Global variables are accessible everywhere but should be avoided because they make code harder to maintain and debug. Use the scope resolution operator <code>::</code> to access a global variable shadowed by a local one. Static local variables persist across function calls.</p>
+                </div>
+
+                <h2>Type Conversion</h2>
+                <p>Sometimes you need to convert a value from one type to another. C++ supports both <strong>implicit</strong> (automatic) and <strong>explicit</strong> (manual) conversion.</p>
+
+                <h3>Implicit Conversion (Coercion)</h3>
+                <p>The compiler automatically converts compatible types when it is safe:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int myInt = 42;
+    double myDouble = myInt;  // int to double (safe, no data loss)
+    cout &lt;&lt; myDouble &lt;&lt; endl; // 42.0
+
+    double pi = 3.14159;
+    int truncated = pi;  // double to int (narrowing, loses decimal part)
+    cout &lt;&lt; truncated &lt;&lt; endl; // 3 (truncated, NOT rounded)
+
+    char letter = 'A';
+    int ascii = letter;  // char to int (gives ASCII value)
+    cout &lt;&lt; ascii &lt;&lt; endl; // 65
+
+    return 0;
+}</pre></div>
+
+                <h3>Explicit Conversion (Casting)</h3>
+                <p>You can force a type conversion using casts:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double price = 9.99;
+
+    // C-style cast (works but not recommended in C++)
+    int rounded1 = (int)price;
+
+    // C++ functional cast
+    int rounded2 = int(price);
+
+    // static_cast (preferred in modern C++)
+    int rounded3 = static_cast&lt;int&gt;(price);
+
+    cout &lt;&lt; rounded1 &lt;&lt; endl;  // 9
+    cout &lt;&lt; rounded2 &lt;&lt; endl;  // 9
+    cout &lt;&lt; rounded3 &lt;&lt; endl;  // 9
+
+    // Integer division vs. floating-point division
+    int a = 7, b = 2;
+    cout &lt;&lt; "Integer div: " &lt;&lt; a / b &lt;&lt; endl;  // 3
+    cout &lt;&lt; "Float div: " &lt;&lt; static_cast&lt;double&gt;(a) / b &lt;&lt; endl;  // 3.5
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use <code>static_cast&lt;type&gt;(value)</code> for explicit conversions in modern C++. Be careful with narrowing conversions (e.g., double to int) as they lose data. Brace initialization <code>int x{3.5};</code> will produce a compiler error for narrowing conversions, catching bugs early.</p>
+                </div>
+
+                <h2>Practical Example: Student Record</h2>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    // Student information using different variable types
+    const string SCHOOL = "CodeVerse Academy";
+    string studentName = "Bob Smith";
+    int studentId = 12345;
+    int age = 20;
+    double gpa = 3.85;
+    char grade = 'A';
+    bool isHonorsStudent = true;
+    static int totalStudents = 0;
+
+    totalStudents++;
+
+    cout &lt;&lt; "===== " &lt;&lt; SCHOOL &lt;&lt; " =====" &lt;&lt; endl;
+    cout &lt;&lt; "Student: " &lt;&lt; studentName &lt;&lt; endl;
+    cout &lt;&lt; "ID: " &lt;&lt; studentId &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "GPA: " &lt;&lt; gpa &lt;&lt; endl;
+    cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; endl;
+    cout &lt;&lt; "Honors: " &lt;&lt; boolalpha &lt;&lt; isHonorsStudent &lt;&lt; endl;
+    cout &lt;&lt; "Total Students: " &lt;&lt; totalStudents &lt;&lt; endl;
+
+    // Modify variables
+    age++;  // increment age
+    gpa = 3.90;
+    grade = 'A';
+
+    cout &lt;&lt; "\nAfter updates:" &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "GPA: " &lt;&lt; gpa &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h2>Common Mistakes with Variables</h2>
+                <ul>
+                    <li><strong>Using before declaring</strong>: <code>cout &lt;&lt; x;</code> before <code>int x = 5;</code> will cause a compiler error.</li>
+                    <li><strong>Using uninitialized variables</strong>: Uninitialized local variables contain garbage values. Always initialize!</li>
+                    <li><strong>Shadowing</strong>: A local variable with the same name as a global one hides the global version.</li>
+                    <li><strong>Modifying constants</strong>: Trying to change a <code>const</code> variable causes a compiler error.</li>
+                    <li><strong>Type mismatch</strong>: Storing a string in an int variable causes errors.</li>
+                    <li><strong>Narrowing conversions</strong>: Assigning <code>double</code> to <code>int</code> silently truncates the decimal part.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Always initialize variables when you declare them. Use <code>const</code> for values that shouldn't change. Prefer <code>constexpr</code> when the value is known at compile time. Choose meaningful, descriptive variable names. Use <code>static_cast</code> for explicit type conversions.</p>
+                </div>
+
             </div>
 
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/JrnQ-915czY"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/z_gyuP-DSDI" title="C++ Variables" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
 
-            <section class="quiz-section">
-                <h2>Test Your Knowledge</h2>
-                <div class="quiz-question">
-                    <h3>1. Which of the following is a valid variable declaration in C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">int number = 42;</div>
-                        <div class="quiz-option">123variable = 10;</div>
-                        <div class="quiz-option">float 1.5 = price;</div>
-                        <div class="quiz-option">char @symbol = '$';</div>
-                    </div>
-                </div>
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
 
-                <div class="quiz-question">
-                    <h3>2. What is the purpose of the 'const' keyword in C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">To declare a variable whose value cannot be changed</div>
-                        <div class="quiz-option">To create a temporary variable</div>
-                        <div class="quiz-option">To declare a global variable</div>
-                        <div class="quiz-option">To create a pointer variable</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>3. Which of these is NOT a valid data type in C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option">int</div>
-                        <div class="quiz-option">float</div>
-                        <div class="quiz-option" data-correct="true">string</div>
-                        <div class="quiz-option">char</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>4. What is the scope of a local variable in C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">Within the block or function where it is declared</div>
-                        <div class="quiz-option">Throughout the entire program</div>
-                        <div class="quiz-option">Only in the main function</div>
-                        <div class="quiz-option">Within the header file</div>
-                    </div>
-                </div>
-
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
                 <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
             </section>
 
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a variable in C++?","o":["A constant value","A named storage location in memory","A function","A data type"],"a":1},
+                {"q":"Which of these is a valid variable declaration?","o":["int 2x = 5;","int x = 5;","int my var = 5;","int class = 5;"],"a":1},
+                {"q":"What keyword makes a variable's value unchangeable?","o":["static","var","const","final"],"a":2},
+                {"q":"What is the default value of an uninitialized local int variable?","o":["0","1","Garbage/undefined","null"],"a":2},
+                {"q":"Which initialization style prevents narrowing conversions?","o":["int x = 3.5;","int x(3.5);","int x{3.5};","int x := 3.5;"],"a":2},
+                {"q":"What does the 'auto' keyword do in C++11?","o":["Creates an automatic variable","Deduces the type from the initializer","Makes a variable constant","Declares a static variable"],"a":1},
+                {"q":"Which naming convention is recommended for constants?","o":["camelCase","lowercase","UPPER_SNAKE_CASE","PascalCase"],"a":2},
+                {"q":"Can a variable name start with a digit in C++?","o":["Yes","Only with underscore prefix","No","Only in C++20"],"a":2},
+                {"q":"What is variable scope?","o":["The size of a variable","Where a variable is accessible","The type of a variable","The value of a variable"],"a":1},
+                {"q":"What is a global variable?","o":["A variable inside main()","A variable declared outside all functions","A constant variable","A static variable"],"a":1},
+                {"q":"What does 'static' do to a local variable?","o":["Makes it global","Makes it constant","Retains its value between function calls","Deletes it after use"],"a":2},
+                {"q":"What is the scope resolution operator?","o":["->","::",".",":"],"a":1},
+                {"q":"Which cast is preferred in modern C++?","o":["(int)value","int(value)","static_cast<int>(value)","cast<int>(value)"],"a":2},
+                {"q":"What happens when you assign a double to an int?","o":["Compilation error","The decimal part is truncated","The value is rounded","Nothing happens"],"a":1},
+                {"q":"What is 'constexpr' used for?","o":["Runtime constants","Compile-time constants","Variable declarations","Function calls"],"a":1},
+                {"q":"Is C++ case-sensitive for variable names?","o":["No","Yes","Only for keywords","Only for functions"],"a":1},
+                {"q":"What value does 'char letter = A;' have?","o":["Character A","Compilation error - needs quotes","ASCII value of A","Undefined"],"a":1},
+                {"q":"Which is NOT a valid variable name?","o":["_count","my_var","return","value1"],"a":2},
+                {"q":"What does 'boolalpha' do with cout?","o":["Converts bool to int","Prints true/false instead of 1/0","Creates a boolean","Reverses a boolean"],"a":1},
+                {"q":"What is shadowing?","o":["Hiding a global variable with a local one of the same name","Creating a shadow copy","Deleting a variable","Renaming a variable"],"a":0},
+                {"q":"What is the difference between const and constexpr?","o":["No difference","const is runtime, constexpr is compile-time","constexpr is slower","const only works with integers"],"a":1},
+                {"q":"What does 'int x{};' initialize x to?","o":["Undefined","0 (value initialization)","1","Compiler error"],"a":1},
+                {"q":"How many bytes does a typical int use?","o":["1 byte","2 bytes","4 bytes","8 bytes"],"a":2},
+                {"q":"Which is copy initialization?","o":["int x(5);","int x{5};","int x = 5;","int x := 5;"],"a":2},
+                {"q":"Which is direct initialization?","o":["int x = 5;","int x(5);","int x{5};","int x := 5;"],"a":1},
+                {"q":"Which is brace (uniform) initialization?","o":["int x = 5;","int x(5);","int x{5};","int x := 5;"],"a":2},
+                {"q":"What is the purpose of #define in older C++?","o":["Declaring variables","Creating macros/constants via text substitution","Defining functions","Importing libraries"],"a":1},
+                {"q":"Why is #define discouraged in modern C++?","o":["It's too slow","It lacks type safety","It doesn't work","It uses too much memory"],"a":1},
+                {"q":"What does 'int a = 7/2;' store in a?","o":["3.5","3","4","Error"],"a":1},
+                {"q":"How do you get 3.5 from dividing 7 by 2?","o":["7/2","static_cast<double>(7)/2","int(7)/2","7%2"],"a":1},
+                {"q":"What is an lvalue?","o":["A left-hand-side value that has a memory address","A literal value","A large value","A linked value"],"a":0},
+                {"q":"What is an rvalue?","o":["A return value","A temporary value without a persistent address","A right variable","A reference value"],"a":1},
+                {"q":"Can you declare multiple variables of different types in one statement?","o":["Yes","No","Only with auto","Only in C++20"],"a":1},
+                {"q":"What does 'string name;' initialize name to?","o":["null","undefined","Empty string \"\"","Error"],"a":2},
+                {"q":"Which header is needed for std::string?","o":["<iostream>","<string>","<cstring>","<text>"],"a":1},
+                {"q":"What is the lifetime of a local variable?","o":["Entire program","From declaration to end of its block","Until explicitly deleted","Until the function is called again"],"a":1},
+                {"q":"What is the lifetime of a global variable?","o":["From declaration to end of block","Entire program execution","Until main() returns","Until deleted"],"a":1},
+                {"q":"What is the lifetime of a static local variable?","o":["Same as a regular local","Entire program execution","Until the function ends","Until reassigned"],"a":1},
+                {"q":"What does 'extern' keyword do?","o":["Makes a variable external and shareable across files","Makes a variable constant","Deletes a variable","Creates a new scope"],"a":0},
+                {"q":"Can a const variable be initialized at runtime?","o":["No, only compile time","Yes, const works at runtime","Only with constexpr","Only with static"],"a":1},
+                {"q":"What is the difference between float and double?","o":["No difference","float is 4 bytes, double is 8 bytes","float is 8 bytes, double is 4 bytes","float is for integers"],"a":1},
+                {"q":"What suffix indicates a float literal?","o":["d","L","f","i"],"a":2},
+                {"q":"What does 'bool active = true;' store?","o":["The string \"true\"","The integer 1","A boolean true value","A character 't'"],"a":2},
+                {"q":"What is the default value of a global int variable?","o":["Garbage","0","1","null"],"a":1},
+                {"q":"What does type deduction mean?","o":["Guessing variable values","Compiler automatically determines the type","Manual type assignment","Type conversion"],"a":1},
+                {"q":"Which is safer: int x = 3.7; or int x{3.7};?","o":["int x = 3.7; is safer","int x{3.7}; is safer (warns/errors on narrowing)","Both are equally safe","Neither compiles"],"a":1},
+                {"q":"What does 'volatile' keyword mean?","o":["Variable can change unexpectedly","Variable is constant","Variable is global","Variable is deleted"],"a":0},
+                {"q":"What is a literal in C++?","o":["A variable name","A fixed value written directly in code","A function call","A type name"],"a":1},
+                {"q":"What type is the literal 42?","o":["double","float","int","long"],"a":2},
+                {"q":"What type is the literal 3.14?","o":["float","int","double","long double"],"a":2},
+                {"q":"What type is the literal 'A'?","o":["string","int","char","bool"],"a":2},
+                {"q":"What type is the literal \"Hello\"?","o":["string","char","const char*","char[]"],"a":2},
+                {"q":"What type is the literal true?","o":["int","string","char","bool"],"a":3},
+                {"q":"What does narrowing conversion mean?","o":["Making a variable narrower","Converting to a type that may lose data","Making a smaller variable","Reducing memory"],"a":1},
+                {"q":"Can you reassign a const variable?","o":["Yes","No","Only once","Only with constexpr"],"a":1},
+                {"q":"What is the '::' operator called?","o":["Member access","Scope resolution","Assignment","Comparison"],"a":1},
+                {"q":"What does '::globalVar' access?","o":["Local variable","Global variable (bypassing local shadow)","Static variable","Constant"],"a":1},
+                {"q":"What is a storage class in C++?","o":["A type of class","Determines lifetime, visibility, and linkage","A template parameter","A namespace"],"a":1},
+                {"q":"Which storage class specifiers exist in C++?","o":["auto, register, static, extern, mutable","public, private, protected","const, volatile, constexpr","int, float, double, char"],"a":0},
+                {"q":"What is the 'register' keyword?","o":["Registers a variable in a database","Hints compiler to store in CPU register (deprecated)","Creates a new register","Opens a file"],"a":1},
+                {"q":"Is 'register' keyword still useful in modern C++?","o":["Yes, very useful","No, it's deprecated in C++17","Only for embedded systems","Only for global variables"],"a":1},
+                {"q":"What does 'mutable' keyword do?","o":["Makes a variable mutable in a const context","Makes a variable constant","Deletes a variable","Creates a copy"],"a":0},
+                {"q":"How do you declare a constant pointer?","o":["const int* ptr","int* const ptr","int const* ptr","Both A and C"],"a":1},
+                {"q":"How do you declare a pointer to a constant?","o":["int* const ptr","const int* ptr","int const ptr","int* ptr const"],"a":1},
+                {"q":"What is 'typedef' used for?","o":["Defining new data types","Creating type aliases","Declaring variables","Importing libraries"],"a":1},
+                {"q":"What is 'using' used for in type aliases (C++11)?","o":["Importing namespaces only","Creating type aliases (using MyType = int;)","Declaring variables","Defining functions"],"a":1},
+                {"q":"What is the advantage of 'using' over 'typedef'?","o":["No advantage","Works with templates","Is faster","Uses less memory"],"a":1},
+                {"q":"What does 'sizeof(int)' return?","o":["The value of the int","Number of bytes int occupies","The address of int","The name of int"],"a":1},
+                {"q":"What is the output of: int x = 5; cout << x++;","o":["5","6","4","Error"],"a":0},
+                {"q":"What is the output of: int x = 5; cout << ++x;","o":["5","6","4","Error"],"a":1},
+                {"q":"What does post-increment (x++) do?","o":["Increments then returns","Returns current value then increments","Doubles the value","Decrements"],"a":1},
+                {"q":"What does pre-increment (++x) do?","o":["Returns current then increments","Increments then returns new value","Doubles the value","Decrements"],"a":1},
+                {"q":"What is the difference between = and ==?","o":["No difference","= is assignment, == is comparison","= is comparison, == is assignment","Both are assignment"],"a":1},
+                {"q":"What happens if you use = instead of == in a condition?","o":["Syntax error","Assigns the value (often a bug)","Nothing different","Compiler prevents it"],"a":1},
+                {"q":"Can a variable name be the same as a function name?","o":["Yes in all cases","No, it causes ambiguity","Only in different scopes","Only for global variables"],"a":2},
+                {"q":"What is aggregate initialization?","o":["Initializing a single variable","Initializing arrays/structs with brace-enclosed lists","Combining two variables","Merging arrays"],"a":1},
+                {"q":"What does 'int arr[] = {1,2,3};' create?","o":["A pointer","An array of 3 integers","A vector","A linked list"],"a":1},
+                {"q":"What is the maximum value of a typical 32-bit signed int?","o":["2,147,483,647","4,294,967,295","32,767","65,535"],"a":0},
+                {"q":"What is the minimum value of a typical 32-bit signed int?","o":["0","-32,768","-2,147,483,648","-65,536"],"a":2},
+                {"q":"What is an unsigned int?","o":["A negative integer","An integer that cannot be negative","A floating point","An uninitialized int"],"a":1},
+                {"q":"What happens when an unsigned int goes below 0?","o":["It becomes negative","It wraps around to a large positive value","Error","Stays at 0"],"a":1},
+                {"q":"What is 'long long' in C++?","o":["A very long string","An integer type of at least 64 bits","A double-length float","A boolean"],"a":1},
+                {"q":"What is 'short' in C++?","o":["A short string","An integer type of at least 16 bits","A single character","A boolean"],"a":1},
+                {"q":"Can you use emojis in C++ variable names?","o":["Yes","No, only ASCII letters, digits, and underscore","Only in C++20","Only on macOS"],"a":1},
+                {"q":"What does 'decltype' do in C++11?","o":["Declares a type","Deduces the type of an expression","Deletes a type","Creates a type alias"],"a":1},
+                {"q":"What is the difference between 'auto' and 'decltype'?","o":["No difference","auto deduces from initializer, decltype from expression","auto is for functions only","decltype is for variables only"],"a":1},
+                {"q":"What is a compound assignment operator?","o":["= only","Operators like +=, -=, *=, /=","Comparison operators","Logical operators"],"a":1},
+                {"q":"What does 'x += 5;' mean?","o":["x = 5","x = x + 5","x = x - 5","x = 5 + 5"],"a":1},
+                {"q":"What does 'x -= 3;' mean?","o":["x = 3","x = x - 3","x = x + 3","x = 3 - x"],"a":1},
+                {"q":"What does 'x *= 2;' mean?","o":["x = 2","x = x * 2","x = x / 2","x = 2 * 2"],"a":1},
+                {"q":"What does 'x /= 4;' mean?","o":["x = 4","x = x / 4","x = x * 4","x = 4 / x"],"a":1},
+                {"q":"What does 'x %= 3;' mean?","o":["x = 3","x = x % 3 (remainder)","x = x / 3","x = 3 % x"],"a":1},
+                {"q":"What is the ternary operator?","o":["An operator with three operands: condition ? true_val : false_val","A three-variable declaration","A triple loop","An error handler"],"a":0},
+                {"q":"What does 'int x = (5 > 3) ? 10 : 20;' assign to x?","o":["5","3","10","20"],"a":2},
+                {"q":"Can a const variable be global?","o":["No","Yes","Only in the main file","Only with extern"],"a":1},
+                {"q":"What is internal linkage?","o":["Variable accessible from any file","Variable accessible only within its translation unit","Variable inside a function","Variable with no name"],"a":1},
+                {"q":"What gives a const global variable internal linkage by default?","o":["The static keyword","The const keyword itself in C++","The extern keyword","The inline keyword"],"a":1},
+                {"q":"What is a translation unit?","o":["A compiled executable","A source file after preprocessing (with all includes expanded)","A header file","A library"],"a":1},
+                {"q":"What is the difference between declaration and definition?","o":["No difference","Declaration announces existence; definition allocates storage","Declaration allocates storage; definition announces","Both allocate storage"],"a":1},
+                {"q":"Can you declare a variable without defining it?","o":["No","Yes, using extern","Only for functions","Only for constants"],"a":1},
+                {"q":"What is the size of 'bool' in C++?","o":["1 bit","1 byte (typically)","2 bytes","4 bytes"],"a":1},
+                {"q":"What happens if you add 1 to the maximum int value?","o":["It stays at max","Integer overflow (undefined behavior for signed)","Error","It becomes 0"],"a":1},
+                {"q":"What is undefined behavior?","o":["A compiler error","Behavior not specified by the C++ standard","A warning","A runtime exception"],"a":1},
+                {"q":"What is 'int8_t' from <cstdint>?","o":["An 8-character int","An exactly 8-bit signed integer type","An 8-byte int","A boolean"],"a":1},
+                {"q":"What header provides fixed-width integer types?","o":["<iostream>","<cstdint>","<climits>","<cmath>"],"a":1},
+                {"q":"What does <climits> provide?","o":["String functions","Macros for integer type limits (INT_MAX, etc.)","Math functions","I/O functions"],"a":1},
+                {"q":"What is INT_MAX?","o":["A function","A macro for the maximum value of int","A variable","A type"],"a":1},
+                {"q":"What does 'numeric_limits<int>::max()' return?","o":["0","The maximum value for int","INT_MIN","The size of int"],"a":1},
+                {"q":"What header is needed for numeric_limits?","o":["<iostream>","<limits>","<cmath>","<climits>"],"a":1},
+                {"q":"What does 'int* p = nullptr;' declare?","o":["An integer","A null pointer to int","A null integer","An error"],"a":1},
+                {"q":"What is the default value of a static local variable?","o":["Garbage","0 (zero-initialized)","1","null"],"a":1},
+                {"q":"Can constexpr variables be used as array sizes?","o":["No","Yes, they are compile-time constants","Only in C++20","Only for vectors"],"a":1},
+                {"q":"What is a magic number?","o":["A random variable","An unexplained literal value in code (avoid these)","A special function","A constant with a comment"],"a":1},
+                {"q":"Why should you avoid magic numbers?","o":["They're slow","They make code unreadable and hard to maintain","They cause errors","They use extra memory"],"a":1},
+                {"q":"How do you fix a magic number?","o":["Delete it","Replace it with a named constant","Add a comment","Make it global"],"a":1},
+                {"q":"What is a variable's address?","o":["Its name","Its memory location (obtainable with &)","Its type","Its value"],"a":1},
+                {"q":"How do you print a variable's address?","o":["cout << x","cout << &x","cout << *x","cout << x.address"],"a":1},
+                {"q":"What is 'auto' deduced to for 'auto x = 5;'?","o":["double","float","int","long"],"a":2},
+                {"q":"What is 'auto' deduced to for 'auto x = 5.0;'?","o":["float","int","double","long double"],"a":2},
+                {"q":"What is 'auto' deduced to for 'auto x = 'A';'?","o":["string","int","char","bool"],"a":2},
+                {"q":"What is 'auto' deduced to for 'auto x = true;'?","o":["int","string","char","bool"],"a":3},
+                {"q":"Can you use auto without an initializer?","o":["Yes","No, auto requires an initializer","Only in C++20","Only for ints"],"a":1},
+                {"q":"What does 'const auto x = 5;' create?","o":["A mutable int","A const int","An error","A double"],"a":1},
+                {"q":"What is the output of: int x = 10; x = x + 5; cout << x;","o":["10","5","15","Error"],"a":2},
+                {"q":"What is re-assignment?","o":["Declaring a new variable","Giving a new value to an existing variable","Creating a copy","Deleting a variable"],"a":1},
+                {"q":"What is initialization?","o":["Changing a variable's value","Giving a variable its first value at declaration","Declaring without a value","Deleting a variable"],"a":1},
+                {"q":"What is the difference between initialization and assignment?","o":["No difference","Initialization sets the first value; assignment changes it later","Initialization is slower","Assignment is for constants"],"a":1},
+                {"q":"Can two variables have the same name in different scopes?","o":["No","Yes, each scope has its own 'copy'","Only for global variables","Only in C++20"],"a":1},
+                {"q":"What is a dangling reference?","o":["A reference to a deleted/out-of-scope variable","A null pointer","An uninitialized variable","A constant reference"],"a":0},
+                {"q":"What is structured binding (C++17)?","o":["Binding a struct to memory","auto [x, y] = pair; to decompose into variables","Creating a struct","Binding a function"],"a":1},
+                {"q":"What does 'auto [a, b] = make_pair(1, 2);' do?","o":["Error","Creates a=1, b=2 via structured binding","Creates a pair","Creates an array"],"a":1},
+                {"q":"What is the 'inline' keyword for variables (C++17)?","o":["Makes the variable faster","Allows definition in headers without ODR violations","Makes it constant","Makes it static"],"a":1},
+                {"q":"What is ODR in C++?","o":["Object Data Reference","One Definition Rule","Optional Dynamic Resolution","Open Data Record"],"a":1},
+                {"q":"Can you have a variable and a function with the same name in C++?","o":["Yes always","No, it causes a compilation error in the same scope","Only for global names","Only in different files"],"a":1},
+                {"q":"What is 'thread_local' storage duration?","o":["Variable shared across threads","Each thread gets its own copy","Variable deleted after each thread","Variable locked between threads"],"a":1},
+                {"q":"What are the four storage durations in C++?","o":["auto, static, dynamic, thread","automatic, static, dynamic, thread_local","local, global, heap, stack","fast, slow, medium, cached"],"a":1},
+                {"q":"What storage duration do local variables have?","o":["Static","Thread","Automatic","Dynamic"],"a":2},
+                {"q":"What storage duration do global variables have?","o":["Automatic","Static","Dynamic","Thread"],"a":1},
+                {"q":"What storage duration does 'new' create?","o":["Automatic","Static","Dynamic","Thread"],"a":2},
+                {"q":"What is 'const_cast' used for?","o":["Adding const","Removing const from a variable (use with extreme caution)","Creating constants","Casting to const"],"a":1},
+                {"q":"What is implicit conversion also called?","o":["Casting","Coercion","Shadowing","Overloading"],"a":1},
+                {"q":"In what order are global variables initialized?","o":["Alphabetical","Order of declaration within a file; undefined across files","Random","Reverse order"],"a":1},
+                {"q":"What is the 'static initialization order fiasco'?","o":["A bug in static functions","Undefined order of global variable initialization across files","A linker error","A compiler warning"],"a":1}
+            ]
+            </script>
+
             <div class="tutorial-nav">
-                <a href="introduction.html" class="prev-lesson">
+                <a href="basic-syntax.html" class="prev-lesson">
                     <span class="nav-label">&lsaquo; Previous Lesson</span>
-                    <span class="nav-title">Introduction to C++</span>
+                    <span class="nav-title">Basic Syntax</span>
                 </a>
-                <a href="comments.html" class="next-lesson">
+                <a href="data-types.html" class="next-lesson">
                     <span class="nav-label">Next Lesson &rsaquo;</span>
-                    <span class="nav-title">Comments</span>
+                    <span class="nav-title">Data Types</span>
                 </a>
             </div>
-        </div>
+        </main>
     </div>
 
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
-                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+                <p>Free, open-source programming tutorials for everyone.</p>
             </div>
             <div class="footer-column">
                 <h4>Languages</h4>
@@ -159,23 +687,20 @@ bool isActive = true;</code></pre>
             <div class="footer-column">
                 <h4>More</h4>
                 <a href="../csharp/index.html">C#</a>
-                <a href="../webdev/index.html">Web Development</a>
+                <a href="../webdev/index.html">Web Dev</a>
                 <a href="../rust/index.html">Rust</a>
                 <a href="../go/index.html">Go</a>
             </div>
             <div class="footer-column">
                 <h4>Platform</h4>
-                <a href="../about.html">About Us</a>
+                <a href="../about.html">About</a>
                 <a href="../resources.html">Resources</a>
                 <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
-                <div class="footer-socials">
-                    <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
-                </div>
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
             </div>
         </div>
     </footer>

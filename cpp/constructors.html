@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Constructors &amp; Destructors - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-constructors">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html" class="active"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 31 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="56" style="width:56%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Constructors &amp; Destructors
+                </div>
+                <h1>31. Constructors &amp; Destructors</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 31 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Constructors? ===== -->
+                <h2>What Are Constructors?</h2>
+                <p>A <strong>constructor</strong> is a special member function that is called <em>automatically</em> when an object of a class is created. Its primary purpose is to <strong>initialise</strong> the object&rsquo;s member variables so that the object starts life in a valid, predictable state.</p>
+                <p>Key characteristics of constructors:</p>
+                <ul>
+                    <li>The constructor has the <strong>same name</strong> as the class.</li>
+                    <li>It has <strong>no return type</strong> &mdash; not even <code>void</code>.</li>
+                    <li>It is invoked <strong>automatically</strong> when an object is instantiated &mdash; you never call it explicitly like a regular function.</li>
+                    <li>A class can have <strong>multiple constructors</strong> (overloading).</li>
+                </ul>
+                <p>Without a constructor, member variables of built-in types (like <code>int</code>, <code>double</code>) contain <strong>garbage values</strong> &mdash; whatever happens to be sitting in that memory location. Constructors ensure every object is born in a well-defined state.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Player {
+public:
+    string name;
+    int health;
+    int score;
+
+    // Constructor &ndash; called automatically on object creation
+    Player() {
+        name   = "Unknown";
+        health = 100;
+        score  = 0;
+        cout &lt;&lt; "Player created!" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Player p;           // constructor is called here
+    cout &lt;&lt; p.name   &lt;&lt; endl;   // Unknown
+    cout &lt;&lt; p.health &lt;&lt; endl;   // 100
+    cout &lt;&lt; p.score  &lt;&lt; endl;   // 0
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Default Constructor ===== -->
+                <h2>Default Constructor</h2>
+                <p>A <strong>default constructor</strong> is a constructor that can be called with <em>no arguments</em>. If you do not write any constructor at all, the compiler generates an implicit default constructor for you &mdash; but it does <em>not</em> initialise built-in type members.</p>
+                <div class="code-block">
+<pre><code>class Point {
+public:
+    double x;
+    double y;
+    // No constructor written &ndash; compiler provides a default
+};
+
+int main() {
+    Point p;
+    // p.x and p.y are uninitialised (garbage values)
+    cout &lt;&lt; p.x &lt;&lt; endl;   // undefined behaviour!
+    return 0;
+}</code></pre>
+                </div>
+                <p>To avoid this, always provide your own default constructor that sets sensible initial values:</p>
+                <div class="code-block">
+<pre><code>class Point {
+public:
+    double x;
+    double y;
+
+    Point() {       // user-defined default constructor
+        x = 0.0;
+        y = 0.0;
+    }
+};
+
+int main() {
+    Point p;
+    cout &lt;&lt; p.x &lt;&lt; ", " &lt;&lt; p.y &lt;&lt; endl;  // 0, 0
+    return 0;
+}</code></pre>
+                </div>
+                <p><strong>Note:</strong> Once you define <em>any</em> constructor (even a parameterised one), the compiler no longer generates a default constructor. You must define one explicitly if you still need it.</p>
+
+                <!-- ===== Parameterized Constructor ===== -->
+                <h2>Parameterized Constructor</h2>
+                <p>A <strong>parameterized constructor</strong> accepts arguments that let you initialise an object with custom values at the moment of creation:</p>
+                <div class="code-block">
+<pre><code>class Rectangle {
+public:
+    double width;
+    double height;
+
+    Rectangle(double w, double h) {
+        width  = w;
+        height = h;
+    }
+
+    double area() {
+        return width * height;
+    }
+};
+
+int main() {
+    Rectangle r1(5.0, 3.0);     // direct initialisation
+    Rectangle r2 = {10.0, 4.0}; // brace initialisation (C++11)
+
+    cout &lt;&lt; "r1 area: " &lt;&lt; r1.area() &lt;&lt; endl;  // 15
+    cout &lt;&lt; "r2 area: " &lt;&lt; r2.area() &lt;&lt; endl;  // 40
+    return 0;
+}</code></pre>
+                </div>
+                <p>Because this class only has a parameterized constructor, writing <code>Rectangle r;</code> with no arguments would cause a <strong>compile error</strong>.</p>
+
+                <!-- ===== Constructor Overloading ===== -->
+                <h2>Constructor Overloading</h2>
+                <p>Just like regular functions, constructors can be <strong>overloaded</strong> &mdash; you can have multiple constructors with different parameter lists. The compiler picks the matching constructor based on the arguments you supply:</p>
+                <div class="code-block">
+<pre><code>class Box {
+public:
+    double length, width, height;
+
+    // Default constructor
+    Box() {
+        length = width = height = 1.0;
+    }
+
+    // One-parameter constructor (cube)
+    Box(double side) {
+        length = width = height = side;
+    }
+
+    // Three-parameter constructor
+    Box(double l, double w, double h) {
+        length = l;
+        width  = w;
+        height = h;
+    }
+
+    double volume() {
+        return length * width * height;
+    }
+};
+
+int main() {
+    Box b1;              // calls default &ndash; 1&times;1&times;1
+    Box b2(5.0);         // calls cube &ndash; 5&times;5&times;5
+    Box b3(2, 3, 4);     // calls 3-param &ndash; 2&times;3&times;4
+
+    cout &lt;&lt; b1.volume() &lt;&lt; endl;  // 1
+    cout &lt;&lt; b2.volume() &lt;&lt; endl;  // 125
+    cout &lt;&lt; b3.volume() &lt;&lt; endl;  // 24
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Member Initializer Lists ===== -->
+                <h2>Member Initializer Lists</h2>
+                <p>Instead of assigning values inside the constructor body, you can use a <strong>member initializer list</strong>. This initialises members <em>directly</em> rather than default-constructing them first and then assigning &mdash; which is both more efficient and sometimes <em>required</em> (e.g., for <code>const</code> members and references).</p>
+                <div class="code-block">
+<pre><code>class Circle {
+public:
+    const double pi;
+    double radius;
+
+    // Member initializer list (after the colon)
+    Circle(double r) : pi(3.14159265), radius(r) {
+        // body can be empty or contain extra logic
+    }
+
+    double area() const {
+        return pi * radius * radius;
+    }
+};
+
+int main() {
+    Circle c(5.0);
+    cout &lt;&lt; "Area: " &lt;&lt; c.area() &lt;&lt; endl;  // 78.5398
+    return 0;
+}</code></pre>
+                </div>
+                <p><strong>When you must use initializer lists:</strong></p>
+                <ul>
+                    <li><code>const</code> member variables &mdash; they cannot be assigned after construction.</li>
+                    <li>Reference members &mdash; they must be bound at construction.</li>
+                    <li>Members without a default constructor &mdash; they need arguments to be constructed.</li>
+                    <li>Base class constructors &mdash; when the base class has no default constructor.</li>
+                </ul>
+                <p><strong>Best practice:</strong> Prefer member initializer lists over assignment in the constructor body. They are faster, cleaner, and express your intent more clearly.</p>
+
+                <!-- ===== Copy Constructor ===== -->
+                <h2>Copy Constructor</h2>
+                <p>A <strong>copy constructor</strong> creates a new object as a copy of an existing object. The compiler generates one automatically (member-wise copy), but you may need a custom copy constructor when your class manages dynamic memory.</p>
+
+                <h3>Shallow Copy (Default)</h3>
+                <p>The compiler-generated copy constructor performs a <strong>shallow copy</strong> &mdash; it copies each member&rsquo;s value bit by bit. For pointers this means both objects end up pointing to the <em>same</em> memory:</p>
+                <div class="code-block">
+<pre><code>class Shallow {
+public:
+    int* data;
+
+    Shallow(int val) {
+        data = new int(val);
+    }
+
+    // compiler-generated copy constructor does:
+    // Shallow(const Shallow&amp; src) : data(src.data) { }
+    //   &uarr; both objects point to the same memory!
+};
+
+int main() {
+    Shallow a(42);
+    Shallow b = a;          // shallow copy
+    *b.data = 99;
+    cout &lt;&lt; *a.data;        // 99 &ndash; a was modified too!
+    delete a.data;          // b.data is now dangling
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>Deep Copy (Custom)</h3>
+                <p>A <strong>deep copy</strong> allocates its own memory and copies the pointed-to values, giving each object independent data:</p>
+                <div class="code-block">
+<pre><code>class Deep {
+public:
+    int* data;
+    int size;
+
+    Deep(int s) : size(s) {
+        data = new int[size];
+        for (int i = 0; i &lt; size; i++)
+            data[i] = 0;
+    }
+
+    // Custom copy constructor &ndash; deep copy
+    Deep(const Deep&amp; src) : size(src.size) {
+        data = new int[size];               // allocate own memory
+        for (int i = 0; i &lt; size; i++)
+            data[i] = src.data[i];          // copy values
+    }
+
+    ~Deep() {
+        delete[] data;    // destructor frees memory
+    }
+};
+
+int main() {
+    Deep a(5);
+    a.data[0] = 42;
+
+    Deep b = a;            // calls deep copy constructor
+    b.data[0] = 99;
+
+    cout &lt;&lt; a.data[0] &lt;&lt; endl;  // 42 &ndash; independent
+    cout &lt;&lt; b.data[0] &lt;&lt; endl;  // 99 &ndash; independent
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Move Constructor (C++11 Preview) ===== -->
+                <h2>Move Constructor (C++11 Preview)</h2>
+                <p>Copying large objects can be expensive. C++11 introduced <strong>move semantics</strong> to <em>transfer</em> resources from a temporary (rvalue) object instead of copying them. A <strong>move constructor</strong> takes an <em>rvalue reference</em> (<code>&amp;&amp;</code>) and &ldquo;steals&rdquo; the source&rsquo;s resources:</p>
+                <div class="code-block">
+<pre><code>#include &lt;utility&gt;  // for std::move
+
+class Buffer {
+public:
+    int* data;
+    int size;
+
+    Buffer(int s) : size(s), data(new int[s]) {}
+
+    // Move constructor
+    Buffer(Buffer&amp;&amp; src) noexcept
+        : data(src.data), size(src.size) {
+        src.data = nullptr;   // leave source in a valid state
+        src.size = 0;
+    }
+
+    ~Buffer() {
+        delete[] data;
+    }
+};
+
+int main() {
+    Buffer a(1000);
+    Buffer b(std::move(a));  // moves resources from a to b
+
+    cout &lt;&lt; "a.size: " &lt;&lt; a.size &lt;&lt; endl;  // 0
+    cout &lt;&lt; "b.size: " &lt;&lt; b.size &lt;&lt; endl;  // 1000
+    return 0;
+}</code></pre>
+                </div>
+                <p>After the move, <code>a</code> is in a valid but <em>empty</em> state. Move semantics are explored in depth in the <strong>Move Semantics</strong> lesson later in this course.</p>
+
+                <!-- ===== Delegating Constructors (C++11) ===== -->
+                <h2>Delegating Constructors (C++11)</h2>
+                <p>A <strong>delegating constructor</strong> calls another constructor of the same class from its initializer list, reducing code duplication:</p>
+                <div class="code-block">
+<pre><code>class Colour {
+public:
+    int r, g, b, a;
+
+    // Primary constructor
+    Colour(int r, int g, int b, int a)
+        : r(r), g(g), b(b), a(a) {}
+
+    // Delegates to the 4-param constructor
+    Colour(int r, int g, int b)
+        : Colour(r, g, b, 255) {}
+
+    // Delegates to the 3-param, which delegates to the 4-param
+    Colour()
+        : Colour(0, 0, 0) {}
+
+    void print() {
+        cout &lt;&lt; "rgba(" &lt;&lt; r &lt;&lt; ", " &lt;&lt; g
+             &lt;&lt; ", " &lt;&lt; b &lt;&lt; ", " &lt;&lt; a &lt;&lt; ")" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Colour c1;              // rgba(0, 0, 0, 255)
+    Colour c2(255, 128, 0); // rgba(255, 128, 0, 255)
+    Colour c3(10, 20, 30, 128);
+
+    c1.print();
+    c2.print();
+    c3.print();
+    return 0;
+}</code></pre>
+                </div>
+                <p><strong>Rules:</strong></p>
+                <ul>
+                    <li>A delegating constructor cannot have a member initializer list of its own (it delegates all initialisation).</li>
+                    <li>Delegation must not form a cycle &mdash; that is undefined behaviour.</li>
+                </ul>
+
+                <!-- ===== Default and Delete Keywords ===== -->
+                <h2>Default and Delete Keywords</h2>
+                <p>C++11 added two keywords that give you explicit control over compiler-generated special member functions:</p>
+
+                <h3><code>=default</code></h3>
+                <p>Tells the compiler to generate the default implementation even though you have written other constructors:</p>
+                <div class="code-block">
+<pre><code>class Widget {
+public:
+    int id;
+
+    Widget(int i) : id(i) {}        // parameterized constructor
+    Widget() = default;              // explicitly request default constructor
+};
+
+int main() {
+    Widget w1;       // OK &ndash; uses defaulted constructor
+    Widget w2(42);   // OK &ndash; uses parameterized constructor
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3><code>=delete</code></h3>
+                <p>Prevents the compiler from generating a particular function. Attempting to use a deleted function causes a <strong>compile error</strong>:</p>
+                <div class="code-block">
+<pre><code>class Singleton {
+public:
+    Singleton() {}
+
+    // Prevent copying
+    Singleton(const Singleton&amp;) = delete;
+    Singleton&amp; operator=(const Singleton&amp;) = delete;
+};
+
+int main() {
+    Singleton s1;
+    // Singleton s2 = s1;    // Error: copy constructor is deleted
+    // Singleton s3; s3 = s1; // Error: copy assignment is deleted
+    return 0;
+}</code></pre>
+                </div>
+                <p>Common uses of <code>=delete</code>:</p>
+                <ul>
+                    <li>Making a class non-copyable (singletons, unique resources).</li>
+                    <li>Preventing implicit conversions by deleting constructors that accept unwanted types.</li>
+                    <li>Deleting certain overloads to restrict usage.</li>
+                </ul>
+
+                <!-- ===== What Are Destructors? ===== -->
+                <h2>What Are Destructors?</h2>
+                <p>A <strong>destructor</strong> is a special member function that is called <em>automatically</em> when an object is destroyed (goes out of scope, is <code>delete</code>d, etc.). Its purpose is to release resources the object acquired during its lifetime &mdash; such as dynamic memory, open files, or network connections.</p>
+                <p>Key characteristics:</p>
+                <ul>
+                    <li>Name: <code>~ClassName</code> &mdash; the tilde followed by the class name.</li>
+                    <li>No return type, no parameters &mdash; a class can have only <strong>one</strong> destructor.</li>
+                    <li>Called automatically &mdash; you almost never call it explicitly.</li>
+                </ul>
+                <div class="code-block">
+<pre><code>class Logger {
+public:
+    string label;
+
+    Logger(string lbl) : label(lbl) {
+        cout &lt;&lt; "[" &lt;&lt; label &lt;&lt; "] Constructor called" &lt;&lt; endl;
+    }
+
+    ~Logger() {
+        cout &lt;&lt; "[" &lt;&lt; label &lt;&lt; "] Destructor called" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Logger a("A");
+    {
+        Logger b("B");
+        Logger c("C");
+    }   // b and c destroyed here (LIFO order: C then B)
+    cout &lt;&lt; "Back in main" &lt;&lt; endl;
+    return 0;
+}   // a destroyed here</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+<pre><code>[A] Constructor called
+[B] Constructor called
+[C] Constructor called
+[C] Destructor called
+[B] Destructor called
+Back in main
+[A] Destructor called</code></pre>
+                </div>
+
+                <!-- ===== When Destructors Are Called ===== -->
+                <h2>When Destructors Are Called</h2>
+                <p>Destructors are invoked in several situations:</p>
+                <ul>
+                    <li><strong>End of scope:</strong> When a local object&rsquo;s enclosing block (<code>{ }</code>) ends, the destructor is called automatically. Objects are destroyed in <strong>reverse</strong> order of construction (LIFO).</li>
+                    <li><strong><code>delete</code> operator:</strong> When you call <code>delete</code> on a heap-allocated object, the destructor runs before the memory is freed.</li>
+                    <li><strong>Program exit:</strong> Global and static objects are destroyed when the program terminates.</li>
+                    <li><strong>Temporary objects:</strong> Temporary objects created during expression evaluation are destroyed at the end of the full expression.</li>
+                </ul>
+                <div class="code-block">
+<pre><code>class Resource {
+public:
+    int* data;
+
+    Resource(int val) {
+        data = new int(val);
+        cout &lt;&lt; "Allocated: " &lt;&lt; *data &lt;&lt; endl;
+    }
+
+    ~Resource() {
+        cout &lt;&lt; "Freeing: " &lt;&lt; *data &lt;&lt; endl;
+        delete data;
+    }
+};
+
+int main() {
+    Resource* r = new Resource(10);  // Allocated: 10
+    delete r;                        // Freeing: 10
+
+    Resource local(20);              // Allocated: 20
+    return 0;                        // Freeing: 20
+}</code></pre>
+                </div>
+
+                <!-- ===== Rule of Three / Rule of Five ===== -->
+                <h2>Rule of Three / Rule of Five</h2>
+                <p>If your class manages a resource (e.g., dynamic memory), you typically need to define several special member functions together to avoid bugs like double deletion or memory leaks.</p>
+
+                <h3>Rule of Three (C++98)</h3>
+                <p>If you define any one of these, you should define all three:</p>
+                <ol>
+                    <li><strong>Destructor</strong></li>
+                    <li><strong>Copy constructor</strong></li>
+                    <li><strong>Copy assignment operator</strong></li>
+                </ol>
+
+                <h3>Rule of Five (C++11)</h3>
+                <p>C++11 extends this with move semantics. If you define any one of the five, consider defining all five:</p>
+                <ol>
+                    <li><strong>Destructor</strong></li>
+                    <li><strong>Copy constructor</strong></li>
+                    <li><strong>Copy assignment operator</strong></li>
+                    <li><strong>Move constructor</strong></li>
+                    <li><strong>Move assignment operator</strong></li>
+                </ol>
+
+                <div class="code-block">
+<pre><code>class IntArray {
+    int* arr;
+    int  sz;
+
+public:
+    // Constructor
+    IntArray(int size) : sz(size), arr(new int[size]{}) {}
+
+    // 1. Destructor
+    ~IntArray() {
+        delete[] arr;
+    }
+
+    // 2. Copy constructor (deep copy)
+    IntArray(const IntArray&amp; src) : sz(src.sz), arr(new int[src.sz]) {
+        for (int i = 0; i &lt; sz; i++)
+            arr[i] = src.arr[i];
+    }
+
+    // 3. Copy assignment operator
+    IntArray&amp; operator=(const IntArray&amp; src) {
+        if (this != &amp;src) {
+            delete[] arr;
+            sz  = src.sz;
+            arr = new int[sz];
+            for (int i = 0; i &lt; sz; i++)
+                arr[i] = src.arr[i];
+        }
+        return *this;
+    }
+
+    // 4. Move constructor
+    IntArray(IntArray&amp;&amp; src) noexcept
+        : sz(src.sz), arr(src.arr) {
+        src.arr = nullptr;
+        src.sz  = 0;
+    }
+
+    // 5. Move assignment operator
+    IntArray&amp; operator=(IntArray&amp;&amp; src) noexcept {
+        if (this != &amp;src) {
+            delete[] arr;
+            arr = src.arr;
+            sz  = src.sz;
+            src.arr = nullptr;
+            src.sz  = 0;
+        }
+        return *this;
+    }
+
+    int size() const { return sz; }
+    int&amp; operator[](int i) { return arr[i]; }
+};</code></pre>
+                </div>
+                <p><strong>Rule of Zero:</strong> If your class does not directly manage resources (e.g., it uses <code>std::string</code>, <code>std::vector</code>, or smart pointers), you don&rsquo;t need to define any of the special functions &mdash; the compiler-generated ones will work correctly. This is usually the <em>best</em> approach.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>A <strong>constructor</strong> has the same name as the class, no return type, and is called automatically when an object is created.</li>
+                    <li>The <strong>default constructor</strong> takes no arguments. If you provide any constructor, the compiler stops generating one for you.</li>
+                    <li><strong>Parameterized constructors</strong> let you initialise objects with custom values.</li>
+                    <li><strong>Constructor overloading</strong> provides multiple ways to create objects from the same class.</li>
+                    <li><strong>Member initializer lists</strong> initialise members directly and are required for <code>const</code> members, references, and base classes.</li>
+                    <li>The <strong>copy constructor</strong> creates a new object as a copy; implement a <em>deep copy</em> if your class manages dynamic memory.</li>
+                    <li>The <strong>move constructor</strong> (C++11) transfers resources instead of copying &mdash; much faster for large objects.</li>
+                    <li><strong>Delegating constructors</strong> call another constructor of the same class to reduce duplication.</li>
+                    <li><code>=default</code> requests the compiler-generated version; <code>=delete</code> prohibits it.</li>
+                    <li>A <strong>destructor</strong> (<code>~ClassName</code>) is called automatically when an object is destroyed and should release acquired resources.</li>
+                    <li>The <strong>Rule of Three</strong> (destructor, copy constructor, copy assignment) and <strong>Rule of Five</strong> (adds move constructor and move assignment) guide resource management.</li>
+                    <li>Prefer the <strong>Rule of Zero</strong> &mdash; use RAII wrappers like smart pointers so you don&rsquo;t need custom special functions at all.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/FXhALMsHwEY" title="C++ Constructors &amp; Destructors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a constructor in C++?","o":["A regular member function","A special function called automatically when an object is created","A function that destroys objects","A static method"],"a":1},
+                {"q":"What is the return type of a constructor?","o":["void","int","The class type","None &ndash; constructors have no return type"],"a":3},
+                {"q":"A constructor has the same name as:","o":["The file","The namespace","The class","The first member variable"],"a":2},
+                {"q":"What is a default constructor?","o":["A constructor that deletes the object","A constructor that takes no arguments","A constructor that returns a default value","A private constructor"],"a":1},
+                {"q":"What happens if you define a parameterized constructor but no default constructor?","o":["The compiler still provides a default constructor","The compiler does not provide a default constructor","A runtime error occurs","The class becomes abstract"],"a":1},
+                {"q":"Which keyword explicitly requests the compiler-generated default constructor?","o":["default","= default","auto","implicit"],"a":1},
+                {"q":"Which keyword prevents a function from being used?","o":["= private","= delete","= none","= block"],"a":1},
+                {"q":"What is constructor overloading?","o":["Having multiple classes with the same constructor","Having multiple constructors with different parameter lists","Overriding a base class constructor","Using a constructor as an operator"],"a":1},
+                {"q":"Which is the correct syntax for a parameterized constructor of class <code>Car</code>?","o":["void Car(int x) { }","Car::Car(int x) : void { }","Car(int x) { }","int Car(int x) { }"],"a":2},
+                {"q":"What is a member initializer list?","o":["A list of all class members","Initialisation after the colon before the constructor body","A separate file listing members","A vector of members"],"a":1},
+                {"q":"When is a member initializer list required?","o":["Always","Only for int members","For const members and references","Only in derived classes"],"a":2},
+                {"q":"Which syntax uses a member initializer list?","o":["MyClass() { x = 5; }","MyClass() : x(5) { }","MyClass(x = 5) { }","MyClass()[x = 5] { }"],"a":1},
+                {"q":"What does a shallow copy do with pointer members?","o":["Copies the pointed-to data","Copies only the pointer value","Deletes the pointer","Sets the pointer to nullptr"],"a":1},
+                {"q":"What problem can a shallow copy cause?","o":["Stack overflow","Both objects share the same memory, risking double deletion","Type mismatch","Infinite loop"],"a":1},
+                {"q":"A deep copy constructor should:","o":["Copy the pointer value","Allocate new memory and copy the data","Delete the source object","Set all members to zero"],"a":1},
+                {"q":"What is the signature of a copy constructor for class <code>Foo</code>?","o":["Foo(Foo src)","Foo(const Foo&amp; src)","Foo(Foo* src)","Foo&amp; copy(Foo src)"],"a":1},
+                {"q":"Why is the copy constructor parameter a <code>const</code> reference?","o":["To allow modification of the source","To avoid infinite recursion (copying to pass by value)","Because references are faster than pointers","It is optional"],"a":1},
+                {"q":"What is a move constructor?","o":["A constructor that moves the class to a different file","A constructor that transfers resources from an rvalue","A constructor that relocates memory addresses","A constructor that copies and then deletes"],"a":1},
+                {"q":"Which C++ standard introduced move semantics?","o":["C++98","C++03","C++11","C++20"],"a":2},
+                {"q":"What does <code>&amp;&amp;</code> denote in a move constructor parameter?","o":["Logical AND","Address-of-address","An rvalue reference","A double reference"],"a":2},
+                {"q":"After a move operation, the source object should be in:","o":["An undefined state","A valid but unspecified state","Exactly the same state","A deleted state"],"a":1},
+                {"q":"What is a delegating constructor?","o":["A constructor that delegates to a base class","A constructor that calls another constructor of the same class","A constructor that delegates to a friend class","A virtual constructor"],"a":1},
+                {"q":"Where does delegation happen in a delegating constructor?","o":["In the constructor body","In the member initializer list","In the destructor","In a separate function"],"a":1},
+                {"q":"Can a delegating constructor also have a member initializer list?","o":["Yes, always","No &ndash; it can only delegate","Only for const members","Only in C++17"],"a":1},
+                {"q":"What is a destructor?","o":["A function that creates objects","A special function called when an object is destroyed","A function that resets member values","A compile-time directive"],"a":1},
+                {"q":"What is the syntax for a destructor of class <code>Dog</code>?","o":["~Dog()","!Dog()","Dog~()","delete Dog()"],"a":0},
+                {"q":"How many destructors can a class have?","o":["As many as needed","Exactly one","Two &ndash; one default and one custom","Zero"],"a":1},
+                {"q":"Can a destructor have parameters?","o":["Yes","No","Only default parameters","Only one parameter"],"a":1},
+                {"q":"In what order are local objects destroyed?","o":["In order of construction (FIFO)","In reverse order of construction (LIFO)","Alphabetical order","Random order"],"a":1},
+                {"q":"When is a destructor called for a heap-allocated object?","o":["When the pointer goes out of scope","When <code>delete</code> is called on it","At the end of the program","Never"],"a":1},
+                {"q":"What does the Rule of Three state?","o":["Define three classes per file","If you define a destructor, copy constructor, or copy assignment, define all three","Three constructors are required","Use three member variables"],"a":1},
+                {"q":"What does the Rule of Five add to the Rule of Three?","o":["Two more member variables","Move constructor and move assignment operator","Two more destructors","Two friend functions"],"a":1},
+                {"q":"What is the Rule of Zero?","o":["Never write constructors","Use RAII wrappers so you don&rsquo;t need custom special functions","Delete all five special functions","Use only default types"],"a":1},
+                {"q":"What happens if you <code>delete</code> a pointer twice without a proper destructor design?","o":["Nothing","Undefined behaviour (double deletion)","The program prints a warning","The second delete is ignored"],"a":1},
+                {"q":"Which special function does <code>= delete</code> commonly apply to?","o":["Destructor","Copy constructor and copy assignment","Main function","Global functions"],"a":1},
+                {"q":"What does <code>noexcept</code> on a move constructor indicate?","o":["The constructor may throw","The constructor guarantees not to throw exceptions","The constructor is deleted","The constructor is virtual"],"a":1},
+                {"q":"Why is <code>noexcept</code> important for move constructors?","o":["It improves readability","Standard containers may only use move if it is noexcept","It prevents compilation errors","It is purely optional"],"a":1},
+                {"q":"Which is valid C++?<br><code>class A { public: A() = default; };</code>","o":["Yes","No &ndash; = default is invalid","No &ndash; no body provided","Only in C++20"],"a":0},
+                {"q":"What happens if you write <code>A(const A&amp;) = delete;</code>?","o":["The copy constructor is deleted","The default constructor is deleted","A runtime error on copy","The destructor is deleted"],"a":0},
+                {"q":"Can you use <code>= default</code> for a destructor?","o":["No","Yes &ndash; <code>~MyClass() = default;</code>","Only in derived classes","Only if it is virtual"],"a":1},
+                {"q":"Which is true about in-class member initializers (C++11)?","o":["They replace constructors entirely","They provide default values that constructors can override","They are only for static members","They cause compile errors"],"a":1},
+                {"q":"What does <code>explicit</code> before a single-argument constructor prevent?","o":["Direct initialisation","Implicit conversions","Overloading","Inheritance"],"a":1},
+                {"q":"Which code creates an object using direct initialisation?","o":["Point p = {1, 2};","Point p(1, 2);","Point* p = new Point;","auto p = Point;"],"a":1},
+                {"q":"Which code creates an object using brace initialisation?","o":["Point p(1, 2);","Point p{1, 2};","Point p = Point(1, 2);","Point p[1, 2];"],"a":1},
+                {"q":"If a class has only <code>MyClass(int x) = delete;</code>, can you create an object with an int?","o":["Yes","No &ndash; it causes a compile error","Yes, if you cast to double","Only with <code>new</code>"],"a":1},
+                {"q":"What does the destructor typically do in a class that manages dynamic memory?","o":["Allocate more memory","Call <code>delete</code> or <code>delete[]</code> to free memory","Set pointers to null","Print a message"],"a":1},
+                {"q":"What is RAII?","o":["Random Access Indexed Array","Resource Acquisition Is Initialisation","Read And Initialise Immediately","Runtime Allocated Integer Array"],"a":1},
+                {"q":"In RAII, when is a resource released?","o":["When you call free()","When the destructor runs (object goes out of scope)","At the end of main()","Manually by the programmer"],"a":1},
+                {"q":"Which is correct for a delegating constructor?<br><code>class C { C(int a, int b); C(int a) : C(a, 0) {} };</code>","o":["Yes &ndash; the 1-param constructor delegates to the 2-param one","No &ndash; delegation is not allowed","Only if both are public","Only in header files"],"a":0},
+                {"q":"What is the output?<br><code>class X { public: X() { cout &lt;&lt; \"C \"; } ~X() { cout &lt;&lt; \"D \"; } }; int main() { X a; X b; return 0; }</code>","o":["C C D D","C D C D","D D C C","C C"],"a":0}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="classes-objects.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Classes &amp; Objects</span>
+                </a>
+                <a href="access-specifiers.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Access Specifiers</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Polymorphism - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-polymorphism">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html" class="active"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 35 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="64" style="width:64%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Polymorphism
+                </div>
+                <h1>35. Polymorphism</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 35 of 55</span>
+                    <span>&#9201; 17 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Polymorphism? ===== -->
+                <h2>What Is Polymorphism?</h2>
+                <p><strong>Polymorphism</strong> is one of the four fundamental pillars of Object-Oriented Programming (OOP). The word comes from Greek: <em>poly</em> (many) and <em>morph</em> (form) &mdash; it literally means <strong>&ldquo;many forms.&rdquo;</strong></p>
+                <p>In C++, polymorphism allows you to use a <strong>single interface</strong> to represent <strong>different underlying types</strong>. A function call on a base-class pointer or reference can behave differently depending on the actual derived type of the object it points to.</p>
+                <p>Polymorphism comes in two flavours:</p>
+                <ul>
+                    <li><strong>Compile-time polymorphism</strong> (static) &mdash; resolved by the compiler before the program runs.</li>
+                    <li><strong>Runtime polymorphism</strong> (dynamic) &mdash; resolved at runtime using virtual functions and the vtable mechanism.</li>
+                </ul>
+                <p>The key benefits of polymorphism include:</p>
+                <ul>
+                    <li><strong>Flexibility</strong> &mdash; write code that works with base-class pointers/references and automatically adapts to new derived types.</li>
+                    <li><strong>Extensibility</strong> &mdash; add new derived classes without modifying existing code.</li>
+                    <li><strong>Cleaner Design</strong> &mdash; eliminate long <code>if-else</code> or <code>switch</code> chains that check object types.</li>
+                    <li><strong>Code Reuse</strong> &mdash; common logic lives in the base class; specialised behaviour lives in derived classes.</li>
+                </ul>
+
+                <!-- ===== Compile-Time Polymorphism ===== -->
+                <h2>Compile-Time Polymorphism</h2>
+                <p>Compile-time (static) polymorphism is resolved <strong>at compile time</strong>. The two primary mechanisms are <strong>function overloading</strong> and <strong>operator overloading</strong>.</p>
+
+                <h3>Function Overloading</h3>
+                <p>Multiple functions share the same name but differ in the <strong>number or types of parameters</strong>. The compiler selects the correct version based on the arguments provided:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">int</span> <span class="function">add</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+
+<span class="keyword">double</span> <span class="function">add</span>(<span class="type">double</span> a, <span class="type">double</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+
+<span class="keyword">int</span> <span class="function">add</span>(<span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c) {
+    <span class="keyword">return</span> a + b + c;
+}
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    cout &lt;&lt; <span class="function">add</span>(<span class="number">2</span>, <span class="number">3</span>)          &lt;&lt; endl;  <span class="comment">// Calls int version</span>
+    cout &lt;&lt; <span class="function">add</span>(<span class="number">2.5</span>, <span class="number">3.7</span>)      &lt;&lt; endl;  <span class="comment">// Calls double version</span>
+    cout &lt;&lt; <span class="function">add</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)      &lt;&lt; endl;  <span class="comment">// Calls three-param version</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>5
+6.2
+6</code></pre>
+                </div>
+
+                <h3>Operator Overloading</h3>
+                <p>You can redefine what operators like <code>+</code>, <code>==</code>, or <code>&lt;&lt;</code> mean for your own classes:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Vector2D</span> {
+<span class="keyword">public</span>:
+    <span class="type">double</span> x, y;
+    <span class="function">Vector2D</span>(<span class="type">double</span> x, <span class="type">double</span> y) : x(x), y(y) {}
+
+    <span class="comment">// Overload + operator</span>
+    <span class="type">Vector2D</span> <span class="keyword">operator</span>+(<span class="keyword">const</span> <span class="type">Vector2D</span>&amp; other) <span class="keyword">const</span> {
+        <span class="keyword">return</span> <span class="type">Vector2D</span>(x + other.x, y + other.y);
+    }
+
+    <span class="keyword">friend</span> ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream&amp; os, <span class="keyword">const</span> <span class="type">Vector2D</span>&amp; v) {
+        os &lt;&lt; <span class="string">"("</span> &lt;&lt; v.x &lt;&lt; <span class="string">", "</span> &lt;&lt; v.y &lt;&lt; <span class="string">")"</span>;
+        <span class="keyword">return</span> os;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Vector2D</span> a(<span class="number">1</span>, <span class="number">2</span>), b(<span class="number">3</span>, <span class="number">4</span>);
+    <span class="type">Vector2D</span> c = a + b;  <span class="comment">// Calls operator+</span>
+    cout &lt;&lt; c &lt;&lt; endl;   <span class="comment">// Calls operator&lt;&lt;</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>(4, 6)</code></pre>
+                </div>
+
+                <!-- ===== Runtime Polymorphism ===== -->
+                <h2>Runtime Polymorphism</h2>
+                <p><strong>Runtime polymorphism</strong> is the heart of OOP in C++. It is achieved through <strong>inheritance</strong> combined with <strong>virtual functions</strong>. The correct function to call is determined <em>at runtime</em> based on the actual type of the object, not the type of the pointer or reference.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">speak</span>() {
+        cout &lt;&lt; <span class="string">"Some generic animal sound"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"Woof!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Cat</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">override</span> {
+        cout &lt;&lt; <span class="string">"Meow!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Animal</span>* a1 = <span class="keyword">new</span> <span class="type">Dog</span>();
+    <span class="type">Animal</span>* a2 = <span class="keyword">new</span> <span class="type">Cat</span>();
+
+    a1-&gt;<span class="function">speak</span>();  <span class="comment">// Calls Dog::speak()</span>
+    a2-&gt;<span class="function">speak</span>();  <span class="comment">// Calls Cat::speak()</span>
+
+    <span class="keyword">delete</span> a1;
+    <span class="keyword">delete</span> a2;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Woof!
+Meow!</code></pre>
+                </div>
+                <p>Without the <code>virtual</code> keyword, both calls would print <code>"Some generic animal sound"</code> because the compiler would bind to <code>Animal::speak()</code> at compile time (early binding).</p>
+
+                <!-- ===== Virtual Functions ===== -->
+                <h2>Virtual Functions</h2>
+                <p>A <strong>virtual function</strong> is a member function declared in the base class with the <code>virtual</code> keyword. It tells the compiler: <em>&ldquo;do not bind this call at compile time &mdash; wait until runtime and choose the correct version.&rdquo;</em></p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">area</span>() {
+        <span class="keyword">return</span> <span class="number">0.0</span>;
+    }
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">describe</span>() {
+        cout &lt;&lt; <span class="string">"I am a generic shape."</span> &lt;&lt; endl;
+    }
+};</code></pre>
+                </div>
+                <p>Key rules for virtual functions:</p>
+                <ul>
+                    <li>They must be declared with the <code>virtual</code> keyword in the <strong>base class</strong>.</li>
+                    <li>Once a function is virtual in the base, it remains virtual in <strong>all derived classes</strong> (even without writing <code>virtual</code> again).</li>
+                    <li>Virtual functions <strong>cannot be static</strong>.</li>
+                    <li>Constructors <strong>cannot</strong> be virtual, but destructors <strong>can</strong> (and often should be).</li>
+                    <li>Virtual functions have a small <strong>performance overhead</strong> due to the vtable lookup.</li>
+                </ul>
+
+                <!-- ===== The vtable and vptr ===== -->
+                <h2>The vtable and vptr</h2>
+                <p>Understanding <strong>how</strong> virtual dispatch works helps you reason about performance and behaviour:</p>
+                <ul>
+                    <li><strong>vtable (virtual table)</strong> &mdash; the compiler generates a table of function pointers for every class that has at least one virtual function. Each entry in the table points to the <strong>most-derived</strong> version of that virtual function.</li>
+                    <li><strong>vptr (virtual pointer)</strong> &mdash; every object of a polymorphic class contains a hidden pointer (the vptr) that points to the vtable of its <strong>actual type</strong>.</li>
+                </ul>
+                <p>When you call a virtual function through a base pointer, the runtime follows the vptr to the vtable, looks up the correct function pointer, and calls it. This is known as <strong>dynamic dispatch</strong> or <strong>late binding</strong>.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>Conceptual Layout</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Object layout (simplified)</span>
+<span class="comment">// Dog object:  [ vptr | name | age | ... ]</span>
+<span class="comment">//                 |</span>
+<span class="comment">//                 v</span>
+<span class="comment">// Dog vtable:  [ &amp;Dog::speak, &amp;Dog::eat, ... ]</span>
+<span class="comment">//</span>
+<span class="comment">// Cat object:  [ vptr | name | age | ... ]</span>
+<span class="comment">//                 |</span>
+<span class="comment">//                 v</span>
+<span class="comment">// Cat vtable:  [ &amp;Cat::speak, &amp;Cat::eat, ... ]</span></code></pre>
+                </div>
+                <p>The overhead of virtual dispatch is typically <strong>one pointer dereference plus an indirect function call</strong> &mdash; negligible in most applications but worth knowing about in performance-critical code.</p>
+
+                <!-- ===== Overriding Virtual Functions ===== -->
+                <h2>Overriding Virtual Functions</h2>
+                <p>In C++11, the <code>override</code> keyword was introduced to make the programmer&rsquo;s intent explicit and let the compiler catch mistakes:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Base</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">greet</span>() {
+        cout &lt;&lt; <span class="string">"Hello from Base"</span> &lt;&lt; endl;
+    }
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">display</span>(<span class="type">int</span> x) {
+        cout &lt;&lt; <span class="string">"Base display: "</span> &lt;&lt; x &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">public</span> <span class="type">Base</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">greet</span>() <span class="keyword">override</span> {  <span class="comment">// Correct override</span>
+        cout &lt;&lt; <span class="string">"Hello from Derived"</span> &lt;&lt; endl;
+    }
+
+    <span class="comment">// void greet(int x) override; // ERROR: no matching base function</span>
+    <span class="comment">// void Greet() override;      // ERROR: name mismatch</span>
+};</code></pre>
+                </div>
+                <p>Without <code>override</code>, a typo or signature mismatch silently creates a <strong>new function</strong> instead of overriding &mdash; a very common and hard-to-find bug. Always use <code>override</code> in modern C++.</p>
+
+                <!-- ===== Base Class Pointers and References ===== -->
+                <h2>Base Class Pointers and References</h2>
+                <p>Polymorphism works through <strong>base class pointers</strong> and <strong>references</strong>. A base pointer/reference can point to any derived object:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Instrument</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">play</span>() {
+        cout &lt;&lt; <span class="string">"Playing instrument"</span> &lt;&lt; endl;
+    }
+    <span class="keyword">virtual</span> ~<span class="function">Instrument</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">Piano</span> : <span class="keyword">public</span> <span class="type">Instrument</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">play</span>() <span class="keyword">override</span> { cout &lt;&lt; <span class="string">"Playing piano"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Guitar</span> : <span class="keyword">public</span> <span class="type">Instrument</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">play</span>() <span class="keyword">override</span> { cout &lt;&lt; <span class="string">"Playing guitar"</span> &lt;&lt; endl; }
+};
+
+<span class="comment">// Function accepts a base reference</span>
+<span class="keyword">void</span> <span class="function">perform</span>(<span class="type">Instrument</span>&amp; inst) {
+    inst.<span class="function">play</span>();  <span class="comment">// Virtual dispatch</span>
+}
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Piano</span> p;
+    <span class="type">Guitar</span> g;
+
+    <span class="comment">// Using base reference</span>
+    <span class="function">perform</span>(p);  <span class="comment">// Playing piano</span>
+    <span class="function">perform</span>(g);  <span class="comment">// Playing guitar</span>
+
+    <span class="comment">// Using base pointer</span>
+    <span class="type">Instrument</span>* arr[] = {&amp;p, &amp;g};
+    <span class="keyword">for</span> (<span class="type">Instrument</span>* i : arr) {
+        i-&gt;<span class="function">play</span>();
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Playing piano
+Playing guitar
+Playing piano
+Playing guitar</code></pre>
+                </div>
+                <p>This is the power of polymorphism: the <code>perform()</code> function does not need to know about <code>Piano</code> or <code>Guitar</code> &mdash; it works with <em>any</em> <code>Instrument</code>.</p>
+
+                <!-- ===== Pure Virtual Functions ===== -->
+                <h2>Pure Virtual Functions</h2>
+                <p>A <strong>pure virtual function</strong> is a virtual function that has <strong>no implementation</strong> in the base class. It is declared by assigning <code>= 0</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">area</span>() = <span class="number">0</span>;       <span class="comment">// Pure virtual</span>
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">perimeter</span>() = <span class="number">0</span>;  <span class="comment">// Pure virtual</span>
+    <span class="keyword">virtual</span> ~<span class="function">Shape</span>() = <span class="keyword">default</span>;
+};</code></pre>
+                </div>
+                <p>Key characteristics of pure virtual functions:</p>
+                <ul>
+                    <li>They <strong>force</strong> every derived class to provide an implementation.</li>
+                    <li>If a derived class does not override all pure virtual functions, it too becomes abstract.</li>
+                    <li>A pure virtual function <em>can</em> have a body (providing a default), but derived classes must still explicitly override it.</li>
+                </ul>
+
+                <!-- ===== Abstract Classes ===== -->
+                <h2>Abstract Classes</h2>
+                <p>A class with <strong>at least one pure virtual function</strong> is an <strong>abstract class</strong>. Abstract classes:</p>
+                <ul>
+                    <li><strong>Cannot be instantiated</strong> directly.</li>
+                    <li>Serve as <strong>interfaces</strong> or <strong>base contracts</strong> that derived classes must fulfil.</li>
+                    <li>Can still have data members, constructors, and non-virtual functions.</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;cmath&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">area</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">Shape</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">Circle</span> : <span class="keyword">public</span> <span class="type">Shape</span> {
+    <span class="type">double</span> radius;
+<span class="keyword">public</span>:
+    <span class="function">Circle</span>(<span class="type">double</span> r) : radius(r) {}
+    <span class="type">double</span> <span class="function">area</span>() <span class="keyword">override</span> { <span class="keyword">return</span> M_PI * radius * radius; }
+};
+
+<span class="keyword">class</span> <span class="type">Rectangle</span> : <span class="keyword">public</span> <span class="type">Shape</span> {
+    <span class="type">double</span> w, h;
+<span class="keyword">public</span>:
+    <span class="function">Rectangle</span>(<span class="type">double</span> w, <span class="type">double</span> h) : w(w), h(h) {}
+    <span class="type">double</span> <span class="function">area</span>() <span class="keyword">override</span> { <span class="keyword">return</span> w * h; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// Shape s;  // ERROR: cannot instantiate abstract class</span>
+
+    <span class="type">Circle</span> c(<span class="number">5</span>);
+    <span class="type">Rectangle</span> r(<span class="number">4</span>, <span class="number">6</span>);
+
+    <span class="type">Shape</span>* shapes[] = {&amp;c, &amp;r};
+    <span class="keyword">for</span> (<span class="type">Shape</span>* s : shapes) {
+        cout &lt;&lt; <span class="string">"Area: "</span> &lt;&lt; s-&gt;<span class="function">area</span>() &lt;&lt; endl;
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Area: 78.5398
+Area: 24</code></pre>
+                </div>
+
+                <!-- ===== Virtual Destructors ===== -->
+                <h2>Virtual Destructors</h2>
+                <p>When you delete a derived object through a <strong>base class pointer</strong>, the destructor must be <code>virtual</code>. Otherwise, only the base destructor runs &mdash; causing <strong>resource leaks</strong> and <strong>undefined behaviour</strong>.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Base</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> ~<span class="function">Base</span>() {
+        cout &lt;&lt; <span class="string">"Base destructor"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">public</span> <span class="type">Base</span> {
+    <span class="type">int</span>* data;
+<span class="keyword">public</span>:
+    <span class="function">Derived</span>() : data(<span class="keyword">new</span> <span class="type">int</span>[<span class="number">100</span>]) {
+        cout &lt;&lt; <span class="string">"Derived constructor (allocated memory)"</span> &lt;&lt; endl;
+    }
+    ~<span class="function">Derived</span>() <span class="keyword">override</span> {
+        <span class="keyword">delete</span>[] data;
+        cout &lt;&lt; <span class="string">"Derived destructor (freed memory)"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Base</span>* ptr = <span class="keyword">new</span> <span class="type">Derived</span>();
+    <span class="keyword">delete</span> ptr;  <span class="comment">// Correctly calls Derived destructor, then Base</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Derived constructor (allocated memory)
+Derived destructor (freed memory)
+Base destructor</code></pre>
+                </div>
+                <p><strong>Rule of thumb:</strong> if a class has <em>any</em> virtual functions, it should have a <strong>virtual destructor</strong>.</p>
+
+                <!-- ===== final Keyword ===== -->
+                <h2>The <code>final</code> Keyword</h2>
+                <p>C++11 introduced the <code>final</code> keyword to <strong>prevent further overriding</strong> of a virtual function or to <strong>prevent a class from being inherited</strong>:</p>
+
+                <h3>Preventing Override</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">speak</span>() { cout &lt;&lt; <span class="string">"..."</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">override</span> <span class="keyword">final</span> {  <span class="comment">// No further overriding allowed</span>
+        cout &lt;&lt; <span class="string">"Woof!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Puppy</span> : <span class="keyword">public</span> <span class="type">Dog</span> {
+<span class="keyword">public</span>:
+    <span class="comment">// void speak() override;  // ERROR: speak is final in Dog</span>
+};</code></pre>
+                </div>
+
+                <h3>Preventing Inheritance</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Singleton</span> <span class="keyword">final</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">static</span> <span class="type">Singleton</span>&amp; <span class="function">instance</span>() {
+        <span class="keyword">static</span> <span class="type">Singleton</span> s;
+        <span class="keyword">return</span> s;
+    }
+<span class="keyword">private</span>:
+    <span class="function">Singleton</span>() = <span class="keyword">default</span>;
+};
+
+<span class="comment">// class MySingleton : public Singleton {};  // ERROR: Singleton is final</span></code></pre>
+                </div>
+                <p>Using <code>final</code> can also help the compiler <strong>devirtualise</strong> calls, improving performance.</p>
+
+                <!-- ===== Polymorphism with Smart Pointers ===== -->
+                <h2>Polymorphism with Smart Pointers</h2>
+                <p>In modern C++, prefer <strong>smart pointers</strong> over raw pointers to manage polymorphic objects safely:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;memory&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">speak</span>() = <span class="number">0</span>;
+    <span class="keyword">virtual</span> ~<span class="function">Animal</span>() = <span class="keyword">default</span>;
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">override</span> { cout &lt;&lt; <span class="string">"Woof!"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Cat</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">override</span> { cout &lt;&lt; <span class="string">"Meow!"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    vector&lt;unique_ptr&lt;<span class="type">Animal</span>&gt;&gt; animals;
+    animals.<span class="function">push_back</span>(make_unique&lt;<span class="type">Dog</span>&gt;());
+    animals.<span class="function">push_back</span>(make_unique&lt;<span class="type">Cat</span>&gt;());
+    animals.<span class="function">push_back</span>(make_unique&lt;<span class="type">Dog</span>&gt;());
+
+    <span class="keyword">for</span> (<span class="keyword">const auto</span>&amp; a : animals) {
+        a-&gt;<span class="function">speak</span>();  <span class="comment">// Virtual dispatch through unique_ptr</span>
+    }
+    <span class="comment">// No manual delete needed &mdash; unique_ptr handles it</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Woof!
+Meow!
+Woof!</code></pre>
+                </div>
+                <p><code>std::unique_ptr</code> and <code>std::shared_ptr</code> work seamlessly with polymorphism and eliminate memory leaks.</p>
+
+                <!-- ===== Complete Example: Animal Hierarchy ===== -->
+                <h2>Complete Example: Animal Hierarchy</h2>
+                <p>This comprehensive example ties together virtual functions, pure virtual functions, <code>override</code>, virtual destructors, and smart pointers:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;memory&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Abstract base class</span>
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">protected</span>:
+    <span class="type">string</span> name;
+    <span class="type">int</span> age;
+<span class="keyword">public</span>:
+    <span class="function">Animal</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; n, <span class="type">int</span> a) : name(n), age(a) {}
+
+    <span class="comment">// Pure virtual functions</span>
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+    <span class="keyword">virtual</span> <span class="type">string</span> <span class="function">type</span>() <span class="keyword">const</span> = <span class="number">0</span>;
+
+    <span class="comment">// Regular virtual function with default implementation</span>
+    <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="function">info</span>() <span class="keyword">const</span> {
+        cout &lt;&lt; <span class="function">type</span>() &lt;&lt; <span class="string">": "</span> &lt;&lt; name
+             &lt;&lt; <span class="string">", Age: "</span> &lt;&lt; age &lt;&lt; endl;
+    }
+
+    <span class="comment">// Virtual destructor</span>
+    <span class="keyword">virtual</span> ~<span class="function">Animal</span>() = <span class="keyword">default</span>;
+};
+
+<span class="comment">// Concrete derived classes</span>
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+    <span class="type">string</span> breed;
+<span class="keyword">public</span>:
+    <span class="function">Dog</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; n, <span class="type">int</span> a, <span class="keyword">const</span> <span class="type">string</span>&amp; b)
+        : <span class="function">Animal</span>(n, a), breed(b) {}
+
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const override</span> {
+        cout &lt;&lt; name &lt;&lt; <span class="string">" says: Woof! Woof!"</span> &lt;&lt; endl;
+    }
+    <span class="type">string</span> <span class="function">type</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"Dog"</span>; }
+
+    <span class="keyword">void</span> <span class="function">info</span>() <span class="keyword">const override</span> {
+        <span class="type">Animal</span>::<span class="function">info</span>();  <span class="comment">// Call base version</span>
+        cout &lt;&lt; <span class="string">"  Breed: "</span> &lt;&lt; breed &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Cat</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+    <span class="type">bool</span> indoor;
+<span class="keyword">public</span>:
+    <span class="function">Cat</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; n, <span class="type">int</span> a, <span class="type">bool</span> ind)
+        : <span class="function">Animal</span>(n, a), indoor(ind) {}
+
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const override</span> {
+        cout &lt;&lt; name &lt;&lt; <span class="string">" says: Meow!"</span> &lt;&lt; endl;
+    }
+    <span class="type">string</span> <span class="function">type</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"Cat"</span>; }
+
+    <span class="keyword">void</span> <span class="function">info</span>() <span class="keyword">const override</span> {
+        <span class="type">Animal</span>::<span class="function">info</span>();
+        cout &lt;&lt; <span class="string">"  Indoor: "</span> &lt;&lt; (indoor ? <span class="string">"Yes"</span> : <span class="string">"No"</span>) &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Bird</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+    <span class="type">double</span> wingspan;
+<span class="keyword">public</span>:
+    <span class="function">Bird</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; n, <span class="type">int</span> a, <span class="type">double</span> ws)
+        : <span class="function">Animal</span>(n, a), wingspan(ws) {}
+
+    <span class="keyword">void</span> <span class="function">speak</span>() <span class="keyword">const override</span> {
+        cout &lt;&lt; name &lt;&lt; <span class="string">" says: Tweet!"</span> &lt;&lt; endl;
+    }
+    <span class="type">string</span> <span class="function">type</span>() <span class="keyword">const override</span> { <span class="keyword">return</span> <span class="string">"Bird"</span>; }
+
+    <span class="keyword">void</span> <span class="function">info</span>() <span class="keyword">const override</span> {
+        <span class="type">Animal</span>::<span class="function">info</span>();
+        cout &lt;&lt; <span class="string">"  Wingspan: "</span> &lt;&lt; wingspan &lt;&lt; <span class="string">" cm"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    vector&lt;unique_ptr&lt;<span class="type">Animal</span>&gt;&gt; zoo;
+    zoo.<span class="function">push_back</span>(make_unique&lt;<span class="type">Dog</span>&gt;(<span class="string">"Buddy"</span>, <span class="number">3</span>, <span class="string">"Labrador"</span>));
+    zoo.<span class="function">push_back</span>(make_unique&lt;<span class="type">Cat</span>&gt;(<span class="string">"Whiskers"</span>, <span class="number">5</span>, <span class="keyword">true</span>));
+    zoo.<span class="function">push_back</span>(make_unique&lt;<span class="type">Bird</span>&gt;(<span class="string">"Tweety"</span>, <span class="number">1</span>, <span class="number">25.5</span>));
+    zoo.<span class="function">push_back</span>(make_unique&lt;<span class="type">Dog</span>&gt;(<span class="string">"Rex"</span>, <span class="number">7</span>, <span class="string">"Shepherd"</span>));
+
+    <span class="keyword">for</span> (<span class="keyword">const auto</span>&amp; animal : zoo) {
+        animal-&gt;<span class="function">info</span>();
+        animal-&gt;<span class="function">speak</span>();
+        cout &lt;&lt; endl;
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Dog: Buddy, Age: 3
+  Breed: Labrador
+Buddy says: Woof! Woof!
+
+Cat: Whiskers, Age: 5
+  Indoor: Yes
+Whiskers says: Meow!
+
+Bird: Tweety, Age: 1
+  Wingspan: 25.5 cm
+Tweety says: Tweet!
+
+Dog: Rex, Age: 7
+  Breed: Shepherd
+Rex says: Woof! Woof!</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Polymorphism</strong> means &ldquo;many forms&rdquo; &mdash; one interface, multiple behaviours.</li>
+                    <li><strong>Compile-time polymorphism</strong> uses function overloading and operator overloading, resolved by the compiler.</li>
+                    <li><strong>Runtime polymorphism</strong> uses <code>virtual</code> functions, resolved at runtime via the vtable.</li>
+                    <li>Mark base-class functions <code>virtual</code> to enable dynamic dispatch through pointers and references.</li>
+                    <li>Always use the <code>override</code> keyword (C++11) when overriding to catch signature mismatches at compile time.</li>
+                    <li><strong>Pure virtual functions</strong> (<code>= 0</code>) create <strong>abstract classes</strong> that cannot be instantiated.</li>
+                    <li>Use <strong>virtual destructors</strong> in any class with virtual functions to avoid resource leaks.</li>
+                    <li>The <code>final</code> keyword prevents further overriding of a function or inheritance from a class.</li>
+                    <li>Prefer <strong>smart pointers</strong> (<code>unique_ptr</code>, <code>shared_ptr</code>) over raw pointers for polymorphic ownership.</li>
+                    <li>Polymorphism reduces <code>if-else</code>/<code>switch</code> chains and makes code easier to extend and maintain.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/wK93q-JQUvw" title="C++ Polymorphism" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What does the word &lsquo;polymorphism&rsquo; literally mean?","o":["One form","Many forms","No form","Half form"],"a":1},
+                {"q":"Which two categories of polymorphism exist in C++?","o":["Static and dynamic","Fast and slow","Public and private","Inline and outline"],"a":0},
+                {"q":"Compile-time polymorphism is also called:","o":["Late binding","Dynamic binding","Static polymorphism","Virtual polymorphism"],"a":2},
+                {"q":"Runtime polymorphism is also called:","o":["Early binding","Static polymorphism","Compile-time polymorphism","Dynamic polymorphism"],"a":3},
+                {"q":"Which mechanism provides compile-time polymorphism?","o":["Virtual functions","Function overloading","Abstract classes","The vtable"],"a":1},
+                {"q":"Which keyword enables runtime polymorphism in a base class?","o":["override","static","virtual","abstract"],"a":2},
+                {"q":"What is function overloading?","o":["Redefining a base class function in a derived class","Multiple functions with the same name but different parameter lists","Making a function virtual","Deleting a function"],"a":1},
+                {"q":"Can you overload functions based solely on return type?","o":["Yes","No","Only for int and double","Only in derived classes"],"a":1},
+                {"q":"What is operator overloading?","o":["Redefining the meaning of an operator for user-defined types","Changing the precedence of operators","Deleting an operator","Making operators virtual"],"a":0},
+                {"q":"Which operator <strong>cannot</strong> be overloaded in C++?","o":["+ (plus)","&lt;&lt; (insertion)",":: (scope resolution)","== (equality)"],"a":2},
+                {"q":"What does the <code>virtual</code> keyword do when applied to a member function?","o":["Makes the function static","Enables dynamic dispatch so the correct derived version is called at runtime","Prevents the function from being overridden","Makes the function inline"],"a":1},
+                {"q":"If a base class function is virtual, is it automatically virtual in derived classes?","o":["No, you must write virtual again","Yes, once virtual always virtual in derived classes","Only if you use override","Only in public inheritance"],"a":1},
+                {"q":"What is a vtable?","o":["A table of variables","A compiler-generated table of function pointers for virtual functions","A table of constructors","A debugging tool"],"a":1},
+                {"q":"What is a vptr?","o":["A virtual pointer stored in every polymorphic object pointing to its vtable","A pointer to virtual memory","A void pointer","A pointer to the base class"],"a":0},
+                {"q":"When is the vptr initialised?","o":["At compile time","During object construction","When delete is called","When the program exits"],"a":1},
+                {"q":"What is the performance cost of a virtual function call?","o":["No cost at all","One extra pointer dereference and indirect call","The program must restart","It doubles execution time"],"a":1},
+                {"q":"What happens if you call a virtual function without the <code>virtual</code> keyword in the base class?","o":["The derived version is still called","The base version is always called (early binding)","A runtime error occurs","The program will not compile"],"a":1},
+                {"q":"What is the <code>override</code> keyword used for?","o":["Creating a new virtual function","Explicitly stating the function is intended to override a base virtual function","Making a function pure virtual","Preventing inheritance"],"a":1},
+                {"q":"What happens if you use <code>override</code> but the base class has no matching virtual function?","o":["The compiler silently creates a new function","A compile-time error occurs","A runtime warning is issued","Nothing happens"],"a":1},
+                {"q":"Which C++ standard introduced <code>override</code>?","o":["C++98","C++03","C++11","C++20"],"a":2},
+                {"q":"What is a pure virtual function?","o":["A virtual function with an empty body","A virtual function declared with = 0 and (usually) no implementation in the base","A function marked override","A function without parameters"],"a":1},
+                {"q":"How do you declare a pure virtual function?","o":["<code>virtual void f() = 0;</code>","<code>virtual void f() = pure;</code>","<code>pure virtual void f();</code>","<code>void f() = abstract;</code>"],"a":0},
+                {"q":"What is an abstract class?","o":["A class with only static functions","A class with at least one pure virtual function","A class with no constructors","A class marked with the abstract keyword"],"a":1},
+                {"q":"Can you create an object of an abstract class?","o":["Yes","No","Only with dynamic allocation","Only as a const object"],"a":1},
+                {"q":"If a derived class does not override all pure virtual functions, what happens?","o":["It compiles normally","The derived class also becomes abstract","A runtime error occurs","Only a warning is issued"],"a":1},
+                {"q":"Can a pure virtual function have a body (implementation)?","o":["No, never","Yes, but derived classes must still override it","Only if it is private","Only in structs"],"a":1},
+                {"q":"Why should a base class with virtual functions have a virtual destructor?","o":["To speed up construction","To ensure the derived destructor is called when deleting through a base pointer","Virtual destructors are optional","To make the class abstract"],"a":1},
+                {"q":"What happens if you delete a derived object through a base pointer without a virtual destructor?","o":["Everything works fine","Undefined behaviour; the derived destructor may not run","A compile error","The base destructor runs twice"],"a":1},
+                {"q":"Can a destructor be pure virtual?","o":["No","Yes, but it must still have a body (definition)","Only in abstract classes","Only in template classes"],"a":1},
+                {"q":"What does the <code>final</code> keyword do on a virtual function?","o":["Makes it pure virtual","Prevents any further derived class from overriding it","Makes it inline","Removes it from the vtable"],"a":1},
+                {"q":"What does the <code>final</code> keyword do on a class?","o":["Makes the class abstract","Prevents any class from inheriting from it","Makes all functions virtual","Deletes the default constructor"],"a":1},
+                {"q":"Which C++ standard introduced the <code>final</code> keyword?","o":["C++98","C++03","C++11","C++17"],"a":2},
+                {"q":"Can <code>final</code> help the compiler optimise?","o":["No","Yes, it can enable devirtualisation of calls","Only in debug mode","Only with -O3"],"a":1},
+                {"q":"What is early binding (static binding)?","o":["The function call is resolved at runtime","The function call is resolved at compile time","The function is deleted","The function is templated"],"a":1},
+                {"q":"What is late binding (dynamic binding)?","o":["The function call is resolved at compile time","The function call is resolved at runtime using the vtable","The function is inlined","The function is recursive"],"a":1},
+                {"q":"Which of the following enables late binding in C++?","o":["Function overloading","Operator overloading","Virtual functions called through pointers or references","Template functions"],"a":2},
+                {"q":"Can constructors be virtual in C++?","o":["Yes","No","Only copy constructors","Only default constructors"],"a":1},
+                {"q":"Can static member functions be virtual?","o":["Yes","No","Only in derived classes","Only if public"],"a":1},
+                {"q":"What smart pointer is best for unique ownership of a polymorphic object?","o":["<code>shared_ptr</code>","<code>weak_ptr</code>","<code>unique_ptr</code>","<code>auto_ptr</code>"],"a":2},
+                {"q":"Can <code>std::unique_ptr&lt;Base&gt;</code> hold a derived object?","o":["No","Yes, and virtual dispatch works correctly","Only if the base is not abstract","Only with raw pointers"],"a":1},
+                {"q":"What does <code>make_unique&lt;Dog&gt;()</code> return?","o":["A raw pointer to Dog","A <code>unique_ptr&lt;Dog&gt;</code>","A <code>shared_ptr&lt;Dog&gt;</code>","A reference to Dog"],"a":1},
+                {"q":"In a polymorphic hierarchy, which line is legal? (Shape is abstract)","o":["<code>Shape s;</code>","<code>Shape* p = new Circle(5);</code>","<code>Shape s = Circle(5);</code>","<code>Shape s();</code>"],"a":1},
+                {"q":"What is object slicing?","o":["Deleting part of an object","Assigning a derived object to a base object by value, losing derived data","Splitting an array in half","Trimming a string"],"a":1},
+                {"q":"How do you avoid object slicing?","o":["Use base class pointers or references instead of value types","Use only private inheritance","Avoid constructors","Use static functions"],"a":0},
+                {"q":"Given <code>Animal* a = new Dog();</code>, what does <code>a-&gt;speak()</code> call if <code>speak()</code> is virtual?","o":["<code>Animal::speak()</code>","<code>Dog::speak()</code>","Compile error","Undefined behaviour"],"a":1},
+                {"q":"Given <code>Animal a = Dog();</code> (non-pointer), what does <code>a.speak()</code> call even if virtual?","o":["<code>Dog::speak()</code>","<code>Animal::speak()</code> due to slicing","Compile error","Random behaviour"],"a":1},
+                {"q":"What is the purpose of abstract classes in design?","o":["To allocate memory efficiently","To define a common interface that derived classes must implement","To prevent all inheritance","To make functions inline"],"a":1},
+                {"q":"How does polymorphism reduce <code>if-else</code> chains?","o":["By using macros","By letting virtual dispatch choose the correct behaviour automatically","By deleting conditional statements","By using goto"],"a":1},
+                {"q":"Which pattern commonly uses polymorphism?","o":["Singleton pattern only","Strategy, Factory, and Observer patterns among others","Only the Builder pattern","No design patterns use polymorphism"],"a":1},
+                {"q":"What is the output of calling <code>speak()</code> on a <code>vector&lt;unique_ptr&lt;Animal&gt;&gt;</code> containing a Dog and a Cat?","o":["Both print the Animal version","Dog prints Woof and Cat prints Meow (virtual dispatch)","Compile error","Undefined behaviour"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="inheritance.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Inheritance</span>
+                </a>
+                <a href="abstraction.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Abstraction</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

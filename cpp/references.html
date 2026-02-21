@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ References - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-references">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html" class="active"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 29 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="53" style="width:53%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; References
+                </div>
+                <h1>29. References</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 29 of 55</span>
+                    <span>&#9201; 14 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are References? ===== -->
+                <h2>What Are References?</h2>
+                <p>A <strong>reference</strong> in C++ is an <strong>alias</strong> &mdash; an alternative name for an existing variable. Once a reference is bound to a variable, every operation on the reference is actually performed on the original variable. Unlike pointers, references do not have their own address; they simply provide another way to access the same piece of memory.</p>
+                <p>Think of a reference as a nickname: if your name is &ldquo;Alexander&rdquo; and your friends call you &ldquo;Alex,&rdquo; both names refer to the same person. Changing something about &ldquo;Alex&rdquo; changes something about &ldquo;Alexander&rdquo; because they are the same entity.</p>
+                <p>References are one of the most widely used features in modern C++. They make function calls more efficient, enable operator overloading, form the backbone of range-based <code>for</code> loops, and are central to move semantics introduced in C++11.</p>
+                <p>Understanding references is a prerequisite for almost every advanced C++ concept. From classes and operator overloading (coming in later lessons) to template programming, the standard library, and modern idioms like move semantics &mdash; all rely heavily on reference mechanics.</p>
+
+                <h3>How References Differ from Copies</h3>
+                <p>When you create a new variable and assign it the value of another, you get an <strong>independent copy</strong>. Changing the copy has no effect on the original:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>int original = 100;
+int copy = original;       // copy holds 100
+copy = 200;                // only copy changes
+// original is still 100</code></pre>
+                </div>
+                <p>A reference, on the other hand, is <em>not</em> a copy. It is another name for the <strong>same object in memory</strong>. There is only one value stored, and both names access it:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>int original = 100;
+int&amp; ref = original;       // ref IS original
+ref = 200;                 // both ref and original are now 200</code></pre>
+                </div>
+
+                <!-- ===== Declaring and Initializing References ===== -->
+                <h2>Declaring and Initializing References</h2>
+                <p>You declare a reference by placing the ampersand (<code>&amp;</code>) after the type name. A reference <strong>must</strong> be initialized at the point of declaration &mdash; you cannot create an uninitialized reference.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    int&amp; refAge = age;   // refAge is an alias for age
+
+    cout &lt;&lt; "age    = " &lt;&lt; age    &lt;&lt; endl;   // 25
+    cout &lt;&lt; "refAge = " &lt;&lt; refAge &lt;&lt; endl;   // 25
+
+    refAge = 30;   // modifying through the reference
+    cout &lt;&lt; "age after refAge = 30: " &lt;&lt; age &lt;&lt; endl;   // 30
+
+    age = 40;      // modifying through the original variable
+    cout &lt;&lt; "refAge after age = 40: " &lt;&lt; refAge &lt;&lt; endl; // 40
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>Notice that both <code>age</code> and <code>refAge</code> always print the same value. They share the same storage. Changing one automatically changes the other because they are the <em>same object</em>.</p>
+                <p>The ampersand can be placed in three equivalent styles:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>int&amp; ref1 = x;   // ampersand attached to type  (most common)
+int &amp;ref2 = x;   // ampersand attached to name
+int &amp; ref3 = x;  // ampersand with spaces on both sides</code></pre>
+                </div>
+                <p>All three are identical to the compiler. The first style (<code>int&amp;</code>) is the most popular in modern C++ codebases.</p>
+
+                <h3>Multiple References to the Same Variable</h3>
+                <p>You can create multiple references that all alias the same underlying variable:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>int value = 42;
+int&amp; alias1 = value;
+int&amp; alias2 = value;
+int&amp; alias3 = alias1;   // alias3 also refers to value
+
+alias2 = 100;
+// value, alias1, alias2, and alias3 all equal 100</code></pre>
+                </div>
+                <p>All four names &mdash; <code>value</code>, <code>alias1</code>, <code>alias2</code>, and <code>alias3</code> &mdash; refer to the same memory location. Modifying any one of them changes the shared value.</p>
+
+                <h3>References to Different Types</h3>
+                <p>References work with any data type &mdash; not just <code>int</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>double pi = 3.14159;
+double&amp; refPi = pi;
+
+char letter = 'A';
+char&amp; refLetter = letter;
+
+string name = "CodeVerse";
+string&amp; refName = name;
+
+refName = "C++ References";
+cout &lt;&lt; name;   // "C++ References"</code></pre>
+                </div>
+
+                <!-- ===== References vs Pointers ===== -->
+                <h2>References vs Pointers</h2>
+                <p>References and pointers both provide indirect access to variables, but they differ in several important ways:</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr><th>Feature</th><th>Reference</th><th>Pointer</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Declaration syntax</td><td><code>int&amp; r = x;</code></td><td><code>int* p = &amp;x;</code></td></tr>
+                        <tr><td>Must be initialized</td><td>Yes &mdash; always</td><td>No &mdash; can be <code>nullptr</code></td></tr>
+                        <tr><td>Can be null</td><td>No</td><td>Yes</td></tr>
+                        <tr><td>Can be rebound</td><td>No &mdash; always refers to the same object</td><td>Yes &mdash; can point to different objects</td></tr>
+                        <tr><td>Dereferencing</td><td>Automatic &mdash; use the name directly</td><td>Explicit &mdash; use <code>*p</code></td></tr>
+                        <tr><td>Address-of</td><td><code>&amp;r</code> gives the address of the <em>referent</em></td><td><code>&amp;p</code> gives the address of the <em>pointer itself</em></td></tr>
+                        <tr><td>Arithmetic</td><td>Not supported</td><td>Supported (<code>p + n</code>, <code>p++</code>, etc.)</td></tr>
+                        <tr><td>Sizeof</td><td>Returns size of the referent</td><td>Returns size of a pointer (usually 4 or 8 bytes)</td></tr>
+                        <tr><td>Memory overhead</td><td>Usually none (optimized away)</td><td>Occupies memory for the address</td></tr>
+                        <tr><td>Use case</td><td>Function parameters, operator overloading, aliases</td><td>Dynamic memory, data structures, optional parameters</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>Rule of thumb:</strong> prefer references when you can, use pointers when you must (e.g., when you need <code>nullptr</code>, rebinding, or pointer arithmetic).</p>
+
+                <!-- ===== Pass by Reference ===== -->
+                <h2>Pass by Reference</h2>
+                <p>One of the most common uses of references is <strong>passing arguments to functions by reference</strong>. This lets the function modify the caller&rsquo;s variable directly, and it avoids copying large objects.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Pass by value &ndash; the function works on a COPY
+void addTenByValue(int n) {
+    n += 10;
+}
+
+// Pass by reference &ndash; the function works on the ORIGINAL
+void addTenByRef(int&amp; n) {
+    n += 10;
+}
+
+int main() {
+    int a = 5;
+
+    addTenByValue(a);
+    cout &lt;&lt; "After addTenByValue: " &lt;&lt; a &lt;&lt; endl;   // 5 (unchanged)
+
+    addTenByRef(a);
+    cout &lt;&lt; "After addTenByRef:   " &lt;&lt; a &lt;&lt; endl;   // 15 (modified!)
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>When <code>addTenByRef</code> is called, the parameter <code>n</code> is bound directly to <code>a</code>. No copy is made, and any changes to <code>n</code> are immediately visible in <code>a</code>.</p>
+
+                <h3>Swapping Two Variables</h3>
+                <p>A classic example of pass-by-reference is a swap function:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void mySwap(int&amp; x, int&amp; y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main() {
+    int a = 1, b = 2;
+    mySwap(a, b);
+    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; ", b = " &lt;&lt; b &lt;&lt; endl;   // a = 2, b = 1
+    return 0;
+}</code></pre>
+                </div>
+                <p>Without references (or pointers) the swap would only affect local copies, leaving the caller&rsquo;s variables unchanged.</p>
+
+                <h3>Returning Multiple Values via Reference Parameters</h3>
+                <p>Before C++17 structured bindings, a common pattern for returning multiple values from a function was to use reference parameters as &ldquo;output parameters&rdquo;:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+// Return both the quotient and remainder
+void divide(int dividend, int divisor, int&amp; quotient, int&amp; remainder) {
+    quotient  = dividend / divisor;
+    remainder = dividend % divisor;
+}
+
+int main() {
+    int q, r;
+    divide(17, 5, q, r);
+    cout &lt;&lt; "17 / 5 = " &lt;&lt; q &lt;&lt; " remainder " &lt;&lt; r &lt;&lt; endl;
+    // Output: 17 / 5 = 3 remainder 2
+    return 0;
+}</code></pre>
+                </div>
+                <p>The function writes its results directly into the caller&rsquo;s variables <code>q</code> and <code>r</code> through the reference parameters.</p>
+
+                <h3>Passing Large Objects Efficiently</h3>
+                <p>Copying a large <code>std::string</code> or <code>std::vector</code> every time you call a function is expensive. Passing by reference eliminates that cost:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// Pass a large string without copying
+void printLength(const string&amp; str) {
+    cout &lt;&lt; "Length: " &lt;&lt; str.size() &lt;&lt; endl;
+}
+
+int main() {
+    string greeting = "Hello, CodeVerse!";
+    printLength(greeting);   // no copy &ndash; efficient!
+    return 0;
+}</code></pre>
+                </div>
+                <p>Using <code>const string&amp;</code> gives the efficiency of a reference while guaranteeing the function won&rsquo;t modify the original string.</p>
+
+                <h3>Pass by Value vs Reference vs Pointer &mdash; Summary</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr><th>Mechanism</th><th>Syntax</th><th>Copies?</th><th>Can Modify Original?</th><th>Can Be Null?</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pass by value</td><td><code>void f(int n)</code></td><td>Yes</td><td>No</td><td>N/A</td></tr>
+                        <tr><td>Pass by reference</td><td><code>void f(int&amp; n)</code></td><td>No</td><td>Yes</td><td>No</td></tr>
+                        <tr><td>Pass by const reference</td><td><code>void f(const int&amp; n)</code></td><td>No</td><td>No</td><td>No</td></tr>
+                        <tr><td>Pass by pointer</td><td><code>void f(int* n)</code></td><td>No (pointer itself is copied)</td><td>Yes (via <code>*n</code>)</td><td>Yes</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Return by Reference ===== -->
+                <h2>Return by Reference</h2>
+                <p>A function can also <strong>return a reference</strong>. This is useful when you want the caller to directly access (and possibly modify) an element inside a container or a member of an object.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int data[5] = {10, 20, 30, 40, 50};
+
+// Return a reference to an element
+int&amp; getElement(int index) {
+    return data[index];
+}
+
+int main() {
+    cout &lt;&lt; "Before: " &lt;&lt; data[2] &lt;&lt; endl;   // 30
+
+    getElement(2) = 99;   // modify through the returned reference
+    cout &lt;&lt; "After:  " &lt;&lt; data[2] &lt;&lt; endl;   // 99
+
+    return 0;
+}</code></pre>
+                </div>
+                <div class="warning-box">
+                    <strong>&#9888; Warning:</strong> Never return a reference to a <strong>local variable</strong>. The local variable is destroyed when the function returns, leaving the reference dangling. Only return references to objects whose lifetime extends beyond the function call (e.g., global arrays, static variables, heap-allocated objects, or member variables).
+                </div>
+                <div class="code-block">
+                    <div class="code-header"><span>C++ &mdash; WRONG</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>// DANGER &ndash; returning a reference to a local variable
+int&amp; bad() {
+    int local = 42;
+    return local;   // local is destroyed &ndash; dangling reference!
+}</code></pre>
+                </div>
+
+                <h3>Returning a Reference to a Static Variable</h3>
+                <p>A <code>static</code> local variable persists for the entire program, so returning a reference to it is safe:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int&amp; counter() {
+    static int count = 0;   // persists across calls
+    ++count;
+    return count;
+}
+
+int main() {
+    cout &lt;&lt; counter() &lt;&lt; endl;   // 1
+    cout &lt;&lt; counter() &lt;&lt; endl;   // 2
+
+    int&amp; ref = counter();        // ref aliases the static variable
+    ref = 100;                   // modify the static directly
+    cout &lt;&lt; counter() &lt;&lt; endl;   // 101
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Const References ===== -->
+                <h2>Const References</h2>
+                <p>A <strong>const reference</strong> (<code>const int&amp;</code>) is a reference that <em>cannot</em> be used to modify the value it refers to. Const references are extremely common in function parameters because they combine the efficiency of pass-by-reference with the safety of preventing accidental modification.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void display(const int&amp; val) {
+    cout &lt;&lt; "Value: " &lt;&lt; val &lt;&lt; endl;
+    // val = 100;   // ERROR &ndash; cannot modify through a const reference
+}
+
+int main() {
+    int num = 7;
+    display(num);
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>Const References Can Bind to Temporaries</h3>
+                <p>A unique property of const references is that they can bind to <strong>temporary (rvalue) expressions</strong>. A non-const reference cannot:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>const int&amp; r1 = 42;          // OK &ndash; const ref binds to temporary
+// int&amp; r2 = 42;             // ERROR &ndash; non-const ref cannot bind to rvalue
+
+const string&amp; r3 = "hello"; // OK &ndash; temporary std::string created
+// string&amp; r4 = "hello";    // ERROR</code></pre>
+                </div>
+                <p>The compiler creates a temporary object and extends its lifetime to match that of the const reference. This is an important mechanism that enables many C++ idioms.</p>
+
+                <!-- ===== References and Arrays/Loops ===== -->
+                <h2>References and Arrays/Loops</h2>
+                <p>References shine in <strong>range-based for loops</strong> introduced in C++11. Using a reference avoids copying each element, and using a const reference prevents accidental modification:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; nums = {1, 2, 3, 4, 5};
+
+    // Read-only access &ndash; const reference
+    for (const int&amp; n : nums) {
+        cout &lt;&lt; n &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    // Modify each element in-place &ndash; non-const reference
+    for (int&amp; n : nums) {
+        n *= 10;
+    }
+
+    // Verify modifications
+    for (const int&amp; n : nums) {
+        cout &lt;&lt; n &lt;&lt; " ";   // 10 20 30 40 50
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>Without the <code>&amp;</code>, the range-based loop copies each element into the loop variable. For large objects like <code>std::string</code> or custom classes, this can be a significant performance penalty.</p>
+
+                <h3>References to Array Elements</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>int arr[3] = {100, 200, 300};
+int&amp; first = arr[0];   // alias for the first element
+first = 999;
+cout &lt;&lt; arr[0];        // 999</code></pre>
+                </div>
+                <p>This is exactly what <code>std::vector::operator[]</code> and <code>std::vector::at()</code> do internally &mdash; they return a reference to the stored element.</p>
+
+                <h3>Using <code>auto&amp;</code> in Loops</h3>
+                <p>When iterating over containers of complex types, <code>auto&amp;</code> deduces the element type automatically and avoids copies:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    vector&lt;string&gt; languages = {"C++", "Python", "Rust", "Go"};
+
+    // auto&amp; deduces to string&amp; &ndash; no copies
+    for (auto&amp; lang : languages) {
+        lang = "[" + lang + "]";   // modify each element
+    }
+
+    // const auto&amp; for read-only iteration
+    for (const auto&amp; lang : languages) {
+        cout &lt;&lt; lang &lt;&lt; " ";
+    }
+    // Output: [C++] [Python] [Rust] [Go]
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>Using <code>auto&amp;</code> is considered best practice for range-based for loops in modern C++. It adapts to whatever type the container stores without you needing to spell it out.</p>
+
+                <!-- ===== Rvalue References (C++11 Preview) ===== -->
+                <h2>Rvalue References (C++11 Preview)</h2>
+                <p>C++11 introduced <strong>rvalue references</strong>, declared with a double ampersand (<code>&amp;&amp;</code>). While regular (lvalue) references bind to named variables, rvalue references bind to <strong>temporary objects</strong> that are about to be destroyed. This enables <strong>move semantics</strong> &mdash; transferring resources from a temporary instead of copying them.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+void process(string&amp;&amp; temp) {
+    cout &lt;&lt; "Received rvalue: " &lt;&lt; temp &lt;&lt; endl;
+    // We can freely &ldquo;steal&rdquo; resources from temp
+}
+
+int main() {
+    process("Hello, World!");          // string literal &rarr; temporary string
+    process(string("CodeVerse"));      // explicit temporary
+
+    string named = "I am named";
+    // process(named);                 // ERROR &ndash; named is an lvalue
+    process(std::move(named));         // OK &ndash; std::move casts to rvalue
+    // named is now in a valid but unspecified state
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>Key vocabulary:</p>
+                <ul>
+                    <li><strong>Lvalue</strong> &mdash; an expression with a name and a persistent address (e.g., variables).</li>
+                    <li><strong>Rvalue</strong> &mdash; a temporary value without a persistent address (e.g., <code>42</code>, <code>x + y</code>, function return values).</li>
+                    <li><strong><code>std::move</code></strong> &mdash; a cast that converts an lvalue to an rvalue reference so that its resources can be moved.</li>
+                </ul>
+                <div class="info-box">
+                    <strong>&#128161; Note:</strong> Rvalue references and move semantics are covered in depth in a later lesson. For now, just know that <code>&amp;&amp;</code> exists and is used to optimise resource management in modern C++.
+                </div>
+
+                <h3>Lvalue vs Rvalue &mdash; Quick Examples</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>int x = 10;           // x is an lvalue (has a name and address)
+int y = x + 5;        // (x + 5) is an rvalue (temporary result)
+
+int&amp; lr = x;           // OK &ndash; lvalue ref binds to lvalue
+// int&amp; lr2 = x + 5;   // ERROR &ndash; lvalue ref cannot bind to rvalue
+
+int&amp;&amp; rr = x + 5;      // OK &ndash; rvalue ref binds to rvalue (temporary)
+// int&amp;&amp; rr2 = x;      // ERROR &ndash; rvalue ref cannot bind to lvalue
+
+const int&amp; cr = x + 5; // OK &ndash; const lvalue ref can bind to rvalue</code></pre>
+                </div>
+                <p>The table below summarises the binding rules:</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr><th>Reference Type</th><th>Lvalue</th><th>Rvalue</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>T&amp;</code> (lvalue ref)</td><td>&#10004; Yes</td><td>&#10008; No</td></tr>
+                        <tr><td><code>const T&amp;</code></td><td>&#10004; Yes</td><td>&#10004; Yes</td></tr>
+                        <tr><td><code>T&amp;&amp;</code> (rvalue ref)</td><td>&#10008; No</td><td>&#10004; Yes</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Common Use Cases for References ===== -->
+                <h2>Common Use Cases for References</h2>
+                <p>References appear everywhere in C++ programming. Here are the most frequent scenarios:</p>
+                <ol>
+                    <li><strong>Function parameters</strong> &mdash; avoid copies and allow modification of the caller&rsquo;s data.</li>
+                    <li><strong>Return values</strong> &mdash; allow the caller to read or modify an internal element (e.g., <code>vector::operator[]</code>).</li>
+                    <li><strong>Range-based for loops</strong> &mdash; iterate efficiently without copying elements.</li>
+                    <li><strong>Operator overloading</strong> &mdash; operators like <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>=</code>, and <code>+=</code> take and return references.</li>
+                    <li><strong>Alias for clarity</strong> &mdash; create a short name for a deeply nested member:
+                        <div class="code-block">
+                            <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                            <pre><code>auto&amp; hp = game.player.stats.health;
+hp -= damage;</code></pre>
+                        </div>
+                    </li>
+                    <li><strong>Structured bindings (C++17)</strong> &mdash; decompose pairs, tuples, and structs:
+                        <div class="code-block">
+                            <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                            <pre><code>std::pair&lt;int, string&gt; p = {1, "one"};
+auto&amp; [id, name] = p;   // id and name are references</code></pre>
+                        </div>
+                    </li>
+                </ol>
+
+                <!-- ===== Rules and Restrictions ===== -->
+                <h2>Rules and Restrictions</h2>
+                <p>References have strict rules enforced by the compiler:</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr><th>Rule</th><th>Explanation</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Must be initialized</td><td>You cannot declare <code>int&amp; r;</code> without an initializer.</td></tr>
+                        <tr><td>Cannot be rebound</td><td>Once bound, a reference always refers to the same object. Assigning a new value changes the referent, not the binding.</td></tr>
+                        <tr><td>Cannot be null</td><td>There is no equivalent of <code>nullptr</code> for references. They always refer to a valid object.</td></tr>
+                        <tr><td>No references to references</td><td><code>int&amp;&amp;</code> is an rvalue reference, not a &ldquo;reference to a reference.&rdquo;</td></tr>
+                        <tr><td>No arrays of references</td><td><code>int&amp; arr[5];</code> is illegal because references are not objects.</td></tr>
+                        <tr><td>No pointers to references</td><td><code>int&amp;* p;</code> is illegal. (But you <em>can</em> have a reference to a pointer: <code>int*&amp; rp = ptr;</code>.)</td></tr>
+                        <tr><td>Sizeof returns referent size</td><td><code>sizeof(ref)</code> gives the size of the referred-to object, not the reference itself.</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block">
+                    <div class="code-header"><span>C++ &mdash; Demonstrating the Rules</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 20;
+    int&amp; ref = a;
+
+    // Attempting to &ldquo;rebind&rdquo; ref to b?
+    ref = b;   // This does NOT rebind ref. It assigns b&rsquo;s value (20) to a.
+    cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;     // 20 (a was changed)
+    cout &lt;&lt; "ref = " &lt;&lt; ref &lt;&lt; endl; // 20 (ref still aliases a)
+
+    // &amp;ref gives the address of a, not a separate address
+    cout &lt;&lt; "&amp;a   = " &lt;&lt; &amp;a   &lt;&lt; endl;
+    cout &lt;&lt; "&amp;ref = " &lt;&lt; &amp;ref &lt;&lt; endl;  // same address as &amp;a
+
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>A <strong>reference</strong> is an alias &mdash; another name for an existing variable. It must be initialized and cannot be rebound or null.</li>
+                    <li>References provide <strong>cleaner syntax</strong> than pointers for many use cases: no <code>*</code> to dereference, no <code>-&gt;</code> to access members.</li>
+                    <li><strong>Pass by reference</strong> (<code>int&amp;</code>) lets functions modify the caller&rsquo;s data and avoids expensive copies.</li>
+                    <li><strong>Const references</strong> (<code>const int&amp;</code>) combine efficiency with safety &mdash; no copy, no modification. They can also bind to temporaries.</li>
+                    <li><strong>Return by reference</strong> allows callers to directly access or modify internal data, but never return a reference to a local variable.</li>
+                    <li>Use references in <strong>range-based for loops</strong> to iterate without copying and to modify elements in place.</li>
+                    <li><strong>Rvalue references</strong> (<code>&amp;&amp;</code>) bind to temporaries and enable move semantics in C++11 and later.</li>
+                    <li>Prefer references when you can; use pointers when you need nullability, rebinding, or arithmetic.</li>
+                </ul>
+                <!-- ===== Practice Exercise ===== -->
+                <h2>Practice Exercise</h2>
+                <p>Try the following exercise to test your understanding of references. Write a function <code>clamp</code> that takes a value by reference and two bounds by const reference, and clamps the value to the range <code>[low, high]</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void clamp(int&amp; value, const int&amp; low, const int&amp; high) {
+    if (value &lt; low)  value = low;
+    if (value &gt; high) value = high;
+}
+
+int main() {
+    int score = 150;
+    clamp(score, 0, 100);
+    cout &lt;&lt; "Clamped score: " &lt;&lt; score &lt;&lt; endl;   // 100
+
+    int temp = -20;
+    clamp(temp, -10, 50);
+    cout &lt;&lt; "Clamped temp: " &lt;&lt; temp &lt;&lt; endl;     // -10
+
+    int normal = 42;
+    clamp(normal, 0, 100);
+    cout &lt;&lt; "Clamped normal: " &lt;&lt; normal &lt;&lt; endl; // 42 (unchanged)
+
+    return 0;
+}</code></pre>
+                </div>
+                <p>Notice how <code>value</code> is passed by non-const reference (we need to modify it), while <code>low</code> and <code>high</code> are passed by const reference (read-only, no copy).</p>
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/IzoFn3dfsPA" title="C++ References" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a reference in C++?","o":["A copy of a variable","An alias for an existing variable","A pointer to a pointer","A new data type"],"a":1},
+                {"q":"Which symbol is used to declare a reference?","o":["*","&amp;","#","@"],"a":1},
+                {"q":"Must a reference be initialized when declared?","o":["Yes &ndash; always","No &ndash; it can be left uninitialized","Only for const references","Only for global references"],"a":0},
+                {"q":"Can a reference be rebound to a different variable after initialization?","o":["Yes","No","Only if it is a const reference","Only in C++17"],"a":1},
+                {"q":"Can a reference be null?","o":["Yes","No","Only a const reference can be null","Only if explicitly set to nullptr"],"a":1},
+                {"q":"What does the following code print?<br><code>int x = 5; int&amp; r = x; r = 10; cout &lt;&lt; x;</code>","o":["5","10","0","Undefined"],"a":1},
+                {"q":"What does <code>&amp;ref</code> return when <code>ref</code> is a reference to variable <code>a</code>?","o":["The address of the reference itself","The address of a","A compiler error","A null pointer"],"a":1},
+                {"q":"Which of the following is a valid reference declaration?","o":["int&amp; r;","int&amp; r = 42;","int&amp; r = x; (where x is an int)","int&amp;* r = &amp;x;"],"a":2},
+                {"q":"What is the output?<br><code>int a = 3, b = 7; int&amp; r = a; r = b; cout &lt;&lt; a;</code>","o":["3","7","0","Compile error"],"a":1},
+                {"q":"Which is NOT a difference between references and pointers?","o":["References must be initialized; pointers need not be","References cannot be null; pointers can","References use * to dereference; pointers use &amp;","References cannot be rebound; pointers can"],"a":2},
+                {"q":"What does <code>sizeof(ref)</code> return?","o":["The size of the reference itself","The size of the referred-to object","Always 4 bytes","Always 8 bytes"],"a":1},
+                {"q":"Which style of placing &amp; is most common in modern C++?","o":["int &amp;ref","int&amp; ref","int &amp; ref","ref&amp; int"],"a":1},
+                {"q":"What happens when you pass a variable by value to a function?","o":["The function works on the original variable","A copy is made","The variable is deleted","A reference is created automatically"],"a":1},
+                {"q":"What happens when you pass a variable by reference to a function?","o":["A copy is made","The function works on the original variable","A pointer is created automatically","The variable becomes const"],"a":1},
+                {"q":"In <code>void foo(int&amp; n)</code>, what kind of parameter is <code>n</code>?","o":["Pass by value","Pass by pointer","Pass by reference","Pass by copy"],"a":2},
+                {"q":"Why is pass by reference efficient for large objects?","o":["It compresses the data","It avoids copying the entire object","It uses less stack space than a pointer","It stores data on the heap"],"a":1},
+                {"q":"What does this swap function do?<br><code>void swap(int&amp; a, int&amp; b) { int t = a; a = b; b = t; }</code>","o":["Swaps only local copies","Swaps the caller&rsquo;s variables directly","Causes undefined behaviour","Does nothing"],"a":1},
+                {"q":"What is the benefit of <code>const string&amp;</code> as a function parameter?","o":["Allows modification and avoids copy","Prevents modification and avoids copy","Forces a copy for safety","Creates a temporary string"],"a":1},
+                {"q":"Can a const reference bind to a temporary (rvalue)?","o":["Yes","No","Only in C++20","Only for integers"],"a":0},
+                {"q":"Is <code>int&amp; r = 42;</code> valid?","o":["Yes","No &ndash; non-const ref cannot bind to an rvalue","Only in C++17","Yes, if 42 is a macro"],"a":1},
+                {"q":"Is <code>const int&amp; r = 42;</code> valid?","o":["No","Yes &ndash; const ref extends the temporary&rsquo;s lifetime","Only for doubles","Only with std::move"],"a":1},
+                {"q":"What does a function returning <code>int&amp;</code> return?","o":["A copy of an int","A reference to an int","A pointer to an int","A const int"],"a":1},
+                {"q":"Why is returning a reference to a local variable dangerous?","o":["It causes a memory leak","The local is destroyed, leaving a dangling reference","It doubles the memory usage","It creates a circular reference"],"a":1},
+                {"q":"Which of these is safe to return by reference?","o":["A local variable","A function parameter passed by value","A global or static variable","A temporary"],"a":2},
+                {"q":"In a range-based for loop, what does <code>for (int&amp; n : vec)</code> allow?","o":["Read-only access to copies","Modification of each element in place","Deleting elements","Creating new elements"],"a":1},
+                {"q":"What does <code>for (const int&amp; n : vec)</code> provide?","o":["Mutable access without copying","Read-only access without copying","Mutable access with copying","Read-only access with copying"],"a":1},
+                {"q":"What is an rvalue reference declared with?","o":["&amp;","&amp;&amp;","**","&amp;*"],"a":1},
+                {"q":"Rvalue references bind to:","o":["Named variables (lvalues)","Temporary objects (rvalues)","Null pointers","Const objects only"],"a":1},
+                {"q":"What does <code>std::move(x)</code> do?","o":["Physically moves x to a new memory location","Casts x to an rvalue reference","Deletes x","Copies x"],"a":1},
+                {"q":"After <code>std::move(named)</code>, the original variable is in:","o":["An unchanged state","A valid but unspecified state","A deleted state","A null state"],"a":1},
+                {"q":"What C++ standard introduced rvalue references?","o":["C++98","C++03","C++11","C++20"],"a":2},
+                {"q":"Which feature do rvalue references enable?","o":["Static polymorphism","Move semantics","Template metaprogramming","Exception handling"],"a":1},
+                {"q":"Can you create an array of references?","o":["Yes","No &ndash; references are not objects","Only in C++20","Only with std::array"],"a":1},
+                {"q":"Is <code>int&amp;* p;</code> (pointer to a reference) legal?","o":["Yes","No","Only for const references","Only in templated code"],"a":1},
+                {"q":"Is <code>int*&amp; rp = ptr;</code> (reference to a pointer) legal?","o":["Yes","No","Only in C++17","Only for void pointers"],"a":0},
+                {"q":"What is a reference to a pointer useful for?","o":["Modifying the pointer itself inside a function","Creating arrays of references","Null-checking references","Pointer arithmetic"],"a":0},
+                {"q":"What does the compiler typically do with a reference internally?","o":["Creates a separate variable","Optimises it away or uses a pointer behind the scenes","Allocates heap memory","Creates a copy"],"a":1},
+                {"q":"Which operator is commonly overloaded using references?","o":["sizeof","typeid","operator&lt;&lt;","new"],"a":2},
+                {"q":"In <code>ostream&amp; operator&lt;&lt;(ostream&amp; os, const MyClass&amp; obj)</code>, why is <code>os</code> returned by reference?","o":["To allow chaining of &lt;&lt; calls","To create a copy of the stream","To prevent compilation errors","For memory safety"],"a":0},
+                {"q":"What is a structured binding in C++17?","o":["Binding a struct to a namespace","Decomposing a pair/tuple/struct into named variables via references","A new loop syntax","A type-casting mechanism"],"a":1},
+                {"q":"In <code>auto&amp; [id, name] = p;</code>, what are <code>id</code> and <code>name</code>?","o":["Copies of the pair&rsquo;s elements","References to the pair&rsquo;s elements","Pointers to the pair&rsquo;s elements","New independent variables"],"a":1},
+                {"q":"Why should you prefer <code>const auto&amp;</code> in a range-for when you only read elements?","o":["It avoids copies and prevents accidental modification","It is required by the standard","It makes the code compile faster","It enables rvalue references"],"a":0},
+                {"q":"What happens if you try to modify a value through a const reference?","o":["The value is modified normally","A copy is modified instead","A compile-time error occurs","A runtime exception is thrown"],"a":2},
+                {"q":"Given <code>int x = 5; const int&amp; cr = x; x = 10;</code>, what is <code>cr</code>?","o":["5","10","Undefined","Compile error"],"a":1},
+                {"q":"Which is a correct function signature that prevents copying AND modification?","o":["void f(int n)","void f(int&amp; n)","void f(const int&amp; n)","void f(int* n)"],"a":2},
+                {"q":"Can a reference refer to another reference&rsquo;s referent?","o":["No","Yes &ndash; both will alias the same object","Only with const references","Only for primitive types"],"a":1},
+                {"q":"What does this code output?<br><code>int a = 1; int&amp; r1 = a; int&amp; r2 = r1; r2 = 9; cout &lt;&lt; a;</code>","o":["1","9","Compile error","Undefined"],"a":1},
+                {"q":"Which is the preferred way to pass a read-only <code>std::vector</code> to a function?","o":["void f(vector&lt;int&gt; v)","void f(vector&lt;int&gt;&amp; v)","void f(const vector&lt;int&gt;&amp; v)","void f(vector&lt;int&gt;* v)"],"a":2},
+                {"q":"What is a dangling reference?","o":["A reference bound to nullptr","A reference to an object that no longer exists","A reference that is never used","A reference declared without const"],"a":1},
+                {"q":"Which statement best summarises when to use references vs pointers?","o":["Always use pointers; references are legacy","Always use references; pointers are obsolete","Prefer references when possible; use pointers when you need null, rebinding, or arithmetic","They are interchangeable"],"a":2}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="dynamic-memory.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Dynamic Memory</span>
+                </a>
+                <a href="classes-objects.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Classes &amp; Objects</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

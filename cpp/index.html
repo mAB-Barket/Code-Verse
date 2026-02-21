@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn C++ Programming - Comprehensive tutorials from basics to advanced concepts.">
+    <meta name="description" content="Learn C++ Programming - 55 comprehensive tutorials from basics to advanced concepts with video lectures and quizzes.">
     <title>C++ Tutorials - CodeVerse</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
@@ -26,6 +26,13 @@
                 <a href="../about.html">About</a>
             </nav>
             <div class="nav-actions">
+                <div class="header-search">
+                    <button class="header-search-toggle" aria-label="Search">&#128269;</button>
+                    <input type="text" class="header-search-input" placeholder="Search courses, lessons..." aria-label="Search site">
+                    <span class="header-search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+                    <div class="header-search-dropdown"></div>
+                </div>
+
                 <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <div class="hamburger"><span></span><span></span><span></span></div>
@@ -34,106 +41,589 @@
         </div>
     </header>
 
-    <section class="hero" style="padding:3rem 0 2rem;">
-        <div class="hero-content" style="grid-template-columns:1fr;">
-            <div class="hero-text" style="text-align:center;">
-                <span class="badge badge-primary">&#128218; 7 Lessons</span>
+    <section class="hero coming-soon-hero hero-compact">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge badge-primary">&#128218; 55 Lessons &bull; 10 Modules</span>
                 <h1>Learn <span class="gradient-text">C++ Programming</span></h1>
-                <p class="subtitle" style="margin:0 auto 1.5rem;">Master system-level programming, game development, and high-performance computing with C++. From variables and loops to functions and arrays.</p>
+                <p class="subtitle">Master C++ from scratch &mdash; system programming, game development, and high-performance computing. Each lesson includes detailed tutorials, embedded video lectures, and 150 quiz questions for assessment.</p>
                 <a href="introduction.html" class="btn btn-primary btn-lg">Start Learning C++ &#8594;</a>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="55" data-suffix="">0</span>
+                        <span class="stat-label">Tutorials</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2450" data-suffix="+">0</span>
+                        <span class="stat-label">Quiz Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10" data-suffix="">0</span>
+                        <span class="stat-label">Modules</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="55" data-suffix="">0</span>
+                        <span class="stat-label">Video Lessons</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Module 1: Introduction & Setup -->
     <section class="languages-section">
         <div class="container">
             <div class="section-title animate-on-scroll">
-                <h2>C++ Tutorial Topics</h2>
-                <p>Work through each topic in order, or jump to what you need. Each lesson includes explanations, code examples, videos, and quizzes.</p>
+                <h2>Module 1: Introduction &amp; Setup</h2>
+                <p>Get started with C++ &mdash; learn its history, set up your environment, and write your first program.</p>
             </div>
-
             <div class="topic-grid">
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/j8nAHeVKL08" title="C++ Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
                         <span class="badge badge-success">Lesson 1</span>
                         <h3>Introduction to C++</h3>
-                        <p>Learn what C++ is, its history, features, and why it's still one of the most powerful languages.</p>
-                        <a href="introduction.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <p>Learn what C++ is, its history, key features, and why it remains one of the most powerful programming languages.</p>
+                        <a href="introduction.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
-
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/JrnQ-915czY" title="C++ Variables" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
                         <span class="badge badge-success">Lesson 2</span>
-                        <h3>Variables & Data Types</h3>
-                        <p>Understand variables, data types, memory allocation, and constants in C++.</p>
-                        <a href="variables.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <h3>Setting Up C++ Environment</h3>
+                        <p>Install and configure a C++ compiler and IDE on Windows, Linux, and macOS.</p>
+                        <a href="setup.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
-
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/1-OKPH1y4EA" title="C++ Comments" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
                         <span class="badge badge-success">Lesson 3</span>
-                        <h3>Comments</h3>
-                        <p>Learn how to write effective comments to document and maintain your code.</p>
-                        <a href="comments.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <h3>Your First C++ Program</h3>
+                        <p>Write, compile, and run your first "Hello, World!" program and understand its structure.</p>
+                        <a href="first-program.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Module 2: Basic Syntax & Data Types -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 2: Basic Syntax &amp; Data Types</h2>
+                <p>Master C++ syntax fundamentals &mdash; variables, data types, operators, and I/O operations.</p>
+            </div>
+            <div class="topic-grid">
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/ePJxpxsnkGw" title="C++ Arrays" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
-                        <span class="badge badge-primary">Lesson 4</span>
+                        <span class="badge badge-success">Lesson 4</span>
+                        <h3>C++ Basic Syntax</h3>
+                        <p>Understand the fundamental building blocks of C++ syntax, statements, and program structure.</p>
+                        <a href="basic-syntax.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 5</span>
+                        <h3>Variables &amp; Constants</h3>
+                        <p>Learn to declare, initialize, and use variables and constants to store data.</p>
+                        <a href="variables.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 6</span>
+                        <h3>Data Types</h3>
+                        <p>Explore all C++ data types: int, float, double, char, bool, string, and the auto keyword.</p>
+                        <a href="data-types.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 7</span>
+                        <h3>Input &amp; Output</h3>
+                        <p>Master console I/O using cout, cin, cerr, and stream formatting techniques.</p>
+                        <a href="input-output.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 8</span>
+                        <h3>Operators</h3>
+                        <p>Learn arithmetic, comparison, logical, bitwise, and assignment operators with precedence rules.</p>
+                        <a href="operators.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 9</span>
+                        <h3>Comments &amp; Formatting</h3>
+                        <p>Write clean, well-documented code with single-line and multi-line comments.</p>
+                        <a href="comments.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3: Control Flow -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 3: Control Flow</h2>
+                <p>Learn decision-making and looping constructs to control program execution flow.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 10</span>
+                        <h3>If/Else Statements</h3>
+                        <p>Make decisions in your code with if, else if, and else conditional statements.</p>
+                        <a href="if-else.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 11</span>
+                        <h3>Switch Statements</h3>
+                        <p>Use switch-case blocks for clean multi-way branching decisions.</p>
+                        <a href="switch.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 12</span>
+                        <h3>For Loops</h3>
+                        <p>Iterate with for loops, range-based for loops, and understand loop mechanics.</p>
+                        <a href="for-loops.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 13</span>
+                        <h3>While &amp; Do-While Loops</h3>
+                        <p>Master while and do-while loops for condition-based repetition.</p>
+                        <a href="while-loops.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 14</span>
+                        <h3>Break &amp; Continue</h3>
+                        <p>Control loop flow using break and continue statements effectively.</p>
+                        <a href="break-continue.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 15</span>
+                        <h3>Nested Loops</h3>
+                        <p>Combine loops inside loops for patterns, matrices, and complex iterations.</p>
+                        <a href="nested-loops.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: Functions -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 4: Functions &amp; Modular Programming</h2>
+                <p>Write reusable, modular code with functions, parameters, recursion, and lambdas.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 16</span>
+                        <h3>Function Basics</h3>
+                        <p>Define, declare, and call functions &mdash; the building blocks of modular programming.</p>
+                        <a href="functions.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 17</span>
+                        <h3>Function Parameters</h3>
+                        <p>Pass data by value, by reference, use default arguments, and const parameters.</p>
+                        <a href="function-parameters.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 18</span>
+                        <h3>Return Values</h3>
+                        <p>Return data from functions, understand void functions, and multiple return values.</p>
+                        <a href="return-values.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 19</span>
+                        <h3>Function Overloading</h3>
+                        <p>Create multiple functions with the same name but different parameters.</p>
+                        <a href="function-overloading.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 20</span>
+                        <h3>Recursion</h3>
+                        <p>Solve problems with functions that call themselves &mdash; factorial, Fibonacci, and more.</p>
+                        <a href="recursion.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 21</span>
+                        <h3>Inline &amp; Lambda Functions</h3>
+                        <p>Optimize with inline functions and write concise code with C++ lambda expressions.</p>
+                        <a href="inline-lambda.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5: Compound Types -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 5: Arrays, Strings, Pointers &amp; References</h2>
+                <p>Master collection types, text handling, memory addresses, and indirection.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 22</span>
                         <h3>Arrays</h3>
-                        <p>Work with collections of data using single and multi-dimensional arrays.</p>
-                        <a href="arrays.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <p>Store and access collections of data with fixed-size arrays.</p>
+                        <a href="arrays.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
-
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/RFLFX1boGwo" title="C++ Functions" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
-                        <span class="badge badge-primary">Lesson 5</span>
-                        <h3>Functions</h3>
-                        <p>Create reusable code blocks with functions, parameters, return types, and recursion.</p>
-                        <a href="functions.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <span class="badge badge-warning">Lesson 23</span>
+                        <h3>Multi-Dimensional Arrays</h3>
+                        <p>Work with 2D and 3D arrays for matrices, grids, and tabular data.</p>
+                        <a href="multi-arrays.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
-
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/a7dfSBrTZtE" title="C++ Loops" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
-                        <span class="badge badge-primary">Lesson 6</span>
-                        <h3>Loops</h3>
-                        <p>Master for, while, and do-while loops for repetitive tasks and data processing.</p>
-                        <a href="loops.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <span class="badge badge-warning">Lesson 24</span>
+                        <h3>C-Strings</h3>
+                        <p>Handle text with null-terminated character arrays and C-string functions.</p>
+                        <a href="c-strings.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
-
                 <div class="topic-card animate-on-scroll">
-                    <div class="topic-card-video">
-                        <iframe src="https://www.youtube.com/embed/AY96XFqb934" title="C++ If Else" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                    </div>
                     <div class="topic-card-body">
-                        <span class="badge badge-warning">Lesson 7</span>
-                        <h3>If & If-Else Statements</h3>
-                        <p>Learn decision-making with conditional statements and logical operators.</p>
-                        <a href="ifelse.html" class="btn btn-secondary btn-sm" style="margin-top:0.5rem;">Start Lesson &#8594;</a>
+                        <span class="badge badge-warning">Lesson 25</span>
+                        <h3>std::string</h3>
+                        <p>Use the powerful std::string class for modern, safe string operations.</p>
+                        <a href="strings.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 26</span>
+                        <h3>Pointers</h3>
+                        <p>Understand memory addresses, pointer declaration, dereferencing, and nullptr.</p>
+                        <a href="pointers.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 27</span>
+                        <h3>Pointer Arithmetic</h3>
+                        <p>Navigate memory with pointer arithmetic and array-pointer relationships.</p>
+                        <a href="pointer-arithmetic.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 28</span>
+                        <h3>Dynamic Memory</h3>
+                        <p>Allocate and free memory at runtime using new, delete, and managing memory leaks.</p>
+                        <a href="dynamic-memory.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 29</span>
+                        <h3>References</h3>
+                        <p>Create aliases with lvalue references and use them for efficient parameter passing.</p>
+                        <a href="references.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6: OOP -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 6: Object-Oriented Programming</h2>
+                <p>Design robust programs with classes, inheritance, polymorphism, and encapsulation.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 30</span>
+                        <h3>Classes &amp; Objects</h3>
+                        <p>Define classes, create objects, and access member variables and methods.</p>
+                        <a href="classes-objects.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 31</span>
+                        <h3>Constructors &amp; Destructors</h3>
+                        <p>Initialize and clean up objects with constructors and destructors.</p>
+                        <a href="constructors.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 32</span>
+                        <h3>Access Specifiers</h3>
+                        <p>Control visibility with public, private, and protected access levels.</p>
+                        <a href="access-specifiers.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 33</span>
+                        <h3>Encapsulation</h3>
+                        <p>Bundle data with methods and hide internal implementation details.</p>
+                        <a href="encapsulation.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 34</span>
+                        <h3>Inheritance</h3>
+                        <p>Create class hierarchies with base and derived classes for code reuse.</p>
+                        <a href="inheritance.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 35</span>
+                        <h3>Polymorphism</h3>
+                        <p>Use virtual functions and method overriding for runtime flexibility.</p>
+                        <a href="polymorphism.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 36</span>
+                        <h3>Abstraction</h3>
+                        <p>Design abstract base classes and pure virtual functions for interfaces.</p>
+                        <a href="abstraction.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 7: Templates & STL -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 7: Templates &amp; Standard Library</h2>
+                <p>Write generic code with templates and leverage the powerful C++ STL containers and algorithms.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 37</span>
+                        <h3>Function Templates</h3>
+                        <p>Write type-independent functions with template&lt;typename T&gt; syntax.</p>
+                        <a href="function-templates.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 38</span>
+                        <h3>Class Templates</h3>
+                        <p>Create generic classes that work with any data type.</p>
+                        <a href="class-templates.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 39</span>
+                        <h3>STL Vectors</h3>
+                        <p>Use dynamic arrays with std::vector for flexible data storage.</p>
+                        <a href="vectors.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 40</span>
+                        <h3>STL Lists &amp; Deques</h3>
+                        <p>Work with linked lists and double-ended queues for efficient insertions.</p>
+                        <a href="lists-deques.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 41</span>
+                        <h3>STL Maps &amp; Sets</h3>
+                        <p>Store key-value pairs and unique collections with maps and sets.</p>
+                        <a href="maps-sets.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 42</span>
+                        <h3>STL Algorithms</h3>
+                        <p>Sort, search, transform, and manipulate data with &lt;algorithm&gt; functions.</p>
+                        <a href="stl-algorithms.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-primary">Lesson 43</span>
+                        <h3>Iterators</h3>
+                        <p>Traverse containers with iterators &mdash; the bridge between containers and algorithms.</p>
+                        <a href="iterators.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 8: Advanced Features -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 8: Advanced Features</h2>
+                <p>Dive into modern C++ &mdash; exception handling, file I/O, smart pointers, and concurrency.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 44</span>
+                        <h3>Exception Handling</h3>
+                        <p>Handle errors gracefully with try, catch, throw, and custom exceptions.</p>
+                        <a href="exceptions.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 45</span>
+                        <h3>File I/O</h3>
+                        <p>Read and write files using ifstream, ofstream, and fstream classes.</p>
+                        <a href="file-io.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 46</span>
+                        <h3>Namespaces</h3>
+                        <p>Organize code and avoid naming conflicts with namespaces.</p>
+                        <a href="namespaces.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 47</span>
+                        <h3>Smart Pointers</h3>
+                        <p>Manage memory safely with unique_ptr, shared_ptr, and weak_ptr (RAII).</p>
+                        <a href="smart-pointers.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 48</span>
+                        <h3>Move Semantics</h3>
+                        <p>Optimize performance with rvalue references, std::move, and move constructors.</p>
+                        <a href="move-semantics.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 49</span>
+                        <h3>Multithreading</h3>
+                        <p>Run code in parallel with std::thread, mutexes, and thread safety.</p>
+                        <a href="multithreading.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-warning">Lesson 50</span>
+                        <h3>Modern C++ Features</h3>
+                        <p>Explore C++11/14/17/20: auto, constexpr, structured bindings, ranges, and more.</p>
+                        <a href="modern-cpp.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 9: Tools & Best Practices -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 9: Tools &amp; Best Practices</h2>
+                <p>Learn practical development skills &mdash; debugging, code style, version control, and testing.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 51</span>
+                        <h3>Debugging Techniques</h3>
+                        <p>Use debuggers, set breakpoints, inspect variables, and troubleshoot code.</p>
+                        <a href="debugging.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 52</span>
+                        <h3>Code Style &amp; Documentation</h3>
+                        <p>Write clean, maintainable code with consistent naming and documentation.</p>
+                        <a href="code-style.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 53</span>
+                        <h3>Version Control with Git</h3>
+                        <p>Track changes, collaborate, and manage code with Git and GitHub.</p>
+                        <a href="version-control.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 54</span>
+                        <h3>Testing &amp; Assertions</h3>
+                        <p>Write tests, use assertions, and validate your code for correctness.</p>
+                        <a href="testing.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 10: Projects -->
+    <section class="languages-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Module 10: Projects &amp; Assessment</h2>
+                <p>Apply everything you've learned with hands-on projects and coding challenges.</p>
+            </div>
+            <div class="topic-grid">
+                <div class="topic-card animate-on-scroll">
+                    <div class="topic-card-body">
+                        <span class="badge badge-success">Lesson 55</span>
+                        <h3>Practice Projects &amp; Challenges</h3>
+                        <p>Build real projects &mdash; calculator, text game, data processor &mdash; and solve coding challenges.</p>
+                        <a href="projects.html" class="btn btn-secondary btn-sm">Start Lesson &#8594;</a>
                     </div>
                 </div>
             </div>

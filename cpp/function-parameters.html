@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Function Parameters - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-function-parameters">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html" class="active"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 17 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="31" style="width:31%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Function Parameters
+                </div>
+                <h1>17. Function Parameters</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 17 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>What Are Function Parameters?</h2>
+                <p><strong>Parameters</strong> are variables listed in a function&rsquo;s declaration that act as placeholders for the values (called <strong>arguments</strong>) passed when the function is called. They allow you to write flexible functions that work with different data each time.</p>
+                <p>In the previous lesson you learned the basics of defining and calling functions. Now you&rsquo;ll master how data flows <em>into</em> functions through parameters, including the critical difference between passing by value and passing by reference.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>Pass by value &mdash; the default behavior</li>
+                    <li>Pass by reference using <code>&amp;</code></li>
+                    <li>Using <code>const</code> references for efficiency</li>
+                    <li>Default parameter values</li>
+                    <li>Rules for multiple default parameters</li>
+                    <li>Passing arrays to functions</li>
+                    <li>Practical examples with references and arrays</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Understanding how parameters are passed is one of the most important concepts in C++. It determines whether a function works on a <strong>copy</strong> of the data or on the <strong>original</strong> data itself.</p>
+                </div>
+
+                <!-- ===== Pass by Value ===== -->
+                <h2>Pass by Value (Default)</h2>
+                <p>By default, C++ passes arguments <strong>by value</strong>. This means the function receives a <em>copy</em> of each argument. Any changes made to the parameter inside the function do <strong>not</strong> affect the original variable.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void doubleValue(int num) {
+    num = num * 2;  // Modifies the LOCAL copy only
+    cout &lt;&lt; "Inside function: " &lt;&lt; num &lt;&lt; endl;
+}
+
+int main() {
+    int x = 5;
+    doubleValue(x);
+    cout &lt;&lt; "After function call: " &lt;&lt; x &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Inside function: 10
+After function call: 5</pre></div>
+
+                <p>Notice that <code>x</code> remains <strong>5</strong> after the function call. The function only modified its local copy, <code>num</code>.</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Pass by value is safe because the caller&rsquo;s data is protected from unintended changes. Use it for small types like <code>int</code>, <code>double</code>, <code>char</code>, and <code>bool</code>.</p>
+                </div>
+
+                <h3>How Pass by Value Works Internally</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void modify(int a, double b) {
+    a = 100;
+    b = 99.9;
+    cout &lt;&lt; "Inside: a=" &lt;&lt; a &lt;&lt; ", b=" &lt;&lt; b &lt;&lt; endl;
+}
+
+int main() {
+    int x = 1;
+    double y = 2.5;
+    modify(x, y);
+    cout &lt;&lt; "Outside: x=" &lt;&lt; x &lt;&lt; ", y=" &lt;&lt; y &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Inside: a=100, b=99.9
+Outside: x=1, y=2.5</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>With pass by value, each parameter is an independent copy. Modifications inside the function are invisible to the caller.</p>
+                </div>
+
+                <!-- ===== Pass by Reference ===== -->
+                <h2>Pass by Reference</h2>
+                <p>To allow a function to modify the original variable, use a <strong>reference parameter</strong> by adding <code>&amp;</code> after the type. A reference is an alias &mdash; it refers directly to the original variable rather than making a copy.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void doubleValue(int &amp;num) {   // &amp; makes it a reference
+    num = num * 2;  // Modifies the ORIGINAL variable
+    cout &lt;&lt; "Inside function: " &lt;&lt; num &lt;&lt; endl;
+}
+
+int main() {
+    int x = 5;
+    doubleValue(x);
+    cout &lt;&lt; "After function call: " &lt;&lt; x &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Inside function: 10
+After function call: 10</pre></div>
+
+                <p>This time <code>x</code> is <strong>10</strong> after the call, because <code>num</code> is a reference to <code>x</code> &mdash; they share the same memory.</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>A common convention: place the <code>&amp;</code> next to the type (<code>int&amp; num</code>) to emphasize the type is &ldquo;reference to int.&rdquo; Both <code>int &amp;num</code> and <code>int&amp; num</code> are valid C++.</p>
+                </div>
+
+                <h3>The Classic Swap Function</h3>
+                <p>Swapping two variables is the textbook example of why pass by reference is essential:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// WRONG: pass by value &mdash; doesn't actually swap
+void badSwap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// CORRECT: pass by reference &mdash; swaps the originals
+void goodSwap(int &amp;a, int &amp;b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    int x = 10, y = 20;
+
+    badSwap(x, y);
+    cout &lt;&lt; "After badSwap:  x=" &lt;&lt; x &lt;&lt; ", y=" &lt;&lt; y &lt;&lt; endl;
+
+    goodSwap(x, y);
+    cout &lt;&lt; "After goodSwap: x=" &lt;&lt; x &lt;&lt; ", y=" &lt;&lt; y &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>After badSwap:  x=10, y=20
+After goodSwap: x=20, y=10</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><code>badSwap</code> swaps copies and has no effect on the originals. <code>goodSwap</code> uses reference parameters (<code>&amp;</code>) so it modifies <code>x</code> and <code>y</code> directly.</p>
+                </div>
+
+                <h3>Multiple Reference Parameters</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void getMinMax(int a, int b, int c, int &amp;minVal, int &amp;maxVal) {
+    minVal = a;
+    maxVal = a;
+    if (b &lt; minVal) minVal = b;
+    if (c &lt; minVal) minVal = c;
+    if (b &gt; maxVal) maxVal = b;
+    if (c &gt; maxVal) maxVal = c;
+}
+
+int main() {
+    int lo, hi;
+    getMinMax(7, 2, 9, lo, hi);
+    cout &lt;&lt; "Min: " &lt;&lt; lo &lt;&lt; ", Max: " &lt;&lt; hi &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Min: 2, Max: 9</pre></div>
+
+                <p>Reference parameters let a function effectively &ldquo;return&rdquo; multiple values by writing directly to the caller&rsquo;s variables.</p>
+
+                <!-- ===== const References ===== -->
+                <h2>const References</h2>
+                <p>For large objects (like strings or vectors), passing by value is expensive because the entire object is copied. Use a <strong>const reference</strong> (<code>const type&amp;</code>) to avoid the copy while preventing the function from modifying the original.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+void printMessage(const string &amp;msg) {
+    cout &lt;&lt; msg &lt;&lt; endl;
+    // msg = "changed";  // ERROR: cannot modify a const reference
+}
+
+int main() {
+    string greeting = "Hello, CodeVerse!";
+    printMessage(greeting);
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Hello, CodeVerse!</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use <code>const&amp;</code> when you want <strong>efficiency</strong> (no copy) and <strong>safety</strong> (no modification). This is the recommended way to pass strings, vectors, and other large objects to functions.</p>
+                </div>
+
+                <h3>When to Use Each Passing Style</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Style</th>
+                            <th>Syntax</th>
+                            <th>Use When</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pass by value</td>
+                            <td><code>void f(int x)</code></td>
+                            <td>Small types, no need to modify original</td>
+                        </tr>
+                        <tr>
+                            <td>Pass by reference</td>
+                            <td><code>void f(int&amp; x)</code></td>
+                            <td>You need to modify the original variable</td>
+                        </tr>
+                        <tr>
+                            <td>Pass by const reference</td>
+                            <td><code>void f(const int&amp; x)</code></td>
+                            <td>Large objects, read-only access</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>A simple guideline: pass built-in types (<code>int</code>, <code>double</code>, <code>char</code>, <code>bool</code>) by value, and pass everything else by <code>const&amp;</code> unless you need to modify it.</p>
+                </div>
+
+                <!-- ===== Default Parameters ===== -->
+                <h2>Default Parameters</h2>
+                <p>C++ lets you assign <strong>default values</strong> to parameters. If the caller omits those arguments, the defaults are used automatically.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void greet(string name, string greeting = "Hello") {
+    cout &lt;&lt; greeting &lt;&lt; ", " &lt;&lt; name &lt;&lt; "!" &lt;&lt; endl;
+}
+
+int main() {
+    greet("Alice");               // Uses default greeting
+    greet("Bob", "Good morning"); // Overrides default
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Hello, Alice!
+Good morning, Bob!</pre></div>
+
+                <h3>Multiple Default Parameters</h3>
+                <p>You can have multiple default parameters, but they must appear at the <strong>end</strong> of the parameter list.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double calculatePrice(double base, double tax = 0.08, double discount = 0.0) {
+    return base + (base * tax) - (base * discount);
+}
+
+int main() {
+    cout &lt;&lt; "No extras:     $" &lt;&lt; calculatePrice(100.0) &lt;&lt; endl;
+    cout &lt;&lt; "Custom tax:    $" &lt;&lt; calculatePrice(100.0, 0.10) &lt;&lt; endl;
+    cout &lt;&lt; "Tax+discount:  $" &lt;&lt; calculatePrice(100.0, 0.10, 0.05) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>No extras:     $108
+Custom tax:    $110
+Tax+discount:  $105</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Default parameter rules:<br>
+                    1. Defaults must start from the <strong>rightmost</strong> parameter and fill to the left.<br>
+                    2. You cannot skip a default; if you supply argument 3, you must also supply arguments 1 and 2.<br>
+                    3. Defaults are typically specified in the <strong>declaration</strong> (prototype), not the definition, when the two are separate.</p>
+                </div>
+
+                <h3>Default Parameters in Prototypes</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Defaults go in the prototype
+void printLine(char ch = '-', int length = 40);
+
+int main() {
+    printLine();          // Uses both defaults
+    printLine('*');       // Uses default length
+    printLine('=', 20);   // No defaults used
+    return 0;
+}
+
+void printLine(char ch, int length) {
+    for (int i = 0; i &lt; length; i++) {
+        cout &lt;&lt; ch;
+    }
+    cout &lt;&lt; endl;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>----------------------------------------
+****************************************
+====================</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Never put default values in both the prototype and the definition &mdash; it causes a compiler error. Choose one place, and the prototype is preferred.</p>
+                </div>
+
+                <!-- ===== Passing Arrays ===== -->
+                <h2>Passing Arrays to Functions</h2>
+                <p>Arrays are <strong>always passed by reference</strong> in C++ (technically, the array name decays to a pointer). This means a function can modify the original array elements. You must also pass the array size since the function has no way to determine it.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+    printArray(numbers, size);
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>10 20 30 40 50</pre></div>
+
+                <h3>Modifying Array Elements</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void doubleElements(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        arr[i] *= 2;   // Modifies the original array
+    }
+}
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int data[] = {1, 2, 3, 4, 5};
+    int size = 5;
+
+    cout &lt;&lt; "Before: ";
+    printArray(data, size);
+
+    doubleElements(data, size);
+
+    cout &lt;&lt; "After:  ";
+    printArray(data, size);
+
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Before: 1 2 3 4 5
+After:  2 4 6 8 10</pre></div>
+
+                <h3>Protecting Arrays with const</h3>
+                <p>If a function should only read the array, use <code>const</code> to prevent accidental modification:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int sumArray(const int arr[], int size) {
+    int total = 0;
+    for (int i = 0; i &lt; size; i++) {
+        total += arr[i];
+        // arr[i] = 0;  // ERROR: cannot modify a const array
+    }
+    return total;
+}
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+    cout &lt;&lt; "Sum: " &lt;&lt; sumArray(nums, 5) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Sum: 150</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Always pass the array <strong>size</strong> as a separate parameter. Inside a function, <code>sizeof(arr)</code> gives the size of the <em>pointer</em>, not the array &mdash; a common bug for beginners.</p>
+                </div>
+
+                <!-- ===== Practical Examples ===== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Statistics Calculator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void calcStats(const int arr[], int size, int &amp;sum, double &amp;avg, int &amp;minVal, int &amp;maxVal) {
+    sum = 0;
+    minVal = arr[0];
+    maxVal = arr[0];
+
+    for (int i = 0; i &lt; size; i++) {
+        sum += arr[i];
+        if (arr[i] &lt; minVal) minVal = arr[i];
+        if (arr[i] &gt; maxVal) maxVal = arr[i];
+    }
+    avg = static_cast&lt;double&gt;(sum) / size;
+}
+
+int main() {
+    int data[] = {45, 82, 67, 91, 23, 78, 55};
+    int size = 7;
+    int sum, minVal, maxVal;
+    double avg;
+
+    calcStats(data, size, sum, avg, minVal, maxVal);
+
+    cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; endl;
+    cout &lt;&lt; "Avg: " &lt;&lt; avg &lt;&lt; endl;
+    cout &lt;&lt; "Min: " &lt;&lt; minVal &lt;&lt; endl;
+    cout &lt;&lt; "Max: " &lt;&lt; maxVal &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Sum: 441
+Avg: 63
+Min: 23
+Max: 91</pre></div>
+
+                <h3>Example 2: Array Reversal</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void reverseArray(int arr[], int size) {
+    for (int i = 0; i &lt; size / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[size - 1 - i];
+        arr[size - 1 - i] = temp;
+    }
+}
+
+void printArray(const int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int nums[] = {1, 2, 3, 4, 5};
+    int size = 5;
+
+    cout &lt;&lt; "Original: ";
+    printArray(nums, size);
+
+    reverseArray(nums, size);
+
+    cout &lt;&lt; "Reversed: ";
+    printArray(nums, size);
+
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Original: 1 2 3 4 5
+Reversed: 5 4 3 2 1</pre></div>
+
+                <h3>Example 3: Temperature Converter with Default</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double convert(double temp, char from = 'C') {
+    if (from == 'C' || from == 'c') {
+        return temp * 9.0 / 5.0 + 32.0;  // Celsius to Fahrenheit
+    } else {
+        return (temp - 32.0) * 5.0 / 9.0; // Fahrenheit to Celsius
+    }
+}
+
+int main() {
+    cout &lt;&lt; "100C = " &lt;&lt; convert(100) &lt;&lt; "F" &lt;&lt; endl;
+    cout &lt;&lt; "212F = " &lt;&lt; convert(212, 'F') &lt;&lt; "C" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>100C = 212F
+212F = 100C</pre></div>
+
+                <!-- ===== Summary ===== -->
+                <h2>Summary</h2>
+                <ul>
+                    <li><strong>Pass by value</strong> creates a copy; changes inside the function don&rsquo;t affect the original.</li>
+                    <li><strong>Pass by reference</strong> (<code>&amp;</code>) modifies the original variable directly.</li>
+                    <li><strong>const references</strong> (<code>const&amp;</code>) provide read-only access without copying &mdash; ideal for large objects.</li>
+                    <li><strong>Default parameters</strong> let you omit arguments; defaults must be rightmost.</li>
+                    <li>You cannot skip a default argument &mdash; supply all preceding arguments first.</li>
+                    <li><strong>Arrays</strong> are always passed by reference (pointer); always pass the size separately.</li>
+                    <li>Use <code>const</code> with array parameters when the function should not modify the array.</li>
+                    <li>Reference parameters allow a function to effectively &ldquo;return&rdquo; multiple values.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/WqukJuBnLQU" title="C++ Function Parameters" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is the default way C++ passes arguments to functions?","o":["By reference","By pointer","By value","By address"],"a":2},
+                {"q":"What happens to the original variable when passed by value?","o":["It is modified","It is deleted","It remains unchanged","It is doubled"],"a":2},
+                {"q":"Which symbol is used to declare a reference parameter?","o":["*","&","#","@"],"a":1},
+                {"q":"What does pass by reference allow a function to do?","o":["Return multiple values only","Modify the original variable","Create a copy of the variable","Delete the variable"],"a":1},
+                {"q":"What is the output? void f(int x){x=10;}int main(){int a=5;f(a);cout<<a;}","o":["10","5","0","15"],"a":1},
+                {"q":"What is the output? void f(int &x){x=10;}int main(){int a=5;f(a);cout<<a;}","o":["5","10","0","15"],"a":1},
+                {"q":"Why does a pass-by-value swap function fail to swap two variables?","o":["Because swap is a keyword","Because it modifies copies, not the original variables","Because int doesn't support swap","Because C++ has no swap"],"a":1},
+                {"q":"What is the correct signature for a swap function that actually works?","o":["void swap(int a, int b)","void swap(int *a, int *b)","void swap(int &a, int &b)","void swap(const int &a, const int &b)"],"a":2},
+                {"q":"What does 'const' do in a const reference parameter?","o":["Allows modification","Prevents the function from modifying the referenced variable","Makes the variable global","Doubles the value"],"a":1},
+                {"q":"Why use const references for strings?","o":["Strings can't be passed by value","It avoids expensive copying and prevents modification","It makes the string longer","It converts the string to int"],"a":1},
+                {"q":"What is the output? void f(const int &x){cout<<x;}int main(){f(42);}","o":["42","Error","0","const"],"a":0},
+                {"q":"Can you pass a literal value to a const reference parameter?","o":["No","Yes","Only for integers","Only for strings"],"a":1},
+                {"q":"Can you pass a literal value to a non-const reference parameter?","o":["Yes","No, it causes a compile error","Only for doubles","Only in main()"],"a":1},
+                {"q":"What is a default parameter?","o":["A parameter that must always be provided","A parameter with a pre-assigned value used when no argument is given","A parameter of type default","A global variable"],"a":1},
+                {"q":"Where must default parameters appear in the parameter list?","o":["At the beginning","In the middle","At the end (rightmost)","Anywhere"],"a":2},
+                {"q":"What is the output? void f(int a, int b=5){cout<<a+b;}int main(){f(3);}","o":["3","5","8","Error"],"a":2},
+                {"q":"What is the output? void f(int a, int b=5){cout<<a+b;}int main(){f(3,7);}","o":["8","12","10","Error"],"a":2},
+                {"q":"Is this valid? void f(int a=1, int b){...}","o":["Yes","No, default parameters must be rightmost","Only in C","Only with void functions"],"a":1},
+                {"q":"Can you skip a default parameter to provide a later one?","o":["Yes","No, you must supply all preceding arguments","Only with named parameters","Only in C++20"],"a":1},
+                {"q":"Where should default values be specified when declaration and definition are separate?","o":["In the definition","In both","In the declaration (prototype)","Nowhere"],"a":2},
+                {"q":"What happens if you put defaults in both prototype and definition?","o":["It works fine","Compile error","Runtime error","The definition defaults are ignored"],"a":1},
+                {"q":"How are arrays passed to functions in C++?","o":["By value","By reference (pointer decay)","By copy","As a string"],"a":1},
+                {"q":"Why must you pass the array size as a separate parameter?","o":["Arrays don't have a size","sizeof(arr) in the function gives pointer size, not array size","It's optional","Because arrays are immutable"],"a":1},
+                {"q":"What is the correct syntax to pass an integer array to a function?","o":["void f(int arr[])","void f(int[] arr)","void f(array int arr)","void f(int arr{})"],"a":0},
+                {"q":"Can a function modify the elements of an array passed to it?","o":["No, arrays are const","Yes, because arrays are passed by reference","Only if the array is global","Only with special syntax"],"a":1},
+                {"q":"How do you prevent a function from modifying an array parameter?","o":["Use const: void f(const int arr[], int size)","Pass by value","Use static","Use private"],"a":0},
+                {"q":"What is the output? void f(int &a,int &b){int t=a;a=b;b=t;}int main(){int x=1,y=2;f(x,y);cout<<x<<y;}","o":["12","21","11","22"],"a":1},
+                {"q":"What is the output? void f(int a,int b){int t=a;a=b;b=t;}int main(){int x=1,y=2;f(x,y);cout<<x<<y;}","o":["21","12","11","22"],"a":1},
+                {"q":"What does void increment(int &n){n++;}do to the argument?","o":["Nothing","Increases the original variable by 1","Decreases by 1","Doubles it"],"a":1},
+                {"q":"What is the output? void inc(int &n){n++;}int main(){int x=5;inc(x);inc(x);cout<<x;}","o":["5","6","7","10"],"a":2},
+                {"q":"Can you have both value and reference parameters in the same function?","o":["No","Yes","Only void functions","Only with default parameters"],"a":1},
+                {"q":"What is the output? void f(int a, int &b){a=0;b=0;}int main(){int x=5,y=10;f(x,y);cout<<x<<' '<<y;}","o":["0 0","5 0","5 10","0 10"],"a":1},
+                {"q":"What does void f(const string &s) guarantee?","o":["s can be modified","s will not be modified inside f","s is a global string","s is empty"],"a":1},
+                {"q":"Which passing style is most efficient for a large struct?","o":["By value","By const reference","By name","By index"],"a":1},
+                {"q":"What is the output? int add(int a=1,int b=2,int c=3){return a+b+c;}int main(){cout<<add();}","o":["0","6","123","Error"],"a":1},
+                {"q":"What is the output? int add(int a=1,int b=2,int c=3){return a+b+c;}int main(){cout<<add(10);}","o":["6","15","13","10"],"a":1},
+                {"q":"What is the output? int add(int a=1,int b=2,int c=3){return a+b+c;}int main(){cout<<add(10,20);}","o":["33","15","6","30"],"a":0},
+                {"q":"What is the output? int add(int a=1,int b=2,int c=3){return a+b+c;}int main(){cout<<add(10,20,30);}","o":["6","33","60","123"],"a":2},
+                {"q":"What type does int arr[] decay to when passed to a function?","o":["int","int*","int&","int[]"],"a":1},
+                {"q":"What is the output? void fill(int a[],int n,int v){for(int i=0;i<n;i++)a[i]=v;}int main(){int x[3];fill(x,3,7);cout<<x[0]<<x[1]<<x[2];}","o":["000","777","Error","321"],"a":1},
+                {"q":"Can a default parameter use a previously declared parameter? e.g., void f(int a, int b=a)","o":["Yes","No, default values cannot depend on other parameters","Only for int","Only in C++20"],"a":1},
+                {"q":"What is the output? void triple(int &n){n*=3;}int main(){int x=4;triple(x);cout<<x;}","o":["4","12","3","7"],"a":1},
+                {"q":"What is the output? void reset(int &a,int &b,int &c){a=b=c=0;}int main(){int x=1,y=2,z=3;reset(x,y,z);cout<<x<<y<<z;}","o":["123","000","321","111"],"a":1},
+                {"q":"Is int& x the same as int &x in C++?","o":["No, they are different types","Yes, both declare a reference to int","Only in C++11","Only for const references"],"a":1},
+                {"q":"What is the output? void addTen(int &n){n+=10;}int main(){int x=5;addTen(x);addTen(x);cout<<x;}","o":["5","15","25","10"],"a":2},
+                {"q":"What happens if you call void f(int &x) with f(5)?","o":["Works fine","Compile error: cannot bind non-const reference to a literal","Prints 5","Undefined behavior"],"a":1},
+                {"q":"What is the output? double avg(const int a[],int n){double s=0;for(int i=0;i<n;i++)s+=a[i];return s/n;}int main(){int d[]={2,4,6};cout<<avg(d,3);}","o":["4","12","2","6"],"a":0},
+                {"q":"How many default parameters can a function have?","o":["Maximum 1","Maximum 3","No specific limit","Exactly 2"],"a":2},
+                {"q":"What is the output? void negate(int arr[],int n){for(int i=0;i<n;i++)arr[i]=-arr[i];}int main(){int a[]={1,-2,3};negate(a,3);cout<<a[0]<<' '<<a[1]<<' '<<a[2];}","o":["1 -2 3","-1 2 -3","0 0 0","3 -2 1"],"a":1},
+                {"q":"What is the purpose of passing by reference instead of returning a value?","o":["It's faster for all types","It allows a function to modify or return multiple values via parameters","It prevents bugs","It's the only way in C++"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="functions.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Functions</span>
+                </a>
+                <a href="return-values.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Return Values</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

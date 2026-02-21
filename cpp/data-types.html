@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Data Types - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-data-types">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html" class="active"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 6 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="11" style="width:11%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Data Types
+                </div>
+                <h1>6. Data Types in C++</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 6 of 55</span>
+                    <span>&#9201; 20 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>What Are Data Types?</h2>
+                <p>A <strong>data type</strong> tells the compiler what kind of value a variable will hold and how much memory to allocate for it. Every variable in C++ must have a data type. The type determines what operations can be performed on the variable, how the data is stored in memory, and how it is interpreted by the CPU.</p>
+                <p>C++ is a <strong>statically typed</strong> language, meaning you must declare the type of each variable before you can use it. Once a variable is given a type, that type cannot change during the program's execution. This is different from dynamically typed languages like Python or JavaScript, where a variable can hold any type of data at any time.</p>
+                <p>C++ data types can be broadly categorized into:</p>
+                <ul>
+                    <li><strong>Fundamental (Primitive) Types</strong> &mdash; Built-in types like <code>int</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>bool</code>, <code>void</code></li>
+                    <li><strong>Derived Types</strong> &mdash; Arrays, pointers, references, functions</li>
+                    <li><strong>User-Defined Types</strong> &mdash; <code>struct</code>, <code>class</code>, <code>enum</code>, <code>union</code>, <code>typedef</code></li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Choosing the correct data type is essential for writing efficient and bug-free programs. Using too large a type wastes memory; using too small a type can cause overflow. Always pick the type that best fits the range and precision of values your variable needs to store.</p>
+                </div>
+
+                <h2>1. Fundamental Data Types</h2>
+                <p>C++ provides several built-in fundamental data types. These are the building blocks for all other types in the language. Let's explore each one in detail.</p>
+
+                <h3>Integer Types</h3>
+                <p>Integer types store whole numbers (no decimal point). C++ provides several integer types that differ in the amount of memory they use and the range of values they can store:</p>
+                <ul>
+                    <li><code>short</code> (or <code>short int</code>) &mdash; At least 16 bits (2 bytes)</li>
+                    <li><code>int</code> &mdash; At least 16 bits, typically 32 bits (4 bytes) on modern systems</li>
+                    <li><code>long</code> (or <code>long int</code>) &mdash; At least 32 bits (4 bytes)</li>
+                    <li><code>long long</code> (or <code>long long int</code>) &mdash; At least 64 bits (8 bytes)</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    short smallNum = 100;
+    int regularNum = 50000;
+    long bigNum = 1000000L;
+    long long veryBigNum = 9000000000LL;
+
+    cout &lt;&lt; "short: " &lt;&lt; smallNum &lt;&lt; endl;
+    cout &lt;&lt; "int: " &lt;&lt; regularNum &lt;&lt; endl;
+    cout &lt;&lt; "long: " &lt;&lt; bigNum &lt;&lt; endl;
+    cout &lt;&lt; "long long: " &lt;&lt; veryBigNum &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>The <code>L</code> suffix on a number literal indicates a <code>long</code> value, and <code>LL</code> indicates a <code>long long</code> value. These suffixes help the compiler understand the intended type of the literal.</p>
+
+                <h3>Floating-Point Types</h3>
+                <p>Floating-point types store numbers with a fractional (decimal) part. C++ provides three floating-point types with increasing precision:</p>
+                <ul>
+                    <li><code>float</code> &mdash; Single precision, typically 4 bytes, ~7 significant digits</li>
+                    <li><code>double</code> &mdash; Double precision, typically 8 bytes, ~15 significant digits</li>
+                    <li><code>long double</code> &mdash; Extended precision, typically 8, 12, or 16 bytes (implementation-defined)</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    float price = 9.99f;
+    double pi = 3.14159265358979;
+    long double precise = 3.14159265358979323846L;
+
+    cout &lt;&lt; "float: " &lt;&lt; price &lt;&lt; endl;
+    cout &lt;&lt; "double: " &lt;&lt; pi &lt;&lt; endl;
+    cout &lt;&lt; "long double: " &lt;&lt; precise &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use <code>float</code> when memory is a priority and high precision isn't needed. Use <code>double</code> as the default choice for decimal numbers &mdash; it's the most commonly used floating-point type in C++. The <code>f</code> suffix on a literal (e.g., <code>9.99f</code>) marks it as a <code>float</code>; without the suffix, decimal literals default to <code>double</code>.</p>
+                </div>
+
+                <h3>Character Type</h3>
+                <p>The <code>char</code> type stores a single character and typically occupies 1 byte (8 bits) of memory. Characters are enclosed in single quotes. Internally, <code>char</code> stores the numeric ASCII code of the character.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char letter = 'A';
+    char digit = '9';
+    char symbol = '#';
+
+    cout &lt;&lt; "Letter: " &lt;&lt; letter &lt;&lt; endl;
+    cout &lt;&lt; "Digit character: " &lt;&lt; digit &lt;&lt; endl;
+    cout &lt;&lt; "Symbol: " &lt;&lt; symbol &lt;&lt; endl;
+
+    // Char is stored as an integer (ASCII value)
+    cout &lt;&lt; "ASCII of 'A': " &lt;&lt; (int)letter &lt;&lt; endl;   // 65
+    cout &lt;&lt; "ASCII of '9': " &lt;&lt; (int)digit &lt;&lt; endl;    // 57
+
+    return 0;
+}</pre></div>
+
+                <h3>Boolean Type</h3>
+                <p>The <code>bool</code> type can hold only two values: <code>true</code> or <code>false</code>. It typically occupies 1 byte of memory. Booleans are commonly used in conditional expressions and logical operations.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    bool isStudent = true;
+    bool hasPassed = false;
+
+    cout &lt;&lt; "isStudent: " &lt;&lt; isStudent &lt;&lt; endl;   // Prints 1
+    cout &lt;&lt; "hasPassed: " &lt;&lt; hasPassed &lt;&lt; endl;   // Prints 0
+
+    // Use boolalpha to print true/false instead of 1/0
+    cout &lt;&lt; boolalpha;
+    cout &lt;&lt; "isStudent: " &lt;&lt; isStudent &lt;&lt; endl;   // Prints true
+    cout &lt;&lt; "hasPassed: " &lt;&lt; hasPassed &lt;&lt; endl;   // Prints false
+
+    return 0;
+}</pre></div>
+
+                <h3>Void Type</h3>
+                <p>The <code>void</code> type represents the absence of a type. It is used in three main contexts:</p>
+                <ul>
+                    <li><strong>Function return type</strong> &mdash; A function that doesn't return a value uses <code>void</code></li>
+                    <li><strong>Void pointers</strong> &mdash; <code>void*</code> is a generic pointer that can point to any data type</li>
+                    <li><strong>Empty parameter list</strong> &mdash; <code>void</code> explicitly says a function takes no arguments (mostly a C convention)</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Function that returns nothing
+void greet() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+}
+
+int main() {
+    greet();  // Call the void function
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>You cannot declare a variable of type <code>void</code>. Writing <code>void x;</code> is a compilation error. The <code>void</code> type is only meaningful as a function return type or as part of a <code>void*</code> pointer.</p>
+                </div>
+
+                <h2>2. Integer Types in Detail</h2>
+                <p>Understanding integer types is crucial because they are the most commonly used data types. Each integer type can be <strong>signed</strong> (able to hold negative and positive values) or <strong>unsigned</strong> (only positive values and zero).</p>
+
+                <h3>Signed vs Unsigned</h3>
+                <p>By default, all integer types in C++ are <strong>signed</strong>, meaning they can represent both negative and positive values. Adding the <code>unsigned</code> keyword restricts the variable to non-negative values only, but doubles the maximum positive range.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    signed int a = -100;      // Can hold negative values (default)
+    unsigned int b = 300;     // Only non-negative values (0 and above)
+    int c = -50;              // Same as signed int
+
+    cout &lt;&lt; "signed int: " &lt;&lt; a &lt;&lt; endl;
+    cout &lt;&lt; "unsigned int: " &lt;&lt; b &lt;&lt; endl;
+    cout &lt;&lt; "int (signed by default): " &lt;&lt; c &lt;&lt; endl;
+
+    // Sizes
+    cout &lt;&lt; "Size of int: " &lt;&lt; sizeof(int) &lt;&lt; " bytes" &lt;&lt; endl;
+    cout &lt;&lt; "Size of unsigned int: " &lt;&lt; sizeof(unsigned int) &lt;&lt; " bytes" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>For a 32-bit (4-byte) integer:</p>
+                <ul>
+                    <li><code>signed int</code> range: &minus;2,147,483,648 to 2,147,483,647</li>
+                    <li><code>unsigned int</code> range: 0 to 4,294,967,295</li>
+                </ul>
+
+                <h3>Integer Overflow</h3>
+                <p>When a value exceeds the range of its data type, <strong>overflow</strong> occurs. For <strong>unsigned</strong> integers, overflow wraps around (modular arithmetic). For <strong>signed</strong> integers, overflow is <strong>undefined behavior</strong> &mdash; the compiler can do anything, including producing unexpected results or crashing your program.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;climits&gt;
+using namespace std;
+
+int main() {
+    // Unsigned overflow: wraps around
+    unsigned short x = 65535;   // Maximum value for unsigned short
+    cout &lt;&lt; "Before overflow: " &lt;&lt; x &lt;&lt; endl;
+    x = x + 1;
+    cout &lt;&lt; "After overflow: " &lt;&lt; x &lt;&lt; endl;   // Wraps to 0
+
+    // Signed overflow: UNDEFINED BEHAVIOR - avoid this!
+    short y = 32767;   // Maximum value for signed short
+    cout &lt;&lt; "Before overflow: " &lt;&lt; y &lt;&lt; endl;
+    // y = y + 1;  // Don't do this! Undefined behavior.
+
+    // Display limits
+    cout &lt;&lt; "INT_MAX: " &lt;&lt; INT_MAX &lt;&lt; endl;
+    cout &lt;&lt; "INT_MIN: " &lt;&lt; INT_MIN &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Signed integer overflow is <strong>undefined behavior</strong> in C++. This means the compiler is not required to handle it in any specific way. Always check that your values stay within the valid range. Use <code>&lt;climits&gt;</code> constants like <code>INT_MAX</code> and <code>INT_MIN</code> to know the limits.</p>
+                </div>
+
+                <h2>3. Floating-Point Types in Detail</h2>
+                <p>Floating-point numbers follow the IEEE 754 standard for representing decimal values in binary. This representation can lead to some surprising behavior when comparing floating-point values or performing arithmetic.</p>
+
+                <h3>Precision Differences</h3>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    float f = 3.14159265358979323846f;
+    double d = 3.14159265358979323846;
+    long double ld = 3.14159265358979323846L;
+
+    cout &lt;&lt; fixed;
+    cout &lt;&lt; setprecision(20);
+
+    cout &lt;&lt; "float:       " &lt;&lt; f &lt;&lt; endl;
+    cout &lt;&lt; "double:      " &lt;&lt; d &lt;&lt; endl;
+    cout &lt;&lt; "long double: " &lt;&lt; ld &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>Running this program reveals that <code>float</code> loses accuracy after about 7 digits, <code>double</code> after about 15 digits, and <code>long double</code> may provide even more precision depending on your platform.</p>
+
+                <h3>Scientific Notation</h3>
+                <p>C++ allows you to express floating-point values using scientific notation with the <code>e</code> or <code>E</code> exponent notation:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double speedOfLight = 3.0e8;        // 3.0 x 10^8
+    double electronMass = 9.109e-31;    // 9.109 x 10^-31
+    double avogadro = 6.022E23;         // 6.022 x 10^23
+
+    cout &lt;&lt; "Speed of light: " &lt;&lt; speedOfLight &lt;&lt; " m/s" &lt;&lt; endl;
+    cout &lt;&lt; "Electron mass: " &lt;&lt; electronMass &lt;&lt; " kg" &lt;&lt; endl;
+    cout &lt;&lt; "Avogadro: " &lt;&lt; avogadro &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Comparing Floating-Point Numbers (Epsilon)</h3>
+                <p>Due to precision limitations, you should <strong>never</strong> compare floating-point numbers directly using <code>==</code>. Instead, compare the absolute difference against a small tolerance value (epsilon):</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main() {
+    double a = 0.1 + 0.2;
+    double b = 0.3;
+
+    // Direct comparison - UNRELIABLE
+    if (a == b) {
+        cout &lt;&lt; "Equal (direct)" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "NOT equal (direct)" &lt;&lt; endl;  // This prints!
+    }
+
+    // Epsilon comparison - CORRECT approach
+    double epsilon = 1e-9;
+    if (fabs(a - b) &lt; epsilon) {
+        cout &lt;&lt; "Equal (epsilon)" &lt;&lt; endl;  // This prints!
+    } else {
+        cout &lt;&lt; "NOT equal (epsilon)" &lt;&lt; endl;
+    }
+
+    cout &lt;&lt; "0.1 + 0.2 = " &lt;&lt; a &lt;&lt; endl;
+    cout &lt;&lt; "Difference: " &lt;&lt; fabs(a - b) &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Never compare floating-point numbers directly with <code>==</code>. Floating-point arithmetic can produce tiny rounding errors. Use an epsilon (tolerance) comparison instead: <code>fabs(a - b) &lt; epsilon</code>. The <code>fabs()</code> function from <code>&lt;cmath&gt;</code> returns the absolute value of a floating-point number.</p>
+                </div>
+
+                <h3>Special Floating-Point Values</h3>
+                <p>IEEE 754 floating-point numbers include some special values:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    double inf = 1.0 / 0.0;              // Positive infinity
+    double neg_inf = -1.0 / 0.0;         // Negative infinity
+    double nan_val = 0.0 / 0.0;          // NaN (Not a Number)
+
+    cout &lt;&lt; "Infinity: " &lt;&lt; inf &lt;&lt; endl;
+    cout &lt;&lt; "Negative Infinity: " &lt;&lt; neg_inf &lt;&lt; endl;
+    cout &lt;&lt; "NaN: " &lt;&lt; nan_val &lt;&lt; endl;
+
+    // Checking for special values
+    cout &lt;&lt; "Is inf infinite? " &lt;&lt; isinf(inf) &lt;&lt; endl;      // 1
+    cout &lt;&lt; "Is nan NaN? " &lt;&lt; isnan(nan_val) &lt;&lt; endl;       // 1
+    cout &lt;&lt; "NaN == NaN? " &lt;&lt; (nan_val == nan_val) &lt;&lt; endl; // 0 (false!)
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>NaN (Not a Number) is special: it is the only value in C++ that is not equal to itself. <code>NaN == NaN</code> is always <code>false</code>. Use <code>isnan()</code> from <code>&lt;cmath&gt;</code> to check for NaN.</p>
+                </div>
+
+                <h2>4. Character Type in Detail</h2>
+                <p>The <code>char</code> type is fundamentally an integer type that is used to represent characters. It stores a single character using the ASCII encoding (or the system's character set). Since characters are stored as numbers internally, you can perform arithmetic on them.</p>
+
+                <h3>ASCII Values</h3>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char ch = 'A';
+
+    cout &lt;&lt; "Character: " &lt;&lt; ch &lt;&lt; endl;
+    cout &lt;&lt; "ASCII value: " &lt;&lt; (int)ch &lt;&lt; endl;    // 65
+
+    // You can assign an integer to a char
+    char fromInt = 97;
+    cout &lt;&lt; "char from 97: " &lt;&lt; fromInt &lt;&lt; endl;  // 'a'
+
+    // Character arithmetic
+    char upper = 'A';
+    char lower = upper + 32;   // 'A'(65) + 32 = 'a'(97)
+    cout &lt;&lt; "Lowercase: " &lt;&lt; lower &lt;&lt; endl;
+
+    // Iterate through alphabet
+    for (char c = 'A'; c &lt;= 'Z'; c++) {
+        cout &lt;&lt; c &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>Key ASCII values to remember:</p>
+                <ul>
+                    <li><code>'0'</code> to <code>'9'</code> &mdash; ASCII 48 to 57</li>
+                    <li><code>'A'</code> to <code>'Z'</code> &mdash; ASCII 65 to 90</li>
+                    <li><code>'a'</code> to <code>'z'</code> &mdash; ASCII 97 to 122</li>
+                    <li><code>' '</code> (space) &mdash; ASCII 32</li>
+                </ul>
+
+                <h3>char vs int</h3>
+                <p>Although <code>char</code> and <code>int</code> are both integer types, they serve different purposes. When you print a <code>char</code>, it displays the character. When you print an <code>int</code>, it displays the number.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char ch = 65;    // Stored as number 65
+    int num = 65;    // Also stored as 65
+
+    cout &lt;&lt; "char: " &lt;&lt; ch &lt;&lt; endl;    // Prints: A
+    cout &lt;&lt; "int: " &lt;&lt; num &lt;&lt; endl;     // Prints: 65
+
+    // To print char as number, cast to int
+    cout &lt;&lt; "char as int: " &lt;&lt; (int)ch &lt;&lt; endl;    // Prints: 65
+
+    // To print int as char, cast to char
+    cout &lt;&lt; "int as char: " &lt;&lt; (char)num &lt;&lt; endl;  // Prints: A
+
+    return 0;
+}</pre></div>
+
+                <h3>Escape Sequences</h3>
+                <p>Escape sequences are special character combinations that begin with a backslash (<code>\</code>). They represent characters that are difficult or impossible to type directly:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Newline: Hello\nWorld" &lt;&lt; endl;
+    cout &lt;&lt; "Tab: Hello\tWorld" &lt;&lt; endl;
+    cout &lt;&lt; "Backslash: C:\\Users\\Name" &lt;&lt; endl;
+    cout &lt;&lt; "Single quote: It\'s working" &lt;&lt; endl;
+    cout &lt;&lt; "Double quote: She said \"Hi\"" &lt;&lt; endl;
+    cout &lt;&lt; "Null character ASCII: " &lt;&lt; (int)'\0' &lt;&lt; endl;  // 0
+    cout &lt;&lt; "Alert (bell): \a" &lt;&lt; endl;
+    cout &lt;&lt; "Backspace: AB\bC" &lt;&lt; endl;  // Prints AC
+
+    return 0;
+}</pre></div>
+
+                <p>Common escape sequences:</p>
+                <ul>
+                    <li><code>\n</code> &mdash; Newline</li>
+                    <li><code>\t</code> &mdash; Horizontal tab</li>
+                    <li><code>\\</code> &mdash; Backslash</li>
+                    <li><code>\'</code> &mdash; Single quote</li>
+                    <li><code>\"</code> &mdash; Double quote</li>
+                    <li><code>\0</code> &mdash; Null character</li>
+                    <li><code>\a</code> &mdash; Alert (bell)</li>
+                    <li><code>\b</code> &mdash; Backspace</li>
+                    <li><code>\r</code> &mdash; Carriage return</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The null character <code>'\0'</code> has ASCII value 0 and is used to mark the end of C-style strings. It is not the same as the character <code>'0'</code>, which has ASCII value 48. The difference between uppercase and lowercase letters is always 32 in ASCII (e.g., <code>'A'</code> is 65, <code>'a'</code> is 97).</p>
+                </div>
+
+                <h2>5. Boolean Type in Detail</h2>
+                <p>The <code>bool</code> type represents logical values. In C++, <code>true</code> is stored as <code>1</code> and <code>false</code> is stored as <code>0</code>. However, any non-zero value is considered <code>true</code> when converted to <code>bool</code>.</p>
+
+                <h3>Boolean Values and Truthiness</h3>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    bool a = true;
+    bool b = false;
+
+    // Implicit conversions to bool
+    bool fromInt1 = 42;     // true (non-zero)
+    bool fromInt2 = 0;      // false (zero)
+    bool fromInt3 = -1;     // true (non-zero)
+    bool fromDouble = 0.0;  // false (zero)
+    bool fromChar = '\0';   // false (null character is 0)
+
+    cout &lt;&lt; boolalpha;
+    cout &lt;&lt; "42 as bool: " &lt;&lt; fromInt1 &lt;&lt; endl;     // true
+    cout &lt;&lt; "0 as bool: " &lt;&lt; fromInt2 &lt;&lt; endl;      // false
+    cout &lt;&lt; "-1 as bool: " &lt;&lt; fromInt3 &lt;&lt; endl;     // true
+    cout &lt;&lt; "0.0 as bool: " &lt;&lt; fromDouble &lt;&lt; endl;  // false
+    cout &lt;&lt; "'\\0' as bool: " &lt;&lt; fromChar &lt;&lt; endl;   // false
+
+    return 0;
+}</pre></div>
+
+                <h3>Boolean with Arithmetic</h3>
+                <p>Since <code>bool</code> values are implicitly convertible to integers (<code>true</code> = 1, <code>false</code> = 0), you can use them in arithmetic expressions:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    bool x = true;
+    bool y = false;
+
+    cout &lt;&lt; "true + true = " &lt;&lt; (x + x) &lt;&lt; endl;      // 2
+    cout &lt;&lt; "true + false = " &lt;&lt; (x + y) &lt;&lt; endl;     // 1
+    cout &lt;&lt; "true * 10 = " &lt;&lt; (x * 10) &lt;&lt; endl;       // 10
+    cout &lt;&lt; "false * 10 = " &lt;&lt; (y * 10) &lt;&lt; endl;      // 0
+
+    // Counting true values
+    bool tests[] = {true, false, true, true, false};
+    int trueCount = 0;
+    for (bool t : tests) {
+        trueCount += t;  // true adds 1, false adds 0
+    }
+    cout &lt;&lt; "Number of true values: " &lt;&lt; trueCount &lt;&lt; endl;  // 3
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>In C++, <code>0</code>, <code>0.0</code>, <code>'\0'</code>, and <code>nullptr</code> are all <code>false</code> when converted to <code>bool</code>. Every other value is <code>true</code>. Use <code>boolalpha</code> with <code>cout</code> to print <code>true</code>/<code>false</code> instead of <code>1</code>/<code>0</code>.</p>
+                </div>
+
+                <h2>6. Type Modifiers</h2>
+                <p>Type modifiers alter the behavior of the base data types. C++ provides four type modifiers:</p>
+                <ul>
+                    <li><code>signed</code> &mdash; Can hold both negative and positive values (default for integers)</li>
+                    <li><code>unsigned</code> &mdash; Can hold only non-negative values (0 and positive)</li>
+                    <li><code>short</code> &mdash; Reduces the size (at least 16 bits)</li>
+                    <li><code>long</code> &mdash; Increases the size (at least 32 bits for <code>long</code>, 64 bits for <code>long long</code>)</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Signed modifiers
+    signed int si = -100;
+    unsigned int ui = 4000000000U;
+
+    // Size modifiers
+    short int shortNum = 30000;
+    long int longNum = 2000000000L;
+    long long int veryLong = 9000000000000000000LL;
+
+    // Combining modifiers
+    unsigned short us = 60000;
+    unsigned long ul = 4000000000UL;
+    unsigned long long ull = 18000000000000000000ULL;
+
+    // Shorthand: 'short' is same as 'short int'
+    short s = 100;
+    unsigned long long big = 12345678901234ULL;
+
+    cout &lt;&lt; "signed int: " &lt;&lt; si &lt;&lt; endl;
+    cout &lt;&lt; "unsigned int: " &lt;&lt; ui &lt;&lt; endl;
+    cout &lt;&lt; "short: " &lt;&lt; shortNum &lt;&lt; endl;
+    cout &lt;&lt; "long: " &lt;&lt; longNum &lt;&lt; endl;
+    cout &lt;&lt; "long long: " &lt;&lt; veryLong &lt;&lt; endl;
+    cout &lt;&lt; "unsigned short: " &lt;&lt; us &lt;&lt; endl;
+    cout &lt;&lt; "unsigned long: " &lt;&lt; ul &lt;&lt; endl;
+    cout &lt;&lt; "unsigned long long: " &lt;&lt; ull &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Modifier Summary Table</h3>
+                <p>Here is a summary of common integer type combinations and their typical sizes on a 64-bit system:</p>
+                <ul>
+                    <li><code>short</code> &mdash; 2 bytes, range: &minus;32,768 to 32,767</li>
+                    <li><code>unsigned short</code> &mdash; 2 bytes, range: 0 to 65,535</li>
+                    <li><code>int</code> &mdash; 4 bytes, range: &minus;2,147,483,648 to 2,147,483,647</li>
+                    <li><code>unsigned int</code> &mdash; 4 bytes, range: 0 to 4,294,967,295</li>
+                    <li><code>long</code> &mdash; 4 or 8 bytes (platform-dependent)</li>
+                    <li><code>unsigned long</code> &mdash; 4 or 8 bytes</li>
+                    <li><code>long long</code> &mdash; 8 bytes, range: &minus;9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</li>
+                    <li><code>unsigned long long</code> &mdash; 8 bytes, range: 0 to 18,446,744,073,709,551,615</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>signed</code> and <code>unsigned</code> modifiers can be applied to <code>char</code>, <code>short</code>, <code>int</code>, <code>long</code>, and <code>long long</code>. The <code>short</code> and <code>long</code> modifiers can only be applied to <code>int</code> (and <code>long</code> can be applied to <code>double</code>). You can combine modifiers: <code>unsigned long long</code> is valid.</p>
+                </div>
+
+                <h2>7. Type Sizes and Ranges</h2>
+                <p>The exact size of each data type in C++ is implementation-defined, meaning it can vary across different compilers and platforms. However, C++ guarantees minimum sizes. You can use several tools to determine the exact sizes on your system.</p>
+
+                <h3>The sizeof Operator</h3>
+                <p>The <code>sizeof</code> operator returns the size (in bytes) of a type or variable at compile time:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "--- Fundamental Type Sizes ---" &lt;&lt; endl;
+    cout &lt;&lt; "bool:        " &lt;&lt; sizeof(bool) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "char:        " &lt;&lt; sizeof(char) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "short:       " &lt;&lt; sizeof(short) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "int:         " &lt;&lt; sizeof(int) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "long:        " &lt;&lt; sizeof(long) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "long long:   " &lt;&lt; sizeof(long long) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "float:       " &lt;&lt; sizeof(float) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "double:      " &lt;&lt; sizeof(double) &lt;&lt; " byte(s)" &lt;&lt; endl;
+    cout &lt;&lt; "long double: " &lt;&lt; sizeof(long double) &lt;&lt; " byte(s)" &lt;&lt; endl;
+
+    // sizeof with variables
+    int x = 42;
+    cout &lt;&lt; "\nsizeof variable x: " &lt;&lt; sizeof(x) &lt;&lt; " bytes" &lt;&lt; endl;
+    cout &lt;&lt; "sizeof expression (x+1.0): " &lt;&lt; sizeof(x + 1.0) &lt;&lt; " bytes" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Using &lt;climits&gt; for Integer Limits</h3>
+                <p>The <code>&lt;climits&gt;</code> header provides preprocessor macros that define the minimum and maximum values for integer types:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;climits&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "--- Integer Limits (from &lt;climits&gt;) ---" &lt;&lt; endl;
+    cout &lt;&lt; "CHAR_MIN:   " &lt;&lt; CHAR_MIN &lt;&lt; endl;
+    cout &lt;&lt; "CHAR_MAX:   " &lt;&lt; CHAR_MAX &lt;&lt; endl;
+    cout &lt;&lt; "SHRT_MIN:   " &lt;&lt; SHRT_MIN &lt;&lt; endl;
+    cout &lt;&lt; "SHRT_MAX:   " &lt;&lt; SHRT_MAX &lt;&lt; endl;
+    cout &lt;&lt; "USHRT_MAX:  " &lt;&lt; USHRT_MAX &lt;&lt; endl;
+    cout &lt;&lt; "INT_MIN:    " &lt;&lt; INT_MIN &lt;&lt; endl;
+    cout &lt;&lt; "INT_MAX:    " &lt;&lt; INT_MAX &lt;&lt; endl;
+    cout &lt;&lt; "UINT_MAX:   " &lt;&lt; UINT_MAX &lt;&lt; endl;
+    cout &lt;&lt; "LONG_MIN:   " &lt;&lt; LONG_MIN &lt;&lt; endl;
+    cout &lt;&lt; "LONG_MAX:   " &lt;&lt; LONG_MAX &lt;&lt; endl;
+    cout &lt;&lt; "LLONG_MIN:  " &lt;&lt; LLONG_MIN &lt;&lt; endl;
+    cout &lt;&lt; "LLONG_MAX:  " &lt;&lt; LLONG_MAX &lt;&lt; endl;
+    cout &lt;&lt; "ULLONG_MAX: " &lt;&lt; ULLONG_MAX &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Using &lt;cfloat&gt; for Floating-Point Limits</h3>
+                <p>The <code>&lt;cfloat&gt;</code> header provides macros for floating-point type properties:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cfloat&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "--- Floating-Point Limits (from &lt;cfloat&gt;) ---" &lt;&lt; endl;
+    cout &lt;&lt; "FLT_MIN:        " &lt;&lt; FLT_MIN &lt;&lt; endl;
+    cout &lt;&lt; "FLT_MAX:        " &lt;&lt; FLT_MAX &lt;&lt; endl;
+    cout &lt;&lt; "FLT_DIG:        " &lt;&lt; FLT_DIG &lt;&lt; " (significant digits)" &lt;&lt; endl;
+    cout &lt;&lt; "DBL_MIN:        " &lt;&lt; DBL_MIN &lt;&lt; endl;
+    cout &lt;&lt; "DBL_MAX:        " &lt;&lt; DBL_MAX &lt;&lt; endl;
+    cout &lt;&lt; "DBL_DIG:        " &lt;&lt; DBL_DIG &lt;&lt; " (significant digits)" &lt;&lt; endl;
+    cout &lt;&lt; "LDBL_MIN:       " &lt;&lt; LDBL_MIN &lt;&lt; endl;
+    cout &lt;&lt; "LDBL_MAX:       " &lt;&lt; LDBL_MAX &lt;&lt; endl;
+    cout &lt;&lt; "LDBL_DIG:       " &lt;&lt; LDBL_DIG &lt;&lt; " (significant digits)" &lt;&lt; endl;
+    cout &lt;&lt; "FLT_EPSILON:    " &lt;&lt; FLT_EPSILON &lt;&lt; endl;
+    cout &lt;&lt; "DBL_EPSILON:    " &lt;&lt; DBL_EPSILON &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Using numeric_limits (C++ Way)</h3>
+                <p>The <code>&lt;limits&gt;</code> header provides the <code>numeric_limits</code> template class, which is the modern C++ way to query type properties:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "--- numeric_limits (from &lt;limits&gt;) ---" &lt;&lt; endl;
+
+    // Integer limits
+    cout &lt;&lt; "int min: " &lt;&lt; numeric_limits&lt;int&gt;::min() &lt;&lt; endl;
+    cout &lt;&lt; "int max: " &lt;&lt; numeric_limits&lt;int&gt;::max() &lt;&lt; endl;
+    cout &lt;&lt; "unsigned int max: " &lt;&lt; numeric_limits&lt;unsigned int&gt;::max() &lt;&lt; endl;
+
+    // Floating-point limits
+    cout &lt;&lt; "float min: " &lt;&lt; numeric_limits&lt;float&gt;::min() &lt;&lt; endl;
+    cout &lt;&lt; "float max: " &lt;&lt; numeric_limits&lt;float&gt;::max() &lt;&lt; endl;
+    cout &lt;&lt; "float epsilon: " &lt;&lt; numeric_limits&lt;float&gt;::epsilon() &lt;&lt; endl;
+    cout &lt;&lt; "float digits10: " &lt;&lt; numeric_limits&lt;float&gt;::digits10 &lt;&lt; endl;
+
+    cout &lt;&lt; "double min: " &lt;&lt; numeric_limits&lt;double&gt;::min() &lt;&lt; endl;
+    cout &lt;&lt; "double max: " &lt;&lt; numeric_limits&lt;double&gt;::max() &lt;&lt; endl;
+    cout &lt;&lt; "double epsilon: " &lt;&lt; numeric_limits&lt;double&gt;::epsilon() &lt;&lt; endl;
+    cout &lt;&lt; "double digits10: " &lt;&lt; numeric_limits&lt;double&gt;::digits10 &lt;&lt; endl;
+
+    // Other useful properties
+    cout &lt;&lt; "int is signed: " &lt;&lt; numeric_limits&lt;int&gt;::is_signed &lt;&lt; endl;
+    cout &lt;&lt; "unsigned int is signed: " &lt;&lt; numeric_limits&lt;unsigned int&gt;::is_signed &lt;&lt; endl;
+    cout &lt;&lt; "float is integer: " &lt;&lt; numeric_limits&lt;float&gt;::is_integer &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Prefer <code>numeric_limits</code> from <code>&lt;limits&gt;</code> over the C-style macros from <code>&lt;climits&gt;</code> and <code>&lt;cfloat&gt;</code>. The <code>numeric_limits</code> template is type-safe, works with any numeric type, and provides more properties like <code>epsilon()</code>, <code>digits10</code>, <code>is_signed</code>, and <code>is_integer</code>.</p>
+                </div>
+
+                <h2>8. Fixed-Width Integer Types</h2>
+                <p>Because the sizes of <code>int</code>, <code>long</code>, etc. vary across platforms, C++11 introduced <strong>fixed-width integer types</strong> in the <code>&lt;cstdint&gt;</code> header. These types guarantee an exact number of bits regardless of the platform:</p>
+
+                <h3>Exact-Width Types</h3>
+                <ul>
+                    <li><code>int8_t</code> &mdash; Exactly 8 bits (1 byte), signed</li>
+                    <li><code>int16_t</code> &mdash; Exactly 16 bits (2 bytes), signed</li>
+                    <li><code>int32_t</code> &mdash; Exactly 32 bits (4 bytes), signed</li>
+                    <li><code>int64_t</code> &mdash; Exactly 64 bits (8 bytes), signed</li>
+                    <li><code>uint8_t</code> &mdash; Exactly 8 bits, unsigned</li>
+                    <li><code>uint16_t</code> &mdash; Exactly 16 bits, unsigned</li>
+                    <li><code>uint32_t</code> &mdash; Exactly 32 bits, unsigned</li>
+                    <li><code>uint64_t</code> &mdash; Exactly 64 bits, unsigned</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cstdint&gt;
+using namespace std;
+
+int main() {
+    int8_t tinyVal = 127;              // Max for 8-bit signed
+    int16_t smallVal = 32767;          // Max for 16-bit signed
+    int32_t mediumVal = 2147483647;    // Max for 32-bit signed
+    int64_t largeVal = 9223372036854775807LL;  // Max for 64-bit signed
+
+    uint8_t utiny = 255;              // Max for 8-bit unsigned
+    uint16_t usmall = 65535;          // Max for 16-bit unsigned
+    uint32_t umedium = 4294967295U;   // Max for 32-bit unsigned
+    uint64_t ularge = 18446744073709551615ULL; // Max for 64-bit unsigned
+
+    // Note: int8_t may print as a character (it is often a typedef for signed char)
+    cout &lt;&lt; "int8_t: " &lt;&lt; (int)tinyVal &lt;&lt; endl;
+    cout &lt;&lt; "int16_t: " &lt;&lt; smallVal &lt;&lt; endl;
+    cout &lt;&lt; "int32_t: " &lt;&lt; mediumVal &lt;&lt; endl;
+    cout &lt;&lt; "int64_t: " &lt;&lt; largeVal &lt;&lt; endl;
+
+    cout &lt;&lt; "uint8_t: " &lt;&lt; (int)utiny &lt;&lt; endl;
+    cout &lt;&lt; "uint16_t: " &lt;&lt; usmall &lt;&lt; endl;
+    cout &lt;&lt; "uint32_t: " &lt;&lt; umedium &lt;&lt; endl;
+    cout &lt;&lt; "uint64_t: " &lt;&lt; ularge &lt;&lt; endl;
+
+    // Sizes are guaranteed
+    cout &lt;&lt; "\nsizeof(int8_t): " &lt;&lt; sizeof(int8_t) &lt;&lt; endl;    // Always 1
+    cout &lt;&lt; "sizeof(int16_t): " &lt;&lt; sizeof(int16_t) &lt;&lt; endl;  // Always 2
+    cout &lt;&lt; "sizeof(int32_t): " &lt;&lt; sizeof(int32_t) &lt;&lt; endl;  // Always 4
+    cout &lt;&lt; "sizeof(int64_t): " &lt;&lt; sizeof(int64_t) &lt;&lt; endl;  // Always 8
+
+    return 0;
+}</pre></div>
+
+                <h3>Other Fixed-Width Types</h3>
+                <p>The <code>&lt;cstdint&gt;</code> header also provides:</p>
+                <ul>
+                    <li><code>int_least8_t</code>, <code>int_least16_t</code>, etc. &mdash; Smallest type that is at least N bits wide</li>
+                    <li><code>int_fast8_t</code>, <code>int_fast16_t</code>, etc. &mdash; Fastest type that is at least N bits wide</li>
+                    <li><code>intmax_t</code> / <code>uintmax_t</code> &mdash; Maximum width integer types</li>
+                    <li><code>intptr_t</code> / <code>uintptr_t</code> &mdash; Integer types capable of holding a pointer</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cstdint&gt;
+using namespace std;
+
+int main() {
+    int_fast32_t fastInt = 100;   // Fastest integer type with at least 32 bits
+    int_least32_t leastInt = 200; // Smallest type with at least 32 bits
+    intmax_t biggest = 999999;    // Maximum-width integer
+
+    cout &lt;&lt; "int_fast32_t size: " &lt;&lt; sizeof(int_fast32_t) &lt;&lt; " bytes" &lt;&lt; endl;
+    cout &lt;&lt; "int_least32_t size: " &lt;&lt; sizeof(int_least32_t) &lt;&lt; " bytes" &lt;&lt; endl;
+    cout &lt;&lt; "intmax_t size: " &lt;&lt; sizeof(intmax_t) &lt;&lt; " bytes" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use fixed-width types from <code>&lt;cstdint&gt;</code> when you need a guaranteed size (e.g., for binary file I/O, network protocols, or cross-platform code). Be aware that <code>int8_t</code> and <code>uint8_t</code> are often typedefs for <code>signed char</code> and <code>unsigned char</code>, so <code>cout</code> may print them as characters rather than numbers. Cast to <code>int</code> to see the numeric value.</p>
+                </div>
+
+                <h2>9. Derived Types Overview</h2>
+                <p>Beyond the fundamental types, C++ provides <strong>derived types</strong> that are built from the fundamental types. Here is a brief overview; each of these topics will be covered in detail in later lessons.</p>
+
+                <h3>Arrays</h3>
+                <p>An array stores a fixed-size collection of elements of the same type in contiguous memory:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Declare an array of 5 integers
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    // Access elements by index (0-based)
+    cout &lt;&lt; "First element: " &lt;&lt; numbers[0] &lt;&lt; endl;   // 10
+    cout &lt;&lt; "Third element: " &lt;&lt; numbers[2] &lt;&lt; endl;   // 30
+
+    // Loop through array
+    for (int i = 0; i &lt; 5; i++) {
+        cout &lt;&lt; numbers[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Pointers</h3>
+                <p>A pointer stores the memory address of another variable. It is declared using the <code>*</code> symbol:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    int* ptr = &amp;age;   // ptr stores the address of age
+
+    cout &lt;&lt; "Value of age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "Address of age: " &lt;&lt; ptr &lt;&lt; endl;
+    cout &lt;&lt; "Value via pointer: " &lt;&lt; *ptr &lt;&lt; endl;  // Dereferencing
+
+    return 0;
+}</pre></div>
+
+                <h3>References</h3>
+                <p>A reference is an alias (another name) for an existing variable. It is declared using the <code>&amp;</code> symbol:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int original = 100;
+    int&amp; ref = original;   // ref is an alias for original
+
+    cout &lt;&lt; "original: " &lt;&lt; original &lt;&lt; endl;   // 100
+    cout &lt;&lt; "ref: " &lt;&lt; ref &lt;&lt; endl;               // 100
+
+    ref = 200;  // Modifying ref also modifies original
+    cout &lt;&lt; "original after ref = 200: " &lt;&lt; original &lt;&lt; endl;  // 200
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Arrays, pointers, and references are all <strong>derived types</strong> built on top of fundamental types. A pointer holds a memory address and can be reassigned. A reference is an alias that must be initialized when declared and cannot be reseated to refer to a different variable. These topics will be covered in depth in later lessons.</p>
+                </div>
+
+                <h2>10. Type Aliases</h2>
+                <p>Type aliases create a new name for an existing type, making your code more readable and easier to maintain. C++ provides two ways to create type aliases.</p>
+
+                <h3>typedef (Traditional Way)</h3>
+                <p>The <code>typedef</code> keyword creates an alias for an existing type:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Create type aliases with typedef
+typedef int Integer;
+typedef unsigned long ulong;
+typedef long long int64;
+typedef const char* CString;
+
+int main() {
+    Integer age = 25;          // Same as: int age = 25;
+    ulong population = 8000000000UL;
+    int64 bigNumber = 123456789012345LL;
+    CString greeting = "Hello, World!";
+
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "Population: " &lt;&lt; population &lt;&lt; endl;
+    cout &lt;&lt; "Big number: " &lt;&lt; bigNumber &lt;&lt; endl;
+    cout &lt;&lt; "Greeting: " &lt;&lt; greeting &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>using (Modern C++ Way)</h3>
+                <p>C++11 introduced the <code>using</code> keyword as a more readable alternative to <code>typedef</code>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cstdint&gt;
+using namespace std;
+
+// Create type aliases with 'using'
+using Integer = int;
+using ulong = unsigned long;
+using byte = uint8_t;
+using Distance = double;
+
+int main() {
+    Integer count = 10;
+    ulong bigCount = 1000000UL;
+    byte smallVal = 255;
+    Distance km = 42.195;
+
+    cout &lt;&lt; "Count: " &lt;&lt; count &lt;&lt; endl;
+    cout &lt;&lt; "Big count: " &lt;&lt; bigCount &lt;&lt; endl;
+    cout &lt;&lt; "Byte value: " &lt;&lt; (int)smallVal &lt;&lt; endl;
+    cout &lt;&lt; "Distance: " &lt;&lt; km &lt;&lt; " km" &lt;&lt; endl;
+
+    // Using aliases improves readability
+    using Meters = double;
+    using Seconds = double;
+    using Speed = double;
+
+    Meters distance = 100.0;
+    Seconds time = 9.58;
+    Speed speed = distance / time;
+
+    cout &lt;&lt; "Speed: " &lt;&lt; speed &lt;&lt; " m/s" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Prefer <code>using</code> over <code>typedef</code> in modern C++ code. The <code>using</code> syntax is more readable, especially for complex types, and works with templates (unlike <code>typedef</code>). Type aliases do not create new types &mdash; they are simply new names for existing types. <code>Integer</code> and <code>int</code> are completely interchangeable.</p>
+                </div>
+
+                <h2>Summary</h2>
+                <p>In this lesson, you learned about the comprehensive type system in C++:</p>
+                <ul>
+                    <li><strong>Integer types</strong>: <code>short</code>, <code>int</code>, <code>long</code>, <code>long long</code> &mdash; for whole numbers</li>
+                    <li><strong>Floating-point types</strong>: <code>float</code>, <code>double</code>, <code>long double</code> &mdash; for decimal numbers</li>
+                    <li><strong>Character type</strong>: <code>char</code> &mdash; for single characters, stored as ASCII values</li>
+                    <li><strong>Boolean type</strong>: <code>bool</code> &mdash; for <code>true</code>/<code>false</code> values</li>
+                    <li><strong>Void type</strong>: <code>void</code> &mdash; represents no type</li>
+                    <li><strong>Type modifiers</strong>: <code>signed</code>, <code>unsigned</code>, <code>short</code>, <code>long</code> &mdash; change range/size</li>
+                    <li><strong>sizeof operator</strong>: Returns the size of a type in bytes</li>
+                    <li><strong>Fixed-width types</strong>: <code>int8_t</code>, <code>int16_t</code>, <code>int32_t</code>, <code>int64_t</code> from <code>&lt;cstdint&gt;</code></li>
+                    <li><strong>Derived types</strong>: Arrays, pointers, references &mdash; built from fundamental types</li>
+                    <li><strong>Type aliases</strong>: <code>typedef</code> and <code>using</code> &mdash; create readable names for types</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Choosing the right data type is one of the most important decisions in C++ programming. Use <code>int</code> for most whole numbers, <code>double</code> for most decimal numbers, <code>char</code> for characters, and <code>bool</code> for true/false values. When exact sizes matter, use fixed-width types from <code>&lt;cstdint&gt;</code>. Never compare floats with <code>==</code> &mdash; use epsilon comparison. Watch out for integer overflow, especially with signed types.</p>
+                </div>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/XJ0Ztqef1GI" title="C++ Data Types" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a data type in C++?","o":["A function name","A classification that tells the compiler how to interpret data","A variable name","A loop construct"],"a":1},
+                {"q":"Which of these is NOT a fundamental data type in C++?","o":["int","double","string","char"],"a":2},
+                {"q":"What is the default type for a decimal literal like 3.14?","o":["float","double","long double","int"],"a":1},
+                {"q":"How do you make a literal float instead of double?","o":["Add L suffix","Add f suffix","Add d suffix","Add i suffix"],"a":1},
+                {"q":"What suffix marks a long long literal?","o":["L","LL","LLL","l"],"a":1},
+                {"q":"What is the typical size of int on a modern 64-bit system?","o":["2 bytes","4 bytes","8 bytes","16 bytes"],"a":1},
+                {"q":"What is the typical size of char in C++?","o":["1 byte","2 bytes","4 bytes","Depends on the platform"],"a":0},
+                {"q":"What is the typical size of double in C++?","o":["4 bytes","8 bytes","12 bytes","16 bytes"],"a":1},
+                {"q":"What is the typical size of float in C++?","o":["2 bytes","4 bytes","8 bytes","16 bytes"],"a":1},
+                {"q":"What is the typical size of bool in C++?","o":["1 bit","1 byte","2 bytes","4 bytes"],"a":1},
+                {"q":"What does 'statically typed' mean?","o":["Variables cannot change value","Variable types are fixed at compile time","Variables must be static","Types are determined at runtime"],"a":1},
+                {"q":"Which type stores whole numbers?","o":["float","double","int","bool"],"a":2},
+                {"q":"Which type stores decimal (fractional) numbers?","o":["int","char","bool","double"],"a":3},
+                {"q":"Which type stores a single character?","o":["string","char","int","bool"],"a":1},
+                {"q":"Which type stores true or false?","o":["int","char","bool","void"],"a":2},
+                {"q":"What does the void type represent?","o":["A zero value","Absence of a type","An empty string","A null pointer"],"a":1},
+                {"q":"Can you declare a variable of type void?","o":["Yes","No","Only as a pointer","Only globally"],"a":1},
+                {"q":"What is the minimum guaranteed size of short in C++?","o":["8 bits","16 bits","32 bits","64 bits"],"a":1},
+                {"q":"What is the minimum guaranteed size of long long in C++?","o":["32 bits","48 bits","64 bits","128 bits"],"a":2},
+                {"q":"What is the range of a signed 32-bit int?","o":["0 to 4,294,967,295","-32,768 to 32,767","-2,147,483,648 to 2,147,483,647","0 to 2,147,483,647"],"a":2},
+                {"q":"What is the range of an unsigned 32-bit int?","o":["-2,147,483,648 to 2,147,483,647","0 to 4,294,967,295","0 to 65,535","0 to 2,147,483,647"],"a":1},
+                {"q":"Are integers signed or unsigned by default?","o":["Unsigned","Signed","Neither","Depends on compiler"],"a":1},
+                {"q":"What happens when an unsigned integer overflows?","o":["Undefined behavior","It wraps around (modular arithmetic)","Compilation error","Runtime exception"],"a":1},
+                {"q":"What happens when a signed integer overflows?","o":["It wraps around","Undefined behavior","It becomes 0","Runtime exception"],"a":1},
+                {"q":"What does the sizeof operator return?","o":["The value of a variable","The type of a variable","The size in bytes","The number of elements"],"a":2},
+                {"q":"What is sizeof(char) always equal to?","o":["0","1","2","Platform-dependent"],"a":1},
+                {"q":"Is sizeof evaluated at compile time or runtime?","o":["Runtime","Compile time","Both","Neither"],"a":1},
+                {"q":"What header provides INT_MAX and INT_MIN?","o":["<iostream>","<climits>","<cstdint>","<limits>"],"a":1},
+                {"q":"What header provides FLT_MAX and DBL_MAX?","o":["<climits>","<cmath>","<cfloat>","<limits>"],"a":2},
+                {"q":"What header provides numeric_limits?","o":["<climits>","<cfloat>","<limits>","<cstdint>"],"a":2},
+                {"q":"How do you get the max value of int using numeric_limits?","o":["numeric_limits<int>::max()","numeric_limits::int_max","limits<int>::max","max(int)"],"a":0},
+                {"q":"What does numeric_limits<float>::epsilon() return?","o":["Zero","The smallest float","The smallest difference between 1.0f and the next float","The largest float"],"a":2},
+                {"q":"What does numeric_limits<int>::is_signed return?","o":["0","1 (true)","The sign of the value","-1"],"a":1},
+                {"q":"What does numeric_limits<float>::digits10 represent?","o":["Number of bits","Number of decimal digits of precision","Number of bytes","Maximum exponent"],"a":1},
+                {"q":"How many significant digits does float typically provide?","o":["3-4","6-7","15-16","19-20"],"a":1},
+                {"q":"How many significant digits does double typically provide?","o":["6-7","10-11","15-16","19-20"],"a":2},
+                {"q":"What is the L suffix on a floating-point literal for?","o":["long int","long double","long long","left-aligned"],"a":1},
+                {"q":"What is scientific notation in C++?","o":["Writing numbers as strings","Using e or E to specify powers of 10","Using binary format","Using hex format"],"a":1},
+                {"q":"What does 3.0e8 mean?","o":["3.0 * 8","3.0 * 10^8","3.0 / 10^8","3.8"],"a":1},
+                {"q":"What does 1.5e-3 represent?","o":["1500","0.15","0.0015","1.5 * 3"],"a":2},
+                {"q":"Why should you NOT compare floats with ==?","o":["It's a syntax error","Floating-point arithmetic can have tiny rounding errors","It causes a crash","It always returns false"],"a":1},
+                {"q":"What is an epsilon in float comparison?","o":["A Greek letter","A small tolerance value for comparison","A data type","A mathematical constant"],"a":1},
+                {"q":"Which function returns the absolute value of a double?","o":["abs()","fabs()","absolute()","dabs()"],"a":1},
+                {"q":"What header provides fabs()?","o":["<iostream>","<cmath>","<cstdlib>","<cfloat>"],"a":1},
+                {"q":"What is NaN?","o":["Not a Noun","Not a Number","Negative and Null","No available Notation"],"a":1},
+                {"q":"What does NaN == NaN evaluate to?","o":["true","false","Error","NaN"],"a":1},
+                {"q":"How do you check if a value is NaN?","o":["val == NaN","isnan(val)","val.isNaN()","checkNaN(val)"],"a":1},
+                {"q":"What is 1.0 / 0.0 in floating-point arithmetic?","o":["0","Error","Infinity","Undefined"],"a":2},
+                {"q":"What function checks if a value is infinite?","o":["isnan()","isinf()","isinfinite()","checkinf()"],"a":1},
+                {"q":"What does the char type store internally?","o":["A picture","A string","An integer (ASCII code)","A boolean"],"a":2},
+                {"q":"What is the ASCII value of 'A'?","o":["97","65","48","90"],"a":1},
+                {"q":"What is the ASCII value of 'a'?","o":["65","90","97","122"],"a":2},
+                {"q":"What is the ASCII value of '0' (digit zero)?","o":["0","48","65","57"],"a":1},
+                {"q":"What is the difference between '0' and 0 in C++?","o":["No difference","'0' is char with ASCII 48; 0 is int zero","'0' is a string","0 is a char"],"a":1},
+                {"q":"What is the ASCII difference between uppercase and lowercase letters?","o":["10","26","32","64"],"a":2},
+                {"q":"How do you convert 'A' to 'a' using arithmetic?","o":["'A' + 26","'A' + 32","'A' - 32","'A' * 2"],"a":1},
+                {"q":"What does (int)'B' evaluate to?","o":["2","65","66","98"],"a":2},
+                {"q":"What does (char)67 evaluate to?","o":["'A'","'B'","'C'","'D'"],"a":2},
+                {"q":"What escape sequence represents a newline?","o":["\\t","\\n","\\r","\\0"],"a":1},
+                {"q":"What escape sequence represents a tab?","o":["\\n","\\t","\\b","\\a"],"a":1},
+                {"q":"What escape sequence represents a backslash?","o":["\\\\","\\b","\\n","\\s"],"a":0},
+                {"q":"What escape sequence represents a null character?","o":["\\n","\\0","\\null","\\x"],"a":1},
+                {"q":"What is the ASCII value of the null character '\\0'?","o":["0","48","32","None"],"a":0},
+                {"q":"What escape sequence represents a double quote?","o":["\\\"","\\'","\\q","\\d"],"a":0},
+                {"q":"What escape sequence represents a single quote?","o":["\\\"","\\'","\\s","\\q"],"a":1},
+                {"q":"What escape sequence produces a bell/alert sound?","o":["\\b","\\a","\\s","\\r"],"a":1},
+                {"q":"What escape sequence represents a carriage return?","o":["\\n","\\r","\\c","\\t"],"a":1},
+                {"q":"What does cout << boolalpha do?","o":["Prints 1/0","Prints true/false instead of 1/0","Converts bool to string","Causes an error"],"a":1},
+                {"q":"What does true evaluate to as an integer?","o":["0","1","-1","Undefined"],"a":1},
+                {"q":"What does false evaluate to as an integer?","o":["0","1","-1","Undefined"],"a":0},
+                {"q":"What is the result of true + true in C++?","o":["true","2","1","Error"],"a":1},
+                {"q":"What is the result of true * 10 in C++?","o":["true","10","1","0"],"a":1},
+                {"q":"Is -1 considered true or false when converted to bool?","o":["false","true","Error","Undefined"],"a":1},
+                {"q":"Is 0.0 considered true or false when converted to bool?","o":["true","false","Error","Undefined"],"a":1},
+                {"q":"What values are considered false in C++?","o":["0, 0.0, '\\0', nullptr","Only 0","Only false","0 and -1"],"a":0},
+                {"q":"What is the unsigned modifier?","o":["Allows negative values","Restricts to non-negative values only","Doubles the memory","Halves the range"],"a":1},
+                {"q":"What is the signed modifier?","o":["Allows only positive values","Allows both negative and positive values","Removes the sign bit","Makes the type unsigned"],"a":1},
+                {"q":"What does 'short int' mean?","o":["An integer with at least 16 bits","A small function","A brief integer","An integer with exactly 8 bits"],"a":0},
+                {"q":"Is 'short' the same as 'short int'?","o":["No","Yes","Only in C++11","Only on 64-bit systems"],"a":1},
+                {"q":"Is 'long' the same as 'long int'?","o":["No","Yes","Only in C++11","Depends on compiler"],"a":1},
+                {"q":"Can you apply unsigned to double?","o":["Yes","No","Only in C++20","Only with a cast"],"a":1},
+                {"q":"Can you apply long to double?","o":["Yes, creates long double","No","Only in C","Only on 64-bit"],"a":0},
+                {"q":"What is the U suffix on a literal?","o":["Unsigned","Universal","Unit","Unary"],"a":0},
+                {"q":"What is the ULL suffix on a literal?","o":["Unsigned long","Unsigned long long","Universal long literal","Upper lower limit"],"a":1},
+                {"q":"What header provides fixed-width integer types?","o":["<climits>","<cstdint>","<cfloat>","<iostream>"],"a":1},
+                {"q":"What is int8_t?","o":["An 8-byte integer","An exactly 8-bit signed integer","An 8-element array","A boolean"],"a":1},
+                {"q":"What is uint8_t?","o":["An 8-byte unsigned integer","An exactly 8-bit unsigned integer","A signed 8-bit integer","An 8-character string"],"a":1},
+                {"q":"What is the maximum value of int8_t?","o":["255","128","127","64"],"a":2},
+                {"q":"What is the maximum value of uint8_t?","o":["127","255","256","128"],"a":1},
+                {"q":"What is the maximum value of int16_t?","o":["65535","32768","32767","16384"],"a":2},
+                {"q":"What is the maximum value of uint16_t?","o":["32767","65535","65536","16383"],"a":1},
+                {"q":"What is sizeof(int32_t) always equal to?","o":["2","4","8","Platform-dependent"],"a":1},
+                {"q":"What is sizeof(int64_t) always equal to?","o":["4","8","16","Platform-dependent"],"a":1},
+                {"q":"Why might cout print int8_t as a character?","o":["Bug in cout","int8_t is often a typedef for signed char","int8_t is a string type","Compiler error"],"a":1},
+                {"q":"How do you print int8_t as a number?","o":["Use printf","Cast to int: (int)val","Use hex format","Use boolalpha"],"a":1},
+                {"q":"What is int_fast32_t?","o":["An exactly 32-bit integer","The fastest integer type with at least 32 bits","A 32-bit float","A fast pointer"],"a":1},
+                {"q":"What is int_least32_t?","o":["An exactly 32-bit integer","The smallest type with at least 32 bits","A 32-bit float","A compact pointer"],"a":1},
+                {"q":"What is intmax_t?","o":["An integer with maximum precision","The maximum-width integer type","A float type","A pointer type"],"a":1},
+                {"q":"What is an array in C++?","o":["A single variable","A fixed-size collection of same-type elements","A dynamic list","A pointer"],"a":1},
+                {"q":"What is a pointer in C++?","o":["A type of integer","A variable that stores a memory address","An array element","A reference"],"a":1},
+                {"q":"What is a reference in C++?","o":["A copy of a variable","An alias for an existing variable","A pointer","A function"],"a":1},
+                {"q":"What symbol declares a pointer?","o":["&","*","#","@"],"a":1},
+                {"q":"What symbol declares a reference?","o":["*","&","#","@"],"a":1},
+                {"q":"Can a reference be reassigned to another variable?","o":["Yes","No","Only for const references","Only in C++17"],"a":1},
+                {"q":"What is typedef used for?","o":["Defining new types","Creating an alias for an existing type","Declaring variables","Defining functions"],"a":1},
+                {"q":"What is the modern C++ alternative to typedef?","o":["#define","using","alias","typename"],"a":1},
+                {"q":"What does 'typedef int Integer;' do?","o":["Creates a new type","Makes Integer an alias for int","Declares a variable","Causes an error"],"a":1},
+                {"q":"What does 'using Integer = int;' do?","o":["Creates a new type","Makes Integer an alias for int","Imports a namespace","Declares a variable"],"a":1},
+                {"q":"Does a type alias create a new distinct type?","o":["Yes","No, it's just another name for the same type","Only with using","Only with typedef"],"a":1},
+                {"q":"Which keyword can create template aliases?","o":["typedef","using","alias","typename"],"a":1},
+                {"q":"What is the output of: cout << sizeof(short);","o":["1","2","4","8"],"a":1},
+                {"q":"What is the output of: cout << sizeof(long long);","o":["4","8","16","2"],"a":1},
+                {"q":"What does 0.0 / 0.0 produce in floating-point?","o":["0","Infinity","NaN","Error"],"a":2},
+                {"q":"What does -1.0 / 0.0 produce?","o":["NaN","-Infinity","0","Error"],"a":1},
+                {"q":"What is CHAR_MAX typically equal to?","o":["127","255","256","128"],"a":0},
+                {"q":"What is SHRT_MAX equal to?","o":["255","32767","65535","2147483647"],"a":1},
+                {"q":"What is UINT_MAX on a 32-bit system?","o":["2147483647","4294967295","65535","32767"],"a":1},
+                {"q":"What does LLONG_MAX represent?","o":["Maximum long value","Maximum long long value","Maximum unsigned long long","Maximum int value"],"a":1},
+                {"q":"Which type is best for storing a person's age?","o":["double","long long","int","float"],"a":2},
+                {"q":"Which type is best for storing currency amounts with cents?","o":["int","float","double","char"],"a":2},
+                {"q":"Which type is best for counting bytes in a file?","o":["int","short","unsigned long long","float"],"a":2},
+                {"q":"What happens when you assign 300 to an int8_t?","o":["Stores 300","Overflow occurs","Compilation error","Stores 0"],"a":1},
+                {"q":"What is implicit type conversion?","o":["Using static_cast","Automatic conversion by the compiler","A syntax error","Manual casting"],"a":1},
+                {"q":"What type does int + double produce?","o":["int","double","long","float"],"a":1},
+                {"q":"What is narrowing conversion?","o":["Converting a smaller type to a larger type","Converting a larger type to a smaller type with potential data loss","Converting int to string","Converting bool to int"],"a":1},
+                {"q":"Does brace initialization {} prevent narrowing conversions?","o":["No","Yes, it causes a compilation error","Only for floats","Only in C++20"],"a":1},
+                {"q":"What does static_cast<int>(3.14) return?","o":["3.14","3","4","Error"],"a":1},
+                {"q":"What is a void pointer (void*)?","o":["A pointer that points to nothing","A generic pointer that can point to any type","A null pointer","An invalid pointer"],"a":1},
+                {"q":"Can you dereference a void* directly?","o":["Yes","No, you must cast it first","Only for int","Only in C"],"a":1},
+                {"q":"What is wchar_t used for?","o":["Storing ASCII characters","Storing wide (multi-byte) characters","Storing strings","Storing booleans"],"a":1},
+                {"q":"What is char16_t used for?","o":["8-bit characters","16-bit Unicode characters","16-byte strings","Signed characters"],"a":1},
+                {"q":"What is char32_t used for?","o":["32-byte strings","32-bit Unicode characters","Signed characters","ASCII characters"],"a":1},
+                {"q":"What is the range of unsigned short (16-bit)?","o":["0 to 32767","0 to 65535","-32768 to 32767","0 to 255"],"a":1},
+                {"q":"What does sizeof return: bytes, bits, or kilobytes?","o":["Bits","Bytes","Kilobytes","Words"],"a":1},
+                {"q":"Can sizeof be used on expressions?","o":["No","Yes, it evaluates the type of the expression","Only on variables","Only on types"],"a":1},
+                {"q":"Does sizeof evaluate its operand expression?","o":["Yes","No, it only determines the type at compile time","Sometimes","Only for variables"],"a":1},
+                {"q":"What is FLT_EPSILON?","o":["The smallest float","The smallest float greater than zero","The difference between 1.0f and the next representable float","The largest float"],"a":2},
+                {"q":"What is DBL_EPSILON?","o":["The smallest double","The difference between 1.0 and the next representable double","The largest double","Zero"],"a":1},
+                {"q":"What does FLT_DIG represent?","o":["Number of bytes in float","Number of significant decimal digits for float","Floating digit count","Float exponent"],"a":1},
+                {"q":"What is the typical value of FLT_DIG?","o":["3","6","10","15"],"a":1},
+                {"q":"What is the typical value of DBL_DIG?","o":["6","10","15","20"],"a":2},
+                {"q":"Which is more portable: INT_MAX or numeric_limits<int>::max()?","o":["INT_MAX","Both are equally portable","numeric_limits<int>::max() is preferred in C++","Neither is portable"],"a":2},
+                {"q":"What is the size guarantee of long on all platforms?","o":["Exactly 4 bytes","At least 32 bits","Exactly 8 bytes","At least 64 bits"],"a":1},
+                {"q":"What is intptr_t used for?","o":["Storing addresses as integers","Storing string lengths","Counting pointers","Pointer arithmetic only"],"a":0},
+                {"q":"What is the difference between int_fast32_t and int_least32_t?","o":["No difference","fast optimizes for speed; least optimizes for size","fast is unsigned; least is signed","fast is 64-bit; least is 32-bit"],"a":1},
+                {"q":"What is the output of: bool b = 42; cout << b;","o":["42","1","true","0"],"a":1},
+                {"q":"What is the output of: char c = 48; cout << c;","o":["48","0","'0'","Error"],"a":1},
+                {"q":"What type does auto x = 5; deduce?","o":["float","double","int","long"],"a":2},
+                {"q":"What type does auto x = 5.0; deduce?","o":["float","double","int","long double"],"a":1},
+                {"q":"What type does auto x = 5.0f; deduce?","o":["double","float","int","long double"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="variables.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Variables &amp; Constants</span>
+                </a>
+                <a href="input-output.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Input &amp; Output</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

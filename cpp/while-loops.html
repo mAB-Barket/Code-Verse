@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ While &amp; Do-While Loops - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-while-loops">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html" class="active"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 13 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="24" style="width:24%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; While Loops
+                </div>
+                <h1>13. While &amp; Do-While Loops</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 13 of 55</span>
+                    <span>&#9201; 20 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ==================== INTRODUCTION ==================== -->
+                <h2>What Is a While Loop?</h2>
+                <p>In the previous lesson you learned the <code>for</code> loop, which is ideal when you know <strong>how many times</strong> to repeat. But what if you don&rsquo;t know in advance? That&rsquo;s where the <strong>while</strong> loop shines.</p>
+                <p>A <code>while</code> loop repeats a block of code <strong>as long as a condition is true</strong>. The number of iterations is determined at runtime, making it perfect for situations where you must keep going until something specific happens.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>The syntax and execution flow of a <code>while</code> loop</li>
+                    <li>How <code>while</code> differs from <code>for</code></li>
+                    <li>The <code>do-while</code> loop and when to use it</li>
+                    <li>Infinite loops with <code>while(true)</code></li>
+                    <li>Sentinel-controlled loops</li>
+                    <li>Counter-controlled while loops</li>
+                    <li>Input validation with loops</li>
+                    <li>Common mistakes: infinite loops, off-by-one errors</li>
+                    <li>Practical examples: guessing game, menu loop, digit counter, reverse number, GCD calculation</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use a <code>while</code> loop when the number of iterations <strong>depends on a condition</strong> evaluated at runtime. Use a <code>for</code> loop when you know in advance how many times to repeat.</p>
+                </div>
+
+                <!-- ==================== WHILE SYNTAX ==================== -->
+                <h2>While Loop Syntax</h2>
+                <p>The general form of a <code>while</code> loop is:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>while (condition) {
+    // Code to repeat
+}</pre></div>
+
+                <p>How it works:</p>
+                <ul>
+                    <li><strong>Condition</strong> &mdash; evaluated <em>before</em> each iteration. If <code>true</code>, the loop body runs; if <code>false</code>, the loop ends.</li>
+                    <li>The condition must eventually become <code>false</code>, or you get an <strong>infinite loop</strong>.</li>
+                    <li>If the condition is <code>false</code> from the start, the body <strong>never executes</strong>.</li>
+                </ul>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Always make sure something inside the loop body <strong>changes the condition</strong> so the loop can eventually end. Forgetting to update the condition variable is the most common cause of infinite loops.</p>
+                </div>
+
+                <!-- ==================== HOW IT EXECUTES ==================== -->
+                <h2>How a While Loop Executes</h2>
+                <p>Here is the step-by-step execution order:</p>
+                <ol>
+                    <li><strong>Condition</strong> is evaluated. If <code>false</code>, the loop exits immediately.</li>
+                    <li>The <strong>loop body</strong> executes.</li>
+                    <li>Go back to step 1.</li>
+                </ol>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Trace example
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 1;
+    while (i &lt;= 3) {
+        cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt; endl;
+        i++;
+    }
+    return 0;
+}
+
+// Step-by-step:
+// 1. i = 1, 1 &lt;= 3? true  &rarr; print "i = 1" &rarr; i++ &rarr; i = 2
+// 2. i = 2, 2 &lt;= 3? true  &rarr; print "i = 2" &rarr; i++ &rarr; i = 3
+// 3. i = 3, 3 &lt;= 3? true  &rarr; print "i = 3" &rarr; i++ &rarr; i = 4
+// 4. i = 4, 4 &lt;= 3? false &rarr; loop ends</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>i = 1
+i = 2
+i = 3</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The condition is checked <em>before</em> the body runs. If it is false from the start, the body executes <strong>zero times</strong>. This is the key difference from a <code>do-while</code> loop.</p>
+                </div>
+
+                <!-- ==================== COUNTER-CONTROLLED ==================== -->
+                <h2>Counter-Controlled While Loops</h2>
+                <p>You can use a <code>while</code> loop as a counter, just like a <code>for</code> loop. You just need to manage the counter variable yourself.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Print numbers 1 through 5
+    int i = 1;          // initialization
+    while (i &lt;= 5) {   // condition
+        cout &lt;&lt; i &lt;&lt; " ";
+        i++;            // update
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>1 2 3 4 5</pre></div>
+
+                <h3>Counting Down</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int count = 5;
+    while (count &gt;= 1) {
+        cout &lt;&lt; count &lt;&lt; " ";
+        count--;
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>5 4 3 2 1</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>When you know the exact number of iterations, a <code>for</code> loop is usually cleaner. Use <code>while</code> when the loop&rsquo;s continuation depends on a runtime condition rather than a simple counter.</p>
+                </div>
+
+                <!-- ==================== SENTINEL-CONTROLLED ==================== -->
+                <h2>Sentinel-Controlled Loops</h2>
+                <p>A <strong>sentinel</strong> is a special value that signals the end of input. The loop continues until the sentinel value is encountered.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int number;
+    int sum = 0;
+
+    cout &lt;&lt; "Enter numbers (enter -1 to stop):" &lt;&lt; endl;
+    cin &gt;&gt; number;
+
+    while (number != -1) {
+        sum += number;
+        cin &gt;&gt; number;
+    }
+
+    cout &lt;&lt; "Total sum: " &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Sample interaction:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter numbers (enter -1 to stop):
+10
+20
+30
+-1
+Total sum: 60</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>In a sentinel-controlled loop, the first read happens <strong>before</strong> the loop (called a <strong>priming read</strong>). Inside the loop body, you read the next value <em>at the end</em> so the condition is checked with fresh data on the next iteration.</p>
+                </div>
+
+                <!-- ==================== DO-WHILE ==================== -->
+                <h2>Do-While Loop Syntax</h2>
+                <p>The <code>do-while</code> loop is similar to the <code>while</code> loop, but with one critical difference: the condition is checked <strong>after</strong> the body executes, guaranteeing at least one execution.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>do {
+    // Code to repeat
+} while (condition);</pre></div>
+
+                <p><strong>Important:</strong> Notice the <strong>semicolon</strong> after the closing parenthesis. This is required and easy to forget!</p>
+
+                <h3>How It Executes</h3>
+                <ol>
+                    <li>The <strong>loop body</strong> executes.</li>
+                    <li>The <strong>condition</strong> is evaluated. If <code>true</code>, go back to step 1; if <code>false</code>, the loop ends.</li>
+                </ol>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 1;
+    do {
+        cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt; endl;
+        i++;
+    } while (i &lt;= 3);
+    return 0;
+}
+
+// Step-by-step:
+// 1. print "i = 1" &rarr; i++ &rarr; i = 2 &rarr; 2 &lt;= 3? true
+// 2. print "i = 2" &rarr; i++ &rarr; i = 3 &rarr; 3 &lt;= 3? true
+// 3. print "i = 3" &rarr; i++ &rarr; i = 4 &rarr; 4 &lt;= 3? false &rarr; loop ends</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>i = 1
+i = 2
+i = 3</pre></div>
+
+                <!-- ==================== WHILE vs DO-WHILE ==================== -->
+                <h2>While vs Do-While</h2>
+                <p>The key difference is <strong>when the condition is checked</strong>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// while: checks BEFORE the body
+int x = 10;
+while (x &lt; 5) {
+    cout &lt;&lt; x &lt;&lt; " ";   // Never executes!
+    x++;
+}
+
+// do-while: checks AFTER the body
+int y = 10;
+do {
+    cout &lt;&lt; y &lt;&lt; " ";   // Executes once! Prints: 10
+    y++;
+} while (y &lt; 5);</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><code>while</code> may execute its body <strong>zero or more</strong> times. <code>do-while</code> always executes its body <strong>at least once</strong>. Use <code>do-while</code> when you need something to happen before checking the condition &mdash; such as displaying a menu or getting user input.</p>
+                </div>
+
+                <!-- ==================== INPUT VALIDATION ==================== -->
+                <h2>Input Validation with Do-While</h2>
+                <p>One of the most common uses for <code>do-while</code> is <strong>input validation</strong>: ask the user for input, then check if it&rsquo;s valid. If not, ask again.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age;
+
+    do {
+        cout &lt;&lt; "Enter your age (1-120): ";
+        cin &gt;&gt; age;
+        if (age &lt; 1 || age &gt; 120) {
+            cout &lt;&lt; "Invalid age. Try again." &lt;&lt; endl;
+        }
+    } while (age &lt; 1 || age &gt; 120);
+
+    cout &lt;&lt; "Your age: " &lt;&lt; age &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Sample interaction:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter your age (1-120): -5
+Invalid age. Try again.
+Enter your age (1-120): 200
+Invalid age. Try again.
+Enter your age (1-120): 25
+Your age: 25</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p><code>do-while</code> is perfect for input validation because you always need to ask the user <strong>at least once</strong> before you can check whether the input is valid.</p>
+                </div>
+
+                <!-- ==================== INFINITE LOOPS ==================== -->
+                <h2>Infinite Loops with while(true)</h2>
+                <p>Sometimes you want a loop that runs <strong>forever</strong> (or until you explicitly <code>break</code> out). Use <code>while(true)</code> for this pattern.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num;
+
+    while (true) {
+        cout &lt;&lt; "Enter a positive number (0 to quit): ";
+        cin &gt;&gt; num;
+
+        if (num == 0) {
+            cout &lt;&lt; "Goodbye!" &lt;&lt; endl;
+            break;   // Exit the loop
+        }
+
+        if (num &lt; 0) {
+            cout &lt;&lt; "Negative numbers not allowed. Try again." &lt;&lt; endl;
+            continue; // Skip to next iteration
+        }
+
+        cout &lt;&lt; "You entered: " &lt;&lt; num &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><code>while(true)</code> creates an intentional infinite loop. You <strong>must</strong> have a <code>break</code> statement (or a <code>return</code>) inside the loop to exit. Without one, the program will run forever.</p>
+                </div>
+
+                <!-- ==================== WHILE vs FOR ==================== -->
+                <h2>While vs For Comparison</h2>
+                <p>Both <code>while</code> and <code>for</code> can do the same things, but each is better suited for certain situations:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// FOR loop: best when count is known
+for (int i = 0; i &lt; 10; i++) {
+    cout &lt;&lt; i &lt;&lt; " ";
+}
+
+// Equivalent WHILE loop
+int i = 0;
+while (i &lt; 10) {
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+}</pre></div>
+
+                <p><strong>When to use each:</strong></p>
+                <ul>
+                    <li><strong>for</strong> &mdash; when you know the iteration count beforehand (counting, array traversal).</li>
+                    <li><strong>while</strong> &mdash; when the loop depends on a condition that changes unpredictably (user input, file reading, searching).</li>
+                    <li><strong>do-while</strong> &mdash; when you need at least one execution (menus, input validation).</li>
+                </ul>
+
+                <!-- ==================== COMMON MISTAKES ==================== -->
+                <h2>Common Mistakes</h2>
+
+                <h3>Mistake 1: Infinite Loop (Forgetting to Update)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// BUG: i is never updated, loop runs forever!
+int i = 1;
+while (i &lt;= 5) {
+    cout &lt;&lt; i &lt;&lt; " ";
+    // Missing: i++;
+}</pre></div>
+
+                <h3>Mistake 2: Off-by-One Error</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Intended: print 1-5, but prints 1-4
+int i = 1;
+while (i &lt; 5) {   // Should be i &lt;= 5
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+}
+// Output: 1 2 3 4  (missing 5!)</pre></div>
+
+                <h3>Mistake 3: Semicolon After while</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// BUG: Semicolon makes the body empty!
+int i = 1;
+while (i &lt;= 5);   // &larr; empty body, infinite loop!
+{
+    cout &lt;&lt; i &lt;&lt; " ";
+    i++;
+}</pre></div>
+
+                <h3>Mistake 4: Forgetting Semicolon in do-while</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// BUG: Missing semicolon after do-while
+int x = 1;
+do {
+    cout &lt;&lt; x;
+    x++;
+} while (x &lt;= 5)   // &larr; Missing semicolon! Compile error.</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>If your program seems to &ldquo;freeze&rdquo; or hang, you likely have an infinite loop. Check that your loop condition can become <code>false</code>, and make sure the variable in the condition is being updated inside the loop body.</p>
+                </div>
+
+                <!-- ==================== PRACTICAL EXAMPLES ==================== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Number Guessing Game</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int secret = rand() % 100 + 1;  // 1-100
+    int guess;
+    int attempts = 0;
+
+    cout &lt;&lt; "Guess the number (1-100)!" &lt;&lt; endl;
+
+    do {
+        cout &lt;&lt; "Your guess: ";
+        cin &gt;&gt; guess;
+        attempts++;
+
+        if (guess &lt; secret) {
+            cout &lt;&lt; "Too low!" &lt;&lt; endl;
+        } else if (guess &gt; secret) {
+            cout &lt;&lt; "Too high!" &lt;&lt; endl;
+        }
+    } while (guess != secret);
+
+    cout &lt;&lt; "Correct! You got it in " &lt;&lt; attempts &lt;&lt; " attempts." &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>Example 2: Menu Loop</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int choice;
+
+    do {
+        cout &lt;&lt; "\n===== MENU =====" &lt;&lt; endl;
+        cout &lt;&lt; "1. Say Hello" &lt;&lt; endl;
+        cout &lt;&lt; "2. Say Goodbye" &lt;&lt; endl;
+        cout &lt;&lt; "3. Exit" &lt;&lt; endl;
+        cout &lt;&lt; "Choice: ";
+        cin &gt;&gt; choice;
+
+        switch (choice) {
+            case 1: cout &lt;&lt; "Hello!" &lt;&lt; endl; break;
+            case 2: cout &lt;&lt; "Goodbye!" &lt;&lt; endl; break;
+            case 3: cout &lt;&lt; "Exiting..." &lt;&lt; endl; break;
+            default: cout &lt;&lt; "Invalid choice." &lt;&lt; endl;
+        }
+    } while (choice != 3);
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 3: Count Digits of a Number</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num;
+    cout &lt;&lt; "Enter a positive integer: ";
+    cin &gt;&gt; num;
+
+    int count = 0;
+    int temp = num;
+
+    while (temp &gt; 0) {
+        temp /= 10;   // Remove last digit
+        count++;
+    }
+
+    // Special case: 0 has 1 digit
+    if (num == 0) count = 1;
+
+    cout &lt;&lt; num &lt;&lt; " has " &lt;&lt; count &lt;&lt; " digit(s)." &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter a positive integer: 12345
+12345 has 5 digit(s).</pre></div>
+
+                <h3>Example 4: Reverse a Number</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num, reversed = 0;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; num;
+
+    while (num &gt; 0) {
+        int digit = num % 10;      // Get last digit
+        reversed = reversed * 10 + digit;  // Append digit
+        num /= 10;                 // Remove last digit
+    }
+
+    cout &lt;&lt; "Reversed: " &lt;&lt; reversed &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter a number: 1234
+Reversed: 4321</pre></div>
+
+                <h3>Example 5: GCD Calculation (Euclidean Algorithm)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a, b;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; a &gt;&gt; b;
+
+    // Euclidean algorithm
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    cout &lt;&lt; "GCD: " &lt;&lt; a &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter two numbers: 48 18
+GCD: 6</pre></div>
+
+                <h3>Example 6: Sum of Digits</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num, sum = 0;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; num;
+
+    while (num &gt; 0) {
+        sum += num % 10;   // Add last digit
+        num /= 10;         // Remove last digit
+    }
+
+    cout &lt;&lt; "Sum of digits: " &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter a number: 9876
+Sum of digits: 30</pre></div>
+
+                <h3>Example 7: Power Calculation</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int base, exp;
+    long long result = 1;
+
+    cout &lt;&lt; "Enter base and exponent: ";
+    cin &gt;&gt; base &gt;&gt; exp;
+
+    int i = 0;
+    while (i &lt; exp) {
+        result *= base;
+        i++;
+    }
+
+    cout &lt;&lt; base &lt;&lt; "^" &lt;&lt; exp &lt;&lt; " = " &lt;&lt; result &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter base and exponent: 2 10
+2^10 = 1024</pre></div>
+
+                <!-- ==================== SUMMARY ==================== -->
+                <h2>Summary</h2>
+                <ul>
+                    <li>The <code>while</code> loop checks its condition <strong>before</strong> the body &mdash; the body may execute zero times.</li>
+                    <li>The <code>do-while</code> loop checks its condition <strong>after</strong> the body &mdash; the body always executes at least once.</li>
+                    <li><code>do-while</code> requires a <strong>semicolon</strong> after the closing <code>while(condition);</code>.</li>
+                    <li>Use <code>while</code> for sentinel-controlled loops, reading input, and searching.</li>
+                    <li>Use <code>do-while</code> for menus, input validation, and any situation requiring at least one execution.</li>
+                    <li>Use <code>while(true)</code> with <code>break</code> for deliberately infinite loops with explicit exit points.</li>
+                    <li>Always update the loop variable inside the body to avoid infinite loops.</li>
+                    <li>Beware of off-by-one errors: double-check <code>&lt;</code> vs <code>&lt;=</code> and initial/final values.</li>
+                    <li>Common patterns include: digit extraction (<code>num % 10</code>, <code>num /= 10</code>), GCD, and input validation.</li>
+                    <li>A <code>while</code> loop is equivalent to a <code>for</code> loop with the init and update moved outside the header.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/jNl5gJ_xSNQ" title="C++ While Loops" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is the correct syntax for a while loop in C++?","o":["while (condition) { }","while { condition }","loop while (condition)","while condition { }"],"a":0},
+                {"q":"When is the condition in a while loop checked?","o":["After the body executes","Before each iteration","Only once at the start","After the update"],"a":1},
+                {"q":"How many times can a while loop body execute if the condition is false initially?","o":["Once","At least once","Zero times","Twice"],"a":2},
+                {"q":"What is the output? int i=1; while(i<=3){cout<<i<<\" \"; i++;}","o":["1 2 3","1 2 3 4","0 1 2 3","1 2"],"a":0},
+                {"q":"What is the output? int i=5; while(i>0){cout<<i<<\" \"; i--;}","o":["5 4 3 2 1","5 4 3 2 1 0","4 3 2 1","5 4 3 2"],"a":0},
+                {"q":"What happens if you forget to update the counter in a while loop?","o":["The loop runs once","Compile error","Infinite loop","The loop skips"],"a":2},
+                {"q":"What is the output? int x=10; while(x<5){cout<<x;}","o":["10","Nothing (body never executes)","Infinite loop","5"],"a":1},
+                {"q":"What is the correct syntax for a do-while loop?","o":["do { } while (condition);","do while (condition) { }","do { } while condition;","while { } do (condition);"],"a":0},
+                {"q":"What is special about a do-while loop compared to while?","o":["It runs faster","The body executes at least once","It has no condition","It cannot use break"],"a":1},
+                {"q":"What character is required after the while condition in a do-while loop?","o":["Colon","Comma","Semicolon","Nothing"],"a":2},
+                {"q":"What is the output? int x=10; do{cout<<x<<\" \"; x++;}while(x<5);","o":["Nothing","10","10 11 12 13 14","Infinite loop"],"a":1},
+                {"q":"What is the output? int i=1; do{cout<<i<<\" \"; i++;}while(i<=5);","o":["1 2 3 4 5","1 2 3 4","2 3 4 5","1 2 3 4 5 6"],"a":0},
+                {"q":"What keyword exits a while loop immediately?","o":["exit","stop","break","return"],"a":2},
+                {"q":"What keyword skips the current iteration of a while loop?","o":["skip","pass","continue","next"],"a":2},
+                {"q":"What does while(true) create?","o":["A compile error","A loop that never starts","An intentional infinite loop","A single iteration"],"a":2},
+                {"q":"How do you safely exit a while(true) loop?","o":["You can't","Use break or return inside the body","Use stop()","Use exit condition in while()"],"a":1},
+                {"q":"What is the output? int i=0; while(i<5){i++; if(i==3) break; cout<<i<<\" \";}","o":["1 2","1 2 3","0 1 2","1 2 3 4"],"a":0},
+                {"q":"What is the output? int i=0; while(i<5){i++; if(i==3) continue; cout<<i<<\" \";}","o":["1 2 4 5","1 2 3 4 5","0 1 2 4","1 2 3 4"],"a":0},
+                {"q":"Which loop is best when the number of iterations is unknown?","o":["for","while","Both are equally good","Neither"],"a":1},
+                {"q":"Which loop is best for input validation (ask at least once)?","o":["for","while","do-while","goto"],"a":2},
+                {"q":"What is a sentinel value?","o":["A random number","A special value that signals the end of input","A loop counter","An error code"],"a":1},
+                {"q":"What is a priming read in a sentinel-controlled loop?","o":["The first read before the loop starts","Reading inside the loop","Reading after the loop","A function call"],"a":0},
+                {"q":"What is the output? int s=0,i=1; while(i<=10){s+=i; i++;} cout<<s;","o":["45","55","10","100"],"a":1},
+                {"q":"What is the output? int n=1234,c=0; while(n>0){n/=10; c++;} cout<<c;","o":["3","4","5","1234"],"a":1},
+                {"q":"What does n/=10 do when n=1234?","o":["Sets n to 1234.0","Sets n to 123 (integer division)","Sets n to 12340","Sets n to 10"],"a":1},
+                {"q":"What does n%10 give when n=1234?","o":["123","4","1","0"],"a":1},
+                {"q":"What is the Euclidean algorithm used for?","o":["Sorting","Finding GCD (Greatest Common Divisor)","Primality testing","Searching"],"a":1},
+                {"q":"What is GCD(48, 18) using the Euclidean algorithm?","o":["2","3","6","9"],"a":2},
+                {"q":"In the Euclidean algorithm, what happens when b becomes 0?","o":["The algorithm fails","a holds the GCD","We swap a and b","We restart"],"a":1},
+                {"q":"What is the output? int a=20,b=8; while(b!=0){int t=b; b=a%b; a=t;} cout<<a;","o":["2","4","8","20"],"a":1},
+                {"q":"What is the output? int n=5,f=1; while(n>1){f*=n; n--;} cout<<f;","o":["5","120","24","60"],"a":1},
+                {"q":"Which loop construct checks the condition AFTER the body?","o":["while","for","do-while","All loops"],"a":2},
+                {"q":"Which loop construct checks the condition BEFORE the body?","o":["do-while","while","Both while and for","None"],"a":2},
+                {"q":"What is the output? int x=0; while(x++<3){cout<<x<<\" \";}","o":["1 2 3","0 1 2 3","0 1 2","1 2 3 4"],"a":0},
+                {"q":"What does x++ < 3 evaluate when x is initially 0?","o":["Compares 0 < 3 (true), then increments x to 1","Increments x first, then compares","Always false","Always true"],"a":0},
+                {"q":"What is the output? int x=0; while(++x<3){cout<<x<<\" \";}","o":["1 2","1 2 3","0 1 2","2 3"],"a":0},
+                {"q":"What is the difference between x++ and ++x in a while condition?","o":["No difference","x++ uses old value for comparison, ++x uses new value","++x is invalid","x++ skips iterations"],"a":1},
+                {"q":"Can you nest a while loop inside another while loop?","o":["No","Yes","Only two levels deep","Only with for loops"],"a":1},
+                {"q":"What is the output? int i=1; while(i<=3){int j=1; while(j<=2){cout<<i*j<<\" \"; j++;} i++;}","o":["1 2 2 4 3 6","1 2 3 4 5 6","2 4 6","1 1 2 2 3 3"],"a":0},
+                {"q":"Can a while loop contain a for loop inside it?","o":["No","Yes","Only in C++11","Only if the while runs once"],"a":1},
+                {"q":"Can a for loop contain a while loop inside it?","o":["No","Yes","Only in C++17","Only one level"],"a":1},
+                {"q":"What is the output? int i=0; while(i<3){cout<<i; i++;} cout<<\" i=\"<<i;","o":["012 i=3","012 i=2","0123 i=3","Error: i out of scope"],"a":0},
+                {"q":"Is the variable still accessible after a while loop ends?","o":["No, it's out of scope","Yes, if declared before the loop","Only if declared inside the loop","Depends on the compiler"],"a":1},
+                {"q":"What is the output? int i=0; while(i<5); {cout<<i; i++;}","o":["01234","Infinite loop (semicolon makes empty body)","0","Error"],"a":1},
+                {"q":"Why does while(i<5); cause an infinite loop?","o":["Because i is 0","The semicolon creates an empty loop body, i never changes","Missing braces","Syntax error"],"a":1},
+                {"q":"What is the output? int sum=0,n=1; while(n<=100){sum+=n; n+=2;} cout<<sum;","o":["5050","2500","50","2550"],"a":1},
+                {"q":"What does the loop int n=1; while(n<=100){sum+=n; n+=2;} compute?","o":["Sum of all numbers 1-100","Sum of odd numbers 1-99","Sum of even numbers 2-100","Sum of squares"],"a":1},
+                {"q":"What is the output? int p=1,b=2,e=0; while(e<10){p*=2; e++;} cout<<p;","o":["20","1024","100","512"],"a":1},
+                {"q":"What is the output? int n=7,r=0; while(n>0){r=r*10+n%10; n/=10;} cout<<r;","o":["7","70","0","7"],"a":0},
+                {"q":"What is the output? int n=123,r=0; while(n>0){r=r*10+n%10; n/=10;} cout<<r;","o":["123","321","213","132"],"a":1},
+                {"q":"What does the expression r=r*10+n%10 do when reversing a number?","o":["Adds digits in order","Appends the last digit of n to the reversed number r","Removes a digit","Multiplies digits"],"a":1},
+                {"q":"What is the output? int n=100; while(n>1){n/=2;} cout<<n;","o":["0","1","50","2"],"a":1},
+                {"q":"How many iterations does while(n>1){n/=2;} take when n=100?","o":["50","7","6","100"],"a":1},
+                {"q":"What is the output? int i=10; while(i>0){i-=3;} cout<<i;","o":["1","0","-2","10"],"a":2},
+                {"q":"Why does i end at -2 in while(i>0){i-=3;} when i starts at 10?","o":["Bug in the code","10,7,4,1 are >0; after 1-3=-2, -2>0 is false, loop stops","i wraps around","It doesn't"],"a":1},
+                {"q":"What type of loop is best for reading a file line by line?","o":["for","while","do-while","goto"],"a":1},
+                {"q":"Can while(cin>>x) be used to read input until EOF?","o":["No","Yes, cin>>x returns false on failure/EOF","Only with getline","Only in C"],"a":1},
+                {"q":"What is the output? bool done=false; int c=0; while(!done){c++; if(c>=5) done=true;} cout<<c;","o":["4","5","6","0"],"a":1},
+                {"q":"What does the ! operator do in while(!done)?","o":["Makes done true","Negates done: loop runs while done is false","Deletes done","Nothing"],"a":1},
+                {"q":"What is an off-by-one error?","o":["A syntax error","Looping one too many or one too few times","An overflow error","A type mismatch"],"a":1},
+                {"q":"What is the output? int c=0; while(c<5){c++;} cout<<c;","o":["4","5","6","0"],"a":1},
+                {"q":"What is the output? int c=0; while(c<=5){c++;} cout<<c;","o":["5","6","7","0"],"a":1},
+                {"q":"How do you avoid off-by-one errors in while loops?","o":["Use do-while instead","Trace through the first and last iterations carefully","Use break","Use continue"],"a":1},
+                {"q":"What is the output? int n=0; do{n++;}while(n<0); cout<<n;","o":["0","1","-1","Infinite loop"],"a":1},
+                {"q":"Can you use a while loop to implement a linear search?","o":["No","Yes, loop through elements until found or end","Only with for","Only with arrays"],"a":1},
+                {"q":"What is the output? int a[]={3,7,2,9,5}; int i=0; while(i<5 && a[i]!=9){i++;} cout<<i;","o":["9","3","4","2"],"a":1},
+                {"q":"Why is the order i<5 && a[i]!=9 important?","o":["It doesn't matter","Short-circuit: if i>=5, a[i] is not accessed (avoids out-of-bounds)","For readability","For speed"],"a":1},
+                {"q":"What is short-circuit evaluation?","o":["Faster computation","If the first operand determines the result, the second is not evaluated","A loop optimization","A type cast"],"a":1},
+                {"q":"What is the output? int n=1; while(n<=1000) n*=2; cout<<n;","o":["1000","1024","512","2048"],"a":1},
+                {"q":"What is the output? int i=0; while(i<5){cout<<i*i<<\" \"; i++;}","o":["0 1 4 9 16","1 4 9 16 25","0 1 2 3 4","0 2 4 6 8"],"a":0},
+                {"q":"What is the output? int s=0,i=2; while(i<=10){s+=i; i+=2;} cout<<s;","o":["30","20","25","55"],"a":0},
+                {"q":"What does while(i<=10){s+=i; i+=2;} with i starting at 2 compute?","o":["Sum of all numbers 2-10","Sum of even numbers 2-10","Sum of odd numbers 1-9","Product of evens"],"a":1},
+                {"q":"What is the output? char c='a'; while(c<='e'){cout<<c; c++;}","o":["abcde","a b c d e","ABCDE","12345"],"a":0},
+                {"q":"Can you increment a char variable with ++?","o":["No","Yes, it moves to the next ASCII character","Only in C","Only uppercase"],"a":1},
+                {"q":"What is the output? string s=\"hello\"; int i=0; while(i<s.length()){cout<<s[i]; i++;}","o":["hello","HELLO","h e l l o","olleh"],"a":0},
+                {"q":"What is the output? int n=42,s=0; while(n>0){s+=n%10; n/=10;} cout<<s;","o":["42","6","8","4"],"a":1},
+                {"q":"What is the output? int i=1; while(i<=10){if(i%3==0)cout<<i<<\" \"; i++;}","o":["3 6 9","3 6 9 12","1 2 3 4 5","6 9"],"a":0},
+                {"q":"Can you use multiple conditions in a while loop?","o":["No","Yes, using && (AND) or || (OR)","Only with if","Only two conditions"],"a":1},
+                {"q":"What is the output? int a=1,b=10; while(a<b){a++; b--;} cout<<a<<\" \"<<b;","o":["5 6","6 5","5 5","10 1"],"a":0},
+                {"q":"How many iterations does while(a<b){a++;b--;} take when a=1,b=10?","o":["5","4","9","10"],"a":1},
+                {"q":"What is the output? int n=1; while(n<100){n=n*2+1;} cout<<n;","o":["127","63","255","100"],"a":0},
+                {"q":"What is the output? int i=5; do{cout<<i<<\" \"; i-=2;}while(i>0);","o":["5 3 1","5 3","5 4 3 2 1","5 3 1 -1"],"a":0},
+                {"q":"What is the output? int i=0; do{cout<<i<<\" \"; i+=3;}while(i<10);","o":["0 3 6 9","0 3 6 9 12","0 3 6","3 6 9"],"a":0},
+                {"q":"What is the output? int x=1; while(x){cout<<x<<\" \"; x++; if(x>3) x=0;}","o":["1 2 3","1 2 3 0","1 2","Infinite loop"],"a":0},
+                {"q":"Why does while(x) stop when x becomes 0?","o":["x is negative","0 is treated as false in C++","0 means null","It doesn't stop"],"a":1},
+                {"q":"What values are considered false in a while condition?","o":["0 and nullptr","false only","Negative numbers","Empty strings"],"a":0},
+                {"q":"What values are considered true in a while condition?","o":["Only 1","Any non-zero value","Only positive numbers","Only true keyword"],"a":1},
+                {"q":"Can you write while(1) instead of while(true)?","o":["No","Yes, 1 is treated as true","Only in C","Only in debug mode"],"a":1},
+                {"q":"What is the output? int n=16; while(n%2==0){n/=2;} cout<<n;","o":["1","2","8","16"],"a":0},
+                {"q":"What does while(n%2==0){n/=2;} do?","o":["Doubles n","Removes all factors of 2 from n","Makes n odd","Halves n once"],"a":1},
+                {"q":"What is the output? int i=0,s=0; while(i++<5){s+=i;} cout<<s;","o":["15","10","5","0"],"a":0},
+                {"q":"In while(i++<5), what value of i is compared?","o":["The incremented value","The original value (post-increment)","Neither","Both"],"a":1},
+                {"q":"What is the output? int i=0,s=0; while(++i<=5){s+=i;} cout<<s;","o":["15","10","5","0"],"a":0},
+                {"q":"In while(++i<=5), what value of i is compared?","o":["The original value","The incremented value (pre-increment)","Neither","Both"],"a":1},
+                {"q":"What is the output? int n=5; while(n-->0){cout<<n<<\" \";}","o":["4 3 2 1 0","5 4 3 2 1","4 3 2 1","5 4 3 2 1 0"],"a":0},
+                {"q":"What does n-->0 mean?","o":["n minus minus greater than 0 (post-decrement then compare)","Arrow operator","Goes to zero","Syntax error"],"a":0},
+                {"q":"How is n-->0 parsed by the compiler?","o":["n-- > 0","n- -> 0","n --> 0","Error"],"a":0},
+                {"q":"Which loop is appropriate for a menu that should display at least once?","o":["for","while","do-while","goto"],"a":2},
+                {"q":"What is the output? int a=56,b=98; while(b){int t=b; b=a%b; a=t;} cout<<a;","o":["7","14","2","28"],"a":1},
+                {"q":"Can while(b) be used instead of while(b!=0)?","o":["No","Yes, they are equivalent","Only for positive numbers","Only in C"],"a":1},
+                {"q":"What is the output? int n=7; bool isPrime=true; int d=2; while(d*d<=n){if(n%d==0){isPrime=false; break;} d++;} cout<<isPrime;","o":["0","1","7","Error"],"a":1},
+                {"q":"Why check d*d<=n instead of d<n for primality?","o":["For correctness","If n has a factor, at least one is <= sqrt(n), so checking up to sqrt is sufficient","To avoid overflow","It doesn't matter"],"a":1},
+                {"q":"What is the output? int n=12; bool isPrime=true; int d=2; while(d*d<=n){if(n%d==0){isPrime=false; break;} d++;} cout<<isPrime;","o":["1","0","12","Error"],"a":1},
+                {"q":"What is the output? int n=1024; int c=0; while(n>1){n/=2; c++;} cout<<c;","o":["10","9","11","1024"],"a":0},
+                {"q":"What is the output? int fib1=0,fib2=1,c=0; while(fib1<50){cout<<fib1<<\" \"; int t=fib1+fib2; fib1=fib2; fib2=t;}","o":["0 1 1 2 3 5 8 13 21 34","1 1 2 3 5 8 13 21 34","0 1 1 2 3 5 8","0 1 2 3 5 8 13"],"a":0},
+                {"q":"What is the output? int n=0; while(n<10){n++; if(n%2==0) continue; cout<<n<<\" \";}","o":["1 3 5 7 9","2 4 6 8 10","1 2 3 4 5","0 1 2 3 4"],"a":0},
+                {"q":"Does continue in a while loop go back to the condition check?","o":["No, it goes to the update","Yes, it jumps back to the condition","It exits the loop","It skips one value"],"a":1},
+                {"q":"What is the output? int i=0; while(i<5){if(i==2){i++; continue;} cout<<i<<\" \"; i++;}","o":["0 1 3 4","0 1 2 3 4","0 1","0 1 4"],"a":0},
+                {"q":"Why is i++ placed before continue in the above example?","o":["For style","Without it, i remains 2 and the loop becomes infinite","To skip 2","To count correctly"],"a":1},
+                {"q":"What is a common bug when using continue with while loops?","o":["Skipping the update step, causing an infinite loop","Using wrong variable","Compile error","Memory leak"],"a":0},
+                {"q":"What is the output? int n=4; int fact=1; while(n>0){fact*=n; n--;} cout<<fact;","o":["4","12","24","120"],"a":2},
+                {"q":"What is the output? int i=1; while(i<=5){cout<<(i%2==0?\"E \":\"O \"); i++;}","o":["O E O E O","E O E O E","O O O O O","E E E E E"],"a":0},
+                {"q":"Can you use the ternary operator inside a while loop body?","o":["No","Yes","Only in if statements","Only outside loops"],"a":1},
+                {"q":"What is the output? int low=1,high=10,sum=0; while(low<=high){sum+=low+high; low++; high--;} cout<<sum;","o":["55","50","11","5"],"a":0},
+                {"q":"How many iterations does while(low<=high){low++;high--;} take when low=1,high=10?","o":["10","5","4","9"],"a":1},
+                {"q":"What is the output? int n=153,orig=153,s=0; while(n>0){int d=n%10; s+=d*d*d; n/=10;} cout<<(s==orig);","o":["0","1","153","Error"],"a":1},
+                {"q":"Is 153 an Armstrong number?","o":["No","Yes, because 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153","Only in base 8","Depends on definition"],"a":1},
+                {"q":"What is the output? int n=9; while(n>=1){cout<<n<<\" \"; n-=2;}","o":["9 7 5 3 1","9 7 5 3","8 6 4 2","9 8 7 6 5"],"a":0},
+                {"q":"What is the output? int i=1,p=1; while(i<=6){p*=i; i++;} cout<<p;","o":["720","120","6","21"],"a":0},
+                {"q":"What is the output? int n=256; while(n!=1){if(n%2!=0){cout<<\"No\"; break;} n/=2;} if(n==1) cout<<\"Yes\";","o":["No","Yes","256","Error"],"a":1},
+                {"q":"What does this code check? while(n!=1){if(n%2!=0) break; n/=2;}","o":["If n is prime","If n is a power of 2","If n is even","If n is odd"],"a":1},
+                {"q":"Is 256 a power of 2?","o":["No","Yes, 2^8 = 256","Only in binary","Depends"],"a":1},
+                {"q":"What is the output? int n=5,sum=0; while(n>0){sum+=n%2; n/=2;} cout<<sum;","o":["2","1","5","3"],"a":0},
+                {"q":"What does summing n%2 repeatedly while n/=2 count?","o":["Number of digits","Number of 1-bits in binary representation","Sum of digits","Number of factors"],"a":1},
+                {"q":"How many 1-bits does 5 (binary 101) have?","o":["1","2","3","5"],"a":1},
+                {"q":"What is the output? int a=0; do{a+=2;}while(a<10); cout<<a;","o":["8","10","12","2"],"a":1},
+                {"q":"What is the output? int x=100; do{x/=3;}while(x>1); cout<<x;","o":["1","0","33","3"],"a":0},
+                {"q":"What is the output? int n=0; while(n++<5); cout<<n;","o":["5","6","0","Infinite loop"],"a":1},
+                {"q":"Why does while(n++<5); with n=0 result in n=6?","o":["Bug","n is post-incremented: compared as 0,1,2,3,4(true),5(false), then n=6","Overflow","Syntax error"],"a":1},
+                {"q":"What is the output? int i=1; while(i<=100){if(i%15==0) cout<<i<<\" \"; i++;}","o":["15 30 45 60 75 90","15 30 45 60 75 90 105","15 45 75","30 60 90"],"a":0},
+                {"q":"What are numbers divisible by both 3 and 5 called in FizzBuzz?","o":["Fizz","Buzz","FizzBuzz","None"],"a":2},
+                {"q":"What is the output? int i=2,n=20; while(i<=n){if(n%i==0){cout<<i<<\" \"; n/=i;}else{i++;}}","o":["2 2 5","2 4 5","4 5","20"],"a":0},
+                {"q":"What does this code find? while(i<=n){if(n%i==0){cout<<i; n/=i;}else{i++;}}","o":["Factors of n","Prime factors of n","Divisors of n","Multiples of n"],"a":1},
+                {"q":"What are the prime factors of 20?","o":["2, 2, 5","4, 5","2, 10","1, 20"],"a":0},
+                {"q":"Can a while loop have an empty body?","o":["No","Yes, with a semicolon: while(condition);","Only with braces","Only in C"],"a":1},
+                {"q":"What is the output? int i=1,s=0; do{s+=i*i; i++;}while(i<=4); cout<<s;","o":["10","30","14","20"],"a":1},
+                {"q":"Can you use a while loop to implement binary search?","o":["No","Yes, while(low<=high) with mid calculation","Only with for","Only recursively"],"a":1},
+                {"q":"What is the output? int low=0,high=9,target=7,mid; while(low<=high){mid=(low+high)/2; if(mid==target) break; if(mid<target) low=mid+1; else high=mid-1;} cout<<mid;","o":["7","3","9","4"],"a":0},
+                {"q":"What is the time complexity of binary search?","o":["O(n)","O(log n)","O(n^2)","O(1)"],"a":1},
+                {"q":"What is the output? int n=10; while(n>0){cout<<n%2; n/=2;}","o":["0101","1010","10","01010"],"a":1},
+                {"q":"What does repeatedly printing n%2 then n/=2 produce?","o":["Binary representation (reversed)","Decimal digits","Octal representation","Hexadecimal"],"a":0},
+                {"q":"What is 10 in binary (correct order)?","o":["1010","0101","1100","1001"],"a":0},
+                {"q":"What is the output? int i=0; while(i<3){int j=0; while(j<3){if(i==j) cout<<1; else cout<<0; j++;} cout<<\" \"; i++;}","o":["100 010 001","111 111 111","000 000 000","100 100 100"],"a":0},
+                {"q":"What pattern does the above code produce?","o":["All ones","Identity matrix pattern","All zeros","Random pattern"],"a":1},
+                {"q":"Is while(true){} equivalent to for(;;){}?","o":["No","Yes, both create infinite loops","Only in C++11","while(true) is slower"],"a":1},
+                {"q":"What is the output? int n=15; do{if(n%2==0){cout<<n<<\" \";} n--;}while(n>0);","o":["14 12 10 8 6 4 2","15 13 11 9 7 5 3 1","14 12 10 8 6","2 4 6 8 10 12 14"],"a":0},
+                {"q":"Can break exit only the innermost while loop in nested loops?","o":["No, it exits all loops","Yes, break only exits the innermost loop","It exits two levels","It stops the program"],"a":1},
+                {"q":"How can you exit multiple nested while loops at once?","o":["Use double break","Use a flag variable, goto, or return","Use continue","Use exit()"],"a":1},
+                {"q":"What is the output? int i=0; while(i<5) i++; cout<<i;","o":["5","4","01234","Infinite loop"],"a":0},
+                {"q":"Why does while(i<5) i++; cout<<i; print 5?","o":["Only i++ is the loop body (no braces), so cout runs after the loop","cout is part of the loop","i is 4","Error"],"a":0}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="for-loops.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">For Loops</span>
+                </a>
+                <a href="break-continue.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Break/Continue</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

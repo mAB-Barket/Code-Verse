@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Exception Handling - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-exceptions">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html" class="active"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 44 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="80" style="width:80%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Exception Handling
+                </div>
+                <h1>44. Exception Handling</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 44 of 55</span>
+                    <span>&#9201; 17 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Exceptions? ===== -->
+                <h2>What Are Exceptions?</h2>
+                <p>An <strong>exception</strong> is an event that disrupts the normal flow of a program&rsquo;s execution. In C++, exceptions provide a structured, type-safe mechanism for <strong>detecting</strong> errors at one point in your code and <strong>handling</strong> them at another&mdash;potentially many call frames away.</p>
+                <p>Without exceptions you would have to propagate error codes manually through every function in the call chain, cluttering business logic with error-checking boilerplate. Exceptions let you separate the <em>happy path</em> from the <em>error path</em>, making code easier to read and maintain.</p>
+                <p>Key vocabulary:</p>
+                <ul>
+                    <li><strong>throw</strong> &mdash; signals that an exceptional condition has occurred.</li>
+                    <li><strong>try</strong> &mdash; marks a block of code that could potentially throw.</li>
+                    <li><strong>catch</strong> &mdash; defines a handler that processes a specific exception type.</li>
+                </ul>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+
+int main() {
+    try {
+        throw std::runtime_error("Something went wrong!");
+    }
+    catch (const std::exception&amp; e) {
+        std::cout &lt;&lt; "Caught: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre></div>
+                <p>When <code>throw</code> executes, the runtime immediately begins <strong>stack unwinding</strong>&mdash;destroying local objects in reverse order of construction&mdash;until it finds a matching <code>catch</code> block. If no handler is found, <code>std::terminate()</code> is called and the program aborts.</p>
+
+                <!-- ===== try, catch, throw Syntax ===== -->
+                <h2>try, catch, throw Syntax</h2>
+                <p>The three keywords work together in a well-defined pattern:</p>
+<div class="code-block"><pre><code>try {
+    // Code that may throw
+    if (denominator == 0)
+        throw std::invalid_argument("Division by zero");
+    result = numerator / denominator;
+}
+catch (const std::invalid_argument&amp; e) {
+    std::cerr &lt;&lt; "Invalid argument: " &lt;&lt; e.what() &lt;&lt; "\n";
+}
+catch (const std::exception&amp; e) {
+    std::cerr &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; "\n";
+}</code></pre></div>
+                <p><strong>Rules to remember:</strong></p>
+                <ul>
+                    <li>A <code>try</code> block must be followed by <strong>at least one</strong> <code>catch</code> block.</li>
+                    <li>You can throw <strong>any copyable type</strong>&mdash;integers, strings, or (most commonly) objects derived from <code>std::exception</code>.</li>
+                    <li>Catch handlers are checked <strong>top to bottom</strong>; the first matching handler wins.</li>
+                    <li>Always catch by <strong>const reference</strong> (<code>const std::exception&amp;</code>) to avoid slicing and unnecessary copies.</li>
+                </ul>
+                <p>A practical example&mdash;safe division function:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+double safeDivide(double a, double b) {
+    if (b == 0.0)
+        throw std::invalid_argument("Cannot divide by zero");
+    return a / b;
+}
+
+int main() {
+    try {
+        std::cout &lt;&lt; safeDivide(10, 0) &lt;&lt; "\n";
+    }
+    catch (const std::invalid_argument&amp; e) {
+        std::cerr &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+    return 0;
+}
+// Output: Error: Cannot divide by zero</code></pre></div>
+
+                <!-- ===== Catching Different Exception Types ===== -->
+                <h2>Catching Different Exception Types</h2>
+                <p>You can chain multiple <code>catch</code> blocks to handle different exception types separately. Handlers are tested in order, so place <strong>more-specific</strong> types before <strong>less-specific</strong> ones:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;new&gt;
+
+void riskyOperation(int code) {
+    if (code == 1) throw std::runtime_error("Runtime problem");
+    if (code == 2) throw std::out_of_range("Index out of range");
+    if (code == 3) throw std::bad_alloc();
+    if (code == 4) throw 42;               // int
+    if (code == 5) throw "C-string error";  // const char*
+}
+
+int main() {
+    for (int i = 1; i &lt;= 5; ++i) {
+        try {
+            riskyOperation(i);
+        }
+        catch (const std::out_of_range&amp; e) {
+            std::cerr &lt;&lt; "Out of range: " &lt;&lt; e.what() &lt;&lt; "\n";
+        }
+        catch (const std::runtime_error&amp; e) {
+            std::cerr &lt;&lt; "Runtime error: " &lt;&lt; e.what() &lt;&lt; "\n";
+        }
+        catch (const std::bad_alloc&amp; e) {
+            std::cerr &lt;&lt; "Allocation failed: " &lt;&lt; e.what() &lt;&lt; "\n";
+        }
+        catch (int code) {
+            std::cerr &lt;&lt; "Caught int: " &lt;&lt; code &lt;&lt; "\n";
+        }
+        catch (const char* msg) {
+            std::cerr &lt;&lt; "Caught C-string: " &lt;&lt; msg &lt;&lt; "\n";
+        }
+    }
+    return 0;
+}</code></pre></div>
+                <p><strong>Important:</strong> If you place <code>catch (const std::exception&amp;)</code> before <code>catch (const std::out_of_range&amp;)</code>, the base-class handler will absorb all derived exceptions and the more-specific handler will never execute.</p>
+
+                <!-- ===== Catching All Exceptions ===== -->
+                <h2>Catching All Exceptions (<code>catch(...)</code>)</h2>
+                <p>The <strong>catch-all</strong> handler uses an ellipsis and matches <em>any</em> exception type&mdash;including primitive types, unknown library exceptions, and even exceptions from C code compiled with C++ exception support:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+
+void mystery() {
+    throw 3.14;  // throws a double
+}
+
+int main() {
+    try {
+        mystery();
+    }
+    catch (...) {
+        std::cerr &lt;&lt; "An unknown exception was caught.\n";
+    }
+    return 0;
+}</code></pre></div>
+                <p>Use <code>catch(...)</code> as a <strong>last resort</strong>. Because you have no access to the exception object inside this handler, you cannot inspect the error message. It is most useful for:</p>
+                <ul>
+                    <li>Logging that an error occurred before terminating.</li>
+                    <li>Ensuring cleanup code always runs (though RAII is preferred).</li>
+                    <li>Acting as a safety net at the top level of a program or thread.</li>
+                </ul>
+
+                <!-- ===== Standard Exception Hierarchy ===== -->
+                <h2>Standard Exception Hierarchy (<code>&lt;stdexcept&gt;</code>)</h2>
+                <p>The C++ Standard Library defines a hierarchy of exception classes rooted at <code>std::exception</code>. All standard exception classes provide a virtual <code>what()</code> member that returns a descriptive C-string.</p>
+<div class="code-block"><pre><code>std::exception
+ &#9500;&#9472;&#9472; std::logic_error
+ &#9474;    &#9500;&#9472;&#9472; std::invalid_argument
+ &#9474;    &#9500;&#9472;&#9472; std::domain_error
+ &#9474;    &#9500;&#9472;&#9472; std::length_error
+ &#9474;    &#9492;&#9472;&#9472; std::out_of_range
+ &#9500;&#9472;&#9472; std::runtime_error
+ &#9474;    &#9500;&#9472;&#9472; std::range_error
+ &#9474;    &#9500;&#9472;&#9472; std::overflow_error
+ &#9474;    &#9492;&#9472;&#9472; std::underflow_error
+ &#9500;&#9472;&#9472; std::bad_alloc          (from &lt;new&gt;)
+ &#9500;&#9472;&#9472; std::bad_cast           (from &lt;typeinfo&gt;)
+ &#9500;&#9472;&#9472; std::bad_typeid         (from &lt;typeinfo&gt;)
+ &#9492;&#9472;&#9472; std::bad_exception</code></pre></div>
+                <p><strong>logic_error</strong> represents defects that are theoretically detectable before the program runs (pre-conditions violated). <strong>runtime_error</strong> represents conditions that can only be detected during execution (e.g., file not found, network timeout).</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {1, 2, 3};
+
+    try {
+        // at() performs bounds checking and throws std::out_of_range
+        std::cout &lt;&lt; v.at(10) &lt;&lt; "\n";
+    }
+    catch (const std::out_of_range&amp; e) {
+        std::cerr &lt;&lt; "Out of range: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Creating Custom Exception Classes ===== -->
+                <h2>Creating Custom Exception Classes</h2>
+                <p>For domain-specific errors, derive your own class from <code>std::exception</code> (or one of its children). Override <code>what()</code> to provide a meaningful message:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;string&gt;
+
+class FileNotFoundError : public std::runtime_error {
+public:
+    explicit FileNotFoundError(const std::string&amp; filename)
+        : std::runtime_error("File not found: " + filename),
+          filename_(filename) {}
+
+    const std::string&amp; filename() const noexcept { return filename_; }
+
+private:
+    std::string filename_;
+};
+
+void openFile(const std::string&amp; path) {
+    // Simulate failure
+    throw FileNotFoundError(path);
+}
+
+int main() {
+    try {
+        openFile("data.csv");
+    }
+    catch (const FileNotFoundError&amp; e) {
+        std::cerr &lt;&lt; e.what() &lt;&lt; "\n";
+        std::cerr &lt;&lt; "Missing file: " &lt;&lt; e.filename() &lt;&lt; "\n";
+    }
+    return 0;
+}
+// Output:
+// File not found: data.csv
+// Missing file: data.csv</code></pre></div>
+                <p><strong>Guidelines for custom exceptions:</strong></p>
+                <ul>
+                    <li>Inherit from an appropriate standard class (<code>std::runtime_error</code> for run-time issues, <code>std::logic_error</code> for programming mistakes).</li>
+                    <li>Mark the constructor <code>explicit</code> to prevent implicit conversions.</li>
+                    <li>Store extra context (filename, error code, etc.) as member variables.</li>
+                    <li>Mark accessor methods <code>noexcept</code> so they never throw while handling another exception.</li>
+                </ul>
+
+                <!-- ===== Rethrowing Exceptions ===== -->
+                <h2>Rethrowing Exceptions</h2>
+                <p>Sometimes a catch handler needs to perform partial cleanup and then let the exception propagate higher. Use a bare <code>throw;</code> (with no operand) to rethrow the <strong>current</strong> exception, preserving its original type:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+void middleLayer() {
+    try {
+        throw std::runtime_error("deep error");
+    }
+    catch (const std::exception&amp; e) {
+        std::cerr &lt;&lt; "middleLayer logged: " &lt;&lt; e.what() &lt;&lt; "\n";
+        throw;  // rethrow the SAME exception object
+    }
+}
+
+int main() {
+    try {
+        middleLayer();
+    }
+    catch (const std::runtime_error&amp; e) {
+        std::cerr &lt;&lt; "main caught runtime_error: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+    return 0;
+}
+// Output:
+// middleLayer logged: deep error
+// main caught runtime_error: deep error</code></pre></div>
+                <p><strong>Warning:</strong> Writing <code>throw e;</code> instead of <code>throw;</code> creates a <em>copy</em> of the caught object, which can <strong>slice</strong> a derived exception down to its base type, losing valuable information.</p>
+                <p>You can also rethrow inside a <code>catch(...)</code> block to re-examine the exception at a higher level:</p>
+<div class="code-block"><pre><code>try {
+    riskyCall();
+}
+catch (...) {
+    cleanup();
+    throw;  // propagate whatever was caught
+}</code></pre></div>
+
+                <!-- ===== Exception Safety Guarantees ===== -->
+                <h2>Exception Safety Guarantees</h2>
+                <p>When writing functions that may throw (or call functions that may throw), aim for one of the three standard <strong>exception safety guarantees</strong>:</p>
+                <table>
+                    <thead>
+                        <tr><th>Guarantee</th><th>Description</th><th>Example</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Basic (weak)</strong></td>
+                            <td>If an exception is thrown, the program remains in a <em>valid</em> state&mdash;no resource leaks, no invariant violations&mdash;but the exact state may be unpredictable.</td>
+                            <td>Most STL operations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Strong (commit-or-rollback)</strong></td>
+                            <td>If an exception is thrown, the operation has <em>no visible effect</em>&mdash;the state is exactly as it was before the call.</td>
+                            <td><code>std::vector::push_back()</code> (when reallocation succeeds)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nothrow</strong></td>
+                            <td>The operation <em>never</em> throws. It always succeeds.</td>
+                            <td>Destructors, <code>swap()</code>, move operations</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The <strong>copy-and-swap idiom</strong> is a classic technique for achieving the strong guarantee in assignment operators:</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;  // std::swap
+#include &lt;string&gt;
+
+class Widget {
+    std::string name_;
+    int value_;
+public:
+    Widget(std::string n, int v) : name_(std::move(n)), value_(v) {}
+
+    // Copy constructor
+    Widget(const Widget&amp;) = default;
+
+    // Strong-guarantee assignment via copy-and-swap
+    Widget&amp; operator=(Widget other) {   // pass by value = copy
+        swap(*this, other);              // noexcept swap
+        return *this;
+    }
+
+    friend void swap(Widget&amp; a, Widget&amp; b) noexcept {
+        using std::swap;
+        swap(a.name_, b.name_);
+        swap(a.value_, b.value_);
+    }
+};</code></pre></div>
+                <p>If the copy (in the parameter) throws, the original object is untouched. If the swap succeeds (it&rsquo;s <code>noexcept</code>), the assignment is committed.</p>
+
+                <!-- ===== noexcept Specifier ===== -->
+                <h2><code>noexcept</code> Specifier (C++11)</h2>
+                <p>The <code>noexcept</code> specifier tells the compiler&mdash;and other programmers&mdash;that a function is <strong>guaranteed not to throw</strong>. If a <code>noexcept</code> function <em>does</em> throw at runtime, <code>std::terminate()</code> is called immediately.</p>
+<div class="code-block"><pre><code>void safeSwap(int&amp; a, int&amp; b) noexcept {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// Conditional noexcept: noexcept only if T's move ctor is noexcept
+template &lt;typename T&gt;
+void swapValues(T&amp; a, T&amp; b) noexcept(noexcept(T(std::move(a)))) {
+    T temp(std::move(a));
+    a = std::move(b);
+    b = std::move(temp);
+}</code></pre></div>
+                <p>You can also query whether an expression can throw at compile time:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+
+void mayThrow() { throw 1; }
+void neverThrows() noexcept {}
+
+int main() {
+    std::cout &lt;&lt; std::boolalpha;
+    std::cout &lt;&lt; "mayThrow:     " &lt;&lt; noexcept(mayThrow())    &lt;&lt; "\n";  // false
+    std::cout &lt;&lt; "neverThrows:  " &lt;&lt; noexcept(neverThrows()) &lt;&lt; "\n";  // true
+    return 0;
+}</code></pre></div>
+                <p><strong>When to use <code>noexcept</code>:</strong></p>
+                <ul>
+                    <li><strong>Move constructors and move assignment operators</strong> &mdash; the STL relies on <code>noexcept</code> moves to provide the strong guarantee (e.g., <code>std::vector</code> reallocation).</li>
+                    <li><strong>Swap functions</strong> &mdash; swaps should never fail.</li>
+                    <li><strong>Destructors</strong> &mdash; already implicitly <code>noexcept</code> in C++11 and later.</li>
+                    <li><strong>Simple leaf functions</strong> that clearly cannot throw (e.g., getters returning built-in types).</li>
+                </ul>
+
+                <!-- ===== Stack Unwinding ===== -->
+                <h2>Stack Unwinding</h2>
+                <p>When an exception is thrown, the runtime performs <strong>stack unwinding</strong>: it exits each function on the call stack in reverse order, calling the destructors of all local (automatic) objects in each scope. This is why <strong>RAII</strong> (Resource Acquisition Is Initialization) is so critical in C++.</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+class Resource {
+    std::string name_;
+public:
+    Resource(std::string n) : name_(std::move(n)) {
+        std::cout &lt;&lt; "Acquired: " &lt;&lt; name_ &lt;&lt; "\n";
+    }
+    ~Resource() {
+        std::cout &lt;&lt; "Released: " &lt;&lt; name_ &lt;&lt; "\n";
+    }
+};
+
+void inner() {
+    Resource r3("R3");
+    throw std::runtime_error("boom");
+    // r3 destructor will still run during unwinding
+}
+
+void middle() {
+    Resource r2("R2");
+    inner();
+}
+
+int main() {
+    try {
+        Resource r1("R1");
+        middle();
+    }
+    catch (const std::exception&amp; e) {
+        std::cerr &lt;&lt; "Caught: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+    return 0;
+}
+// Output:
+// Acquired: R1
+// Acquired: R2
+// Acquired: R3
+// Released: R3
+// Released: R2
+// Released: R1
+// Caught: boom</code></pre></div>
+                <p><strong>Key points:</strong></p>
+                <ul>
+                    <li>Destructors are called in <strong>reverse construction order</strong>.</li>
+                    <li>If a destructor throws during stack unwinding while another exception is already active, <code>std::terminate()</code> is called. <strong>Never throw from destructors.</strong></li>
+                    <li>Raw pointers allocated with <code>new</code> are <strong>not</strong> automatically deleted during unwinding&mdash;use smart pointers (<code>std::unique_ptr</code>, <code>std::shared_ptr</code>) or other RAII wrappers to avoid leaks.</li>
+                </ul>
+
+                <!-- ===== Best Practices ===== -->
+                <h2>Best Practices for Exception Handling</h2>
+                <ol>
+                    <li><strong>Throw by value, catch by const reference.</strong> This avoids slicing, dangling pointers, and unnecessary copies.</li>
+                    <li><strong>Use standard exception types</strong> (or derive from them) so that generic <code>catch (const std::exception&amp;)</code> handlers work uniformly.</li>
+                    <li><strong>Keep try blocks small.</strong> Wrap only the code that might throw, not entire functions.</li>
+                    <li><strong>Don&rsquo;t use exceptions for normal control flow.</strong> Exceptions are for <em>exceptional</em> conditions; frequent expected failures (e.g., user input validation) should use return values or <code>std::optional</code>.</li>
+                    <li><strong>Prefer RAII over try/catch for cleanup.</strong> Smart pointers, lock guards, and file-stream objects handle resource release automatically.</li>
+                    <li><strong>Don&rsquo;t throw in destructors.</strong> If a destructor must handle an error, catch it internally and log or swallow it.</li>
+                    <li><strong>Use <code>noexcept</code> for move operations and swap.</strong> This enables STL optimisations and prevents <code>std::terminate()</code> surprises.</li>
+                    <li><strong>Document exception safety guarantees</strong> for public APIs (basic, strong, or nothrow).</li>
+                    <li><strong>Rethrow with <code>throw;</code></strong> (not <code>throw e;</code>) to preserve the original exception type.</li>
+                    <li><strong>Avoid <code>catch(...)</code> except at top-level boundaries</strong> (e.g., <code>main()</code>, thread entry points, plugin boundaries).</li>
+                </ol>
+
+                <!-- ===== Exceptions vs Error Codes ===== -->
+                <h2>Exceptions vs Error Codes Comparison</h2>
+                <table>
+                    <thead>
+                        <tr><th>Aspect</th><th>Exceptions</th><th>Error Codes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Propagation</td>
+                            <td>Automatic&mdash;unwinds the stack until a handler is found.</td>
+                            <td>Manual&mdash;every caller must check and forward.</td>
+                        </tr>
+                        <tr>
+                            <td>Code clarity</td>
+                            <td>Happy path stays clean; error handling is separate.</td>
+                            <td>Error checks interleaved with logic.</td>
+                        </tr>
+                        <tr>
+                            <td>Performance (happy path)</td>
+                            <td>Near-zero overhead with modern <em>zero-cost</em> implementations.</td>
+                            <td>Branch on every call (minimal but constant).</td>
+                        </tr>
+                        <tr>
+                            <td>Performance (error path)</td>
+                            <td>Expensive&mdash;stack unwinding, RTTI, memory allocation.</td>
+                            <td>Cheap&mdash;just a return value.</td>
+                        </tr>
+                        <tr>
+                            <td>Composability</td>
+                            <td>Works naturally with constructors, operators, and deeply nested calls.</td>
+                            <td>Difficult with constructors (no return value) and operator overloads.</td>
+                        </tr>
+                        <tr>
+                            <td>Safety</td>
+                            <td>Cannot be accidentally ignored (unlike a return value).</td>
+                            <td>Easy to forget to check; <code>[[nodiscard]]</code> helps but is opt-in.</td>
+                        </tr>
+                        <tr>
+                            <td>Binary size</td>
+                            <td>Slightly larger due to unwind tables.</td>
+                            <td>Smaller.</td>
+                        </tr>
+                        <tr>
+                            <td>Use case</td>
+                            <td>Truly exceptional, rare error conditions.</td>
+                            <td>Expected, frequent failures (e.g., parsing user input).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>In practice, most C++ projects use <strong>both</strong>: exceptions for unexpected failures (I/O errors, allocation failures, invariant violations) and return values / <code>std::optional</code> / <code>std::expected</code> (C++23) for expected, recoverable situations.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Exceptions separate <strong>error detection</strong> from <strong>error handling</strong>, keeping the happy path clean.</li>
+                    <li>Use <code>try</code> / <code>catch</code> / <code>throw</code> to guard, handle, and signal errors respectively.</li>
+                    <li>Catch handlers are matched <strong>top to bottom</strong>&mdash;place specific types before general ones.</li>
+                    <li><code>catch(...)</code> catches any exception but gives no access to the exception object.</li>
+                    <li>The standard library defines a hierarchy rooted at <code>std::exception</code>; prefer deriving custom exceptions from <code>std::runtime_error</code> or <code>std::logic_error</code>.</li>
+                    <li>Use bare <code>throw;</code> to <strong>rethrow</strong> without slicing.</li>
+                    <li>Aim for the <strong>basic</strong>, <strong>strong</strong>, or <strong>nothrow</strong> exception safety guarantee in every function.</li>
+                    <li>Mark move constructors, move assignments, swaps, and destructors <code>noexcept</code>.</li>
+                    <li><strong>Stack unwinding</strong> calls destructors of local objects&mdash;rely on RAII, not manual cleanup.</li>
+                    <li><strong>Never throw from destructors</strong>&mdash;doing so during stack unwinding causes <code>std::terminate()</code>.</li>
+                    <li>Exceptions and error codes are complementary; choose the right tool for the situation.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/kjEhqgmEiWY" title="C++ Exception Handling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which three keywords form the basis of C++ exception handling?","o":["<code>try</code>, <code>catch</code>, <code>throw</code>","<code>if</code>, <code>else</code>, <code>throw</code>","<code>try</code>, <code>except</code>, <code>raise</code>","<code>begin</code>, <code>rescue</code>, <code>end</code>"],"a":0},
+                {"q":"What happens if no matching <code>catch</code> block is found for a thrown exception?","o":["The exception is silently ignored","<code>std::terminate()</code> is called","The program restarts","The exception converts to an error code"],"a":1},
+                {"q":"How should you catch standard exceptions to avoid object slicing?","o":["By value: <code>catch (std::exception e)</code>","By pointer: <code>catch (std::exception* e)</code>","By const reference: <code>catch (const std::exception&amp; e)</code>","By move: <code>catch (std::exception&amp;&amp; e)</code>"],"a":2},
+                {"q":"What does <code>catch (...)</code> do?","o":["Catches only <code>std::exception</code> types","Catches any exception of any type","Catches nothing","Triggers a compiler warning"],"a":1},
+                {"q":"Which standard class is at the root of the exception hierarchy?","o":["<code>std::runtime_error</code>","<code>std::logic_error</code>","<code>std::exception</code>","<code>std::error_code</code>"],"a":2},
+                {"q":"What member function of <code>std::exception</code> returns the error message?","o":["<code>message()</code>","<code>what()</code>","<code>describe()</code>","<code>str()</code>"],"a":1},
+                {"q":"<code>std::out_of_range</code> derives from which class?","o":["<code>std::runtime_error</code>","<code>std::exception</code> directly","<code>std::logic_error</code>","<code>std::range_error</code>"],"a":2},
+                {"q":"<code>std::overflow_error</code> derives from which class?","o":["<code>std::logic_error</code>","<code>std::runtime_error</code>","<code>std::exception</code> directly","<code>std::bad_alloc</code>"],"a":1},
+                {"q":"How do you rethrow the current exception without slicing?","o":["<code>throw e;</code>","<code>throw;</code>","<code>rethrow(e);</code>","<code>throw std::current_exception();</code>"],"a":1},
+                {"q":"Why is <code>throw e;</code> dangerous inside a catch handler?","o":["It causes a compiler error","It creates a copy that may slice the derived type","It skips stack unwinding","It is a syntax error"],"a":1},
+                {"q":"Which statement is true about <code>catch</code> handler ordering?","o":["Handlers are matched bottom to top","The most generic handler should come first","Handlers are matched top to bottom; first match wins","All matching handlers execute"],"a":2},
+                {"q":"What is stack unwinding?","o":["Allocating memory on the stack","The process of destroying local objects when an exception propagates","Sorting the call stack","Compiling stack-based code"],"a":1},
+                {"q":"During stack unwinding, what happens to local RAII objects?","o":["They are leaked","Their destructors are called in reverse construction order","They are moved to the heap","They remain alive until main exits"],"a":1},
+                {"q":"Why should you never throw from a destructor?","o":["It causes a compile error","If another exception is active, <code>std::terminate()</code> is called","Destructors cannot contain throw statements","It reverses the stack unwinding"],"a":1},
+                {"q":"What does the <code>noexcept</code> specifier indicate?","o":["The function may throw only <code>std::exception</code>","The function is guaranteed not to throw","The function catches all exceptions internally","The function runs at compile time"],"a":1},
+                {"q":"What happens if a <code>noexcept</code> function throws at runtime?","o":["The exception is caught automatically","<code>std::terminate()</code> is called","The function returns a default value","Undefined behaviour"],"a":1},
+                {"q":"What is the <em>basic</em> exception safety guarantee?","o":["The operation never throws","If an exception occurs, the state is exactly as before the call","No resources are leaked and invariants are maintained, but the exact state may change","The program terminates gracefully"],"a":2},
+                {"q":"What is the <em>strong</em> exception safety guarantee?","o":["The function never throws","If an exception occurs, the operation has no visible effect (commit-or-rollback)","Resources may leak but the state is well-defined","Only runtime errors are caught"],"a":1},
+                {"q":"What is the <em>nothrow</em> exception safety guarantee?","o":["Exceptions are converted to error codes","The function always succeeds and never throws","The function may throw but catches everything internally","The function ignores all exceptions"],"a":1},
+                {"q":"Which of these should typically be <code>noexcept</code>?","o":["Constructors that allocate memory","Copy constructors","Move constructors and swap functions","Virtual functions"],"a":2},
+                {"q":"The <code>noexcept</code> operator (as an expression) evaluates to:","o":["The exception object","<code>true</code> if the expression cannot throw, <code>false</code> otherwise","The number of possible exceptions","A string describing throwability"],"a":1},
+                {"q":"What is <code>noexcept(noexcept(expr))</code> used for?","o":["Double-negating noexcept","Conditionally marking a function noexcept based on whether <code>expr</code> can throw","A syntax error","Logging the noexcept status"],"a":1},
+                {"q":"Which header provides <code>std::runtime_error</code> and <code>std::logic_error</code>?","o":["<code>&lt;exception&gt;</code>","<code>&lt;stdexcept&gt;</code>","<code>&lt;errors&gt;</code>","<code>&lt;system_error&gt;</code>"],"a":1},
+                {"q":"Which header provides <code>std::bad_alloc</code>?","o":["<code>&lt;stdexcept&gt;</code>","<code>&lt;memory&gt;</code>","<code>&lt;new&gt;</code>","<code>&lt;alloc&gt;</code>"],"a":2},
+                {"q":"Can you throw a primitive type like <code>int</code> in C++?","o":["No, only objects derived from <code>std::exception</code>","Yes, you can throw any copyable type","Only with a special compiler flag","Only in C++20 and later"],"a":1},
+                {"q":"What is the recommended practice for custom exception classes?","o":["Inherit from <code>std::string</code>","Inherit from <code>std::runtime_error</code> or <code>std::logic_error</code>","Inherit from <code>int</code>","Do not use classes; throw strings"],"a":1},
+                {"q":"Why mark the constructor of a custom exception class <code>explicit</code>?","o":["To make it virtual","To prevent implicit conversions from unrelated types","To enable RTTI","To improve performance"],"a":1},
+                {"q":"In a custom exception class, accessor methods for extra data should be marked:","o":["<code>virtual</code>","<code>static</code>","<code>noexcept</code>","<code>inline</code>"],"a":2},
+                {"q":"<code>std::vector::at()</code> throws which exception on invalid index?","o":["<code>std::invalid_argument</code>","<code>std::out_of_range</code>","<code>std::range_error</code>","<code>std::overflow_error</code>"],"a":1},
+                {"q":"<code>new</code> throws which exception when memory allocation fails?","o":["<code>std::runtime_error</code>","<code>std::overflow_error</code>","<code>std::bad_alloc</code>","<code>std::logic_error</code>"],"a":2},
+                {"q":"What does <code>new(std::nothrow)</code> return on failure instead of throwing?","o":["An empty object","<code>nullptr</code>","Zero","An error code"],"a":1},
+                {"q":"How does RAII help with exception safety?","o":["It prevents exceptions from being thrown","Resources are released automatically by destructors during stack unwinding","It converts exceptions to error codes","It disables stack unwinding"],"a":1},
+                {"q":"Which smart pointer should be preferred over raw <code>new</code> to ensure exception-safe memory management?","o":["<code>std::auto_ptr</code>","<code>std::unique_ptr</code>","<code>std::weak_ptr</code>","Raw pointers with manual delete"],"a":1},
+                {"q":"What is the copy-and-swap idiom used for?","o":["Copying files","Achieving the strong exception safety guarantee in assignment operators","Swapping two containers","Copying exception objects"],"a":1},
+                {"q":"In the copy-and-swap idiom, the assignment parameter is passed by:","o":["Const reference","Pointer","Value (triggering a copy)","Rvalue reference only"],"a":2},
+                {"q":"What does <code>std::current_exception()</code> return?","o":["A string describing the exception","An <code>std::exception_ptr</code> to the currently handled exception","The error code","A boolean"],"a":1},
+                {"q":"What does <code>std::rethrow_exception(eptr)</code> do?","o":["Catches the exception","Rethrows the exception stored in the <code>exception_ptr</code>","Deletes the exception","Converts it to an error code"],"a":1},
+                {"q":"<code>std::exception_ptr</code> is useful for:","o":["Transferring exceptions between threads","Optimising performance","Sorting exceptions","Converting to C-style errors"],"a":0},
+                {"q":"Function-try-blocks wrap which part of a function?","o":["Only the return statement","The entire function body, including member initialiser lists","Only catch blocks","Only local variables"],"a":1},
+                {"q":"When is a function-try-block most commonly used?","o":["In free functions","In constructors to catch exceptions from member initialiser lists","In main() only","In lambda expressions"],"a":1},
+                {"q":"What does <code>std::nested_exception</code> allow?","o":["Nesting try blocks only","Capturing and storing a currently active exception alongside a new one","Creating recursive exceptions","Logging multiple errors in one object"],"a":1},
+                {"q":"<code>std::throw_with_nested()</code> does what?","o":["Throws a nested exception preserving the current active exception","Catches nested exceptions","Logs nested exceptions","Creates a linked list of exceptions"],"a":0},
+                {"q":"To inspect a nested exception, you use:","o":["<code>std::rethrow_if_nested()</code>","<code>try_nested()</code>","<code>catch_nested()</code>","<code>unwrap()</code>"],"a":0},
+                {"q":"Are destructors implicitly <code>noexcept</code> in C++11 and later?","o":["No, they must be explicitly declared noexcept","Yes, unless the class opts out","Only for trivial types","Only for POD types"],"a":1},
+                {"q":"What is the recommended scope size for a <code>try</code> block?","o":["The entire function","As small as possible&mdash;wrap only code that may throw","Exactly one line","The entire file"],"a":1},
+                {"q":"Which is NOT a recommended use of exceptions?","o":["Reporting I/O errors","Signaling allocation failures","Controlling normal program flow (e.g., loop exits)","Reporting invariant violations"],"a":2},
+                {"q":"On the happy path (no exception thrown), modern implementations have:","o":["High overhead from try blocks","Near-zero overhead (zero-cost exceptions)","Moderate overhead from RTTI","No overhead only in debug mode"],"a":1},
+                {"q":"On the error path (exception thrown), what makes exceptions relatively expensive?","o":["Compiler optimisations","Stack unwinding, RTTI lookups, and possible memory allocation","Syntax parsing","Copying the try block"],"a":1},
+                {"q":"<code>[[nodiscard]]</code> on a function returning an error code helps prevent:","o":["Exceptions from being thrown","The return value from being silently ignored","Memory leaks","Stack overflow"],"a":1},
+                {"q":"C++23 introduced which type as an alternative to exceptions for expected failures?","o":["<code>std::expected</code>","<code>std::result</code>","<code>std::outcome</code>","<code>std::try_result</code>"],"a":0}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="iterators.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Iterators</span>
+                </a>
+                <a href="file-io.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">File I/O</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Dynamic Memory - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-dynamic-memory">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html" class="active"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 28 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="51" style="width:51%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Dynamic Memory
+                </div>
+                <h1>28. Dynamic Memory</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 28 of 55</span>
+                    <span>&#9201; 17 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Dynamic Memory Allocation? ===== -->
+                <h2>What Is Dynamic Memory Allocation?</h2>
+                <p><strong>Dynamic memory allocation</strong> is the process of requesting memory from the operating system <strong>at runtime</strong>. Unlike local variables whose size and lifetime are fixed at compile time, dynamically allocated memory lets you decide <em>how much</em> memory to use and <em>when</em> to release it while your program is running.</p>
+                <p>Every C++ program has access to two main memory regions for storing data: the <strong>stack</strong> and the <strong>heap</strong> (also called the <strong>free store</strong>). Local variables live on the stack and are automatically created and destroyed when their scope ends. The heap, on the other hand, is a large pool of memory that you manage manually using the <code>new</code> and <code>delete</code> operators.</p>
+                <p>Dynamic memory allocation is essential when:</p>
+                <ul>
+                    <li>You don&rsquo;t know how many elements you need until the program is running.</li>
+                    <li>You need data to <strong>outlive the scope</strong> in which it was created.</li>
+                    <li>You are building data structures like linked lists, trees, or graphs.</li>
+                    <li>You need to allocate <strong>large blocks</strong> of memory that would overflow the stack.</li>
+                </ul>
+                <div class="info-box">
+                    <strong>&#128161; Key idea:</strong> The stack is fast but limited in size and lifetime. The heap is larger and more flexible but requires the programmer to manage allocation and deallocation manually.
+                </div>
+
+                <!-- ===== Stack vs Heap Memory ===== -->
+                <h2>Stack vs Heap Memory</h2>
+                <p>Understanding the difference between stack and heap memory is crucial before you start allocating memory dynamically. Here is a side-by-side comparison:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Stack</th>
+                            <th>Heap</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Allocation speed</td>
+                            <td>Very fast (pointer bump)</td>
+                            <td>Slower (OS/allocator negotiation)</td>
+                        </tr>
+                        <tr>
+                            <td>Deallocation</td>
+                            <td>Automatic when scope ends</td>
+                            <td>Manual &mdash; programmer calls <code>delete</code></td>
+                        </tr>
+                        <tr>
+                            <td>Size limit</td>
+                            <td>Small (typically 1&ndash;8&nbsp;MB)</td>
+                            <td>Large (limited by available RAM)</td>
+                        </tr>
+                        <tr>
+                            <td>Lifetime</td>
+                            <td>Tied to scope</td>
+                            <td>Until explicitly freed</td>
+                        </tr>
+                        <tr>
+                            <td>Fragmentation</td>
+                            <td>None (contiguous LIFO)</td>
+                            <td>Possible over time</td>
+                        </tr>
+                        <tr>
+                            <td>Access pattern</td>
+                            <td>LIFO (Last In, First Out)</td>
+                            <td>Random access via pointers</td>
+                        </tr>
+                        <tr>
+                            <td>Common use</td>
+                            <td>Local variables, function calls</td>
+                            <td>Dynamic arrays, objects, large buffers</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Here is a quick visual comparison:</p>
+                <pre><code>// Stack variable &mdash; automatic lifetime
+void foo() {
+    int x = 42;        // allocated on the stack
+}                       // x is destroyed here automatically
+
+// Heap variable &mdash; manual lifetime
+void bar() {
+    int* p = new int(42);  // allocated on the heap
+    // ... use *p ...
+    delete p;              // YOU must free it
+}</code></pre>
+
+                <!-- ===== The new Operator ===== -->
+                <h2>The <code>new</code> Operator</h2>
+                <p>The <code>new</code> operator allocates memory on the heap and returns a <strong>pointer</strong> to the newly allocated block. If allocation fails, it throws a <code>std::bad_alloc</code> exception by default.</p>
+                <h3>Allocating a Single Variable</h3>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Allocate a single int on the heap
+    int* ptr = new int;       // uninitialized
+    *ptr = 100;
+    cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; endl;  // 100
+
+    // Allocate and initialize in one step
+    double* dp = new double(3.14);
+    cout &lt;&lt; "Pi: " &lt;&lt; *dp &lt;&lt; endl;      // 3.14
+
+    // C++11 uniform initialization
+    int* up = new int{77};
+    cout &lt;&lt; "Uniform: " &lt;&lt; *up &lt;&lt; endl;  // 77
+
+    delete ptr;
+    delete dp;
+    delete up;
+    return 0;
+}</code></pre>
+                <div class="info-box">
+                    <strong>&#128161; Tip:</strong> Always initialize dynamically allocated variables. Uninitialized heap memory contains <strong>garbage values</strong> just like uninitialized stack variables.
+                </div>
+                <h3>The <code>nothrow</code> Version</h3>
+                <p>If you prefer not to use exceptions, pass <code>std::nothrow</code> to <code>new</code>. On failure it returns <code>nullptr</code> instead of throwing:</p>
+                <pre><code>#include &lt;new&gt;  // for std::nothrow
+
+int* p = new(nothrow) int;
+if (p == nullptr) {
+    cerr &lt;&lt; "Allocation failed!" &lt;&lt; endl;
+}</code></pre>
+
+                <!-- ===== The delete Operator ===== -->
+                <h2>The <code>delete</code> Operator</h2>
+                <p>The <code>delete</code> operator frees heap memory that was previously allocated with <code>new</code>. After calling <code>delete</code>, the pointer becomes invalid and should not be dereferenced.</p>
+                <pre><code>int* p = new int(42);
+cout &lt;&lt; *p &lt;&lt; endl;  // 42
+
+delete p;      // free the memory
+p = nullptr;   // good practice: prevent dangling pointer</code></pre>
+                <p><strong>Important rules:</strong></p>
+                <ul>
+                    <li>Only <code>delete</code> memory that was allocated with <code>new</code>.</li>
+                    <li>Never <code>delete</code> the same pointer twice &mdash; this causes <strong>undefined behaviour</strong> (double free).</li>
+                    <li>Calling <code>delete</code> on <code>nullptr</code> is safe and does nothing.</li>
+                    <li>After <code>delete</code>, set the pointer to <code>nullptr</code> to avoid accidental reuse.</li>
+                </ul>
+                <pre><code>int* p = new int(10);
+delete p;
+delete p;       // &#10060; UNDEFINED BEHAVIOUR &mdash; double free!
+
+// Safe pattern:
+int* q = new int(20);
+delete q;
+q = nullptr;
+delete q;       // &#9989; Safe &mdash; deleting nullptr is a no-op</code></pre>
+
+                <!-- ===== Dynamic Arrays with new[] and delete[] ===== -->
+                <h2>Dynamic Arrays with <code>new[]</code> and <code>delete[]</code></h2>
+                <p>To allocate an array on the heap, use the <code>new[]</code> form. To free it, you <strong>must</strong> use <code>delete[]</code> (with square brackets). Mismatching <code>new[]</code> with plain <code>delete</code> leads to undefined behaviour.</p>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n;
+    cout &lt;&lt; "Enter array size: ";
+    cin &gt;&gt; n;
+
+    // Allocate dynamic array
+    int* arr = new int[n];
+
+    // Fill it
+    for (int i = 0; i &lt; n; i++) {
+        arr[i] = i * 10;
+    }
+
+    // Print it
+    for (int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    // Free the array
+    delete[] arr;   // &#9989; use delete[] for arrays
+    arr = nullptr;
+
+    return 0;
+}</code></pre>
+                <div class="warning-box">
+                    <strong>&#9888;&#65039; Warning:</strong> Never free an array allocated with <code>new[]</code> using plain <code>delete</code>. Always use <code>delete[]</code> for arrays. The brackets tell the runtime to call destructors for every element and to free the correct amount of memory.
+                </div>
+                <h3>Value-Initializing a Dynamic Array</h3>
+                <p>You can zero-initialize a dynamic array by adding empty parentheses or braces:</p>
+                <pre><code>int* arr = new int[100]();   // all 100 elements set to 0
+int* brr = new int[100]{};  // same &mdash; C++11 syntax</code></pre>
+
+                <!-- ===== Memory Leaks ===== -->
+                <h2>Memory Leaks</h2>
+                <p>A <strong>memory leak</strong> occurs when you allocate memory on the heap but never free it. The operating system cannot reclaim that memory until the program terminates. Over time, leaks can consume all available RAM and cause your program &mdash; or the entire system &mdash; to slow down or crash.</p>
+                <h3>Common Causes</h3>
+                <pre><code>// 1. Forgetting to call delete
+void leak1() {
+    int* p = new int(42);
+    // oops &mdash; no delete!
+}   // p goes out of scope; memory is leaked
+
+// 2. Overwriting a pointer before deleting
+void leak2() {
+    int* p = new int(10);
+    p = new int(20);   // the first allocation is now leaked!
+    delete p;           // only frees the second allocation
+}
+
+// 3. Early return before delete
+void leak3(bool flag) {
+    int* p = new int(5);
+    if (flag) return;   // memory leaked if flag is true
+    delete p;
+}</code></pre>
+                <h3>How to Avoid Memory Leaks</h3>
+                <ul>
+                    <li>Always pair every <code>new</code> with a <code>delete</code> (and every <code>new[]</code> with a <code>delete[]</code>).</li>
+                    <li>Use <strong>RAII</strong> &mdash; wrap heap allocations in objects whose destructors free the memory.</li>
+                    <li>Prefer <strong>smart pointers</strong> (<code>std::unique_ptr</code>, <code>std::shared_ptr</code>) that delete automatically.</li>
+                    <li>Use tools like <strong>Valgrind</strong>, <strong>AddressSanitizer</strong>, or <strong>Visual Studio&rsquo;s CRT leak detection</strong> to find leaks.</li>
+                </ul>
+                <div class="info-box">
+                    <strong>&#128161; Rule of thumb:</strong> If you can avoid raw <code>new</code> and <code>delete</code> entirely by using containers (<code>std::vector</code>) or smart pointers, do so. Modern C++ code rarely needs manual memory management.
+                </div>
+
+                <!-- ===== Dangling Pointers After delete ===== -->
+                <h2>Dangling Pointers After <code>delete</code></h2>
+                <p>A <strong>dangling pointer</strong> is a pointer that still holds the address of memory that has been freed. Dereferencing a dangling pointer is <strong>undefined behaviour</strong> &mdash; it might crash, silently corrupt data, or appear to work until it suddenly doesn&rsquo;t.</p>
+                <pre><code>int* p = new int(99);
+delete p;
+// p is now dangling &mdash; it still holds the old address
+cout &lt;&lt; *p &lt;&lt; endl;  // &#10060; Undefined behaviour!
+</code></pre>
+                <h3>How to Prevent Dangling Pointers</h3>
+                <ul>
+                    <li>Set the pointer to <code>nullptr</code> immediately after <code>delete</code>.</li>
+                    <li>Limit pointer scope so it cannot be used after the resource is freed.</li>
+                    <li>Use smart pointers which automatically nullify themselves.</li>
+                </ul>
+                <pre><code>int* p = new int(99);
+delete p;
+p = nullptr;          // &#9989; no longer dangling
+
+if (p != nullptr) {
+    cout &lt;&lt; *p &lt;&lt; endl;
+} else {
+    cout &lt;&lt; "Pointer is null." &lt;&lt; endl;
+}</code></pre>
+
+                <!-- ===== Resizing Dynamic Arrays ===== -->
+                <h2>Resizing Dynamic Arrays (Manual Reallocation)</h2>
+                <p>Unlike C&rsquo;s <code>realloc</code>, C++ does <strong>not</strong> provide a built-in way to resize memory allocated with <code>new[]</code>. To &ldquo;resize&rdquo; a dynamic array, you must:</p>
+                <ol>
+                    <li>Allocate a <strong>new</strong> array of the desired size.</li>
+                    <li><strong>Copy</strong> existing elements to the new array.</li>
+                    <li><strong>Delete</strong> the old array.</li>
+                    <li>Redirect the pointer to the new array.</li>
+                </ol>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;   // for std::copy
+using namespace std;
+
+int main() {
+    int capacity = 4;
+    int size = 0;
+    int* arr = new int[capacity];
+
+    // Simulate adding elements
+    for (int i = 0; i &lt; 10; i++) {
+        if (size == capacity) {
+            // Double the capacity
+            int newCap = capacity * 2;
+            int* temp = new int[newCap];
+            copy(arr, arr + size, temp);   // copy old data
+            delete[] arr;                  // free old array
+            arr = temp;                    // redirect pointer
+            capacity = newCap;
+            cout &lt;&lt; "Resized to " &lt;&lt; capacity &lt;&lt; endl;
+        }
+        arr[size++] = i * 5;
+    }
+
+    // Print all elements
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    delete[] arr;
+    arr = nullptr;
+    return 0;
+}</code></pre>
+                <div class="info-box">
+                    <strong>&#128161; Note:</strong> This is essentially what <code>std::vector</code> does behind the scenes. In production code, prefer <code>std::vector</code> over manually resizing arrays.
+                </div>
+
+                <!-- ===== Dynamic 2D Arrays ===== -->
+                <h2>Dynamic 2D Arrays</h2>
+                <p>A dynamic 2D array is typically implemented as a <strong>pointer to an array of pointers</strong>. Each row is individually allocated on the heap.</p>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int rows = 3, cols = 4;
+
+    // Step 1: Allocate row pointers
+    int** matrix = new int*[rows];
+
+    // Step 2: Allocate each row
+    for (int i = 0; i &lt; rows; i++) {
+        matrix[i] = new int[cols];
+    }
+
+    // Step 3: Fill the matrix
+    int value = 1;
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            matrix[i][j] = value++;
+        }
+    }
+
+    // Step 4: Print the matrix
+    for (int i = 0; i &lt; rows; i++) {
+        for (int j = 0; j &lt; cols; j++) {
+            cout &lt;&lt; matrix[i][j] &lt;&lt; "\t";
+        }
+        cout &lt;&lt; endl;
+    }
+
+    // Step 5: Deallocate in reverse order
+    for (int i = 0; i &lt; rows; i++) {
+        delete[] matrix[i];    // free each row
+    }
+    delete[] matrix;           // free the row-pointer array
+    matrix = nullptr;
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+                <pre><code>1   2   3   4
+5   6   7   8
+9   10  11  12</code></pre>
+                <h3>Contiguous 2D Alternative</h3>
+                <p>The pointer-to-pointer approach can cause cache misses because rows may be scattered in memory. A more cache-friendly technique allocates one contiguous block and uses index arithmetic:</p>
+                <pre><code>int rows = 3, cols = 4;
+
+// Single contiguous block
+int* block = new int[rows * cols];
+
+// Access element (i, j) with: block[i * cols + j]
+block[2 * cols + 3] = 42;  // row 2, col 3
+
+delete[] block;</code></pre>
+
+                <!-- ===== RAII Principle ===== -->
+                <h2>RAII Principle (Resource Acquisition Is Initialization)</h2>
+                <p><strong>RAII</strong> is a C++ design idiom where you tie the lifetime of a resource (memory, file handle, mutex lock, etc.) to the lifetime of an <strong>object</strong>. The resource is acquired in the constructor and released in the destructor. Because C++ guarantees that destructors run when an object leaves scope, RAII ensures that resources are always freed &mdash; even when exceptions are thrown.</p>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class IntArray {
+    int* data;
+    int  sz;
+public:
+    // Constructor acquires the resource
+    IntArray(int n) : data(new int[n]()), sz(n) {
+        cout &lt;&lt; "Allocated " &lt;&lt; n &lt;&lt; " ints" &lt;&lt; endl;
+    }
+
+    // Destructor releases the resource
+    ~IntArray() {
+        delete[] data;
+        cout &lt;&lt; "Freed memory" &lt;&lt; endl;
+    }
+
+    int&amp; operator[](int i) { return data[i]; }
+    int  size() const      { return sz; }
+};
+
+int main() {
+    IntArray arr(5);    // resource acquired
+    arr[0] = 10;
+    arr[4] = 50;
+    cout &lt;&lt; arr[0] &lt;&lt; ", " &lt;&lt; arr[4] &lt;&lt; endl;
+    return 0;           // arr destroyed here &mdash; memory freed automatically
+}</code></pre>
+                <p><strong>Output:</strong></p>
+                <pre><code>Allocated 5 ints
+10, 50
+Freed memory</code></pre>
+                <div class="info-box">
+                    <strong>&#128161; Why RAII matters:</strong> Without RAII, every function exit path (including exceptions) must remember to free resources. RAII makes resource management <strong>exception-safe</strong> and eliminates most memory leaks by design.
+                </div>
+
+                <!-- ===== Introduction to Smart Pointers ===== -->
+                <h2>Introduction to Smart Pointers (Preview)</h2>
+                <p>C++11 introduced <strong>smart pointers</strong> in the <code>&lt;memory&gt;</code> header. Smart pointers are RAII wrappers around raw pointers that automatically call <code>delete</code> when the pointer goes out of scope. They eliminate the most common dynamic memory bugs.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Smart Pointer</th>
+                            <th>Ownership Model</th>
+                            <th>When to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>std::unique_ptr</code></td>
+                            <td>Exclusive (single owner)</td>
+                            <td>Default choice &mdash; one owner, no sharing</td>
+                        </tr>
+                        <tr>
+                            <td><code>std::shared_ptr</code></td>
+                            <td>Shared (reference counted)</td>
+                            <td>Multiple owners need the same object</td>
+                        </tr>
+                        <tr>
+                            <td><code>std::weak_ptr</code></td>
+                            <td>Non-owning observer</td>
+                            <td>Break circular references with <code>shared_ptr</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Quick Example with <code>std::unique_ptr</code></h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+using namespace std;
+
+int main() {
+    // No manual delete needed!
+    unique_ptr&lt;int&gt; p = make_unique&lt;int&gt;(42);
+    cout &lt;&lt; *p &lt;&lt; endl;  // 42
+
+    // Works with arrays too (C++14)
+    unique_ptr&lt;int[]&gt; arr = make_unique&lt;int[]&gt;(5);
+    for (int i = 0; i &lt; 5; i++) {
+        arr[i] = i * 10;
+    }
+    for (int i = 0; i &lt; 5; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    // Memory freed automatically when p and arr go out of scope
+    return 0;
+}</code></pre>
+                <div class="info-box">
+                    <strong>&#128218; Coming up:</strong> We will explore smart pointers in depth in <a href="smart-pointers.html"><strong>Lesson 47 &mdash; Smart Pointers</strong></a>. For now, just know they exist and strongly prefer them over raw <code>new</code>/<code>delete</code> in modern C++.
+                </div>
+
+                <!-- ===== Common Mistakes and Best Practices ===== -->
+                <h2>Common Mistakes and Best Practices</h2>
+                <h3>Mistakes to Avoid</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mistake</th>
+                            <th>Consequence</th>
+                            <th>Fix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Using <code>delete</code> instead of <code>delete[]</code></td>
+                            <td>Undefined behaviour</td>
+                            <td>Match <code>new[]</code> with <code>delete[]</code></td>
+                        </tr>
+                        <tr>
+                            <td>Double <code>delete</code></td>
+                            <td>Crash or heap corruption</td>
+                            <td>Set pointer to <code>nullptr</code> after delete</td>
+                        </tr>
+                        <tr>
+                            <td>Forgetting to free memory</td>
+                            <td>Memory leak</td>
+                            <td>Use RAII or smart pointers</td>
+                        </tr>
+                        <tr>
+                            <td>Dereferencing after <code>delete</code></td>
+                            <td>Undefined behaviour (dangling pointer)</td>
+                            <td>Nullify pointer, check before use</td>
+                        </tr>
+                        <tr>
+                            <td>Deleting stack memory</td>
+                            <td>Crash</td>
+                            <td>Only <code>delete</code> what <code>new</code> returned</td>
+                        </tr>
+                        <tr>
+                            <td>Losing the only pointer to heap memory</td>
+                            <td>Unreachable leak</td>
+                            <td>Save pointer before overwriting</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Best Practices</h3>
+                <ul>
+                    <li><strong>Prefer <code>std::vector</code></strong> over <code>new[]</code>/<code>delete[]</code> for dynamic arrays.</li>
+                    <li><strong>Prefer smart pointers</strong> (<code>unique_ptr</code>, <code>shared_ptr</code>) over raw <code>new</code>/<code>delete</code>.</li>
+                    <li><strong>Follow RAII</strong> &mdash; acquire in the constructor, release in the destructor.</li>
+                    <li><strong>Nullify after delete</strong> &mdash; <code>p = nullptr;</code> immediately after <code>delete p;</code>.</li>
+                    <li><strong>Use <code>make_unique</code> / <code>make_shared</code></strong> instead of calling <code>new</code> directly.</li>
+                    <li><strong>Check for <code>nullptr</code></strong> before dereferencing pointers received from other functions.</li>
+                    <li><strong>Run sanitizers</strong> (<code>-fsanitize=address</code>) during development to catch errors early.</li>
+                    <li><strong>Minimize raw pointer ownership</strong> &mdash; raw pointers should observe, not own.</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>new</code> allocates memory on the <strong>heap</strong> and returns a pointer; <code>delete</code> frees it.</li>
+                    <li><code>new[]</code> allocates an array; you <strong>must</strong> free it with <code>delete[]</code> &mdash; never plain <code>delete</code>.</li>
+                    <li>A <strong>memory leak</strong> happens when allocated memory is never freed; a <strong>dangling pointer</strong> points to freed memory.</li>
+                    <li>To resize a dynamic array you must allocate, copy, delete the old, and redirect the pointer.</li>
+                    <li>Dynamic 2D arrays use a pointer-to-pointer approach or a contiguous block with index math.</li>
+                    <li><strong>RAII</strong> ties resource lifetime to object lifetime, making code exception-safe and leak-free.</li>
+                    <li><strong>Smart pointers</strong> (<code>unique_ptr</code>, <code>shared_ptr</code>, <code>weak_ptr</code>) automate memory management and should be your default in modern C++.</li>
+                    <li>Always set pointers to <code>nullptr</code> after <code>delete</code> and run sanitizers to catch memory errors during development.</li>
+                </ul>
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/NUPkMfZk0eY" title="C++ Dynamic Memory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <!-- ===== Quiz ===== -->
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which operator allocates memory on the heap in C++?","o":["malloc","new","alloc","create"],"a":1},
+                {"q":"Which operator frees memory allocated with new?","o":["free","remove","delete","destroy"],"a":2},
+                {"q":"What does new return on success?","o":["A reference","A pointer to the allocated memory","The value stored","An iterator"],"a":1},
+                {"q":"What happens by default when new fails to allocate memory?","o":["Returns nullptr","Returns 0","Throws std::bad_alloc","Program exits"],"a":2},
+                {"q":"How do you make new return nullptr on failure instead of throwing?","o":["new(safe)","new(nullptr)","new(nothrow)","new(noexcept)"],"a":2},
+                {"q":"Which form frees a dynamically allocated array?","o":["delete arr","delete() arr","delete[] arr","free(arr)"],"a":2},
+                {"q":"What is the result of using delete instead of delete[] for an array?","o":["Only the first element is freed","Compilation error","Undefined behaviour","Nothing &mdash; they are equivalent"],"a":2},
+                {"q":"What is a memory leak?","o":["Accessing freed memory","Allocating memory that is never freed","Freeing memory twice","Using stack memory after return"],"a":1},
+                {"q":"What is a dangling pointer?","o":["A pointer set to nullptr","A pointer to freed or invalid memory","A pointer to the stack","An uninitialized pointer"],"a":1},
+                {"q":"What should you do with a pointer immediately after calling delete on it?","o":["Dereference it","Set it to nullptr","Increment it","Cast it to void*"],"a":1},
+                {"q":"Is it safe to call delete on nullptr?","o":["No, it crashes","No, it is undefined behaviour","Yes, it is a no-op","Only in C++17"],"a":2},
+                {"q":"Which memory region typically has a size limit of 1&ndash;8 MB?","o":["Heap","Stack","Static storage","Code segment"],"a":1},
+                {"q":"Which memory region requires manual deallocation?","o":["Stack","Register","Heap","Data segment"],"a":2},
+                {"q":"How do you allocate a single int with value 42 on the heap?","o":["int* p = new int[42];","int* p = new int(42);","int p = new 42;","int* p = heap int(42);"],"a":1},
+                {"q":"How do you zero-initialize a dynamic array of 100 ints?","o":["new int[100](0)","new int[100]()","new int[100] = {0}","new int(100)"],"a":1},
+                {"q":"What does RAII stand for?","o":["Resource Allocation Is Immediate","Resource Acquisition Is Initialization","Runtime Allocation In Instances","Register Assigned Inline Initialization"],"a":1},
+                {"q":"In RAII, where is the resource released?","o":["In main()","In a finally block","In the destructor","Manually by the caller"],"a":2},
+                {"q":"Which smart pointer provides exclusive ownership?","o":["std::shared_ptr","std::unique_ptr","std::weak_ptr","std::auto_ptr"],"a":1},
+                {"q":"Which smart pointer uses reference counting?","o":["std::unique_ptr","std::shared_ptr","std::weak_ptr","std::raw_ptr"],"a":1},
+                {"q":"What is std::weak_ptr used for?","o":["Exclusive ownership","Breaking circular references with shared_ptr","Replacing raw pointers","Managing stack memory"],"a":1},
+                {"q":"Which header provides smart pointers?","o":["&lt;pointer&gt;","&lt;memory&gt;","&lt;smart_ptr&gt;","&lt;utility&gt;"],"a":1},
+                {"q":"What function should you prefer over raw new for unique_ptr?","o":["create_unique","alloc_unique","make_unique","unique_new"],"a":2},
+                {"q":"What happens if you lose the only pointer to heap-allocated memory?","o":["The memory is freed automatically","A memory leak occurs","The program crashes","The OS reclaims it immediately"],"a":1},
+                {"q":"How do you allocate a dynamic array of n doubles?","o":["double* d = new double(n);","double* d = new double[n];","double d[n] = new double;","double* d = new n double;"],"a":1},
+                {"q":"What is double freeing (double delete)?","o":["Freeing stack memory","Calling delete on the same pointer twice","Allocating twice without freeing","Casting a pointer before deleting"],"a":1},
+                {"q":"What is the correct way to deallocate a 2D dynamic array (pointer to pointer)?","o":["delete[] matrix;","delete matrix;","Delete each row first, then delete[] the row-pointer array","free(matrix);"],"a":2},
+                {"q":"Which approach to 2D dynamic arrays is more cache-friendly?","o":["Pointer-to-pointer (int**)","A single contiguous block with index math","Using std::list of vectors","Allocating each element separately"],"a":1},
+                {"q":"How do you access element (i, j) in a contiguous 1D block representing a 2D array with cols columns?","o":["block[i + j]","block[i][j]","block[i * cols + j]","block[j * rows + i]"],"a":2},
+                {"q":"What does the expression new int{77} use?","o":["Copy initialization","Direct initialization","Uniform (brace) initialization","Aggregate initialization"],"a":2},
+                {"q":"What is the risk of returning a pointer to a local stack variable?","o":["No risk","The pointer dangles after the function returns","Memory leak","Double delete"],"a":1},
+                {"q":"What tool can detect memory leaks on Linux?","o":["GDB","Valgrind","Make","GCC"],"a":1},
+                {"q":"What compiler flag enables AddressSanitizer?","o":["-Wall","-O2","-fsanitize=address","-std=c++17"],"a":2},
+                {"q":"Why is the stack faster than the heap for allocation?","o":["Stack uses a simple pointer bump","Stack is closer to the CPU","Stack memory is larger","Stack uses virtual memory"],"a":0},
+                {"q":"What does the heap suffer from over many allocations and deallocations?","o":["Stack overflow","Fragmentation","Compilation errors","Pointer decay"],"a":1},
+                {"q":"Can you mix malloc/free with new/delete in C++?","o":["Yes, they are interchangeable","No &mdash; always pair malloc with free and new with delete","Only in C++20","Only for arrays"],"a":1},
+                {"q":"Which is the correct pattern: allocate &rarr; use &rarr; free, or free &rarr; allocate &rarr; use?","o":["Free &rarr; allocate &rarr; use","Allocate &rarr; use &rarr; free","Either order is fine","Allocate &rarr; free &rarr; use"],"a":1},
+                {"q":"What does std::vector use internally for storage?","o":["Stack arrays","Dynamic heap allocation","Static arrays","Shared memory"],"a":1},
+                {"q":"Why should raw pointers observe rather than own resources in modern C++?","o":["Raw pointers are slower","Ownership responsibilities are unclear with raw pointers","Raw pointers cannot point to heap memory","Raw pointers cannot be null"],"a":1},
+                {"q":"What exception does new throw when memory allocation fails?","o":["std::runtime_error","std::overflow_error","std::bad_alloc","std::out_of_range"],"a":2},
+                {"q":"Which header do you include to use std::nothrow?","o":["&lt;memory&gt;","&lt;new&gt;","&lt;cstdlib&gt;","&lt;exception&gt;"],"a":1},
+                {"q":"If int* p = new int(10); what value does *p hold?","o":["0","Garbage","10","Undefined"],"a":2},
+                {"q":"What is the lifetime of a heap-allocated object?","o":["Until the function returns","Until the enclosing block ends","Until delete is called or the program exits","Until the next garbage collection cycle"],"a":2},
+                {"q":"Which is NOT a valid reason to use dynamic memory?","o":["Array size is unknown at compile time","Data must outlive its creating scope","You want automatic variable cleanup","You need very large buffers"],"a":2},
+                {"q":"How many times should delete be called on a single new allocation?","o":["Zero","Exactly once","Twice for safety","As many times as desired"],"a":1},
+                {"q":"What happens if you dereference a null pointer?","o":["Returns 0","Undefined behaviour","Returns nullptr","Compilation error"],"a":1},
+                {"q":"What replaces auto_ptr in C++11?","o":["raw pointer","shared_ptr only","unique_ptr","scoped_ptr"],"a":2},
+                {"q":"Can make_unique be used with arrays?","o":["No","Yes, since C++14","Only with shared_ptr","Only for single objects"],"a":1},
+                {"q":"Why is manual reallocation of dynamic arrays error-prone?","o":["It requires multiple steps: allocate, copy, delete, redirect","It only works with ints","The compiler forbids it","It always leaks memory"],"a":0},
+                {"q":"In the RAII IntArray example, when is memory freed?","o":["When delete[] is called manually","When the IntArray object goes out of scope","At program start","Never"],"a":1},
+                {"q":"What modern C++ container should you prefer over raw dynamic arrays?","o":["std::list","std::set","std::vector","std::map"],"a":2}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="pointer-arithmetic.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Pointer Arithmetic</span>
+                </a>
+                <a href="references.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">References</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

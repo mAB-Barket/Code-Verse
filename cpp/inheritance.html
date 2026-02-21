@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Inheritance - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-inheritance">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html" class="active"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 34 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="62" style="width:62%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Inheritance
+                </div>
+                <h1>34. Inheritance</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 34 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Inheritance? ===== -->
+                <h2>What Is Inheritance?</h2>
+                <p><strong>Inheritance</strong> is one of the four fundamental pillars of Object-Oriented Programming (OOP). It allows a new class (the <em>derived</em> or <em>child</em> class) to <strong>acquire the properties and behaviours</strong> of an existing class (the <em>base</em> or <em>parent</em> class).</p>
+                <p>Inheritance models an <strong>IS-A relationship</strong>. For example:</p>
+                <ul>
+                    <li>A <code>Dog</code> <em>is a</em> <code>Animal</code>.</li>
+                    <li>A <code>Car</code> <em>is a</em> <code>Vehicle</code>.</li>
+                    <li>A <code>Circle</code> <em>is a</em> <code>Shape</code>.</li>
+                </ul>
+                <p>The key benefits of inheritance include:</p>
+                <ul>
+                    <li><strong>Code Reuse</strong> &mdash; write common functionality once in the base class and reuse it in all derived classes.</li>
+                    <li><strong>Extensibility</strong> &mdash; add new features to derived classes without modifying the base class.</li>
+                    <li><strong>Hierarchical Organisation</strong> &mdash; model real-world relationships naturally.</li>
+                    <li><strong>Polymorphism Foundation</strong> &mdash; inheritance enables runtime polymorphism through virtual functions.</li>
+                </ul>
+
+                <!-- ===== Base Class and Derived Class Syntax ===== -->
+                <h2>Base Class and Derived Class Syntax</h2>
+                <p>In C++ you create a derived class using a <strong>colon</strong> followed by an <strong>access specifier</strong> and the <strong>base class name</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Base class</span>
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="type">string</span> name;
+    <span class="keyword">void</span> <span class="function">eat</span>() {
+        cout &lt;&lt; name &lt;&lt; <span class="string">" is eating."</span> &lt;&lt; endl;
+    }
+};
+
+<span class="comment">// Derived class</span>
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">bark</span>() {
+        cout &lt;&lt; name &lt;&lt; <span class="string">" says Woof!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Dog</span> d;
+    d.name = <span class="string">"Buddy"</span>;
+    d.<span class="function">eat</span>();   <span class="comment">// Inherited from Animal</span>
+    d.<span class="function">bark</span>();  <span class="comment">// Defined in Dog</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Buddy is eating.
+Buddy says Woof!</code></pre>
+                </div>
+                <p>The <code>Dog</code> class inherits the <code>name</code> member and the <code>eat()</code> method from <code>Animal</code>, then adds its own <code>bark()</code> method.</p>
+
+                <!-- ===== Public, Protected, Private Inheritance ===== -->
+                <h2>Public, Protected, Private Inheritance</h2>
+                <p>The access specifier before the base class name controls how inherited members are accessible in the derived class:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">public</span>    <span class="type">Base</span> { };  <span class="comment">// Most common</span>
+<span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">protected</span> <span class="type">Base</span> { };
+<span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">private</span>   <span class="type">Base</span> { };  <span class="comment">// Default for class</span></code></pre>
+                </div>
+                <p>Here is the <strong>access table</strong> showing how base class members are seen inside the derived class:</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Base Member</th>
+                            <th><code>public</code> Inheritance</th>
+                            <th><code>protected</code> Inheritance</th>
+                            <th><code>private</code> Inheritance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>public</code></td>
+                            <td><code>public</code></td>
+                            <td><code>protected</code></td>
+                            <td><code>private</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>protected</code></td>
+                            <td><code>protected</code></td>
+                            <td><code>protected</code></td>
+                            <td><code>private</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>private</code></td>
+                            <td><em>Not accessible</em></td>
+                            <td><em>Not accessible</em></td>
+                            <td><em>Not accessible</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Public inheritance</strong> is the most widely used form because it preserves the IS-A relationship and keeps the base class&rsquo;s public interface intact.</p>
+
+                <!-- ===== Constructor and Destructor Order ===== -->
+                <h2>Constructor and Destructor Order in Inheritance</h2>
+                <p>When an object of a derived class is created or destroyed, C++ follows a specific order:</p>
+                <ul>
+                    <li><strong>Construction:</strong> Base class constructor runs <em>first</em>, then the derived class constructor.</li>
+                    <li><strong>Destruction:</strong> Derived class destructor runs <em>first</em>, then the base class destructor.</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">class</span> <span class="type">Base</span> {
+<span class="keyword">public</span>:
+    <span class="function">Base</span>()  { cout &lt;&lt; <span class="string">"Base constructor"</span>  &lt;&lt; endl; }
+    ~<span class="function">Base</span>() { cout &lt;&lt; <span class="string">"Base destructor"</span>  &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Derived</span> : <span class="keyword">public</span> <span class="type">Base</span> {
+<span class="keyword">public</span>:
+    <span class="function">Derived</span>()  { cout &lt;&lt; <span class="string">"Derived constructor"</span>  &lt;&lt; endl; }
+    ~<span class="function">Derived</span>() { cout &lt;&lt; <span class="string">"Derived destructor"</span>  &lt;&lt; endl; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Derived</span> d;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Base constructor
+Derived constructor
+Derived destructor
+Base destructor</code></pre>
+                </div>
+
+                <!-- ===== Calling Base Class Constructors ===== -->
+                <h2>Calling Base Class Constructors</h2>
+                <p>If the base class constructor requires arguments, you must call it explicitly using the <strong>member initialiser list</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">protected</span>:
+    <span class="type">string</span> name;
+    <span class="type">int</span> age;
+<span class="keyword">public</span>:
+    <span class="function">Animal</span>(<span class="type">string</span> n, <span class="type">int</span> a) : name(n), age(a) {
+        cout &lt;&lt; <span class="string">"Animal created: "</span> &lt;&lt; name &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+    <span class="type">string</span> breed;
+<span class="keyword">public</span>:
+    <span class="comment">// Call base constructor explicitly</span>
+    <span class="function">Dog</span>(<span class="type">string</span> n, <span class="type">int</span> a, <span class="type">string</span> b)
+        : <span class="function">Animal</span>(n, a), breed(b) {
+        cout &lt;&lt; <span class="string">"Dog created: "</span> &lt;&lt; breed &lt;&lt; endl;
+    }
+
+    <span class="keyword">void</span> <span class="function">info</span>() {
+        cout &lt;&lt; name &lt;&lt; <span class="string">", Age: "</span> &lt;&lt; age
+             &lt;&lt; <span class="string">", Breed: "</span> &lt;&lt; breed &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Dog</span> d(<span class="string">"Buddy"</span>, <span class="number">3</span>, <span class="string">"Labrador"</span>);
+    d.<span class="function">info</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Animal created: Buddy
+Dog created: Labrador
+Buddy, Age: 3, Breed: Labrador</code></pre>
+                </div>
+
+                <!-- ===== Overriding Member Functions ===== -->
+                <h2>Overriding Member Functions</h2>
+                <p>A derived class can <strong>override</strong> (redefine) a member function from the base class by declaring a function with the <strong>same name and signature</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() {
+        cout &lt;&lt; <span class="string">"Some generic animal sound"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">class</span> <span class="type">Cat</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">speak</span>() {  <span class="comment">// Overrides Animal::speak</span>
+        cout &lt;&lt; <span class="string">"Meow!"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Cat</span> c;
+    c.<span class="function">speak</span>();           <span class="comment">// Calls Cat::speak</span>
+    c.<span class="type">Animal</span>::<span class="function">speak</span>();  <span class="comment">// Explicitly calls Animal::speak</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Meow!
+Some generic animal sound</code></pre>
+                </div>
+                <p>You can still call the base class version using the <strong>scope resolution operator</strong> (<code>Base::function()</code>).</p>
+
+                <!-- ===== The protected Access Specifier ===== -->
+                <h2>The <code>protected</code> Access Specifier in Inheritance</h2>
+                <p>The <code>protected</code> access specifier is particularly useful in inheritance scenarios. Members declared <code>protected</code> are:</p>
+                <ul>
+                    <li><strong>Accessible</strong> inside the class itself and in derived classes.</li>
+                    <li><strong>Not accessible</strong> from outside code (like <code>private</code> to outsiders).</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Vehicle</span> {
+<span class="keyword">protected</span>:
+    <span class="type">int</span> speed;
+<span class="keyword">public</span>:
+    <span class="function">Vehicle</span>(<span class="type">int</span> s) : speed(s) {}
+};
+
+<span class="keyword">class</span> <span class="type">Car</span> : <span class="keyword">public</span> <span class="type">Vehicle</span> {
+<span class="keyword">public</span>:
+    <span class="function">Car</span>(<span class="type">int</span> s) : <span class="function">Vehicle</span>(s) {}
+    <span class="keyword">void</span> <span class="function">showSpeed</span>() {
+        cout &lt;&lt; <span class="string">"Speed: "</span> &lt;&lt; speed &lt;&lt; endl;  <span class="comment">// OK &mdash; protected is accessible</span>
+    }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Car</span> c(<span class="number">120</span>);
+    c.<span class="function">showSpeed</span>();
+    <span class="comment">// c.speed = 200;  // ERROR &mdash; protected not accessible outside</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Speed: 120</code></pre>
+                </div>
+
+                <!-- ===== Multiple Inheritance ===== -->
+                <h2>Multiple Inheritance</h2>
+                <p>C++ supports <strong>multiple inheritance</strong>, where a class can inherit from <strong>more than one base class</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Printable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">print</span>() { cout &lt;&lt; <span class="string">"Printing..."</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Saveable</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">save</span>() { cout &lt;&lt; <span class="string">"Saving..."</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Document</span> : <span class="keyword">public</span> <span class="type">Printable</span>, <span class="keyword">public</span> <span class="type">Saveable</span> {
+<span class="keyword">public</span>:
+    <span class="type">string</span> title;
+    <span class="function">Document</span>(<span class="type">string</span> t) : title(t) {}
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Document</span> doc(<span class="string">"Report"</span>);
+    doc.<span class="function">print</span>();  <span class="comment">// From Printable</span>
+    doc.<span class="function">save</span>();   <span class="comment">// From Saveable</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Printing...
+Saving...</code></pre>
+                </div>
+
+                <!-- ===== Diamond Problem and Virtual Inheritance ===== -->
+                <h2>Diamond Problem and Virtual Inheritance</h2>
+                <p>The <strong>diamond problem</strong> occurs when a class inherits from two classes that both inherit from the same base class, causing <strong>ambiguity and duplicate data</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Diamond Problem</span>
+<span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="type">string</span> name;
+    <span class="function">Animal</span>() { cout &lt;&lt; <span class="string">"Animal created"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Mammal</span> : <span class="keyword">public</span> <span class="type">Animal</span> { };
+<span class="keyword">class</span> <span class="type">Bird</span>   : <span class="keyword">public</span> <span class="type">Animal</span> { };
+
+<span class="comment">// Bat inherits TWO copies of Animal &mdash; ambiguous!</span>
+<span class="keyword">class</span> <span class="type">Bat</span> : <span class="keyword">public</span> <span class="type">Mammal</span>, <span class="keyword">public</span> <span class="type">Bird</span> { };</code></pre>
+                </div>
+                <p>The solution is <strong>virtual inheritance</strong>, which ensures only <strong>one copy</strong> of the base class exists:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="type">string</span> name;
+    <span class="function">Animal</span>() { cout &lt;&lt; <span class="string">"Animal created"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Mammal</span> : <span class="keyword">virtual public</span> <span class="type">Animal</span> { };
+<span class="keyword">class</span> <span class="type">Bird</span>   : <span class="keyword">virtual public</span> <span class="type">Animal</span> { };
+
+<span class="comment">// Only ONE copy of Animal &mdash; no ambiguity</span>
+<span class="keyword">class</span> <span class="type">Bat</span> : <span class="keyword">public</span> <span class="type">Mammal</span>, <span class="keyword">public</span> <span class="type">Bird</span> { };
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Bat</span> b;
+    b.name = <span class="string">"Batty"</span>;  <span class="comment">// No ambiguity now</span>
+    cout &lt;&lt; b.name &lt;&lt; endl;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Animal created
+Batty</code></pre>
+                </div>
+
+                <!-- ===== Multilevel Inheritance ===== -->
+                <h2>Multilevel Inheritance</h2>
+                <p>In <strong>multilevel inheritance</strong>, a class is derived from another derived class, forming a chain:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">LivingBeing</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">breathe</span>() { cout &lt;&lt; <span class="string">"Breathing..."</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Animal</span> : <span class="keyword">public</span> <span class="type">LivingBeing</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">eat</span>() { cout &lt;&lt; <span class="string">"Eating..."</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Dog</span> : <span class="keyword">public</span> <span class="type">Animal</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">bark</span>() { cout &lt;&lt; <span class="string">"Woof!"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Dog</span> d;
+    d.<span class="function">breathe</span>();  <span class="comment">// From LivingBeing</span>
+    d.<span class="function">eat</span>();      <span class="comment">// From Animal</span>
+    d.<span class="function">bark</span>();     <span class="comment">// From Dog</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Breathing...
+Eating...
+Woof!</code></pre>
+                </div>
+
+                <!-- ===== Hierarchical Inheritance ===== -->
+                <h2>Hierarchical Inheritance</h2>
+                <p>In <strong>hierarchical inheritance</strong>, multiple classes inherit from a single base class:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">draw</span>() { cout &lt;&lt; <span class="string">"Drawing shape"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Circle</span>    : <span class="keyword">public</span> <span class="type">Shape</span> { };
+<span class="keyword">class</span> <span class="type">Rectangle</span> : <span class="keyword">public</span> <span class="type">Shape</span> { };
+<span class="keyword">class</span> <span class="type">Triangle</span>  : <span class="keyword">public</span> <span class="type">Shape</span> { };
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Circle</span> c;
+    <span class="type">Rectangle</span> r;
+    <span class="type">Triangle</span> t;
+    c.<span class="function">draw</span>();  <span class="comment">// All inherit draw()</span>
+    r.<span class="function">draw</span>();
+    t.<span class="function">draw</span>();
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Inheritance vs Composition ===== -->
+                <h2>When to Use Inheritance vs Composition</h2>
+                <p>Not every relationship should use inheritance. Consider:</p>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Criteria</th>
+                            <th>Inheritance (IS-A)</th>
+                            <th>Composition (HAS-A)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Relationship</td>
+                            <td>&ldquo;A Dog <em>is a</em> Animal&rdquo;</td>
+                            <td>&ldquo;A Car <em>has a</em> Engine&rdquo;</td>
+                        </tr>
+                        <tr>
+                            <td>Coupling</td>
+                            <td>Tight &mdash; derived depends on base</td>
+                            <td>Loose &mdash; components are independent</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility</td>
+                            <td>Less flexible at runtime</td>
+                            <td>More flexible, parts can be swapped</td>
+                        </tr>
+                        <tr>
+                            <td>Code Reuse</td>
+                            <td>Inherits all public/protected members</td>
+                            <td>Delegates to contained objects</td>
+                        </tr>
+                        <tr>
+                            <td>Best For</td>
+                            <td>True type hierarchies</td>
+                            <td>Building complex objects from parts</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// Composition example (HAS-A)</span>
+<span class="keyword">class</span> <span class="type">Engine</span> {
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">start</span>() { cout &lt;&lt; <span class="string">"Engine started"</span> &lt;&lt; endl; }
+};
+
+<span class="keyword">class</span> <span class="type">Car</span> {
+    <span class="type">Engine</span> engine;  <span class="comment">// Car HAS-A Engine</span>
+<span class="keyword">public</span>:
+    <span class="keyword">void</span> <span class="function">start</span>() {
+        engine.<span class="function">start</span>();
+        cout &lt;&lt; <span class="string">"Car is ready"</span> &lt;&lt; endl;
+    }
+};</code></pre>
+                </div>
+                <p><strong>Rule of thumb:</strong> prefer <strong>composition</strong> over inheritance unless there is a clear IS-A relationship and you need polymorphism.</p>
+
+                <!-- ===== Complete Example: Shape Hierarchy ===== -->
+                <h2>Complete Example: Shape Hierarchy</h2>
+                <p>Here is a comprehensive example that combines inheritance concepts into a practical shape hierarchy:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;cmath&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Base class</span>
+<span class="keyword">class</span> <span class="type">Shape</span> {
+<span class="keyword">protected</span>:
+    <span class="type">string</span> colour;
+<span class="keyword">public</span>:
+    <span class="function">Shape</span>(<span class="type">string</span> c = <span class="string">"Red"</span>) : colour(c) {}
+
+    <span class="keyword">void</span> <span class="function">setColour</span>(<span class="type">string</span> c) { colour = c; }
+    <span class="type">string</span> <span class="function">getColour</span>() <span class="keyword">const</span> { <span class="keyword">return</span> colour; }
+
+    <span class="keyword">void</span> <span class="function">describe</span>() {
+        cout &lt;&lt; <span class="string">"I am a "</span> &lt;&lt; colour &lt;&lt; <span class="string">" shape."</span> &lt;&lt; endl;
+    }
+
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">area</span>() { <span class="keyword">return</span> <span class="number">0</span>; }
+    <span class="keyword">virtual</span> <span class="type">double</span> <span class="function">perimeter</span>() { <span class="keyword">return</span> <span class="number">0</span>; }
+
+    <span class="keyword">virtual</span> ~<span class="function">Shape</span>() {}
+};
+
+<span class="comment">// Derived: Circle</span>
+<span class="keyword">class</span> <span class="type">Circle</span> : <span class="keyword">public</span> <span class="type">Shape</span> {
+    <span class="type">double</span> radius;
+<span class="keyword">public</span>:
+    <span class="function">Circle</span>(<span class="type">double</span> r, <span class="type">string</span> c = <span class="string">"Blue"</span>)
+        : <span class="function">Shape</span>(c), radius(r) {}
+
+    <span class="type">double</span> <span class="function">area</span>() <span class="keyword">override</span> {
+        <span class="keyword">return</span> M_PI * radius * radius;
+    }
+    <span class="type">double</span> <span class="function">perimeter</span>() <span class="keyword">override</span> {
+        <span class="keyword">return</span> <span class="number">2</span> * M_PI * radius;
+    }
+};
+
+<span class="comment">// Derived: Rectangle</span>
+<span class="keyword">class</span> <span class="type">Rectangle</span> : <span class="keyword">public</span> <span class="type">Shape</span> {
+<span class="keyword">protected</span>:
+    <span class="type">double</span> width, height;
+<span class="keyword">public</span>:
+    <span class="function">Rectangle</span>(<span class="type">double</span> w, <span class="type">double</span> h, <span class="type">string</span> c = <span class="string">"Green"</span>)
+        : <span class="function">Shape</span>(c), width(w), height(h) {}
+
+    <span class="type">double</span> <span class="function">area</span>() <span class="keyword">override</span> {
+        <span class="keyword">return</span> width * height;
+    }
+    <span class="type">double</span> <span class="function">perimeter</span>() <span class="keyword">override</span> {
+        <span class="keyword">return</span> <span class="number">2</span> * (width + height);
+    }
+};
+
+<span class="comment">// Multilevel: Square inherits Rectangle</span>
+<span class="keyword">class</span> <span class="type">Square</span> : <span class="keyword">public</span> <span class="type">Rectangle</span> {
+<span class="keyword">public</span>:
+    <span class="function">Square</span>(<span class="type">double</span> side, <span class="type">string</span> c = <span class="string">"Yellow"</span>)
+        : <span class="function">Rectangle</span>(side, side, c) {}
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="type">Circle</span> c(<span class="number">5</span>);
+    <span class="type">Rectangle</span> r(<span class="number">4</span>, <span class="number">6</span>);
+    <span class="type">Square</span> s(<span class="number">3</span>);
+
+    cout &lt;&lt; <span class="string">"Circle    &mdash; Area: "</span> &lt;&lt; c.<span class="function">area</span>()
+         &lt;&lt; <span class="string">", Perimeter: "</span> &lt;&lt; c.<span class="function">perimeter</span>() &lt;&lt; endl;
+
+    cout &lt;&lt; <span class="string">"Rectangle &mdash; Area: "</span> &lt;&lt; r.<span class="function">area</span>()
+         &lt;&lt; <span class="string">", Perimeter: "</span> &lt;&lt; r.<span class="function">perimeter</span>() &lt;&lt; endl;
+
+    cout &lt;&lt; <span class="string">"Square    &mdash; Area: "</span> &lt;&lt; s.<span class="function">area</span>()
+         &lt;&lt; <span class="string">", Perimeter: "</span> &lt;&lt; s.<span class="function">perimeter</span>() &lt;&lt; endl;
+
+    <span class="comment">// Polymorphic usage</span>
+    <span class="type">Shape</span>* shapes[] = {&amp;c, &amp;r, &amp;s};
+    <span class="keyword">for</span> (<span class="type">Shape</span>* sh : shapes) {
+        sh-&gt;<span class="function">describe</span>();
+        cout &lt;&lt; <span class="string">"  Area: "</span> &lt;&lt; sh-&gt;<span class="function">area</span>() &lt;&lt; endl;
+    }
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p><strong>Output:</strong></p>
+                <div class="code-block">
+                    <pre><code>Circle    &mdash; Area: 78.5398, Perimeter: 31.4159
+Rectangle &mdash; Area: 24, Perimeter: 20
+Square    &mdash; Area: 9, Perimeter: 12
+I am a Blue shape.
+  Area: 78.5398
+I am a Green shape.
+  Area: 24
+I am a Yellow shape.
+  Area: 9</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Inheritance</strong> lets a derived class reuse and extend the functionality of a base class.</li>
+                    <li>Use <code>public</code> inheritance for IS-A relationships &mdash; it is the most common form.</li>
+                    <li><code>protected</code> members are accessible in derived classes but hidden from outside code.</li>
+                    <li>Constructors execute <strong>base-first</strong>; destructors execute <strong>derived-first</strong>.</li>
+                    <li>Pass arguments to the base constructor via the <strong>member initialiser list</strong>.</li>
+                    <li>Override base class functions by declaring a function with the same signature in the derived class.</li>
+                    <li><strong>Multiple inheritance</strong> is supported but can cause the <strong>diamond problem</strong> &mdash; solve it with <code>virtual</code> inheritance.</li>
+                    <li><strong>Multilevel inheritance</strong> forms a chain; <strong>hierarchical inheritance</strong> creates a tree.</li>
+                    <li>Prefer <strong>composition over inheritance</strong> unless a genuine IS-A relationship exists.</li>
+                    <li>Inheritance is the foundation for <strong>polymorphism</strong>, the topic of the next lesson.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/X8nYM8wdNRE" title="C++ Inheritance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is inheritance in C++?","o":["A way to allocate memory dynamically","A mechanism where a class acquires properties and behaviours of another class","A type of loop structure","A file-handling technique"],"a":1},
+                {"q":"Which relationship does inheritance model?","o":["HAS-A","IS-A","USES-A","PART-OF"],"a":1},
+                {"q":"What is the class that is inherited from called?","o":["Derived class","Child class","Base class","Sub class"],"a":2},
+                {"q":"What is the class that inherits called?","o":["Base class","Parent class","Super class","Derived class"],"a":3},
+                {"q":"Which symbol is used to denote inheritance in C++?","o":["An arrow (->)","A colon (:)","A dot (.)","A double colon (::)"],"a":1},
+                {"q":"What is the most common type of inheritance in C++?","o":["private inheritance","protected inheritance","public inheritance","virtual inheritance"],"a":2},
+                {"q":"In public inheritance, how are base class public members seen in the derived class?","o":["private","protected","public","Not accessible"],"a":2},
+                {"q":"In public inheritance, how are base class protected members seen in the derived class?","o":["public","protected","private","Not accessible"],"a":1},
+                {"q":"In public inheritance, how are base class private members seen in the derived class?","o":["public","protected","private","Not accessible"],"a":3},
+                {"q":"In private inheritance, how are base class public members seen in the derived class?","o":["public","protected","private","Not accessible"],"a":2},
+                {"q":"What is the default inheritance mode for a <code>class</code>?","o":["public","protected","private","virtual"],"a":2},
+                {"q":"What is the default inheritance mode for a <code>struct</code>?","o":["private","protected","public","virtual"],"a":2},
+                {"q":"In which order are constructors called during inheritance?","o":["Derived first, then base","Base first, then derived","Only derived","Only base"],"a":1},
+                {"q":"In which order are destructors called during inheritance?","o":["Base first, then derived","Derived first, then base","Only derived","Only base"],"a":1},
+                {"q":"How do you call a parameterised base class constructor from a derived class?","o":["Using the <code>super</code> keyword","Using the member initialiser list","Using a global function","Calling it inside the derived body"],"a":1},
+                {"q":"What does the following code do: <code>Dog(string n, int a) : Animal(n, a) {}</code>?","o":["Calls Animal&rsquo;s default constructor","Calls Animal&rsquo;s parameterised constructor with n and a","Creates a new Animal object","Deletes the Animal"],"a":1},
+                {"q":"What is function overriding?","o":["Defining multiple functions with the same name but different parameters","Redefining a base class function in the derived class with the same signature","Creating a template function","Deleting a function"],"a":1},
+                {"q":"How can you call the base class version of an overridden function?","o":["Using the <code>base</code> keyword","Using the scope resolution operator: <code>Base::function()</code>","It cannot be called","Using <code>super::function()</code>"],"a":1},
+                {"q":"What does the <code>protected</code> access specifier do?","o":["Makes members accessible everywhere","Makes members accessible in the class and its derived classes only","Makes members accessible only in the class","Makes members static"],"a":1},
+                {"q":"Can outside code access a <code>protected</code> member directly?","o":["Yes, always","Only with a friend declaration or inside the class hierarchy","Yes, but only in the same file","Only with a pointer"],"a":1},
+                {"q":"What is multiple inheritance?","o":["Inheriting from one class only","A class inheriting from two or more base classes","Creating multiple objects","Nested class definitions"],"a":1},
+                {"q":"What is the diamond problem?","o":["A compilation error in templates","Ambiguity arising when a class inherits from two classes that share a common base","A memory leak pattern","A design pattern"],"a":1},
+                {"q":"How do you solve the diamond problem?","o":["By using private inheritance","By using <code>virtual</code> inheritance","By avoiding all inheritance","By using templates"],"a":1},
+                {"q":"What does <code>virtual</code> inheritance ensure?","o":["Functions are virtual","Only one copy of the common base class exists in the hierarchy","The base class cannot be instantiated","Constructors are skipped"],"a":1},
+                {"q":"What is the syntax for virtual inheritance?","o":["<code>class D : virtual Base {}</code>","<code>class D : virtual public Base {}</code>","<code>class D : public virtual_cast Base {}</code>","<code>class D : Base virtual {}</code>"],"a":1},
+                {"q":"What is multilevel inheritance?","o":["A class inherits from two base classes","A chain where class C inherits from B which inherits from A","Multiple objects of the same class","Redefining multiple functions"],"a":1},
+                {"q":"What is hierarchical inheritance?","o":["Multiple classes inherit from a single base class","A chain of classes inheriting from each other","A class inheriting from multiple bases","Inheritance within namespaces"],"a":0},
+                {"q":"In multilevel inheritance <code>A &rarr; B &rarr; C</code>, can <code>C</code> access <code>A</code>&rsquo;s public members?","o":["No, only B can access them","Yes, through the chain of public inheritance","Only if A is a friend of C","Only with casting"],"a":1},
+                {"q":"Which keyword is used with the <code>override</code> specifier in C++11?","o":["It is placed after the function signature: <code>void f() override;</code>","It replaces the return type","It is placed before the function name","It is placed in the base class"],"a":0},
+                {"q":"What does the <code>override</code> keyword do?","o":["Creates a new virtual function","Tells the compiler the function is intended to override a base virtual function","Makes the function static","Prevents the function from being called"],"a":1},
+                {"q":"What happens if a derived class does not override a non-virtual base function?","o":["Compile error","The base version is used","Runtime error","The program crashes"],"a":1},
+                {"q":"Can a constructor be inherited in C++?","o":["Yes, automatically","No, constructors are not inherited (but can be invoked via <code>using</code> in C++11)","Only copy constructors","Only default constructors"],"a":1},
+                {"q":"What does <code>using Base::Base;</code> do in C++11?","o":["Deletes all base constructors","Inherits the base class constructors into the derived class","Creates a friend relationship","Makes base members public"],"a":1},
+                {"q":"What is a virtual destructor?","o":["A destructor that cannot be called","A destructor declared <code>virtual</code> to ensure proper cleanup through base pointers","A destructor in a virtual base class","A destructor with parameters"],"a":1},
+                {"q":"Why should base classes with virtual functions have virtual destructors?","o":["To speed up destruction","To avoid undefined behaviour when deleting derived objects through base pointers","Virtual destructors are optional","To prevent inheritance"],"a":1},
+                {"q":"Which of the following is an IS-A relationship?","o":["A Car has an Engine","A Dog is an Animal","A Library contains Books","A Player uses a Controller"],"a":1},
+                {"q":"Which of the following is a HAS-A relationship?","o":["A Circle is a Shape","A Car has an Engine","A Cat is an Animal","A Square is a Rectangle"],"a":1},
+                {"q":"When should you prefer composition over inheritance?","o":["When there is a clear IS-A relationship","When you need runtime polymorphism","When the relationship is HAS-A and you want loose coupling","When you want to reuse destructors"],"a":2},
+                {"q":"Can a derived class add new member variables?","o":["No","Yes","Only static variables","Only if the base has none"],"a":1},
+                {"q":"Can a derived class add new member functions?","o":["No","Yes","Only virtual functions","Only static functions"],"a":1},
+                {"q":"What happens if you derive from a class with a deleted copy constructor?","o":["The derived class also cannot be copied (unless it defines its own)","The derived class can be copied freely","A runtime error occurs","The program ignores the deletion"],"a":0},
+                {"q":"What is the output of constructing a Derived object if Base prints &ldquo;B&rdquo; and Derived prints &ldquo;D&rdquo;?","o":["DB","BD","B only","D only"],"a":1},
+                {"q":"What is the output of destroying a Derived object if Base prints &ldquo;~B&rdquo; and Derived prints &ldquo;~D&rdquo;?","o":["~B~D","~D~B","~D only","~B only"],"a":1},
+                {"q":"In the access table, what happens to a protected base member under private inheritance?","o":["It becomes public","It becomes protected","It becomes private","It becomes inaccessible"],"a":2},
+                {"q":"Which inheritance type preserves the IS-A relationship for outside code?","o":["private","protected","public","All of them"],"a":2},
+                {"q":"Can a privately inherited base class be accessed through a derived class pointer by outside code?","o":["Yes","No, public members of the base become private in the derived class","Only with casting","Only if friend is used"],"a":1},
+                {"q":"What does <code>class Square : public Rectangle</code> demonstrate?","o":["Multiple inheritance","Multilevel inheritance","Hierarchical inheritance","Hybrid inheritance"],"a":1},
+                {"q":"What does <code>class Circle : public Shape; class Rectangle : public Shape;</code> demonstrate?","o":["Multiple inheritance","Multilevel inheritance","Hierarchical inheritance","Virtual inheritance"],"a":2},
+                {"q":"In the Shape hierarchy example, what provides the common interface for area()?","o":["The derived classes","The base Shape class with a virtual area() function","A global function","A template"],"a":1},
+                {"q":"What is the benefit of using <code>virtual</code> functions in a base class for inheritance?","o":["They prevent inheritance","They enable runtime polymorphism so derived versions are called through base pointers","They make functions inline","They eliminate the need for constructors"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="encapsulation.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Encapsulation</span>
+                </a>
+                <a href="polymorphism.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Polymorphism</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

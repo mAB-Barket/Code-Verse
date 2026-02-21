@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays in C++ - CodeVerse</title>
+    <title>C++ Arrays - CodeVerse</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 </head>
 <body data-page="cpp-arrays">
+    <div class="scroll-progress"></div>
     <header class="site-header">
         <div class="header-inner">
             <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
@@ -31,110 +32,703 @@
             <div class="sidebar-title">C++ Lessons</div>
             <nav class="sidebar-nav">
                 <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
-                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
-                <a href="comments.html"><span class="lesson-number">3</span> Comments</a>
-                <a href="arrays.html" class="active"><span class="lesson-number">4</span> Arrays</a>
-                <a href="functions.html"><span class="lesson-number">5</span> Functions</a>
-                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
-                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html" class="active"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
             </nav>
             <div class="sidebar-progress">
-                <span class="progress-text">Progress: 4 / 7</span>
-                <div class="progress-bar"><div class="progress-fill" data-progress="57" style="width:57%"></div></div>
+                <span class="progress-text">Progress: 22 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="40" style="width:40%"></div></div>
             </div>
         </aside>
 
-        <div class="tutorial-content">
+        <main class="tutorial-content">
             <div class="tutorial-header">
                 <div class="breadcrumb">
                     <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Arrays
                 </div>
-                <h1>4. Arrays in C++</h1>
+                <h1>22. Arrays</h1>
                 <div class="tutorial-meta">
-                    <span>&#128218; Lesson 4 of 7</span>
-                    <span>&#9201; 12 min read</span>
+                    <span>&#128218; Lesson 22 of 55</span>
+                    <span>&#9201; 15 min read</span>
                     <span>&#127793; Beginner</span>
                 </div>
             </div>
 
             <div class="content-body">
-                <p>Arrays are data structures that store collections of elements of the same data type in contiguous memory locations. They provide efficient access and storage for multiple values when the size is known in advance.</p>
 
-                <div class="code-example">
-                    <pre><code>// Array declaration and initialization
-int numbers[5] = {1, 2, 3, 4, 5};
-char vowels[5] = {'a', 'e', 'i', 'o', 'u'};
-
-// Two-dimensional array
-int matrix[3][4] = {
-    {1, 2, 3, 4},
-    {5, 6, 7, 8},
-    {9, 10, 11, 12}
-};</code></pre>
-                </div>
-
-                <p>Key features of arrays:</p>
+                <!-- ===== What Are Arrays? ===== -->
+                <h2>What Are Arrays?</h2>
+                <p>An <strong>array</strong> is a <strong>fixed-size</strong>, contiguous collection of elements that all share the <strong>same data type</strong>. Instead of declaring dozens of individual variables, you can store related values in a single array and access each one through its numeric <strong>index</strong>.</p>
+                <p>In this lesson you will learn:</p>
                 <ul>
-                    <li>Fixed size defined at declaration time</li>
-                    <li>Zero-based indexing for element access</li>
-                    <li>Support for multiple dimensions</li>
-                    <li>Efficient memory usage and fast access</li>
-                    <li>Commonly used with loops for data processing</li>
+                    <li>How to declare and initialize arrays</li>
+                    <li>Accessing and modifying elements using zero-based indices</li>
+                    <li>Determining array size with the <code>sizeof</code> operator</li>
+                    <li>Looping through arrays with classic <code>for</code> and range-based <code>for</code></li>
+                    <li>Passing arrays to functions</li>
+                    <li>Common operations &mdash; finding minimum, maximum, sum, and average</li>
+                    <li>Array bounds and undefined behavior</li>
+                    <li>The modern <code>std::array</code> alternative from C++11</li>
                 </ul>
+
+                <p>Think of an array as a row of numbered mailboxes in a post office. Every mailbox is the same size (same type), they sit side by side in memory (contiguous), and you look up a specific mailbox by its number (index).</p>
+
+                <!-- ===== Declaring and Initializing Arrays ===== -->
+                <h2>Declaring and Initializing Arrays</h2>
+                <p>The general syntax for declaring a C-style array is:</p>
+<pre><code>type arrayName[size];</code></pre>
+                <p>Here <code>type</code> is the data type of each element, <code>arrayName</code> is the identifier, and <code>size</code> is a <strong>compile-time constant</strong> specifying how many elements the array can hold.</p>
+
+                <h3>Declaration Without Initialization</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int scores[5];  // declares an array of 5 ints (values are indeterminate)
+    return 0;
+}</code></pre>
+                <p>When an array is declared without an initializer inside a function, its elements contain <strong>indeterminate</strong> (garbage) values. Always initialize your arrays before reading from them.</p>
+
+                <h3>Initialization with an Initializer List</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Full initialization
+    int scores[5] = {90, 85, 78, 92, 88};
+
+    // Partial initialization &mdash; remaining elements are zero
+    int data[5] = {10, 20};  // data = {10, 20, 0, 0, 0}
+
+    // Zero-initialize all elements
+    int zeros[5] = {};        // zeros = {0, 0, 0, 0, 0}
+
+    // Let the compiler deduce the size from the initializer
+    int nums[] = {1, 2, 3, 4};  // size is automatically 4
+
+    return 0;
+}</code></pre>
+
+                <h3>Uniform Initialization (C++11)</h3>
+<pre><code>int values[3]{10, 20, 30};       // no = sign needed
+double temps[4]{36.5, 37.0, 36.8, 37.2};</code></pre>
+
+                <!-- ===== Accessing Elements with Index ===== -->
+                <h2>Accessing Elements with Index</h2>
+                <p>Array indices in C++ are <strong>zero-based</strong> &mdash; the first element is at index <code>0</code>, the second at index <code>1</code>, and the last element of an array of size <em>n</em> is at index <em>n&minus;1</em>.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int scores[5] = {90, 85, 78, 92, 88};
+
+    cout &lt;&lt; "First element : " &lt;&lt; scores[0] &lt;&lt; endl;  // 90
+    cout &lt;&lt; "Third element : " &lt;&lt; scores[2] &lt;&lt; endl;  // 78
+    cout &lt;&lt; "Last element  : " &lt;&lt; scores[4] &lt;&lt; endl;  // 88
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>First element : 90
+Third element : 78
+Last element  : 88</code></pre>
+
+                <!-- ===== Modifying Array Elements ===== -->
+                <h2>Modifying Array Elements</h2>
+                <p>You can change any element by assigning a new value through its index:</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int scores[5] = {90, 85, 78, 92, 88};
+
+    scores[1] = 95;   // change second element from 85 to 95
+    scores[4] = 100;  // change last element from 88 to 100
+
+    // Print all elements
+    for (int i = 0; i &lt; 5; i++) {
+        cout &lt;&lt; "scores[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; scores[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>scores[0] = 90
+scores[1] = 95
+scores[2] = 78
+scores[3] = 92
+scores[4] = 100</code></pre>
+
+                <!-- ===== Array Size and sizeof Operator ===== -->
+                <h2>Array Size and the <code>sizeof</code> Operator</h2>
+                <p>The <code>sizeof</code> operator returns the total number of <strong>bytes</strong> occupied by the array. To get the number of elements, divide by the size of one element:</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+
+    int totalBytes   = sizeof(nums);        // e.g. 20 (5 &times; 4 bytes)
+    int elementBytes = sizeof(nums[0]);     // e.g. 4
+    int length       = sizeof(nums) / sizeof(nums[0]);  // 5
+
+    cout &lt;&lt; "Total bytes   : " &lt;&lt; totalBytes   &lt;&lt; endl;
+    cout &lt;&lt; "Element bytes : " &lt;&lt; elementBytes &lt;&lt; endl;
+    cout &lt;&lt; "Array length  : " &lt;&lt; length       &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                <p><strong>Output (typical 64-bit system):</strong></p>
+<pre><code>Total bytes   : 20
+Element bytes : 4
+Array length  : 5</code></pre>
+
+                <p>Alternatively, since C++17 you can use <code>std::size()</code> from <code>&lt;iterator&gt;</code>:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+using namespace std;
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+    cout &lt;&lt; "Length: " &lt;&lt; size(nums) &lt;&lt; endl;  // 5
+    return 0;
+}</code></pre>
+
+                <!-- ===== Looping Through Arrays ===== -->
+                <h2>Looping Through Arrays</h2>
+
+                <h3>Classic <code>for</code> Loop</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string fruits[] = {"Apple", "Banana", "Cherry", "Date", "Elderberry"};
+    int len = sizeof(fruits) / sizeof(fruits[0]);
+
+    for (int i = 0; i &lt; len; i++) {
+        cout &lt;&lt; i &lt;&lt; ": " &lt;&lt; fruits[i] &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>0: Apple
+1: Banana
+2: Cherry
+3: Date
+4: Elderberry</code></pre>
+
+                <h3>Range-Based <code>for</code> Loop (C++11)</h3>
+                <p>The range-based <code>for</code> loop iterates over every element without needing an index variable:</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int scores[] = {90, 85, 78, 92, 88};
+
+    for (int s : scores) {
+        cout &lt;&lt; s &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}
+// Output: 90 85 78 92 88</code></pre>
+
+                <p>Use a <strong>reference</strong> (<code>&amp;</code>) if you need to modify elements in place:</p>
+<pre><code>for (int&amp; s : scores) {
+    s += 5;  // adds 5 to every score
+}</code></pre>
+
+                <p>Use <code>const auto&amp;</code> for read-only access without copying:</p>
+<pre><code>for (const auto&amp; s : scores) {
+    cout &lt;&lt; s &lt;&lt; " ";
+}</code></pre>
+
+                <!-- ===== Arrays and Functions ===== -->
+                <h2>Arrays and Functions</h2>
+                <p>When you pass a C-style array to a function, it <strong>decays</strong> into a pointer to its first element. This means the function does <em>not</em> know the array&rsquo;s size &mdash; you must pass the size separately.</p>
+
+                <h3>Passing an Array to a Function</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+    int len = sizeof(nums) / sizeof(nums[0]);
+
+    printArray(nums, len);  // Output: 10 20 30 40 50
+
+    return 0;
+}</code></pre>
+                <p>Because the array decays to a pointer, any changes the function makes to the elements <strong>affect the original array</strong> (it is not a copy).</p>
+
+                <h3>Preventing Modification with <code>const</code></h3>
+<pre><code>void printArray(const int arr[], int size) {
+    for (int i = 0; i &lt; size; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    // arr[0] = 999;  // ERROR &mdash; cannot modify a const array
+}</code></pre>
+
+                <h3>Returning an Array from a Function</h3>
+                <p>You <strong>cannot</strong> return a C-style array directly from a function. Common alternatives include:</p>
+                <ul>
+                    <li>Pass the destination array as a parameter and fill it inside the function.</li>
+                    <li>Use <code>std::array</code> or <code>std::vector</code>, which <em>can</em> be returned.</li>
+                    <li>Allocate a dynamic array with <code>new[]</code> and return the pointer (but then you must remember to <code>delete[]</code>).</li>
+                </ul>
+
+                <!-- ===== Common Array Operations ===== -->
+                <h2>Common Array Operations</h2>
+
+                <h3>Finding the Minimum and Maximum</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nums[] = {34, 12, 56, 7, 89, 23};
+    int len = sizeof(nums) / sizeof(nums[0]);
+
+    int minVal = nums[0];
+    int maxVal = nums[0];
+
+    for (int i = 1; i &lt; len; i++) {
+        if (nums[i] &lt; minVal) minVal = nums[i];
+        if (nums[i] &gt; maxVal) maxVal = nums[i];
+    }
+
+    cout &lt;&lt; "Min: " &lt;&lt; minVal &lt;&lt; endl;  // 7
+    cout &lt;&lt; "Max: " &lt;&lt; maxVal &lt;&lt; endl;  // 89
+
+    return 0;
+}</code></pre>
+
+                <h3>Calculating Sum and Average</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double grades[] = {88.5, 92.0, 76.5, 95.0, 81.0};
+    int len = sizeof(grades) / sizeof(grades[0]);
+
+    double sum = 0;
+    for (int i = 0; i &lt; len; i++) {
+        sum += grades[i];
+    }
+
+    double average = sum / len;
+
+    cout &lt;&lt; "Sum:     " &lt;&lt; sum     &lt;&lt; endl;  // 433
+    cout &lt;&lt; "Average: " &lt;&lt; average &lt;&lt; endl;  // 86.6
+
+    return 0;
+}</code></pre>
+
+                <h3>Reversing an Array</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int len = sizeof(arr) / sizeof(arr[0]);
+
+    // Swap elements from both ends toward the center
+    for (int i = 0; i &lt; len / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[len - 1 - i];
+        arr[len - 1 - i] = temp;
+    }
+
+    for (int x : arr) cout &lt;&lt; x &lt;&lt; " ";
+    cout &lt;&lt; endl;
+    // Output: 5 4 3 2 1
+
+    return 0;
+}</code></pre>
+
+                <h3>Linear Search</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int linearSearch(const int arr[], int size, int target) {
+    for (int i = 0; i &lt; size; i++) {
+        if (arr[i] == target) return i;  // found at index i
+    }
+    return -1;  // not found
+}
+
+int main() {
+    int data[] = {5, 12, 8, 3, 17, 9};
+    int len = sizeof(data) / sizeof(data[0]);
+
+    int idx = linearSearch(data, len, 17);
+    if (idx != -1)
+        cout &lt;&lt; "Found 17 at index " &lt;&lt; idx &lt;&lt; endl;
+    else
+        cout &lt;&lt; "17 not found" &lt;&lt; endl;
+
+    return 0;
+}
+// Output: Found 17 at index 4</code></pre>
+
+                <!-- ===== Array Bounds and Undefined Behavior ===== -->
+                <h2>Array Bounds and Undefined Behavior</h2>
+                <p>C++ does <strong>not</strong> perform automatic bounds checking on C-style arrays. Accessing an index that is outside the valid range (<code>0</code> to <code>size&minus;1</code>) results in <strong>undefined behavior</strong> &mdash; your program might crash, produce garbage values, or silently corrupt memory.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[3] = {10, 20, 30};
+
+    // DANGEROUS &mdash; undefined behavior!
+    // cout &lt;&lt; arr[5]  &lt;&lt; endl;   // reading out of bounds
+    // arr[-1] = 99;               // writing out of bounds
+
+    // SAFE &mdash; always validate indices
+    int index = 2;
+    if (index &gt;= 0 &amp;&amp; index &lt; 3) {
+        cout &lt;&lt; arr[index] &lt;&lt; endl;  // 30
+    }
+
+    return 0;
+}</code></pre>
+                <p><strong>Best practice:</strong> Always ensure your loop counters and indices stay within the valid range. Use <code>std::array</code> with <code>.at()</code> if you want runtime bounds checking.</p>
+
+                <!-- ===== std::array (C++11 Modern Alternative) ===== -->
+                <h2><code>std::array</code> &mdash; The Modern Alternative (C++11)</h2>
+                <p>The <code>&lt;array&gt;</code> header provides <code>std::array</code>, a fixed-size container that wraps a C-style array while adding safety and convenience features:</p>
+                <ul>
+                    <li>Knows its own size (<code>.size()</code>)</li>
+                    <li>Supports bounds-checked access via <code>.at()</code></li>
+                    <li>Works seamlessly with STL algorithms and range-based <code>for</code></li>
+                    <li>Can be returned from functions and compared with <code>==</code></li>
+                    <li>Does <strong>not</strong> decay to a pointer when passed to functions</li>
+                </ul>
+
+                <h3>Declaring and Using <code>std::array</code></h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;array&gt;
+using namespace std;
+
+int main() {
+    // Declare and initialize
+    array&lt;int, 5&gt; scores = {90, 85, 78, 92, 88};
+
+    // Size is always known
+    cout &lt;&lt; "Size: " &lt;&lt; scores.size() &lt;&lt; endl;  // 5
+
+    // Access elements
+    cout &lt;&lt; "First: " &lt;&lt; scores[0]    &lt;&lt; endl;  // 90
+    cout &lt;&lt; "Last:  " &lt;&lt; scores.back() &lt;&lt; endl;  // 88
+
+    // Bounds-checked access
+    try {
+        cout &lt;&lt; scores.at(10) &lt;&lt; endl;  // throws std::out_of_range
+    } catch (const out_of_range&amp; e) {
+        cout &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; endl;
+    }
+
+    // Range-based for loop
+    for (int s : scores) {
+        cout &lt;&lt; s &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+                <h3>Passing <code>std::array</code> to Functions</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;array&gt;
+using namespace std;
+
+void printScores(const array&lt;int, 5&gt;&amp; arr) {
+    for (int s : arr) {
+        cout &lt;&lt; s &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+array&lt;int, 5&gt; doubleScores(const array&lt;int, 5&gt;&amp; arr) {
+    array&lt;int, 5&gt; result;
+    for (size_t i = 0; i &lt; arr.size(); i++) {
+        result[i] = arr[i] * 2;
+    }
+    return result;  // std::array CAN be returned!
+}
+
+int main() {
+    array&lt;int, 5&gt; scores = {10, 20, 30, 40, 50};
+    printScores(scores);
+
+    auto doubled = doubleScores(scores);
+    printScores(doubled);  // 20 40 60 80 100
+
+    return 0;
+}</code></pre>
+
+                <h3>Useful <code>std::array</code> Member Functions</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;array&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    array&lt;int, 5&gt; a = {50, 10, 40, 20, 30};
+
+    // front() and back()
+    cout &lt;&lt; "Front: " &lt;&lt; a.front() &lt;&lt; endl;  // 50
+    cout &lt;&lt; "Back:  " &lt;&lt; a.back()  &lt;&lt; endl;  // 30
+
+    // empty() and size()
+    cout &lt;&lt; "Empty? " &lt;&lt; a.empty() &lt;&lt; endl;  // 0 (false)
+    cout &lt;&lt; "Size:  " &lt;&lt; a.size()  &lt;&lt; endl;  // 5
+
+    // fill() &mdash; set all elements to a value
+    a.fill(0);
+    // a = {0, 0, 0, 0, 0}
+
+    // sort with STL algorithm
+    array&lt;int, 5&gt; b = {50, 10, 40, 20, 30};
+    sort(b.begin(), b.end());
+    for (int x : b) cout &lt;&lt; x &lt;&lt; " ";  // 10 20 30 40 50
+    cout &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+                <!-- ===== Comparison: C-style array vs std::array ===== -->
+                <h2>Comparison: C-Style Array vs <code>std::array</code></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C-Style Array</th>
+                            <th><code>std::array</code></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Knows its size</td>
+                            <td>No (decays to pointer)</td>
+                            <td>Yes (<code>.size()</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Bounds checking</td>
+                            <td>No</td>
+                            <td>Yes (<code>.at()</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Returnable from function</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Assignable / Copyable</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Works with STL algorithms</td>
+                            <td>Via pointers</td>
+                            <td>Via <code>.begin()</code> / <code>.end()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Comparison (<code>==</code>, <code>&lt;</code>)</td>
+                            <td>No (compares addresses)</td>
+                            <td>Yes (element-wise)</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Zero overhead</td>
+                            <td>Zero overhead (thin wrapper)</td>
+                        </tr>
+                        <tr>
+                            <td>Header needed</td>
+                            <td>None</td>
+                            <td><code>&lt;array&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Recommendation:</strong> Prefer <code>std::array</code> over C-style arrays in modern C++ code. It provides the same performance with added safety and convenience.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>An <strong>array</strong> is a fixed-size, contiguous collection of elements of the same type.</li>
+                    <li>Declare arrays with <code>type name[size];</code> and initialize with curly braces: <code>{val1, val2, ...}</code>.</li>
+                    <li>Array indices are <strong>zero-based</strong> &mdash; valid indices run from <code>0</code> to <code>size &minus; 1</code>.</li>
+                    <li>Use <code>sizeof(arr) / sizeof(arr[0])</code> to compute the number of elements in a C-style array.</li>
+                    <li>Use a <strong>classic for loop</strong> when you need the index, or a <strong>range-based for loop</strong> (C++11) for cleaner iteration.</li>
+                    <li>Arrays <strong>decay to pointers</strong> when passed to functions &mdash; always pass the size as a separate argument.</li>
+                    <li>Accessing out-of-bounds indices is <strong>undefined behavior</strong> &mdash; C++ does not check automatically.</li>
+                    <li><code>std::array</code> (C++11) is a modern, zero-overhead wrapper that knows its size, supports bounds checking via <code>.at()</code>, and works seamlessly with STL algorithms.</li>
+                    <li>Prefer <code>std::array</code> over C-style arrays for new code &mdash; or use <code>std::vector</code> when you need a <strong>dynamic</strong> (resizable) array.</li>
+                    <li>Common operations like finding min/max, sum, average, search, and reversal are fundamental patterns for working with arrays.</li>
+                </ul>
+
             </div>
 
+            <!-- ===== Video ===== -->
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ePJxpxsnkGw?si=c0zUoNWkxrdqt2t5"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
-                </iframe>
+                <h2>&#127909; Watch: C++ Arrays</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/PyTK_g1l8Z8" title="C++ Arrays" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
 
-            <section class="quiz-section">
-                <h2>Test Your Knowledge</h2>
-                <div class="quiz-question">
-                    <h3>1. How do you access the third element of an array in C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">array[2]</div>
-                        <div class="quiz-option">array[3]</div>
-                        <div class="quiz-option">array(2)</div>
-                        <div class="quiz-option">array.3</div>
-                    </div>
-                </div>
+            <!-- ===== Quiz Section ===== -->
+            <div class="quiz-btn-wrapper">
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
 
-                <div class="quiz-question">
-                    <h3>2. Which statement about C++ arrays is true?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">Arrays have a fixed size that cannot be changed after declaration</div>
-                        <div class="quiz-option">Arrays can store elements of different data types</div>
-                        <div class="quiz-option">Array indices start from 1</div>
-                        <div class="quiz-option">Arrays automatically resize when full</div>
-                    </div>
-                </div>
+            </div>
 
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
                 <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
             </section>
 
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is an array in C++?","o":["A dynamic collection of different types","A fixed-size collection of elements of the same type","A linked list of nodes","A resizable container"],"a":1},
+                {"q":"What is the index of the first element in a C++ array?","o":["1","0","-1","Depends on the compiler"],"a":1},
+                {"q":"Which declaration creates an array of 10 integers?","o":["int arr(10);","int arr[10];","array int[10];","int[10] arr;"],"a":1},
+                {"q":"What values do uninitialized local array elements contain?","o":["Zero","Null","Indeterminate (garbage)","One"],"a":2},
+                {"q":"What does int arr[5] = {1, 2}; set the remaining elements to?","o":["Garbage values","1","0","Undefined"],"a":2},
+                {"q":"How do you zero-initialize all elements of int arr[5]?","o":["int arr[5] = {};","int arr[5] = {0,0,0,0,0};","Both of the above","Neither"],"a":2},
+                {"q":"Which lets the compiler deduce the array size?","o":["int arr[];","int arr[] = {1,2,3};","int arr[auto] = {1,2,3};","int arr[0] = {1,2,3};"],"a":1},
+                {"q":"What is the valid index range for int arr[6]?","o":["1 to 6","0 to 6","0 to 5","-1 to 5"],"a":2},
+                {"q":"What does sizeof(arr) return for int arr[5] on a system with 4-byte ints?","o":["5","4","20","40"],"a":2},
+                {"q":"How do you compute the number of elements in a C-style array?","o":["arr.size()","sizeof(arr)","sizeof(arr) / sizeof(arr[0])","length(arr)"],"a":2},
+                {"q":"Which C++17 function returns the number of elements in a C-style array?","o":["std::length()","std::count()","std::size()","std::elements()"],"a":2},
+                {"q":"What does a range-based for loop look like for int arr[]?","o":["for (int x in arr)","for (int x : arr)","for (x of arr)","foreach (int x, arr)"],"a":1},
+                {"q":"How do you modify elements in-place using a range-based for?","o":["for (int x : arr)","for (int* x : arr)","for (int&amp; x : arr)","for (const int x : arr)"],"a":2},
+                {"q":"What happens when a C-style array is passed to a function?","o":["A full copy is made","It decays to a pointer to its first element","The function receives the array size automatically","It becomes const"],"a":1},
+                {"q":"Why must you pass array size separately to a function?","o":["Because arrays are always const","Because the array decays to a pointer and loses size info","Because sizeof works differently inside functions","Because arrays can only be passed by reference"],"a":1},
+                {"q":"How do you prevent a function from modifying array elements?","o":["Use the mutable keyword","Use volatile","Use const in the parameter: const int arr[]","Use static"],"a":2},
+                {"q":"Can you return a C-style array from a function?","o":["Yes, directly","No, it is not allowed","Only if it is global","Only with the return[] keyword"],"a":1},
+                {"q":"What is the result of accessing arr[10] when arr has 5 elements?","o":["Returns 0","Compilation error","Undefined behavior","Returns -1"],"a":2},
+                {"q":"Which loop requires knowing the array size for iteration?","o":["Range-based for","Classic for loop","Both","Neither"],"a":1},
+                {"q":"What does the following output? int a[]={5,10,15}; cout &lt;&lt; a[2];","o":["5","10","15","Error"],"a":2},
+                {"q":"Which header is needed for std::array?","o":["&lt;vector&gt;","&lt;array&gt;","&lt;list&gt;","&lt;container&gt;"],"a":1},
+                {"q":"How do you declare a std::array of 4 doubles?","o":["std::array&lt;double, 4&gt; a;","std::array&lt;4, double&gt; a;","array&lt;double&gt;[4] a;","double std::array[4] a;"],"a":0},
+                {"q":"Which std::array method provides bounds-checked access?","o":[".get()",".at()",".access()",".check()"],"a":1},
+                {"q":"What does std::array::at() throw for an invalid index?","o":["std::runtime_error","std::logic_error","std::out_of_range","std::invalid_argument"],"a":2},
+                {"q":"Does std::array know its own size?","o":["No","Yes, via .size()","Only at compile time","Only with sizeof"],"a":1},
+                {"q":"Can std::array be returned from a function?","o":["No","Yes","Only by pointer","Only by reference"],"a":1},
+                {"q":"Which std::array member sets all elements to a value?","o":[".set()",".assign()",".fill()",".reset()"],"a":2},
+                {"q":"What does std::array::front() return?","o":["The last element","The first element","The middle element","The array size"],"a":1},
+                {"q":"What does std::array::back() return?","o":["The first element","The last element","The size","An iterator"],"a":1},
+                {"q":"Can you compare two std::array objects with ==?","o":["No, never","Yes, it compares element by element","It compares addresses only","Only if they are sorted"],"a":1},
+                {"q":"What is the performance overhead of std::array compared to C-style arrays?","o":["Significant runtime cost","Moderate overhead","Zero overhead (thin wrapper)","Depends on the compiler"],"a":2},
+                {"q":"Which is preferred in modern C++ for fixed-size arrays?","o":["C-style arrays","std::array","malloc-based arrays","VLAs"],"a":1},
+                {"q":"When should you prefer std::vector over std::array?","o":["When size is known at compile time","When you need a resizable dynamic array","When you want zero overhead","When using C++98"],"a":1},
+                {"q":"What happens with int arr[3] = {10, 20, 30}; arr[1] = 99;?","o":["arr becomes {10, 99, 30}","arr becomes {99, 20, 30}","Compilation error","arr becomes {10, 20, 99}"],"a":0},
+                {"q":"What is the output? int a[3]={1,2,3}; for(auto x:a) cout&lt;&lt;x; ","o":["1 2 3","123","321","Error"],"a":1},
+                {"q":"How do you declare a constant array whose elements cannot change?","o":["const int arr[] = {1,2,3};","static int arr[] = {1,2,3};","mutable int arr[] = {1,2,3};","volatile int arr[] = {1,2,3};"],"a":0},
+                {"q":"Which correctly reverses arr[] = {1,2,3,4,5} in-place?","o":["Swap arr[i] and arr[size-1-i] for i from 0 to size/2","Copy to a new array in reverse","Sort in descending order","Use std::reverse (requires &lt;algorithm&gt;)"],"a":0},
+                {"q":"What does std::reverse require to reverse a C-style array?","o":["arr.begin() and arr.end()","Pointer to first and pointer past last: arr, arr+size","The array size only","An iterator adapter"],"a":1},
+                {"q":"Which algorithm finds the max element in an array?","o":["std::max_element","std::find_max","std::biggest","std::top"],"a":0},
+                {"q":"What does std::sort(arr, arr+n) do?","o":["Sorts arr in descending order","Sorts arr in ascending order","Reverses arr","Shuffles arr"],"a":1},
+                {"q":"What is array decay?","o":["Memory corruption in arrays","Automatic conversion of an array name to a pointer","Deletion of array elements","Reducing array size"],"a":1},
+                {"q":"After decay, what does the array name represent?","o":["A reference to the array","A pointer to the first element","The array size","A copy of the array"],"a":1},
+                {"q":"Which initialization style was introduced in C++11?","o":["int a[3] = {1,2,3};","int a[3](1,2,3);","int a[3]{1,2,3};","int a[3] := {1,2,3};"],"a":2},
+                {"q":"What does std::array::empty() return for array&lt;int,5&gt;?","o":["true","false","Compilation error","Undefined"],"a":1},
+                {"q":"Where are local C-style arrays allocated?","o":["On the heap","On the stack","In static storage","In a register"],"a":1},
+                {"q":"What is a VLA (Variable Length Array) in C++?","o":["A standard C++ feature","A C99 feature not part of standard C++","Same as std::vector","Same as std::array"],"a":1},
+                {"q":"What function template can be used to get the size of a C-style array without sizeof?","o":["std::extent","std::array_size","A custom template with reference to array","std::length"],"a":2},
+                {"q":"Can you assign one C-style array to another with =?","o":["Yes","No, arrays are not assignable","Only if same size","Only with memcpy"],"a":1},
+                {"q":"How do you copy elements from one C-style array to another?","o":["Use = operator","Use a loop or std::copy","Use array::assign","Use array = array"],"a":1},
+                {"q":"What does std::begin(arr) return for a C-style array?","o":["The size of the array","A pointer to the first element","A pointer past the last element","An iterator object"],"a":1}
+            ]
+            </script>
+
             <div class="tutorial-nav">
-                <a href="comments.html" class="prev-lesson">
+                <a href="inline-lambda.html" class="prev-lesson">
                     <span class="nav-label">&lsaquo; Previous Lesson</span>
-                    <span class="nav-title">Comments</span>
+                    <span class="nav-title">Inline &amp; Lambda</span>
                 </a>
-                <a href="functions.html" class="next-lesson">
+                <a href="multi-arrays.html" class="next-lesson">
                     <span class="nav-label">Next Lesson &rsaquo;</span>
-                    <span class="nav-title">Functions</span>
+                    <span class="nav-title">Multi-Dimensional Arrays</span>
                 </a>
             </div>
-        </div>
+        </main>
     </div>
 
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
-                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+                <p>Free, open-source programming tutorials for everyone.</p>
             </div>
             <div class="footer-column">
                 <h4>Languages</h4>
@@ -146,23 +740,20 @@ int matrix[3][4] = {
             <div class="footer-column">
                 <h4>More</h4>
                 <a href="../csharp/index.html">C#</a>
-                <a href="../webdev/index.html">Web Development</a>
+                <a href="../webdev/index.html">Web Dev</a>
                 <a href="../rust/index.html">Rust</a>
                 <a href="../go/index.html">Go</a>
             </div>
             <div class="footer-column">
                 <h4>Platform</h4>
-                <a href="../about.html">About Us</a>
+                <a href="../about.html">About</a>
                 <a href="../resources.html">Resources</a>
                 <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
-                <div class="footer-socials">
-                    <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
-                </div>
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ STL Algorithms - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-stl-algorithms">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html" class="active"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 42 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="76" style="width:76%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; STL Algorithms
+                </div>
+                <h1>42. STL Algorithms</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 42 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are STL Algorithms? ===== -->
+                <h2>What Are STL Algorithms?</h2>
+                <p>The C++ Standard Template Library ships with a rich collection of <strong>generic algorithms</strong> declared in the <code>&lt;algorithm&gt;</code> header (and a few in <code>&lt;numeric&gt;</code>). These are <strong>free functions</strong>&mdash;not member functions of any container&mdash;that operate on <strong>iterator ranges</strong>, typically specified as <code>[first, last)</code>.</p>
+                <p>Because they work through iterators, the same algorithm can sort a <code>std::vector</code>, search through a <code>std::deque</code>, or transform the contents of a plain C-style array. This separation of <em>data structures</em> from <em>operations</em> is one of the most powerful design ideas in C++.</p>
+                <p>To use STL algorithms, include the header:</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;   // sort, find, count, transform, &hellip;
+#include &lt;numeric&gt;     // accumulate, inner_product, iota, &hellip;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;</code></pre></div>
+
+                <div class="info-box">
+                    <strong>&#128161; Iterator Convention:</strong> Nearly every STL algorithm takes a pair of iterators <code>[first, last)</code>&mdash;a half-open range. <code>first</code> points to the first element to process, and <code>last</code> points <em>one past</em> the last element. This convention lets <code>begin()</code> and <code>end()</code> work seamlessly.
+                </div>
+
+                <!-- ===== Sorting ===== -->
+                <h2>Sorting</h2>
+                <p>Sorting is one of the most common tasks in programming. The STL provides several flavours:</p>
+
+                <h3>std::sort</h3>
+                <p><code>std::sort</code> sorts a range in <strong>ascending order</strong> by default using <strong>introsort</strong> (a hybrid of quicksort, heapsort, and insertion sort) with <strong>O(n log n)</strong> average and worst-case complexity. It is <strong>not stable</strong>&mdash;equal elements may be reordered.</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {5, 2, 8, 1, 9, 3};
+
+    // Ascending (default)
+    std::sort(v.begin(), v.end());
+    // v = {1, 2, 3, 5, 8, 9}
+
+    // Descending with custom comparator
+    std::sort(v.begin(), v.end(), std::greater&lt;int&gt;());
+    // v = {9, 8, 5, 3, 2, 1}
+
+    // Lambda comparator &mdash; sort by absolute value
+    std::vector&lt;int&gt; w = {-4, 1, -7, 3};
+    std::sort(w.begin(), w.end(), [](int a, int b) {
+        return std::abs(a) &lt; std::abs(b);
+    });
+    // w = {1, 3, -4, -7}
+
+    for (int x : w) std::cout &lt;&lt; x &lt;&lt; ' ';
+    return 0;
+}</code></pre></div>
+
+                <h3>std::stable_sort</h3>
+                <p><code>std::stable_sort</code> preserves the <strong>relative order of equal elements</strong>. It typically uses merge sort and runs in O(n log n) time but may use O(n) extra space.</p>
+<div class="code-block"><pre><code>struct Student {
+    std::string name;
+    int grade;
+};
+
+std::vector&lt;Student&gt; students = {
+    {"Alice", 90}, {"Bob", 85}, {"Carol", 90}, {"Dave", 85}
+};
+
+// Stable sort by grade descending &mdash; same-grade students keep original order
+std::stable_sort(students.begin(), students.end(),
+    [](const Student&amp; a, const Student&amp; b) {
+        return a.grade &gt; b.grade;
+    });
+// Result: Alice(90), Carol(90), Bob(85), Dave(85)</code></pre></div>
+
+                <h3>std::partial_sort &amp; std::nth_element</h3>
+                <p><code>std::partial_sort(first, middle, last)</code> rearranges the range so that the elements in <code>[first, middle)</code> are the smallest elements in sorted order. The rest are in <strong>unspecified order</strong>. Useful when you need only the top-<em>k</em> results.</p>
+                <p><code>std::nth_element(first, nth, last)</code> places the element that <em>would</em> be at position <code>nth</code> in a fully sorted range. All elements before <code>nth</code> are &le; <code>*nth</code>, and all after are &ge; <code>*nth</code>. It runs in <strong>O(n)</strong> average time.</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {9, 4, 7, 2, 5, 1, 8, 3, 6};
+
+// Get the 3 smallest elements in sorted order
+std::partial_sort(v.begin(), v.begin() + 3, v.end());
+// v[0..2] = {1, 2, 3}   (rest unspecified)
+
+std::vector&lt;int&gt; w = {9, 4, 7, 2, 5, 1, 8, 3, 6};
+
+// Find the median (element at index 4)
+std::nth_element(w.begin(), w.begin() + 4, w.end());
+// w[4] == 5   (the median)</code></pre></div>
+
+                <!-- ===== Searching ===== -->
+                <h2>Searching</h2>
+                <p>STL provides both <strong>linear</strong> and <strong>binary</strong> search algorithms.</p>
+
+                <h3>std::find &amp; std::find_if</h3>
+                <p><code>std::find</code> performs a <strong>linear search</strong> for the first element equal to a value. <code>std::find_if</code> accepts a <strong>predicate</strong> (a callable returning <code>bool</code>).</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {10, 20, 30, 40, 50};
+
+auto it = std::find(v.begin(), v.end(), 30);
+if (it != v.end())
+    std::cout &lt;&lt; "Found 30 at index " &lt;&lt; (it - v.begin()) &lt;&lt; '\n';
+
+// find_if &mdash; first even number greater than 25
+auto it2 = std::find_if(v.begin(), v.end(), [](int x) {
+    return x &gt; 25 &amp;&amp; x % 2 == 0;
+});
+// *it2 == 30</code></pre></div>
+
+                <h3>Binary Search (sorted ranges)</h3>
+                <p>For <strong>sorted</strong> ranges, binary search runs in <strong>O(log n)</strong>:</p>
+                <ul>
+                    <li><code>std::binary_search(first, last, value)</code> &mdash; returns <code>true</code>/<code>false</code>.</li>
+                    <li><code>std::lower_bound(first, last, value)</code> &mdash; iterator to the first element <strong>&ge; value</strong>.</li>
+                    <li><code>std::upper_bound(first, last, value)</code> &mdash; iterator to the first element <strong>&gt; value</strong>.</li>
+                    <li><code>std::equal_range(first, last, value)</code> &mdash; a <code>pair</code> of <code>lower_bound</code> and <code>upper_bound</code>.</li>
+                </ul>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 3, 3, 5, 7, 9};
+
+bool found = std::binary_search(v.begin(), v.end(), 5);  // true
+
+auto lb = std::lower_bound(v.begin(), v.end(), 3);  // points to first 3
+auto ub = std::upper_bound(v.begin(), v.end(), 3);  // points to 5
+
+std::cout &lt;&lt; "Number of 3s: " &lt;&lt; (ub - lb) &lt;&lt; '\n';  // 2
+
+auto [lo, hi] = std::equal_range(v.begin(), v.end(), 3);
+std::cout &lt;&lt; "Range of 3s spans " &lt;&lt; (hi - lo) &lt;&lt; " elements\n";</code></pre></div>
+
+                <!-- ===== Counting ===== -->
+                <h2>Counting</h2>
+                <p><code>std::count</code> returns the number of elements equal to a value. <code>std::count_if</code> counts elements satisfying a predicate.</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3, 2, 4, 2, 5};
+
+int twos = std::count(v.begin(), v.end(), 2);       // 3
+
+int evens = std::count_if(v.begin(), v.end(), [](int x) {
+    return x % 2 == 0;
+});  // 4  (2, 2, 4, 2)</code></pre></div>
+
+                <!-- ===== Min / Max ===== -->
+                <h2>Min/Max</h2>
+                <p>These algorithms locate the smallest or largest element in a range:</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {7, 2, 9, 1, 5};
+
+auto minIt = std::min_element(v.begin(), v.end());   // points to 1
+auto maxIt = std::max_element(v.begin(), v.end());   // points to 9
+
+std::cout &lt;&lt; "Min: " &lt;&lt; *minIt &lt;&lt; ", Max: " &lt;&lt; *maxIt &lt;&lt; '\n';
+
+// C++11: get both at once
+auto [lo, hi] = std::minmax_element(v.begin(), v.end());
+std::cout &lt;&lt; "Min: " &lt;&lt; *lo &lt;&lt; ", Max: " &lt;&lt; *hi &lt;&lt; '\n';</code></pre></div>
+
+                <h3>std::clamp (C++17)</h3>
+                <p><code>std::clamp(value, low, high)</code> restricts a value to a given range:</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+
+int brightness = 280;
+int clamped = std::clamp(brightness, 0, 255);  // 255
+
+double temp = -10.5;
+double safe = std::clamp(temp, 0.0, 100.0);   // 0.0</code></pre></div>
+
+                <!-- ===== Transforming ===== -->
+                <h2>Transforming</h2>
+                <p>These algorithms modify or generate element values.</p>
+
+                <h3>std::transform</h3>
+                <p>Applies a function to every element and writes the result to a destination (which can be the same range for in-place transformation).</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+std::vector&lt;int&gt; squared(v.size());
+
+// Unary transform &mdash; square each element
+std::transform(v.begin(), v.end(), squared.begin(), [](int x) {
+    return x * x;
+});
+// squared = {1, 4, 9, 16, 25}
+
+// Binary transform &mdash; element-wise addition
+std::vector&lt;int&gt; a = {1, 2, 3};
+std::vector&lt;int&gt; b = {10, 20, 30};
+std::vector&lt;int&gt; sum(3);
+std::transform(a.begin(), a.end(), b.begin(), sum.begin(), std::plus&lt;int&gt;());
+// sum = {11, 22, 33}</code></pre></div>
+
+                <h3>std::replace &amp; std::replace_if</h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3, 2, 4};
+
+std::replace(v.begin(), v.end(), 2, 99);
+// v = {1, 99, 3, 99, 4}
+
+std::replace_if(v.begin(), v.end(), [](int x) { return x &gt; 50; }, 0);
+// v = {1, 0, 3, 0, 4}</code></pre></div>
+
+                <h3>std::fill &amp; std::generate</h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v(5);
+
+std::fill(v.begin(), v.end(), 42);
+// v = {42, 42, 42, 42, 42}
+
+int counter = 0;
+std::generate(v.begin(), v.end(), [&amp;counter]() {
+    return counter++;
+});
+// v = {0, 1, 2, 3, 4}</code></pre></div>
+
+                <!-- ===== Removing and Filtering ===== -->
+                <h2>Removing and Filtering</h2>
+                <p>STL &ldquo;remove&rdquo; algorithms do <strong>not</strong> actually erase elements from a container. They <strong>shift</strong> the elements to keep to the front and return an iterator to the new logical end. You must then call the container&rsquo;s <code>erase()</code> method to actually shrink it. This pattern is known as the <strong>erase-remove idiom</strong>.</p>
+
+                <h3>std::remove &amp; std::remove_if</h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3, 2, 4, 2, 5};
+
+// remove all 2s &mdash; returns iterator to new logical end
+auto newEnd = std::remove(v.begin(), v.end(), 2);
+v.erase(newEnd, v.end());
+// v = {1, 3, 4, 5}
+
+// remove_if with predicate &mdash; remove odd numbers
+std::vector&lt;int&gt; w = {1, 2, 3, 4, 5, 6};
+w.erase(
+    std::remove_if(w.begin(), w.end(), [](int x) { return x % 2 != 0; }),
+    w.end()
+);
+// w = {2, 4, 6}</code></pre></div>
+
+                <div class="info-box">
+                    <strong>&#128161; C++20 Shorthand:</strong> In C++20 you can use <code>std::erase(v, value)</code> and <code>std::erase_if(v, pred)</code> directly&mdash;no need for the erase-remove idiom.
+                </div>
+
+                <h3>std::unique</h3>
+                <p><code>std::unique</code> removes <strong>consecutive duplicates</strong>. The range should usually be sorted first if you want to remove all duplicates.</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 1, 2, 3, 3, 3, 4, 4, 5};
+
+auto newEnd = std::unique(v.begin(), v.end());
+v.erase(newEnd, v.end());
+// v = {1, 2, 3, 4, 5}</code></pre></div>
+
+                <!-- ===== Reordering ===== -->
+                <h2>Reordering</h2>
+
+                <h3>std::reverse</h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+std::reverse(v.begin(), v.end());
+// v = {5, 4, 3, 2, 1}</code></pre></div>
+
+                <h3>std::rotate</h3>
+                <p><code>std::rotate(first, middle, last)</code> rotates the range so that <code>middle</code> becomes the first element.</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+std::rotate(v.begin(), v.begin() + 2, v.end());
+// v = {3, 4, 5, 1, 2}</code></pre></div>
+
+                <h3>std::shuffle</h3>
+                <p>Randomly rearranges elements using a random-number engine.</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+#include &lt;random&gt;
+
+std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+std::mt19937 rng(42);  // seeded Mersenne Twister
+std::shuffle(v.begin(), v.end(), rng);
+// v is some random permutation, e.g. {3, 5, 1, 4, 2}</code></pre></div>
+
+                <h3>std::next_permutation</h3>
+                <p>Transforms the range into the next lexicographic permutation. Returns <code>false</code> when it wraps around to the smallest permutation.</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {1, 2, 3};
+do {
+    for (int x : v) std::cout &lt;&lt; x &lt;&lt; ' ';
+    std::cout &lt;&lt; '\n';
+} while (std::next_permutation(v.begin(), v.end()));
+// Prints all 6 permutations of {1, 2, 3}</code></pre></div>
+
+                <!-- ===== Accumulating ===== -->
+                <h2>Accumulating</h2>
+                <p>The <code>&lt;numeric&gt;</code> header provides algorithms that reduce a range to a single value.</p>
+
+                <h3>std::accumulate</h3>
+<div class="code-block"><pre><code>#include &lt;numeric&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+
+int total = std::accumulate(v.begin(), v.end(), 0);       // 15
+int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies&lt;int&gt;());  // 120
+
+// String concatenation
+std::vector&lt;std::string&gt; words = {"Hello", " ", "World"};
+std::string sentence = std::accumulate(words.begin(), words.end(), std::string{});
+// "Hello World"</code></pre></div>
+
+                <h3>std::inner_product</h3>
+                <p>Computes the inner (dot) product of two ranges.</p>
+<div class="code-block"><pre><code>#include &lt;numeric&gt;
+
+std::vector&lt;int&gt; a = {1, 2, 3};
+std::vector&lt;int&gt; b = {4, 5, 6};
+
+int dot = std::inner_product(a.begin(), a.end(), b.begin(), 0);
+// 1*4 + 2*5 + 3*6 = 32</code></pre></div>
+
+                <!-- ===== Copying ===== -->
+                <h2>Copying</h2>
+                <p>Copy algorithms transfer elements from one range to another.</p>
+
+                <h3>std::copy &amp; std::copy_if</h3>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+std::vector&lt;int&gt; src = {1, 2, 3, 4, 5};
+std::vector&lt;int&gt; dst(5);
+
+std::copy(src.begin(), src.end(), dst.begin());
+// dst = {1, 2, 3, 4, 5}
+
+// copy_if &mdash; copy only even numbers
+std::vector&lt;int&gt; evens;
+std::copy_if(src.begin(), src.end(), std::back_inserter(evens),
+    [](int x) { return x % 2 == 0; });
+// evens = {2, 4}</code></pre></div>
+
+                <h3>std::copy_n</h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; src = {10, 20, 30, 40, 50};
+std::vector&lt;int&gt; dst(3);
+
+std::copy_n(src.begin(), 3, dst.begin());
+// dst = {10, 20, 30}</code></pre></div>
+
+                <!-- ===== Checking Conditions ===== -->
+                <h2>Checking Conditions</h2>
+                <p>These algorithms test whether elements in a range satisfy a predicate:</p>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; v = {2, 4, 6, 8, 10};
+
+bool allEven  = std::all_of(v.begin(), v.end(),  [](int x) { return x % 2 == 0; });  // true
+bool anyOdd   = std::any_of(v.begin(), v.end(),  [](int x) { return x % 2 != 0; });  // false
+bool noneNeg  = std::none_of(v.begin(), v.end(), [](int x) { return x &lt; 0; });       // true
+
+std::cout &lt;&lt; std::boolalpha;
+std::cout &lt;&lt; "All even? "  &lt;&lt; allEven  &lt;&lt; '\n';
+std::cout &lt;&lt; "Any odd? "   &lt;&lt; anyOdd   &lt;&lt; '\n';
+std::cout &lt;&lt; "None negative? " &lt;&lt; noneNeg &lt;&lt; '\n';</code></pre></div>
+
+                <!-- ===== for_each Algorithm ===== -->
+                <h2>for_each Algorithm</h2>
+                <p><code>std::for_each</code> applies a function to every element in a range. While range-based <code>for</code> loops have largely replaced it, <code>for_each</code> remains useful when you need to pass a callable object or chain with other algorithms.</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+
+// Print each element
+std::for_each(v.begin(), v.end(), [](int x) {
+    std::cout &lt;&lt; x &lt;&lt; ' ';
+});
+std::cout &lt;&lt; '\n';
+
+// Modify in-place &mdash; double each element
+std::for_each(v.begin(), v.end(), [](int&amp; x) {
+    x *= 2;
+});
+// v = {2, 4, 6, 8, 10}
+
+// Using a functor to accumulate a sum
+struct Sum {
+    int total = 0;
+    void operator()(int x) { total += x; }
+};
+
+Sum result = std::for_each(v.begin(), v.end(), Sum{});
+std::cout &lt;&lt; "Sum: " &lt;&lt; result.total &lt;&lt; '\n';  // 30</code></pre></div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>STL algorithms live in <code>&lt;algorithm&gt;</code> and <code>&lt;numeric&gt;</code>. They operate on <strong>iterator ranges</strong> <code>[first, last)</code>, making them container-agnostic.</li>
+                    <li><code>std::sort</code> is unstable O(n log n); use <code>std::stable_sort</code> when order of equal elements matters. <code>partial_sort</code> and <code>nth_element</code> are more efficient when you only need partial ordering.</li>
+                    <li><code>std::find</code>/<code>find_if</code> perform linear search. For sorted data, prefer <code>binary_search</code>, <code>lower_bound</code>, and <code>upper_bound</code> for O(log n) lookup.</li>
+                    <li><code>std::count</code> and <code>count_if</code> tally matching elements in a single pass.</li>
+                    <li><code>min_element</code>, <code>max_element</code>, and <code>minmax_element</code> find extremes. <code>std::clamp</code> (C++17) restricts a value to a range.</li>
+                    <li><code>std::transform</code> is the functional map; <code>std::accumulate</code> is the functional reduce.</li>
+                    <li><code>std::remove</code>/<code>remove_if</code> do <strong>not</strong> erase elements&mdash;use the <strong>erase-remove idiom</strong> or C++20&rsquo;s <code>std::erase</code>/<code>std::erase_if</code>.</li>
+                    <li><code>std::reverse</code>, <code>std::rotate</code>, <code>std::shuffle</code>, and <code>std::next_permutation</code> handle reordering tasks.</li>
+                    <li><code>std::copy</code>, <code>std::copy_if</code>, and <code>std::copy_n</code> transfer elements between ranges. Use <code>std::back_inserter</code> to append to a container that can grow.</li>
+                    <li><code>all_of</code>, <code>any_of</code>, and <code>none_of</code> provide expressive Boolean queries on ranges. <code>for_each</code> applies a callable to every element.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/bFSnXNIsK4s" title="C++ STL Algorithms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header provides the majority of STL algorithms?","o":["<code>&lt;vector&gt;</code>","<code>&lt;algorithm&gt;</code>","<code>&lt;numeric&gt;</code>","<code>&lt;functional&gt;</code>"],"a":1},
+                {"q":"What does the iterator range <code>[first, last)</code> mean?","o":["Both endpoints are included","Neither endpoint is included","first is included, last is excluded","first is excluded, last is included"],"a":2},
+                {"q":"What is the average time complexity of <code>std::sort</code>?","o":["O(n)","O(n log n)","O(n&sup2;)","O(log n)"],"a":1},
+                {"q":"Is <code>std::sort</code> a stable sort?","o":["Yes","No","Only for integers","Only in C++20"],"a":1},
+                {"q":"Which algorithm preserves the relative order of equal elements?","o":["<code>std::sort</code>","<code>std::stable_sort</code>","<code>std::partial_sort</code>","<code>std::nth_element</code>"],"a":1},
+                {"q":"How do you sort a vector in descending order with <code>std::sort</code>?","o":["<code>std::sort(v.rbegin(), v.rend())</code>","<code>std::sort(v.begin(), v.end(), false)</code>","<code>std::sort_desc(v.begin(), v.end())</code>","<code>std::sort(v.end(), v.begin())</code>"],"a":0},
+                {"q":"What does <code>std::partial_sort(first, middle, last)</code> guarantee?","o":["The entire range is sorted","Elements in [first, middle) are the smallest in sorted order","Only the middle element is placed correctly","The range is partitioned around the median"],"a":1},
+                {"q":"What is the average time complexity of <code>std::nth_element</code>?","o":["O(n log n)","O(n)","O(log n)","O(n&sup2;)"],"a":1},
+                {"q":"What does <code>std::find</code> return if the element is not found?","o":["<code>nullptr</code>","<code>-1</code>","The <code>end()</code> iterator","An exception is thrown"],"a":2},
+                {"q":"Which algorithm performs a linear search with a predicate?","o":["<code>std::find</code>","<code>std::find_if</code>","<code>std::binary_search</code>","<code>std::search</code>"],"a":1},
+                {"q":"What does <code>std::binary_search</code> return?","o":["An iterator to the element","A <code>bool</code>","The index of the element","A pair of iterators"],"a":1},
+                {"q":"The range passed to <code>std::binary_search</code> must be:","o":["Unsorted","Sorted","Empty","A set"],"a":1},
+                {"q":"What does <code>std::lower_bound</code> return?","o":["Iterator to the first element &ge; value","Iterator to the first element &gt; value","Iterator to the exact element only","<code>end()</code> always"],"a":0},
+                {"q":"What does <code>std::upper_bound</code> return?","o":["Iterator to the first element &ge; value","Iterator to the first element &gt; value","Iterator to the last element","<code>begin()</code> always"],"a":1},
+                {"q":"What does <code>std::equal_range</code> return?","o":["A single iterator","A <code>pair&lt;iterator, iterator&gt;</code>","A <code>bool</code>","The count of matching elements"],"a":1},
+                {"q":"How many elements equal to 3 exist in <code>{1,3,3,5}</code> using <code>std::count</code>?","o":["1","2","3","0"],"a":1},
+                {"q":"What does <code>std::count_if</code> accept instead of a value?","o":["A comparator","A predicate (callable returning bool)","An iterator","A reference"],"a":1},
+                {"q":"Which algorithm returns an iterator to the smallest element?","o":["<code>std::min</code>","<code>std::min_element</code>","<code>std::lower_bound</code>","<code>std::find_min</code>"],"a":1},
+                {"q":"What does <code>std::minmax_element</code> return?","o":["The min value","A pair of iterators (min, max)","A pair of values","The max iterator"],"a":1},
+                {"q":"In which C++ standard was <code>std::clamp</code> introduced?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What does <code>std::clamp(280, 0, 255)</code> return?","o":["280","0","255","-1"],"a":2},
+                {"q":"What does <code>std::transform</code> do?","o":["Sorts the range","Applies a function to each element and writes results to a destination","Removes elements","Counts elements"],"a":1},
+                {"q":"Can <code>std::transform</code> write results back to the same range?","o":["No, it requires a different destination","Yes, by passing the same begin iterator as output","Only with <code>std::back_inserter</code>","Only for numeric types"],"a":1},
+                {"q":"What does <code>std::replace(v.begin(), v.end(), 2, 99)</code> do?","o":["Replaces element at index 2 with 99","Replaces all occurrences of 2 with 99","Replaces 99 with 2","Erases 2 and inserts 99"],"a":1},
+                {"q":"What does <code>std::fill</code> do?","o":["Finds elements","Assigns a value to every element in a range","Generates unique values","Sorts the range"],"a":1},
+                {"q":"What callable does <code>std::generate</code> require?","o":["A comparator taking two args","A predicate taking one arg","A generator taking no args","A three-arg function"],"a":2},
+                {"q":"Does <code>std::remove</code> actually erase elements from a vector?","o":["Yes","No, it shifts elements and returns the new logical end","It throws an exception","It resizes the container"],"a":1},
+                {"q":"What is the erase-remove idiom?","o":["Calling <code>erase()</code> in a loop","Combining <code>std::remove</code> with the container&rsquo;s <code>erase()</code>","Using <code>delete</code> on pointers","Calling <code>clear()</code>"],"a":1},
+                {"q":"Which C++20 functions replace the erase-remove idiom?","o":["<code>std::erase</code> and <code>std::erase_if</code>","<code>std::delete</code> and <code>std::delete_if</code>","<code>std::drop</code> and <code>std::drop_if</code>","<code>std::filter</code> and <code>std::reject</code>"],"a":0},
+                {"q":"What does <code>std::unique</code> remove?","o":["All duplicates","Consecutive duplicates only","The first element","Nothing"],"a":1},
+                {"q":"Before calling <code>std::unique</code> to remove all duplicates, you should:","o":["Use <code>std::find</code>","Sort the range","Reverse the range","Copy the range"],"a":1},
+                {"q":"What does <code>std::reverse</code> do?","o":["Sorts in descending order","Reverses the order of elements in a range","Returns a reversed copy","Rotates the range"],"a":1},
+                {"q":"What does <code>std::rotate(first, middle, last)</code> do?","o":["Sorts the range","Reverses the range","Makes <code>middle</code> the new first element","Swaps first and last"],"a":2},
+                {"q":"Which random engine is commonly used with <code>std::shuffle</code>?","o":["<code>std::rand</code>","<code>std::mt19937</code>","<code>std::random</code>","<code>std::default_rng</code>"],"a":1},
+                {"q":"What does <code>std::next_permutation</code> return when it wraps around?","o":["<code>true</code>","<code>false</code>","An iterator","An exception"],"a":1},
+                {"q":"Which header provides <code>std::accumulate</code>?","o":["<code>&lt;algorithm&gt;</code>","<code>&lt;numeric&gt;</code>","<code>&lt;cmath&gt;</code>","<code>&lt;functional&gt;</code>"],"a":1},
+                {"q":"What is the result of <code>std::accumulate(v.begin(), v.end(), 0)</code> for <code>v = {1,2,3}</code>?","o":["0","3","6","123"],"a":2},
+                {"q":"What is the third argument to <code>std::accumulate</code>?","o":["The end iterator","The initial value","The comparator","The output iterator"],"a":1},
+                {"q":"What does <code>std::inner_product</code> compute?","o":["The cross product","The dot product of two ranges","The outer product","The sum of one range"],"a":1},
+                {"q":"What does <code>std::copy</code> do?","o":["Moves elements","Copies elements from one range to another","Swaps two ranges","Sorts and copies"],"a":1},
+                {"q":"What does <code>std::copy_if</code> accept in addition to source and destination iterators?","o":["A comparator","A predicate","A value","A count"],"a":1},
+                {"q":"What is <code>std::back_inserter</code> used for?","o":["Inserting at the front","Creating an output iterator that calls <code>push_back</code>","Sorting in reverse","Reserving capacity"],"a":1},
+                {"q":"What does <code>std::copy_n(src.begin(), 3, dst.begin())</code> do?","o":["Copies all elements","Copies the first 3 elements from src to dst","Copies every 3rd element","Skips 3 elements then copies"],"a":1},
+                {"q":"What does <code>std::all_of</code> return?","o":["<code>true</code> if the predicate is true for at least one element","<code>true</code> if the predicate is true for every element","The count of matching elements","An iterator"],"a":1},
+                {"q":"What does <code>std::any_of</code> return?","o":["<code>true</code> if every element matches","<code>true</code> if at least one element matches","<code>false</code> always","The first matching element"],"a":1},
+                {"q":"What does <code>std::none_of</code> return?","o":["<code>true</code> if every element matches","<code>true</code> if no element matches the predicate","The count of non-matching elements","An iterator"],"a":1},
+                {"q":"What does <code>std::for_each</code> return?","o":["<code>void</code>","The function object (moved)","An iterator","The number of elements processed"],"a":1},
+                {"q":"Which algorithm would you use to check if a sorted vector contains a value in O(log n)?","o":["<code>std::find</code>","<code>std::count</code>","<code>std::binary_search</code>","<code>std::for_each</code>"],"a":2},
+                {"q":"What functor can you pass to <code>std::sort</code> for descending order?","o":["<code>std::less&lt;int&gt;</code>","<code>std::greater&lt;int&gt;</code>","<code>std::equal_to&lt;int&gt;</code>","<code>std::minus&lt;int&gt;</code>"],"a":1},
+                {"q":"Which algorithm can generate all permutations of a range when called in a loop?","o":["<code>std::shuffle</code>","<code>std::rotate</code>","<code>std::next_permutation</code>","<code>std::transform</code>"],"a":2}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="maps-sets.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">STL Maps &amp; Sets</span>
+                </a>
+                <a href="iterators.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Iterators</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

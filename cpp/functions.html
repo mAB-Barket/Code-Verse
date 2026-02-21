@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functions in C++ - CodeVerse</title>
+    <title>C++ Function Basics - CodeVerse</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 </head>
@@ -32,141 +32,472 @@
             <div class="sidebar-title">C++ Lessons</div>
             <nav class="sidebar-nav">
                 <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
-                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
-                <a href="comments.html"><span class="lesson-number">3</span> Comments</a>
-                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
-                <a href="functions.html" class="active"><span class="lesson-number">5</span> Functions</a>
-                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
-                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html" class="active"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
             </nav>
             <div class="sidebar-progress">
-                <span class="progress-text">Progress: 5 / 7</span>
-                <div class="progress-bar"><div class="progress-fill" data-progress="71" style="width:71%"></div></div>
+                <span class="progress-text">Progress: 16 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="29" style="width:29%"></div></div>
             </div>
         </aside>
 
-        <div class="tutorial-content">
+        <main class="tutorial-content">
             <div class="tutorial-header">
                 <div class="breadcrumb">
                     <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Functions
                 </div>
-                <h1>5. Functions in C++</h1>
+                <h1>16. Function Basics</h1>
                 <div class="tutorial-meta">
-                    <span>&#128218; Lesson 5 of 7</span>
-                    <span>&#9201; 15 min read</span>
+                    <span>&#128218; Lesson 16 of 55</span>
+                    <span>&#9201; 18 min read</span>
                     <span>&#127793; Beginner</span>
                 </div>
             </div>
 
             <div class="content-body">
-                <p>Functions are blocks of code that perform specific tasks and can be reused throughout a program.</p>
 
-                <div class="code-example">
-                    <pre><code>// Function declaration
+                <h2>What Are Functions?</h2>
+                <p>A <strong>function</strong> is a reusable block of code that performs a specific task. Functions help organize code into logical units, avoid repetition, and make programs easier to read, test, and maintain.</p>
+                <p>You have already been using functions: <code>main()</code> is a function, <code>cout</code> uses functions internally, and <code>sqrt()</code> from <code>&lt;cmath&gt;</code> is a function.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>Why functions are essential in programming</li>
+                    <li>Function declaration (prototype) and definition</li>
+                    <li>Calling functions</li>
+                    <li>Function parameters and arguments</li>
+                    <li>Return types and the <code>return</code> statement</li>
+                    <li><code>void</code> functions</li>
+                    <li>Function scope and local variables</li>
+                    <li>Forward declarations and prototypes</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Functions follow the DRY principle &mdash; <strong>Don&rsquo;t Repeat Yourself</strong>. Instead of copying code, put it in a function and call it whenever needed.</p>
+                </div>
+
+                <h2>Function Syntax</h2>
+                <p>A C++ function has these parts:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>returnType functionName(parameterList) {
+    // function body
+    return value;  // if returnType is not void
+}</pre></div>
+
+                <ul>
+                    <li><strong>returnType</strong> &mdash; the data type of the value the function returns (<code>int</code>, <code>double</code>, <code>string</code>, <code>void</code>, etc.)</li>
+                    <li><strong>functionName</strong> &mdash; a descriptive name following C++ naming rules</li>
+                    <li><strong>parameterList</strong> &mdash; input values the function accepts (can be empty)</li>
+                    <li><strong>function body</strong> &mdash; the code that runs when the function is called</li>
+                    <li><strong>return</strong> &mdash; sends a value back to the caller</li>
+                </ul>
+
+                <h2>Your First Function</h2>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Function definition
+void greet() {
+    cout &lt;&lt; "Hello from a function!" &lt;&lt; endl;
+}
+
+int main() {
+    greet();   // Function call
+    greet();   // Call it again
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Hello from a function!
+Hello from a function!</pre></div>
+
+                <h2>Functions with Parameters</h2>
+                <p>Parameters let you pass data into a function:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void greetUser(string name) {
+    cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!" &lt;&lt; endl;
+}
+
+int main() {
+    greetUser("Alice");
+    greetUser("Bob");
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Hello, Alice!
+Hello, Bob!</pre></div>
+
+                <h3>Multiple Parameters</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void addNumbers(int a, int b) {
+    cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a + b &lt;&lt; endl;
+}
+
+int main() {
+    addNumbers(5, 3);
+    addNumbers(10, 20);
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p><strong>Parameters</strong> are the variables listed in the function definition. <strong>Arguments</strong> are the actual values passed when calling the function. People often use these terms interchangeably, but technically they are different.</p>
+                </div>
+
+                <h2>Functions with Return Values</h2>
+                <p>Functions can compute and return a value:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
 int add(int a, int b) {
     return a + b;
 }
 
-// Function with no return value
-void printMessage() {
-    cout &lt;&lt; "Hello World!";
+double average(double x, double y) {
+    return (x + y) / 2.0;
 }
 
-// Function overloading
-double add(double a, double b) {
-    return a + b;
-}
+int main() {
+    int sum = add(5, 3);
+    cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; endl;
 
-// Recursive function
-int factorial(int n) {
-    if (n &lt;= 1) return 1;
-    return n * factorial(n - 1);
-}</code></pre>
+    double avg = average(10.5, 20.3);
+    cout &lt;&lt; "Average: " &lt;&lt; avg &lt;&lt; endl;
+
+    // Use directly in expressions
+    cout &lt;&lt; "Direct: " &lt;&lt; add(100, 200) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Sum: 8
+Average: 15.4
+Direct: 300</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>return</code> statement immediately exits the function and sends the value back to the caller. Code after <code>return</code> will not execute.</p>
                 </div>
+
+                <h2>void Functions</h2>
+                <p>Functions that don&rsquo;t return a value use the <code>void</code> return type:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void printLine(int length) {
+    for (int i = 0; i &lt; length; i++) {
+        cout &lt;&lt; "-";
+    }
+    cout &lt;&lt; endl;
+}
+
+void printBox(string text) {
+    int len = text.length() + 4;
+    printLine(len);
+    cout &lt;&lt; "| " &lt;&lt; text &lt;&lt; " |" &lt;&lt; endl;
+    printLine(len);
+}
+
+int main() {
+    printBox("Hello");
+    printBox("CodeVerse");
+    return 0;
+}</pre></div>
+
+                <p>A <code>void</code> function can use <code>return;</code> (with no value) to exit early, but doesn&rsquo;t need a return statement at the end.</p>
+
+                <h2>Function Prototypes (Forward Declarations)</h2>
+                <p>In C++, a function must be declared before it is called. If you define a function after <code>main()</code>, you need a <strong>prototype</strong>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Function prototype (declaration)
+int multiply(int a, int b);
+
+int main() {
+    cout &lt;&lt; multiply(4, 5) &lt;&lt; endl;  // Works because of prototype
+    return 0;
+}
+
+// Function definition (after main)
+int multiply(int a, int b) {
+    return a * b;
+}</pre></div>
+
+                <p>The prototype tells the compiler: &ldquo;This function exists, takes these parameters, and returns this type.&rdquo;</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Prototypes are essential when you have multiple functions that call each other, or when organizing code across multiple files. Parameter names in prototypes are optional: <code>int multiply(int, int);</code> is also valid.</p>
+                </div>
+
+                <h2>Function Scope</h2>
+                <p>Variables declared inside a function are <strong>local</strong> to that function. They cannot be accessed from outside:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void myFunction() {
+    int x = 10;  // Local variable
+    cout &lt;&lt; "Inside: " &lt;&lt; x &lt;&lt; endl;
+}
+
+int main() {
+    myFunction();
+    // cout &lt;&lt; x;  // ERROR: x is not accessible here
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Each function call creates its own set of local variables. When the function ends, those variables are destroyed. This is called <strong>automatic storage duration</strong>.</p>
+                </div>
+
+                <h2>The main() Function</h2>
+                <p>The <code>main()</code> function is special in C++:</p>
+                <ul>
+                    <li>It is the entry point of every C++ program.</li>
+                    <li>It returns <code>int</code> &mdash; conventionally <code>0</code> for success, non-zero for failure.</li>
+                    <li>It can accept command-line arguments: <code>int main(int argc, char* argv[])</code></li>
+                    <li>You cannot call <code>main()</code> from your own code (it&rsquo;s called by the runtime system).</li>
+                </ul>
+
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Temperature Converter</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double celsiusToFahrenheit(double celsius) {
+    return (celsius * 9.0 / 5.0) + 32.0;
+}
+
+double fahrenheitToCelsius(double fahrenheit) {
+    return (fahrenheit - 32.0) * 5.0 / 9.0;
+}
+
+int main() {
+    cout &lt;&lt; "100 C = " &lt;&lt; celsiusToFahrenheit(100) &lt;&lt; " F" &lt;&lt; endl;
+    cout &lt;&lt; "212 F = " &lt;&lt; fahrenheitToCelsius(212) &lt;&lt; " C" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>Example 2: Math Utilities</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int maximum(int a, int b) {
+    return (a &gt; b) ? a : b;
+}
+
+int minimum(int a, int b) {
+    return (a &lt; b) ? a : b;
+}
+
+bool isEven(int n) {
+    return n % 2 == 0;
+}
+
+bool isPrime(int n) {
+    if (n &lt; 2) return false;
+    for (int i = 2; i * i &lt;= n; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    cout &lt;&lt; "Max(5,3): " &lt;&lt; maximum(5, 3) &lt;&lt; endl;
+    cout &lt;&lt; "Min(5,3): " &lt;&lt; minimum(5, 3) &lt;&lt; endl;
+    cout &lt;&lt; "isEven(4): " &lt;&lt; isEven(4) &lt;&lt; endl;
+    cout &lt;&lt; "isPrime(17): " &lt;&lt; isPrime(17) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>Example 3: Functions Calling Functions</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int square(int n) {
+    return n * n;
+}
+
+int sumOfSquares(int a, int b) {
+    return square(a) + square(b);  // Calling square() inside
+}
+
+int main() {
+    cout &lt;&lt; "3^2 + 4^2 = " &lt;&lt; sumOfSquares(3, 4) &lt;&lt; endl;  // 25
+    return 0;
+}</pre></div>
+
+                <h2>Summary</h2>
+                <ul>
+                    <li>A <strong>function</strong> is a reusable block of code with a name, parameters, and return type.</li>
+                    <li><code>void</code> functions perform actions without returning a value.</li>
+                    <li>Non-void functions use <code>return</code> to send a value back to the caller.</li>
+                    <li><strong>Parameters</strong> are defined in the function; <strong>arguments</strong> are passed when calling it.</li>
+                    <li>Variables inside functions are <strong>local</strong> &mdash; they exist only during the function call.</li>
+                    <li><strong>Function prototypes</strong> let you declare a function before defining it.</li>
+                    <li>Functions can call other functions, including themselves (recursion).</li>
+                    <li>Well-named functions make code self-documenting.</li>
+                </ul>
+
             </div>
 
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/RFLFX1boGwo?si=f05TGo6paYOZNETO"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
-                </iframe>
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/V9zuox47zr0" title="C++ Functions" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
 
-            <section class="quiz-section">
-                <h2>Test Your Knowledge</h2>
-                <div class="quiz-question">
-                    <h3>1. What is the purpose of a function's return type?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">Specifies the type of value the function will return</div>
-                        <div class="quiz-option">Determines how many parameters the function can have</div>
-                        <div class="quiz-option">Controls the function's execution speed</div>
-                        <div class="quiz-option">Defines the scope of the function</div>
-                    </div>
-                </div>
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
 
-                <div class="quiz-question">
-                    <h3>2. What is function overloading?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">Multiple functions with the same name but different parameters</div>
-                        <div class="quiz-option">A function that calls itself</div>
-                        <div class="quiz-option">A function that returns multiple values</div>
-                        <div class="quiz-option">A function that takes too many parameters</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>3. What does void return type mean?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">The function doesn't return any value</div>
-                        <div class="quiz-option">The function returns null</div>
-                        <div class="quiz-option">The function is empty</div>
-                        <div class="quiz-option">The function is private</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>4. What is recursion in C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">A function calling itself</div>
-                        <div class="quiz-option">A function calling another function</div>
-                        <div class="quiz-option">A loop inside a function</div>
-                        <div class="quiz-option">Multiple return statements</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>5. What happens if a function with a return type doesn't have a return statement?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">Undefined behavior</div>
-                        <div class="quiz-option">Returns 0 automatically</div>
-                        <div class="quiz-option">Compiler error</div>
-                        <div class="quiz-option">Returns null</div>
-                    </div>
-                </div>
-
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
                 <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
             </section>
 
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a function in C++?","o":["A variable type","A reusable block of code that performs a specific task","A loop construct","A data structure"],"a":1},
+                {"q":"What keyword is used for functions that don't return a value?","o":["null","none","void","empty"],"a":2},
+                {"q":"What does the return statement do?","o":["Ends the program","Sends a value back to the caller and exits the function","Prints a value","Declares a variable"],"a":1},
+                {"q":"What is a function prototype?","o":["The function body","A forward declaration of a function before its definition","A function call","A return statement"],"a":1},
+                {"q":"Where must a function be declared before it can be called?","o":["After main()","Before main() or with a prototype","In a separate file only","Inside another function"],"a":1},
+                {"q":"What is the output? void say(){cout<<\"Hi \";}int main(){say();say();say();}","o":["Hi","Hi Hi Hi","HiHiHi","Hi Hi Hi "],"a":3},
+                {"q":"What is the difference between parameters and arguments?","o":["They are the same","Parameters are in the definition; arguments are the values passed in a call","Parameters are values; arguments are variables","There is no difference"],"a":1},
+                {"q":"What happens to local variables when a function ends?","o":["They persist","They are destroyed","They become global","They are returned"],"a":1},
+                {"q":"Can a function call another function?","o":["No","Yes","Only main() can call functions","Only void functions can"],"a":1},
+                {"q":"What does int add(int a,int b){return a+b;} return when called as add(3,4)?","o":["34","7","12","3"],"a":1},
+                {"q":"What is the return type of main()?","o":["void","int","string","double"],"a":1},
+                {"q":"What value does main() typically return for success?","o":["1","-1","0","true"],"a":2},
+                {"q":"Is void greet(); a valid function prototype?","o":["No","Yes","Only with parameters","Only in C"],"a":1},
+                {"q":"Can a void function use a return statement?","o":["No","Yes, but without a value: return;","Only with a value","Only in main()"],"a":1},
+                {"q":"What is the output? int sq(int x){return x*x;}int main(){cout<<sq(5);}","o":["10","25","5","55"],"a":1},
+                {"q":"What is the output? int f(int x){return x+1;}int main(){cout<<f(f(f(1)));}","o":["3","4","2","1"],"a":1},
+                {"q":"Can you define a function inside another function in C++?","o":["Yes","No (not standard C++; lambdas are different)","Only inside main()","Only void functions"],"a":1},
+                {"q":"What happens if a non-void function doesn't have a return statement?","o":["Returns 0","Undefined behavior","Compile error always","Returns null"],"a":1},
+                {"q":"What is the output? void f(int n){if(n>0)cout<<n<<' ';}int main(){f(5);f(-3);f(0);}","o":["5 -3 0","5","5 0","5 -3"],"a":1},
+                {"q":"Can parameter names be omitted in a function prototype?","o":["No","Yes, only types are required","Only for void functions","Only for int parameters"],"a":1},
+                {"q":"What is the output? double half(int n){return n/2.0;}int main(){cout<<half(5);}","o":["2","2.5","3","2.0"],"a":1},
+                {"q":"How many parameters can a function have?","o":["Maximum 5","Maximum 10","No fixed limit (practical limits apply)","Exactly 2"],"a":2},
+                {"q":"What is the output? int max(int a,int b){if(a>b)return a;return b;}int main(){cout<<max(7,3);}","o":["3","7","10","0"],"a":1},
+                {"q":"What is the output? bool isPos(int n){return n>0;}int main(){cout<<isPos(5)<<' '<<isPos(-2);}","o":["true false","1 0","5 -2","yes no"],"a":1},
+                {"q":"What is the scope of a function's local variables?","o":["Global","Limited to the function body","The entire file","The entire program"],"a":1},
+                {"q":"Can two functions have variables with the same name?","o":["No","Yes, they are independent local variables","Only if one is global","Only void functions"],"a":1},
+                {"q":"What is function composition?","o":["Defining multiple functions","Calling a function inside another function call","Combining two files","A loop inside a function"],"a":1},
+                {"q":"What is the output? int dbl(int x){return 2*x;}int main(){cout<<dbl(dbl(3));}","o":["6","12","9","18"],"a":1},
+                {"q":"What does DRY stand for?","o":["Do Repeat Yourself","Don't Repeat Yourself","Do Run Yourself","Dynamic Return Yield"],"a":1},
+                {"q":"What is the output? void count(int n){for(int i=1;i<=n;i++)cout<<i<<' ';}int main(){count(4);}","o":["1 2 3 4","1234","4 3 2 1","4"],"a":0},
+                {"q":"Can a function return a bool value?","o":["No","Yes","Only 0 or 1","Only true"],"a":1},
+                {"q":"What is the output? int abs(int n){if(n<0)return -n;return n;}int main(){cout<<abs(-7);}","o":["-7","7","0","14"],"a":1},
+                {"q":"What is the entry point of a C++ program?","o":["The first function defined","main()","The first line of code","Any function"],"a":1},
+                {"q":"Can you call main() from your own code?","o":["Yes","No, it is called by the runtime system","Only recursively","Only in debug mode"],"a":1},
+                {"q":"What is the output? string greeting(string name){return \"Hello, \"+name+\"!\";}int main(){cout<<greeting(\"World\");}","o":["Hello, World!","World","Hello, !","greeting(World)"],"a":0},
+                {"q":"What is the output? int cube(int n){return n*n*n;}int main(){cout<<cube(3);}","o":["9","27","3","81"],"a":1},
+                {"q":"What happens if you try to return an int from a void function?","o":["It works fine","Compile error","Returns 0","Undefined behavior"],"a":1},
+                {"q":"What is the output? int sum(int a,int b,int c){return a+b+c;}int main(){cout<<sum(1,2,3);}","o":["123","6","3","12"],"a":1},
+                {"q":"How do you call a function named calculate with argument 10?","o":["calculate 10","calculate(10);","call calculate(10)","calculate{10}"],"a":1},
+                {"q":"What is the output? int f(int x){return x*2+1;}int main(){int y=f(3);cout<<y+f(1);}","o":["10","7","11","8"],"a":0},
+                {"q":"Can a function have no parameters?","o":["No","Yes, use empty parentheses: void func()","Only void functions","Only main()"],"a":1},
+                {"q":"What is the output? int min(int a,int b){return a<b?a:b;}int main(){cout<<min(min(5,3),min(7,2));}","o":["2","3","5","7"],"a":0},
+                {"q":"What is the output? void swap(int a,int b){int t=a;a=b;b=t;}int main(){int x=1,y=2;swap(x,y);cout<<x<<y;}","o":["21","12","11","22"],"a":1},
+                {"q":"Why doesn't the swap function above actually swap x and y?","o":["It has a bug","Because parameters are passed by value (copies are made)","swap is a reserved word","The return type is wrong"],"a":1},
+                {"q":"What is the output? int power(int base,int exp){int r=1;for(int i=0;i<exp;i++)r*=base;return r;}int main(){cout<<power(2,10);}","o":["20","1024","100","210"],"a":1},
+                {"q":"What is the output? int factorial(int n){int r=1;for(int i=2;i<=n;i++)r*=i;return r;}int main(){cout<<factorial(5);}","o":["120","25","15","5"],"a":0},
+                {"q":"What does a function's signature include?","o":["Only the name","The name, parameter types, and return type","Only parameters","Only the return type"],"a":1},
+                {"q":"Can you store a function's return value in a variable?","o":["No","Yes","Only for int functions","Only for void functions"],"a":1},
+                {"q":"What is the output? char grade(int s){if(s>=90)return 'A';if(s>=80)return 'B';return 'C';}int main(){cout<<grade(85);}","o":["A","B","C","85"],"a":1},
+                {"q":"What is the output? int f(int n){return n>0?n:-n;}int main(){cout<<f(-5)+f(3);}","o":["8","2","-2","15"],"a":0}
+            ]
+            </script>
+
             <div class="tutorial-nav">
-                <a href="arrays.html" class="prev-lesson">
+                <a href="nested-loops.html" class="prev-lesson">
                     <span class="nav-label">&lsaquo; Previous Lesson</span>
-                    <span class="nav-title">Arrays</span>
+                    <span class="nav-title">Nested Loops</span>
                 </a>
-                <a href="loops.html" class="next-lesson">
+                <a href="function-parameters.html" class="next-lesson">
                     <span class="nav-label">Next Lesson &rsaquo;</span>
-                    <span class="nav-title">Loops</span>
+                    <span class="nav-title">Function Parameters</span>
                 </a>
             </div>
-        </div>
+        </main>
     </div>
 
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
-                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+                <p>Free, open-source programming tutorials for everyone.</p>
             </div>
             <div class="footer-column">
                 <h4>Languages</h4>
@@ -178,23 +509,20 @@ int factorial(int n) {
             <div class="footer-column">
                 <h4>More</h4>
                 <a href="../csharp/index.html">C#</a>
-                <a href="../webdev/index.html">Web Development</a>
+                <a href="../webdev/index.html">Web Dev</a>
                 <a href="../rust/index.html">Rust</a>
                 <a href="../go/index.html">Go</a>
             </div>
             <div class="footer-column">
                 <h4>Platform</h4>
-                <a href="../about.html">About Us</a>
+                <a href="../about.html">About</a>
                 <a href="../resources.html">Resources</a>
                 <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
-                <div class="footer-socials">
-                    <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
-                </div>
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
             </div>
         </div>
     </footer>

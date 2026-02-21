@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Modern Features - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-modern-cpp">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html" class="active"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 50 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="91" style="width:91%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Modern C++ Features
+                </div>
+                <h1>50. Modern C++ Features</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 50 of 55</span>
+                    <span>&#9201; 20 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== C++ Standards Timeline ===== -->
+                <h2>C++ Standards Timeline</h2>
+                <p>C++ evolves through <strong>ISO standards</strong> published roughly every three years. Each release introduces new language features, library components, and deprecates older patterns. Here is a brief overview of the major milestones:</p>
+                <ul>
+                    <li><strong>C++11</strong> &ndash; The landmark &ldquo;modern C++&rdquo; release. Introduced <code>auto</code>, range-based for loops, <code>nullptr</code>, lambdas, move semantics, smart pointers, <code>constexpr</code>, <code>std::thread</code>, and much more.</li>
+                    <li><strong>C++14</strong> &ndash; A refinement of C++11. Added generic lambdas, relaxed <code>constexpr</code> rules, <code>std::make_unique</code>, and variable templates.</li>
+                    <li><strong>C++17</strong> &ndash; Brought structured bindings, <code>if constexpr</code>, <code>std::optional</code>, <code>std::variant</code>, <code>std::any</code>, <code>std::string_view</code>, fold expressions, and <code>std::filesystem</code>.</li>
+                    <li><strong>C++20</strong> &ndash; A major release on par with C++11. Added concepts, ranges, modules, coroutines, the spaceship operator (<code>&lt;=&gt;</code>), <code>std::format</code>, and calendar/timezone support.</li>
+                    <li><strong>C++23</strong> &ndash; The latest standard. Introduced <code>std::expected</code>, <code>std::print</code>, <code>std::flat_map</code>, deducing <code>this</code>, and many quality-of-life improvements.</li>
+                </ul>
+                <p>You select the standard with a compiler flag such as <code>-std=c++20</code> (GCC/Clang) or <code>/std:c++20</code> (MSVC).</p>
+
+                <!-- ===== auto Type Deduction ===== -->
+                <h2><code>auto</code> Type Deduction</h2>
+                <p>The <code>auto</code> keyword (C++11) tells the compiler to deduce the variable&rsquo;s type from its initialiser. It reduces verbosity and keeps code resilient to refactoring:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+
+int main() {
+    auto x = 42;              // int
+    auto pi = 3.14;           // double
+    auto msg = "hello";       // const char*
+
+    std::vector&lt;int&gt; nums{1, 2, 3, 4, 5};
+    auto it = nums.begin();   // std::vector&lt;int&gt;::iterator
+
+    std::map&lt;std::string, int&gt; ages{{"Alice", 30}, {"Bob", 25}};
+    for (auto&amp; [name, age] : ages) {   // structured binding + auto
+        std::cout &lt;&lt; name &lt;&lt; ": " &lt;&lt; age &lt;&lt; "\n";
+    }
+
+    // auto in return type (C++14)
+    auto add = [](auto a, auto b) { return a + b; };
+    std::cout &lt;&lt; add(3, 4) &lt;&lt; "\n";     // 7
+    std::cout &lt;&lt; add(1.5, 2.3) &lt;&lt; "\n"; // 3.8
+    return 0;
+}</code></pre>
+                <p><strong>Guidelines:</strong> Use <code>auto</code> when the type is obvious from context (e.g., iterators, lambdas, complex template types). Prefer explicit types when clarity matters, such as numeric types where precision is important.</p>
+
+                <!-- ===== Range-Based For Loops ===== -->
+                <h2>Range-Based For Loops</h2>
+                <p>C++11 introduced a concise <code>for</code> syntax for iterating over any range (arrays, containers, initialiser lists, or any type exposing <code>begin()</code>/<code>end()</code>):</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; langs{"C++", "Rust", "Go", "Python"};
+
+    // By value (copies each element)
+    for (auto lang : langs) {
+        std::cout &lt;&lt; lang &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; "\n";
+
+    // By const reference (read-only, no copies)
+    for (const auto&amp; lang : langs) {
+        std::cout &lt;&lt; lang &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; "\n";
+
+    // By reference (can modify elements)
+    for (auto&amp; lang : langs) {
+        lang = "Modern " + lang;
+    }
+
+    // Works with plain arrays too
+    int arr[]{10, 20, 30};
+    for (auto val : arr) {
+        std::cout &lt;&lt; val &lt;&lt; " ";
+    }
+    return 0;
+}</code></pre>
+
+                <!-- ===== nullptr ===== -->
+                <h2><code>nullptr</code></h2>
+                <p>Before C++11, programmers used the macro <code>NULL</code> (defined as <code>0</code>) or the literal <code>0</code> to represent a null pointer. This caused ambiguity when overloading functions that accept both integers and pointers. C++11 introduced the keyword <code>nullptr</code>, which has type <code>std::nullptr_t</code> and converts only to pointer types:</p>
+<pre><code>#include &lt;iostream&gt;
+
+void process(int n)    { std::cout &lt;&lt; "int: " &lt;&lt; n &lt;&lt; "\n"; }
+void process(int* ptr) { std::cout &lt;&lt; "pointer\n"; }
+
+int main() {
+    process(0);        // calls process(int)
+    // process(NULL);  // ambiguous on some compilers!
+    process(nullptr);  // calls process(int*) &mdash; unambiguous
+    return 0;
+}</code></pre>
+                <p><strong>Rule of thumb:</strong> Always use <code>nullptr</code> instead of <code>NULL</code> or <code>0</code> for null pointers in modern C++.</p>
+
+                <!-- ===== constexpr and consteval ===== -->
+                <h2><code>constexpr</code> and <code>consteval</code></h2>
+                <p><code>constexpr</code> (C++11) marks a variable or function as evaluable at compile time. The compiler <em>may</em> compute the result at compile time if all inputs are constant:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;array&gt;
+
+constexpr int factorial(int n) {
+    int result = 1;
+    for (int i = 2; i &lt;= n; ++i)
+        result *= i;
+    return result;
+}
+
+// C++20: consteval forces compile-time evaluation
+consteval int square(int n) {
+    return n * n;
+}
+
+int main() {
+    constexpr int f5 = factorial(5);   // computed at compile time
+    std::cout &lt;&lt; "5! = " &lt;&lt; f5 &lt;&lt; "\n";
+
+    // Use constexpr result as a template argument
+    std::array&lt;int, factorial(3)&gt; arr{};  // array of size 6
+    std::cout &lt;&lt; "Array size: " &lt;&lt; arr.size() &lt;&lt; "\n";
+
+    constexpr int s = square(8);  // OK &mdash; compile-time
+    std::cout &lt;&lt; "8^2 = " &lt;&lt; s &lt;&lt; "\n";
+
+    // int x = 8;
+    // int y = square(x);  // ERROR: consteval requires compile-time args
+
+    return 0;
+}</code></pre>
+                <p><strong>Key difference:</strong> <code>constexpr</code> <em>allows</em> compile-time evaluation; <code>consteval</code> <em>requires</em> it. Use <code>consteval</code> when the function must never run at runtime.</p>
+
+                <!-- ===== Structured Bindings (C++17) ===== -->
+                <h2>Structured Bindings (C++17)</h2>
+                <p>Structured bindings let you decompose an aggregate (pair, tuple, struct, or array) into named variables in a single declaration:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;tuple&gt;
+
+struct Point { double x, y, z; };
+
+std::tuple&lt;int, std::string, bool&gt; getRecord() {
+    return {42, "Alice", true};
+}
+
+int main() {
+    // Decomposing a struct
+    Point p{1.0, 2.5, 3.7};
+    auto [px, py, pz] = p;
+    std::cout &lt;&lt; "x=" &lt;&lt; px &lt;&lt; " y=" &lt;&lt; py &lt;&lt; " z=" &lt;&lt; pz &lt;&lt; "\n";
+
+    // Decomposing a tuple
+    auto [id, name, active] = getRecord();
+    std::cout &lt;&lt; id &lt;&lt; " " &lt;&lt; name &lt;&lt; " " &lt;&lt; active &lt;&lt; "\n";
+
+    // Decomposing map entries
+    std::map&lt;std::string, int&gt; scores{{"Math", 95}, {"English", 88}};
+    for (const auto&amp; [subject, score] : scores) {
+        std::cout &lt;&lt; subject &lt;&lt; ": " &lt;&lt; score &lt;&lt; "\n";
+    }
+
+    // Decomposing an array
+    int arr[3]{10, 20, 30};
+    auto [a, b, c] = arr;
+    std::cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b &lt;&lt; " " &lt;&lt; c &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+                <!-- ===== if constexpr (C++17) ===== -->
+                <h2><code>if constexpr</code> (C++17)</h2>
+                <p><code>if constexpr</code> evaluates the condition at <em>compile time</em>. The branch that is not taken is completely discarded &mdash; it does not even need to be valid code for the current template instantiation:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+#include &lt;string&gt;
+
+template &lt;typename T&gt;
+std::string stringify(T value) {
+    if constexpr (std::is_arithmetic_v&lt;T&gt;) {
+        return std::to_string(value);
+    } else if constexpr (std::is_same_v&lt;T, std::string&gt;) {
+        return value;
+    } else {
+        return "unsupported type";
+    }
+}
+
+int main() {
+    std::cout &lt;&lt; stringify(42) &lt;&lt; "\n";             // "42"
+    std::cout &lt;&lt; stringify(3.14) &lt;&lt; "\n";            // "3.140000"
+    std::cout &lt;&lt; stringify(std::string("hi")) &lt;&lt; "\n"; // "hi"
+    return 0;
+}</code></pre>
+                <p>Without <code>if constexpr</code>, you would need SFINAE or tag dispatch to achieve the same compile-time branching.</p>
+
+                <!-- ===== std::optional (C++17) ===== -->
+                <h2><code>std::optional</code> (C++17)</h2>
+                <p><code>std::optional&lt;T&gt;</code> represents a value that <em>may or may not</em> be present. It replaces error-prone patterns like returning special sentinel values (<code>-1</code>, <code>""</code>) or using raw pointers to indicate &ldquo;no result&rdquo;:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;optional&gt;
+#include &lt;string&gt;
+
+std::optional&lt;int&gt; findIndex(const std::string&amp; haystack, char needle) {
+    for (std::size_t i = 0; i &lt; haystack.size(); ++i) {
+        if (haystack[i] == needle) return static_cast&lt;int&gt;(i);
+    }
+    return std::nullopt;  // "no value"
+}
+
+int main() {
+    auto result = findIndex("CodeVerse", 'V');
+
+    if (result.has_value()) {
+        std::cout &lt;&lt; "'V' found at index " &lt;&lt; *result &lt;&lt; "\n";
+    }
+
+    // value_or provides a default
+    int idx = findIndex("CodeVerse", 'Z').value_or(-1);
+    std::cout &lt;&lt; "Index of 'Z': " &lt;&lt; idx &lt;&lt; "\n";  // -1
+
+    return 0;
+}</code></pre>
+
+                <!-- ===== std::variant and std::any (C++17) ===== -->
+                <h2><code>std::variant</code> and <code>std::any</code> (C++17)</h2>
+                <p><code>std::variant</code> is a type-safe union &mdash; it holds exactly one of its listed types at any time. <code>std::any</code> can hold a value of <em>any</em> copyable type:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;variant&gt;
+#include &lt;any&gt;
+#include &lt;string&gt;
+
+int main() {
+    // std::variant
+    std::variant&lt;int, double, std::string&gt; val;
+    val = 42;
+    std::cout &lt;&lt; std::get&lt;int&gt;(val) &lt;&lt; "\n";
+
+    val = "hello";
+    std::cout &lt;&lt; std::get&lt;std::string&gt;(val) &lt;&lt; "\n";
+
+    // Visitor pattern with std::visit
+    val = 3.14;
+    std::visit([](auto&amp;&amp; arg) {
+        std::cout &lt;&lt; "Visited: " &lt;&lt; arg &lt;&lt; "\n";
+    }, val);
+
+    // std::any
+    std::any a = 10;
+    std::cout &lt;&lt; std::any_cast&lt;int&gt;(a) &lt;&lt; "\n";
+
+    a = std::string("world");
+    std::cout &lt;&lt; std::any_cast&lt;std::string&gt;(a) &lt;&lt; "\n";
+
+    // Bad cast throws std::bad_any_cast
+    try {
+        std::cout &lt;&lt; std::any_cast&lt;double&gt;(a) &lt;&lt; "\n";
+    } catch (const std::bad_any_cast&amp; e) {
+        std::cout &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+
+    return 0;
+}</code></pre>
+                <p><strong>When to choose which:</strong> Prefer <code>std::variant</code> when the set of possible types is known; use <code>std::any</code> only when truly arbitrary types must be stored (it has higher overhead).</p>
+
+                <!-- ===== std::string_view (C++17) ===== -->
+                <h2><code>std::string_view</code> (C++17)</h2>
+                <p><code>std::string_view</code> is a lightweight, non-owning reference to a contiguous sequence of characters. It avoids copying when you only need to <em>read</em> a string:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string_view&gt;
+#include &lt;string&gt;
+
+void greet(std::string_view name) {
+    std::cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!\n";
+}
+
+int main() {
+    std::string s = "CodeVerse";
+    const char* cstr = "World";
+
+    greet(s);        // no copy of std::string
+    greet(cstr);     // no copy of C-string
+    greet("Alice");  // no copy of string literal
+
+    // Substrings are also cheap (no allocation)
+    std::string_view sv = s;
+    std::cout &lt;&lt; sv.substr(0, 4) &lt;&lt; "\n";  // "Code"
+    std::cout &lt;&lt; sv.size() &lt;&lt; "\n";         // 9
+
+    return 0;
+}</code></pre>
+                <p><strong>Caution:</strong> A <code>string_view</code> does not own the underlying data. Never return a <code>string_view</code> to a local string that will be destroyed.</p>
+
+                <!-- ===== Concepts (C++20) ===== -->
+                <h2>Concepts (C++20)</h2>
+                <p><strong>Concepts</strong> let you constrain template parameters with readable, named requirements. They replace convoluted SFINAE tricks and produce clear error messages:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;concepts&gt;
+#include &lt;string&gt;
+
+// Define a concept
+template &lt;typename T&gt;
+concept Numeric = std::is_arithmetic_v&lt;T&gt;;
+
+// Use the concept in a requires clause
+template &lt;Numeric T&gt;
+T add(T a, T b) {
+    return a + b;
+}
+
+// Abbreviated function template with concept
+void printIfIntegral(std::integral auto val) {
+    std::cout &lt;&lt; "Integral value: " &lt;&lt; val &lt;&lt; "\n";
+}
+
+// Standard library concepts
+template &lt;std::floating_point T&gt;
+T half(T value) {
+    return value / 2.0;
+}
+
+int main() {
+    std::cout &lt;&lt; add(3, 4) &lt;&lt; "\n";       // 7
+    std::cout &lt;&lt; add(1.5, 2.5) &lt;&lt; "\n";   // 4.0
+    // add("a", "b");  // ERROR: std::string does not satisfy Numeric
+
+    printIfIntegral(42);
+    // printIfIntegral(3.14);  // ERROR: double is not integral
+
+    std::cout &lt;&lt; half(10.0) &lt;&lt; "\n";  // 5.0
+    return 0;
+}</code></pre>
+                <p>Common standard concepts include <code>std::integral</code>, <code>std::floating_point</code>, <code>std::copyable</code>, <code>std::movable</code>, <code>std::invocable</code>, and <code>std::ranges::range</code>.</p>
+
+                <!-- ===== Ranges Library (C++20) ===== -->
+                <h2>Ranges Library (C++20)</h2>
+                <p>The <code>&lt;ranges&gt;</code> library provides composable, lazy <strong>views</strong> and <strong>range adaptors</strong> that operate on sequences without extra allocations. They can be piped together using the <code>|</code> operator:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;ranges&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+int main() {
+    std::vector&lt;int&gt; nums{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    // Filter even numbers, square them, take first 3
+    auto result = nums
+        | std::views::filter([](int n) { return n % 2 == 0; })
+        | std::views::transform([](int n) { return n * n; })
+        | std::views::take(3);
+
+    for (int val : result) {
+        std::cout &lt;&lt; val &lt;&lt; " ";  // 4 16 36
+    }
+    std::cout &lt;&lt; "\n";
+
+    // std::views::iota generates a sequence
+    for (int i : std::views::iota(1, 6)) {
+        std::cout &lt;&lt; i &lt;&lt; " ";  // 1 2 3 4 5
+    }
+    std::cout &lt;&lt; "\n";
+
+    // Reverse view
+    for (int val : nums | std::views::reverse | std::views::take(3)) {
+        std::cout &lt;&lt; val &lt;&lt; " ";  // 10 9 8
+    }
+    std::cout &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+                <p>Views are <strong>lazy</strong> &mdash; no computation happens until you iterate. This makes long pipelines extremely efficient.</p>
+
+                <!-- ===== Modules (C++20) ===== -->
+                <h2>Modules (C++20)</h2>
+                <p><strong>Modules</strong> are a new compilation model designed to replace the traditional <code>#include</code> / header-file approach. They offer faster compilation, better encapsulation, and no macro leakage:</p>
+<pre><code>// mathlib.cppm  (module interface unit)
+export module mathlib;
+
+export int add(int a, int b) {
+    return a + b;
+}
+
+export int multiply(int a, int b) {
+    return a * b;
+}</code></pre>
+<pre><code>// main.cpp  (consumer)
+import mathlib;
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; add(3, 4) &lt;&lt; "\n";       // 7
+    std::cout &lt;&lt; multiply(5, 6) &lt;&lt; "\n";  // 30
+    return 0;
+}</code></pre>
+                <p><strong>Key benefits:</strong></p>
+                <ul>
+                    <li>Module interface is parsed <em>once</em> and stored in a binary form, dramatically speeding up builds.</li>
+                    <li>Macros defined inside a module do <em>not</em> leak into the importing translation unit.</li>
+                    <li>Only explicitly <code>export</code>-ed names are visible to importers &mdash; true encapsulation.</li>
+                </ul>
+                <p><strong>Note:</strong> Compiler support for modules is still maturing. Check your toolchain&rsquo;s documentation for build flags and file extensions (e.g., <code>.cppm</code>, <code>.ixx</code>).</p>
+
+                <!-- ===== Coroutines (C++20 Overview) ===== -->
+                <h2>Coroutines (C++20 Overview)</h2>
+                <p>C++20 introduced <strong>coroutines</strong> &mdash; functions that can <em>suspend</em> execution and be <em>resumed</em> later. They are the foundation for lazy generators, async I/O, and cooperative multitasking:</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;coroutine&gt;
+
+// A minimal Generator type
+template &lt;typename T&gt;
+struct Generator {
+    struct promise_type {
+        T current_value;
+        Generator get_return_object() {
+            return Generator{std::coroutine_handle&lt;promise_type&gt;::from_promise(*this)};
+        }
+        std::suspend_always initial_suspend() { return {}; }
+        std::suspend_always final_suspend() noexcept { return {}; }
+        std::suspend_always yield_value(T value) {
+            current_value = value;
+            return {};
+        }
+        void return_void() {}
+        void unhandled_exception() { std::terminate(); }
+    };
+
+    std::coroutine_handle&lt;promise_type&gt; handle;
+    Generator(std::coroutine_handle&lt;promise_type&gt; h) : handle(h) {}
+    ~Generator() { if (handle) handle.destroy(); }
+
+    bool next() { handle.resume(); return !handle.done(); }
+    T value() const { return handle.promise().current_value; }
+};
+
+Generator&lt;int&gt; range(int start, int end) {
+    for (int i = start; i &lt; end; ++i)
+        co_yield i;
+}
+
+int main() {
+    auto gen = range(1, 6);
+    while (gen.next()) {
+        std::cout &lt;&lt; gen.value() &lt;&lt; " ";  // 1 2 3 4 5
+    }
+    std::cout &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+                <p>Coroutine keywords: <code>co_await</code> (suspend until an awaitable completes), <code>co_yield</code> (produce a value and suspend), <code>co_return</code> (finish the coroutine).</p>
+
+                <!-- ===== Three-Way Comparison (Spaceship Operator <=>) ===== -->
+                <h2>Three-Way Comparison &mdash; Spaceship Operator <code>&lt;=&gt;</code></h2>
+                <p>C++20 introduced the <strong>three-way comparison operator</strong> (<code>&lt;=&gt;</code>), also known as the <em>spaceship operator</em>. A single <code>operator&lt;=&gt;</code> automatically generates all six comparison operators (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>):</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;compare&gt;
+#include &lt;string&gt;
+
+struct Version {
+    int major, minor, patch;
+
+    // Default spaceship &mdash; member-wise comparison
+    auto operator&lt;=&gt;(const Version&amp;) const = default;
+};
+
+struct Product {
+    std::string name;
+    double price;
+
+    // Custom spaceship
+    std::strong_ordering operator&lt;=&gt;(const Product&amp; other) const {
+        if (auto cmp = name &lt;=&gt; other.name; cmp != 0)
+            return cmp;
+        if (price &lt; other.price) return std::strong_ordering::less;
+        if (price &gt; other.price) return std::strong_ordering::greater;
+        return std::strong_ordering::equal;
+    }
+    bool operator==(const Product&amp;) const = default;
+};
+
+int main() {
+    Version v1{2, 1, 0}, v2{2, 3, 1};
+
+    if (v1 &lt; v2) std::cout &lt;&lt; "v1 is older\n";
+    if (v1 != v2) std::cout &lt;&lt; "versions differ\n";
+
+    Product a{"Apple", 1.50}, b{"Banana", 0.75};
+    if (a &gt; b) std::cout &lt;&lt; "Apple comes after Banana\n";
+
+    return 0;
+}</code></pre>
+                <p>The return type can be <code>std::strong_ordering</code>, <code>std::weak_ordering</code>, or <code>std::partial_ordering</code>, depending on how equivalence is defined.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>auto</code> reduces verbosity and makes code easier to refactor.</li>
+                    <li>Range-based <code>for</code> loops eliminate manual iterator boilerplate.</li>
+                    <li><code>nullptr</code> removes the ambiguity of <code>NULL</code> and <code>0</code>.</li>
+                    <li><code>constexpr</code> and <code>consteval</code> move computation to compile time for efficiency.</li>
+                    <li>Structured bindings (C++17) unpack aggregates into named variables.</li>
+                    <li><code>if constexpr</code> enables compile-time branching inside templates.</li>
+                    <li><code>std::optional</code>, <code>std::variant</code>, <code>std::any</code>, and <code>std::string_view</code> make code safer and more expressive.</li>
+                    <li>Concepts (C++20) replace SFINAE with clear, readable constraints.</li>
+                    <li>The Ranges library (C++20) offers composable, lazy views via the pipe operator.</li>
+                    <li>Modules (C++20) provide faster builds and true encapsulation.</li>
+                    <li>Coroutines (C++20) enable lazy generators and async patterns.</li>
+                    <li>The spaceship operator (<code>&lt;=&gt;</code>) generates all six comparisons from one definition.</li>
+                    <li>Always compile with the latest standard your project supports (<code>-std=c++20</code> or later).</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/TJIb9TGfDIw" title="C++ Modern Features" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which C++ standard is considered the landmark &ldquo;modern C++&rdquo; release?","o":["C++03","C++11","C++14","C++98"],"a":1},
+                {"q":"Which standard introduced concepts and ranges?","o":["C++14","C++17","C++20","C++23"],"a":2},
+                {"q":"What compiler flag selects C++20 in GCC/Clang?","o":["<code>-std=c++2a</code>","<code>-std=c++20</code>","<code>/std:c++20</code>","<code>-std=c++latest</code>"],"a":1},
+                {"q":"What does the <code>auto</code> keyword do?","o":["Allocates memory on the heap","Deduces the variable&rsquo;s type from its initialiser","Makes a variable constant","Declares a function"],"a":1},
+                {"q":"In which standard was <code>auto</code> type deduction introduced?","o":["C++03","C++17","C++11","C++20"],"a":2},
+                {"q":"What is the type of <code>auto x = 3.14;</code>?","o":["<code>float</code>","<code>int</code>","<code>double</code>","<code>long double</code>"],"a":2},
+                {"q":"What is the type of <code>auto s = &quot;hello&quot;;</code>?","o":["<code>std::string</code>","<code>const char*</code>","<code>char[]</code>","<code>std::string_view</code>"],"a":1},
+                {"q":"What does a range-based <code>for</code> loop require from a container?","o":["A <code>size()</code> method","<code>begin()</code> and <code>end()</code> methods","A <code>length()</code> property","An <code>operator[]</code> overload"],"a":1},
+                {"q":"How do you iterate by const reference in a range-based for loop?","o":["<code>for (auto val : vec)</code>","<code>for (const auto&amp; val : vec)</code>","<code>for (auto* val : vec)</code>","<code>for (ref val : vec)</code>"],"a":1},
+                {"q":"What is the type of <code>nullptr</code>?","o":["<code>int</code>","<code>void*</code>","<code>std::nullptr_t</code>","<code>NULL</code>"],"a":2},
+                {"q":"Why is <code>nullptr</code> preferred over <code>NULL</code>?","o":["It is faster","It avoids ambiguity between integer and pointer overloads","It was introduced in C++03","It converts to any type"],"a":1},
+                {"q":"What does <code>constexpr</code> indicate?","o":["The variable is mutable at runtime","The function or variable can be evaluated at compile time","The variable is thread-safe","The variable is global"],"a":1},
+                {"q":"What is the key difference between <code>constexpr</code> and <code>consteval</code>?","o":["<code>consteval</code> allows runtime evaluation","<code>constexpr</code> requires compile-time evaluation","<code>consteval</code> requires compile-time evaluation; <code>constexpr</code> allows it","They are identical"],"a":2},
+                {"q":"In which standard was <code>consteval</code> introduced?","o":["C++11","C++14","C++17","C++20"],"a":3},
+                {"q":"What are structured bindings?","o":["A way to bind threads to CPU cores","A C++17 feature to decompose aggregates into named variables","A new loop syntax","A type of smart pointer"],"a":1},
+                {"q":"Which syntax correctly uses structured bindings?","o":["<code>auto {a, b} = pair;</code>","<code>auto [a, b] = pair;</code>","<code>struct [a, b] = pair;</code>","<code>bind(a, b) = pair;</code>"],"a":1},
+                {"q":"Can structured bindings decompose a plain C array?","o":["No, only STL containers","Yes","Only if the array is <code>constexpr</code>","Only with C++23"],"a":1},
+                {"q":"What does <code>if constexpr</code> do?","o":["Evaluates the condition at runtime","Evaluates the condition at compile time and discards the untaken branch","Loops at compile time","Defines a concept"],"a":1},
+                {"q":"What happens to the discarded branch of an <code>if constexpr</code>?","o":["It is still compiled","It is completely removed during compilation","It causes a warning","It runs at runtime"],"a":1},
+                {"q":"In which standard was <code>if constexpr</code> introduced?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What does <code>std::optional</code> represent?","o":["An optional function parameter","A value that may or may not be present","An optional header include","A nullable pointer"],"a":1},
+                {"q":"What value represents &ldquo;no value&rdquo; in <code>std::optional</code>?","o":["<code>nullptr</code>","<code>std::nullopt</code>","<code>0</code>","<code>std::none</code>"],"a":1},
+                {"q":"What does <code>optional::value_or(default)</code> return?","o":["Always the default","The contained value if present, otherwise the default","An exception","A new optional"],"a":1},
+                {"q":"What is <code>std::variant</code>?","o":["A variable-length array","A type-safe union that holds one of several types","A thread-safe container","A polymorphic base class"],"a":1},
+                {"q":"How do you retrieve a value from a <code>std::variant</code>?","o":["<code>variant.value()</code>","<code>std::get&lt;T&gt;(variant)</code>","<code>variant[0]</code>","<code>variant.at&lt;T&gt;()</code>"],"a":1},
+                {"q":"What does <code>std::visit</code> do with a variant?","o":["Creates a copy","Applies a callable (visitor) to the currently held alternative","Serialises the variant","Sorts the alternatives"],"a":1},
+                {"q":"What is <code>std::any</code>?","o":["A concept","A type that can hold a value of any copyable type","A template alias for <code>void*</code>","A smart pointer"],"a":1},
+                {"q":"What exception is thrown by a bad <code>std::any_cast</code>?","o":["<code>std::bad_cast</code>","<code>std::bad_any_cast</code>","<code>std::runtime_error</code>","<code>std::invalid_argument</code>"],"a":1},
+                {"q":"When should you prefer <code>std::variant</code> over <code>std::any</code>?","o":["When you need arbitrary types","When the set of possible types is known at compile time","When performance does not matter","Never; they are interchangeable"],"a":1},
+                {"q":"What is <code>std::string_view</code>?","o":["An owning string class","A lightweight, non-owning reference to a character sequence","A mutable string buffer","A C++11 feature"],"a":1},
+                {"q":"Does <code>std::string_view</code> allocate memory?","o":["Yes, it copies the string","No, it references existing data","Only for substrings","Only for literals"],"a":1},
+                {"q":"What danger is associated with <code>std::string_view</code>?","o":["It modifies the original string","It can dangle if the underlying data is destroyed","It is slower than <code>std::string</code>","It only works with C-strings"],"a":1},
+                {"q":"What are concepts in C++20?","o":["A documentation standard","Named compile-time constraints on template parameters","Runtime type checks","A testing framework"],"a":1},
+                {"q":"Which header provides standard concepts like <code>std::integral</code>?","o":["<code>&lt;type_traits&gt;</code>","<code>&lt;concepts&gt;</code>","<code>&lt;algorithm&gt;</code>","<code>&lt;utility&gt;</code>"],"a":1},
+                {"q":"What technique did concepts replace?","o":["Inheritance","SFINAE and tag dispatch","Manual memory management","Operator overloading"],"a":1},
+                {"q":"What is the abbreviated function template syntax with concepts?","o":["<code>template &lt;T&gt; void f(T);</code>","<code>void f(std::integral auto val);</code>","<code>concept void f(T val);</code>","<code>auto f(concept T val);</code>"],"a":1},
+                {"q":"What does the <code>&lt;ranges&gt;</code> library provide?","o":["A random number generator","Composable, lazy views and range adaptors","File system access","Thread synchronisation"],"a":1},
+                {"q":"What operator is used to pipe range adaptors together?","o":["<code>&gt;&gt;</code>","<code>|</code>","<code>&amp;&amp;</code>","<code>::</code>"],"a":1},
+                {"q":"Are range views eager or lazy?","o":["Eager &mdash; computed immediately","Lazy &mdash; computed on iteration","It depends on the view","Eager in C++20, lazy in C++23"],"a":1},
+                {"q":"What does <code>std::views::filter</code> do?","o":["Sorts the range","Keeps only elements satisfying a predicate","Transforms each element","Reverses the range"],"a":1},
+                {"q":"What does <code>std::views::iota(1, 6)</code> generate?","o":["<code>1 2 3 4 5</code>","<code>1 2 3 4 5 6</code>","<code>6 5 4 3 2 1</code>","<code>0 1 2 3 4 5</code>"],"a":0},
+                {"q":"What are C++20 modules designed to replace?","o":["Namespaces","The <code>#include</code> / header-file model","Classes","Templates"],"a":1},
+                {"q":"What keyword exports a name from a module?","o":["<code>public</code>","<code>export</code>","<code>import</code>","<code>extern</code>"],"a":1},
+                {"q":"Do macros defined inside a module leak to importers?","o":["Yes, always","No, macros do not propagate across module boundaries","Only if <code>#define</code> is used","Only with <code>export</code>"],"a":1},
+                {"q":"What are C++20 coroutines?","o":["Multi-threaded functions","Functions that can suspend and resume execution","Compile-time functions","Recursive templates"],"a":1},
+                {"q":"Which keyword suspends a coroutine and produces a value?","o":["<code>co_await</code>","<code>co_yield</code>","<code>co_return</code>","<code>yield</code>"],"a":1},
+                {"q":"What does <code>co_await</code> do in a coroutine?","o":["Returns a value","Suspends until an awaitable completes","Terminates the coroutine","Spawns a new thread"],"a":1},
+                {"q":"What is the spaceship operator?","o":["<code>==&gt;</code>","<code>&lt;=&gt;</code>","<code>-&gt;</code>","<code>&lt;&lt;&gt;&gt;</code>"],"a":1},
+                {"q":"How many comparison operators does <code>operator&lt;=&gt;</code> generate?","o":["Two","Four","Six","One"],"a":2},
+                {"q":"What is the return type of a default <code>operator&lt;=&gt;</code> for a struct with <code>int</code> members?","o":["<code>bool</code>","<code>int</code>","<code>std::strong_ordering</code>","<code>std::partial_ordering</code>"],"a":2},
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="multithreading.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Multithreading</span>
+                </a>
+                <a href="debugging.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Debugging Techniques</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

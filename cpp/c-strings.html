@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ C-Strings - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-c-strings">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html" class="active"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 24 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="44" style="width:44%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; C-Strings
+                </div>
+                <h1>24. C-Strings</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 24 of 55</span>
+                    <span>&#9201; 14 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are C-Strings? ===== -->
+                <h2>What Are C-Strings?</h2>
+                <p>A <strong>C-string</strong> (also called a <strong>C-style string</strong>) is a sequence of characters stored in a <strong>character array</strong> and terminated by a special <strong>null character</strong> (<code>'\0'</code>). This was the primary way to handle text in C, and C++ inherits full support for it.</p>
+                <p>Unlike <code>std::string</code>, which manages its own memory automatically, C-strings are raw arrays &mdash; you are responsible for ensuring the buffer is large enough and that the null terminator is in place.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>How to declare, initialize, and store text in character arrays</li>
+                    <li>Why the null terminator <code>'\0'</code> is critical</li>
+                    <li>Reading C-strings from the keyboard with <code>cin</code> and <code>cin.getline()</code></li>
+                    <li>Using the standard <code>&lt;cstring&gt;</code> library functions</li>
+                    <li>Writing manual string operations from scratch</li>
+                    <li>How C-strings relate to pointers</li>
+                    <li>Character classification and conversion with <code>&lt;cctype&gt;</code></li>
+                    <li>Common pitfalls and how to avoid them</li>
+                    <li>When to prefer C-strings vs. <code>std::string</code></li>
+                </ul>
+
+                <!-- ===== Declaring and Initializing C-Strings ===== -->
+                <h2>Declaring and Initializing C-Strings</h2>
+                <p>There are several ways to create a C-string:</p>
+
+                <h3>Using a String Literal</h3>
+                <pre><code>char greeting[] = "Hello";
+// The compiler creates: {'H','e','l','l','o','\0'}
+// Size = 6 (5 characters + 1 null terminator)</code></pre>
+                <p>When you initialize with a string literal the compiler <strong>automatically</strong> appends the null terminator and sizes the array accordingly.</p>
+
+                <h3>Specifying a Fixed Size</h3>
+                <pre><code>char name[20] = "Alice";
+// First 5 positions hold 'A','l','i','c','e'
+// Position 5 holds '\0'
+// Positions 6&ndash;19 are zeroed out</code></pre>
+                <p>Any remaining positions after the text and its terminator are initialized to <code>'\0'</code>.</p>
+
+                <h3>Character-by-Character Initialization</h3>
+                <pre><code>char word[] = {'C', '+', '+', '\0'};
+// Equivalent to "C++"
+// You MUST include '\0' yourself!</code></pre>
+                <p>If you omit <code>'\0'</code> in brace initialization, the result is a plain <code>char</code> array &mdash; <strong>not</strong> a valid C-string.</p>
+
+                <h3>Uninitialized Declaration</h3>
+                <pre><code>char buffer[100];  // contains garbage values
+// Must fill it before using as a C-string</code></pre>
+
+                <!-- ===== The Null Terminator '\0' ===== -->
+                <h2>The Null Terminator <code>'\0'</code></h2>
+                <p>The null character <code>'\0'</code> (ASCII value <strong>0</strong>) marks the <strong>end</strong> of a C-string. Every C-string function &mdash; <code>strlen</code>, <code>strcpy</code>, <code>cout &lt;&lt;</code>, and so on &mdash; scans forward in memory until it hits this sentinel byte.</p>
+                <pre><code>char msg[10] = "Hi";
+// Memory layout:
+// Index:  0   1   2   3   4   5   6   7   8   9
+// Value: 'H' 'i' '\0' '\0' '\0' '\0' '\0' '\0' '\0' '\0'</code></pre>
+                <p>Without the null terminator, functions will read past the end of the array into adjacent memory &mdash; causing <strong>undefined behavior</strong>.</p>
+                <pre><code>// DANGEROUS &mdash; no null terminator
+char bad[3] = {'H', 'i', '!'};
+cout &lt;&lt; bad;  // Undefined: reads past the array</code></pre>
+
+                <!-- ===== Reading C-Strings ===== -->
+                <h2>Reading C-Strings with <code>cin</code> and <code>cin.getline()</code></h2>
+
+                <h3>Using <code>cin &gt;&gt;</code></h3>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char name[50];
+    cout &lt;&lt; "Enter your first name: ";
+    cin &gt;&gt; name;           // Reads until whitespace
+    cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!\n";
+    return 0;
+}</code></pre>
+                <p><code>cin &gt;&gt;</code> stops at the first whitespace character (space, tab, newline). It automatically appends <code>'\0'</code>. However, it does <strong>not</strong> check the buffer size &mdash; if the user types more characters than the array can hold, you get a <strong>buffer overflow</strong>.</p>
+
+                <h3>Using <code>cin.getline()</code></h3>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char sentence[100];
+    cout &lt;&lt; "Enter a sentence: ";
+    cin.getline(sentence, 100);  // Reads up to 99 chars + '\0'
+    cout &lt;&lt; "You said: " &lt;&lt; sentence &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                <p><code>cin.getline(buffer, size)</code> reads an entire line (including spaces) up to <code>size - 1</code> characters and appends <code>'\0'</code>. This is the <strong>preferred</strong> way to read C-strings because it prevents overflow.</p>
+
+                <h3>Specifying a Custom Delimiter</h3>
+                <pre><code>char data[100];
+cin.getline(data, 100, '#');  // Reads until '#' or 99 chars</code></pre>
+
+                <!-- ===== C-String Functions from <cstring> ===== -->
+                <h2>C-String Functions from <code>&lt;cstring&gt;</code></h2>
+                <p>The <code>&lt;cstring&gt;</code> header (C&rsquo;s <code>&lt;string.h&gt;</code>) provides a rich set of functions for manipulating null-terminated character arrays. You must <code>#include &lt;cstring&gt;</code> to use them.</p>
+
+                <h3><code>strlen</code> &mdash; String Length</h3>
+                <pre><code>#include &lt;cstring&gt;
+
+char txt[] = "CodeVerse";
+cout &lt;&lt; strlen(txt);  // 9 (does NOT count '\0')</code></pre>
+                <p><code>strlen</code> counts characters up to &mdash; but not including &mdash; the null terminator.</p>
+
+                <h3><code>strcpy</code> and <code>strncpy</code> &mdash; Copy</h3>
+                <pre><code>char src[] = "Hello";
+char dest[20];
+
+strcpy(dest, src);           // Copies "Hello\0" into dest
+strncpy(dest, src, 20);     // Copies at most 20 chars; pads with '\0'</code></pre>
+                <p><code>strcpy</code> copies the entire source string <strong>including</strong> the null terminator. It does not check the destination size &mdash; use <code>strncpy</code> for safer copying. Note that <code>strncpy</code> does <strong>not</strong> guarantee null termination if the source is longer than <code>n</code>.</p>
+
+                <h3><code>strcat</code> and <code>strncat</code> &mdash; Concatenate</h3>
+                <pre><code>char greeting[30] = "Hello, ";
+char name[] = "World";
+
+strcat(greeting, name);      // greeting = "Hello, World"
+// strncat(greeting, name, 5); // Appends at most 5 chars + '\0'</code></pre>
+                <p><code>strcat</code> appends the source to the end of the destination. The destination must have enough room for both strings plus the null terminator.</p>
+
+                <h3><code>strcmp</code> and <code>strncmp</code> &mdash; Compare</h3>
+                <pre><code>char a[] = "apple";
+char b[] = "banana";
+
+int result = strcmp(a, b);
+// result &lt; 0 because "apple" comes before "banana" (lexicographic)
+
+if (strcmp(a, b) == 0)
+    cout &lt;&lt; "Equal";
+else
+    cout &lt;&lt; "Not equal";
+
+// Compare only first n characters
+strncmp(a, b, 3);  // Compares "app" vs "ban"</code></pre>
+                <p><code>strcmp</code> returns <strong>0</strong> if both strings are equal, a <strong>negative</strong> value if the first is less, and a <strong>positive</strong> value if the first is greater &mdash; based on ASCII values.</p>
+
+                <h3><code>strchr</code> &mdash; Find Character</h3>
+                <pre><code>char str[] = "Hello, World!";
+char* pos = strchr(str, 'W');
+if (pos != nullptr)
+    cout &lt;&lt; "Found at index: " &lt;&lt; (pos - str);  // 7</code></pre>
+                <p><code>strchr</code> returns a pointer to the <strong>first</strong> occurrence of a character, or <code>nullptr</code> if not found.</p>
+
+                <h3><code>strstr</code> &mdash; Find Substring</h3>
+                <pre><code>char haystack[] = "Learn C++ at CodeVerse";
+char* found = strstr(haystack, "C++");
+if (found != nullptr)
+    cout &lt;&lt; "Found at index: " &lt;&lt; (found - haystack);  // 6</code></pre>
+                <p><code>strstr</code> returns a pointer to the first occurrence of the <strong>substring</strong>, or <code>nullptr</code> if not found.</p>
+
+                <!-- ===== Manual String Operations ===== -->
+                <h2>Manual String Operations</h2>
+                <p>Understanding how C-string functions work internally deepens your knowledge of arrays and pointers. Here are common operations implemented manually:</p>
+
+                <h3>Manual Length</h3>
+                <pre><code>int myStrlen(const char* s) {
+    int len = 0;
+    while (s[len] != '\0')
+        len++;
+    return len;
+}</code></pre>
+
+                <h3>Manual Copy</h3>
+                <pre><code>void myStrcpy(char* dest, const char* src) {
+    int i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';  // Don't forget the terminator!
+}</code></pre>
+
+                <h3>Manual Compare</h3>
+                <pre><code>int myStrcmp(const char* a, const char* b) {
+    int i = 0;
+    while (a[i] != '\0' &amp;&amp; a[i] == b[i])
+        i++;
+    return a[i] - b[i];
+}</code></pre>
+
+                <h3>Manual Reverse</h3>
+                <pre><code>#include &lt;cstring&gt;
+
+void myStrrev(char* s) {
+    int left = 0;
+    int right = strlen(s) - 1;
+    while (left &lt; right) {
+        char temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+        left++;
+        right--;
+    }
+}
+
+// Usage
+char word[] = "Hello";
+myStrrev(word);
+cout &lt;&lt; word;  // "olleH"</code></pre>
+
+                <!-- ===== C-Strings and Pointers ===== -->
+                <h2>C-Strings and Pointers</h2>
+                <p>A C-string is just a <code>char</code> array, and array names <strong>decay</strong> to pointers when passed to functions. This means you can work with C-strings using pointer notation:</p>
+                <pre><code>char msg[] = "Hello";
+char* ptr = msg;       // ptr points to msg[0] = 'H'
+
+cout &lt;&lt; *ptr;          // 'H'
+cout &lt;&lt; *(ptr + 1);    // 'e'
+cout &lt;&lt; ptr;            // Prints "Hello" (cout knows to print until '\0')</code></pre>
+
+                <h3>String Literals and <code>const char*</code></h3>
+                <pre><code>const char* greeting = "Hello, World!";
+// The literal is stored in read-only memory
+// greeting points to its first character
+// Attempting to modify it is UNDEFINED BEHAVIOR:
+// greeting[0] = 'h'; // DO NOT DO THIS</code></pre>
+                <p>Always use <code>const char*</code> when pointing to a string literal. Modifying a literal&rsquo;s contents leads to undefined behavior.</p>
+
+                <h3>Arrays of C-Strings</h3>
+                <pre><code>const char* colors[] = {"Red", "Green", "Blue"};
+for (int i = 0; i &lt; 3; i++)
+    cout &lt;&lt; colors[i] &lt;&lt; "\n";
+
+// Alternative: 2D char array
+char fruits[3][10] = {"Apple", "Banana", "Cherry"};
+for (int i = 0; i &lt; 3; i++)
+    cout &lt;&lt; fruits[i] &lt;&lt; "\n";</code></pre>
+
+                <!-- ===== Character Functions from <cctype> ===== -->
+                <h2>Character Functions from <code>&lt;cctype&gt;</code></h2>
+                <p>The <code>&lt;cctype&gt;</code> header provides functions that classify and transform <strong>individual characters</strong>:</p>
+
+                <h3>Classification Functions</h3>
+                <pre><code>#include &lt;cctype&gt;
+
+char ch = 'A';
+isalpha(ch);   // true &mdash; is a letter
+isdigit(ch);   // false &mdash; is not a digit
+isalnum(ch);   // true &mdash; is a letter or digit
+isspace(ch);   // false &mdash; is not whitespace
+isupper(ch);   // true &mdash; is uppercase
+islower(ch);   // false &mdash; is not lowercase
+ispunct(ch);   // false &mdash; is not punctuation</code></pre>
+
+                <h3>Conversion Functions</h3>
+                <pre><code>char lower = tolower('A');   // 'a'
+char upper = toupper('z');   // 'Z'</code></pre>
+
+                <h3>Practical Example: Convert to Uppercase</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;cctype&gt;
+using namespace std;
+
+int main() {
+    char text[100];
+    cout &lt;&lt; "Enter text: ";
+    cin.getline(text, 100);
+
+    for (int i = 0; i &lt; strlen(text); i++)
+        text[i] = toupper(text[i]);
+
+    cout &lt;&lt; "Uppercase: " &lt;&lt; text &lt;&lt; endl;
+    return 0;
+}</code></pre>
+
+                <h3>Count Letters, Digits, and Spaces</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;cctype&gt;
+using namespace std;
+
+int main() {
+    char input[200];
+    cout &lt;&lt; "Enter a string: ";
+    cin.getline(input, 200);
+
+    int letters = 0, digits = 0, spaces = 0;
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (isalpha(input[i]))  letters++;
+        if (isdigit(input[i]))  digits++;
+        if (isspace(input[i]))  spaces++;
+    }
+
+    cout &lt;&lt; "Letters: " &lt;&lt; letters &lt;&lt; "\n";
+    cout &lt;&lt; "Digits:  " &lt;&lt; digits  &lt;&lt; "\n";
+    cout &lt;&lt; "Spaces:  " &lt;&lt; spaces  &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+
+                <!-- ===== Common Pitfalls ===== -->
+                <h2>Common Pitfalls</h2>
+
+                <h3>1. Buffer Overflow</h3>
+                <pre><code>char name[5];
+strcpy(name, "Alexander");  // OVERFLOW! "Alexander" needs 10 bytes
+// Writes past the array &mdash; undefined behavior</code></pre>
+                <p><strong>Fix:</strong> Always ensure the destination buffer is large enough. Use <code>strncpy</code> or check <code>strlen</code> before copying.</p>
+
+                <h3>2. Missing Null Terminator</h3>
+                <pre><code>char word[5] = {'H', 'e', 'l', 'l', 'o'};
+cout &lt;&lt; word;  // UB: no '\0' &mdash; prints garbage after "Hello"</code></pre>
+                <p><strong>Fix:</strong> Always leave room for <code>'\0'</code>. Use <code>char word[6] = {'H','e','l','l','o','\0'};</code> or initialize with a string literal.</p>
+
+                <h3>3. Off-by-One Errors</h3>
+                <pre><code>char buf[10];
+cin.getline(buf, 11);  // WRONG: allows reading 10 chars + '\0' = 11 bytes
+                        // but buf only holds 10 bytes</code></pre>
+                <p><strong>Fix:</strong> The second argument to <code>cin.getline()</code> must be &le; the array size.</p>
+
+                <h3>4. Comparing Strings with <code>==</code></h3>
+                <pre><code>char a[] = "hello";
+char b[] = "hello";
+
+if (a == b)  // WRONG: compares pointer addresses, not content
+    cout &lt;&lt; "Equal";
+
+// Correct:
+if (strcmp(a, b) == 0)
+    cout &lt;&lt; "Equal";</code></pre>
+
+                <h3>5. Forgetting That <code>strncpy</code> May Not Null-Terminate</h3>
+                <pre><code>char dest[5];
+strncpy(dest, "Hello, World!", 5);
+// dest = {'H','e','l','l','o'} &mdash; NO '\0'!
+dest[4] = '\0';  // Manually terminate</code></pre>
+
+                <!-- ===== C-Strings vs std::string ===== -->
+                <h2>C-Strings vs <code>std::string</code> Comparison</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C-String (<code>char[]</code>)</th>
+                            <th><code>std::string</code></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Memory management</td>
+                            <td>Manual (fixed-size buffer)</td>
+                            <td>Automatic (dynamic)</td>
+                        </tr>
+                        <tr>
+                            <td>Null terminator</td>
+                            <td>Required &mdash; your responsibility</td>
+                            <td>Handled internally</td>
+                        </tr>
+                        <tr>
+                            <td>Length</td>
+                            <td><code>strlen(s)</code> &mdash; O(n)</td>
+                            <td><code>s.size()</code> &mdash; O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Copy</td>
+                            <td><code>strcpy</code> / <code>strncpy</code></td>
+                            <td><code>s2 = s1;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Concatenation</td>
+                            <td><code>strcat</code> (manual buffer check)</td>
+                            <td><code>s1 + s2</code> or <code>s1 += s2</code></td>
+                        </tr>
+                        <tr>
+                            <td>Comparison</td>
+                            <td><code>strcmp(a, b)</code></td>
+                            <td><code>a == b</code>, <code>a &lt; b</code></td>
+                        </tr>
+                        <tr>
+                            <td>Safety</td>
+                            <td>Prone to overflow &amp; UB</td>
+                            <td>Bounds-checked, exception-safe</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Minimal overhead</td>
+                            <td>Slight overhead (heap allocation)</td>
+                        </tr>
+                        <tr>
+                            <td>Interop with C APIs</td>
+                            <td>Direct</td>
+                            <td>Via <code>.c_str()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Recommended for</td>
+                            <td>Low-level / embedded / C interop</td>
+                            <td>General C++ programming</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>In modern C++, prefer <code>std::string</code> for most tasks. Use C-strings when interfacing with C libraries, working in constrained environments, or when you need precise control over memory layout.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>A <strong>C-string</strong> is a null-terminated <code>char</code> array &mdash; the <code>'\0'</code> sentinel marks where the string ends.</li>
+                    <li>Always allocate <strong>one extra byte</strong> for the null terminator when sizing your buffer.</li>
+                    <li>Use <code>cin.getline(buf, size)</code> to safely read full lines, preventing buffer overflow.</li>
+                    <li><code>&lt;cstring&gt;</code> provides <code>strlen</code>, <code>strcpy</code>, <code>strncpy</code>, <code>strcat</code>, <code>strncat</code>, <code>strcmp</code>, <code>strncmp</code>, <code>strchr</code>, and <code>strstr</code> for common operations.</li>
+                    <li>Never compare C-strings with <code>==</code>; use <code>strcmp</code> instead.</li>
+                    <li>C-strings decay to <code>char*</code> pointers &mdash; you can manipulate them with pointer arithmetic.</li>
+                    <li><code>&lt;cctype&gt;</code> functions (<code>isalpha</code>, <code>isdigit</code>, <code>toupper</code>, <code>tolower</code>) work on individual characters.</li>
+                    <li>Watch out for <strong>buffer overflow</strong>, <strong>missing null terminators</strong>, and <strong>off-by-one</strong> errors &mdash; the most common C-string bugs.</li>
+                    <li><code>strncpy</code> does <strong>not</strong> guarantee null termination when the source exceeds <code>n</code> characters.</li>
+                    <li>Prefer <code>std::string</code> in modern C++ unless you have a specific reason to use C-strings (C interop, embedded, performance-critical code).</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Watch: C++ C-Strings</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/Bf7n6VaFbh8" title="C++ C-Strings" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- ===== Quiz Section ===== -->
+            <div class="quiz-btn-wrapper">
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a C-string in C++?","o":["An instance of std::string","A null-terminated character array","A character linked list","A wchar_t array"],"a":1},
+                {"q":"Which character marks the end of a C-string?","o":["'\\n'","'\\t'","'\\0'","' '"],"a":2},
+                {"q":"What is the ASCII value of the null terminator '\\0'?","o":["48","65","32","0"],"a":3},
+                {"q":"How many bytes does char s[] = \"Hi\"; occupy?","o":["2","3","4","Depends on the compiler"],"a":1},
+                {"q":"Which header provides strlen, strcpy, and strcmp?","o":["&lt;string&gt;","&lt;cstring&gt;","&lt;cctype&gt;","&lt;cstdlib&gt;"],"a":1},
+                {"q":"What does strlen(\"Hello\") return?","o":["4","5","6","Undefined"],"a":1},
+                {"q":"Does strlen count the null terminator?","o":["Yes","No","Only for empty strings","Only with strncpy"],"a":1},
+                {"q":"Which declaration is NOT a valid C-string?","o":["char s[] = \"Hi\";","char s[] = {'H','i','\\0'};","char s[] = {'H','i'};","char s[10] = \"Hi\";"],"a":2},
+                {"q":"What happens if you print a char array without a null terminator?","o":["Prints nothing","Prints only the first char","Undefined behavior","Throws an exception"],"a":2},
+                {"q":"Which function reads an entire line into a C-string?","o":["cin &gt;&gt;","cin.getline()","getchar()","scanf"],"a":1},
+                {"q":"How does cin &gt;&gt; read a C-string?","o":["Reads until newline","Reads until whitespace","Reads a fixed number of chars","Reads the entire file"],"a":1},
+                {"q":"What is the second argument of cin.getline(buf, n)?","o":["The delimiter character","The maximum number of chars including null","The starting index","The string to find"],"a":1},
+                {"q":"Which function copies one C-string into another?","o":["strcmp","strcat","strcpy","strlen"],"a":2},
+                {"q":"What is the risk of using strcpy?","o":["It is slow","It may cause buffer overflow","It reverses the string","It removes the null terminator"],"a":1},
+                {"q":"How does strncpy differ from strcpy?","o":["strncpy is faster","strncpy limits the number of characters copied","strncpy also compares strings","strncpy works only with const char*"],"a":1},
+                {"q":"Does strncpy always null-terminate the destination?","o":["Yes","No","Only if n &gt; source length","Only in C++17"],"a":2},
+                {"q":"What does strcat do?","o":["Compares two strings","Copies a string","Appends one string to another","Searches for a character"],"a":2},
+                {"q":"What must be true about the destination in strcat?","o":["It must be empty","It must be large enough for both strings plus '\\0'","It must be const","It must use dynamic memory"],"a":1},
+                {"q":"What does strcmp return when the two strings are equal?","o":["-1","0","1","true"],"a":1},
+                {"q":"What does strcmp return if the first string is lexicographically less?","o":["A positive value","0","A negative value","Undefined"],"a":2},
+                {"q":"Why should you NOT use == to compare C-strings?","o":["It compares lengths","It causes a syntax error","It compares pointer addresses, not content","It only works with std::string"],"a":2},
+                {"q":"What does strchr(str, 'a') return?","o":["The index of 'a'","A pointer to the first 'a' or nullptr","The number of 'a' characters","true or false"],"a":1},
+                {"q":"What does strstr(hay, needle) return?","o":["The length of needle in hay","A pointer to the first occurrence of needle in hay","true if found","The index of the substring"],"a":1},
+                {"q":"What does strncmp(a, b, 3) compare?","o":["The entire strings","Only the first 3 characters","Characters starting at index 3","Every 3rd character"],"a":1},
+                {"q":"What does strncat(dest, src, n) do?","o":["Copies at most n chars","Appends at most n chars from src to dest plus '\\0'","Compares n chars","Searches for n chars"],"a":1},
+                {"q":"Which line correctly declares a pointer to a string literal?","o":["char* p = \"Hello\";","const char* p = \"Hello\";","char p[] = \"Hello\"; char* q = p;","Both B and C are correct"],"a":3},
+                {"q":"Why should string literal pointers be const char*?","o":["For faster access","Because literals are stored in read-only memory","To prevent copying","Because the compiler requires it in all cases"],"a":1},
+                {"q":"What is the output of: char s[] = \"AB\"; cout &lt;&lt; s[2];?","o":["'B'","'\\0' (nothing visible)","Undefined behavior","'A'"],"a":1},
+                {"q":"Which header provides isalpha, isdigit, and toupper?","o":["&lt;cstring&gt;","&lt;cctype&gt;","&lt;cstdio&gt;","&lt;cmath&gt;"],"a":1},
+                {"q":"What does isalpha('5') return?","o":["Non-zero (true)","0 (false)","5","'5'"],"a":1},
+                {"q":"What does toupper('a') return?","o":["'a'","'A'","97","65"],"a":1},
+                {"q":"What does tolower('Z') return?","o":["'Z'","'z'","90","122"],"a":1},
+                {"q":"What does isdigit('7') return?","o":["7","0 (false)","Non-zero (true)","'7'"],"a":2},
+                {"q":"What does isspace(' ') return?","o":["0 (false)","Non-zero (true)","' '","32"],"a":1},
+                {"q":"What is a buffer overflow?","o":["Writing more data than a buffer can hold","Running out of heap memory","A stack underflow","Exceeding the integer max value"],"a":0},
+                {"q":"Which function is safer: strcpy or strncpy?","o":["strcpy","strncpy","Both are equally safe","Neither is safe"],"a":1},
+                {"q":"How do you manually find the length of a C-string?","o":["Count chars until '\\0' in a loop","Use sizeof","Use the length property","Call size()"],"a":0},
+                {"q":"In char s[10] = \"Cat\"; what is s[3]?","o":["'t'","'\\0'","Garbage","'C'"],"a":1},
+                {"q":"What does sizeof(\"Hello\") return?","o":["5","6","4","Depends on the platform"],"a":1},
+                {"q":"What is the difference between sizeof and strlen for a C-string?","o":["sizeof counts '\\0', strlen does not","strlen counts '\\0', sizeof does not","They are identical","sizeof is O(n), strlen is O(1)"],"a":0},
+                {"q":"How is a C-string passed to a function?","o":["By value (full copy)","As a pointer to the first character","As an std::string","By reference only"],"a":1},
+                {"q":"Which correctly creates an array of three C-strings?","o":["const char* a[] = {\"A\",\"B\",\"C\"};","char a[3] = {\"A\",\"B\",\"C\"};","string a[3] = {'A','B','C'};","char a = {\"A\",\"B\",\"C\"};"],"a":0},
+                {"q":"What does cout &lt;&lt; ptr print when ptr is a char*?","o":["The memory address","The characters until '\\0'","The first character only","The size of the array"],"a":1},
+                {"q":"How do you print the address of a C-string instead of its contents?","o":["cout &lt;&lt; &amp;str;","cout &lt;&lt; (void*)str;","cout &lt;&lt; *str;","cout &lt;&lt; str[0];"],"a":1},
+                {"q":"What is the correct way to reverse a C-string in place?","o":["Use std::reverse with iterators","Swap characters from both ends toward the center","Assign it to a new reversed array only","Call strrev (non-standard)"],"a":1},
+                {"q":"Which is true about cin.getline(buf, 100, '#')?","o":["Reads until '#' or 99 chars, whichever comes first","Reads exactly 100 characters","Reads until a newline only","Skips '#' characters"],"a":0},
+                {"q":"What value does strcmp return when comparing \"abc\" and \"abd\"?","o":["0","A positive value","A negative value","1"],"a":2},
+                {"q":"In modern C++, which should you generally prefer?","o":["C-strings for all tasks","std::string for most tasks","Neither","char* with new"],"a":1},
+                {"q":"When is using C-strings preferred over std::string?","o":["Always","Never","When interfacing with C libraries or in embedded systems","When working with Unicode"],"a":2},
+                {"q":"What does the .c_str() method of std::string return?","o":["A std::string copy","A const char* pointing to the string data","The string length","A char array copy"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="multi-arrays.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Multi-Dimensional Arrays</span>
+                </a>
+                <a href="strings.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">std::string</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

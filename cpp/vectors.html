@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ STL Vectors - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-vectors">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html" class="active"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 39 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="71" style="width:71%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; STL Vectors
+                </div>
+                <h1>39. STL Vectors</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 39 of 55</span>
+                    <span>&#9201; 17 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is std::vector? ===== -->
+                <h2>What Is std::vector?</h2>
+                <p><code>std::vector</code> is a <strong>dynamic array</strong> provided by the C++ Standard Template Library (STL). Unlike raw C-style arrays whose size must be known at compile time, a vector can <strong>grow and shrink at runtime</strong> as you add or remove elements. It is defined in the <code>&lt;vector&gt;</code> header.</p>
+                <p>Under the hood, a vector manages a contiguous block of heap memory. When you add elements beyond the current capacity, it automatically allocates a larger block, copies the existing elements over, and releases the old memory &mdash; all transparently.</p>
+                <p>Why use vectors instead of raw arrays?</p>
+                <ul>
+                    <li><strong>Dynamic sizing</strong> &mdash; no need to know the number of elements at compile time.</li>
+                    <li><strong>Automatic memory management</strong> &mdash; no manual <code>new[]</code> / <code>delete[]</code>.</li>
+                    <li><strong>Bounds-checked access</strong> &mdash; the <code>at()</code> method throws an exception on out-of-range access.</li>
+                    <li><strong>Rich API</strong> &mdash; built-in methods for insertion, deletion, searching, sorting, and more.</li>
+                    <li><strong>STL compatibility</strong> &mdash; works seamlessly with algorithms, iterators, and other containers.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; nums = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>};
+
+    nums.<span class="function">push_back</span>(<span class="number">40</span>);  <span class="comment">// add element at the end</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : nums) {
+        std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    }
+    <span class="comment">// Output: 10 20 30 40</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Creating and Initializing Vectors ===== -->
+                <h2>Creating and Initializing Vectors</h2>
+                <p>There are many ways to create a <code>std::vector</code>. Below are the most common initialization patterns:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;vector&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// 1. Empty vector</span>
+    vector&lt;<span class="keyword">int</span>&gt; v1;
+
+    <span class="comment">// 2. Initializer list</span>
+    vector&lt;<span class="keyword">int</span>&gt; v2 = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>};
+
+    <span class="comment">// 3. N copies of a value</span>
+    vector&lt;<span class="keyword">int</span>&gt; v3(<span class="number">5</span>, <span class="number">0</span>);  <span class="comment">// {0, 0, 0, 0, 0}</span>
+
+    <span class="comment">// 4. N default-initialized elements</span>
+    vector&lt;<span class="keyword">int</span>&gt; v4(<span class="number">10</span>);  <span class="comment">// 10 zeros for int</span>
+
+    <span class="comment">// 5. Copy constructor</span>
+    vector&lt;<span class="keyword">int</span>&gt; v5(v2);  <span class="comment">// copy of v2</span>
+
+    <span class="comment">// 6. From iterators (range)</span>
+    vector&lt;<span class="keyword">int</span>&gt; v6(v2.<span class="function">begin</span>(), v2.<span class="function">begin</span>() + <span class="number">3</span>);  <span class="comment">// {1, 2, 3}</span>
+
+    <span class="comment">// 7. Move constructor</span>
+    vector&lt;<span class="keyword">int</span>&gt; v7 = std::<span class="function">move</span>(v3);  <span class="comment">// v3 is now empty</span>
+
+    <span class="comment">// 8. Using assign()</span>
+    vector&lt;<span class="keyword">int</span>&gt; v8;
+    v8.<span class="function">assign</span>(<span class="number">4</span>, <span class="number">99</span>);  <span class="comment">// {99, 99, 99, 99}</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Accessing Elements ===== -->
+                <h2>Accessing Elements</h2>
+                <p>Vectors provide several ways to read and modify individual elements:</p>
+                <ul>
+                    <li><code>operator[]</code> &mdash; fast, <strong>no bounds checking</strong>. Undefined behaviour if the index is out of range.</li>
+                    <li><code>at(index)</code> &mdash; performs bounds checking and throws <code>std::out_of_range</code> if the index is invalid.</li>
+                    <li><code>front()</code> &mdash; returns a reference to the <strong>first</strong> element.</li>
+                    <li><code>back()</code> &mdash; returns a reference to the <strong>last</strong> element.</li>
+                    <li><code>data()</code> &mdash; returns a raw pointer to the underlying array.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; v = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>};
+
+    std::cout &lt;&lt; v[<span class="number">0</span>] &lt;&lt; <span class="string">"\n"</span>;       <span class="comment">// 10  (no bounds check)</span>
+    std::cout &lt;&lt; v.<span class="function">at</span>(<span class="number">2</span>) &lt;&lt; <span class="string">"\n"</span>;   <span class="comment">// 30  (bounds-checked)</span>
+    std::cout &lt;&lt; v.<span class="function">front</span>() &lt;&lt; <span class="string">"\n"</span>; <span class="comment">// 10</span>
+    std::cout &lt;&lt; v.<span class="function">back</span>() &lt;&lt; <span class="string">"\n"</span>;  <span class="comment">// 50</span>
+
+    v[<span class="number">1</span>] = <span class="number">25</span>;         <span class="comment">// modify via []</span>
+    v.<span class="function">at</span>(<span class="number">3</span>) = <span class="number">45</span>;      <span class="comment">// modify via at()</span>
+
+    <span class="comment">// Bounds-checked access catches errors</span>
+    <span class="keyword">try</span> {
+        std::cout &lt;&lt; v.<span class="function">at</span>(<span class="number">100</span>) &lt;&lt; <span class="string">"\n"</span>;
+    } <span class="keyword">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {
+        std::cout &lt;&lt; <span class="string">"Error: "</span> &lt;&lt; e.<span class="function">what</span>() &lt;&lt; <span class="string">"\n"</span>;
+    }
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Adding Elements ===== -->
+                <h2>Adding Elements</h2>
+                <p>Vectors provide several methods for inserting new elements:</p>
+                <ul>
+                    <li><code>push_back(val)</code> &mdash; appends a <strong>copy</strong> of <code>val</code> to the end. O(1) amortized.</li>
+                    <li><code>emplace_back(args...)</code> &mdash; constructs the element <strong>in-place</strong> at the end, avoiding an extra copy. O(1) amortized.</li>
+                    <li><code>insert(pos, val)</code> &mdash; inserts <code>val</code> before the iterator <code>pos</code>. O(n) because elements must be shifted.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+<span class="preprocessor">#include &lt;string&gt;</span>
+
+<span class="keyword">struct</span> <span class="keyword">Point</span> {
+    <span class="keyword">double</span> x, y;
+    <span class="function">Point</span>(<span class="keyword">double</span> x, <span class="keyword">double</span> y) : x(x), y(y) {}
+};
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// push_back copies the value</span>
+    std::vector&lt;<span class="keyword">int</span>&gt; nums;
+    nums.<span class="function">push_back</span>(<span class="number">10</span>);
+    nums.<span class="function">push_back</span>(<span class="number">20</span>);
+    nums.<span class="function">push_back</span>(<span class="number">30</span>);
+    <span class="comment">// nums: {10, 20, 30}</span>
+
+    <span class="comment">// emplace_back constructs in-place (more efficient for objects)</span>
+    std::vector&lt;Point&gt; points;
+    points.<span class="function">emplace_back</span>(<span class="number">1.0</span>, <span class="number">2.0</span>);
+    points.<span class="function">emplace_back</span>(<span class="number">3.5</span>, <span class="number">4.5</span>);
+
+    <span class="comment">// insert at a specific position</span>
+    <span class="keyword">auto</span> it = nums.<span class="function">begin</span>() + <span class="number">1</span>;
+    nums.<span class="function">insert</span>(it, <span class="number">15</span>);
+    <span class="comment">// nums: {10, 15, 20, 30}</span>
+
+    <span class="comment">// insert multiple copies</span>
+    nums.<span class="function">insert</span>(nums.<span class="function">end</span>(), <span class="number">3</span>, <span class="number">99</span>);
+    <span class="comment">// nums: {10, 15, 20, 30, 99, 99, 99}</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : nums) std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    <span class="comment">// Output: 10 15 20 30 99 99 99</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Removing Elements ===== -->
+                <h2>Removing Elements</h2>
+                <p>To remove elements from a vector:</p>
+                <ul>
+                    <li><code>pop_back()</code> &mdash; removes the <strong>last</strong> element. O(1).</li>
+                    <li><code>erase(pos)</code> &mdash; removes the element at iterator <code>pos</code>. O(n).</li>
+                    <li><code>erase(first, last)</code> &mdash; removes a range of elements. O(n).</li>
+                    <li><code>clear()</code> &mdash; removes <strong>all</strong> elements, leaving the vector empty.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; v = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>};
+
+    <span class="comment">// Remove the last element</span>
+    v.<span class="function">pop_back</span>();
+    <span class="comment">// v: {10, 20, 30, 40}</span>
+
+    <span class="comment">// Erase element at index 1</span>
+    v.<span class="function">erase</span>(v.<span class="function">begin</span>() + <span class="number">1</span>);
+    <span class="comment">// v: {10, 30, 40}</span>
+
+    <span class="comment">// Erase a range [begin+0, begin+2)</span>
+    v.<span class="function">erase</span>(v.<span class="function">begin</span>(), v.<span class="function">begin</span>() + <span class="number">2</span>);
+    <span class="comment">// v: {40}</span>
+
+    <span class="comment">// Clear all elements</span>
+    v.<span class="function">clear</span>();
+    std::cout &lt;&lt; <span class="string">"Size after clear: "</span> &lt;&lt; v.<span class="function">size</span>() &lt;&lt; <span class="string">"\n"</span>;
+    <span class="comment">// Output: Size after clear: 0</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Size and Capacity ===== -->
+                <h2>Size and Capacity</h2>
+                <p>Understanding size vs. capacity is crucial for writing efficient vector code:</p>
+                <ul>
+                    <li><code>size()</code> &mdash; the number of elements currently stored.</li>
+                    <li><code>capacity()</code> &mdash; the total number of elements the vector can hold before needing to reallocate.</li>
+                    <li><code>empty()</code> &mdash; returns <code>true</code> if <code>size() == 0</code>.</li>
+                    <li><code>resize(n)</code> &mdash; changes <code>size()</code> to <code>n</code>. If growing, adds default-constructed elements; if shrinking, removes elements from the end.</li>
+                    <li><code>reserve(n)</code> &mdash; requests that the capacity be at least <code>n</code>. Does <strong>not</strong> change <code>size()</code>.</li>
+                    <li><code>shrink_to_fit()</code> &mdash; requests reduction of capacity to match size (non-binding).</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; v;
+
+    <span class="comment">// Reserve space for 100 elements up front</span>
+    v.<span class="function">reserve</span>(<span class="number">100</span>);
+    std::cout &lt;&lt; <span class="string">"Size: "</span> &lt;&lt; v.<span class="function">size</span>() &lt;&lt; <span class="string">"\n"</span>;       <span class="comment">// 0</span>
+    std::cout &lt;&lt; <span class="string">"Capacity: "</span> &lt;&lt; v.<span class="function">capacity</span>() &lt;&lt; <span class="string">"\n"</span>; <span class="comment">// &gt;= 100</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)
+        v.<span class="function">push_back</span>(i);
+
+    std::cout &lt;&lt; <span class="string">"Size: "</span> &lt;&lt; v.<span class="function">size</span>() &lt;&lt; <span class="string">"\n"</span>;       <span class="comment">// 10</span>
+    std::cout &lt;&lt; <span class="string">"Capacity: "</span> &lt;&lt; v.<span class="function">capacity</span>() &lt;&lt; <span class="string">"\n"</span>; <span class="comment">// still &gt;= 100</span>
+
+    <span class="comment">// Resize to 5 elements (removes last 5)</span>
+    v.<span class="function">resize</span>(<span class="number">5</span>);
+    std::cout &lt;&lt; <span class="string">"Size after resize(5): "</span> &lt;&lt; v.<span class="function">size</span>() &lt;&lt; <span class="string">"\n"</span>; <span class="comment">// 5</span>
+
+    <span class="comment">// Shrink capacity to match size</span>
+    v.<span class="function">shrink_to_fit</span>();
+    std::cout &lt;&lt; <span class="string">"Capacity after shrink: "</span> &lt;&lt; v.<span class="function">capacity</span>() &lt;&lt; <span class="string">"\n"</span>; <span class="comment">// likely 5</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <p><strong>Performance tip:</strong> If you know how many elements you will add, call <code>reserve()</code> before the loop. This avoids repeated reallocations and copies, which can significantly improve performance for large vectors.</p>
+
+                <!-- ===== Iterating Over Vectors ===== -->
+                <h2>Iterating Over Vectors</h2>
+                <p>There are several idiomatic ways to loop through a vector:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; v = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>};
+
+    <span class="comment">// 1. Index-based for loop</span>
+    <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; v.<span class="function">size</span>(); ++i) {
+        std::cout &lt;&lt; v[i] &lt;&lt; <span class="string">" "</span>;
+    }
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// 2. Range-based for loop (C++11)</span>
+    <span class="keyword">for</span> (<span class="keyword">int</span> val : v) {
+        std::cout &lt;&lt; val &lt;&lt; <span class="string">" "</span>;
+    }
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// 3. Range-based for with reference (to modify elements)</span>
+    <span class="keyword">for</span> (<span class="keyword">int</span>&amp; val : v) {
+        val *= <span class="number">2</span>;  <span class="comment">// doubles each element</span>
+    }
+
+    <span class="comment">// 4. Iterator-based loop</span>
+    <span class="keyword">for</span> (<span class="keyword">auto</span> it = v.<span class="function">begin</span>(); it != v.<span class="function">end</span>(); ++it) {
+        std::cout &lt;&lt; *it &lt;&lt; <span class="string">" "</span>;
+    }
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// 5. Reverse iterator</span>
+    <span class="keyword">for</span> (<span class="keyword">auto</span> rit = v.<span class="function">rbegin</span>(); rit != v.<span class="function">rend</span>(); ++rit) {
+        std::cout &lt;&lt; *rit &lt;&lt; <span class="string">" "</span>;
+    }
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// 6. Const iterator (read-only)</span>
+    <span class="keyword">for</span> (<span class="keyword">auto</span> cit = v.<span class="function">cbegin</span>(); cit != v.<span class="function">cend</span>(); ++cit) {
+        std::cout &lt;&lt; *cit &lt;&lt; <span class="string">" "</span>;
+    }
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Vectors and Functions ===== -->
+                <h2>Vectors and Functions</h2>
+                <p>Vectors should generally be <strong>passed by reference</strong> to avoid expensive copying. Use <code>const</code> references when the function only needs to read the data.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+<span class="preprocessor">#include &lt;numeric&gt;</span>
+
+<span class="comment">// Pass by const reference (read-only)</span>
+<span class="keyword">void</span> <span class="function">printVector</span>(<span class="keyword">const</span> std::vector&lt;<span class="keyword">int</span>&gt;&amp; v) {
+    <span class="keyword">for</span> (<span class="keyword">int</span> val : v)
+        std::cout &lt;&lt; val &lt;&lt; <span class="string">" "</span>;
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+}
+
+<span class="comment">// Pass by reference (modify in place)</span>
+<span class="keyword">void</span> <span class="function">doubleAll</span>(std::vector&lt;<span class="keyword">int</span>&gt;&amp; v) {
+    <span class="keyword">for</span> (<span class="keyword">int</span>&amp; val : v)
+        val *= <span class="number">2</span>;
+}
+
+<span class="comment">// Return a vector (uses move semantics automatically)</span>
+std::vector&lt;<span class="keyword">int</span>&gt; <span class="function">makeRange</span>(<span class="keyword">int</span> start, <span class="keyword">int</span> end) {
+    std::vector&lt;<span class="keyword">int</span>&gt; result;
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= end; ++i)
+        result.<span class="function">push_back</span>(i);
+    <span class="keyword">return</span> result;  <span class="comment">// moved, not copied (RVO/NRVO)</span>
+}
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; nums = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>};
+
+    <span class="function">printVector</span>(nums);   <span class="comment">// 1 2 3 4 5</span>
+    <span class="function">doubleAll</span>(nums);
+    <span class="function">printVector</span>(nums);   <span class="comment">// 2 4 6 8 10</span>
+
+    <span class="keyword">auto</span> range = <span class="function">makeRange</span>(<span class="number">1</span>, <span class="number">5</span>);
+    <span class="function">printVector</span>(range);  <span class="comment">// 1 2 3 4 5</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== 2D Vectors ===== -->
+                <h2>2D Vectors</h2>
+                <p>A <strong>2D vector</strong> is simply a vector of vectors. This is the idiomatic way to represent matrices or grids in C++ without manual dynamic memory allocation.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// Create a 3x4 matrix initialized to 0</span>
+    <span class="keyword">int</span> rows = <span class="number">3</span>, cols = <span class="number">4</span>;
+    std::vector&lt;std::vector&lt;<span class="keyword">int</span>&gt;&gt; matrix(rows, std::vector&lt;<span class="keyword">int</span>&gt;(cols, <span class="number">0</span>));
+
+    <span class="comment">// Fill with values</span>
+    <span class="keyword">int</span> count = <span class="number">1</span>;
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; ++i)
+        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; ++j)
+            matrix[i][j] = count++;
+
+    <span class="comment">// Print the matrix</span>
+    <span class="keyword">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; row : matrix) {
+        <span class="keyword">for</span> (<span class="keyword">int</span> val : row)
+            std::cout &lt;&lt; val &lt;&lt; <span class="string">"\t"</span>;
+        std::cout &lt;&lt; <span class="string">"\n"</span>;
+    }
+    <span class="comment">// Output:</span>
+    <span class="comment">// 1    2    3    4</span>
+    <span class="comment">// 5    6    7    8</span>
+    <span class="comment">// 9    10   11   12</span>
+
+    <span class="comment">// Jagged 2D vector (rows of different lengths)</span>
+    std::vector&lt;std::vector&lt;<span class="keyword">int</span>&gt;&gt; jagged;
+    jagged.<span class="function">push_back</span>({<span class="number">1</span>, <span class="number">2</span>});
+    jagged.<span class="function">push_back</span>({<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>});
+    jagged.<span class="function">push_back</span>({<span class="number">6</span>});
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Vector vs Array vs std::array ===== -->
+                <h2>Vector vs Array vs std::array</h2>
+                <p>C++ gives you three main options for contiguous storage. Here is a side-by-side comparison:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C-Style Array</th>
+                            <th>std::array</th>
+                            <th>std::vector</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Header</td>
+                            <td>None (built-in)</td>
+                            <td><code>&lt;array&gt;</code></td>
+                            <td><code>&lt;vector&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>Fixed (compile-time)</td>
+                            <td>Fixed (compile-time)</td>
+                            <td>Dynamic (runtime)</td>
+                        </tr>
+                        <tr>
+                            <td>Memory</td>
+                            <td>Stack</td>
+                            <td>Stack</td>
+                            <td>Heap</td>
+                        </tr>
+                        <tr>
+                            <td>Bounds check</td>
+                            <td>No</td>
+                            <td><code>at()</code></td>
+                            <td><code>at()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Knows its size</td>
+                            <td>No (decays to pointer)</td>
+                            <td>Yes &mdash; <code>size()</code></td>
+                            <td>Yes &mdash; <code>size()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Can grow/shrink</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>STL compatible</td>
+                            <td>Partially</td>
+                            <td>Fully</td>
+                            <td>Fully</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Fastest</td>
+                            <td>Same as C array</td>
+                            <td>Slight overhead (heap alloc)</td>
+                        </tr>
+                        <tr>
+                            <td>Best for</td>
+                            <td>Legacy code</td>
+                            <td>Fixed-size collections</td>
+                            <td>Most general-purpose use</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Sorting and Searching Vectors ===== -->
+                <h2>Sorting and Searching Vectors</h2>
+                <p>The <code>&lt;algorithm&gt;</code> header provides powerful functions that work seamlessly with vectors:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;vector&gt;</span>
+<span class="preprocessor">#include &lt;algorithm&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::vector&lt;<span class="keyword">int</span>&gt; v = {<span class="number">50</span>, <span class="number">20</span>, <span class="number">40</span>, <span class="number">10</span>, <span class="number">30</span>};
+
+    <span class="comment">// Sort in ascending order</span>
+    std::<span class="function">sort</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>());
+    <span class="comment">// v: {10, 20, 30, 40, 50}</span>
+
+    <span class="comment">// Sort in descending order</span>
+    std::<span class="function">sort</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>(), std::greater&lt;<span class="keyword">int</span>&gt;());
+    <span class="comment">// v: {50, 40, 30, 20, 10}</span>
+
+    <span class="comment">// Sort with custom lambda</span>
+    std::<span class="function">sort</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>(), [](<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
+        <span class="keyword">return</span> a &lt; b;  <span class="comment">// ascending</span>
+    });
+
+    <span class="comment">// Find an element (linear search)</span>
+    <span class="keyword">auto</span> it = std::<span class="function">find</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>(), <span class="number">30</span>);
+    <span class="keyword">if</span> (it != v.<span class="function">end</span>())
+        std::cout &lt;&lt; <span class="string">"Found 30 at index "</span> &lt;&lt; (it - v.<span class="function">begin</span>()) &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// Binary search (vector must be sorted first!)</span>
+    std::<span class="function">sort</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>());
+    <span class="keyword">bool</span> found = std::<span class="function">binary_search</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>(), <span class="number">40</span>);
+    std::cout &lt;&lt; <span class="string">"40 found: "</span> &lt;&lt; (found ? <span class="string">"yes"</span> : <span class="string">"no"</span>) &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// lower_bound: iterator to first element &gt;= value</span>
+    <span class="keyword">auto</span> lb = std::<span class="function">lower_bound</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>(), <span class="number">25</span>);
+    std::cout &lt;&lt; <span class="string">"lower_bound(25): "</span> &lt;&lt; *lb &lt;&lt; <span class="string">"\n"</span>;  <span class="comment">// 30</span>
+
+    <span class="comment">// Count occurrences</span>
+    v.<span class="function">push_back</span>(<span class="number">30</span>);
+    <span class="keyword">int</span> cnt = std::<span class="function">count</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>(), <span class="number">30</span>);
+    std::cout &lt;&lt; <span class="string">"Count of 30: "</span> &lt;&lt; cnt &lt;&lt; <span class="string">"\n"</span>;  <span class="comment">// 2</span>
+
+    <span class="comment">// Min and max element</span>
+    <span class="keyword">auto</span> minIt = std::<span class="function">min_element</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>());
+    <span class="keyword">auto</span> maxIt = std::<span class="function">max_element</span>(v.<span class="function">begin</span>(), v.<span class="function">end</span>());
+    std::cout &lt;&lt; <span class="string">"Min: "</span> &lt;&lt; *minIt &lt;&lt; <span class="string">", Max: "</span> &lt;&lt; *maxIt &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>std::vector</code> is a <strong>dynamic array</strong> from <code>&lt;vector&gt;</code> that can grow and shrink at runtime.</li>
+                    <li>Use <strong>initializer lists</strong>, constructors, or <code>assign()</code> to create and populate vectors.</li>
+                    <li>Access elements with <code>[]</code> (fast, unchecked), <code>at()</code> (bounds-checked), <code>front()</code>, or <code>back()</code>.</li>
+                    <li>Add elements with <code>push_back()</code>, <code>emplace_back()</code> (more efficient for objects), or <code>insert()</code>.</li>
+                    <li>Remove elements with <code>pop_back()</code>, <code>erase()</code>, or <code>clear()</code>.</li>
+                    <li><strong>size()</strong> is the element count; <strong>capacity()</strong> is the allocated space. Use <code>reserve()</code> to pre-allocate for performance.</li>
+                    <li>Iterate with index loops, range-based <code>for</code>, or <strong>iterators</strong> (including reverse and const iterators).</li>
+                    <li>Pass vectors to functions by <strong>const reference</strong> for reading, by <strong>reference</strong> for modifying, and return by value (move semantics apply).</li>
+                    <li>Use <code>vector&lt;vector&lt;T&gt;&gt;</code> for <strong>2D data</strong> (matrices, grids).</li>
+                    <li>Combine vectors with <code>&lt;algorithm&gt;</code> functions like <code>sort()</code>, <code>find()</code>, and <code>binary_search()</code> for powerful data manipulation.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/PocJ_JibVPQ" title="C++ STL Vectors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header must you include to use <code>std::vector</code>?","o":["<code>&lt;array&gt;</code>","<code>&lt;vector&gt;</code>","<code>&lt;list&gt;</code>","<code>&lt;container&gt;</code>"],"a":1},
+                {"q":"What kind of data structure is <code>std::vector</code>?","o":["A linked list","A fixed-size array","A dynamic array","A hash table"],"a":2},
+                {"q":"Where does a vector store its elements?","o":["On the stack","On the heap in contiguous memory","In a linked-list of nodes","In a hash map"],"a":1},
+                {"q":"How do you create an empty vector of integers?","o":["<code>std::vector&lt;int&gt; v;</code>","<code>std::vector v&lt;int&gt;;</code>","<code>int vector v;</code>","<code>vector int v;</code>"],"a":0},
+                {"q":"Which creates a vector with 5 elements, all set to 0?","o":["<code>std::vector&lt;int&gt; v(5);</code>","<code>std::vector&lt;int&gt; v[5
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="class-templates.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Class Templates</span>
+                </a>
+                <a href="lists-deques.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">STL Lists &amp; Deques</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

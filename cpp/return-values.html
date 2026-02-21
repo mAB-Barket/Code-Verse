@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Return Values - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-return-values">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html" class="active"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 18 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="33" style="width:33%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Return Values
+                </div>
+                <h1>18. Return Values</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 18 of 55</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>How the return Statement Works</h2>
+                <p>The <code>return</code> statement does two things: it <strong>sends a value back</strong> to the caller and <strong>immediately exits</strong> the function. When a function is called inside an expression, the returned value takes the place of the function call.</p>
+                <p>In the previous lesson you learned how to pass data <em>into</em> functions through parameters. Now you&rsquo;ll master how data flows <em>out</em> of functions through return values.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>How the <code>return</code> statement works</li>
+                    <li>Returning different data types (<code>int</code>, <code>double</code>, <code>bool</code>, <code>char</code>, <code>string</code>)</li>
+                    <li><code>void</code> functions vs non-void functions</li>
+                    <li>Multiple <code>return</code> statements in a single function</li>
+                    <li>Returning early from functions</li>
+                    <li>Returning expressions vs variables</li>
+                    <li>Common mistakes (forgetting <code>return</code>, returning local references)</li>
+                    <li>Using returned values in expressions</li>
+                    <li>Practical examples</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Every non-void function <strong>must</strong> return a value. The type of the returned value must match (or be implicitly convertible to) the function&rsquo;s declared return type. Forgetting to return a value leads to <strong>undefined behavior</strong>.</p>
+                </div>
+
+                <!-- ===== Basic Return ===== -->
+                <h2>Basic Return Example</h2>
+                <p>The simplest use of <code>return</code> is sending a computed result back to the caller. The returned value replaces the function call in the expression where it appears.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;  // Returns the sum to the caller
+}
+
+int main() {
+    int result = add(3, 4);  // result = 7
+    cout &lt;&lt; "Sum: " &lt;&lt; result &lt;&lt; endl;
+    cout &lt;&lt; "Direct: " &lt;&lt; add(10, 20) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Sum: 7
+Direct: 30</pre></div>
+
+                <p>Notice that <code>add(3, 4)</code> is replaced by the value <code>7</code> wherever it appears. You can store the result in a variable or use it directly inside <code>cout</code>.</p>
+
+                <!-- ===== Returning Different Data Types ===== -->
+                <h2>Returning Different Data Types</h2>
+                <p>Functions can return any data type: <code>int</code>, <code>double</code>, <code>bool</code>, <code>char</code>, <code>string</code>, and more. The return type in the function signature tells the compiler what kind of value to expect.</p>
+
+                <h3>Returning int</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int square(int n) {
+    return n * n;
+}
+
+int main() {
+    cout &lt;&lt; "5 squared = " &lt;&lt; square(5) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>5 squared = 25</pre></div>
+
+                <h3>Returning double</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double average(double a, double b) {
+    return (a + b) / 2.0;
+}
+
+int main() {
+    cout &lt;&lt; "Average: " &lt;&lt; average(7.5, 12.3) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Average: 9.9</pre></div>
+
+                <h3>Returning bool</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+bool isEven(int n) {
+    return n % 2 == 0;
+}
+
+int main() {
+    cout &lt;&lt; boolalpha;  // Print true/false instead of 1/0
+    cout &lt;&lt; "4 is even: " &lt;&lt; isEven(4) &lt;&lt; endl;
+    cout &lt;&lt; "7 is even: " &lt;&lt; isEven(7) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>4 is even: true
+7 is even: false</pre></div>
+
+                <h3>Returning char</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+char getGrade(int score) {
+    if (score &gt;= 90) return 'A';
+    if (score &gt;= 80) return 'B';
+    if (score &gt;= 70) return 'C';
+    if (score &gt;= 60) return 'D';
+    return 'F';
+}
+
+int main() {
+    cout &lt;&lt; "Grade: " &lt;&lt; getGrade(85) &lt;&lt; endl;
+    cout &lt;&lt; "Grade: " &lt;&lt; getGrade(55) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Grade: B
+Grade: F</pre></div>
+
+                <h3>Returning string</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+string greet(const string &amp;name) {
+    return "Hello, " + name + "!";
+}
+
+int main() {
+    cout &lt;&lt; greet("Alice") &lt;&lt; endl;
+    string msg = greet("Bob");
+    cout &lt;&lt; msg &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Hello, Alice!
+Hello, Bob!</pre></div>
+
+                <!-- ===== void vs non-void ===== -->
+                <h2>void Functions vs Non-void Functions</h2>
+                <p>A <code>void</code> function performs an action but does <strong>not</strong> return a value. A non-void function <strong>must</strong> return a value of the declared type. You cannot assign or use the result of a <code>void</code> function in an expression.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// void function - performs an action, returns nothing
+void printLine() {
+    cout &lt;&lt; "====================" &lt;&lt; endl;
+}
+
+// Non-void function - returns a value
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    printLine();                         // OK: just performs an action
+    int product = multiply(6, 7);        // OK: stores returned value
+    cout &lt;&lt; "Product: " &lt;&lt; product &lt;&lt; endl;
+    printLine();
+
+    // int x = printLine();  // ERROR: void function has no value to assign
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>====================
+Product: 42
+====================</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>A <code>void</code> function can still use <code>return;</code> (with no value) to exit early, but it cannot use <code>return value;</code>. Conversely, a non-void function <strong>must not</strong> use bare <code>return;</code> &mdash; it must always return a value.</p>
+                </div>
+
+                <!-- ===== Multiple Return Statements ===== -->
+                <h2>Multiple Return Statements</h2>
+                <p>A function can contain more than one <code>return</code> statement. The first <code>return</code> that is reached during execution ends the function immediately. This is commonly used with conditional logic.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+string checkNumber(int n) {
+    if (n &gt; 0) return "Positive";
+    if (n &lt; 0) return "Negative";
+    return "Zero";
+}
+
+int main() {
+    cout &lt;&lt; checkNumber(10) &lt;&lt; endl;
+    cout &lt;&lt; checkNumber(-3) &lt;&lt; endl;
+    cout &lt;&lt; checkNumber(0) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Positive
+Negative
+Zero</pre></div>
+
+                <p>Only <strong>one</strong> <code>return</code> statement executes per call. Once a <code>return</code> is hit, the function exits immediately and no further code in that function runs.</p>
+
+                <!-- ===== Returning Early ===== -->
+                <h2>Returning Early from Functions</h2>
+                <p>Early returns are a powerful technique for reducing nesting and handling edge cases at the top of a function. Instead of wrapping your logic in deep <code>if/else</code> blocks, check for special cases first and return immediately.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double safeDivide(double a, double b) {
+    if (b == 0) {
+        cout &lt;&lt; "Error: Division by zero!" &lt;&lt; endl;
+        return 0;  // Early return to avoid the divide
+    }
+    return a / b;
+}
+
+int main() {
+    cout &lt;&lt; safeDivide(10, 3) &lt;&lt; endl;
+    cout &lt;&lt; safeDivide(5, 0) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>3.33333
+Error: Division by zero!
+0</pre></div>
+
+                <p>Early returns can also be used in <code>void</code> functions to skip unnecessary work:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void printPositive(int n) {
+    if (n &lt;= 0) return;  // Exit immediately if not positive
+    cout &lt;&lt; "The number is: " &lt;&lt; n &lt;&lt; endl;
+}
+
+int main() {
+    printPositive(5);
+    printPositive(-2);
+    printPositive(0);
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>The number is: 5</pre></div>
+
+                <!-- ===== Returning Expressions vs Variables ===== -->
+                <h2>Returning Expressions vs Variables</h2>
+                <p>You can return an expression directly without storing it in a variable first. Both approaches are valid, but returning expressions directly is often more concise.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Returning a variable
+int maxA(int a, int b) {
+    int result;
+    if (a &gt; b)
+        result = a;
+    else
+        result = b;
+    return result;
+}
+
+// Returning an expression directly (cleaner)
+int maxB(int a, int b) {
+    return (a &gt; b) ? a : b;
+}
+
+int main() {
+    cout &lt;&lt; maxA(10, 20) &lt;&lt; endl;
+    cout &lt;&lt; maxB(10, 20) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>20
+20</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Returning expressions directly is often preferred because it reduces the number of local variables and makes the function shorter and easier to read. However, storing in a variable first can aid debugging when the computation is complex.</p>
+                </div>
+
+                <!-- ===== Common Mistakes ===== -->
+                <h2>Common Mistakes</h2>
+
+                <h3>1. Forgetting to Return a Value</h3>
+                <p>If a non-void function reaches the end without hitting a <code>return</code> statement, the behavior is <strong>undefined</strong>. The compiler may warn you, but the code can still compile and produce unpredictable results.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// BAD: Missing return in some paths
+int absolute(int n) {
+    if (n &gt;= 0) return n;
+    // What if n &lt; 0? No return statement!
+    // This is UNDEFINED BEHAVIOR
+}
+
+int main() {
+    cout &lt;&lt; absolute(5) &lt;&lt; endl;   // Works (returns 5)
+    cout &lt;&lt; absolute(-3) &lt;&lt; endl;  // Undefined behavior!
+    return 0;
+}</pre></div>
+
+                <p>The fix is simple &mdash; ensure every code path returns a value:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// GOOD: All paths return a value
+int absolute(int n) {
+    if (n &gt;= 0) return n;
+    return -n;  // Handles the negative case
+}</pre></div>
+
+                <h3>2. Returning a Reference to a Local Variable</h3>
+                <p>Local variables are destroyed when the function ends. Returning a reference or pointer to them creates a <strong>dangling reference</strong> &mdash; the reference points to memory that no longer exists.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// BAD: Returning reference to local variable
+int&amp; badFunction() {
+    int local = 42;
+    return local;   // DANGER: local is destroyed after this!
+}
+
+// GOOD: Return by value instead
+int goodFunction() {
+    int local = 42;
+    return local;   // Returns a COPY of the value
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><strong>Never</strong> return a reference or pointer to a local variable. The local variable is destroyed when the function exits, making the reference invalid. Always return by <strong>value</strong> for local data, or return references only to data that outlives the function (like class members or global variables).</p>
+                </div>
+
+                <h3>3. Ignoring the Return Value</h3>
+                <p>If a function returns a value that you don&rsquo;t use, the value is simply discarded. While this isn&rsquo;t an error, it can indicate a logic bug &mdash; especially if the return value signals an error condition.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int computeSum(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    computeSum(3, 4);  // Return value is discarded (usually a mistake)
+    int sum = computeSum(3, 4);  // Correct: capture the returned value
+    cout &lt;&lt; sum &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <!-- ===== Using Return Values in Expressions ===== -->
+                <h2>Using Return Values in Expressions</h2>
+                <p>Returned values can be used anywhere a value of that type is expected: in assignments, arithmetic, comparisons, function arguments, and more.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int square(int n) { return n * n; }
+int cube(int n) { return n * n * n; }
+bool isPositive(int n) { return n &gt; 0; }
+
+int main() {
+    // Use in arithmetic
+    int sum = square(3) + cube(2);
+    cout &lt;&lt; "9 + 8 = " &lt;&lt; sum &lt;&lt; endl;
+
+    // Use in conditions
+    if (isPositive(sum)) {
+        cout &lt;&lt; sum &lt;&lt; " is positive" &lt;&lt; endl;
+    }
+
+    // Use as argument to another function
+    cout &lt;&lt; "square(cube(2)) = " &lt;&lt; square(cube(2)) &lt;&lt; endl;
+
+    // Use in cout directly
+    cout &lt;&lt; "4 squared = " &lt;&lt; square(4) &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>9 + 8 = 17
+17 is positive
+square(cube(2)) = 64
+4 squared = 16</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Nesting function calls like <code>square(cube(2))</code> is powerful but can reduce readability. If nesting gets deep, consider storing intermediate results in well-named variables.</p>
+                </div>
+
+                <!-- ===== Practical Examples ===== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Temperature Converter</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double celsiusToFahrenheit(double celsius) {
+    return celsius * 9.0 / 5.0 + 32.0;
+}
+
+double fahrenheitToCelsius(double fahrenheit) {
+    return (fahrenheit - 32.0) * 5.0 / 9.0;
+}
+
+int main() {
+    double tempC = 100.0;
+    double tempF = celsiusToFahrenheit(tempC);
+    cout &lt;&lt; tempC &lt;&lt; " C = " &lt;&lt; tempF &lt;&lt; " F" &lt;&lt; endl;
+
+    double backToC = fahrenheitToCelsius(tempF);
+    cout &lt;&lt; tempF &lt;&lt; " F = " &lt;&lt; backToC &lt;&lt; " C" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>100 C = 212 F
+212 F = 100 C</pre></div>
+
+                <h3>Example 2: Factorial Function</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+long long factorial(int n) {
+    if (n &lt;= 0) return 1;  // Base case / edge case
+    long long result = 1;
+    for (int i = 1; i &lt;= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+int main() {
+    for (int i = 0; i &lt;= 10; i++) {
+        cout &lt;&lt; i &lt;&lt; "! = " &lt;&lt; factorial(i) &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>0! = 1
+1! = 1
+2! = 2
+3! = 6
+4! = 24
+5! = 120
+6! = 720
+7! = 5040
+8! = 40320
+9! = 362880
+10! = 3628800</pre></div>
+
+                <h3>Example 3: Min of Three Values</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int minOfTwo(int a, int b) {
+    return (a &lt; b) ? a : b;
+}
+
+int minOfThree(int a, int b, int c) {
+    return minOfTwo(minOfTwo(a, b), c);
+}
+
+int main() {
+    cout &lt;&lt; "Min of 5, 2, 8: " &lt;&lt; minOfThree(5, 2, 8) &lt;&lt; endl;
+    cout &lt;&lt; "Min of 1, 1, 1: " &lt;&lt; minOfThree(1, 1, 1) &lt;&lt; endl;
+    cout &lt;&lt; "Min of 9, 3, 6: " &lt;&lt; minOfThree(9, 3, 6) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Min of 5, 2, 8: 2
+Min of 1, 1, 1: 1
+Min of 9, 3, 6: 3</pre></div>
+
+                <h3>Example 4: Password Strength Checker</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+bool hasDigit(const string &amp;s) {
+    for (char c : s) {
+        if (c &gt;= '0' &amp;&amp; c &lt;= '9') return true;
+    }
+    return false;
+}
+
+bool hasUpper(const string &amp;s) {
+    for (char c : s) {
+        if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') return true;
+    }
+    return false;
+}
+
+string checkStrength(const string &amp;password) {
+    if (password.length() &lt; 6) return "Weak";
+    if (!hasDigit(password)) return "Medium";
+    if (!hasUpper(password)) return "Medium";
+    return "Strong";
+}
+
+int main() {
+    cout &lt;&lt; checkStrength("abc") &lt;&lt; endl;
+    cout &lt;&lt; checkStrength("abcdef") &lt;&lt; endl;
+    cout &lt;&lt; checkStrength("abcdef1") &lt;&lt; endl;
+    cout &lt;&lt; checkStrength("Abcdef1") &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Weak
+Medium
+Medium
+Strong</pre></div>
+
+                <h3>Example 5: Power Function</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double power(double base, int exponent) {
+    if (exponent == 0) return 1.0;
+
+    double result = 1.0;
+    bool negative = exponent &lt; 0;
+    if (negative) exponent = -exponent;
+
+    for (int i = 0; i &lt; exponent; i++) {
+        result *= base;
+    }
+
+    return negative ? 1.0 / result : result;
+}
+
+int main() {
+    cout &lt;&lt; "2^10 = " &lt;&lt; power(2, 10) &lt;&lt; endl;
+    cout &lt;&lt; "5^0 = " &lt;&lt; power(5, 0) &lt;&lt; endl;
+    cout &lt;&lt; "2^-3 = " &lt;&lt; power(2, -3) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>2^10 = 1024
+5^0 = 1
+2^-3 = 0.125</pre></div>
+
+                <!-- ===== Summary ===== -->
+                <h2>Summary</h2>
+                <ul>
+                    <li>The <code>return</code> statement sends a value back to the caller and exits the function immediately.</li>
+                    <li>Functions can return <code>int</code>, <code>double</code>, <code>bool</code>, <code>char</code>, <code>string</code>, and any other type.</li>
+                    <li><code>void</code> functions perform actions but return no value; non-void functions <strong>must</strong> return a value.</li>
+                    <li>A function can have multiple <code>return</code> statements &mdash; only the first one reached executes.</li>
+                    <li>Early returns reduce nesting and handle edge cases cleanly.</li>
+                    <li>You can return expressions directly without storing them in variables first.</li>
+                    <li><strong>Never</strong> return a reference or pointer to a local variable &mdash; it becomes a dangling reference.</li>
+                    <li>Every code path in a non-void function must end with a <code>return</code> statement to avoid undefined behavior.</li>
+                    <li>Returned values can be used in assignments, arithmetic, conditions, and as arguments to other functions.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/V9zuox47zr0" title="C++ Return Values" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What does the return statement do in a function?","o":["Prints a value to the screen","Sends a value back to the caller and exits the function","Declares a variable","Loops through code"],"a":1},
+                {"q":"What is the return type of a function that returns nothing?","o":["int","null","void","empty"],"a":2},
+                {"q":"What happens if a non-void function does not return a value?","o":["It returns 0","It returns null","Undefined behavior","It throws an exception"],"a":2},
+                {"q":"What is the output? int f(){return 5;} int main(){cout<<f();}","o":["5","0","Error","f"],"a":0},
+                {"q":"What is the output? int add(int a,int b){return a+b;} int main(){cout<<add(3,4);}","o":["7","34","12","Error"],"a":0},
+                {"q":"Can a void function use a return statement?","o":["No, never","Yes, but only return; with no value","Yes, it can return any value","Only in main()"],"a":1},
+                {"q":"What is the output? bool isEven(int n){return n%2==0;} int main(){cout<<boolalpha<<isEven(4);}","o":["true","false","1","0"],"a":0},
+                {"q":"What is the output? double half(int n){return n/2.0;} int main(){cout<<half(5);}","o":["2.5","2","3","Error"],"a":0},
+                {"q":"How many return statements can a function have?","o":["Exactly one","At most two","No specific limit","Exactly three"],"a":2},
+                {"q":"What is the output? int max(int a,int b){if(a>b)return a;return b;} int main(){cout<<max(3,7);}","o":["3","7","10","Error"],"a":1},
+                {"q":"What is the output? char grade(int s){if(s>=90)return 'A';if(s>=80)return 'B';return 'C';} int main(){cout<<grade(85);}","o":["A","B","C","85"],"a":1},
+                {"q":"Which is a valid return type for a function?","o":["int","double","string","All of the above"],"a":3},
+                {"q":"What is the output? int sq(int n){return n*n;} int main(){cout<<sq(sq(2));}","o":["4","16","8","2"],"a":1},
+                {"q":"What is the output? int f(){return 3+4;} int main(){cout<<f();}","o":["3+4","7","34","Error"],"a":1},
+                {"q":"Can you return an expression directly without storing it in a variable?","o":["No","Yes","Only for int","Only for void functions"],"a":1},
+                {"q":"What is the output? int f(int x){if(x>0)return x;return -x;} int main(){cout<<f(-5);}","o":["-5","5","0","Error"],"a":1},
+                {"q":"What is returnValueType of: double calculate(){return 3.14;}","o":["int","float","double","string"],"a":2},
+                {"q":"What does this return? bool check(int n){return n>0&&n<100;}","o":["true if n is between 0 and 100 exclusive","true if n equals 0","true if n is negative","true always"],"a":0},
+                {"q":"What is the output? string f(){return \"hello\";} int main(){cout<<f();}","o":["f","hello","Error","string"],"a":1},
+                {"q":"What is the output? int f(){return 10;return 20;} int main(){cout<<f();}","o":["10","20","30","Error"],"a":0},
+                {"q":"Why does only the first return execute in a function?","o":["The compiler ignores the rest","return exits the function immediately","Both execute but only first prints","It depends on optimization"],"a":1},
+                {"q":"Is it valid to write: int x = myFunction(); if myFunction returns int?","o":["Yes","No","Only in main()","Only if x is const"],"a":0},
+                {"q":"What is the output? int f(int a,int b){return a*b;} int main(){int r=f(3,4)+f(2,5);cout<<r;}","o":["22","17","34","12"],"a":0},
+                {"q":"What is wrong with: int& f(){int x=10;return x;}","o":["Nothing","Returns a reference to a local variable (dangling reference)","x should be double","Missing semicolon"],"a":1},
+                {"q":"What is a dangling reference?","o":["A reference to a global variable","A reference to memory that no longer exists","A reference to a constant","A null reference"],"a":1},
+                {"q":"How to fix a dangling reference from returning a local variable?","o":["Return by value instead","Use a global variable","Make the variable static","All of the above can work"],"a":3},
+                {"q":"What is the output? int cube(int n){return n*n*n;} int main(){cout<<cube(3);}","o":["9","27","81","3"],"a":1},
+                {"q":"What is the output? int absolute(int n){if(n>=0)return n;return -n;} int main(){cout<<absolute(-8);}","o":["-8","8","0","Error"],"a":1},
+                {"q":"Can you use a returned value directly in cout?","o":["No, you must store it first","Yes","Only for int","Only for string"],"a":1},
+                {"q":"What is the output? int bigger(int a,int b){return (a>b)?a:b;} int main(){cout<<bigger(5,5);}","o":["5","10","0","Error"],"a":0},
+                {"q":"What is an early return?","o":["Returning before the last line of a function to handle edge cases","Returning before the program starts","Returning an integer early in the morning","Returning from main only"],"a":0},
+                {"q":"Why use early returns?","o":["They make code faster","They reduce nesting and handle edge cases cleanly","They are required by C++","They prevent compilation errors"],"a":1},
+                {"q":"What is the output? void f(int n){if(n<0)return;cout<<n;} int main(){f(-5);f(3);}","o":["-53","3","-5","Error"],"a":1},
+                {"q":"What does this function return for input 0? int f(int n){if(n==0)return 1;return n*f(n-1);}","o":["0","1","-1","Error"],"a":1},
+                {"q":"Can a function return the result of another function call?","o":["No","Yes","Only void functions","Only for int"],"a":1},
+                {"q":"What is the output? int f(){return 1;} int g(){return f()+f();} int main(){cout<<g();}","o":["1","2","11","Error"],"a":1},
+                {"q":"What is the output? long long fact(int n){long long r=1;for(int i=1;i<=n;i++)r*=i;return r;} int main(){cout<<fact(5);}","o":["5","25","120","60"],"a":2},
+                {"q":"What happens when you call a void function inside cout?","o":["It prints the function name","It compiles and prints nothing","It causes a compile error","It prints void"],"a":2},
+                {"q":"What is the output? double avg(int a,int b){return (a+b)/2.0;} int main(){cout<<avg(3,4);}","o":["3","3.5","4","Error"],"a":1},
+                {"q":"Can a function return a bool value?","o":["No","Yes","Only in C++11","Only from main"],"a":1},
+                {"q":"What is the output? bool isAdult(int age){return age>=18;} int main(){cout<<boolalpha<<isAdult(16);}","o":["true","false","1","0"],"a":1},
+                {"q":"What does return 0 mean in main()?","o":["Error occurred","Program terminated abnormally","Program executed successfully","Nothing"],"a":2},
+                {"q":"What is the output? int triple(int n){return 3*n;} int main(){cout<<triple(triple(2));}","o":["6","18","12","9"],"a":1},
+                {"q":"What type should a function return if it checks a condition?","o":["int","string","bool","void"],"a":2},
+                {"q":"What is the output? int min(int a,int b){return (a<b)?a:b;} int main(){cout<<min(min(5,3),min(8,2));}","o":["2","3","5","8"],"a":0},
+                {"q":"Is this valid? int f(){} (function with no return statement)","o":["Yes, it returns 0","No, it causes undefined behavior","It returns null","It works but prints a warning"],"a":1},
+                {"q":"What is the output? int f(int x){return x+1;} int main(){int a=f(1);int b=f(a);int c=f(b);cout<<c;}","o":["1","2","3","4"],"a":3},
+                {"q":"Can you return a string literal from a function with return type string?","o":["No","Yes, the literal is implicitly converted to string","Only with const","Only in C++20"],"a":1},
+                {"q":"What is the output? int power(int b,int e){int r=1;for(int i=0;i<e;i++)r*=b;return r;} int main(){cout<<power(2,8);}","o":["16","64","128","256"],"a":3},
+                {"q":"What is the difference between return and cout in a function?","o":["No difference","return sends a value to the caller; cout prints to the screen","return prints; cout sends a value","Both send values to the caller"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="function-parameters.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Function Parameters</span>
+                </a>
+                <a href="function-overloading.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Function Overloading</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First C++ Program - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-first-program">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html" class="active"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 3 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="5" style="width:5%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; First Program
+                </div>
+                <h1>3. Your First C++ Program</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 3 of 55</span>
+                    <span>&#9201; 10 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>Writing Your First C++ Program</h2>
+                <p>Every programmer's journey begins with a simple program that displays a message on the screen. This tradition dates back to the 1978 book <em>"The C Programming Language"</em> by Brian Kernighan and Dennis Ritchie. In this lesson, you will write, understand, compile, and run your very first C++ program &mdash; the classic <strong>Hello World</strong> program.</p>
+                <p>By the end of this tutorial, you will not only know how to create a working C++ program, but you will also understand every single line of code, how the compilation process works, how to handle errors, and how to write more advanced programs that use input and output.</p>
+
+                <h2>The Hello World Program</h2>
+                <p>Open your text editor or IDE (such as VS Code, Code::Blocks, or Visual Studio) and type the following code exactly as shown:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p>Save this file with a <code>.cpp</code> extension, for example <code>hello.cpp</code>. The <code>.cpp</code> extension tells the compiler (and your IDE) that this is a C++ source file.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ source files use the extension <code>.cpp</code>. Other valid extensions include <code>.cc</code>, <code>.cxx</code>, and <code>.C</code> (uppercase), but <code>.cpp</code> is the most widely used and recommended convention.</p>
+                </div>
+
+                <h2>Breaking Down Every Part</h2>
+                <p>Let's examine every single line and keyword in the Hello World program so you fully understand what each part does and why it is needed.</p>
+
+                <h3>1. <code>#include &lt;iostream&gt;</code></h3>
+                <p>This is a <strong>preprocessor directive</strong>. Before the compiler translates your code into machine language, a tool called the <strong>preprocessor</strong> processes all lines starting with <code>#</code>. The <code>#include</code> directive tells the preprocessor to copy the entire contents of the specified file into your program.</p>
+                <p><code>&lt;iostream&gt;</code> is a <strong>header file</strong> from the C++ Standard Library. It provides input and output functionality, specifically:</p>
+                <ul>
+                    <li><code>cout</code> &mdash; Used to print output to the console (standard output).</li>
+                    <li><code>cin</code> &mdash; Used to read input from the keyboard (standard input).</li>
+                    <li><code>cerr</code> &mdash; Used to output error messages.</li>
+                    <li><code>endl</code> &mdash; Inserts a newline character and flushes the output buffer.</li>
+                </ul>
+                <p>Without this line, the compiler would not know what <code>cout</code>, <code>cin</code>, or <code>endl</code> are, and your program would fail to compile.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// The angle brackets &lt; &gt; tell the preprocessor to look
+// in the standard system include directories
+#include &lt;iostream&gt;
+
+// Double quotes tell the preprocessor to look in the
+// current directory first, then the system directories
+#include "myheader.h"</pre></div>
+
+                <h3>2. <code>using namespace std;</code></h3>
+                <p>All standard library components in C++ (like <code>cout</code>, <code>cin</code>, <code>string</code>, <code>vector</code>) live inside a <strong>namespace</strong> called <code>std</code> (short for "standard"). A namespace is a way to group related names together to avoid naming conflicts.</p>
+                <p>Without <code>using namespace std;</code>, you would need to write <code>std::cout</code> instead of just <code>cout</code>, and <code>std::endl</code> instead of <code>endl</code>. The <code>::</code> operator is called the <strong>scope resolution operator</strong>.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Without "using namespace std;"
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}
+
+// With "using namespace std;"
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>While <code>using namespace std;</code> is convenient for beginners and small programs, professional C++ developers often avoid it in header files and large projects because it can cause name collisions. In production code, it is common to use the explicit <code>std::</code> prefix or to import only specific names like <code>using std::cout;</code>.</p>
+                </div>
+
+                <h3>3. <code>int main()</code></h3>
+                <p>This is the <strong>main function</strong> &mdash; the entry point of every C++ program. When you run a C++ program, the operating system calls the <code>main()</code> function first. Every C++ program must have exactly one <code>main()</code> function.</p>
+                <ul>
+                    <li><code>int</code> &mdash; The <strong>return type</strong>. It tells the compiler that the <code>main()</code> function will return an integer value to the operating system when it finishes.</li>
+                    <li><code>main</code> &mdash; The <strong>function name</strong>. This specific name is required and cannot be changed.</li>
+                    <li><code>()</code> &mdash; The <strong>parameter list</strong>. Empty parentheses mean the function takes no arguments. You can also write <code>int main(int argc, char* argv[])</code> to accept command-line arguments.</li>
+                    <li><code>{ }</code> &mdash; The <strong>function body</strong> enclosed in curly braces. All the code that belongs to <code>main()</code> goes between these braces.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// The main function with command-line arguments
+int main(int argc, char* argv[]) {
+    // argc = number of arguments
+    // argv = array of argument strings
+    return 0;
+}</pre></div>
+
+                <h3>4. <code>cout &lt;&lt; "Hello, World!" &lt;&lt; endl;</code></h3>
+                <p>This is the statement that actually prints text to the screen. Let's break it down further:</p>
+                <ul>
+                    <li><code>cout</code> &mdash; Stands for <strong>"character output"</strong> (or "console output"). It is an object representing the standard output stream, which is usually your terminal or console window.</li>
+                    <li><code>&lt;&lt;</code> &mdash; The <strong>insertion operator</strong> (also called the "put to" operator). It sends the data on its right side to the stream on its left side. Think of it as "sending data into the stream."</li>
+                    <li><code>"Hello, World!"</code> &mdash; A <strong>string literal</strong>. Any text enclosed in double quotes is a string literal in C++.</li>
+                    <li><code>endl</code> &mdash; Stands for <strong>"end line"</strong>. It inserts a newline character (<code>\n</code>) and <strong>flushes</strong> the output buffer, ensuring the text is immediately displayed on the screen.</li>
+                    <li><code>;</code> &mdash; The <strong>semicolon</strong> marks the end of a statement. Every statement in C++ must end with a semicolon. Forgetting it is one of the most common beginner mistakes.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>You can chain multiple <code>&lt;&lt;</code> operators together in a single statement. For example: <code>cout &lt;&lt; "Name: " &lt;&lt; "Alice" &lt;&lt; ", Age: " &lt;&lt; 25 &lt;&lt; endl;</code>. This sends multiple pieces of data to the output stream in sequence.</p>
+                </div>
+
+                <h3>5. <code>return 0;</code></h3>
+                <p>This statement tells the operating system that the program has finished executing <strong>successfully</strong>. The value <code>0</code> is a convention that means "no errors." Any non-zero return value typically indicates that the program encountered an error.</p>
+                <ul>
+                    <li><code>return 0;</code> &mdash; Program finished successfully.</li>
+                    <li><code>return 1;</code> &mdash; Program finished with an error (convention).</li>
+                    <li>In modern C++ (C++11 and later), if you omit <code>return 0;</code> from <code>main()</code>, the compiler implicitly returns 0 for you. However, it is good practice to include it explicitly.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Return values from main()
+int main() {
+    // ... program logic ...
+
+    if (/* everything went well */) {
+        return 0;  // Success
+    } else {
+        return 1;  // Error
+    }
+}</pre></div>
+
+                <h2>How to Compile Your Program</h2>
+                <p>Unlike interpreted languages (such as Python), C++ is a <strong>compiled language</strong>. This means you cannot run your source code directly. You must first translate (compile) it into machine code that your computer's processor can understand. This step produces an <strong>executable file</strong>.</p>
+
+                <h3>Compiling with g++ (GCC)</h3>
+                <p><strong>g++</strong> is the C++ compiler from the GNU Compiler Collection (GCC). It is the most commonly used compiler on Linux and is also available on macOS (via Xcode Command Line Tools or Homebrew) and Windows (via MinGW or MSYS2).</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre># Basic compilation
+g++ hello.cpp -o hello
+
+# Compile with C++17 standard and warnings enabled
+g++ -std=c++17 -Wall -Wextra -o hello hello.cpp
+
+# Compile with debugging information
+g++ -g -o hello hello.cpp
+
+# Compile with optimization
+g++ -O2 -o hello hello.cpp</pre></div>
+
+                <ul>
+                    <li><code>g++</code> &mdash; Invokes the GNU C++ compiler.</li>
+                    <li><code>hello.cpp</code> &mdash; Your source code file.</li>
+                    <li><code>-o hello</code> &mdash; Specifies the name of the output (executable) file. Without this flag, the default output name is <code>a.out</code> on Linux/macOS or <code>a.exe</code> on Windows.</li>
+                    <li><code>-std=c++17</code> &mdash; Tells the compiler to use the C++17 standard.</li>
+                    <li><code>-Wall -Wextra</code> &mdash; Enables additional warning messages to help you catch potential issues.</li>
+                </ul>
+
+                <h3>Compiling with clang++</h3>
+                <p><strong>clang++</strong> is the C++ compiler from the LLVM project. It is known for its excellent, human-readable error messages and fast compilation times. It is the default compiler on macOS.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre># Basic compilation with clang++
+clang++ hello.cpp -o hello
+
+# Compile with C++17 and warnings
+clang++ -std=c++17 -Wall -Wextra -o hello hello.cpp</pre></div>
+
+                <h3>Compiling with cl (MSVC on Windows)</h3>
+                <p><strong>cl</strong> is the Microsoft Visual C++ compiler, used with Visual Studio on Windows. You typically run it from the "Developer Command Prompt" or "Developer PowerShell" that comes with Visual Studio.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre># Basic compilation with MSVC
+cl hello.cpp
+
+# Compile with C++17
+cl /std:c++17 hello.cpp
+
+# Compile with warnings at level 4
+cl /W4 hello.cpp</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The three most popular C++ compilers are <strong>g++</strong> (GCC), <strong>clang++</strong> (LLVM/Clang), and <strong>cl</strong> (MSVC). All three support modern C++ standards. If you are on Linux, use g++ or clang++. On macOS, clang++ is the default. On Windows, you can use MSVC (cl) or install g++ via MinGW.</p>
+                </div>
+
+                <h2>How to Run the Compiled Executable</h2>
+                <p>After compilation succeeds, you will have an executable file. How you run it depends on your operating system:</p>
+
+                <h3>On Linux or macOS</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre># Run the executable
+./hello
+
+# Output:
+Hello, World!</pre></div>
+                <p>The <code>./</code> prefix tells the terminal to look for the executable in the current directory.</p>
+
+                <h3>On Windows (Command Prompt or PowerShell)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre># Run the executable
+hello.exe
+
+# Or simply
+hello
+
+# Output:
+Hello, World!</pre></div>
+
+                <h3>Using an IDE</h3>
+                <p>If you are using an IDE like <strong>Visual Studio</strong>, <strong>Code::Blocks</strong>, or <strong>CLion</strong>, you can simply click the <strong>Run</strong> button (or press <strong>F5</strong> / <strong>Ctrl+F5</strong>) and the IDE will compile and run the program for you automatically.</p>
+
+                <h2>Understanding Compilation Errors vs Runtime Errors</h2>
+                <p>As a beginner, you will encounter two main types of errors. Understanding the difference is crucial for effective debugging.</p>
+
+                <h3>Compilation Errors (Compile-Time Errors)</h3>
+                <p>These errors occur <strong>during compilation</strong>, before your program ever runs. The compiler detects problems in your source code (syntax mistakes, missing semicolons, undeclared variables, type mismatches) and refuses to create an executable. You must fix all compilation errors before you can run your program.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// ERROR: Missing semicolon
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl  // &lt;-- Missing semicolon!
+    return 0;
+}</pre></div>
+
+                <p>The compiler would produce an error message similar to:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>hello.cpp:6:43: error: expected ';' after expression
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl
+                                          ^
+                                          ;
+1 error generated.</pre></div>
+
+                <h3>Runtime Errors</h3>
+                <p>These errors occur <strong>while the program is running</strong>. The code compiles successfully, but something goes wrong during execution &mdash; for example, dividing by zero, accessing invalid memory, or trying to open a file that doesn't exist.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// This compiles fine but crashes at runtime
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10;
+    int b = 0;
+    cout &lt;&lt; a / b &lt;&lt; endl;  // Division by zero - runtime error!
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><strong>Compilation errors</strong> are caught by the compiler before the program runs &mdash; they are usually syntax or type errors. <strong>Runtime errors</strong> occur during program execution and can cause crashes or unexpected behavior. Always read error messages carefully; they tell you what went wrong and on which line.</p>
+                </div>
+
+                <h2>Writing Programs with Multiple cout Statements</h2>
+                <p>You are not limited to printing a single line. You can use multiple <code>cout</code> statements to display as much text as you need.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "==========================" &lt;&lt; endl;
+    cout &lt;&lt; "   Welcome to CodeVerse   " &lt;&lt; endl;
+    cout &lt;&lt; "==========================" &lt;&lt; endl;
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "This is my first C++ program." &lt;&lt; endl;
+    cout &lt;&lt; "I am learning C++ step by step." &lt;&lt; endl;
+    cout &lt;&lt; "C++ is powerful and fast!" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p>Output:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>==========================
+   Welcome to CodeVerse   
+==========================
+
+This is my first C++ program.
+I am learning C++ step by step.
+C++ is powerful and fast!</pre></div>
+
+                <p>You can also chain everything into a single <code>cout</code> statement using multiple <code>&lt;&lt;</code> operators:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Line 1" &lt;&lt; endl
+         &lt;&lt; "Line 2" &lt;&lt; endl
+         &lt;&lt; "Line 3" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h2>Using Escape Sequences</h2>
+                <p>Escape sequences are special character combinations that begin with a backslash (<code>\</code>). They allow you to insert characters that are difficult or impossible to type directly into a string literal.</p>
+
+                <h3>Common Escape Sequences</h3>
+                <table>
+                    <tr><th>Escape Sequence</th><th>Description</th><th>Example Output</th></tr>
+                    <tr><td><code>\n</code></td><td>Newline &mdash; moves cursor to the next line</td><td>Line break</td></tr>
+                    <tr><td><code>\t</code></td><td>Tab &mdash; inserts a horizontal tab</td><td>Indentation</td></tr>
+                    <tr><td><code>\\</code></td><td>Backslash &mdash; prints a literal backslash</td><td>\</td></tr>
+                    <tr><td><code>\"</code></td><td>Double quote &mdash; prints a literal double quote</td><td>"</td></tr>
+                    <tr><td><code>\'</code></td><td>Single quote &mdash; prints a literal single quote</td><td>'</td></tr>
+                    <tr><td><code>\0</code></td><td>Null character &mdash; marks the end of a C-string</td><td>(nothing)</td></tr>
+                    <tr><td><code>\a</code></td><td>Alert &mdash; produces a beep sound</td><td>(beep)</td></tr>
+                    <tr><td><code>\b</code></td><td>Backspace &mdash; moves cursor back one position</td><td>(backspace)</td></tr>
+                    <tr><td><code>\r</code></td><td>Carriage return &mdash; moves cursor to beginning of line</td><td>(reset position)</td></tr>
+                </table>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Using \n for new lines
+    cout &lt;&lt; "First line\nSecond line\nThird line\n";
+
+    // Using \t for tabs
+    cout &lt;&lt; "\nName\tAge\tCity\n";
+    cout &lt;&lt; "Alice\t25\tNew York\n";
+    cout &lt;&lt; "Bob\t30\tLondon\n";
+
+    // Using \\ to print a backslash
+    cout &lt;&lt; "\nFile path: C:\\Users\\Alice\\Documents\n";
+
+    // Using \" to print double quotes
+    cout &lt;&lt; "She said, \"Hello!\"\n";
+
+    return 0;
+}</pre></div>
+
+                <p>Output:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>First line
+Second line
+Third line
+
+Name	Age	City
+Alice	25	New York
+Bob	30	London
+
+File path: C:\Users\Alice\Documents
+She said, "Hello!"</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>\n</code> escape sequence is often preferred over <code>endl</code> for inserting new lines because <code>\n</code> simply inserts a newline character, while <code>endl</code> inserts a newline AND flushes the output buffer. Flushing can be slower, so <code>\n</code> is more efficient when you don't need to guarantee immediate output.</p>
+                </div>
+
+                <h2>Taking User Input with cin</h2>
+                <p>So far, our programs have only displayed output. Now, let's write a program that reads input from the user using <code>cin</code> (character input / console input).</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string name;
+    int age;
+
+    cout &lt;&lt; "Enter your name: ";
+    cin &gt;&gt; name;
+
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+
+    cout &lt;&lt; "\nHello, " &lt;&lt; name &lt;&lt; "!" &lt;&lt; endl;
+    cout &lt;&lt; "You are " &lt;&lt; age &lt;&lt; " years old." &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>Sample Run:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter your name: Alice
+Enter your age: 25
+
+Hello, Alice!
+You are 25 years old.</pre></div>
+
+                <p>Let's understand how <code>cin</code> works:</p>
+                <ul>
+                    <li><code>cin</code> is the standard input stream object.</li>
+                    <li><code>&gt;&gt;</code> is the <strong>extraction operator</strong> (or "get from" operator). It reads data from the input stream and stores it in the variable on its right.</li>
+                    <li><code>cin &gt;&gt; name;</code> reads a single word (stops at whitespace) and stores it in the <code>name</code> variable.</li>
+                    <li><code>cin &gt;&gt; age;</code> reads an integer and stores it in <code>age</code>.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><code>cin &gt;&gt;</code> reads input separated by whitespace (spaces, tabs, newlines). If you type "Alice Smith", <code>cin &gt;&gt; name</code> will only read "Alice". To read an entire line including spaces, use <code>getline(cin, name)</code> instead.</p>
+                </div>
+
+                <h3>Reading a Full Line of Input</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string fullName;
+
+    cout &lt;&lt; "Enter your full name: ";
+    getline(cin, fullName);
+
+    cout &lt;&lt; "Hello, " &lt;&lt; fullName &lt;&lt; "!" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>Sample Run:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Enter your full name: Alice Smith
+Hello, Alice Smith!</pre></div>
+
+                <h3>A More Complete Input Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string name;
+    int birthYear;
+    double height;
+
+    cout &lt;&lt; "===== User Profile =====" &lt;&lt; endl;
+
+    cout &lt;&lt; "Enter your name: ";
+    getline(cin, name);
+
+    cout &lt;&lt; "Enter your birth year: ";
+    cin &gt;&gt; birthYear;
+
+    cout &lt;&lt; "Enter your height (in meters): ";
+    cin &gt;&gt; height;
+
+    int age = 2026 - birthYear;
+
+    cout &lt;&lt; "\n===== Your Profile =====" &lt;&lt; endl;
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; " years" &lt;&lt; endl;
+    cout &lt;&lt; "Height: " &lt;&lt; height &lt;&lt; " m" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h2>Common Beginner Mistakes and How to Fix Them</h2>
+                <p>Here are the most frequent mistakes that beginners make when writing their first C++ programs. Understanding these will save you hours of frustration.</p>
+
+                <h3>Mistake 1: Forgetting the Semicolon</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - missing semicolon
+cout &lt;&lt; "Hello" &lt;&lt; endl
+
+// CORRECT
+cout &lt;&lt; "Hello" &lt;&lt; endl;</pre></div>
+                <p>Every statement in C++ must end with a semicolon (<code>;</code>). The compiler error message will usually point to the line <em>after</em> the missing semicolon, which can be confusing at first.</p>
+
+                <h3>Mistake 2: Using Wrong Quotes</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - using single quotes for strings
+cout &lt;&lt; 'Hello, World!';
+
+// CORRECT - use double quotes for strings
+cout &lt;&lt; "Hello, World!";
+
+// Single quotes are for single characters only
+char letter = 'A';  // This is correct</pre></div>
+
+                <h3>Mistake 3: Misspelling Keywords</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG
+#Include &lt;iostream&gt;    // Capital 'I'
+Using Namespace Std;   // Capital letters
+Int Main() {           // Capital letters
+    Cout &lt;&lt; "Hello";   // Capital 'C'
+}
+
+// CORRECT - C++ is case-sensitive!
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    cout &lt;&lt; "Hello";
+}</pre></div>
+
+                <h3>Mistake 4: Forgetting <code>#include &lt;iostream&gt;</code></h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - cout is not defined without iostream
+int main() {
+    cout &lt;&lt; "Hello";  // Error: 'cout' was not declared
+    return 0;
+}
+
+// CORRECT
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    cout &lt;&lt; "Hello";
+    return 0;
+}</pre></div>
+
+                <h3>Mistake 5: Using the Wrong Operators</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - using >> with cout (should be &lt;&lt;)
+cout &gt;&gt; "Hello";
+
+// WRONG - using &lt;&lt; with cin (should be >>)
+cin &lt;&lt; name;
+
+// CORRECT
+cout &lt;&lt; "Hello";  // &lt;&lt; is insertion (output)
+cin &gt;&gt; name;      // >> is extraction (input)</pre></div>
+
+                <h3>Mistake 6: Mismatched Braces</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - missing closing brace
+int main() {
+    cout &lt;&lt; "Hello" &lt;&lt; endl;
+    return 0;
+// &lt;-- Missing closing brace!
+
+// CORRECT
+int main() {
+    cout &lt;&lt; "Hello" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>Mistake 7: Writing Code Outside of main()</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - executable code outside main()
+#include &lt;iostream&gt;
+using namespace std;
+
+cout &lt;&lt; "Hello";  // Error! This must be inside a function.
+
+int main() {
+    return 0;
+}
+
+// CORRECT
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello";  // Inside main()
+    return 0;
+}</pre></div>
+
+                <h3>Mistake 8: Using Undeclared Variables</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// WRONG - variable not declared before use
+int main() {
+    cout &lt;&lt; x;  // Error: 'x' was not declared
+    return 0;
+}
+
+// CORRECT
+int main() {
+    int x = 42;  // Declare first, then use
+    cout &lt;&lt; x;
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ is <strong>case-sensitive</strong> &mdash; <code>Main</code>, <code>MAIN</code>, and <code>main</code> are all different identifiers. Only lowercase <code>main</code> is recognized as the program's entry point. Similarly, <code>Cout</code> is not the same as <code>cout</code>. Always pay attention to capitalization.</p>
+                </div>
+
+                <h2>Complete Example: A Simple Calculator</h2>
+                <p>Let's put everything together and write a slightly more advanced program that demonstrates input, output, and basic computation:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double num1, num2;
+
+    cout &lt;&lt; "============================" &lt;&lt; endl;
+    cout &lt;&lt; "   Simple C++ Calculator    " &lt;&lt; endl;
+    cout &lt;&lt; "============================" &lt;&lt; endl;
+
+    cout &lt;&lt; "\nEnter first number: ";
+    cin &gt;&gt; num1;
+
+    cout &lt;&lt; "Enter second number: ";
+    cin &gt;&gt; num2;
+
+    cout &lt;&lt; "\n--- Results ---" &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " + " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 + num2) &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " - " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 - num2) &lt;&lt; endl;
+    cout &lt;&lt; num1 &lt;&lt; " * " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 * num2) &lt;&lt; endl;
+
+    if (num2 != 0) {
+        cout &lt;&lt; num1 &lt;&lt; " / " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 / num2) &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Division by zero is not allowed!" &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p>Sample Run:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>============================
+   Simple C++ Calculator    
+============================
+
+Enter first number: 15.5
+Enter second number: 4.2
+
+--- Results ---
+15.5 + 4.2 = 19.7
+15.5 - 4.2 = 11.3
+15.5 * 4.2 = 65.1
+15.5 / 4.2 = 3.69048</pre></div>
+
+                <h2>Summary</h2>
+                <p>In this lesson, you learned:</p>
+                <ul>
+                    <li>How to write a complete Hello World C++ program.</li>
+                    <li>What every line means: <code>#include</code>, <code>using namespace std</code>, <code>int main()</code>, <code>cout</code>, <code>endl</code>, and <code>return 0</code>.</li>
+                    <li>How to compile your program using <code>g++</code>, <code>clang++</code>, and <code>cl</code>.</li>
+                    <li>How to run the compiled executable on different operating systems.</li>
+                    <li>The difference between compilation errors and runtime errors.</li>
+                    <li>How to use multiple <code>cout</code> statements and chain the <code>&lt;&lt;</code> operator.</li>
+                    <li>How to use escape sequences like <code>\n</code>, <code>\t</code>, <code>\\</code>, and <code>\"</code>.</li>
+                    <li>How to read user input using <code>cin</code> and <code>getline()</code>.</li>
+                    <li>Common beginner mistakes and how to avoid them.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Congratulations on writing your first C++ program! The key takeaway is that every C++ program needs <code>#include &lt;iostream&gt;</code> for I/O, a <code>main()</code> function as the entry point, and a <code>return 0;</code> to indicate success. Practice writing small programs to reinforce these concepts before moving on to the next lesson.</p>
+                </div>
+
+                <h2>Practice Exercises</h2>
+                <p>Try these exercises on your own to reinforce what you've learned. Write, compile, and run each one:</p>
+                <ol>
+                    <li><strong>Personal Introduction:</strong> Write a program that prints your name, age, and favorite programming language on separate lines.</li>
+                    <li><strong>ASCII Art:</strong> Use <code>cout</code> statements and escape sequences to print a simple ASCII art shape (like a triangle, house, or smiley face).</li>
+                    <li><strong>Temperature Input:</strong> Write a program that asks the user for a temperature in Celsius, then converts it to Fahrenheit using the formula: <code>F = (C * 9/5) + 32</code>. Display the result.</li>
+                    <li><strong>Rectangle Area:</strong> Write a program that asks the user for the length and width of a rectangle, then calculates and displays the area and perimeter.</li>
+                    <li><strong>Mad Libs:</strong> Create a simple Mad Libs game that asks the user for a noun, verb, adjective, and place name, then prints a funny sentence using those words.</li>
+                    <li><strong>Escape Sequence Art:</strong> Write a program that uses <code>\t</code> and <code>\n</code> to display a formatted table with at least 3 columns and 4 rows of data.</li>
+                    <li><strong>Personal Greeting:</strong> Write a program that asks for the user's full name (using <code>getline</code>) and birth year, then calculates their approximate age and prints a friendly greeting message.</li>
+                </ol>
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/SfGuIVzE_Os" title="Your First C++ Program" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is the file extension for C++ source files?","o":[".c",".cpp",".java",".py"],"a":1},
+                {"q":"Which header file is needed for cout and cin?","o":["<stdio.h>","<stdlib.h>","<iostream>","<string>"],"a":2},
+                {"q":"What does #include do in a C++ program?","o":["Defines a variable","Includes the contents of a header file","Creates a function","Starts the program"],"a":1},
+                {"q":"What is the entry point of every C++ program?","o":["start()","begin()","main()","run()"],"a":2},
+                {"q":"What does 'return 0;' signify in main()?","o":["The program failed","The program finished successfully","The program returns a string","Nothing"],"a":1},
+                {"q":"Which operator is used with cout to output data?","o":[">>","<<","->","::"],"a":1},
+                {"q":"Which operator is used with cin to read input?","o":["<<",">>","::","->"],"a":1},
+                {"q":"What does 'endl' do?","o":["Ends the program","Inserts a newline and flushes the buffer","Deletes a line","Pauses execution"],"a":1},
+                {"q":"What does 'using namespace std;' do?","o":["Creates a new namespace","Imports all names from the std namespace","Defines the main function","Includes a header file"],"a":1},
+                {"q":"What is cout short for?","o":["Count output","Character output","Console output","Both B and C are acceptable"],"a":3},
+                {"q":"What character must end every C++ statement?","o":["Colon (:)","Period (.)","Semicolon (;)","Comma (,)"],"a":2},
+                {"q":"What is the escape sequence for a newline?","o":["\\t","\\n","\\r","\\0"],"a":1},
+                {"q":"What is the escape sequence for a tab?","o":["\\n","\\t","\\b","\\a"],"a":1},
+                {"q":"How do you print a backslash character in a string?","o":["\\","\\\\","\\b","\\s"],"a":1},
+                {"q":"How do you print a double quote inside a string?","o":["\"","\\\"","''","\\q"],"a":1},
+                {"q":"What are the curly braces { } used for in main()?","o":["Comments","Enclosing the function body","String delimiters","Array indexing"],"a":1},
+                {"q":"Which command compiles a C++ file with g++?","o":["gcc hello.cpp","g++ hello.cpp","compile hello.cpp","cpp hello.cpp"],"a":1},
+                {"q":"What flag specifies the output file name in g++?","o":["-f","-out","-o","-n"],"a":2},
+                {"q":"What is the default output filename when using g++ on Linux without -o?","o":["program","output","a.out","hello"],"a":2},
+                {"q":"How do you run an executable called 'hello' on Linux?","o":["run hello","hello","./hello","exec hello"],"a":2},
+                {"q":"Which compiler is the default on macOS?","o":["g++","cl","clang++","icc"],"a":2},
+                {"q":"What does MSVC stand for?","o":["Modern Standard Visual C","Microsoft Visual C++","Main System Virtual Compiler","Multi-System Version Control"],"a":1},
+                {"q":"What is a compilation error?","o":["An error during program execution","An error detected by the compiler before the program runs","A warning message","A logic error"],"a":1},
+                {"q":"What is a runtime error?","o":["An error detected during compilation","A syntax error","An error that occurs while the program is running","A linker error"],"a":2},
+                {"q":"Which of the following is a runtime error?","o":["Missing semicolon","Undeclared variable","Division by zero","Misspelled keyword"],"a":2},
+                {"q":"Which of the following is a compilation error?","o":["Infinite loop","Division by zero","Missing semicolon","Wrong user input"],"a":2},
+                {"q":"What happens if you forget #include <iostream>?","o":["Program runs normally","cout is not recognized — compilation error","Runtime error","Warning but compiles"],"a":1},
+                {"q":"What is the difference between \\n and endl?","o":["No difference","\\n inserts newline only; endl inserts newline and flushes the buffer","endl is faster","\\n flushes the buffer"],"a":1},
+                {"q":"Is C++ case-sensitive?","o":["No","Yes","Only for variables","Only for functions"],"a":1},
+                {"q":"Which of these is the correct main function signature?","o":["void main()","int Main()","int main()","main int()"],"a":2},
+                {"q":"What does the :: operator do?","o":["Assignment","Scope resolution","Comparison","Pointer access"],"a":1},
+                {"q":"What would std::cout << \"Hi\"; print?","o":["std::Hi","Hi","cout Hi","Error"],"a":1},
+                {"q":"What is a string literal?","o":["A variable name","Text enclosed in double quotes","A number","A function call"],"a":1},
+                {"q":"What is the purpose of a C++ compiler?","o":["Run code line by line","Translate source code into machine code","Debug programs","Format source code"],"a":1},
+                {"q":"What is an executable file?","o":["A source code file","A compiled binary file that can be run directly","A header file","A text file"],"a":1},
+                {"q":"Which of these is NOT a valid C++ compiler?","o":["g++","clang++","javac","cl"],"a":2},
+                {"q":"What does -Wall flag do in g++?","o":["Creates a wall of text","Enables all common warning messages","Compiles all files","Runs all tests"],"a":1},
+                {"q":"What is the -std=c++17 flag used for?","o":["Setting the output standard","Specifying the C++ language standard version","Setting string type","Creating a standard library"],"a":1},
+                {"q":"What does cin stand for?","o":["Character input","Console integer","C++ include","Code initiator"],"a":0},
+                {"q":"Which function reads an entire line of input including spaces?","o":["cin >>","scanf()","getline()","readline()"],"a":2},
+                {"q":"What does cin >> x do?","o":["Outputs x","Reads input and stores it in x","Declares x","Deletes x"],"a":1},
+                {"q":"What happens if you type 'abc' when cin expects an integer?","o":["It reads 'abc' as 0","cin enters a fail state","The program crashes immediately","It converts 'abc' to a number"],"a":1},
+                {"q":"In a Hello World program, which line is the preprocessor directive?","o":["int main()","using namespace std;","#include <iostream>","return 0;"],"a":2},
+                {"q":"What symbol starts a preprocessor directive?","o":["@","#","$","&"],"a":1},
+                {"q":"What is the purpose of the return type 'int' in int main()?","o":["To make main return a string","To specify main returns an integer to the OS","To define an integer variable","To include the integer library"],"a":1},
+                {"q":"Can you have more than one main() function in a C++ program?","o":["Yes, as many as you want","Yes, but only two","No, there must be exactly one","Only in C++20"],"a":2},
+                {"q":"What does a non-zero return value from main() indicate?","o":["Success","An error occurred","Nothing","The program needs to restart"],"a":1},
+                {"q":"What is a namespace in C++?","o":["A file name","A way to group related identifiers and prevent name conflicts","A data type","A library"],"a":1},
+                {"q":"What does 'std' stand for?","o":["Standard","String data","System type","Static"],"a":0},
+                {"q":"Which is more efficient: \\n or endl?","o":["endl","\\n","They are identical","Neither"],"a":1},
+                {"q":"What is the insertion operator in C++?","o":[">>","<<","++","--"],"a":1},
+                {"q":"What is the extraction operator in C++?","o":["<<",">>","==","!="],"a":1},
+                {"q":"Which statement correctly prints 'Hello World'?","o":["cout >> \"Hello World\";","cout << \"Hello World\";","print(\"Hello World\");","System.out.println(\"Hello World\");"],"a":1},
+                {"q":"What type of quotes are used for string literals in C++?","o":["Single quotes","Double quotes","Backticks","No quotes needed"],"a":1},
+                {"q":"What are single quotes used for in C++?","o":["String literals","Single characters","Comments","Preprocessor directives"],"a":1},
+                {"q":"What is the escape sequence for a carriage return?","o":["\\n","\\t","\\r","\\c"],"a":2},
+                {"q":"What does the \\0 escape sequence represent?","o":["Zero character","Null character","Tab","Newline"],"a":1},
+                {"q":"What does the \\a escape sequence do?","o":["Prints a letter 'a'","Produces an alert/beep sound","Adds an asterisk","Creates an array"],"a":1},
+                {"q":"What happens if you forget the closing brace } of main()?","o":["Program runs fine","Compilation error","Warning only","Runtime error"],"a":1},
+                {"q":"What is a preprocessor in C++?","o":["A debugger","A tool that processes directives before compilation","The runtime environment","An IDE feature"],"a":1},
+                {"q":"What is the difference between <iostream> and \"iostream\"?","o":["No difference","<> searches system directories; \"\" searches local first","<> is for input, \"\" is for output","<> is newer"],"a":1},
+                {"q":"Which of these will cause a compilation error?","o":["cout << 42;","cout << \"Hello\";","cout << endl;","cout << Hello;"],"a":3},
+                {"q":"What does 'cout << endl;' output?","o":["The word 'endl'","A newline character","Nothing visible, just flushes buffer","An error"],"a":1},
+                {"q":"How do you chain multiple outputs in one cout statement?","o":["Use commas","Use multiple << operators","Use + operator","You can't"],"a":1},
+                {"q":"What is cout << \"A\" << \"B\" << \"C\"; output?","o":["A B C","ABC","A\nB\nC","Error"],"a":1},
+                {"q":"What is the correct syntax to read two integers from user input?","o":["cin << a << b;","cin >> a >> b;","cin >> a, b;","read(a, b);"],"a":1},
+                {"q":"What is blank/whitespace in the context of cin?","o":["Only spaces","Spaces, tabs, and newlines","Only newlines","Only tabs"],"a":1},
+                {"q":"Why might using namespace std be avoided in large projects?","o":["It slows compilation","It can cause name collisions","It's deprecated","It uses more memory"],"a":1},
+                {"q":"What is a valid alternative to using namespace std?","o":["std::cout","standard::cout","Std.cout","namespace.std.cout"],"a":0},
+                {"q":"What does g++ -g hello.cpp -o hello do?","o":["Compiles with optimization","Compiles with debugging information","Compiles for GPU","Generates documentation"],"a":1},
+                {"q":"What does the -O2 flag do in g++?","o":["Sets output to file 2","Enables level 2 optimization","Opens 2 files","Sets to C++02 standard"],"a":1},
+                {"q":"Compilation translates source code into what?","o":["Bytecode","Interpreted script","Machine code (native binary)","HTML"],"a":2},
+                {"q":"Where does the preprocessor look for files included with angle brackets < >?","o":["Current directory","System include directories","Home directory","Temporary directory"],"a":1},
+                {"q":"What file extension does a compiled C++ executable typically have on Windows?","o":[".cpp",".obj",".exe",".out"],"a":2},
+                {"q":"What is the Developer Command Prompt used for with MSVC?","o":["Web development","Running cl compiler with proper environment paths","Database management","Git operations"],"a":1},
+                {"q":"What does /W4 do in the MSVC cl compiler?","o":["Sets Windows 4 mode","Enables warning level 4","Sets width to 4","Creates 4 object files"],"a":1},
+                {"q":"What does /std:c++17 do in the MSVC cl compiler?","o":["Sets the C++ standard to C++17","Sets the string type","Creates a standard file","Starts debugging"],"a":0},
+                {"q":"What is the output of: cout << 5 + 3;","o":["5 + 3","8","53","Error"],"a":1},
+                {"q":"What is the output of: cout << \"5 + 3\";","o":["5 + 3","8","53","Error"],"a":0},
+                {"q":"In C++11 and later, what happens if main() has no return statement?","o":["Compilation error","Runtime error","It implicitly returns 0","Undefined behavior"],"a":2},
+                {"q":"Which of these is NOT a valid C++ source file extension?","o":[".cpp",".cc",".cxx",".cp"],"a":3},
+                {"q":"What does the \\b escape sequence do?","o":["Bold text","Backspace","Break","Beep"],"a":1},
+                {"q":"What is the output of: cout << \"A\\tB\\tC\";","o":["A\\tB\\tC","AtBtC","A    B    C (tab-separated)","ABC"],"a":2},
+                {"q":"What is the output of: cout << \"Line1\\nLine2\";","o":["Line1\\nLine2","Line1nLine2","Line1 on first line, Line2 on second line","Error"],"a":2},
+                {"q":"What is the output of: cout << \"Path: C:\\\\Users\\\\file\";","o":["Path: C:\\\\Users\\\\file","Path: C:\\Users\\file","Error","Path: CUsersfile"],"a":1},
+                {"q":"What is the output of: cout << \"She said \\\"Hi\\\"\";","o":["She said \\\"Hi\\\"","She said Hi","She said \"Hi\"","Error"],"a":2},
+                {"q":"What keyword declares a variable that stores whole numbers?","o":["float","string","int","char"],"a":2},
+                {"q":"What keyword declares a variable that stores decimal numbers?","o":["int","double","string","bool"],"a":1},
+                {"q":"What is the correct way to declare a string variable?","o":["String name;","string name;","str name;","text name;"],"a":1},
+                {"q":"Which header should be included for std::string?","o":["<iostream>","<string>","<cstring>","<text>"],"a":1},
+                {"q":"What does getline(cin, name) do?","o":["Reads one word","Reads an entire line including spaces","Reads a number","Writes a line"],"a":1},
+                {"q":"What is the correct way to compile hello.cpp with clang++?","o":["clang hello.cpp","clang++ hello.cpp -o hello","gcc hello.cpp","cl++ hello.cpp"],"a":1},
+                {"q":"Which of these correctly outputs two lines?","o":["cout << \"A\" << \"B\";","cout << \"A\" << endl << \"B\";","cout << \"A\" + \"B\";","cout << \"AB\";"],"a":1},
+                {"q":"What happens if you write 'Int main()' instead of 'int main()'?","o":["Works fine","Compilation error — C++ is case-sensitive","Warning only","Runtime error"],"a":1},
+                {"q":"What is the << operator called when used with cout?","o":["Shift operator","Insertion operator","Extraction operator","Assignment operator"],"a":1},
+                {"q":"What is the >> operator called when used with cin?","o":["Shift operator","Insertion operator","Extraction operator","Comparison operator"],"a":2},
+                {"q":"How many main() functions can a C++ program have?","o":["Unlimited","Two","Exactly one","Zero or one"],"a":2},
+                {"q":"What does the preprocessor do with #include <iostream>?","o":["Compiles iostream","Copies the contents of iostream into your file","Deletes iostream","Links iostream"],"a":1},
+                {"q":"What is the correct getline syntax?","o":["getline(name, cin)","getline(cin, name)","cin.getline(name)","getline(name)"],"a":1},
+                {"q":"What type of error is using an undeclared variable?","o":["Runtime error","Logic error","Compilation error","Warning"],"a":2},
+                {"q":"What does 'flush' mean in the context of endl?","o":["Delete the buffer","Force all buffered output to be written immediately","Clear the screen","Reset the program"],"a":1},
+                {"q":"What is a buffer in the context of cout?","o":["A data type","A temporary storage area for output data before it's displayed","A variable name","A function"],"a":1},
+                {"q":"Which of these will print the number 42?","o":["cout << \"42\";","cout << 42;","Both A and B","Neither"],"a":2},
+                {"q":"What is the difference between cout << \"42\" and cout << 42?","o":["No difference in output","First prints string, second prints integer — same visual output","First causes error","Second causes error"],"a":1},
+                {"q":"What is a logic error?","o":["A syntax mistake","A crash at runtime","Program runs but produces wrong results","A linker error"],"a":2},
+                {"q":"What does the -Wextra flag do in g++?","o":["Creates extra files","Enables extra warning messages","Adds extra optimization","Enables extra features"],"a":1},
+                {"q":"What is the command to compile and run a program in one step?","o":["g++ hello.cpp -o hello && ./hello","g++ hello.cpp | run","compile-run hello.cpp","g++ --run hello.cpp"],"a":0},
+                {"q":"Can cout print integers and strings in the same statement?","o":["No","Yes, using << between each value","Only with printf","Only with format strings"],"a":1},
+                {"q":"What is cout << \"Age: \" << 25 << endl; output?","o":["Age: 25","Age:25","Age: twenty-five","Error"],"a":0},
+                {"q":"What is the purpose of semicolons in C++?","o":["Start comments","End preprocessor directives","Terminate statements","Separate function parameters"],"a":2},
+                {"q":"Which of the following is a valid variable name in C++?","o":["2name","my-var","_count","class"],"a":2},
+                {"q":"Can you write C++ code outside of any function?","o":["Yes, any code works","Only variable declarations and directives, not executable statements","Yes, all statements work","No code at all"],"a":1},
+                {"q":"What does the ./ prefix mean in ./hello on Linux?","o":["Go up one directory","Look in the current directory","Run as admin","Compile the file"],"a":1},
+                {"q":"On Windows, how do you run hello.exe from Command Prompt?","o":["./hello.exe","run hello.exe","hello.exe","exec hello.exe"],"a":2},
+                {"q":"What happens if you write cout << Hello; without quotes?","o":["Prints Hello","Compilation error — Hello is not a defined variable","Prints nothing","Runtime error"],"a":1},
+                {"q":"What does 'int argc' represent in int main(int argc, char* argv[])?","o":["Argument count","Argument character","Array count","Application code"],"a":0},
+                {"q":"What does 'char* argv[]' represent in main's parameters?","o":["Character variables","Array of argument strings from command line","Character array","Activation records"],"a":1},
+                {"q":"What is the minimum valid C++ program?","o":["int main() {}","main()","start()","#include <iostream>"],"a":0},
+                {"q":"What does cout << cout output?","o":["Error","The address of the cout object","The word 'cout'","Nothing"],"a":1},
+                {"q":"When was the Hello World tradition started?","o":["1960","1972","1978","1985"],"a":2},
+                {"q":"Who wrote 'The C Programming Language' book that started the Hello World tradition?","o":["Bjarne Stroustrup","Brian Kernighan and Dennis Ritchie","James Gosling","Linus Torvalds"],"a":1},
+                {"q":"What is the scope resolution operator?","o":["->",".","::","=>"],"a":2},
+                {"q":"How do you selectively import only cout from std namespace?","o":["import std.cout;","using std::cout;","include std::cout;","from std use cout;"],"a":1},
+                {"q":"What does cerr do?","o":["Reads errors","Outputs error messages to standard error stream","Creates error logs","Catches exceptions"],"a":1},
+                {"q":"What is the output stream object for standard error?","o":["cout","cin","cerr","clog"],"a":2},
+                {"q":"Which of these is the correct way to declare and initialize an integer?","o":["int x = 10;","integer x = 10;","x = 10 int;","var x = 10;"],"a":0},
+                {"q":"What does the term 'compiled language' mean?","o":["Code runs line by line","Source code is translated to machine code before execution","Code needs an interpreter","Code runs in a browser"],"a":1},
+                {"q":"What is the difference between a compiled and an interpreted language?","o":["No difference","Compiled translates to machine code before running; interpreted runs line by line","Compiled is slower","Interpreted needs more memory"],"a":1},
+                {"q":"What is the correct syntax for a single-line comment?","o":["/* comment */","// comment","# comment","<!-- comment -->"],"a":1},
+                {"q":"What is the correct syntax for a multi-line comment?","o":["// comment //","/* comment */","## comment ##","<-- comment -->"],"a":1},
+                {"q":"If you omit 'using namespace std;', how do you write cout?","o":["just cout","std::cout","standard.cout","namespace.std.cout"],"a":1},
+                {"q":"What is the output of: cout << 10 / 3;","o":["3.33","3","3.0","Error"],"a":1},
+                {"q":"What is integer division in C++?","o":["Division that always gives a decimal","Division between two integers that truncates the decimal part","Division by zero","Division using long type"],"a":1},
+                {"q":"What is the output of: cout << 10.0 / 3;","o":["3","3.33333","3.0","Error"],"a":1},
+                {"q":"What does the << operator do when used consecutively?","o":["Creates an error","Chains multiple values to the output stream","Shifts bits left","Compares values"],"a":1},
+                {"q":"What does '\\'' represent in C++?","o":["Backslash","Escaped single quote character","Two single quotes","Error"],"a":1},
+                {"q":"What data type should you use for a user's name?","o":["int","char","string","double"],"a":2},
+                {"q":"What data type should you use for a user's exact age?","o":["string","double","int","char"],"a":2},
+                {"q":"What data type should you use for a user's height in meters?","o":["int","string","char","double"],"a":3},
+                {"q":"What is the output of: cout << \"\\n\\n\\n\";","o":["\\n\\n\\n","nnn","Three blank lines","Error"],"a":2},
+                {"q":"In which year was C++ first named 'C++'?","o":["1979","1983","1985","1998"],"a":1},
+                {"q":"What IDE feature can compile and run programs with a single button?","o":["Debugger","Build/Run button","File manager","Version control"],"a":1},
+                {"q":"What happens if num2 is 0 in the expression num1/num2 with integers?","o":["Returns 0","Returns infinity","Runtime error (division by zero)","Returns -1"],"a":2},
+                {"q":"What does the IDE button F5 or Ctrl+F5 typically do?","o":["Save file","Compile and run the program","Open settings","Close the program"],"a":1},
+                {"q":"What is the difference between #include <file> and #include \"file\"?","o":["No difference","<> for system headers, \"\" for local/project headers","<> is deprecated","\"\" is only for strings"],"a":1},
+                {"q":"Which part of the program does the OS call first?","o":["The first #include","The first cout statement","The main() function","The first variable declaration"],"a":2},
+                {"q":"What is the result of: cout << \"Hello\" << \" \" << \"World\";","o":["HelloWorld","Hello World","Hello\\nWorld","Error"],"a":1},
+                {"q":"Can a C++ program have zero cout statements?","o":["No, at least one is required","Yes, the program just won't output anything","Only in C++11","Only in main()"],"a":1},
+                {"q":"What does MinGW provide on Windows?","o":["A text editor","A port of GCC (g++) for Windows","A database","An IDE"],"a":1},
+                {"q":"What is MSYS2?","o":["A compiler","A software distribution and building platform for Windows","An IDE","A debugger"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="introduction.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous</span>
+                    <span class="nav-title">Introduction to C++</span>
+                </a>
+                <a href="basic-syntax.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">C++ Basic Syntax</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

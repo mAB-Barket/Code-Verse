@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Inline &amp; Lambda Functions - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-inline-lambda">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html" class="active"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 21 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="38" style="width:38%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Inline &amp; Lambda Functions
+                </div>
+                <h1>21. Inline &amp; Lambda Functions</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 21 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Inline Functions? ===== -->
+                <h2>What Are Inline Functions?</h2>
+                <p>An <strong>inline function</strong> is a function for which the compiler is <em>requested</em> to insert the complete body of the function at every point where it is called, rather than generating a normal function call. This eliminates the overhead associated with function calls &mdash; pushing arguments onto the stack, jumping to the function&rsquo;s address, executing the body, and returning the result.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>What inline functions are and why they exist</li>
+                    <li>How to declare and use the <code>inline</code> keyword</li>
+                    <li>When to use and when <strong>not</strong> to use inline</li>
+                    <li>How the compiler handles inline requests</li>
+                    <li>Lambda expressions &mdash; anonymous functions introduced in C++11</li>
+                    <li>Lambda capture clauses, <code>mutable</code>, and generic lambdas</li>
+                    <li>Using lambdas with STL algorithms</li>
+                    <li>Immediately Invoked Lambda Expressions (IILE)</li>
+                    <li>Comparing inline, lambda, and regular functions</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>inline</code> keyword is a <strong>request</strong>, not a command. The compiler is free to ignore it if inlining would hurt performance (e.g., for large or recursive functions). Modern compilers often inline small functions automatically regardless of the keyword.</p>
+                </div>
+
+                <!-- ===== Syntax and Usage of inline ===== -->
+                <h2>Syntax and Usage of the <code>inline</code> Keyword</h2>
+                <p>To declare a function as inline, place the <code>inline</code> keyword before the return type in the function definition:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+inline int square(int x) {
+    return x * x;
+}
+
+int main() {
+    cout &lt;&lt; "5 squared = " &lt;&lt; square(5) &lt;&lt; endl;   // 25
+    cout &lt;&lt; "9 squared = " &lt;&lt; square(9) &lt;&lt; endl;   // 81
+    return 0;
+}</code></pre></div>
+
+                <p>When the compiler honours the inline request, the call <code>square(5)</code> is effectively replaced with <code>5 * 5</code> in the compiled code. There is no function-call overhead &mdash; no stack frame is created and no jump instruction is executed.</p>
+
+                <h3>Inline with Multiple Statements</h3>
+                <p>Inline functions can contain more than a single return statement, but keep them short for the best chance of actual inlining:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>inline int maxOf(int a, int b) {
+    if (a &gt; b) return a;
+    return b;
+}
+
+inline void swap(int &amp;a, int &amp;b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}</code></pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; Definition in Headers</h3>
+                    <p>Inline functions are typically defined in <strong>header files</strong>. Because the compiler needs the full body at every call site, a declaration alone in a header is not enough &mdash; the definition must be visible. The <code>inline</code> keyword also tells the linker to allow multiple identical definitions across translation units.</p>
+                </div>
+
+                <!-- ===== When to Use and Not Use Inline ===== -->
+                <h2>When to Use and Not Use Inline</h2>
+
+                <h3>&#10004; Good Candidates for Inline</h3>
+                <ul>
+                    <li>Very small functions (1&ndash;3 lines) that are called frequently</li>
+                    <li>Simple getters and setters in classes</li>
+                    <li>Mathematical helper functions like <code>square</code>, <code>abs</code>, <code>max</code></li>
+                    <li>Functions defined inside a class body (they are implicitly inline)</li>
+                </ul>
+
+                <h3>&#10008; Poor Candidates for Inline</h3>
+                <ul>
+                    <li>Large functions &mdash; inlining them increases code size (code bloat)</li>
+                    <li>Recursive functions &mdash; cannot be fully expanded at compile time</li>
+                    <li>Functions with loops or complex control flow</li>
+                    <li>Virtual functions &mdash; resolved at runtime, so generally not inlined</li>
+                    <li>Functions whose address is taken (pointer-to-function usage)</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Functions defined <strong>inside a class definition</strong> are implicitly inline. You do not need to add the <code>inline</code> keyword for them:</p>
+                </div>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>class Circle {
+    double radius;
+public:
+    Circle(double r) : radius(r) {}
+
+    // Implicitly inline because it is defined inside the class
+    double area() { return 3.14159 * radius * radius; }
+};</code></pre></div>
+
+                <!-- ===== Compiler Behavior and Optimization ===== -->
+                <h2>Compiler Behavior and Optimization</h2>
+                <p>Modern C++ compilers (GCC, Clang, MSVC) treat the <code>inline</code> keyword primarily as a <strong>linkage directive</strong> rather than an optimization hint. Here is what really happens:</p>
+                <ol>
+                    <li><strong>Automatic inlining</strong> &mdash; compilers inline small functions on their own when optimization flags like <code>-O2</code> or <code>/O2</code> are enabled, even without the <code>inline</code> keyword.</li>
+                    <li><strong>Ignoring the keyword</strong> &mdash; if a function is too large or recursive, the compiler will generate a normal call despite the <code>inline</code> keyword.</li>
+                    <li><strong>Multiple-definition rule</strong> &mdash; <code>inline</code> allows the same function to be defined in multiple translation units without violating the One Definition Rule (ODR).</li>
+                </ol>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>// Compiling with optimization:
+//   g++ -O2 main.cpp -o main
+// The compiler will likely inline small functions automatically.</code></pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; constexpr is Often Better</h3>
+                    <p>For compile-time constant expressions, prefer <code>constexpr</code> over <code>inline</code>. A <code>constexpr</code> function is implicitly inline <em>and</em> can be evaluated at compile time when given constant arguments.</p>
+                </div>
+
+                <!-- ===== Introduction to Lambda Expressions ===== -->
+                <h2>Introduction to Lambda Expressions (C++11)</h2>
+                <p>A <strong>lambda expression</strong> (or simply a <strong>lambda</strong>) is an <em>anonymous function object</em> that you can define inline, right where you need it. Lambdas were introduced in <strong>C++11</strong> and have been enhanced in every subsequent standard.</p>
+                <p>Lambdas are especially useful when you need a short, throw-away function &mdash; for example, as a callback or predicate passed to an STL algorithm.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // A simple lambda that prints a greeting
+    auto greet = []() {
+        cout &lt;&lt; "Hello from a lambda!" &lt;&lt; endl;
+    };
+
+    greet();   // Hello from a lambda!
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Lambda Syntax ===== -->
+                <h2>Lambda Syntax</h2>
+                <p>The full syntax of a lambda expression is:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>[capture](parameters) -&gt; return_type {
+    // body
+};</code></pre></div>
+
+                <table>
+                    <thead>
+                        <tr><th>Part</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>[capture]</code></td><td>Specifies which outside variables the lambda can access</td></tr>
+                        <tr><td><code>(parameters)</code></td><td>Function parameters, same as regular functions (optional if empty)</td></tr>
+                        <tr><td><code>-&gt; return_type</code></td><td>Trailing return type (optional &mdash; the compiler can deduce it)</td></tr>
+                        <tr><td><code>{ body }</code></td><td>The function body containing the statements to execute</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Examples</h3>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>// Lambda with parameters and deduced return type
+auto add = [](int a, int b) { return a + b; };
+cout &lt;&lt; add(3, 4) &lt;&lt; endl;   // 7
+
+// Lambda with explicit return type
+auto divide = [](double a, double b) -&gt; double {
+    if (b == 0) return 0;
+    return a / b;
+};
+cout &lt;&lt; divide(10.0, 3.0) &lt;&lt; endl;   // 3.33333
+
+// Lambda with no parameters
+auto pi = []() -&gt; double { return 3.14159265; };
+cout &lt;&lt; pi() &lt;&lt; endl;   // 3.14159</code></pre></div>
+
+                <!-- ===== Capture Clauses ===== -->
+                <h2>Capture Clauses</h2>
+                <p>The <strong>capture clause</strong> <code>[]</code> controls how the lambda accesses variables from the enclosing scope. Without a capture, the lambda cannot use any local variables from outside its body.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Capture</th><th>Meaning</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>[]</code></td><td>Capture nothing &mdash; the lambda cannot access outer variables</td></tr>
+                        <tr><td><code>[=]</code></td><td>Capture all outer variables <strong>by value</strong> (copy)</td></tr>
+                        <tr><td><code>[&amp;]</code></td><td>Capture all outer variables <strong>by reference</strong></td></tr>
+                        <tr><td><code>[x]</code></td><td>Capture only <code>x</code> by value</td></tr>
+                        <tr><td><code>[&amp;x]</code></td><td>Capture only <code>x</code> by reference</td></tr>
+                        <tr><td><code>[=, &amp;x]</code></td><td>Capture all by value, except <code>x</code> by reference</td></tr>
+                        <tr><td><code>[&amp;, x]</code></td><td>Capture all by reference, except <code>x</code> by value</td></tr>
+                        <tr><td><code>[this]</code></td><td>Capture the current object&rsquo;s <code>this</code> pointer</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 10;
+    int y = 20;
+
+    // Capture x by value, y by reference
+    auto func = [x, &amp;y]() {
+        cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; endl;   // 10 (copy)
+        y += 5;                          // modifies original y
+    };
+
+    func();
+    cout &lt;&lt; "y after lambda = " &lt;&lt; y &lt;&lt; endl;   // 25
+
+    // Capture all by value
+    auto all_val = [=]() {
+        cout &lt;&lt; x + y &lt;&lt; endl;   // 35
+    };
+    all_val();
+
+    // Capture all by reference
+    auto all_ref = [&amp;]() {
+        x = 100;
+        y = 200;
+    };
+    all_ref();
+    cout &lt;&lt; x &lt;&lt; " " &lt;&lt; y &lt;&lt; endl;   // 100 200
+
+    return 0;
+}</code></pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Variables captured <strong>by value</strong> are <em>copied</em> when the lambda is created. Changes to the original variable after that point are <strong>not</strong> reflected inside the lambda, and vice-versa (unless the lambda is declared <code>mutable</code>).</p>
+                </div>
+
+                <!-- ===== Lambda with auto and std::function ===== -->
+                <h2>Lambda with <code>auto</code> and <code>std::function</code></h2>
+                <p>Each lambda has a <strong>unique, unnamed type</strong> generated by the compiler. The simplest way to store a lambda is with <code>auto</code>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>auto greet = [](const string &amp;name) {
+    cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!" &lt;&lt; endl;
+};
+greet("Alice");</code></pre></div>
+
+                <p>If you need to store a lambda in a variable whose type is known at declaration (for example, as a class member or in a container), use <code>std::function</code> from the <code>&lt;functional&gt;</code> header:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // std::function&lt;return_type(param_types)&gt;
+    function&lt;int(int, int)&gt; add = [](int a, int b) {
+        return a + b;
+    };
+
+    cout &lt;&lt; add(5, 3) &lt;&lt; endl;   // 8
+
+    // Reassign to a different lambda with the same signature
+    add = [](int a, int b) { return a * b; };
+    cout &lt;&lt; add(5, 3) &lt;&lt; endl;   // 15
+
+    return 0;
+}</code></pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; auto vs std::function</h3>
+                    <p>Prefer <code>auto</code> when possible &mdash; it has zero overhead. <code>std::function</code> introduces a small runtime cost due to type erasure and potential heap allocation. Use <code>std::function</code> when you need to store lambdas of the same signature interchangeably or pass them through interfaces that require a known type.</p>
+                </div>
+
+                <!-- ===== Lambda with STL Algorithms ===== -->
+                <h2>Lambda with STL Algorithms</h2>
+                <p>Lambdas truly shine when used as predicates and transformations with the Standard Template Library algorithms. Here are some common examples:</p>
+
+                <h3>std::sort &mdash; Custom Comparator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; nums = {5, 2, 8, 1, 9, 3};
+
+    // Sort in descending order
+    sort(nums.begin(), nums.end(), [](int a, int b) {
+        return a &gt; b;
+    });
+
+    for (int n : nums) cout &lt;&lt; n &lt;&lt; " ";   // 9 8 5 3 2 1
+    cout &lt;&lt; endl;
+    return 0;
+}</code></pre></div>
+
+                <h3>std::for_each &mdash; Apply an Action</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; nums = {1, 2, 3, 4, 5};
+
+    for_each(nums.begin(), nums.end(), [](int &amp;n) {
+        n *= 2;   // double each element in-place
+    });
+
+    for (int n : nums) cout &lt;&lt; n &lt;&lt; " ";   // 2 4 6 8 10
+    cout &lt;&lt; endl;
+    return 0;
+}</code></pre></div>
+
+                <h3>std::find_if &mdash; Find with a Predicate</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; nums = {3, 7, 2, 9, 4, 6};
+
+    auto it = find_if(nums.begin(), nums.end(), [](int n) {
+        return n &gt; 5;   // find first element greater than 5
+    });
+
+    if (it != nums.end())
+        cout &lt;&lt; "First &gt; 5: " &lt;&lt; *it &lt;&lt; endl;   // 7
+
+    return 0;
+}</code></pre></div>
+
+                <h3>std::transform &mdash; Map Values</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; input = {1, 2, 3, 4, 5};
+    vector&lt;int&gt; output(input.size());
+
+    transform(input.begin(), input.end(), output.begin(), [](int n) {
+        return n * n;   // square each element
+    });
+
+    for (int n : output) cout &lt;&lt; n &lt;&lt; " ";   // 1 4 9 16 25
+    cout &lt;&lt; endl;
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Mutable Lambdas ===== -->
+                <h2>Mutable Lambdas</h2>
+                <p>By default, variables captured <strong>by value</strong> are treated as <code>const</code> inside the lambda. If you need to modify a by-value capture within the lambda body, add the <code>mutable</code> keyword after the parameter list:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int count = 0;
+
+    auto increment = [count]() mutable {
+        count++;                 // modifies the lambda's copy
+        cout &lt;&lt; "Inside: " &lt;&lt; count &lt;&lt; endl;
+    };
+
+    increment();   // Inside: 1
+    increment();   // Inside: 2
+    increment();   // Inside: 3
+
+    cout &lt;&lt; "Outside: " &lt;&lt; count &lt;&lt; endl;   // Outside: 0  (original unchanged)
+    return 0;
+}</code></pre></div>
+
+                <p>Notice that the lambda has its <strong>own copy</strong> of <code>count</code>. The <code>mutable</code> keyword lets it modify that copy, but the original variable in <code>main()</code> remains unchanged. The lambda also <strong>remembers</strong> its state between calls &mdash; the copy persists as long as the lambda object lives.</p>
+
+                <div class="tip">
+                    <h3>&#128161; mutable + by-reference</h3>
+                    <p>You only need <code>mutable</code> for <strong>by-value</strong> captures. By-reference captures can always modify the original variable without <code>mutable</code>.</p>
+                </div>
+
+                <!-- ===== Generic Lambdas (C++14) ===== -->
+                <h2>Generic Lambdas (C++14)</h2>
+                <p>Starting with <strong>C++14</strong>, you can use <code>auto</code> in the lambda&rsquo;s parameter list to create a <strong>generic (templated) lambda</strong> that works with any type:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    // Generic lambda: works with any type that supports +
+    auto add = [](auto a, auto b) {
+        return a + b;
+    };
+
+    cout &lt;&lt; add(3, 4) &lt;&lt; endl;            // 7  (int)
+    cout &lt;&lt; add(2.5, 1.3) &lt;&lt; endl;        // 3.8 (double)
+    cout &lt;&lt; add(string("Hello, "), string("World!")) &lt;&lt; endl;
+    // Hello, World!  (string concatenation)
+
+    return 0;
+}</code></pre></div>
+
+                <p>Under the hood, the compiler generates a templated <code>operator()</code> for the lambda&rsquo;s closure type. Each call with different argument types instantiates a separate specialization.</p>
+
+                <h3>Generic Lambda with Multiple auto Parameters</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>auto print_pair = [](auto first, auto second) {
+    cout &lt;&lt; "(" &lt;&lt; first &lt;&lt; ", " &lt;&lt; second &lt;&lt; ")" &lt;&lt; endl;
+};
+
+print_pair(1, "apple");      // (1, apple)
+print_pair(3.14, true);      // (3.14, 1)</code></pre></div>
+
+                <!-- ===== Immediately Invoked Lambda Expressions ===== -->
+                <h2>Immediately Invoked Lambda Expressions (IILE)</h2>
+                <p>An <strong>Immediately Invoked Lambda Expression</strong> is a lambda that is defined and called in the same statement. This pattern is useful for complex initializations where you want to compute a value using several steps but keep the logic self-contained:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // IILE: the lambda runs immediately and its result initializes 'result'
+    const int result = [](int x, int y) {
+        int sum = x + y;
+        int product = x * y;
+        return sum + product;
+    }(3, 4);   // called with arguments 3 and 4
+
+    cout &lt;&lt; "Result: " &lt;&lt; result &lt;&lt; endl;   // Result: 19  (7 + 12)
+    return 0;
+}</code></pre></div>
+
+                <h3>IILE for const Initialization</h3>
+                <p>A common real-world use is initializing a <code>const</code> variable that requires multiple steps of logic:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;numeric&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; scores = {85, 92, 78, 96, 88};
+
+    const double average = [&amp;]() {
+        int total = accumulate(scores.begin(), scores.end(), 0);
+        return static_cast&lt;double&gt;(total) / scores.size();
+    }();
+
+    cout &lt;&lt; "Average: " &lt;&lt; average &lt;&lt; endl;   // Average: 87.8
+    return 0;
+}</code></pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>IILEs are especially powerful for <code>const</code> initialization. Without them you would need a helper function or a non-const temporary variable, making the code less readable.</p>
+                </div>
+
+                <!-- ===== Inline vs Lambda vs Regular Functions ===== -->
+                <h2>Inline vs Lambda vs Regular Functions</h2>
+                <p>Here is a comparison to help you choose the right tool:</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Feature</th><th>Regular Function</th><th>Inline Function</th><th>Lambda Expression</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Named?</td><td>Yes</td><td>Yes</td><td>Anonymous (can be stored in a variable)</td></tr>
+                        <tr><td>Defined where?</td><td>Global / class scope</td><td>Header / class body</td><td>Inside any scope, at point of use</td></tr>
+                        <tr><td>Can capture locals?</td><td>No</td><td>No</td><td>Yes &mdash; via capture clause</td></tr>
+                        <tr><td>Call overhead</td><td>Normal call</td><td>May be eliminated</td><td>Same as inline (compiler can inline)</td></tr>
+                        <tr><td>Reusable?</td><td>Highly</td><td>Highly</td><td>Limited &mdash; best for one-off use</td></tr>
+                        <tr><td>Template support</td><td>Yes</td><td>Yes</td><td>Generic lambdas (C++14 <code>auto</code>)</td></tr>
+                        <tr><td>STL algorithm use</td><td>Pass as function pointer</td><td>Pass as function pointer</td><td>Pass directly &mdash; most convenient</td></tr>
+                        <tr><td>Introduced in</td><td>C (original)</td><td>C++ (early)</td><td>C++11</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="tip">
+                    <h3>&#128161; When to Use What</h3>
+                    <ul>
+                        <li>Use a <strong>regular function</strong> when the logic is reused across multiple files or is complex.</li>
+                        <li>Use an <strong>inline function</strong> for small, frequently-called utilities defined in headers.</li>
+                        <li>Use a <strong>lambda</strong> for short, local, one-off callbacks, predicates, and transformations.</li>
+                    </ul>
+                </div>
+
+                <!-- ===== Complete Example ===== -->
+                <h2>Complete Example</h2>
+                <p>This program demonstrates inline functions, lambdas with various captures, and lambdas with STL algorithms working together:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+using namespace std;
+
+// Inline function
+inline int square(int x) { return x * x; }
+
+int main() {
+    // --- Inline function usage ---
+    cout &lt;&lt; "square(6) = " &lt;&lt; square(6) &lt;&lt; endl;   // 36
+
+    // --- Basic lambda ---
+    auto greet = []() { cout &lt;&lt; "Hello, Lambda!" &lt;&lt; endl; };
+    greet();
+
+    // --- Lambda with capture ---
+    int factor = 3;
+    auto multiply = [factor](int n) { return n * factor; };
+    cout &lt;&lt; "multiply(7) = " &lt;&lt; multiply(7) &lt;&lt; endl;   // 21
+
+    // --- Mutable lambda ---
+    int counter = 0;
+    auto tick = [counter]() mutable {
+        return ++counter;
+    };
+    cout &lt;&lt; tick() &lt;&lt; " " &lt;&lt; tick() &lt;&lt; " " &lt;&lt; tick() &lt;&lt; endl;   // 1 2 3
+
+    // --- Generic lambda (C++14) ---
+    auto maxVal = [](auto a, auto b) { return (a &gt; b) ? a : b; };
+    cout &lt;&lt; "max(3, 7) = " &lt;&lt; maxVal(3, 7) &lt;&lt; endl;       // 7
+    cout &lt;&lt; "max(2.5, 1.8) = " &lt;&lt; maxVal(2.5, 1.8) &lt;&lt; endl; // 2.5
+
+    // --- Lambda with STL sort ---
+    vector&lt;int&gt; v = {4, 1, 7, 3, 9, 2};
+    sort(v.begin(), v.end(), [](int a, int b) { return a &lt; b; });
+
+    cout &lt;&lt; "Sorted: ";
+    for_each(v.begin(), v.end(), [](int n) { cout &lt;&lt; n &lt;&lt; " "; });
+    cout &lt;&lt; endl;   // 1 2 3 4 7 9
+
+    // --- IILE ---
+    const int total = [&amp;v]() {
+        int sum = 0;
+        for (int n : v) sum += n;
+        return sum;
+    }();
+    cout &lt;&lt; "Sum = " &lt;&lt; total &lt;&lt; endl;   // 26
+
+    // --- std::function ---
+    function&lt;int(int, int)&gt; op = [](int a, int b) { return a + b; };
+    cout &lt;&lt; "op(10, 5) = " &lt;&lt; op(10, 5) &lt;&lt; endl;   // 15
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Inline functions</strong> request the compiler to replace function calls with the function body, avoiding call overhead. The compiler may honour or ignore this request.</li>
+                    <li>Functions defined <strong>inside a class body</strong> are implicitly inline.</li>
+                    <li>Modern compilers inline small functions automatically with optimization enabled &mdash; the <code>inline</code> keyword is mainly useful for its <strong>linkage</strong> properties (allowing definitions in headers).</li>
+                    <li><strong>Lambda expressions</strong> are anonymous function objects defined with the syntax <code>[capture](params) -&gt; return_type { body }</code>.</li>
+                    <li>The <strong>capture clause</strong> controls access to enclosing-scope variables: by value (<code>[=]</code>, <code>[x]</code>) or by reference (<code>[&amp;]</code>, <code>[&amp;x]</code>).</li>
+                    <li>Use <code>mutable</code> to allow modification of by-value captures inside the lambda.</li>
+                    <li><strong>Generic lambdas</strong> (C++14) use <code>auto</code> parameters to work with any type.</li>
+                    <li><strong>IILEs</strong> (Immediately Invoked Lambda Expressions) are useful for complex <code>const</code> initializations.</li>
+                    <li>Store lambdas with <code>auto</code> for best performance; use <code>std::function</code> when you need type-erased, reassignable function wrappers.</li>
+                    <li>Lambdas are the preferred way to pass small predicates and callbacks to <strong>STL algorithms</strong> like <code>sort</code>, <code>for_each</code>, <code>find_if</code>, and <code>transform</code>.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Watch: C++ Inline &amp; Lambda Functions</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/sjLFRvNuhSk" title="C++ Inline &amp; Lambda Functions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- ===== Quiz Section ===== -->
+            <div class="quiz-btn-wrapper">
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What does the inline keyword request the compiler to do?","o":["Make the function recursive","Replace the function call with the function body","Allocate the function on the heap","Force the function to run at compile time"],"a":1},
+                {"q":"Is the inline keyword a command or a request to the compiler?","o":["A strict command the compiler must obey","A request the compiler may ignore","A linker directive only","A preprocessor macro"],"a":1},
+                {"q":"Which of the following is a good candidate for an inline function?","o":["A 200-line parsing function","A recursive Fibonacci function","A one-line getter method","A function with complex loops"],"a":2},
+                {"q":"What happens if the compiler ignores the inline keyword?","o":["Compilation error","The function is treated as a normal function","The program crashes at runtime","The function is deleted"],"a":1},
+                {"q":"Functions defined inside a class body are:","o":["Explicitly virtual","Implicitly inline","Always recursive","Stored on the heap"],"a":1},
+                {"q":"Where should inline function definitions typically be placed?","o":["In .cpp source files only","In header files","In main() only","In a separate DLL"],"a":1},
+                {"q":"What C++ rule does inline help satisfy when defining functions in headers?","o":["Rule of Three","One Definition Rule (ODR)","Rule of Five","RAII"],"a":1},
+                {"q":"Which optimization flag commonly enables automatic inlining in GCC?","o":["-Wall","-g","-O0","-O2"],"a":3},
+                {"q":"What is a lambda expression in C++?","o":["A named global function","An anonymous function object defined inline","A preprocessor macro","A type of pointer"],"a":1},
+                {"q":"In which C++ standard were lambda expressions introduced?","o":["C++98","C++03","C++11","C++17"],"a":2},
+                {"q":"What is the correct basic syntax of a lambda?","o":["lambda(params) { body }","[capture](params) { body }","def lambda(params): body","function(params) => body"],"a":1},
+                {"q":"What does an empty capture clause [] mean?","o":["Capture all variables by value","Capture all variables by reference","Capture nothing from the enclosing scope","Capture the this pointer"],"a":2},
+                {"q":"What does [=] in a lambda capture clause mean?","o":["Capture nothing","Capture all outer variables by reference","Capture all outer variables by value","Capture only the first variable"],"a":2},
+                {"q":"What does [&] in a lambda capture clause mean?","o":["Capture nothing","Capture all outer variables by reference","Capture all outer variables by value","Bitwise AND capture"],"a":1},
+                {"q":"What does [x] capture?","o":["All variables by value","Only x by value","Only x by reference","All variables except x"],"a":1},
+                {"q":"What does [&x] capture?","o":["All variables by reference","Only x by reference","Only x by value","The address of x"],"a":1},
+                {"q":"What does [=, &x] mean?","o":["Capture all by reference, x by value","Capture all by value, x by reference","Capture only x by value","Syntax error"],"a":1},
+                {"q":"What does [&, x] mean?","o":["Capture all by value, x by reference","Capture all by reference, x by value","Capture nothing","Capture x twice"],"a":1},
+                {"q":"What keyword is needed to modify a by-value capture inside a lambda?","o":["const","volatile","mutable","static"],"a":2},
+                {"q":"Does modifying a mutable by-value capture change the original variable?","o":["Yes","No","Only if it is a pointer","Only in C++17"],"a":1},
+                {"q":"What is the type of a lambda expression?","o":["Always std::function","A unique unnamed closure type","void*","function pointer"],"a":1},
+                {"q":"Which is the preferred way to store a lambda with zero overhead?","o":["std::function","void*","auto","function pointer"],"a":2},
+                {"q":"When should you use std::function instead of auto for a lambda?","o":["Always","When you need type-erased, reassignable callables","When the lambda has no captures","When using C++98"],"a":1},
+                {"q":"What header is needed for std::function?","o":["<algorithm>","<functional>","<lambda>","<utility>"],"a":1},
+                {"q":"Which STL algorithm is commonly used with a lambda to sort elements?","o":["std::find","std::sort","std::copy","std::accumulate"],"a":1},
+                {"q":"What does this lambda do? [](int a, int b) { return a > b; }","o":["Adds two numbers","Returns true if a is greater than b","Swaps a and b","Returns the smaller value"],"a":1},
+                {"q":"How do you pass a lambda to std::for_each?","o":["As the first argument","As the second argument","As the third argument","It cannot be passed"],"a":2},
+                {"q":"What does std::find_if do with a lambda predicate?","o":["Sorts the range","Removes elements matching the predicate","Returns an iterator to the first element satisfying the predicate","Counts matching elements"],"a":2},
+                {"q":"What does std::transform do?","o":["Sorts elements","Applies a function to each element and stores the result","Removes duplicates","Reverses the range"],"a":1},
+                {"q":"What is a generic lambda?","o":["A lambda that uses auto parameters","A lambda with no capture","A lambda that returns void","A lambda defined globally"],"a":0},
+                {"q":"In which C++ standard were generic lambdas (auto parameters) introduced?","o":["C++11","C++14","C++17","C++20"],"a":1},
+                {"q":"What does auto in a generic lambda parameter create under the hood?","o":["A void parameter","A templated operator()","A virtual function","A macro expansion"],"a":1},
+                {"q":"What is an Immediately Invoked Lambda Expression (IILE)?","o":["A lambda stored for later use","A lambda defined and called in the same statement","A lambda that calls itself recursively","A lambda with no return value"],"a":1},
+                {"q":"How do you immediately invoke a lambda?","o":["Add () after the closing brace","Use the call keyword","Use std::invoke only","Add the inline keyword"],"a":0},
+                {"q":"Why are IILEs useful for const initialization?","o":["They make variables non-const","They allow multi-step logic to produce a const result","They bypass type checking","They run at link time"],"a":1},
+                {"q":"What is the output? auto f = [](int n){ return n*n; }; cout << f(4);","o":["4","8","16","Error"],"a":2},
+                {"q":"What is the output? int x=5; auto f=[x](){return x+1;}; x=10; cout<<f();","o":["6","11","5","10"],"a":0},
+                {"q":"What is the output? int x=5; auto f=[&x](){return x+1;}; x=10; cout<<f();","o":["6","11","5","10"],"a":1},
+                {"q":"What is the output? int c=0; auto f=[c]() mutable {return ++c;}; cout<<f()<<f();","o":["00","11","12","01"],"a":2},
+                {"q":"Can a lambda be recursive without std::function?","o":["Yes, easily","No, because it cannot refer to itself by name with auto","Only in C++20","Only with the inline keyword"],"a":1},
+                {"q":"What does the trailing -> return_type in a lambda specify?","o":["The capture type","The explicit return type of the lambda","The parameter type","The exception type"],"a":1},
+                {"q":"Is the trailing return type in a lambda required?","o":["Yes, always","No, the compiler can usually deduce it","Only for void lambdas","Only in C++11"],"a":1},
+                {"q":"What does [this] capture in a lambda inside a member function?","o":["The class name","A copy of all member variables","The current object's this pointer","Nothing"],"a":2},
+                {"q":"Which is faster: calling through std::function or through auto?","o":["std::function","auto (direct call, zero overhead)","They are identical","Depends on the OS"],"a":1},
+                {"q":"What is code bloat in the context of inline functions?","o":["Too many comments","Excessive increase in binary size from inlining large functions","Memory leaks","Stack overflow"],"a":1},
+                {"q":"Can inline functions be recursive?","o":["Yes, but the compiler will not actually inline the recursion","No, it causes a compilation error","Yes, and all recursive calls are fully expanded","Only with tail recursion"],"a":0},
+                {"q":"Which keyword makes a function both inline and evaluable at compile time?","o":["static","virtual","constexpr","volatile"],"a":2},
+                {"q":"What is the output? auto add=[](auto a,auto b){return a+b;}; cout<<add(1,2)<<add(1.5,2.5);","o":["34","3 4","34.0","Error"],"a":0},
+                {"q":"Which capture clause would you use to capture all variables by value except y by reference?","o":["[=, &y]","[&, y]","[y, &]","[&y, =]"],"a":0},
+                {"q":"What is the primary modern purpose of the inline keyword in C++?","o":["Force inlining at all costs","Allow multiple identical definitions across translation units (ODR)","Make functions virtual","Enable recursion"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="recursion.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Recursion</span>
+                </a>
+                <a href="arrays.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Arrays</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

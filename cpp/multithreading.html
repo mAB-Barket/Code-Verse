@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Multithreading - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-multithreading">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html" class="active"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 49 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="89" style="width:89%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Multithreading
+                </div>
+                <h1>49. Multithreading</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 49 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Multithreading? ===== -->
+                <h2>What Is Multithreading?</h2>
+                <p><strong>Multithreading</strong> is the ability of a program to execute multiple <em>threads</em> of control simultaneously. Each thread is an independent sequence of instructions that shares the same address space (heap, global variables, open files) with other threads in the same process.</p>
+                <p>Two related but distinct concepts often come up:</p>
+                <ul>
+                    <li><strong>Concurrency</strong> &ndash; multiple tasks make progress within overlapping time periods. On a single-core CPU the operating system rapidly switches between threads (time-slicing), giving the <em>illusion</em> of parallelism.</li>
+                    <li><strong>Parallelism</strong> &ndash; multiple tasks literally execute at the same instant, each on its own CPU core. True parallelism requires multi-core hardware.</li>
+                </ul>
+                <p>C++11 introduced a portable threading library in the Standard Library, so you no longer need platform-specific APIs like POSIX threads or the Windows API to write multithreaded code.</p>
+
+                <h3>Processes vs. Threads</h3>
+                <p>A <strong>process</strong> is a running instance of a program with its own memory space. Creating a new process is expensive because the OS must duplicate the entire address space. A <strong>thread</strong>, on the other hand, is a lightweight unit of execution <em>inside</em> a process. All threads within the same process share the heap, static storage, and file descriptors, making inter-thread communication much cheaper than inter-process communication (IPC).</p>
+                <p>The flip side of sharing is <strong>risk</strong>: any thread can corrupt shared data if proper synchronisation is not in place. The rest of this lesson focuses on the tools C++ provides to manage that risk.</p>
+
+                <h3>Why Use Multithreading?</h3>
+                <ul>
+                    <li><strong>Performance</strong> &ndash; distribute CPU-bound work across multiple cores.</li>
+                    <li><strong>Responsiveness</strong> &ndash; keep a UI responsive while heavy work runs in the background.</li>
+                    <li><strong>I/O overlap</strong> &ndash; while one thread waits on disk or network, another thread can keep computing.</li>
+                    <li><strong>Scalability</strong> &ndash; modern hardware has many cores; single-threaded code leaves them idle.</li>
+                </ul>
+
+                <!-- ===== The <thread> Header and Creating Threads ===== -->
+                <h2>The <code>&lt;thread&gt;</code> Header &amp; Creating Threads</h2>
+                <p>The <code>&lt;thread&gt;</code> header provides the <code>std::thread</code> class. You create a thread by passing a callable (function pointer, lambda, functor) to its constructor:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+void greet() {
+    std::cout &lt;&lt; "Hello from thread!\n";
+}
+
+int main() {
+    std::thread t(greet);   // spawn a new thread running greet()
+    t.join();               // wait for it to finish
+    return 0;
+}</code></pre></div>
+                <p>You can also use a <strong>lambda</strong>:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+int main() {
+    std::thread t([]() {
+        std::cout &lt;&lt; "Lambda thread reporting!\n";
+    });
+    t.join();
+}</code></pre></div>
+                <p>Every <code>std::thread</code> object represents a single thread of execution. Once constructed with a callable, the new thread starts running immediately.</p>
+
+                <p>You can also pass a <strong>functor</strong> (an object with <code>operator()</code>):</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+struct Worker {
+    void operator()() const {
+        std::cout &lt;&lt; "Worker thread running!\n";
+    }
+};
+
+int main() {
+    Worker w;
+    std::thread t(w);  // copy of w runs in new thread
+    t.join();
+}</code></pre></div>
+                <p><strong>Note:</strong> be careful with the <em>most vexing parse</em>&mdash;<code>std::thread t(Worker());</code> declares a <em>function</em>, not a thread. Use braces <code>std::thread t{Worker{}};</code> or an extra pair of parentheses to disambiguate.</p>
+
+                <!-- ===== Joining and Detaching Threads ===== -->
+                <h2>Joining &amp; Detaching Threads</h2>
+                <p>Before a <code>std::thread</code> object is destroyed, you <strong>must</strong> either <em>join</em> or <em>detach</em> it&mdash;otherwise the destructor calls <code>std::terminate()</code>.</p>
+                <ul>
+                    <li><code>join()</code> &ndash; blocks the calling thread until the spawned thread finishes.</li>
+                    <li><code>detach()</code> &ndash; separates the thread of execution from the <code>std::thread</code> object. The thread continues running independently; you lose the ability to join it.</li>
+                </ul>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+
+void background() {
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    std::cout &lt;&lt; "Background work done.\n";
+}
+
+int main() {
+    std::thread t(background);
+
+    // Option 1: Wait for it
+    if (t.joinable()) {
+        t.join();
+    }
+
+    // Option 2: Let it run freely (uncomment to try)
+    // t.detach();
+
+    std::cout &lt;&lt; "Main thread finished.\n";
+}</code></pre></div>
+                <p>Use <code>joinable()</code> to check whether a thread object is associated with an active thread before calling <code>join()</code> or <code>detach()</code>.</p>
+
+                <h3>Multiple Threads</h3>
+                <p>You can spawn as many threads as you need. A common pattern is to store them in a <code>std::vector</code> and join them in a loop:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;vector&gt;
+
+void task(int id) {
+    std::cout &lt;&lt; "Thread " &lt;&lt; id &lt;&lt; " running\n";
+}
+
+int main() {
+    const int numThreads = 4;
+    std::vector&lt;std::thread&gt; threads;
+
+    for (int i = 0; i &lt; numThreads; ++i) {
+        threads.emplace_back(task, i);
+    }
+
+    for (auto&amp; t : threads) {
+        t.join();
+    }
+    std::cout &lt;&lt; "All threads finished.\n";
+}</code></pre></div>
+                <p>Because <code>std::thread</code> is <strong>move-only</strong>, you can transfer ownership but never copy a thread object.</p>
+
+                <!-- ===== Passing Arguments to Threads ===== -->
+                <h2>Passing Arguments to Threads</h2>
+                <p>Arguments are <strong>copied</strong> into the thread by default. To pass by reference, wrap the argument in <code>std::ref</code> (or <code>std::cref</code> for const references):</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;functional&gt;  // std::ref
+
+// By value
+void printVal(int x) {
+    std::cout &lt;&lt; "Value: " &lt;&lt; x &lt;&lt; "\n";
+}
+
+// By reference
+void increment(int&amp; x) {
+    ++x;
+}
+
+int main() {
+    int num = 10;
+
+    std::thread t1(printVal, num);          // copy of num
+    t1.join();
+
+    std::thread t2(increment, std::ref(num)); // reference to num
+    t2.join();
+
+    std::cout &lt;&lt; "num after increment: " &lt;&lt; num &lt;&lt; "\n"; // 11
+}</code></pre></div>
+                <p><strong>Warning:</strong> If you pass a reference to a thread that outlives the referenced variable, you get <em>undefined behaviour</em>. Always ensure the referenced data lives at least as long as the thread.</p>
+
+                <h3>Moving Arguments into Threads</h3>
+                <p>For move-only types like <code>std::unique_ptr</code>, you must <em>move</em> them into the thread:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;memory&gt;
+
+void process(std::unique_ptr&lt;int&gt; ptr) {
+    std::cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; "\n";
+}
+
+int main() {
+    auto ptr = std::make_unique&lt;int&gt;(42);
+    std::thread t(process, std::move(ptr));  // ownership transferred
+    t.join();
+    // ptr is now nullptr
+}</code></pre></div>
+
+                <!-- ===== Thread Safety and Race Conditions ===== -->
+                <h2>Thread Safety &amp; Race Conditions</h2>
+                <p>When two or more threads read from and write to the same shared data without synchronisation, a <strong>race condition</strong> (or <em>data race</em>) occurs. The result depends on the unpredictable order in which threads are scheduled:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+int counter = 0;  // shared mutable state
+
+void addMany() {
+    for (int i = 0; i &lt; 100000; ++i) {
+        ++counter;  // NOT thread-safe!
+    }
+}
+
+int main() {
+    std::thread t1(addMany);
+    std::thread t2(addMany);
+    t1.join();
+    t2.join();
+
+    // Expected 200000 but result is unpredictable
+    std::cout &lt;&lt; "Counter: " &lt;&lt; counter &lt;&lt; "\n";
+}</code></pre></div>
+                <p>The increment <code>++counter</code> is <strong>not</strong> an atomic operation&mdash;it involves a read, a modify, and a write. If two threads interleave these steps, updates are lost. This is a classic data race.</p>
+                <p>Formally, the C++ standard says a program has a <strong>data race</strong> if two threads access the same memory location concurrently, at least one access is a write, and neither access is atomic or ordered by a synchronisation operation. Data races are <strong>undefined behaviour</strong>.</p>
+
+                <!-- ===== Mutexes ===== -->
+                <h2>Mutexes (<code>std::mutex</code>)</h2>
+                <p>A <strong>mutex</strong> (mutual exclusion) is the most common synchronisation primitive. Only one thread can <em>own</em> the mutex at a time. Others block on <code>lock()</code> until the owner calls <code>unlock()</code>:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+
+int counter = 0;
+std::mutex mtx;
+
+void safeAdd() {
+    for (int i = 0; i &lt; 100000; ++i) {
+        mtx.lock();
+        ++counter;
+        mtx.unlock();
+    }
+}
+
+int main() {
+    std::thread t1(safeAdd);
+    std::thread t2(safeAdd);
+    t1.join();
+    t2.join();
+
+    std::cout &lt;&lt; "Counter: " &lt;&lt; counter &lt;&lt; "\n"; // always 200000
+}</code></pre></div>
+                <p>Manual <code>lock()</code>/<code>unlock()</code> is error-prone: if an exception is thrown between them, the mutex is never released and every other thread deadlocks. Prefer RAII wrappers instead.</p>
+
+                <!-- ===== Lock Guards ===== -->
+                <h2>Lock Guards (<code>std::lock_guard</code> &amp; <code>std::unique_lock</code>)</h2>
+                <p><code>std::lock_guard</code> locks the mutex on construction and unlocks it on destruction&mdash;exception-safe by design:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+
+int counter = 0;
+std::mutex mtx;
+
+void safeAdd() {
+    for (int i = 0; i &lt; 100000; ++i) {
+        std::lock_guard&lt;std::mutex&gt; lock(mtx);
+        ++counter;
+    } // lock released here automatically
+}
+
+int main() {
+    std::thread t1(safeAdd);
+    std::thread t2(safeAdd);
+    t1.join();
+    t2.join();
+    std::cout &lt;&lt; "Counter: " &lt;&lt; counter &lt;&lt; "\n";
+}</code></pre></div>
+                <p><code>std::unique_lock</code> is more flexible&mdash;it supports deferred locking, timed locking, manual unlock/re-lock, and is <strong>movable</strong> (required by condition variables):</p>
+<div class="code-block"><pre><code>std::unique_lock&lt;std::mutex&gt; ulock(mtx);       // locks immediately
+ulock.unlock();                                  // manual unlock
+ulock.lock();                                    // re-lock
+
+std::unique_lock&lt;std::mutex&gt; deferred(mtx, std::defer_lock);
+// mutex NOT locked yet &ndash; lock later when needed
+deferred.lock();</code></pre></div>
+                <p>In C++17 you can use <strong>class template argument deduction (CTAD)</strong> so you don&rsquo;t need to repeat the mutex type:</p>
+<div class="code-block"><pre><code>std::lock_guard lock(mtx);    // C++17 CTAD
+std::unique_lock ulock(mtx);  // C++17 CTAD</code></pre></div>
+
+                <!-- ===== Deadlocks ===== -->
+                <h2>Deadlocks &amp; How to Avoid Them</h2>
+                <p>A <strong>deadlock</strong> occurs when two or more threads each hold a lock and wait for a lock held by the other, forming a circular dependency:</p>
+<div class="code-block"><pre><code>// Thread A              // Thread B
+mtx1.lock();             mtx2.lock();
+mtx2.lock();  // waits   mtx1.lock();  // waits &rarr; DEADLOCK!</code></pre></div>
+                <p>Strategies to prevent deadlocks:</p>
+                <ul>
+                    <li><strong>Lock ordering</strong> &ndash; always acquire mutexes in the same global order across all threads.</li>
+                    <li><strong>Avoid holding multiple locks</strong> &ndash; redesign to use a single mutex where possible.</li>
+                    <li><strong>Use timed locks</strong> &ndash; <code>std::unique_lock</code> with <code>try_lock_for()</code> can give up after a timeout.</li>
+                    <li><strong><code>std::lock()</code></strong> &ndash; locks two or more mutexes simultaneously without risk of deadlock:</li>
+                </ul>
+<div class="code-block"><pre><code>#include &lt;mutex&gt;
+
+std::mutex mtx1, mtx2;
+
+void safe() {
+    std::lock(mtx1, mtx2);  // atomic lock of both
+    std::lock_guard&lt;std::mutex&gt; lg1(mtx1, std::adopt_lock);
+    std::lock_guard&lt;std::mutex&gt; lg2(mtx2, std::adopt_lock);
+    // ... work with shared data ...
+}</code></pre></div>
+                <p>In C++17, <code>std::scoped_lock</code> combines both steps into one RAII object:</p>
+<div class="code-block"><pre><code>void safe17() {
+    std::scoped_lock lock(mtx1, mtx2);  // locks both, unlocks on destruction
+    // ... work ...
+}</code></pre></div>
+
+                <!-- ===== Condition Variables ===== -->
+                <h2>Condition Variables (<code>std::condition_variable</code>)</h2>
+                <p>A <strong>condition variable</strong> lets one thread wait until another thread signals that a certain condition is true. This avoids busy-waiting (spinning in a loop):</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+std::mutex mtx;
+std::condition_variable cv;
+bool ready = false;
+
+void worker() {
+    std::unique_lock&lt;std::mutex&gt; lock(mtx);
+    cv.wait(lock, [] { return ready; });  // blocks until ready == true
+    std::cout &lt;&lt; "Worker proceeding!\n";
+}
+
+void setter() {
+    {
+        std::lock_guard&lt;std::mutex&gt; lock(mtx);
+        ready = true;
+    }
+    cv.notify_one();  // wake one waiting thread
+}
+
+int main() {
+    std::thread t1(worker);
+    std::thread t2(setter);
+    t1.join();
+    t2.join();
+}</code></pre></div>
+                <p>Key points:</p>
+                <ul>
+                    <li><code>wait(lock, predicate)</code> &ndash; atomically releases the lock and sleeps; re-acquires the lock when awakened and the predicate is <code>true</code>.</li>
+                    <li><code>notify_one()</code> &ndash; wakes one waiting thread.</li>
+                    <li><code>notify_all()</code> &ndash; wakes <strong>all</strong> waiting threads.</li>
+                    <li>Always use a predicate to guard against <strong>spurious wakeups</strong>.</li>
+                </ul>
+
+                <h3>Producer&ndash;Consumer Example</h3>
+                <p>Condition variables shine in <strong>producer&ndash;consumer</strong> scenarios. Here a producer pushes items into a queue and notifies the consumer:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+#include &lt;queue&gt;
+
+std::mutex mtx;
+std::condition_variable cv;
+std::queue&lt;int&gt; buffer;
+bool finished = false;
+
+void producer() {
+    for (int i = 1; i &lt;= 5; ++i) {
+        {
+            std::lock_guard&lt;std::mutex&gt; lock(mtx);
+            buffer.push(i);
+            std::cout &lt;&lt; "Produced: " &lt;&lt; i &lt;&lt; "\n";
+        }
+        cv.notify_one();
+    }
+    {
+        std::lock_guard&lt;std::mutex&gt; lock(mtx);
+        finished = true;
+    }
+    cv.notify_one();
+}
+
+void consumer() {
+    while (true) {
+        std::unique_lock&lt;std::mutex&gt; lock(mtx);
+        cv.wait(lock, [] { return !buffer.empty() || finished; });
+
+        while (!buffer.empty()) {
+            std::cout &lt;&lt; "Consumed: " &lt;&lt; buffer.front() &lt;&lt; "\n";
+            buffer.pop();
+        }
+        if (finished) break;
+    }
+}
+
+int main() {
+    std::thread t1(producer);
+    std::thread t2(consumer);
+    t1.join();
+    t2.join();
+}</code></pre></div>
+
+                <!-- ===== std::async and std::future ===== -->
+                <h2><code>std::async</code> &amp; <code>std::future</code></h2>
+                <p><code>std::async</code> is a higher-level alternative to spawning raw threads. It runs a callable <em>potentially</em> on a new thread and returns a <code>std::future</code> that holds the eventual result:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;future&gt;
+
+int heavyComputation(int x) {
+    // simulate expensive work
+    return x * x;
+}
+
+int main() {
+    // Launch asynchronously
+    std::future&lt;int&gt; result = std::async(std::launch::async, heavyComputation, 42);
+
+    std::cout &lt;&lt; "Doing other work...\n";
+
+    // Block until the result is ready
+    std::cout &lt;&lt; "Result: " &lt;&lt; result.get() &lt;&lt; "\n";  // 1764
+}</code></pre></div>
+                <p>Launch policies:</p>
+                <ul>
+                    <li><code>std::launch::async</code> &ndash; guarantees a new thread.</li>
+                    <li><code>std::launch::deferred</code> &ndash; the callable is executed lazily on the calling thread when <code>get()</code> is called.</li>
+                    <li><code>std::launch::async | std::launch::deferred</code> (default) &ndash; implementation chooses.</li>
+                </ul>
+                <p><code>std::future::get()</code> can only be called <strong>once</strong>. If the callable threw an exception, <code>get()</code> rethrows it in the calling thread.</p>
+
+                <p>If you need to share the result among multiple consumers, convert to a <code>std::shared_future</code>:</p>
+<div class="code-block"><pre><code>std::future&lt;int&gt; fut = std::async(std::launch::async, heavyComputation, 10);
+std::shared_future&lt;int&gt; sfut = fut.share();  // movable, copyable
+// Now multiple threads can call sfut.get() independently.</code></pre></div>
+
+                <h3>Using <code>std::promise</code></h3>
+                <p>A <code>std::promise</code> is the &ldquo;push&rdquo; side of a future. It lets you set a value (or an exception) that a corresponding <code>std::future</code> will receive:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;future&gt;
+
+void producer(std::promise&lt;int&gt;&amp; prom) {
+    prom.set_value(99);
+}
+
+int main() {
+    std::promise&lt;int&gt; prom;
+    std::future&lt;int&gt; fut = prom.get_future();
+
+    std::thread t(producer, std::ref(prom));
+    std::cout &lt;&lt; "Received: " &lt;&lt; fut.get() &lt;&lt; "\n";  // 99
+    t.join();
+}</code></pre></div>
+
+                <!-- ===== Atomic Operations ===== -->
+                <h2>Atomic Operations (<code>std::atomic</code>)</h2>
+                <p>For simple shared variables (counters, flags), a <strong>mutex</strong> may be overkill. <code>std::atomic&lt;T&gt;</code> provides lock-free, thread-safe operations on individual values:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;atomic&gt;
+
+std::atomic&lt;int&gt; counter{0};
+
+void addMany() {
+    for (int i = 0; i &lt; 100000; ++i) {
+        ++counter;  // atomic increment &ndash; thread-safe!
+    }
+}
+
+int main() {
+    std::thread t1(addMany);
+    std::thread t2(addMany);
+    t1.join();
+    t2.join();
+    std::cout &lt;&lt; "Counter: " &lt;&lt; counter.load() &lt;&lt; "\n"; // always 200000
+}</code></pre></div>
+                <p>Common <code>std::atomic</code> operations:</p>
+                <ul>
+                    <li><code>load()</code> &ndash; read the value atomically.</li>
+                    <li><code>store(val)</code> &ndash; write a value atomically.</li>
+                    <li><code>exchange(val)</code> &ndash; replace and return the old value.</li>
+                    <li><code>compare_exchange_weak / compare_exchange_strong</code> &ndash; CAS (compare-and-swap) for lock-free algorithms.</li>
+                    <li><code>fetch_add</code>, <code>fetch_sub</code> &ndash; arithmetic with return of the previous value.</li>
+                </ul>
+                <p><code>std::atomic&lt;bool&gt;</code> is a common replacement for a shared <code>bool</code> flag. For integral types, the <code>++</code>, <code>--</code>, <code>+=</code>, <code>-=</code> operators are all atomic.</p>
+
+                <h3>Memory Ordering</h3>
+                <p>By default, atomic operations use <code>std::memory_order_seq_cst</code> (sequentially consistent), which is the strongest and safest ordering. For advanced lock-free algorithms you can specify weaker orderings like <code>memory_order_relaxed</code>, <code>memory_order_acquire</code>, or <code>memory_order_release</code> to squeeze out more performance&mdash;but correctness becomes your responsibility:</p>
+<div class="code-block"><pre><code>std::atomic&lt;bool&gt; flag{false};
+
+// Producer thread
+data = 42;
+flag.store(true, std::memory_order_release);
+
+// Consumer thread
+while (!flag.load(std::memory_order_acquire)) { /* spin */ }
+// data is guaranteed to be 42 here</code></pre></div>
+                <p>Unless you are writing a lock-free data structure, stick with the default sequentially-consistent ordering.</p>
+
+                <h3>Atomic Flag</h3>
+                <p><code>std::atomic_flag</code> is the most basic atomic type&mdash;guaranteed lock-free on every platform. It supports only <code>test_and_set()</code> and <code>clear()</code>, making it ideal for building simple spinlocks.</p>
+
+                <!-- ===== Common Mistakes and Best Practices ===== -->
+                <h2>Common Mistakes &amp; Best Practices</h2>
+
+                <h3>Mistake 1 &ndash; Forgetting to Join or Detach</h3>
+<div class="code-block"><pre><code>void bad() {
+    std::thread t([] { /* work */ });
+    // destructor called without join/detach &rarr; std::terminate()!
+}
+
+void good() {
+    std::thread t([] { /* work */ });
+    t.join(); // always join or detach before the thread object is destroyed
+}</code></pre></div>
+
+                <h3>Mistake 2 &ndash; Capturing Local Variables by Reference in a Detached Thread</h3>
+<div class="code-block"><pre><code>void dangerous() {
+    int local = 42;
+    std::thread t([&amp;local] {
+        std::cout &lt;&lt; local;  // UB &ndash; local may already be destroyed!
+    });
+    t.detach();
+} // local destroyed here while thread may still be running</code></pre></div>
+
+                <h3>Mistake 3 &ndash; Locking a Mutex Twice in the Same Thread</h3>
+                <p>On a non-recursive mutex, calling <code>lock()</code> twice from the same thread causes <strong>undefined behaviour</strong> (typically a deadlock). Use <code>std::recursive_mutex</code> if re-entrant locking is genuinely needed.</p>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Prefer <code>std::lock_guard</code> or <code>std::scoped_lock</code> over manual <code>lock()</code>/<code>unlock()</code>.</li>
+                    <li>Keep critical sections as <strong>short</strong> as possible to minimise contention.</li>
+                    <li>Use <code>std::atomic</code> for simple shared counters and flags instead of a full mutex.</li>
+                    <li>Prefer <code>std::async</code>/<code>std::future</code> when the task produces a return value.</li>
+                    <li>Avoid sharing mutable state between threads whenever possible&mdash;favour message passing or immutable data.</li>
+                    <li>Use thread sanitisers (<code>-fsanitize=thread</code>) during development to catch data races.</li>
+                    <li>Limit the number of threads to the hardware concurrency: <code>std::thread::hardware_concurrency()</code>.</li>
+                </ul>
+
+                <h3>Querying Hardware Concurrency</h3>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+
+int main() {
+    unsigned int n = std::thread::hardware_concurrency();
+    std::cout &lt;&lt; "Hardware threads: " &lt;&lt; n &lt;&lt; "\n";
+    // Returns 0 if the value is not well-defined or not computable
+}</code></pre></div>
+
+                <h3>Thread-Safe Initialization with <code>std::call_once</code></h3>
+                <p>If you need to run a one-time initialisation that may be triggered by multiple threads, use <code>std::call_once</code> with a <code>std::once_flag</code>:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+
+std::once_flag initFlag;
+
+void initialize() {
+    std::cout &lt;&lt; "Initialised (runs only once)\n";
+}
+
+void worker() {
+    std::call_once(initFlag, initialize);
+    // ... rest of work ...
+}
+
+int main() {
+    std::thread t1(worker);
+    std::thread t2(worker);
+    std::thread t3(worker);
+    t1.join(); t2.join(); t3.join();
+}</code></pre></div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>std::thread</code> lets you spawn OS-level threads portably since C++11.</li>
+                    <li>Always <code>join()</code> or <code>detach()</code> a thread before its object is destroyed.</li>
+                    <li>Use <code>std::ref</code> to pass arguments by reference to a thread.</li>
+                    <li><strong>Data races</strong> occur when multiple threads access the same data without synchronisation and at least one thread writes.</li>
+                    <li><code>std::mutex</code> provides mutual exclusion; wrap it with <code>std::lock_guard</code> or <code>std::scoped_lock</code> for RAII safety.</li>
+                    <li><code>std::unique_lock</code> offers deferred, timed, and manual locking and is required by <code>std::condition_variable</code>.</li>
+                    <li>Prevent deadlocks by locking in a consistent order or using <code>std::lock()</code>/<code>std::scoped_lock</code>.</li>
+                    <li><code>std::condition_variable</code> enables efficient thread-to-thread signalling.</li>
+                    <li><code>std::async</code>/<code>std::future</code> simplify running tasks asynchronously and retrieving results.</li>
+                    <li><code>std::atomic</code> provides lightweight, lock-free, thread-safe operations on simple types.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/3aqxaZsvn80" title="C++ Multithreading" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is multithreading?","o":["Running multiple programs at once","Executing multiple threads of control within a single process","Using multiple monitors","Compiling code on multiple machines"],"a":1},
+                {"q":"What is the difference between concurrency and parallelism?","o":["They are identical","Concurrency is overlapping progress; parallelism is simultaneous execution on multiple cores","Concurrency requires multiple CPUs; parallelism does not","Parallelism is slower than concurrency"],"a":1},
+                {"q":"Which C++ standard introduced the portable <code>&lt;thread&gt;</code> library?","o":["C++03","C++11","C++14","C++20"],"a":1},
+                {"q":"Which header provides <code>std::thread</code>?","o":["<code>&lt;iostream&gt;</code>","<code>&lt;thread&gt;</code>","<code>&lt;mutex&gt;</code>","<code>&lt;future&gt;</code>"],"a":1},
+                {"q":"How do you create a thread that runs a function <code>foo()</code>?","o":["<code>std::thread t = foo();</code>","<code>std::thread t(foo);</code>","<code>std::thread::run(foo);</code>","<code>new std::thread(foo);</code>"],"a":1},
+                {"q":"Can you pass a lambda to <code>std::thread</code>?","o":["No, only function pointers","Yes","Only in C++17","Only if the lambda has no captures"],"a":1},
+                {"q":"What happens if a <code>std::thread</code> is destroyed without calling <code>join()</code> or <code>detach()</code>?","o":["Nothing; the thread keeps running","The thread is cancelled","<code>std::terminate()</code> is called","A compile error"],"a":2},
+                {"q":"What does <code>join()</code> do?","o":["Detaches the thread","Blocks the calling thread until the spawned thread finishes","Kills the spawned thread","Creates a new thread"],"a":1},
+                {"q":"What does <code>detach()</code> do?","o":["Waits for the thread to finish","Separates the thread from the <code>std::thread</code> object so it runs independently","Stops the thread","Pauses the thread"],"a":1},
+                {"q":"What does <code>joinable()</code> return?","o":["Whether the thread has finished","Whether the thread object is associated with an active thread","Whether the mutex is locked","Whether the thread is detached"],"a":1},
+                {"q":"By default, how are arguments passed to a thread function?","o":["By reference","By pointer","By value (copied)","By move"],"a":2},
+                {"q":"How do you pass an argument by reference to a thread?","o":["Use <code>&amp;</code> in the call","Wrap it in <code>std::ref()</code>","Use a raw pointer","You cannot pass by reference"],"a":1},
+                {"q":"Which header provides <code>std::ref</code>?","o":["<code>&lt;thread&gt;</code>","<code>&lt;functional&gt;</code>","<code>&lt;memory&gt;</code>","<code>&lt;utility&gt;</code>"],"a":1},
+                {"q":"What is a data race?","o":["A performance benchmark","When two threads access shared data without synchronisation and at least one writes","A type of exception","A compiler optimisation"],"a":1},
+                {"q":"Is <code>++counter</code> an atomic operation on a plain <code>int</code>?","o":["Yes, always","Only on 64-bit CPUs","No, it involves read-modify-write steps","Only if counter is <code>volatile</code>"],"a":2},
+                {"q":"What does a mutex provide?","o":["Automatic memory management","Mutual exclusion &ndash; only one thread can hold it at a time","Thread creation","Exception handling"],"a":1},
+                {"q":"Which header provides <code>std::mutex</code>?","o":["<code>&lt;thread&gt;</code>","<code>&lt;mutex&gt;</code>","<code>&lt;atomic&gt;</code>","<code>&lt;condition_variable&gt;</code>"],"a":1},
+                {"q":"What happens if you call <code>lock()</code> on a mutex that is already locked by another thread?","o":["Undefined behaviour","The calling thread blocks until the mutex is unlocked","The mutex is ignored","An exception is thrown"],"a":1},
+                {"q":"Why is manual <code>lock()</code>/<code>unlock()</code> error-prone?","o":["It is slower","If an exception occurs between them the mutex is never released","It only works on Windows","It requires C++20"],"a":1},
+                {"q":"What is <code>std::lock_guard</code>?","o":["A function that unlocks all mutexes","An RAII wrapper that locks on construction and unlocks on destruction","A type of thread","A debugging tool"],"a":1},
+                {"q":"When is the mutex unlocked by a <code>std::lock_guard</code>?","o":["When <code>unlock()</code> is called","When the <code>lock_guard</code> is destroyed (e.g., goes out of scope)","Never","When <code>join()</code> is called"],"a":1},
+                {"q":"How does <code>std::unique_lock</code> differ from <code>std::lock_guard</code>?","o":["<code>unique_lock</code> is immovable","<code>unique_lock</code> supports deferred locking, timed locking, and manual unlock/re-lock","They are identical","<code>lock_guard</code> is more flexible"],"a":1},
+                {"q":"Why does <code>std::condition_variable::wait()</code> require a <code>std::unique_lock</code>?","o":["Because it needs to unlock and re-lock the mutex atomically","Because <code>lock_guard</code> is deprecated","Because <code>unique_lock</code> is faster","No particular reason"],"a":0},
+                {"q":"What is a deadlock?","o":["A thread that runs forever","Two or more threads each waiting for a lock held by the other, forming a cycle","A compiler error","A memory leak"],"a":1},
+                {"q":"How does <code>std::lock(mtx1, mtx2)</code> prevent deadlocks?","o":["It locks both mutexes atomically without risk of circular waiting","It only locks one mutex","It throws if a deadlock is detected","It ignores one of the mutexes"],"a":0},
+                {"q":"What does <code>std::adopt_lock</code> tell a <code>lock_guard</code>?","o":["To lock the mutex immediately","That the mutex is already locked &ndash; just adopt ownership","To defer locking","To try locking without blocking"],"a":1},
+                {"q":"What is <code>std::scoped_lock</code> (C++17)?","o":["A deprecated alias for <code>lock_guard</code>","An RAII wrapper that locks multiple mutexes deadlock-free","A thread-local variable","A type of condition variable"],"a":1},
+                {"q":"What is a spurious wakeup?","o":["A thread that starts too early","A condition variable waking a thread even though no <code>notify</code> was called","A mutex being unlocked by the wrong thread","A compile warning"],"a":1},
+                {"q":"How do you guard against spurious wakeups?","o":["Use a <code>while</code> loop or pass a predicate to <code>wait()</code>","Call <code>notify_all()</code> repeatedly","Detach the thread","Use a recursive mutex"],"a":0},
+                {"q":"What does <code>notify_one()</code> do on a condition variable?","o":["Wakes all waiting threads","Wakes exactly one waiting thread","Locks the mutex","Destroys the condition variable"],"a":1},
+                {"q":"What does <code>notify_all()</code> do on a condition variable?","o":["Wakes one waiting thread","Wakes all waiting threads","Unlocks all mutexes","Terminates all threads"],"a":1},
+                {"q":"Which header provides <code>std::async</code>?","o":["<code>&lt;thread&gt;</code>","<code>&lt;future&gt;</code>","<code>&lt;mutex&gt;</code>","<code>&lt;async&gt;</code>"],"a":1},
+                {"q":"What does <code>std::async</code> return?","o":["A <code>std::thread</code>","A <code>std::future</code>","A raw pointer","<code>void</code>"],"a":1},
+                {"q":"What does <code>std::launch::async</code> guarantee?","o":["Lazy evaluation","The callable runs on a new thread","The callable runs on the main thread","Nothing"],"a":1},
+                {"q":"What does <code>std::launch::deferred</code> do?","o":["Runs the callable immediately on a new thread","Defers execution until <code>get()</code> is called on the future","Runs the callable after a timeout","Throws an exception"],"a":1},
+                {"q":"How many times can <code>std::future::get()</code> be called?","o":["Unlimited","Exactly once","Twice","It depends on the launch policy"],"a":1},
+                {"q":"What happens if the callable passed to <code>std::async</code> throws an exception?","o":["The program terminates immediately","The exception is stored and rethrown when <code>get()</code> is called","The exception is silently ignored","A new thread is spawned to handle it"],"a":1},
+                {"q":"What is a <code>std::promise</code>?","o":["A type of mutex","The push side of a future &ndash; it lets you set a value or exception","An alias for <code>std::async</code>","A synchronisation barrier"],"a":1},
+                {"q":"How do you get a <code>std::future</code> from a <code>std::promise</code>?","o":["<code>prom.get_future()</code>","<code>prom.future()</code>","<code>std::future(prom)</code>","<code>prom.share()</code>"],"a":0},
+                {"q":"What does <code>std::atomic</code> provide?","o":["Automatic garbage collection","Lock-free, thread-safe operations on individual values","Mutex-based locking","Dynamic memory allocation"],"a":1},
+                {"q":"Which header provides <code>std::atomic</code>?","o":["<code>&lt;mutex&gt;</code>","<code>&lt;thread&gt;</code>","<code>&lt;atomic&gt;</code>","<code>&lt;future&gt;</code>"],"a":2},
+                {"q":"Is <code>++</code> on a <code>std::atomic&lt;int&gt;</code> thread-safe?","o":["No","Yes","Only with a mutex","Only on x86"],"a":1},
+                {"q":"What does <code>std::atomic::load()</code> do?","o":["Locks a mutex","Reads the value atomically","Writes the value atomically","Performs a compare-and-swap"],"a":1},
+                {"q":"What does <code>std::atomic::store(val)</code> do?","o":["Reads the value","Writes <code>val</code> atomically","Swaps two values","Deletes the value"],"a":1},
+                {"q":"What does <code>compare_exchange_strong</code> do?","o":["Locks two mutexes","Compares the atomic with an expected value and swaps if equal","Sorts two values","Throws if the values differ"],"a":1},
+                {"q":"What is CAS?","o":["C++ Async Standard","Compare-And-Swap, a fundamental lock-free primitive","Concurrent Access System","Condition-Aware Synchronisation"],"a":1},
+                {"q":"What does <code>std::thread::hardware_concurrency()</code> return?","o":["The number of running threads","A hint of the number of hardware threads available","The CPU clock speed","The process ID"],"a":1},
+                {"q":"What is <code>std::recursive_mutex</code>?","o":["A mutex that can be locked multiple times by the same thread","A mutex that automatically unlocks","A deprecated feature","A condition variable"],"a":0},
+                {"q":"What does <code>std::this_thread::sleep_for()</code> do?","o":["Terminates the current thread","Blocks the current thread for a specified duration","Unlocks all mutexes","Yields the CPU without sleeping"],"a":1},
+                {"q":"What flag enables the thread sanitiser in GCC/Clang?","o":["<code>-fsanitize=address</code>","<code>-fsanitize=thread</code>","<code>-pthread</code>","<code>-fthread-safe</code>"],"a":1},
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="move-semantics.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Move Semantics</span>
+                </a>
+                <a href="modern-cpp.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Modern C++</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

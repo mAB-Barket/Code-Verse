@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Smart Pointers - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-smart-pointers">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html" class="active"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 47 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="85" style="width:85%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Smart Pointers
+                </div>
+                <h1>47. Smart Pointers</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 47 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Smart Pointers? ===== -->
+                <h2>What Are Smart Pointers?</h2>
+                <p>A <strong>smart pointer</strong> is a class template in the C++ Standard Library that wraps a raw pointer and <strong>automatically manages its lifetime</strong>. When the smart pointer goes out of scope, it deletes the managed object for you&mdash;no manual <code>delete</code> required.</p>
+                <p>Smart pointers implement a fundamental C++ idiom called <strong>RAII (Resource Acquisition Is Initialisation)</strong>. The idea is simple: tie the lifetime of a heap-allocated resource to an automatic (stack-based) object. When the stack object is constructed, the resource is acquired; when the stack object is destroyed, the resource is released.</p>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+void demo() {
+    // Smart pointer manages the integer on the heap
+    std::unique_ptr&lt;int&gt; p = std::make_unique&lt;int&gt;(42);
+    std::cout &lt;&lt; *p &lt;&lt; "\n"; // 42
+}   // p goes out of scope &rarr; memory is freed automatically</code></pre>
+                <p>With RAII and smart pointers, you get <strong>deterministic cleanup</strong>: the destructor runs exactly when the owning scope ends, even if an exception is thrown.</p>
+
+                <!-- ===== Problems with Raw Pointers ===== -->
+                <h2>Problems with Raw Pointers</h2>
+                <p>Raw pointers (<code>int*</code>, <code>Widget*</code>, etc.) are powerful but fraught with danger. Here are the most common pitfalls they introduce:</p>
+                <ul>
+                    <li><strong>Memory leaks</strong> &ndash; forgetting to call <code>delete</code> (or calling it on the wrong path) causes the allocated memory to remain unreachable for the rest of the program&rsquo;s lifetime.</li>
+                    <li><strong>Dangling pointers</strong> &ndash; deleting an object while another pointer still references it leads to <strong>undefined behaviour</strong> when that pointer is later dereferenced.</li>
+                    <li><strong>Double deletes</strong> &ndash; calling <code>delete</code> on the same pointer twice corrupts the heap and typically crashes the program.</li>
+                    <li><strong>Exception-unsafe code</strong> &ndash; if an exception is thrown between a <code>new</code> and its matching <code>delete</code>, the memory is never freed.</li>
+                    <li><strong>Ownership ambiguity</strong> &ndash; a raw pointer tells you nothing about <em>who</em> is responsible for deleting the object. Is it the caller? The callee? Some other object?</li>
+                </ul>
+                <pre><code>void leaky() {
+    int* p = new int(100);
+    // ... some code that might throw ...
+    if (errorCondition) return; // LEAK! delete never reached
+    delete p;
+}
+
+void dangling() {
+    int* a = new int(5);
+    int* b = a;       // b points to the same memory
+    delete a;
+    std::cout &lt;&lt; *b;  // UNDEFINED BEHAVIOUR &ndash; dangling pointer
+}</code></pre>
+                <p>Smart pointers solve <em>all</em> of these problems by encoding ownership semantics directly into the type system.</p>
+
+                <!-- ===== The <memory> Header ===== -->
+                <h2>The <code>&lt;memory&gt;</code> Header</h2>
+                <p>All smart pointer types live in the <code>&lt;memory&gt;</code> header. You must include it before using any smart pointer:</p>
+                <pre><code>#include &lt;memory&gt;
+
+// Now you can use:
+// std::unique_ptr
+// std::shared_ptr
+// std::weak_ptr
+// std::make_unique   (C++14)
+// std::make_shared   (C++11)</code></pre>
+                <p>The older <code>std::auto_ptr</code> was deprecated in C++11 and <strong>removed in C++17</strong>. Never use it&mdash;use <code>std::unique_ptr</code> instead.</p>
+
+                <!-- ===== std::unique_ptr ===== -->
+                <h2><code>std::unique_ptr</code></h2>
+                <p><code>std::unique_ptr</code> models <strong>exclusive (sole) ownership</strong>. Exactly one <code>unique_ptr</code> owns the managed object at any time. It <strong>cannot be copied</strong>, only <strong>moved</strong>.</p>
+
+                <h3>Creating a <code>unique_ptr</code></h3>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+struct Widget {
+    int id;
+    Widget(int i) : id(i) { std::cout &lt;&lt; "Widget " &lt;&lt; id &lt;&lt; " created\n"; }
+    ~Widget()              { std::cout &lt;&lt; "Widget " &lt;&lt; id &lt;&lt; " destroyed\n"; }
+};
+
+int main() {
+    // Preferred: use std::make_unique (C++14)
+    auto w1 = std::make_unique&lt;Widget&gt;(1);
+
+    // Direct construction (less preferred)
+    std::unique_ptr&lt;Widget&gt; w2(new Widget(2));
+
+    std::cout &lt;&lt; "w1 id: " &lt;&lt; w1-&gt;id &lt;&lt; "\n";
+    std::cout &lt;&lt; "w2 id: " &lt;&lt; (*w2).id &lt;&lt; "\n";
+}   // w2 destroyed, then w1 destroyed (reverse order)</code></pre>
+
+                <h3>Why prefer <code>make_unique</code>?</h3>
+                <ul>
+                    <li>It is <strong>exception-safe</strong>&mdash;no risk of a leaked <code>new</code> if another argument&rsquo;s evaluation throws.</li>
+                    <li>It is shorter and avoids repeating the type.</li>
+                    <li>It makes the code clearly express intent.</li>
+                </ul>
+
+                <h3>Unique ownership semantics</h3>
+                <pre><code>auto a = std::make_unique&lt;int&gt;(10);
+// auto b = a;                    // ERROR &ndash; copy is deleted
+auto b = std::move(a);            // OK &ndash; ownership transferred
+// a is now nullptr
+std::cout &lt;&lt; *b &lt;&lt; "\n";         // 10</code></pre>
+
+                <h3>Useful member functions</h3>
+                <pre><code>auto p = std::make_unique&lt;int&gt;(42);
+
+p.get();        // returns the raw pointer (int*)
+p.reset();      // deletes the managed object, p becomes nullptr
+p.reset(new int(7)); // deletes old object, manages new one
+p.release();    // releases ownership, returns raw pointer (caller must delete)
+
+if (p) {        // contextual conversion to bool
+    std::cout &lt;&lt; "p is not null\n";
+}</code></pre>
+
+                <h3>Custom deleters with <code>unique_ptr</code></h3>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;cstdio&gt;
+
+int main() {
+    // Custom deleter for FILE*
+    auto fileDeleter = [](FILE* f) {
+        if (f) {
+            std::fclose(f);
+            std::puts("File closed.");
+        }
+    };
+
+    std::unique_ptr&lt;FILE, decltype(fileDeleter)&gt; file(
+        std::fopen("data.txt", "r"), fileDeleter
+    );
+
+    if (file) {
+        // use file.get() with C file I/O functions
+    }
+}   // file is automatically closed here</code></pre>
+
+                <!-- ===== std::shared_ptr ===== -->
+                <h2><code>std::shared_ptr</code></h2>
+                <p><code>std::shared_ptr</code> models <strong>shared ownership</strong>. Multiple <code>shared_ptr</code> instances can point to the same object. The object is destroyed when the <strong>last</strong> <code>shared_ptr</code> owning it is destroyed or reset. This is accomplished through <strong>reference counting</strong>.</p>
+
+                <h3>Creating a <code>shared_ptr</code></h3>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    // Preferred: make_shared (single allocation for object + control block)
+    auto sp1 = std::make_shared&lt;int&gt;(100);
+
+    // Copy &rarr; reference count increases
+    std::shared_ptr&lt;int&gt; sp2 = sp1;
+
+    std::cout &lt;&lt; "Value: " &lt;&lt; *sp1 &lt;&lt; "\n";        // 100
+    std::cout &lt;&lt; "Use count: " &lt;&lt; sp1.use_count()    // 2
+              &lt;&lt; "\n";
+
+    sp2.reset();  // sp2 releases ownership, count drops to 1
+    std::cout &lt;&lt; "Use count: " &lt;&lt; sp1.use_count()    // 1
+              &lt;&lt; "\n";
+}   // sp1 destroyed &rarr; count reaches 0 &rarr; int is deleted</code></pre>
+
+                <h3>Why prefer <code>make_shared</code>?</h3>
+                <ul>
+                    <li>It performs a <strong>single heap allocation</strong> for both the control block (reference counts) and the managed object, improving cache locality and reducing allocator overhead.</li>
+                    <li>Like <code>make_unique</code>, it is exception-safe.</li>
+                </ul>
+
+                <h3>Reference counting</h3>
+                <p>Each <code>shared_ptr</code> shares a <strong>control block</strong> that stores:</p>
+                <ul>
+                    <li>The <strong>strong reference count</strong> &ndash; how many <code>shared_ptr</code>s own the object.</li>
+                    <li>The <strong>weak reference count</strong> &ndash; how many <code>weak_ptr</code>s observe it.</li>
+                    <li>The deleter and allocator.</li>
+                </ul>
+                <p>When the strong count drops to zero the managed object is destroyed. The control block itself is freed when <em>both</em> counts reach zero.</p>
+
+                <h3>Thread safety note</h3>
+                <p>The reference count operations on a <code>shared_ptr</code> are <strong>atomic</strong>, so copying/destroying <code>shared_ptr</code> instances from different threads is safe. However, <strong>the managed object itself is not protected</strong>&mdash;you must still synchronise access to it if multiple threads read/write its data.</p>
+
+                <!-- ===== std::weak_ptr ===== -->
+                <h2><code>std::weak_ptr</code></h2>
+                <p><code>std::weak_ptr</code> is a <strong>non-owning observer</strong> of a <code>shared_ptr</code>-managed object. It does not contribute to the strong reference count, so it cannot keep the object alive. Its primary purpose is to <strong>break circular references</strong> that would otherwise cause memory leaks with <code>shared_ptr</code>.</p>
+
+                <h3>The circular reference problem</h3>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+struct Node {
+    std::shared_ptr&lt;Node&gt; next;
+    ~Node() { std::cout &lt;&lt; "Node destroyed\n"; }
+};
+
+int main() {
+    auto a = std::make_shared&lt;Node&gt;();
+    auto b = std::make_shared&lt;Node&gt;();
+    a-&gt;next = b;   // a owns b
+    b-&gt;next = a;   // b owns a &rarr; CIRCULAR REFERENCE!
+}   // Neither node is destroyed &ndash; MEMORY LEAK!</code></pre>
+
+                <h3>Breaking the cycle with <code>weak_ptr</code></h3>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+struct Node {
+    std::shared_ptr&lt;Node&gt; next;
+    std::weak_ptr&lt;Node&gt; prev;  // weak &rarr; does NOT prevent destruction
+    ~Node() { std::cout &lt;&lt; "Node destroyed\n"; }
+};
+
+int main() {
+    auto a = std::make_shared&lt;Node&gt;();
+    auto b = std::make_shared&lt;Node&gt;();
+    a-&gt;next = b;
+    b-&gt;prev = a;   // weak_ptr &rarr; no cycle
+
+    // To use a weak_ptr, lock() it to get a shared_ptr
+    if (auto locked = b-&gt;prev.lock()) {
+        std::cout &lt;&lt; "a is still alive\n";
+    }
+}   // Both nodes destroyed correctly</code></pre>
+
+                <h3>Key <code>weak_ptr</code> operations</h3>
+                <pre><code>std::shared_ptr&lt;int&gt; sp = std::make_shared&lt;int&gt;(42);
+std::weak_ptr&lt;int&gt; wp = sp;
+
+wp.expired();       // true if the managed object has been destroyed
+wp.lock();          // returns a shared_ptr (null if expired)
+wp.use_count();     // returns the strong reference count
+wp.reset();         // releases the observation</code></pre>
+
+                <!-- ===== Comparison Table ===== -->
+                <h2>Comparison Table: <code>unique_ptr</code> vs <code>shared_ptr</code> vs <code>weak_ptr</code></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th><code>unique_ptr</code></th>
+                            <th><code>shared_ptr</code></th>
+                            <th><code>weak_ptr</code></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ownership</td>
+                            <td>Exclusive (sole)</td>
+                            <td>Shared (multiple owners)</td>
+                            <td>Non-owning observer</td>
+                        </tr>
+                        <tr>
+                            <td>Copyable?</td>
+                            <td>No (move only)</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Moveable?</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Reference counting?</td>
+                            <td>No</td>
+                            <td>Yes (strong count)</td>
+                            <td>Yes (weak count)</td>
+                        </tr>
+                        <tr>
+                            <td>Overhead</td>
+                            <td>Zero (same size as raw pointer&sup1;)</td>
+                            <td>Control block + atomic ops</td>
+                            <td>Same control block as <code>shared_ptr</code></td>
+                        </tr>
+                        <tr>
+                            <td>Custom deleter?</td>
+                            <td>Yes (part of the type)</td>
+                            <td>Yes (type-erased)</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Array support?</td>
+                            <td>Yes (<code>unique_ptr&lt;T[]&gt;</code>)</td>
+                            <td>Yes (C++17, <code>shared_ptr&lt;T[]&gt;</code>)</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Use case</td>
+                            <td>Default choice; sole owner</td>
+                            <td>Genuinely shared lifetime</td>
+                            <td>Breaking cycles; caches; observers</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><sup>1</sup> When using the default deleter.</p>
+
+                <!-- ===== Transferring Ownership with std::move ===== -->
+                <h2>Transferring Ownership with <code>std::move</code></h2>
+                <p>Because <code>unique_ptr</code> cannot be copied, you must use <code>std::move</code> to transfer ownership from one <code>unique_ptr</code> to another. After the move, the source pointer becomes <code>nullptr</code>.</p>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+void process(std::unique_ptr&lt;int&gt; ptr) {
+    std::cout &lt;&lt; "Processing: " &lt;&lt; *ptr &lt;&lt; "\n";
+}   // ptr is destroyed here
+
+int main() {
+    auto data = std::make_unique&lt;int&gt;(99);
+
+    // Transfer ownership to the function
+    process(std::move(data));
+
+    // data is now nullptr
+    if (!data) {
+        std::cout &lt;&lt; "data has been moved\n";
+    }
+}</code></pre>
+
+                <h3>Returning <code>unique_ptr</code> from functions</h3>
+                <pre><code>std::unique_ptr&lt;Widget&gt; createWidget(int id) {
+    return std::make_unique&lt;Widget&gt;(id);
+    // implicit move &ndash; no std::move needed for return
+}
+
+int main() {
+    auto w = createWidget(42);
+    std::cout &lt;&lt; w-&gt;id &lt;&lt; "\n"; // 42
+}</code></pre>
+                <p>When returning a local <code>unique_ptr</code> by value, the compiler applies <strong>Named Return Value Optimisation (NRVO)</strong> or an implicit move&mdash;no explicit <code>std::move</code> is needed.</p>
+
+                <!-- ===== Smart Pointers and Arrays ===== -->
+                <h2>Smart Pointers and Arrays</h2>
+                <p>Smart pointers can also manage dynamically allocated arrays. <code>unique_ptr</code> has had array support since C++11; <code>shared_ptr</code> gained it in C++17.</p>
+                <pre><code>// unique_ptr with array (C++11)
+auto arr1 = std::make_unique&lt;int[]&gt;(5);   // array of 5 ints
+arr1[0] = 10;
+arr1[4] = 50;
+// No -&gt; or * operators; use [] instead
+
+// shared_ptr with array (C++17)
+auto arr2 = std::make_shared&lt;int[]&gt;(5);
+arr2[0] = 100;
+
+// C++20: make_shared with value initialisation
+auto arr3 = std::make_shared&lt;int[]&gt;(5, 0); // all elements = 0</code></pre>
+                <p><strong>Tip:</strong> For most use cases, prefer <code>std::vector</code> over a smart pointer to an array. Use <code>unique_ptr&lt;T[]&gt;</code> when you need a fixed-size buffer with no overhead or when interfacing with C APIs.</p>
+
+                <!-- ===== Smart Pointers and Polymorphism ===== -->
+                <h2>Smart Pointers and Polymorphism</h2>
+                <p>Smart pointers work seamlessly with inheritance and polymorphism. A <code>unique_ptr&lt;Base&gt;</code> or <code>shared_ptr&lt;Base&gt;</code> can hold a pointer to a derived class, and the correct destructor will be called (assuming the base class has a virtual destructor).</p>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+
+struct Animal {
+    virtual ~Animal() = default;
+    virtual void speak() const = 0;
+};
+
+struct Dog : Animal {
+    void speak() const override { std::cout &lt;&lt; "Woof!\n"; }
+};
+
+struct Cat : Animal {
+    void speak() const override { std::cout &lt;&lt; "Meow!\n"; }
+};
+
+int main() {
+    // unique_ptr to base holding derived objects
+    std::unique_ptr&lt;Animal&gt; pet = std::make_unique&lt;Dog&gt;();
+    pet-&gt;speak(); // Woof!
+
+    pet = std::make_unique&lt;Cat&gt;();
+    pet-&gt;speak(); // Meow!
+
+    // Container of polymorphic objects
+    std::vector&lt;std::unique_ptr&lt;Animal&gt;&gt; zoo;
+    zoo.push_back(std::make_unique&lt;Dog&gt;());
+    zoo.push_back(std::make_unique&lt;Cat&gt;());
+
+    for (const auto&amp; a : zoo) {
+        a-&gt;speak();
+    }
+}</code></pre>
+
+                <h3>Downcasting with smart pointers</h3>
+                <pre><code>std::shared_ptr&lt;Animal&gt; animal = std::make_shared&lt;Dog&gt;();
+
+// Safe downcast with dynamic_pointer_cast
+std::shared_ptr&lt;Dog&gt; dog = std::dynamic_pointer_cast&lt;Dog&gt;(animal);
+if (dog) {
+    dog-&gt;speak(); // Woof!
+}
+
+// Also available:
+// std::static_pointer_cast
+// std::const_pointer_cast
+// std::reinterpret_pointer_cast (C++17)</code></pre>
+
+                <!-- ===== Custom Deleters ===== -->
+                <h2>Custom Deleters</h2>
+                <p>Both <code>unique_ptr</code> and <code>shared_ptr</code> can use <strong>custom deleters</strong>&mdash;callable objects invoked instead of <code>delete</code> when the managed object is released. This is essential for resources that are not allocated with <code>new</code>, such as file handles, sockets, or C-library objects.</p>
+
+                <h3><code>unique_ptr</code> with custom deleter</h3>
+                <pre><code>// The deleter type is part of the unique_ptr type
+auto deleter = [](int* p) {
+    std::cout &lt;&lt; "Custom deleting " &lt;&lt; *p &lt;&lt; "\n";
+    delete p;
+};
+
+std::unique_ptr&lt;int, decltype(deleter)&gt; up(new int(42), deleter);</code></pre>
+
+                <h3><code>shared_ptr</code> with custom deleter</h3>
+                <pre><code>// The deleter is type-erased &ndash; NOT part of the shared_ptr type
+std::shared_ptr&lt;int&gt; sp(new int(42), [](int* p) {
+    std::cout &lt;&lt; "Custom deleting " &lt;&lt; *p &lt;&lt; "\n";
+    delete p;
+});
+
+// Two shared_ptrs with different deleters can share the same type
+std::shared_ptr&lt;int&gt; sp2(new int(7), [](int* p) { delete p; });</code></pre>
+
+                <h3>Real-world example: managing a C resource</h3>
+                <pre><code>#include &lt;memory&gt;
+#include &lt;cstdlib&gt;  // malloc, free
+
+struct CResource {
+    int data;
+};
+
+int main() {
+    // Wrap a malloc-allocated struct in a shared_ptr
+    std::shared_ptr&lt;CResource&gt; res(
+        static_cast&lt;CResource*&gt;(std::malloc(sizeof(CResource))),
+        [](CResource* p) {
+            std::free(p);  // call free() instead of delete
+        }
+    );
+    res-&gt;data = 42;
+}</code></pre>
+
+                <!-- ===== When to Use Which Smart Pointer ===== -->
+                <h2>When to Use Which Smart Pointer</h2>
+                <p>Choosing the right smart pointer is straightforward once you understand ownership:</p>
+                <ul>
+                    <li><strong><code>std::unique_ptr</code></strong> &ndash; your <strong>default choice</strong>. Use it when a single owner is responsible for the object&rsquo;s lifetime. This is the case the vast majority of the time. Zero overhead compared to a raw pointer.</li>
+                    <li><strong><code>std::shared_ptr</code></strong> &ndash; use only when the object truly has <strong>multiple owners</strong> with no clear single owner. Common in caches, observer patterns, and graphs. Carries some overhead due to atomic reference counting.</li>
+                    <li><strong><code>std::weak_ptr</code></strong> &ndash; use to <strong>observe</strong> a <code>shared_ptr</code>-managed object without preventing its destruction. Essential for breaking circular references and implementing caches that should not keep objects alive.</li>
+                </ul>
+                <p><strong>Rules of thumb:</strong></p>
+                <ul>
+                    <li>Start with <code>unique_ptr</code>. Only &ldquo;upgrade&rdquo; to <code>shared_ptr</code> if you discover genuine shared ownership.</li>
+                    <li>If you only need to <em>use</em> an object without owning it, take a <strong>raw pointer or reference</strong> (non-owning).</li>
+                    <li>Avoid <code>new</code> and <code>delete</code> entirely in modern C++. Use <code>make_unique</code> and <code>make_shared</code>.</li>
+                    <li>Never pass a smart pointer when a plain reference or pointer suffices&mdash;smart pointers express <em>ownership transfer or sharing</em>.</li>
+                </ul>
+
+                <!-- ===== Common Mistakes and Best Practices ===== -->
+                <h2>Common Mistakes and Best Practices</h2>
+
+                <h3>Mistake 1: Creating a <code>shared_ptr</code> from the same raw pointer twice</h3>
+                <pre><code>int* raw = new int(10);
+std::shared_ptr&lt;int&gt; s1(raw);
+std::shared_ptr&lt;int&gt; s2(raw);  // BUG! Two control blocks for one object
+// Double delete when both go out of scope</code></pre>
+                <p><strong>Fix:</strong> Always create <code>shared_ptr</code> via <code>make_shared</code> or by copying an existing <code>shared_ptr</code>.</p>
+
+                <h3>Mistake 2: Using <code>get()</code> to create another smart pointer</h3>
+                <pre><code>auto sp = std::make_shared&lt;int&gt;(5);
+std::shared_ptr&lt;int&gt; sp2(sp.get()); // BUG! Same problem as above</code></pre>
+                <p><strong>Fix:</strong> Copy the <code>shared_ptr</code> directly: <code>auto sp2 = sp;</code></p>
+
+                <h3>Mistake 3: Circular references with <code>shared_ptr</code></h3>
+                <p>Already covered above. <strong>Fix:</strong> Use <code>weak_ptr</code> for back-pointers or parent pointers.</p>
+
+                <h3>Mistake 4: Using <code>release()</code> and forgetting to delete</h3>
+                <pre><code>auto up = std::make_unique&lt;int&gt;(42);
+int* raw = up.release();  // up no longer owns it
+// If you forget: delete raw; &rarr; MEMORY LEAK</code></pre>
+                <p><strong>Fix:</strong> Prefer <code>std::move</code> to transfer ownership between smart pointers instead of <code>release()</code>.</p>
+
+                <h3>Mistake 5: Passing smart pointers by value unnecessarily</h3>
+                <pre><code>// BAD: increments ref count for no reason
+void read(std::shared_ptr&lt;Widget&gt; w) { w-&gt;doStuff(); }
+
+// GOOD: function does not need ownership
+void read(const Widget&amp; w) { w.doStuff(); }</code></pre>
+                <p><strong>Fix:</strong> Pass by reference, const reference, or raw pointer when the function does not participate in ownership.</p>
+
+                <h3>Best practices summary</h3>
+                <ul>
+                    <li>Use <code>std::make_unique</code> and <code>std::make_shared</code> instead of <code>new</code>.</li>
+                    <li>Prefer <code>unique_ptr</code> by default; switch to <code>shared_ptr</code> only when needed.</li>
+                    <li>Never use <code>auto_ptr</code>&mdash;it is removed from the language.</li>
+                    <li>Keep ownership graphs acyclic. Use <code>weak_ptr</code> to break cycles.</li>
+                    <li>Use <code>enable_shared_from_this</code> if an object needs to create <code>shared_ptr</code> instances to itself.</li>
+                    <li>Do not mix raw <code>new</code>/<code>delete</code> with smart pointers managing the same object.</li>
+                    <li>Pass non-owning access via references or raw pointers, not smart pointers.</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Smart pointers automate memory management using <strong>RAII</strong>, eliminating manual <code>delete</code>.</li>
+                    <li><code>std::unique_ptr</code> provides <strong>exclusive ownership</strong> with zero overhead&mdash;use it by default.</li>
+                    <li><code>std::shared_ptr</code> provides <strong>shared ownership</strong> via reference counting&mdash;use it when multiple owners are needed.</li>
+                    <li><code>std::weak_ptr</code> is a <strong>non-owning observer</strong> of a <code>shared_ptr</code>&mdash;use it to break circular references.</li>
+                    <li>Prefer <code>make_unique</code> (C++14) and <code>make_shared</code> (C++11) for exception safety and clarity.</li>
+                    <li>Use <code>std::move</code> to transfer ownership of a <code>unique_ptr</code>.</li>
+                    <li>Custom deleters let smart pointers manage any resource (files, sockets, C objects).</li>
+                    <li>Modern C++ code should have <strong>near-zero occurrences</strong> of raw <code>new</code> and <code>delete</code>.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/UOB7-B2MfwA" title="C++ Smart Pointers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What does the acronym RAII stand for?","o":["Resource Allocation Is Immediate","Resource Acquisition Is Initialisation","Runtime Allocation In Instances","Resource Assignment Is Inherited"],"a":1},
+                {"q":"Which header must you include to use smart pointers?","o":["<code>&lt;pointer&gt;</code>","<code>&lt;smart_ptr&gt;</code>","<code>&lt;memory&gt;</code>","<code>&lt;utility&gt;</code>"],"a":2},
+                {"q":"Which smart pointer models exclusive (sole) ownership?","o":["<code>std::shared_ptr</code>","<code>std::weak_ptr</code>","<code>std::auto_ptr</code>","<code>std::unique_ptr</code>"],"a":3},
+                {"q":"Which smart pointer uses reference counting?","o":["<code>std::unique_ptr</code>","<code>std::shared_ptr</code>","<code>std::weak_ptr</code>","<code>std::auto_ptr</code>"],"a":1},
+                {"q":"Can you copy a <code>std::unique_ptr</code>?","o":["Yes, always","Only when it manages an array","No, it can only be moved","Yes, but only in C++20"],"a":2},
+                {"q":"What function is the preferred way to create a <code>unique_ptr</code>?","o":["<code>std::new_unique</code>","<code>std::create_unique</code>","<code>std::make_unique</code>","<code>std::alloc_unique</code>"],"a":2},
+                {"q":"In which C++ standard was <code>std::make_unique</code> introduced?","o":["C++11","C++14","C++17","C++20"],"a":1},
+                {"q":"What happens when a <code>unique_ptr</code> goes out of scope?","o":["Nothing, you must call <code>delete</code> manually","The managed object is automatically deleted","The pointer is leaked","A garbage collector frees it later"],"a":1},
+                {"q":"Which function transfers ownership from one <code>unique_ptr</code> to another?","o":["<code>std::copy</code>","<code>std::transfer</code>","<code>std::move</code>","<code>std::swap</code>"],"a":2},
+                {"q":"After moving a <code>unique_ptr</code>, what is the source pointer&rsquo;s value?","o":["Unchanged","<code>nullptr</code>","Undefined","Points to a copy"],"a":1},
+                {"q":"What does <code>unique_ptr::get()</code> return?","o":["A copy of the managed object","The underlying raw pointer","The reference count","A <code>shared_ptr</code>"],"a":1},
+                {"q":"What does <code>unique_ptr::release()</code> do?","o":["Deletes the managed object","Releases ownership and returns the raw pointer","Resets the pointer to <code>nullptr</code> and deletes","Transfers ownership to a <code>shared_ptr</code>"],"a":1},
+                {"q":"What does <code>unique_ptr::reset()</code> do?","o":["Releases ownership without deleting","Deletes the managed object and sets the pointer to <code>nullptr</code>","Resets the reference count","Copies the pointer"],"a":1},
+                {"q":"What is a key advantage of <code>std::make_shared</code> over <code>new</code> + <code>shared_ptr</code> constructor?","o":["It avoids reference counting","It performs a single heap allocation","It creates a <code>unique_ptr</code> instead","It is faster because it skips construction"],"a":1},
+                {"q":"What structure does <code>shared_ptr</code> use to track reference counts?","o":["A linked list","A hash table","A control block","A binary tree"],"a":2},
+                {"q":"When is the managed object of a <code>shared_ptr</code> destroyed?","o":["When the first <code>shared_ptr</code> is destroyed","When <code>reset()</code> is called","When the strong reference count reaches zero","When the weak reference count reaches zero"],"a":2},
+                {"q":"What does <code>shared_ptr::use_count()</code> return?","o":["The weak reference count","The total number of pointers (strong + weak)","The strong reference count","The size of the managed object"],"a":2},
+                {"q":"Are the reference count operations on <code>shared_ptr</code> thread-safe?","o":["No, you must use a mutex","Yes, they are atomic","Only in C++20","Only on Linux"],"a":1},
+                {"q":"Does atomic reference counting on <code>shared_ptr</code> protect the managed object&rsquo;s data?","o":["Yes, all access is synchronised","No, you must synchronise access separately","Only for read operations","Only for POD types"],"a":1},
+                {"q":"What is the primary purpose of <code>std::weak_ptr</code>?","o":["To replace <code>unique_ptr</code>","To own objects exclusively","To observe a <code>shared_ptr</code> without preventing destruction","To provide faster access than <code>shared_ptr</code>"],"a":2},
+                {"q":"Does a <code>weak_ptr</code> increase the strong reference count?","o":["Yes","No","Only when locked","Only in debug mode"],"a":1},
+                {"q":"How do you access the object through a <code>weak_ptr</code>?","o":["Dereference it directly with <code>*</code>","Call <code>lock()</code> to get a <code>shared_ptr</code>","Call <code>get()</code>","Cast it to a raw pointer"],"a":1},
+                {"q":"What does <code>weak_ptr::expired()</code> return?","o":["Whether the <code>weak_ptr</code> has been moved","Whether the managed object has been destroyed","Whether the <code>weak_ptr</code> is null","The remaining lifetime in seconds"],"a":1},
+                {"q":"What problem does <code>weak_ptr</code> specifically solve?","o":["Memory fragmentation","Circular references with <code>shared_ptr</code>","Stack overflow","Buffer overflows"],"a":1},
+                {"q":"In a circular reference between two <code>shared_ptr</code>s, what happens at the end of scope?","o":["Both objects are destroyed normally","Neither object is destroyed (memory leak)","One object is destroyed randomly","The program crashes"],"a":1},
+                {"q":"Which smart pointer was deprecated in C++11 and removed in C++17?","o":["<code>std::unique_ptr</code>","<code>std::shared_ptr</code>","<code>std::auto_ptr</code>","<code>std::weak_ptr</code>"],"a":2},
+                {"q":"What is the overhead of <code>unique_ptr</code> with the default deleter compared to a raw pointer?","o":["Twice the size","Zero overhead","50% more memory","Significant due to reference counting"],"a":1},
+                {"q":"Which smart pointer supports <code>operator[]</code> for array access?","o":["<code>shared_ptr</code> only","<code>unique_ptr&lt;T[]&gt;</code>","<code>weak_ptr</code>","None of them"],"a":1},
+                {"q":"Since which C++ standard does <code>shared_ptr</code> support arrays natively?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What is the correct syntax for a <code>unique_ptr</code> managing an array of 10 ints?","o":["<code>std::make_unique&lt;int&gt;(10)</code>","<code>std::make_unique&lt;int[]&gt;(10)</code>","<code>std::make_unique&lt;int[10]&gt;()</code>","<code>std::unique_ptr&lt;int&gt;(new int[10])</code>"],"a":1},
+                {"q":"How does a custom deleter differ between <code>unique_ptr</code> and <code>shared_ptr</code>?","o":["<code>unique_ptr</code> type-erases it; <code>shared_ptr</code> does not","<code>unique_ptr</code> includes it in its type; <code>shared_ptr</code> type-erases it","They are identical","Only <code>shared_ptr</code> supports custom deleters"],"a":1},
+                {"q":"What cast function safely downcasts a <code>shared_ptr&lt;Base&gt;</code> to <code>shared_ptr&lt;Derived&gt;</code>?","o":["<code>std::static_pointer_cast</code>","<code>std::dynamic_pointer_cast</code>","<code>std::reinterpret_pointer_cast</code>","<code>std::const_pointer_cast</code>"],"a":1},
+                {"q":"What is required in the base class for safe polymorphic deletion via smart pointers?","o":["A copy constructor","A virtual destructor","A default constructor","An overloaded <code>operator=</code>"],"a":1},
+                {"q":"Which function should you call to check if a <code>unique_ptr</code> is not null?","o":["<code>is_valid()</code>","<code>has_value()</code>","Contextual <code>bool</code> conversion (<code>if (ptr)</code>)","<code>not_null()</code>"],"a":2},
+                {"q":"Why should you avoid passing a <code>shared_ptr</code> by value to a function that does not share ownership?","o":["It causes a compile error","It unnecessarily increments and decrements the reference count","It converts the <code>shared_ptr</code> to a <code>unique_ptr</code>","It leaks memory"],"a":1},
+                {"q":"What does <code>std::enable_shared_from_this</code> allow a class to do?","o":["Convert a <code>unique_ptr</code> to a <code>shared_ptr</code>","Safely create a <code>shared_ptr</code> from <code>this</code> inside a member function","Prevent the object from being copied","Make all members thread-safe"],"a":1},
+                {"q":"What happens if you call <code>shared_from_this()</code> on an object not managed by a <code>shared_ptr</code>?","o":["It returns <code>nullptr</code>","Undefined behaviour (C++14) or throws <code>bad_weak_ptr</code> (C++17)","It creates a new <code>shared_ptr</code>","It silently fails"],"a":1},
+                {"q":"What is the preferred alternative to smart pointers for managing dynamic arrays in modern C++?","o":["Raw arrays","<code>std::vector</code>","<code>std::array</code>","<code>malloc</code>/<code>free</code>"],"a":1},
+                {"q":"Can <code>std::unique_ptr</code> be stored in a <code>std::vector</code>?","o":["No, because it is not copyable","Yes, using <code>std::move</code> or <code>emplace_back</code>","Only <code>shared_ptr</code> can be stored in containers","Only in C++20"],"a":1},
+                {"q":"What optimisation does the compiler apply when returning a local <code>unique_ptr</code> by value?","o":["Copy elision or implicit move","Reference counting","Deep copy","Nothing&mdash;it causes a compile error"],"a":0},
+                {"q":"Which smart pointer should you use for a tree structure where each node has one parent and multiple children?","o":["<code>shared_ptr</code> for everything","<code>unique_ptr</code> for children, raw pointer or reference for parent","<code>weak_ptr</code> for children","Raw pointers for everything"],"a":1},
+                {"q":"What does <code>std::make_shared&lt;int[]&gt;(5, 0)</code> do in C++20?","o":["Creates 5 <code>shared_ptr</code>s to 0","Creates an array of 5 ints, all initialised to 0","Causes a compile error","Creates a single int with value 50"],"a":1},
+                {"q":"Which member function resets a <code>shared_ptr</code> without deleting the managed object?","o":["<code>reset()</code>","<code>release()</code>","Neither&mdash;<code>shared_ptr</code> has no <code>release()</code>","<code>detach()</code>"],"a":2},
+                {"q":"What is the recommended way to pass a <code>unique_ptr</code> to indicate ownership transfer?","o":["By const reference","By raw pointer","By value (using <code>std::move</code> at the call site)","By <code>shared_ptr</code>"],"a":2},
+                {"q":"In which scenario is <code>shared_ptr</code> preferred over <code>unique_ptr</code>?","o":["When the object has a single clear owner","When multiple components need to keep the object alive independently","When performance is critical","When managing stack-allocated objects"],"a":1},
+                {"q":"What happens if you call <code>reset()</code> on the last <code>shared_ptr</code> to an object?","o":["Nothing","The object is destroyed","The weak reference count is set to zero","Undefined behaviour"],"a":1},
+                {"q":"Can a <code>weak_ptr</code> be constructed directly from a raw pointer?","o":["Yes","No, it must be constructed from a <code>shared_ptr</code> or another <code>weak_ptr</code>","Only with a custom deleter","Only in C++20"],"a":1},
+                {"q":"What is the size of a <code>std::shared_ptr</code> compared to a raw pointer?","o":["Same size","Typically twice the size (pointer + pointer to control block)","Three times the size","Half the size"],"a":1},
+                {"q":"Which modern C++ guideline states &ldquo;no naked <code>new</code>&rdquo;?","o":["The C++ Core Guidelines (R.11)","The POSIX standard","The C99 standard","The Boost coding guidelines"],"a":0},
+                {"q":"What does <code>std::const_pointer_cast</code> do with a <code>shared_ptr</code>?","o":["Adds or removes <code>const</code> from the managed pointer type","Converts to a <code>unique_ptr</code>","Casts to a <code>void*</code>","Creates a deep copy"],"a":0}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="namespaces.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Namespaces</span>
+                </a>
+                <a href="move-semantics.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Move Semantics</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Strings - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-strings">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html" class="active"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 25 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="45" style="width:45%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; std::string
+                </div>
+                <h1>25. std::string</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 25 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What is std::string? ===== -->
+                <h2>What is <code>std::string</code>?</h2>
+                <p><code>std::string</code> is a <strong>dynamic string class</strong> provided by the C++ Standard Library through the <code>&lt;string&gt;</code> header. Unlike C-strings (null-terminated <code>char</code> arrays), <code>std::string</code> manages its own memory automatically &mdash; it grows and shrinks as needed without you worrying about buffer sizes or null terminators.</p>
+                <p>Under the hood, <code>std::string</code> is a typedef for <code>std::basic_string&lt;char&gt;</code>. It stores characters contiguously in heap memory and tracks its own length, making operations like querying the size an O(1) operation.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>How to create, initialize, and assign strings</li>
+                    <li>Reading strings from the keyboard with <code>cin</code> and <code>getline</code></li>
+                    <li>Querying length, capacity, and emptiness</li>
+                    <li>Accessing individual characters safely</li>
+                    <li>Concatenating and comparing strings</li>
+                    <li>Searching, extracting substrings, and modifying content</li>
+                    <li>Iterating over strings with range-based for loops and iterators</li>
+                    <li>Converting between strings and numbers</li>
+                    <li>A handy reference table of the most useful methods</li>
+                </ul>
+
+                <!-- ===== Creating and Initializing Strings ===== -->
+                <h2>Creating and Initializing Strings</h2>
+                <p>The <code>&lt;string&gt;</code> header provides many constructors for <code>std::string</code>:</p>
+
+                <h3>Common Initialization Methods</h3>
+                <pre><code>#include &lt;string&gt;
+using namespace std;
+
+string s1;                     // Empty string ""
+string s2 = "Hello";           // From a string literal
+string s3("World");            // Direct initialization
+string s4(5, 'A');             // "AAAAA" &mdash; 5 copies of 'A'
+string s5(s2);                 // Copy of s2: "Hello"
+string s6(s2, 1, 3);          // Substring of s2 starting at index 1, length 3: "ell"
+string s7 = s2 + " " + s3;   // Concatenation: "Hello World"</code></pre>
+
+                <h3>Assignment After Declaration</h3>
+                <pre><code>string name;
+name = "CodeVerse";            // Assign a literal
+name = s2;                     // Assign another string
+name.assign("C++");            // Using the assign() method
+name.assign(10, '-');          // "----------" &mdash; 10 dashes</code></pre>
+                <p>Unlike C-strings, you never need to worry about buffer sizes &mdash; <code>std::string</code> allocates and reallocates memory as needed.</p>
+
+                <!-- ===== String Input ===== -->
+                <h2>String Input: <code>cin</code> and <code>getline</code></h2>
+
+                <h3>Using <code>cin &gt;&gt;</code></h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string firstName;
+    cout &lt;&lt; "Enter your first name: ";
+    cin &gt;&gt; firstName;           // Reads one word (stops at whitespace)
+    cout &lt;&lt; "Hello, " &lt;&lt; firstName &lt;&lt; "!\n";
+    return 0;
+}</code></pre>
+                <p><code>cin &gt;&gt;</code> reads a single word &mdash; it stops at the first whitespace character. For full lines, use <code>getline</code>.</p>
+
+                <h3>Using <code>getline</code></h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string fullName;
+    cout &lt;&lt; "Enter your full name: ";
+    getline(cin, fullName);     // Reads the entire line (including spaces)
+    cout &lt;&lt; "Hello, " &lt;&lt; fullName &lt;&lt; "!\n";
+    return 0;
+}</code></pre>
+                <p><code>getline(cin, str)</code> reads everything up to and including the newline character, discards the newline, and stores the rest in <code>str</code>.</p>
+
+                <h3>Mixing <code>cin &gt;&gt;</code> and <code>getline</code></h3>
+                <pre><code>int age;
+string city;
+
+cout &lt;&lt; "Age: ";
+cin &gt;&gt; age;
+cin.ignore();                  // Discard the leftover newline
+cout &lt;&lt; "City: ";
+getline(cin, city);            // Now works correctly</code></pre>
+                <p>After <code>cin &gt;&gt;</code>, a leftover <code>'\n'</code> remains in the input buffer. Call <code>cin.ignore()</code> before <code>getline</code> to consume it; otherwise <code>getline</code> reads an empty string.</p>
+
+                <!-- ===== String Length and Capacity ===== -->
+                <h2>String Length and Capacity</h2>
+                <pre><code>string s = "Hello, World!";
+
+cout &lt;&lt; s.size();       // 13 &mdash; number of characters
+cout &lt;&lt; s.length();     // 13 &mdash; identical to size()
+cout &lt;&lt; s.capacity();   // &ge; 13 &mdash; allocated storage (implementation-defined)
+cout &lt;&lt; s.empty();      // false (0) &mdash; string is not empty
+cout &lt;&lt; s.max_size();   // Maximum possible string size (very large)
+
+string blank;
+cout &lt;&lt; blank.empty();  // true (1)</code></pre>
+                <p><code>size()</code> and <code>length()</code> are identical &mdash; both return the number of characters in O(1) time. <code>capacity()</code> returns how much memory is currently allocated; it is always &ge; <code>size()</code>. <code>empty()</code> returns <code>true</code> if the string has zero characters.</p>
+
+                <h3>Resizing and Reserving</h3>
+                <pre><code>string s = "Hi";
+s.reserve(100);       // Pre-allocate space for 100 chars (avoids reallocations)
+cout &lt;&lt; s.capacity();  // &ge; 100
+
+s.resize(10, '.');    // s = "Hi........" (pads with '.')
+s.resize(2);          // s = "Hi" (truncates)
+s.shrink_to_fit();    // Request to reduce capacity to match size</code></pre>
+
+                <!-- ===== Accessing Characters ===== -->
+                <h2>Accessing Characters</h2>
+                <pre><code>string s = "CodeVerse";
+
+// Using [] &mdash; no bounds checking (faster, undefined behavior if out of range)
+char first = s[0];       // 'C'
+char last  = s[8];       // 'e'
+s[0] = 'c';              // s = "codeVerse"
+
+// Using at() &mdash; bounds-checked (throws std::out_of_range if invalid)
+char ch = s.at(4);       // 'V'
+// s.at(100);            // Throws std::out_of_range exception
+
+// front() and back()
+char f = s.front();      // First character: 'c'
+char b = s.back();       // Last character: 'e'</code></pre>
+                <p>Use <code>[]</code> when you are certain the index is valid for maximum performance. Use <code>at()</code> when safety is more important &mdash; it throws an exception on invalid access instead of causing undefined behavior.</p>
+
+                <!-- ===== String Concatenation ===== -->
+                <h2>String Concatenation</h2>
+                <pre><code>string a = "Hello";
+string b = " World";
+
+// Using the + operator
+string c = a + b;            // "Hello World"
+string d = a + "!!!";        // "Hello!!!"
+
+// Using += operator
+a += b;                      // a = "Hello World"
+a += '!';                    // a = "Hello World!"
+
+// Using append()
+string e = "Code";
+e.append("Verse");           // e = "CodeVerse"
+e.append(3, '!');            // e = "CodeVerse!!!"
+e.append(b, 0, 6);          // Append substring of b: e = "CodeVerse!!! World"</code></pre>
+                <p>The <code>+</code> operator creates a <strong>new</strong> string. For building strings in a loop, prefer <code>+=</code> or <code>append()</code> to avoid unnecessary copies.</p>
+
+                <h3>Important: You Cannot Concatenate Two Literals</h3>
+                <pre><code>// string s = "Hello" + " World";  // ERROR: can't add two const char*
+string s = string("Hello") + " World";   // OK
+string t = "Hello"s + " World";          // OK (C++14 string literal suffix)</code></pre>
+
+                <!-- ===== String Comparison ===== -->
+                <h2>String Comparison</h2>
+                <pre><code>string a = "apple";
+string b = "banana";
+string c = "apple";
+
+// Relational operators (lexicographic comparison)
+cout &lt;&lt; (a == c);   // true  (1)
+cout &lt;&lt; (a != b);   // true  (1)
+cout &lt;&lt; (a &lt; b);    // true  (1) &mdash; "apple" comes before "banana"
+cout &lt;&lt; (b &gt; a);    // true  (1)
+cout &lt;&lt; (a &lt;= c);   // true  (1)
+cout &lt;&lt; (a &gt;= c);   // true  (1)
+
+// Using compare()
+int result = a.compare(b);
+// result &lt; 0: a is less than b
+// result == 0: a equals b
+// result &gt; 0: a is greater than b
+
+// Comparing substrings
+a.compare(0, 3, b, 0, 3);   // Compare "app" vs "ban"</code></pre>
+                <p>Unlike C-strings, you <strong>can</strong> use <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code> directly with <code>std::string</code>. These perform proper lexicographic comparison of the string contents, not pointer addresses.</p>
+
+                <!-- ===== Searching Strings ===== -->
+                <h2>Searching Strings</h2>
+                <pre><code>string s = "Learn C++ at CodeVerse";
+
+// find() &mdash; returns index of first occurrence, or string::npos if not found
+size_t pos = s.find("C++");         // 6
+size_t bad = s.find("Python");      // string::npos
+
+if (s.find("Code") != string::npos)
+    cout &lt;&lt; "Found 'Code'!\n";
+
+// find() with starting position
+size_t pos2 = s.find('e', 2);       // 5 &mdash; first 'e' at or after index 2
+
+// rfind() &mdash; searches backwards (last occurrence)
+size_t rpos = s.rfind('e');          // 21 &mdash; last 'e' in the string
+
+// find_first_of() &mdash; first occurrence of ANY character in the set
+size_t vowel = s.find_first_of("aeiou");   // 1 ('e' in "Learn")
+
+// find_last_of() &mdash; last occurrence of ANY character in the set
+size_t lastVowel = s.find_last_of("aeiou");  // 20 ('e' in "Verse")
+
+// find_first_not_of() &mdash; first char NOT in the set
+size_t notSpace = s.find_first_not_of(" ");  // 0 ('L')</code></pre>
+
+                <h3>Understanding <code>string::npos</code></h3>
+                <pre><code>// string::npos is a special constant (typically the maximum value of size_t)
+// It means "not found" or "until the end of the string"
+if (s.find("xyz") == string::npos) {
+    cout &lt;&lt; "Substring not found\n";
+}</code></pre>
+
+                <!-- ===== Substring and Replace ===== -->
+                <h2>Substring, Replace, Erase, and Insert</h2>
+
+                <h3><code>substr()</code> &mdash; Extract a Substring</h3>
+                <pre><code>string s = "Hello, World!";
+string sub1 = s.substr(7);       // "World!" &mdash; from index 7 to end
+string sub2 = s.substr(0, 5);    // "Hello" &mdash; from index 0, length 5</code></pre>
+
+                <h3><code>replace()</code> &mdash; Replace Part of a String</h3>
+                <pre><code>string s = "Hello, World!";
+s.replace(7, 5, "C++");          // s = "Hello, C++!"
+// Replaces 5 characters starting at index 7 with "C++"</code></pre>
+
+                <h3><code>erase()</code> &mdash; Remove Characters</h3>
+                <pre><code>string s = "Hello, World!";
+s.erase(5, 7);                   // s = "Hello!" &mdash; erases 7 chars from index 5
+s.erase(5);                      // s = "Hello" &mdash; erases from index 5 to end
+s.erase();                       // s = "" &mdash; clears the string</code></pre>
+
+                <h3><code>insert()</code> &mdash; Insert Characters</h3>
+                <pre><code>string s = "Hello!";
+s.insert(5, ", World");          // s = "Hello, World!"
+s.insert(0, ">> ");              // s = ">> Hello, World!"
+s.insert(s.size(), " <<");       // s = ">> Hello, World! <<"</code></pre>
+
+                <h3>Combining Operations: Find and Replace All</h3>
+                <pre><code>string text = "I like cats. cats are great. I have 2 cats.";
+string target = "cats";
+string replacement = "dogs";
+
+size_t pos = 0;
+while ((pos = text.find(target, pos)) != string::npos) {
+    text.replace(pos, target.length(), replacement);
+    pos += replacement.length();  // Move past the replacement
+}
+// text = "I like dogs. dogs are great. I have 2 dogs."</code></pre>
+
+                <!-- ===== String Iteration ===== -->
+                <h2>String Iteration</h2>
+
+                <h3>Range-Based <code>for</code> Loop (C++11)</h3>
+                <pre><code>string s = "CodeVerse";
+
+// Read-only
+for (char ch : s) {
+    cout &lt;&lt; ch &lt;&lt; ' ';
+}
+// Output: C o d e V e r s e
+
+// Modify in place (use reference)
+for (char&amp; ch : s) {
+    ch = toupper(ch);
+}
+// s = "CODEVERSE"</code></pre>
+
+                <h3>Index-Based Loop</h3>
+                <pre><code>for (size_t i = 0; i &lt; s.size(); i++) {
+    cout &lt;&lt; s[i];
+}</code></pre>
+
+                <h3>Using Iterators</h3>
+                <pre><code>// Forward iteration
+for (string::iterator it = s.begin(); it != s.end(); ++it) {
+    cout &lt;&lt; *it;
+}
+
+// Using auto (C++11)
+for (auto it = s.begin(); it != s.end(); ++it) {
+    cout &lt;&lt; *it;
+}
+
+// Reverse iteration
+for (auto rit = s.rbegin(); rit != s.rend(); ++rit) {
+    cout &lt;&lt; *rit;
+}
+// Prints the string backwards</code></pre>
+
+                <!-- ===== String Conversions ===== -->
+                <h2>String Conversions</h2>
+
+                <h3>String to Number</h3>
+                <pre><code>#include &lt;string&gt;
+using namespace std;
+
+string numStr = "42";
+string piStr  = "3.14159";
+string fStr   = "2.5f";
+
+int    n = stoi(numStr);      // 42
+long   l = stol(numStr);      // 42L
+double d = stod(piStr);       // 3.14159
+float  f = stof(fStr);        // 2.5f
+long long ll = stoll("123456789012345");  // 123456789012345LL
+
+// stoi can handle different bases
+int hex = stoi("FF", nullptr, 16);   // 255
+int bin = stoi("1010", nullptr, 2);  // 10</code></pre>
+                <p>If the string cannot be converted, these functions throw <code>std::invalid_argument</code>. If the value is out of range, they throw <code>std::out_of_range</code>.</p>
+
+                <h3>Number to String</h3>
+                <pre><code>int age = 25;
+double pi = 3.14159;
+
+string s1 = to_string(age);     // "25"
+string s2 = to_string(pi);      // "3.141590" (6 decimal places by default)</code></pre>
+
+                <h3>Converting to a C-String</h3>
+                <pre><code>string s = "Hello";
+const char* cstr = s.c_str();   // Returns a const char* (null-terminated)
+const char* data = s.data();    // Same as c_str() since C++11
+
+// Useful when calling C library functions:
+printf("%s\n", s.c_str());</code></pre>
+                <p><code>c_str()</code> returns a <code>const char*</code> pointing to a null-terminated copy of the string data. The pointer is valid as long as the string is not modified.</p>
+
+                <!-- ===== Useful String Methods Reference Table ===== -->
+                <h2>Useful String Methods Reference Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>size()</code> / <code>length()</code></td>
+                            <td>Number of characters</td>
+                            <td><code>s.size()</code> &rarr; <code>5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>empty()</code></td>
+                            <td>Check if string is empty</td>
+                            <td><code>s.empty()</code> &rarr; <code>false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>clear()</code></td>
+                            <td>Remove all characters</td>
+                            <td><code>s.clear()</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>at(i)</code></td>
+                            <td>Access character with bounds check</td>
+                            <td><code>s.at(0)</code> &rarr; <code>'H'</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>front()</code></td>
+                            <td>First character</td>
+                            <td><code>s.front()</code> &rarr; <code>'H'</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>back()</code></td>
+                            <td>Last character</td>
+                            <td><code>s.back()</code> &rarr; <code>'o'</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>append(str)</code></td>
+                            <td>Append to end</td>
+                            <td><code>s.append("!!")</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>push_back(ch)</code></td>
+                            <td>Append a single character</td>
+                            <td><code>s.push_back('!')</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>pop_back()</code></td>
+                            <td>Remove the last character</td>
+                            <td><code>s.pop_back()</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>insert(pos, str)</code></td>
+                            <td>Insert at position</td>
+                            <td><code>s.insert(5, ",")</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>erase(pos, len)</code></td>
+                            <td>Erase characters</td>
+                            <td><code>s.erase(5, 2)</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>replace(pos, len, str)</code></td>
+                            <td>Replace characters</td>
+                            <td><code>s.replace(0, 5, "Hi")</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>substr(pos, len)</code></td>
+                            <td>Extract substring</td>
+                            <td><code>s.substr(0, 5)</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>find(str)</code></td>
+                            <td>Find first occurrence</td>
+                            <td><code>s.find("lo")</code> &rarr; <code>3</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>rfind(str)</code></td>
+                            <td>Find last occurrence</td>
+                            <td><code>s.rfind('l')</code> &rarr; <code>3</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>find_first_of(chars)</code></td>
+                            <td>First of any char in set</td>
+                            <td><code>s.find_first_of("aeiou")</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>find_last_of(chars)</code></td>
+                            <td>Last of any char in set</td>
+                            <td><code>s.find_last_of("aeiou")</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>compare(str)</code></td>
+                            <td>Lexicographic comparison</td>
+                            <td><code>s.compare("Hi")</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>c_str()</code></td>
+                            <td>Get const char* (C-string)</td>
+                            <td><code>s.c_str()</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>stoi(str)</code></td>
+                            <td>String to int</td>
+                            <td><code>stoi("42")</code> &rarr; <code>42</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>stod(str)</code></td>
+                            <td>String to double</td>
+                            <td><code>stod("3.14")</code> &rarr; <code>3.14</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>to_string(num)</code></td>
+                            <td>Number to string</td>
+                            <td><code>to_string(42)</code> &rarr; <code>"42"</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>reserve(n)</code></td>
+                            <td>Pre-allocate memory</td>
+                            <td><code>s.reserve(100)</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>resize(n, ch)</code></td>
+                            <td>Resize string (pad or truncate)</td>
+                            <td><code>s.resize(10, '.')</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>swap(other)</code></td>
+                            <td>Swap contents with another string</td>
+                            <td><code>s.swap(t)</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>std::string</code> is a <strong>dynamic, safe, and feature-rich</strong> string class from <code>&lt;string&gt;</code> that manages its own memory automatically.</li>
+                    <li>Use <code>getline(cin, str)</code> to read full lines with spaces; use <code>cin &gt;&gt; str</code> to read single words.</li>
+                    <li><code>size()</code> and <code>length()</code> return the character count in O(1); <code>capacity()</code> returns allocated storage.</li>
+                    <li>Use <code>[]</code> for fast access when you know the index is valid; use <code>at()</code> for bounds-checked access that throws on errors.</li>
+                    <li>Concatenation works with <code>+</code>, <code>+=</code>, and <code>append()</code> &mdash; prefer <code>+=</code> in loops to avoid extra copies.</li>
+                    <li>You can compare strings directly with <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code> &mdash; unlike C-strings.</li>
+                    <li><code>find()</code> returns the index or <code>string::npos</code> when not found; <code>rfind()</code> searches backwards.</li>
+                    <li><code>substr()</code>, <code>replace()</code>, <code>erase()</code>, and <code>insert()</code> let you extract and modify portions of a string.</li>
+                    <li>Range-based <code>for</code> loops and iterators provide clean ways to traverse string characters.</li>
+                    <li>Convert between strings and numbers with <code>stoi()</code>, <code>stod()</code>, <code>stof()</code>, and <code>to_string()</code>; use <code>c_str()</code> to obtain a <code>const char*</code> for C API interop.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Watch: C++ std::string</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/FkMWsO_-X7Y" title="C++ std::string" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- ===== Quiz Section ===== -->
+            <div class="quiz-btn-wrapper">
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header provides the std::string class?","o":["&lt;cstring&gt;","&lt;string&gt;","&lt;sstream&gt;","&lt;cstdlib&gt;"],"a":1},
+                {"q":"What is std::string a typedef for?","o":["std::basic_string&lt;char&gt;","std::basic_string&lt;wchar_t&gt;","std::char_array","std::dynamic_string"],"a":0},
+                {"q":"Which correctly creates an empty std::string?","o":["string s = '';","string s;","string s = NULL;","string s = 0;"],"a":1},
+                {"q":"What does string s(5, 'X'); produce?","o":["\"5X\"","\"XXXXX\"","\"X5\"","Compilation error"],"a":1},
+                {"q":"How do you read a full line (with spaces) into a std::string?","o":["cin &gt;&gt; str;","cin.get(str);","getline(cin, str);","scanf(\"%s\", str);"],"a":2},
+                {"q":"What does cin &gt;&gt; stop at when reading a string?","o":["Newline only","Any whitespace character","End of file only","A period"],"a":1},
+                {"q":"Why must you call cin.ignore() before getline after cin &gt;&gt;?","o":["To clear error flags","To discard the leftover newline in the buffer","To flush the output","To reset the string"],"a":1},
+                {"q":"Which two methods return the number of characters in a string?","o":["size() and capacity()","length() and max_size()","size() and length()","count() and length()"],"a":2},
+                {"q":"What is the time complexity of std::string::size()?","o":["O(n)","O(log n)","O(1)","O(n log n)"],"a":2},
+                {"q":"What does s.capacity() return?","o":["The number of characters in s","The total allocated storage for s","The maximum possible size","The number of null terminators"],"a":1},
+                {"q":"What does s.empty() return when s = \"\"?","o":["0","false","true","\"\""],"a":2},
+                {"q":"Which method pre-allocates memory without changing the string content?","o":["resize()","reserve()","allocate()","expand()"],"a":1},
+                {"q":"What does s.resize(10, '.') do if s has 3 characters?","o":["Truncates to 10 chars","Pads with '.' to make 10 chars total","Replaces all chars with '.'","Throws an exception"],"a":1},
+                {"q":"What is the difference between s[5] and s.at(5)?","o":["s[5] is slower","s.at(5) throws std::out_of_range on invalid index; s[5] does not","s[5] returns a copy; s.at(5) returns a reference","There is no difference"],"a":1},
+                {"q":"What does s.front() return?","o":["The first character","The ASCII value of the first character","An iterator to the beginning","The size of the string"],"a":0},
+                {"q":"What does s.back() return?","o":["The last character","The null terminator","The second-to-last character","An iterator to the end"],"a":0},
+                {"q":"Which operator creates a NEW string from two existing strings?","o":["+=","+","append()","assign()"],"a":1},
+                {"q":"Why is += preferred over + in loops for concatenation?","o":["It is more readable","It avoids creating temporary string objects","It is required by the standard","It is faster for single characters only"],"a":1},
+                {"q":"What does s.append(3, '!') do?","o":["Appends \"3!\"","Appends \"!!!\"","Appends '!' at index 3","Replaces 3 characters with '!'"],"a":1},
+                {"q":"What happens with: string s = \"Hi\" + \" World\";?","o":["s = \"Hi World\"","Compilation error: cannot add two const char*","Runtime error","s = \"HiWorld\""],"a":1},
+                {"q":"Can you compare std::strings with == directly?","o":["No, you must use strcmp","Yes, it compares contents lexicographically","Yes, but it compares addresses","No, you must use compare()"],"a":1},
+                {"q":"What does a.compare(b) return when a equals b?","o":["-1","1","0","true"],"a":2},
+                {"q":"What does a &lt; b check for std::strings?","o":["Whether a has fewer characters","Whether a is lexicographically less than b","Whether a was created before b","Whether a's address is lower"],"a":1},
+                {"q":"What does s.find(\"xyz\") return if \"xyz\" is not found?","o":["0","-1","string::npos","An empty string"],"a":2},
+                {"q":"What is string::npos typically equal to?","o":["0","-1 (maximum value of size_t)","INT_MAX","nullptr"],"a":1},
+                {"q":"What does rfind() do compared to find()?","o":["Searches from the end backwards","Searches case-insensitively","Searches using regex","Returns a reversed string"],"a":0},
+                {"q":"What does s.find_first_of(\"aeiou\") return?","o":["Index of the first vowel in s","Count of vowels in s","The first vowel character","true if any vowel exists"],"a":0},
+                {"q":"What does s.find_last_of(\"aeiou\") return?","o":["Index of the last vowel in s","The last vowel character","Number of vowels","true if any vowel is at the end"],"a":0},
+                {"q":"What does s.substr(3, 4) return?","o":["Characters from index 3 to index 4","4 characters starting from index 3","3 characters starting from index 4","Characters from index 3 to the end"],"a":1},
+                {"q":"What does s.substr(5) return?","o":["The first 5 characters","Characters from index 5 to the end","5 copies of the string","An empty string"],"a":1},
+                {"q":"What does s.erase(2, 3) do?","o":["Erases 2 characters starting at index 3","Erases 3 characters starting at index 2","Erases characters at indices 2 and 3","Clears the string"],"a":1},
+                {"q":"What does s.insert(0, \">> \") do?","o":["Inserts \">> \" at the beginning","Inserts \">> \" at the end","Replaces the first 3 characters","Inserts at index 3"],"a":0},
+                {"q":"What does s.replace(0, 5, \"Hi\") do?","o":["Replaces 5 characters starting at index 0 with \"Hi\"","Replaces \"Hi\" with the first 5 characters","Inserts \"Hi\" at index 5","Replaces all occurrences of the first 5 chars"],"a":0},
+                {"q":"How do you iterate over a string with a range-based for loop in C++11?","o":["for (char ch : s)","for (ch in s)","foreach (char ch in s)","for ch in s:"],"a":0},
+                {"q":"How do you modify characters in place with a range-based for?","o":["for (char ch : s)","for (char&amp; ch : s)","for (const char&amp; ch : s)","for (char* ch : s)"],"a":1},
+                {"q":"What does s.begin() return?","o":["The first character","An iterator to the first character","The index 0","A pointer to the C-string"],"a":1},
+                {"q":"What does s.rbegin() return?","o":["A reverse iterator to the last character","An iterator to the first character","The last character","A reversed copy of the string"],"a":0},
+                {"q":"What does stoi(\"42\") return?","o":["\"42\"","42","42.0","'4'"],"a":1},
+                {"q":"What does stoi(\"FF\", nullptr, 16) return?","o":["15","255","0xFF","Throws invalid_argument"],"a":1},
+                {"q":"What exception does stoi throw for an unconvertible string?","o":["std::runtime_error","std::invalid_argument","std::out_of_range","std::bad_cast"],"a":1},
+                {"q":"What does stod(\"3.14\") return?","o":["3","3.14","\"3.14\"","314"],"a":1},
+                {"q":"What does to_string(100) return?","o":["100","\"100\"","'1','0','0'","\"one hundred\""],"a":1},
+                {"q":"What does s.c_str() return?","o":["A std::string copy","A const char* (null-terminated)","The first character","The string length"],"a":1},
+                {"q":"When is the pointer returned by c_str() invalidated?","o":["Never","When the string is modified","When the function returns","When the program ends"],"a":1},
+                {"q":"What does s.push_back('!') do?","o":["Adds '!' at the beginning","Adds '!' at the end","Replaces the last char with '!'","Throws an exception"],"a":1},
+                {"q":"What does s.pop_back() do?","o":["Removes the first character","Removes the last character","Returns and removes the last character","Clears the string"],"a":1},
+                {"q":"What does s.clear() do?","o":["Deletes the string object","Removes all characters (size becomes 0)","Sets all characters to '\\0'","Frees all allocated memory"],"a":1},
+                {"q":"What does s.swap(t) do?","o":["Reverses the string","Exchanges the contents of s and t","Copies s into t","Sorts the characters"],"a":1},
+                {"q":"Which is true about std::string memory management?","o":["You must manually allocate and free memory","It manages memory automatically (dynamic allocation)","It uses a fixed-size buffer","It always allocates exactly size() bytes"],"a":1},
+                {"q":"How does std::string differ from C-strings for comparison?","o":["std::string uses strcmp internally","std::string supports == and &lt; directly on contents; C-strings compare addresses with ==","Both behave identically with ==","C-strings are more reliable for comparison"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="c-strings.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">C-Strings</span>
+                </a>
+                <a href="pointers.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Pointers</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

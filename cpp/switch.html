@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Switch Statements - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-switch">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html" class="active"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 11 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="20" style="width:20%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Switch Statements
+                </div>
+                <h1>11. Switch Statements</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 11 of 55</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ==================== INTRODUCTION ==================== -->
+                <h2>What Is a Switch Statement?</h2>
+                <p>In the previous lesson you learned how to use <code>if-else if-else</code> chains to test multiple conditions. While that approach works, it can become verbose and hard to read when you are comparing a single variable against many possible values. The <strong>switch statement</strong> provides a cleaner alternative for exactly this scenario.</p>
+                <p>A <code>switch</code> evaluates an expression <em>once</em> and then jumps directly to the matching <code>case</code> label, making the code easier to read and sometimes faster than a long chain of <code>if-else if</code> comparisons.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>The syntax of <code>switch</code>, <code>case</code>, <code>break</code>, and <code>default</code></li>
+                    <li>How fall-through behavior works (and how to avoid it)</li>
+                    <li>The importance of the <code>break</code> statement</li>
+                    <li>How to use <code>default</code> as a catch-all</li>
+                    <li>Multiple cases sharing the same code</li>
+                    <li>Switch with <code>char</code>, <code>int</code>, and <code>enum</code> types</li>
+                    <li>Nested switch statements</li>
+                    <li>When to use <code>switch</code> vs <code>if-else</code></li>
+                    <li>Common mistakes and pitfalls</li>
+                    <li>C++17 switch with initializer</li>
+                    <li>Practical examples: calculator, menu system, day of the week</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use a <code>switch</code> when you need to compare <strong>one variable</strong> against a series of <strong>constant values</strong>. For range checks (e.g., <code>x &gt; 10</code>) or complex conditions, stick with <code>if-else</code>.</p>
+                </div>
+
+                <!-- ==================== BASIC SYNTAX ==================== -->
+                <h2>Switch Syntax</h2>
+                <p>The general form of a switch statement is:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>switch (expression) {
+    case value1:
+        // Code for value1
+        break;
+    case value2:
+        // Code for value2
+        break;
+    case value3:
+        // Code for value3
+        break;
+    default:
+        // Code if no case matches
+        break;
+}</pre></div>
+
+                <p>Here is how it works step by step:</p>
+                <ol>
+                    <li>The <code>expression</code> inside the parentheses is evaluated <strong>once</strong>.</li>
+                    <li>The result is compared against each <code>case</code> value from top to bottom.</li>
+                    <li>When a match is found, execution jumps to that <code>case</code> label.</li>
+                    <li>The <code>break</code> statement exits the switch block.</li>
+                    <li>If no case matches, the <code>default</code> block runs (if present).</li>
+                </ol>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>The <code>expression</code> must evaluate to an <strong>integral or enumeration type</strong> &mdash; <code>int</code>, <code>char</code>, <code>short</code>, <code>long</code>, <code>enum</code>, or <code>bool</code>. You <strong>cannot</strong> use <code>float</code>, <code>double</code>, or <code>std::string</code> in a switch.</p>
+                </div>
+
+                <!-- ==================== FIRST EXAMPLE ==================== -->
+                <h2>Your First Switch Example</h2>
+                <p>Let&rsquo;s start with a classic: printing the day of the week based on a number.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int day = 3;
+
+    switch (day) {
+        case 1:
+            cout &lt;&lt; "Monday" &lt;&lt; endl;
+            break;
+        case 2:
+            cout &lt;&lt; "Tuesday" &lt;&lt; endl;
+            break;
+        case 3:
+            cout &lt;&lt; "Wednesday" &lt;&lt; endl;
+            break;
+        case 4:
+            cout &lt;&lt; "Thursday" &lt;&lt; endl;
+            break;
+        case 5:
+            cout &lt;&lt; "Friday" &lt;&lt; endl;
+            break;
+        case 6:
+            cout &lt;&lt; "Saturday" &lt;&lt; endl;
+            break;
+        case 7:
+            cout &lt;&lt; "Sunday" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid day number" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Wednesday</pre></div>
+
+                <p>The value of <code>day</code> (3) matches <code>case 3</code>, so &ldquo;Wednesday&rdquo; is printed. The <code>break</code> then exits the switch. If <code>day</code> were 9, none of the cases would match and the <code>default</code> block would run.</p>
+
+                <!-- ==================== BREAK STATEMENT ==================== -->
+                <h2>The <code>break</code> Statement</h2>
+                <p>The <code>break</code> keyword tells the program to exit the switch block immediately. Without it, execution &ldquo;falls through&rdquo; to the next case &mdash; even if that case&rsquo;s value doesn&rsquo;t match.</p>
+
+                <h3>What Happens Without <code>break</code>?</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 2;
+
+    switch (x) {
+        case 1:
+            cout &lt;&lt; "One" &lt;&lt; endl;
+        case 2:
+            cout &lt;&lt; "Two" &lt;&lt; endl;
+        case 3:
+            cout &lt;&lt; "Three" &lt;&lt; endl;
+        case 4:
+            cout &lt;&lt; "Four" &lt;&lt; endl;
+        default:
+            cout &lt;&lt; "Default" &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Two
+Three
+Four
+Default</pre></div>
+
+                <p>Execution starts at <code>case 2</code> and then falls through every subsequent case (and <code>default</code>) because there are no <code>break</code> statements. This is almost always a bug unless you intentionally want fall-through.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><strong>Always include <code>break</code></strong> at the end of each case unless you have a deliberate reason for fall-through. Forgetting <code>break</code> is one of the most common switch-related bugs.</p>
+                </div>
+
+                <!-- ==================== FALL-THROUGH BEHAVIOR ==================== -->
+                <h2>Fall-Through Behavior</h2>
+                <p>While usually a mistake, fall-through can be used intentionally. A common use is grouping multiple case labels that should execute the same code.</p>
+
+                <h3>Multiple Cases, Same Code</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int day = 6;
+
+    switch (day) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            cout &lt;&lt; "Weekday" &lt;&lt; endl;
+            break;
+        case 6:
+        case 7:
+            cout &lt;&lt; "Weekend" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid day" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Weekend</pre></div>
+
+                <p>Cases 1 through 5 all fall through to the <code>cout &lt;&lt; "Weekday"</code> statement. Cases 6 and 7 share the &ldquo;Weekend&rdquo; output. This is cleaner than writing five separate <code>if</code> conditions with <code>||</code>.</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>In C++17, you can use the <code>[[fallthrough]]</code> attribute to tell the compiler (and other developers) that the fall-through is intentional, suppressing compiler warnings.</p>
+                </div>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>switch (value) {
+    case 1:
+        doSomething();
+        [[fallthrough]];  // Intentional fall-through
+    case 2:
+        doMore();
+        break;
+}</pre></div>
+
+                <!-- ==================== DEFAULT CASE ==================== -->
+                <h2>The <code>default</code> Case</h2>
+                <p>The <code>default</code> label is optional but highly recommended. It acts as a catch-all for values that don&rsquo;t match any <code>case</code>.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char grade = 'X';
+
+    switch (grade) {
+        case 'A':
+            cout &lt;&lt; "Excellent!" &lt;&lt; endl;
+            break;
+        case 'B':
+            cout &lt;&lt; "Good job!" &lt;&lt; endl;
+            break;
+        case 'C':
+            cout &lt;&lt; "Well done." &lt;&lt; endl;
+            break;
+        case 'D':
+            cout &lt;&lt; "You passed." &lt;&lt; endl;
+            break;
+        case 'F':
+            cout &lt;&lt; "Better try again." &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid grade." &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Invalid grade.</pre></div>
+
+                <p>The <code>default</code> block can appear anywhere inside the switch, but by convention it is placed last. It does not require a <code>break</code> if it is the last block, but including one is good practice for consistency.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Always include a <code>default</code> case. It catches unexpected values and makes debugging easier. Even if you think you&rsquo;ve covered all possibilities, a <code>default</code> provides a safety net.</p>
+                </div>
+
+                <!-- ==================== SWITCH WITH CHAR ==================== -->
+                <h2>Switch with <code>char</code></h2>
+                <p>Characters are stored as integers (ASCII values), so they work perfectly with <code>switch</code>.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char op;
+    cout &lt;&lt; "Enter an operator (+, -, *, /): ";
+    cin &gt;&gt; op;
+
+    double a, b;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; a &gt;&gt; b;
+
+    switch (op) {
+        case '+':
+            cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a + b) &lt;&lt; endl;
+            break;
+        case '-':
+            cout &lt;&lt; a &lt;&lt; " - " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a - b) &lt;&lt; endl;
+            break;
+        case '*':
+            cout &lt;&lt; a &lt;&lt; " * " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a * b) &lt;&lt; endl;
+            break;
+        case '/':
+            if (b != 0)
+                cout &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a / b) &lt;&lt; endl;
+            else
+                cout &lt;&lt; "Error: Division by zero!" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid operator!" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p>This simple calculator uses a <code>char</code> in the switch. Each arithmetic operator maps to a case label. Notice how we added a division-by-zero check inside the <code>'/'</code> case.</p>
+
+                <!-- ==================== SWITCH WITH ENUM ==================== -->
+                <h2>Switch with <code>enum</code></h2>
+                <p>Enumerations and switch go hand-in-hand. An <code>enum</code> defines a set of named constants &mdash; exactly the kind of values switch is designed for.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+enum Color { RED, GREEN, BLUE, YELLOW };
+
+int main() {
+    Color c = GREEN;
+
+    switch (c) {
+        case RED:
+            cout &lt;&lt; "Red: #FF0000" &lt;&lt; endl;
+            break;
+        case GREEN:
+            cout &lt;&lt; "Green: #00FF00" &lt;&lt; endl;
+            break;
+        case BLUE:
+            cout &lt;&lt; "Blue: #0000FF" &lt;&lt; endl;
+            break;
+        case YELLOW:
+            cout &lt;&lt; "Yellow: #FFFF00" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Unknown color" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Green: #00FF00</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>When using <code>enum class</code> (scoped enumeration from C++11), you must cast the value or use <code>static_cast</code> for the switch expression. Many compilers will warn you if your switch on an enum doesn&rsquo;t cover all values.</p>
+                </div>
+
+                <!-- ==================== NESTED SWITCH ==================== -->
+                <h2>Nested Switch Statements</h2>
+                <p>You can place a switch inside another switch, although deep nesting is generally discouraged for readability.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int category = 1;
+    int item = 2;
+
+    switch (category) {
+        case 1:
+            cout &lt;&lt; "Category: Electronics" &lt;&lt; endl;
+            switch (item) {
+                case 1:
+                    cout &lt;&lt; "Item: Phone" &lt;&lt; endl;
+                    break;
+                case 2:
+                    cout &lt;&lt; "Item: Laptop" &lt;&lt; endl;
+                    break;
+                default:
+                    cout &lt;&lt; "Item: Unknown" &lt;&lt; endl;
+                    break;
+            }
+            break;
+        case 2:
+            cout &lt;&lt; "Category: Clothing" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Category: Unknown" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Category: Electronics
+Item: Laptop</pre></div>
+
+                <p>Each switch has its own set of case labels. The inner <code>break</code> exits only the inner switch; the outer <code>break</code> exits the outer switch.</p>
+
+                <!-- ==================== SWITCH VS IF-ELSE ==================== -->
+                <h2>Switch vs If-Else Comparison</h2>
+                <p>Both <code>switch</code> and <code>if-else</code> handle multiple conditions, but they have different strengths.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>switch</th>
+                            <th>if-else</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Compares against</td>
+                            <td>Constant values only</td>
+                            <td>Any expression or range</td>
+                        </tr>
+                        <tr>
+                            <td>Supported types</td>
+                            <td><code>int</code>, <code>char</code>, <code>enum</code></td>
+                            <td>Any type (including <code>string</code>, <code>float</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Range checks</td>
+                            <td>Not supported</td>
+                            <td>Fully supported (<code>&gt;</code>, <code>&lt;</code>, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td>Readability</td>
+                            <td>Cleaner for many discrete values</td>
+                            <td>Better for complex conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>May use jump tables (faster)</td>
+                            <td>Sequential condition checks</td>
+                        </tr>
+                        <tr>
+                            <td>Fall-through</td>
+                            <td>Yes (requires <code>break</code>)</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Multiple conditions</td>
+                            <td>Stack case labels</td>
+                            <td>Use <code>||</code> operator</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use <code>switch</code> when comparing a single variable against known constant values. Use <code>if-else</code> when conditions involve ranges, multiple variables, or non-integral types like <code>string</code> or <code>double</code>.</p>
+                </div>
+
+                <!-- ==================== COMMON MISTAKES ==================== -->
+                <h2>Common Mistakes &amp; Pitfalls</h2>
+
+                <h3>1. Forgetting <code>break</code></h3>
+                <p>The most common mistake. Without <code>break</code>, execution falls through to the next case.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// BUG: Missing break statements
+switch (x) {
+    case 1:
+        cout &lt;&lt; "One";    // Falls through!
+    case 2:
+        cout &lt;&lt; "Two";    // This also runs for case 1!
+        break;
+}</pre></div>
+
+                <h3>2. Using Non-Constant Case Values</h3>
+                <p>Case labels must be <strong>compile-time constants</strong>. Variables or function return values are not allowed.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int a = 5;
+switch (x) {
+    case a:       // ERROR: 'a' is not a constant expression
+        break;
+    case 5:       // OK: literal constant
+        break;
+    case 2 + 3:   // OK: constant expression
+        break;
+}</pre></div>
+
+                <h3>3. Duplicate Case Values</h3>
+                <p>Each case value must be unique within the same switch. Duplicate values cause a compile error.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>switch (x) {
+    case 1:
+        // ...
+        break;
+    case 1:      // ERROR: duplicate case value
+        break;
+}</pre></div>
+
+                <h3>4. Declaring Variables Inside Cases Without Braces</h3>
+                <p>If you need to declare a variable inside a case, you must enclose it in braces to create a scope.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>switch (x) {
+    case 1: {
+        int y = 10;          // OK: scoped with braces
+        cout &lt;&lt; y &lt;&lt; endl;
+        break;
+    }
+    case 2:
+        int z = 20;          // ERROR: jumps over initialization
+        break;
+}</pre></div>
+
+                <h3>5. Using <code>float</code>, <code>double</code>, or <code>string</code></h3>
+                <p>Switch only works with integral and enumeration types. Floating-point and string types are not allowed.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>double d = 3.14;
+switch (d) {        // ERROR: switch expression must be integral
+    case 3.14:
+        break;
+}
+
+string s = "hi";
+switch (s) {        // ERROR: cannot switch on std::string
+    case "hi":
+        break;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>If you need to switch on strings, use an <code>if-else</code> chain or create a mapping from strings to integers (e.g., using <code>std::unordered_map</code>).</p>
+                </div>
+
+                <!-- ==================== C++17 SWITCH WITH INITIALIZER ==================== -->
+                <h2>C++17: Switch with Initializer</h2>
+                <p>C++17 introduced the ability to include an initializer statement inside the switch, just like <code>if</code> with initializer.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Syntax: switch (init; expression)
+#include &lt;iostream&gt;
+using namespace std;
+
+int getValue() { return 2; }
+
+int main() {
+    switch (int val = getValue(); val) {
+        case 1:
+            cout &lt;&lt; "Got one" &lt;&lt; endl;
+            break;
+        case 2:
+            cout &lt;&lt; "Got two" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Got something else: " &lt;&lt; val &lt;&lt; endl;
+            break;
+    }
+    // 'val' is NOT accessible here
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Got two</pre></div>
+
+                <p>The variable <code>val</code> is declared and initialized in the switch header. Its scope is limited to the switch block, keeping the outer scope clean.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Switch with initializer requires the <code>-std=c++17</code> (or later) compiler flag. The syntax is <code>switch (init; expression) { ... }</code> &mdash; note the semicolon separating the initializer from the expression.</p>
+                </div>
+
+                <!-- ==================== CONSTEXPR IF ==================== -->
+                <h2><code>constexpr if</code> vs Switch (Brief Note)</h2>
+                <p>C++17 also introduced <code>if constexpr</code>, which is evaluated at <strong>compile time</strong>. While it may look similar, it serves a very different purpose from switch:</p>
+                <ul>
+                    <li><code>switch</code> &mdash; runtime branching based on a value.</li>
+                    <li><code>if constexpr</code> &mdash; compile-time branching, primarily used in templates to discard code paths that don&rsquo;t apply.</li>
+                </ul>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// if constexpr example (template context)
+template &lt;typename T&gt;
+void printType(T value) {
+    if constexpr (std::is_integral_v&lt;T&gt;) {
+        cout &lt;&lt; "Integer: " &lt;&lt; value &lt;&lt; endl;
+    } else if constexpr (std::is_floating_point_v&lt;T&gt;) {
+        cout &lt;&lt; "Float: " &lt;&lt; value &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Other type" &lt;&lt; endl;
+    }
+}</pre></div>
+                <p>You will explore <code>if constexpr</code> in more detail in the Modern C++ lesson. For now, remember that <code>switch</code> is your go-to for runtime value-based branching.</p>
+
+                <!-- ==================== PRACTICAL EXAMPLES ==================== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Simple Calculator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "=== Simple Calculator ===" &lt;&lt; endl;
+    cout &lt;&lt; "1. Add" &lt;&lt; endl;
+    cout &lt;&lt; "2. Subtract" &lt;&lt; endl;
+    cout &lt;&lt; "3. Multiply" &lt;&lt; endl;
+    cout &lt;&lt; "4. Divide" &lt;&lt; endl;
+    cout &lt;&lt; "Choose operation (1-4): ";
+
+    int choice;
+    cin &gt;&gt; choice;
+
+    double a, b;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; a &gt;&gt; b;
+
+    switch (choice) {
+        case 1:
+            cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a + b) &lt;&lt; endl;
+            break;
+        case 2:
+            cout &lt;&lt; a &lt;&lt; " - " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a - b) &lt;&lt; endl;
+            break;
+        case 3:
+            cout &lt;&lt; a &lt;&lt; " * " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a * b) &lt;&lt; endl;
+            break;
+        case 4:
+            if (b != 0)
+                cout &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a / b) &lt;&lt; endl;
+            else
+                cout &lt;&lt; "Error: Division by zero!" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid choice!" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 2: Menu System</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "===== Main Menu =====" &lt;&lt; endl;
+    cout &lt;&lt; "N - New Game" &lt;&lt; endl;
+    cout &lt;&lt; "L - Load Game" &lt;&lt; endl;
+    cout &lt;&lt; "S - Settings" &lt;&lt; endl;
+    cout &lt;&lt; "Q - Quit" &lt;&lt; endl;
+    cout &lt;&lt; "Enter your choice: ";
+
+    char choice;
+    cin &gt;&gt; choice;
+
+    switch (choice) {
+        case 'N':
+        case 'n':
+            cout &lt;&lt; "Starting new game..." &lt;&lt; endl;
+            break;
+        case 'L':
+        case 'l':
+            cout &lt;&lt; "Loading saved game..." &lt;&lt; endl;
+            break;
+        case 'S':
+        case 's':
+            cout &lt;&lt; "Opening settings..." &lt;&lt; endl;
+            break;
+        case 'Q':
+        case 'q':
+            cout &lt;&lt; "Goodbye!" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid option. Please try again." &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p>Notice how we use fall-through to handle both uppercase and lowercase letters for each menu option.</p>
+
+                <h3>Example 3: Month Days Calculator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int month;
+    cout &lt;&lt; "Enter month number (1-12): ";
+    cin &gt;&gt; month;
+
+    switch (month) {
+        case 1: case 3: case 5: case 7:
+        case 8: case 10: case 12:
+            cout &lt;&lt; "31 days" &lt;&lt; endl;
+            break;
+        case 4: case 6: case 9: case 11:
+            cout &lt;&lt; "30 days" &lt;&lt; endl;
+            break;
+        case 2:
+            cout &lt;&lt; "28 or 29 days" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid month!" &lt;&lt; endl;
+            break;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p>This is a great example of stacking case labels. Months with 31 days share one output, months with 30 days share another, and February is handled separately.</p>
+
+                <!-- ==================== SUMMARY ==================== -->
+                <h2>Summary</h2>
+                <ul>
+                    <li>A <code>switch</code> statement compares one expression against multiple constant values.</li>
+                    <li>Each <code>case</code> label represents a possible match; <code>default</code> handles everything else.</li>
+                    <li>Always include <code>break</code> to prevent unintended <strong>fall-through</strong>.</li>
+                    <li>Intentional fall-through lets multiple cases share the same code. Use <code>[[fallthrough]]</code> in C++17 to document it.</li>
+                    <li>Switch works with <code>int</code>, <code>char</code>, <code>enum</code>, and other integral types &mdash; <strong>not</strong> with <code>float</code>, <code>double</code>, or <code>string</code>.</li>
+                    <li>Case values must be <strong>compile-time constants</strong>. Variables are not allowed.</li>
+                    <li>Declare variables inside a case only within <strong>braces <code>{ }</code></strong> to avoid scope issues.</li>
+                    <li>C++17 adds <strong>switch with initializer</strong>: <code>switch (init; expr)</code>.</li>
+                    <li>Prefer <code>switch</code> for discrete value matching; prefer <code>if-else</code> for ranges and complex conditions.</li>
+                    <li>Always include a <code>default</code> case as a safety net.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/jBM0MrsI5wk" title="C++ Switch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What keyword starts a switch statement in C++?","o":["if","switch","case","select"],"a":1},
+                {"q":"What must the switch expression evaluate to?","o":["Any type","An integral or enumeration type","A string","A boolean only"],"a":1},
+                {"q":"Which keyword marks a possible match inside a switch?","o":["match","option","case","when"],"a":2},
+                {"q":"What does the break statement do inside a switch?","o":["Ends the program","Exits the switch block","Skips to default","Restarts the switch"],"a":1},
+                {"q":"What happens if you forget break in a case?","o":["Compile error","Execution falls through to the next case","The switch is skipped","Nothing"],"a":1},
+                {"q":"What is the purpose of the default case?","o":["It runs first","It handles values that match no case","It replaces break","It is required by the compiler"],"a":1},
+                {"q":"Is the default case mandatory in a switch?","o":["Yes, always","No, but it is recommended","Only in C++17","Only with enums"],"a":1},
+                {"q":"Which types can be used in a switch expression?","o":["int, char, enum","float, double","string","All of the above"],"a":0},
+                {"q":"Can you use a float in a switch expression?","o":["Yes","No","Only with a cast","Only in C++20"],"a":1},
+                {"q":"Can you use std::string in a switch?","o":["Yes","No","Only with C++17","Only with constexpr"],"a":1},
+                {"q":"What is fall-through in a switch?","o":["Skipping all cases","Execution continuing into the next case without break","A compile error","Going back to the first case"],"a":1},
+                {"q":"How do you intentionally use fall-through for multiple cases?","o":["Use continue","Stack case labels without break between them","Use goto","Use else"],"a":1},
+                {"q":"What C++17 attribute documents intentional fall-through?","o":["[[noreturn]]","[[fallthrough]]","[[deprecated]]","[[nodiscard]]"],"a":1},
+                {"q":"What is the output? int x=1; switch(x){case 1: cout<<\"A\"; case 2: cout<<\"B\"; break;}","o":["A","B","AB","Error"],"a":2},
+                {"q":"What is the output? int x=3; switch(x){case 1: cout<<\"A\"; break; case 2: cout<<\"B\"; break; default: cout<<\"C\";}","o":["A","B","C","Error"],"a":2},
+                {"q":"What is the output? int x=2; switch(x){case 1: cout<<\"A\"; break; case 2: cout<<\"B\"; break; default: cout<<\"C\";}","o":["A","B","C","BC"],"a":1},
+                {"q":"Can case values be variables?","o":["Yes","No, they must be compile-time constants","Only global variables","Only const variables"],"a":1},
+                {"q":"Is 'case 2+3:' valid?","o":["Yes, it equals case 5","No, expressions are not allowed","Only in C++17","It causes undefined behavior"],"a":0},
+                {"q":"Can two cases have the same value?","o":["Yes","No, it causes a compile error","Only with different types","Only if separated by default"],"a":1},
+                {"q":"Where should the default case be placed?","o":["First","Last (by convention)","Middle","It doesn't matter syntactically"],"a":3},
+                {"q":"What happens if no case matches and there is no default?","o":["Compile error","The switch body is skipped entirely","The first case runs","Undefined behavior"],"a":1},
+                {"q":"How do you declare a variable inside a case?","o":["Just declare it normally","Enclose the case body in braces {}","Use static","Use extern"],"a":1},
+                {"q":"Why must variables in cases be enclosed in braces?","o":["For speed","To create a scope and avoid 'jump over initialization' errors","For readability only","It's optional"],"a":1},
+                {"q":"What is the output? char c='B'; switch(c){case 'A': cout<<\"Alpha\"; break; case 'B': cout<<\"Beta\"; break;}","o":["Alpha","Beta","AlphaBeta","Error"],"a":1},
+                {"q":"Can you switch on a char variable?","o":["No","Yes, chars are integral types","Only uppercase chars","Only with casting"],"a":1},
+                {"q":"Can you switch on a bool variable?","o":["Yes, but it only has two cases","No","Only in C++20","Only with default"],"a":0},
+                {"q":"What is a nested switch?","o":["A switch without default","A switch inside another switch","Two switches side by side","A switch inside an if"],"a":1},
+                {"q":"Does the inner break in a nested switch exit the outer switch?","o":["Yes","No, it only exits the inner switch","It exits both","It depends on the compiler"],"a":1},
+                {"q":"When is switch preferred over if-else?","o":["For range checks","When comparing one variable against many constant values","For string comparisons","For complex boolean expressions"],"a":1},
+                {"q":"When is if-else preferred over switch?","o":["For constant value matching","For range checks and non-integral types","Never","Only for two conditions"],"a":1},
+                {"q":"Can switch use the > or < operators?","o":["Yes","No, it only checks equality against constants","Only with default","Only in C++17"],"a":1},
+                {"q":"How might a compiler optimize a switch?","o":["Using a loop","Using a jump table","Using recursion","Using templates"],"a":1},
+                {"q":"What is a jump table?","o":["A table of variable names","An array of addresses that the CPU jumps to directly","A debugging tool","A type of loop"],"a":1},
+                {"q":"What C++ standard introduced switch with initializer?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What is the syntax for switch with initializer?","o":["switch (init; expr)","switch (expr; init)","switch init (expr)","switch {init} (expr)"],"a":0},
+                {"q":"What is the benefit of switch with initializer?","o":["Faster execution","Variable scope is limited to the switch block","It allows strings","It removes the need for break"],"a":1},
+                {"q":"What compiler flag enables C++17 in GCC?","o":["-std=c++11","-std=c++14","-std=c++17","-std=c++03"],"a":2},
+                {"q":"What is the output? switch(1+1){case 2: cout<<\"Two\"; break; default: cout<<\"Other\";}","o":["Two","Other","Error","12"],"a":0},
+                {"q":"What is the output? int x=5; switch(x){default: cout<<\"D\"; break; case 5: cout<<\"Five\"; break;}","o":["D","Five","DFive","Error"],"a":1},
+                {"q":"Can the default case appear before other cases?","o":["No, it must be last","Yes, it can appear anywhere","Only in C++17","Only if it's the only case"],"a":1},
+                {"q":"What is the output? int x=1; switch(x){case 1: cout<<\"1\"; break; case 2: cout<<\"2\"; break;} cout<<\"Done\";","o":["1Done","1","2Done","Done"],"a":0},
+                {"q":"How many times is the switch expression evaluated?","o":["Once","Once per case","Twice","It depends on the number of cases"],"a":0},
+                {"q":"What is the output? int day=6; switch(day){case 6: case 7: cout<<\"Weekend\"; break; default: cout<<\"Weekday\";}","o":["Weekend","Weekday","Error","WeekendWeekday"],"a":0},
+                {"q":"What is the output? int day=3; switch(day){case 1: case 2: case 3: case 4: case 5: cout<<\"Weekday\"; break; case 6: case 7: cout<<\"Weekend\"; break;}","o":["Weekday","Weekend","Error","WeekdayWeekend"],"a":0},
+                {"q":"Can case labels have negative values?","o":["No","Yes, e.g. case -1:","Only with unsigned types","Only zero and above"],"a":1},
+                {"q":"What is the output? switch(0){case 0: cout<<\"Zero\"; break; default: cout<<\"Other\";}","o":["Zero","Other","Error","ZeroOther"],"a":0},
+                {"q":"What is the output? switch(true){case true: cout<<\"T\"; break; case false: cout<<\"F\"; break;}","o":["T","F","Error","TF"],"a":0},
+                {"q":"Can you use const int variables as case values?","o":["No","Yes, if they are compile-time constants","Only global const","Only with constexpr"],"a":1},
+                {"q":"Can you use constexpr values as case labels?","o":["No","Yes, constexpr values are compile-time constants","Only in C++20","Only with templates"],"a":1},
+                {"q":"What is the output? const int A=1; switch(1){case A: cout<<\"Match\"; break;}","o":["Match","Error","Nothing","Undefined"],"a":0},
+                {"q":"What is the output? int x=4; switch(x){case 1: cout<<\"A\"; case 2: cout<<\"B\"; case 3: cout<<\"C\"; default: cout<<\"D\";}","o":["A","D","ABCD","D"],"a":2},
+                {"q":"In the previous question, why does only D print?","o":["Because x=4 matches default, and default has no break but it's last","Because all cases run","Because of a bug","Because of fall-through from case 1"],"a":0},
+                {"q":"Can switch be used inside a loop?","o":["No","Yes","Only for loops","Only while loops"],"a":1},
+                {"q":"Can a loop be used inside a switch case?","o":["No","Yes","Only with braces","Only for loops"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=3;i++){switch(i){case 1:cout<<\"A\";break;case 2:cout<<\"B\";break;case 3:cout<<\"C\";break;}}","o":["ABC","A","C","Error"],"a":0},
+                {"q":"Can you use return inside a switch case?","o":["No","Yes, it exits the function","Only in main()","Only with void functions"],"a":1},
+                {"q":"If you use return inside a case, do you need break?","o":["Yes","No, return exits the function entirely","It depends","Only in nested switches"],"a":1},
+                {"q":"What is the output? char g='A'; switch(g){case 'A': cout<<\"Excellent\"; break; case 'B': cout<<\"Good\"; break; default: cout<<\"OK\";}","o":["Excellent","Good","OK","Error"],"a":0},
+                {"q":"Can you use expressions like 'case x+1:'?","o":["Yes, if x is a variable","No, case labels must be constant expressions","Only in C++17","Only with #define"],"a":1},
+                {"q":"Which is valid: 'case 3*2:' or 'case n*2:' where n is a variable?","o":["Both","Only case 3*2:","Only case n*2:","Neither"],"a":1},
+                {"q":"What does the switch statement compare against each case?","o":["References","Exact equality","Patterns","Ranges"],"a":1},
+                {"q":"What is the output? enum Dir{UP,DOWN,LEFT,RIGHT}; Dir d=LEFT; switch(d){case UP:cout<<\"U\";break;case DOWN:cout<<\"D\";break;case LEFT:cout<<\"L\";break;case RIGHT:cout<<\"R\";break;}","o":["U","D","L","R"],"a":2},
+                {"q":"What underlying value does the first enum constant typically have?","o":["1","-1","0","Undefined"],"a":2},
+                {"q":"Can you switch on an enum class value?","o":["Not directly without casting","Yes, directly","Only in C++20","Only with default"],"a":0},
+                {"q":"How do you switch on an enum class?","o":["Use static_cast to convert to int","Use dynamic_cast","Use reinterpret_cast","Switch works directly"],"a":0},
+                {"q":"What happens if you switch on an enum and miss a value?","o":["Compile error always","The compiler may issue a warning","Runtime crash","Nothing"],"a":1},
+                {"q":"How do you handle both 'a' and 'A' in a switch?","o":["Use || in the case","Stack case 'a': case 'A': together","Use regex","Use default"],"a":1},
+                {"q":"What is the output? switch('a'){case 'a': case 'A': cout<<\"Alpha\"; break;}","o":["Alpha","Error","Nothing","aA"],"a":0},
+                {"q":"Can you switch on the result of a function call?","o":["No","Yes, if the function returns an integral type","Only constexpr functions","Only void functions"],"a":1},
+                {"q":"What is the output? switch(10%3){case 0:cout<<\"A\";break;case 1:cout<<\"B\";break;case 2:cout<<\"C\";break;}","o":["A","B","C","Error"],"a":1},
+                {"q":"Is the break after the last case (or default) necessary?","o":["Yes, it prevents undefined behavior","No, but it's good practice for consistency","It's required by the standard","It causes an error"],"a":1},
+                {"q":"What is the output? int x=2; switch(x){case 1: cout<<\"One\"; break; case 2: cout<<\"Two\"; break; case 3: cout<<\"Three\"; break;} cout<<\" End\";","o":["Two End","One End","Three End","End"],"a":0},
+                {"q":"Can you nest a switch inside an if statement?","o":["No","Yes","Only with braces","Only in C++17"],"a":1},
+                {"q":"Can you nest an if inside a switch case?","o":["No","Yes","Only in default","Only with braces"],"a":1},
+                {"q":"What is the output? int x=0; switch(x){case 0: if(true) cout<<\"Yes\"; break; default: cout<<\"No\";}","o":["Yes","No","YesNo","Error"],"a":0},
+                {"q":"What data type is 'A' in C++?","o":["string","char","int","bool"],"a":1},
+                {"q":"What is the ASCII value of 'A'?","o":["65","97","48","0"],"a":0},
+                {"q":"Can you use ASCII values as case labels? e.g., case 65:","o":["No","Yes, 65 is the same as 'A'","Only with char variables","Only in C++17"],"a":1},
+                {"q":"What is the output? switch(65){case 'A': cout<<\"Match\"; break; default: cout<<\"No\";}","o":["Match","No","Error","65"],"a":0},
+                {"q":"What is the maximum number of case labels allowed?","o":["10","256","Implementation-defined (typically very large)","1024"],"a":2},
+                {"q":"What happens if the switch expression is a negative number?","o":["Error","It works normally and can match negative case values","Undefined behavior","It matches default"],"a":1},
+                {"q":"What is the output? switch(-1){case -1: cout<<\"Neg\"; break; case 1: cout<<\"Pos\"; break;}","o":["Neg","Pos","Error","NegPos"],"a":0},
+                {"q":"Can you use long long in a switch expression?","o":["No","Yes, it is an integral type","Only in C++17","Only on 64-bit systems"],"a":1},
+                {"q":"Can you use unsigned int in a switch expression?","o":["No","Yes, it is an integral type","Only with positive cases","Only in C++11"],"a":1},
+                {"q":"What is the scope of a variable declared with switch-with-initializer?","o":["Global","Limited to the switch block","The entire function","The file"],"a":1},
+                {"q":"Is the variable from switch-with-initializer accessible after the switch?","o":["Yes","No, it goes out of scope","Only if declared static","Only in the else block"],"a":1},
+                {"q":"What is the output? switch(auto v=3; v){case 3: cout<<v; break; default: cout<<0;}","o":["3","0","Error (need C++17)","v"],"a":0},
+                {"q":"Can you have an empty case body?","o":["No, it causes an error","Yes, it's how fall-through grouping works","Only with default","Only in C++17"],"a":1},
+                {"q":"What is the output? switch(2){case 1: break; case 2: break; case 3: cout<<\"Three\";} cout<<\"Done\";","o":["ThreeDone","Done","Three","Error"],"a":1},
+                {"q":"What is the difference between switch and select in C++?","o":["They are the same","select does not exist in C++","select is for I/O","select is C++20"],"a":1},
+                {"q":"Can you use continue inside a switch?","o":["No, continue is for loops","Yes, it skips to the next case","Only in C++17","Only with for loops around the switch"],"a":0},
+                {"q":"What happens if you use continue in a switch inside a loop?","o":["It exits the switch","It continues the next iteration of the enclosing loop","Compile error","Undefined behavior"],"a":1},
+                {"q":"Can you use goto inside a switch?","o":["No","Yes, but it is generally discouraged","Only to jump to default","Only in C"],"a":1},
+                {"q":"What is the output? int x=1; switch(x){case 1: cout<<\"A\"; break; default: cout<<\"B\"; break; case 2: cout<<\"C\"; break;}","o":["A","B","C","ABC"],"a":0},
+                {"q":"What is the output? int x=5; switch(x){case 1: cout<<\"A\"; break; default: cout<<\"B\"; break; case 2: cout<<\"C\"; break;}","o":["A","B","C","ABC"],"a":1},
+                {"q":"In a switch with initializer, what separates the init from the expression?","o":["Comma","Semicolon","Colon","Pipe"],"a":1},
+                {"q":"Which is more readable for 10+ discrete values: switch or if-else?","o":["if-else","switch","They are equal","Neither"],"a":1},
+                {"q":"Can a switch statement have zero cases?","o":["No, at least one case is required","Yes, but it's pointless","Only with default","It causes undefined behavior"],"a":1},
+                {"q":"What is the output? switch(1){} cout<<\"Done\";","o":["Done","Error","Nothing","1"],"a":0},
+                {"q":"Is switch faster than if-else for many cases?","o":["Always","Often, because compilers can use jump tables","Never","Only in debug mode"],"a":1},
+                {"q":"Can you use #define constants as case labels?","o":["No","Yes, they are replaced by their values at compile time","Only in C","Only with integers"],"a":1},
+                {"q":"What is the output? #define VAL 5  switch(5){case VAL: cout<<\"Match\"; break;}","o":["Match","Error","5","Nothing"],"a":0},
+                {"q":"Can switch be used without any curly braces?","o":["Yes","No, the switch body must be enclosed in { }","Only with one case","Only in C"],"a":1},
+                {"q":"What follows the case keyword?","o":["A variable name","A constant value followed by a colon","A condition in parentheses","A type name"],"a":1},
+                {"q":"What character ends a case label?","o":["Semicolon ;","Colon :","Comma ,","Period ."],"a":1},
+                {"q":"What is the output? int x=2; switch(x){case 1: cout<<1; break; case 2: cout<<2; case 3: cout<<3; break;}","o":["2","3","23","123"],"a":2},
+                {"q":"Why does the previous example output 23?","o":["Because case 2 has no break, so it falls through to case 3","Because x equals both 2 and 3","Because of a compiler bug","Because default runs"],"a":0},
+                {"q":"What is the output? switch('c'){case 'a': cout<<1; break; case 'b': cout<<2; break; case 'c': cout<<3; break;}","o":["1","2","3","Error"],"a":2},
+                {"q":"Can you compare two variables in a switch?","o":["Yes","No, switch compares one expression against constants","Only with ==","Only in if-else"],"a":1},
+                {"q":"What is the equivalent if-else for: switch(x){case 1: f(); break; case 2: g(); break; default: h();}","o":["if(x==1) f(); else if(x==2) g(); else h();","if(x>1) f(); else g();","if(x) f(); else g();","if(x==1||x==2) f(); else h();"],"a":0},
+                {"q":"What keyword is used to exit a switch block?","o":["exit","return","break","stop"],"a":2},
+                {"q":"Can you have multiple statements in a single case without braces?","o":["Yes, all statements before the next case or break execute","No, braces are required","Only one statement per case","Only with default"],"a":0},
+                {"q":"What is the output? int x=1; switch(x){case 1: cout<<\"A\"; cout<<\"B\"; break; case 2: cout<<\"C\"; break;}","o":["A","AB","ABC","B"],"a":1},
+                {"q":"Can you use the ternary operator as a switch expression?","o":["No","Yes, if it evaluates to an integral type","Only in C++17","Only with default"],"a":1},
+                {"q":"What is the output? int a=1,b=2; switch(a>b ? a : b){case 1: cout<<\"One\"; break; case 2: cout<<\"Two\"; break;}","o":["One","Two","Error","Nothing"],"a":1},
+                {"q":"What does 'integral type' mean?","o":["Floating-point types","Whole number types like int, char, short, long","String types","Boolean only"],"a":1},
+                {"q":"Is 'case 0:' valid when switching on a char?","o":["No","Yes, it matches the null character '\\0'","Only in C","Only with int"],"a":1},
+                {"q":"Can you use switch to implement a state machine?","o":["No","Yes, it's a common use case","Only with enums","Only with classes"],"a":1},
+                {"q":"What is a state machine?","o":["A physical machine","A program that transitions between defined states based on input","A type of loop","A debugging tool"],"a":1},
+                {"q":"What should you do if a case needs complex logic?","o":["Write all code inline","Call a separate function from the case","Use goto","Use nested switches only"],"a":1},
+                {"q":"What is the output? switch(7/2){case 3: cout<<\"Three\"; break; case 4: cout<<\"Four\"; break;}","o":["Three","Four","Error","Nothing"],"a":0},
+                {"q":"Why does 7/2 equal 3 in the switch expression?","o":["Rounding","Integer division truncates the decimal","It's a bug","It equals 3.5"],"a":1},
+                {"q":"Can you use sizeof() as a case value?","o":["No","Yes, sizeof is evaluated at compile time","Only in C++17","Only with char"],"a":1},
+                {"q":"What is the output? switch(sizeof(int)){case 4: cout<<\"32-bit int\"; break; case 8: cout<<\"64-bit int\"; break;}","o":["32-bit int (on most platforms)","64-bit int","Error","Nothing"],"a":0},
+                {"q":"Can you put a switch inside a function other than main?","o":["No, only in main","Yes, switch can be used in any function","Only in void functions","Only in static functions"],"a":1},
+                {"q":"What is the output? int x=3; switch(x*2){case 4: cout<<\"A\"; break; case 6: cout<<\"B\"; break; case 8: cout<<\"C\"; break;}","o":["A","B","C","Error"],"a":1},
+                {"q":"Can you use type casting in a switch expression?","o":["No","Yes, e.g. switch(static_cast<int>(value))","Only implicit casting","Only in C"],"a":1},
+                {"q":"What is the output? switch((int)2.9){case 2: cout<<\"Two\"; break; case 3: cout<<\"Three\"; break;}","o":["Two","Three","Error","2.9"],"a":0},
+                {"q":"Why does (int)2.9 give 2?","o":["Rounding up","Casting truncates the decimal part","It's a bug","It rounds to nearest"],"a":1},
+                {"q":"Can you use switch with a short data type?","o":["No","Yes, short is an integral type","Only in C++17","Only with casting"],"a":1},
+                {"q":"Can you use wchar_t in a switch?","o":["No","Yes, it is an integral type","Only in C","Only with Unicode"],"a":1},
+                {"q":"What is the output? int x=2; switch(x){case 1: case 2: case 3: cout<<\"Small\"; break; default: cout<<\"Big\";}","o":["Small","Big","Error","SmallBig"],"a":0},
+                {"q":"What does stacking case labels achieve?","o":["It causes errors","Multiple values share the same code block","It creates nested switches","It improves performance"],"a":1},
+                {"q":"What is the output? switch(100){case 100: cout<<\"Hundred\"; break;}","o":["Hundred","Error","Nothing","100"],"a":0},
+                {"q":"Can you use the + operator in a case label?","o":["No","Yes, if both operands are constants (e.g., case 2+3:)","Only with variables","Only in C++17"],"a":1},
+                {"q":"What is the output? switch(5){case 2+3: cout<<\"Five\"; break; default: cout<<\"Other\";}","o":["Five","Other","Error","2+3"],"a":0},
+                {"q":"What is the output? switch(1){case 1:{int a=10; cout<<a;} break; case 2: cout<<20; break;}","o":["10","20","Error","1020"],"a":0},
+                {"q":"Why are braces needed when declaring variables inside a case?","o":["For syntax","To prevent jump-over-initialization errors","For performance","They are not needed"],"a":1},
+                {"q":"Can you have a switch with only a default case?","o":["No","Yes, though it's unusual","Only in C++17","Only with break"],"a":1},
+                {"q":"What is the output? switch(42){default: cout<<\"Default\"; break;}","o":["Default","Error","42","Nothing"],"a":0},
+                {"q":"What does 'if constexpr' do differently from switch?","o":["Nothing different","It evaluates conditions at compile time, discarding false branches","It works with strings","It replaces switch"],"a":1},
+                {"q":"Can if constexpr replace switch at runtime?","o":["Yes","No, if constexpr is compile-time only","Only in templates","Only with enums"],"a":1},
+                {"q":"What is a common use of switch with enum?","o":["String matching","Handling all possible enum values with individual cases","Loop control","Memory allocation"],"a":1},
+                {"q":"What warning might a compiler give for a switch on enum?","o":["Missing semicolon","Not all enum values are handled (missing case)","Duplicate case","Invalid type"],"a":1},
+                {"q":"How do you suppress the 'unhandled enum value' warning?","o":["Add a default case","Ignore it","Remove the enum","Use if-else instead"],"a":0},
+                {"q":"Can you return different types from different cases?","o":["Yes","No, the function return type is fixed","Only with auto","Only with templates"],"a":1},
+                {"q":"Is using switch inside a lambda valid?","o":["No","Yes","Only in C++17","Only with capture"],"a":1},
+                {"q":"What is the output? auto f=[](int x){switch(x){case 1:return 10;case 2:return 20;default:return 0;}}; cout<<f(2);","o":["10","20","0","Error"],"a":1},
+                {"q":"Can you use the comma operator in a case label?","o":["Yes","No, each case takes one constant value","Only for ranges","Only in C"],"a":1},
+                {"q":"Does C++ support range-based case labels like 'case 1...5:'?","o":["Yes, in standard C++","No, but some compilers support it as an extension","Only in C++20","Only with enums"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="if-else.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">If/Else</span>
+                </a>
+                <a href="for-loops.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">For Loops</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

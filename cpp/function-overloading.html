@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Function Overloading - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-function-overloading">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html" class="active"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 19 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="35" style="width:35%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Function Overloading
+                </div>
+                <h1>19. Function Overloading</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 19 of 55</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Function Overloading ===== -->
+                <h2>What Is Function Overloading?</h2>
+                <p><strong>Function overloading</strong> allows you to define multiple functions with the <strong>same name</strong> but <strong>different parameter lists</strong>. The compiler determines which version to call based on the arguments you pass. This is a form of <strong>compile-time polymorphism</strong>.</p>
+                <p>Instead of inventing separate names like <code>addInt</code>, <code>addDouble</code>, and <code>addString</code>, you can simply name them all <code>add</code> and let the compiler pick the right one.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>What function overloading is and why it&rsquo;s useful</li>
+                    <li>Rules for overloading: same name, different parameter lists</li>
+                    <li>Why return type alone does <strong>not</strong> distinguish overloaded functions</li>
+                    <li>Overloading with different numbers of parameters</li>
+                    <li>Overloading with different parameter types</li>
+                    <li>Type promotion and ambiguity issues</li>
+                    <li>A preview of operator overloading</li>
+                    <li>Best practices</li>
+                    <li>Practical examples</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Overloaded functions must differ in the <strong>number</strong> or <strong>types</strong> of their parameters. The return type alone is <strong>not</strong> enough to distinguish two overloaded functions &mdash; the compiler uses the argument list to decide which function to call.</p>
+                </div>
+
+                <!-- ===== Why Use Function Overloading ===== -->
+                <h2>Why Use Function Overloading?</h2>
+                <p>Function overloading improves code readability and usability:</p>
+                <ul>
+                    <li><strong>Cleaner API</strong> &mdash; one intuitive name for related operations instead of many unique names.</li>
+                    <li><strong>Flexibility</strong> &mdash; the same logical operation can accept different types or argument counts.</li>
+                    <li><strong>Consistency</strong> &mdash; callers don&rsquo;t need to remember type-specific function names.</li>
+                    <li><strong>Maintainability</strong> &mdash; adding new overloads doesn&rsquo;t break existing code.</li>
+                </ul>
+
+                <div class="tip">
+                    <h3>&#128161; Think of It This Way</h3>
+                    <p>In everyday language, the word &ldquo;open&rdquo; works for doors, files, and conversations &mdash; context tells you the meaning. Function overloading works the same way: the argument types provide the context.</p>
+                </div>
+
+                <!-- ===== Basic Overloading Example ===== -->
+                <h2>Basic Overloading Example</h2>
+                <p>Here we define two functions named <code>add</code> &mdash; one for integers and one for doubles:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Overload 1: two ints
+int add(int a, int b) {
+    return a + b;
+}
+
+// Overload 2: two doubles
+double add(double a, double b) {
+    return a + b;
+}
+
+int main() {
+    cout &lt;&lt; add(3, 4) &lt;&lt; endl;       // Calls int version
+    cout &lt;&lt; add(2.5, 3.7) &lt;&lt; endl;   // Calls double version
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>7
+6.2</pre></div>
+
+                <p>The compiler matches <code>add(3, 4)</code> to the <code>int</code> version and <code>add(2.5, 3.7)</code> to the <code>double</code> version automatically.</p>
+
+                <!-- ===== Rules for Function Overloading ===== -->
+                <h2>Rules for Function Overloading</h2>
+                <p>For the compiler to distinguish overloaded functions, they must differ in their <strong>parameter list</strong> (also called the <em>function signature</em>):</p>
+                <ol>
+                    <li><strong>Different number of parameters</strong> &mdash; <code>f(int)</code> vs <code>f(int, int)</code></li>
+                    <li><strong>Different parameter types</strong> &mdash; <code>f(int)</code> vs <code>f(double)</code></li>
+                    <li><strong>Different order of parameter types</strong> &mdash; <code>f(int, double)</code> vs <code>f(double, int)</code></li>
+                </ol>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <strong>return type</strong> is <em>not</em> part of the function signature for overloading purposes. Two functions that differ <em>only</em> in return type will cause a <strong>compilation error</strong>.</p>
+                </div>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// &#10060; INVALID &mdash; differs only in return type
+int getValue() { return 42; }
+double getValue() { return 3.14; }   // Compile error!</pre></div>
+
+                <!-- ===== Overloading by Number of Parameters ===== -->
+                <h2>Overloading by Number of Parameters</h2>
+                <p>One of the simplest ways to overload is to provide versions that accept different numbers of arguments.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+
+int add(int a, int b, int c, int d) {
+    return a + b + c + d;
+}
+
+int main() {
+    cout &lt;&lt; add(1, 2) &lt;&lt; endl;          // 3
+    cout &lt;&lt; add(1, 2, 3) &lt;&lt; endl;       // 6
+    cout &lt;&lt; add(1, 2, 3, 4) &lt;&lt; endl;    // 10
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>3
+6
+10</pre></div>
+
+                <!-- ===== Overloading by Parameter Types ===== -->
+                <h2>Overloading by Parameter Types</h2>
+                <p>You can also overload by changing the <strong>types</strong> of parameters while keeping the same count.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+void display(int value) {
+    cout &lt;&lt; "Integer: " &lt;&lt; value &lt;&lt; endl;
+}
+
+void display(double value) {
+    cout &lt;&lt; "Double: " &lt;&lt; value &lt;&lt; endl;
+}
+
+void display(string value) {
+    cout &lt;&lt; "String: " &lt;&lt; value &lt;&lt; endl;
+}
+
+int main() {
+    display(42);
+    display(3.14);
+    display("Hello");
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Integer: 42
+Double: 3.14
+String: Hello</pre></div>
+
+                <!-- ===== Overloading by Parameter Order ===== -->
+                <h2>Overloading by Parameter Order</h2>
+                <p>If two functions have the same number of parameters but the <strong>types appear in a different order</strong>, C++ treats them as distinct overloads.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void print(int n, double d) {
+    cout &lt;&lt; "int, double: " &lt;&lt; n &lt;&lt; ", " &lt;&lt; d &lt;&lt; endl;
+}
+
+void print(double d, int n) {
+    cout &lt;&lt; "double, int: " &lt;&lt; d &lt;&lt; ", " &lt;&lt; n &lt;&lt; endl;
+}
+
+int main() {
+    print(5, 3.2);     // Calls (int, double) version
+    print(3.2, 5);     // Calls (double, int) version
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>int, double: 5, 3.2
+double, int: 3.2, 5</pre></div>
+
+                <!-- ===== Type Promotion and Ambiguity ===== -->
+                <h2>Type Promotion and Ambiguity</h2>
+                <p>C++ can <strong>implicitly convert</strong> (promote) arguments to match a function signature. For example, a <code>float</code> can be promoted to <code>double</code>, and an <code>int</code> can be promoted to <code>double</code>. This can sometimes create <strong>ambiguity</strong> when multiple overloads could match.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void show(int x)    { cout &lt;&lt; "int: " &lt;&lt; x &lt;&lt; endl; }
+void show(double x) { cout &lt;&lt; "double: " &lt;&lt; x &lt;&lt; endl; }
+
+int main() {
+    show(10);       // Exact match &rarr; int version
+    show(3.14);     // Exact match &rarr; double version
+    show('A');      // char promoted to int &rarr; int version
+    show(2.5f);     // float promoted to double &rarr; double version
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>int: 10
+double: 3.14
+int: 65
+double: 2.5</pre></div>
+
+                <h3>Ambiguity Error</h3>
+                <p>If the compiler cannot decide which overload is the best match, it reports an <strong>ambiguous call</strong> error.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>void f(float x)  { /* ... */ }
+void f(double x) { /* ... */ }
+
+int main() {
+    f(10);   // &#10060; Ambiguous: int can convert to float AND double
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; Resolving Ambiguity</h3>
+                    <p>To fix an ambiguous call, use an explicit cast: <code>f(static_cast&lt;float&gt;(10))</code> or <code>f(static_cast&lt;double&gt;(10))</code>. Alternatively, pass a literal of the correct type: <code>f(10.0f)</code> for <code>float</code> or <code>f(10.0)</code> for <code>double</code>.</p>
+                </div>
+
+                <!-- ===== Overloading with Default Parameters ===== -->
+                <h2>Overloading vs Default Parameters</h2>
+                <p>Sometimes you can achieve similar results using <strong>default parameter values</strong> instead of overloading. Be careful: combining both can create ambiguity.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Using default parameters instead of overloading
+double calculateArea(double length, double width = 0) {
+    if (width == 0) return length * length;  // Square
+    return length * width;                    // Rectangle
+}
+
+int main() {
+    cout &lt;&lt; "Square: " &lt;&lt; calculateArea(5) &lt;&lt; endl;
+    cout &lt;&lt; "Rectangle: " &lt;&lt; calculateArea(5, 3) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Square: 25
+Rectangle: 15</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Avoid having both an overloaded function and a function with default parameters that could match the same call. The compiler will flag it as ambiguous.</p>
+                </div>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// &#10060; DANGEROUS &mdash; ambiguity between overload and default parameter
+void greet(string name) {
+    cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; endl;
+}
+
+void greet(string name, string greeting = "Hello") {
+    cout &lt;&lt; greeting &lt;&lt; ", " &lt;&lt; name &lt;&lt; endl;
+}
+
+// greet("Alice");  // Ambiguous &mdash; which one should the compiler call?</pre></div>
+
+                <!-- ===== How the Compiler Resolves Overloads ===== -->
+                <h2>How the Compiler Resolves Overloads</h2>
+                <p>The compiler follows a <strong>priority order</strong> when choosing an overload:</p>
+                <ol>
+                    <li><strong>Exact match</strong> &mdash; the argument types match the parameter types exactly.</li>
+                    <li><strong>Promotion</strong> &mdash; small types are promoted (e.g., <code>char</code> &rarr; <code>int</code>, <code>float</code> &rarr; <code>double</code>).</li>
+                    <li><strong>Standard conversion</strong> &mdash; wider conversions (e.g., <code>int</code> &rarr; <code>double</code>).</li>
+                    <li><strong>User-defined conversion</strong> &mdash; conversion operators or constructors defined in classes.</li>
+                </ol>
+                <p>If multiple overloads tie at the same priority level, the call is <strong>ambiguous</strong> and the compiler generates an error.</p>
+
+                <!-- ===== Overloading with const ===== -->
+                <h2>Overloading with const Parameters</h2>
+                <p>For <strong>reference</strong> and <strong>pointer</strong> parameters, <code>const</code> qualification creates a distinct overload. For <strong>value</strong> parameters, <code>const</code> does <em>not</em> create a separate overload because the caller&rsquo;s copy is unaffected.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// &#10004; Valid: const vs non-const reference
+void process(int&amp; x)       { cout &lt;&lt; "non-const ref" &lt;&lt; endl; }
+void process(const int&amp; x) { cout &lt;&lt; "const ref" &lt;&lt; endl; }
+
+int main() {
+    int a = 10;
+    const int b = 20;
+
+    process(a);   // Calls non-const ref version
+    process(b);   // Calls const ref version
+    process(30);  // Calls const ref version (rvalue binds to const ref)
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>non-const ref
+const ref
+const ref</pre></div>
+
+                <!-- ===== Operator Overloading Preview ===== -->
+                <h2>Operator Overloading &mdash; A Preview</h2>
+                <p>C++ also lets you overload <strong>operators</strong> like <code>+</code>, <code>-</code>, <code>&lt;&lt;</code>, and <code>==</code> for your own classes. This is called <strong>operator overloading</strong> and builds on the same concept. Here is a small taste:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+struct Point {
+    double x, y;
+
+    // Overload the + operator
+    Point operator+(const Point&amp; other) const {
+        return {x + other.x, y + other.y};
+    }
+};
+
+int main() {
+    Point a = {1.0, 2.0};
+    Point b = {3.0, 4.0};
+    Point c = a + b;  // Uses overloaded + operator
+
+    cout &lt;&lt; "(" &lt;&lt; c.x &lt;&lt; ", " &lt;&lt; c.y &lt;&lt; ")" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>(4, 6)</pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; Operator Overloading</h3>
+                    <p>You&rsquo;ll study operator overloading in depth when you reach the object-oriented programming lessons. For now, just know that it follows the same overloading principle: same operator name, different operand types.</p>
+                </div>
+
+                <!-- ===== Practical Examples ===== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Area Calculator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Area of a square
+double area(double side) {
+    return side * side;
+}
+
+// Area of a rectangle
+double area(double length, double width) {
+    return length * width;
+}
+
+// Area of a circle
+double area(double radius, bool isCircle) {
+    return 3.14159265 * radius * radius;
+}
+
+int main() {
+    cout &lt;&lt; "Square (5):      " &lt;&lt; area(5.0) &lt;&lt; endl;
+    cout &lt;&lt; "Rectangle (4x6): " &lt;&lt; area(4.0, 6.0) &lt;&lt; endl;
+    cout &lt;&lt; "Circle (r=3):    " &lt;&lt; area(3.0, true) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Square (5):      25
+Rectangle (4x6): 24
+Circle (r=3):    28.2743</pre></div>
+
+                <h3>Example 2: Print Anything</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+void print(int value) {
+    cout &lt;&lt; "[int] " &lt;&lt; value &lt;&lt; endl;
+}
+
+void print(double value) {
+    cout &lt;&lt; "[double] " &lt;&lt; value &lt;&lt; endl;
+}
+
+void print(const string&amp; value) {
+    cout &lt;&lt; "[string] " &lt;&lt; value &lt;&lt; endl;
+}
+
+void print(bool value) {
+    cout &lt;&lt; "[bool] " &lt;&lt; (value ? "true" : "false") &lt;&lt; endl;
+}
+
+void print(char value) {
+    cout &lt;&lt; "[char] " &lt;&lt; value &lt;&lt; endl;
+}
+
+int main() {
+    print(42);
+    print(3.14);
+    print(string("CodeVerse"));
+    print(true);
+    print('Z');
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>[int] 42
+[double] 3.14
+[string] CodeVerse
+[bool] true
+[char] Z</pre></div>
+
+                <h3>Example 3: Maximum Value</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int maximum(int a, int b) {
+    return (a &gt; b) ? a : b;
+}
+
+double maximum(double a, double b) {
+    return (a &gt; b) ? a : b;
+}
+
+int maximum(int a, int b, int c) {
+    return maximum(maximum(a, b), c);
+}
+
+int main() {
+    cout &lt;&lt; maximum(10, 20) &lt;&lt; endl;
+    cout &lt;&lt; maximum(5.5, 3.3) &lt;&lt; endl;
+    cout &lt;&lt; maximum(7, 15, 9) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>20
+5.5
+15</pre></div>
+
+                <h3>Example 4: Concatenate Strings</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+string concat(const string&amp; a, const string&amp; b) {
+    return a + " " + b;
+}
+
+string concat(const string&amp; a, const string&amp; b, const string&amp; c) {
+    return a + " " + b + " " + c;
+}
+
+string concat(const string&amp; a, int n) {
+    string result = "";
+    for (int i = 0; i &lt; n; i++) {
+        if (i &gt; 0) result += " ";
+        result += a;
+    }
+    return result;
+}
+
+int main() {
+    cout &lt;&lt; concat("Hello", "World") &lt;&lt; endl;
+    cout &lt;&lt; concat("I", "love", "C++") &lt;&lt; endl;
+    cout &lt;&lt; concat("Ha", 3) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Hello World
+I love C++
+Ha Ha Ha</pre></div>
+
+                <h3>Example 5: Type-Safe Absolute Value</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int absolute(int n) {
+    return (n &lt; 0) ? -n : n;
+}
+
+double absolute(double n) {
+    return (n &lt; 0.0) ? -n : n;
+}
+
+long long absolute(long long n) {
+    return (n &lt; 0) ? -n : n;
+}
+
+int main() {
+    cout &lt;&lt; absolute(-42) &lt;&lt; endl;
+    cout &lt;&lt; absolute(-3.14) &lt;&lt; endl;
+    cout &lt;&lt; absolute(-9876543210LL) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>42
+3.14
+9876543210</pre></div>
+
+                <!-- ===== Best Practices ===== -->
+                <h2>Best Practices</h2>
+                <div class="tip">
+                    <h3>&#128161; Overloading Best Practices</h3>
+                    <ul>
+                        <li><strong>Keep overloads consistent</strong> &mdash; all versions should perform the same logical operation.</li>
+                        <li><strong>Don&rsquo;t overload just because you can</strong> &mdash; only overload when it genuinely improves readability.</li>
+                        <li><strong>Beware of implicit conversions</strong> &mdash; they can cause surprising matches or ambiguity.</li>
+                        <li><strong>Prefer templates</strong> when the function body is identical for all types (covered in Lesson 37).</li>
+                        <li><strong>Document your overloads</strong> &mdash; make it clear what each version does, especially if the behaviour differs.</li>
+                        <li><strong>Avoid mixing overloads with default parameters</strong> &mdash; this often leads to ambiguous calls.</li>
+                    </ul>
+                </div>
+
+                <!-- ===== Summary ===== -->
+                <h2>Summary</h2>
+                <ul>
+                    <li><strong>Function overloading</strong> lets you define multiple functions with the same name but different parameter lists.</li>
+                    <li>Overloads must differ in the <strong>number</strong>, <strong>types</strong>, or <strong>order</strong> of parameters.</li>
+                    <li>The <strong>return type alone</strong> does not distinguish overloaded functions.</li>
+                    <li>The compiler selects the best match through <strong>overload resolution</strong> (exact match &rarr; promotion &rarr; conversion).</li>
+                    <li><strong>Ambiguity</strong> occurs when multiple overloads match equally well &mdash; fix with explicit casts or more specific types.</li>
+                    <li><code>const</code> qualifiers on <strong>references</strong> and <strong>pointers</strong> create distinct overloads; on value parameters they do not.</li>
+                    <li><strong>Operator overloading</strong> extends the concept to operators like <code>+</code>, <code>-</code>, and <code>&lt;&lt;</code>.</li>
+                    <li>Use overloading to create <strong>clean, intuitive APIs</strong> &mdash; but keep overloads logically consistent.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/V9zuox47zr0" title="C++ Function Overloading" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is function overloading?","o":["Calling a function multiple times","Defining multiple functions with the same name but different parameter lists","Giving a function two return types","Running a function in the background"],"a":1},
+                {"q":"Which of the following is NOT a valid way to overload functions?","o":["Different number of parameters","Different parameter types","Different return type only","Different order of parameter types"],"a":2},
+                {"q":"What happens if two overloaded functions differ only in return type?","o":["The compiler picks the first one","It causes a compilation error","The program runs but picks one randomly","It works fine in C++"],"a":1},
+                {"q":"What is the output? int f(int x){return x*2;} double f(double x){return x*3;} int main(){cout&lt;&lt;f(5);}","o":["10","15","5","Error"],"a":0},
+                {"q":"What is the output? int f(int x){return x*2;} double f(double x){return x*3;} int main(){cout&lt;&lt;f(2.0);}","o":["4","6","2","Error"],"a":1},
+                {"q":"How does the compiler choose which overloaded function to call?","o":["By the return type","By the function name length","By matching the argument types to the parameter list","Randomly"],"a":2},
+                {"q":"What is overload resolution?","o":["Deleting duplicate functions","The process the compiler uses to select the best matching overload","A runtime error","A debugging technique"],"a":1},
+                {"q":"Which term describes function overloading?","o":["Runtime polymorphism","Compile-time polymorphism","Dynamic binding","Late binding"],"a":1},
+                {"q":"Can you overload void and non-void functions with the same name?","o":["No, never","Yes, as long as their parameters differ","Only in classes","Only in main()"],"a":1},
+                {"q":"What is the output? void f(int x){cout&lt;&lt;\"int\";} void f(double x){cout&lt;&lt;\"double\";} int main(){f('A');}","o":["int","double","A","Error"],"a":0},
+                {"q":"Why does f('A') call the int overload?","o":["'A' is an int","char is promoted to int before double","The compiler picks alphabetically","It doesn't, it calls double"],"a":1},
+                {"q":"What is type promotion in the context of overloading?","o":["Manually casting a type","Automatic conversion of a smaller type to a larger compatible type","Renaming a type","Creating a new type"],"a":1},
+                {"q":"Which promotion path is correct?","o":["double to float","int to char","float to double","string to int"],"a":2},
+                {"q":"What is an ambiguous function call?","o":["A call where the function is not defined","A call where multiple overloads match equally well","A call with too many arguments","A call inside a loop"],"a":1},
+                {"q":"How can you resolve an ambiguous overload call?","o":["Use an explicit cast on the argument","Remove all overloads","Change the function name","Use a void return type"],"a":0},
+                {"q":"What is the output? int add(int a,int b){return a+b;} int add(int a,int b,int c){return a+b+c;} int main(){cout&lt;&lt;add(1,2,3);}","o":["3","6","Error","123"],"a":1},
+                {"q":"Can overloaded functions have different access specifiers in a class?","o":["No","Yes","Only public","Only private"],"a":1},
+                {"q":"Does const on a value parameter create a distinct overload?","o":["Yes","No","Only for int","Only in templates"],"a":1},
+                {"q":"Does const on a reference parameter create a distinct overload?","o":["No","Yes","Only for pointers","Only in C++11"],"a":1},
+                {"q":"What is the output? void f(int&amp; x){cout&lt;&lt;\"ref\";} void f(const int&amp; x){cout&lt;&lt;\"cref\";} int main(){f(10);}","o":["ref","cref","Error","10"],"a":1},
+                {"q":"What is the output? void f(int&amp; x){cout&lt;&lt;\"ref\";} void f(const int&amp; x){cout&lt;&lt;\"cref\";} int main(){int a=5;f(a);}","o":["ref","cref","Error","5"],"a":0},
+                {"q":"Can you overload main()?","o":["Yes","No, main() cannot be overloaded","Only with different return types","Only in classes"],"a":1},
+                {"q":"What is the output? int mul(int a,int b){return a*b;} double mul(double a,double b){return a*b;} int main(){cout&lt;&lt;mul(3,4);}","o":["12","12.0","Error","7"],"a":0},
+                {"q":"What is the output? int mul(int a,int b){return a*b;} double mul(double a,double b){return a*b;} int main(){cout&lt;&lt;mul(3.0,4.0);}","o":["12","12.0","Error","7"],"a":0},
+                {"q":"What happens when you pass a float to a function expecting double?","o":["Compilation error","float is promoted to double","The program crashes","float is truncated"],"a":1},
+                {"q":"Which is a better alternative to overloading when function bodies are identical for all types?","o":["Macros","Templates","Global variables","Recursion"],"a":1},
+                {"q":"What is operator overloading?","o":["Overloading main()","Defining custom behavior for operators like + and - for user-defined types","Creating new operators","Deleting operators"],"a":1},
+                {"q":"Which keyword is used for operator overloading?","o":["overload","override","operator","virtual"],"a":2},
+                {"q":"Can constructors be overloaded in C++?","o":["No","Yes","Only copy constructors","Only default constructors"],"a":1},
+                {"q":"What is the output? void f(int x,double y){cout&lt;&lt;1;} void f(double x,int y){cout&lt;&lt;2;} int main(){f(5,3.0);}","o":["1","2","Error","12"],"a":0},
+                {"q":"What is the output? void f(int x,double y){cout&lt;&lt;1;} void f(double x,int y){cout&lt;&lt;2;} int main(){f(3.0,5);}","o":["1","2","Error","12"],"a":1},
+                {"q":"What is the output? void f(int x,double y){cout&lt;&lt;1;} void f(double x,int y){cout&lt;&lt;2;} int main(){f(5,3);}","o":["1","2","Ambiguous / Error","12"],"a":2},
+                {"q":"Why does mixing overloads with default parameters cause problems?","o":["It uses more memory","It can create calls that match multiple overloads","It prevents compilation of all functions","Default parameters are not allowed in C++"],"a":1},
+                {"q":"What is the function signature used by the compiler for overloading?","o":["Function name + return type","Function name + parameter list","Only the function name","Only the return type"],"a":1},
+                {"q":"Which of these overloaded function pairs is valid?","o":["int f(int); double f(int);","void f(int); void f(double);","int f(int); int f(int);","void f(); void f();"],"a":1},
+                {"q":"What is name mangling?","o":["Renaming functions at runtime","A compiler technique to encode function name and parameters into a unique symbol","Removing function names","Encrypting source code"],"a":1},
+                {"q":"Why is name mangling needed?","o":["To make code unreadable","To allow the linker to distinguish overloaded functions","To speed up compilation","To reduce binary size"],"a":1},
+                {"q":"Can you overload functions across different namespaces?","o":["Yes, using declarations bring them into the same scope","No, overloading only works in one namespace","Only with global functions","Only in std namespace"],"a":0},
+                {"q":"What is the output? string f(string s){return s+\"!\";} string f(string s,int n){string r=\"\";for(int i=0;i&lt;n;i++)r+=s;return r;} int main(){cout&lt;&lt;f(\"Hi\",3);}","o":["Hi!","HiHiHi","Hi3","Error"],"a":1},
+                {"q":"Which overload is called for f(true) if overloads are f(int) and f(bool)?","o":["f(int)","f(bool)","Ambiguous","Neither"],"a":1},
+                {"q":"Which overload is called for f(0) if overloads are f(int) and f(bool)?","o":["f(int)","f(bool)","Ambiguous","Neither"],"a":0},
+                {"q":"Can you overload functions in C (not C++)?","o":["Yes","No, C does not support function overloading","Only with macros","Only for math functions"],"a":1},
+                {"q":"Is it good practice for overloaded functions to perform completely different operations?","o":["Yes, it increases flexibility","No, all overloads should perform the same logical operation","Only if documented","Only in test code"],"a":1},
+                {"q":"What is the output? int abs(int n){return n&lt;0?-n:n;} double abs(double n){return n&lt;0?-n:n;} int main(){cout&lt;&lt;abs(-7);}","o":["7","-7","0","Error"],"a":0},
+                {"q":"What is the output? int abs(int n){return n&lt;0?-n:n;} double abs(double n){return n&lt;0?-n:n;} int main(){cout&lt;&lt;abs(-2.5);}","o":["2","2.5","3","-2.5"],"a":1},
+                {"q":"Can two overloaded functions be declared in different files?","o":["Yes, as long as they are linked together and declared properly","No, they must be in the same file","Only in header files","Only using extern"],"a":0},
+                {"q":"What is the output? void p(int a){cout&lt;&lt;a;} void p(int a,int b){cout&lt;&lt;a+b;} int main(){p(2);p(3,4);}","o":["27","234","2 7","Error"],"a":0},
+                {"q":"How many overloads of a function can you have?","o":["Only 2","Only 5","No specific limit, as long as signatures are unique","Exactly 10"],"a":2},
+                {"q":"What is the priority order for overload resolution?","o":["Conversion, promotion, exact match","Exact match, promotion, standard conversion","Promotion, exact match, conversion","Random selection"],"a":1},
+                {"q":"Why is function overloading an example of compile-time polymorphism?","o":["The decision is made at runtime","The compiler decides which function to call at compile time","It requires virtual functions","It uses dynamic dispatch"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="return-values.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Return Values</span>
+                </a>
+                <a href="recursion.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Recursion</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

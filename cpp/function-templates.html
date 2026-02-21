@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Function Templates - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-function-templates">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html" class="active"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 37 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="67" style="width:67%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Function Templates
+                </div>
+                <h1>37. Function Templates</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 37 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Templates? ===== -->
+                <h2>What Are Templates?</h2>
+                <p><strong>Templates</strong> are a cornerstone of <strong>generic programming</strong> in C++. They allow you to write code that works with <strong>any data type</strong> without duplicating logic for each type. Instead of writing separate functions for <code>int</code>, <code>double</code>, <code>string</code>, and so on, you write a single <strong>template</strong> and let the compiler generate the type-specific versions for you.</p>
+                <p>Think of a template as a <strong>blueprint</strong> or a <strong>cookie cutter</strong> &mdash; the shape is defined once, but you can stamp out cookies (functions) made of different dough (types).</p>
+                <p>Key benefits of templates:</p>
+                <ul>
+                    <li><strong>Code reuse</strong> &mdash; write one function that works for many types.</li>
+                    <li><strong>Type safety</strong> &mdash; the compiler checks types at compile time, unlike <code>void*</code> hacks.</li>
+                    <li><strong>Zero runtime overhead</strong> &mdash; templates are resolved at compile time, producing code as efficient as hand-written type-specific functions.</li>
+                    <li><strong>Foundation of the STL</strong> &mdash; containers like <code>std::vector&lt;T&gt;</code> and algorithms like <code>std::sort</code> are all built on templates.</li>
+                </ul>
+                <p>C++ supports two main kinds of templates: <strong>function templates</strong> (this lesson) and <strong>class templates</strong> (next lesson).</p>
+
+                <!-- ===== Function Template Syntax ===== -->
+                <h2>Function Template Syntax</h2>
+                <p>A function template begins with the <code>template</code> keyword followed by <strong>template parameters</strong> enclosed in angle brackets. The most common form uses <code>typename</code> (or equivalently, <code>class</code>) to introduce a <strong>type parameter</strong>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Function template declaration</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">getMax</span>(<span class="type">T</span> a, <span class="type">T</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+
+<span class="type">int</span> <span class="function">main</span>() {
+    cout &lt;&lt; <span class="function">getMax</span>(<span class="number">10</span>, <span class="number">20</span>) &lt;&lt; endl;         <span class="comment">// T = int &rarr; 20</span>
+    cout &lt;&lt; <span class="function">getMax</span>(<span class="number">3.14</span>, <span class="number">2.72</span>) &lt;&lt; endl;     <span class="comment">// T = double &rarr; 3.14</span>
+    cout &lt;&lt; <span class="function">getMax</span>(<span class="string">'A'</span>, <span class="string">'Z'</span>) &lt;&lt; endl;       <span class="comment">// T = char &rarr; Z</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>Key points about the syntax:</p>
+                <ul>
+                    <li><code>template &lt;typename T&gt;</code> &mdash; declares a type parameter <code>T</code>. You can use any valid identifier, but <code>T</code> is conventional.</li>
+                    <li><code>typename</code> and <code>class</code> are <strong>interchangeable</strong> here: <code>template &lt;class T&gt;</code> works the same way.</li>
+                    <li>The template definition must be <strong>visible</strong> at the point of use &mdash; typically placed in header files.</li>
+                </ul>
+
+                <!-- ===== How Templates Work ===== -->
+                <h2>How Templates Work</h2>
+                <p>Templates are <strong>not compiled directly</strong>. Instead, the compiler uses a process called <strong>template instantiation</strong>:</p>
+                <ol>
+                    <li>You write the template (the blueprint).</li>
+                    <li>When you call <code>getMax(10, 20)</code>, the compiler sees that <code>T = int</code>.</li>
+                    <li>The compiler <strong>generates</strong> (instantiates) a real function: <code>int getMax(int a, int b)</code>.</li>
+                    <li>If you also call <code>getMax(3.14, 2.72)</code>, a <strong>second</strong> function is generated: <code>double getMax(double a, double b)</code>.</li>
+                </ol>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// What the compiler generates behind the scenes:</span>
+
+<span class="comment">// For getMax(10, 20):</span>
+<span class="type">int</span> <span class="function">getMax</span>(<span class="type">int</span> a, <span class="type">int</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+
+<span class="comment">// For getMax(3.14, 2.72):</span>
+<span class="type">double</span> <span class="function">getMax</span>(<span class="type">double</span> a, <span class="type">double</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+
+<span class="comment">// For getMax('A', 'Z'):</span>
+<span class="type">char</span> <span class="function">getMax</span>(<span class="type">char</span> a, <span class="type">char</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}</code></pre>
+                </div>
+                <p>This means templates produce <strong>no runtime overhead</strong> &mdash; the generated code is identical to what you would write by hand. However, heavy template usage can increase <strong>compile time</strong> and <strong>binary size</strong> because the compiler may generate many specialisations.</p>
+
+                <!-- ===== Template with Multiple Type Parameters ===== -->
+                <h2>Template with Multiple Type Parameters</h2>
+                <p>You can declare templates with <strong>more than one</strong> type parameter. This is useful when a function needs to operate on <strong>different types</strong> simultaneously:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>, <span class="keyword">typename</span> <span class="type">U</span>&gt;
+<span class="keyword">void</span> <span class="function">printPair</span>(<span class="type">T</span> first, <span class="type">U</span> second) {
+    cout &lt;&lt; <span class="string">"("</span> &lt;&lt; first &lt;&lt; <span class="string">", "</span> &lt;&lt; second &lt;&lt; <span class="string">")"</span> &lt;&lt; endl;
+}
+
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>, <span class="keyword">typename</span> <span class="type">U</span>&gt;
+<span class="keyword">auto</span> <span class="function">add</span>(<span class="type">T</span> a, <span class="type">U</span> b) -&gt; <span class="keyword">decltype</span>(a + b) {
+    <span class="keyword">return</span> a + b;
+}
+
+<span class="type">int</span> <span class="function">main</span>() {
+    <span class="function">printPair</span>(<span class="number">1</span>, <span class="number">3.14</span>);          <span class="comment">// T = int, U = double</span>
+    <span class="function">printPair</span>(<span class="string">"Hello"</span>, <span class="number">42</span>);       <span class="comment">// T = const char*, U = int</span>
+
+    <span class="keyword">auto</span> result = <span class="function">add</span>(<span class="number">5</span>, <span class="number">2.5</span>);   <span class="comment">// T = int, U = double &rarr; returns double 7.5</span>
+    cout &lt;&lt; result &lt;&lt; endl;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>The <strong>trailing return type</strong> syntax (<code>-&gt; decltype(a + b)</code>) lets the compiler deduce the return type based on the operation. In C++14 and later, you can simply use <code>auto</code> as the return type and let the compiler figure it out.</p>
+
+                <!-- ===== Explicit Template Specialization ===== -->
+                <h2>Explicit Template Specialization</h2>
+                <p>Sometimes the generic template logic <strong>doesn&rsquo;t work correctly</strong> for a specific type. For example, comparing C-style strings with <code>&gt;</code> compares pointer addresses, not lexical order. <strong>Template specialisation</strong> lets you provide a custom implementation for a particular type:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;cstring&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Primary template</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">getMax</span>(<span class="type">T</span> a, <span class="type">T</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+
+<span class="comment">// Explicit specialisation for const char*</span>
+<span class="keyword">template</span> &lt;&gt;
+<span class="keyword">const</span> <span class="type">char</span>* <span class="function">getMax</span>&lt;<span class="keyword">const</span> <span class="type">char</span>*&gt;(<span class="keyword">const</span> <span class="type">char</span>* a, <span class="keyword">const</span> <span class="type">char</span>* b) {
+    <span class="keyword">return</span> (<span class="function">strcmp</span>(a, b) &gt; <span class="number">0</span>) ? a : b;
+}
+
+<span class="type">int</span> <span class="function">main</span>() {
+    cout &lt;&lt; <span class="function">getMax</span>(<span class="number">10</span>, <span class="number">20</span>) &lt;&lt; endl;                   <span class="comment">// Uses primary: 20</span>
+    cout &lt;&lt; <span class="function">getMax</span>(<span class="string">"apple"</span>, <span class="string">"banana"</span>) &lt;&lt; endl;       <span class="comment">// Uses specialisation: banana</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>The syntax <code>template &lt;&gt;</code> with an empty parameter list signals a <strong>full specialisation</strong>. The specialised version is used <strong>only</strong> when the template is instantiated with that exact type.</p>
+                <p>Important rules:</p>
+                <ul>
+                    <li>The primary template must be declared <strong>before</strong> any specialisations.</li>
+                    <li>A specialisation must match the primary template&rsquo;s signature (same name, same number of parameters).</li>
+                    <li>Prefer <strong>function overloading</strong> over specialisation when possible &mdash; overloads participate in overload resolution, while specialisations do not.</li>
+                </ul>
+
+                <!-- ===== Template Argument Deduction ===== -->
+                <h2>Template Argument Deduction</h2>
+                <p>In most cases, the compiler can <strong>automatically deduce</strong> the template arguments from the function arguments, so you don&rsquo;t need to specify them explicitly:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">square</span>(<span class="type">T</span> x) {
+    <span class="keyword">return</span> x * x;
+}
+
+<span class="type">int</span> <span class="function">main</span>() {
+    <span class="comment">// Implicit deduction &mdash; compiler figures out T</span>
+    cout &lt;&lt; <span class="function">square</span>(<span class="number">5</span>) &lt;&lt; endl;        <span class="comment">// T = int &rarr; 25</span>
+    cout &lt;&lt; <span class="function">square</span>(<span class="number">3.14</span>) &lt;&lt; endl;     <span class="comment">// T = double &rarr; 9.8596</span>
+
+    <span class="comment">// Explicit specification &mdash; you tell the compiler</span>
+    cout &lt;&lt; <span class="function">square</span>&lt;<span class="type">double</span>&gt;(<span class="number">5</span>) &lt;&lt; endl;  <span class="comment">// T = double &rarr; 25.0</span>
+    cout &lt;&lt; <span class="function">square</span>&lt;<span class="type">long</span>&gt;(<span class="number">100</span>) &lt;&lt; endl;  <span class="comment">// T = long &rarr; 10000</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>Deduction fails when the compiler <strong>cannot determine</strong> <code>T</code> unambiguously. A common scenario is passing arguments of <strong>different types</strong> to a single-type-parameter template:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">getMax</span>(<span class="type">T</span> a, <span class="type">T</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+
+<span class="comment">// getMax(10, 3.14);           // ERROR: T = int or double?</span>
+<span class="comment">// Fix 1: explicit type</span>
+<span class="function">getMax</span>&lt;<span class="type">double</span>&gt;(<span class="number">10</span>, <span class="number">3.14</span>);      <span class="comment">// OK: T = double</span>
+
+<span class="comment">// Fix 2: use two type parameters (see previous section)</span></code></pre>
+                </div>
+
+                <!-- ===== Templates vs Function Overloading ===== -->
+                <h2>Templates vs Function Overloading</h2>
+                <p>Both templates and overloading allow a function name to work with multiple types. Here&rsquo;s when to use each:</p>
+                <table class="info-table" style="width:100%; border-collapse:collapse; margin:1rem 0;">
+                    <tr>
+                        <th style="text-align:left; padding:0.5rem;">Aspect</th>
+                        <th style="text-align:left; padding:0.5rem;">Function Templates</th>
+                        <th style="text-align:left; padding:0.5rem;">Function Overloading</th>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Logic</strong></td>
+                        <td style="padding:0.5rem;">Same logic for all types</td>
+                        <td style="padding:0.5rem;">Different logic per type</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Code duplication</strong></td>
+                        <td style="padding:0.5rem;">Minimal &mdash; one definition</td>
+                        <td style="padding:0.5rem;">May duplicate similar code</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Type flexibility</strong></td>
+                        <td style="padding:0.5rem;">Works with any type (if operations are valid)</td>
+                        <td style="padding:0.5rem;">Only the specific overloaded types</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Compile time</strong></td>
+                        <td style="padding:0.5rem;">Can increase with many instantiations</td>
+                        <td style="padding:0.5rem;">Generally faster compilation</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0.5rem;"><strong>Error messages</strong></td>
+                        <td style="padding:0.5rem;">Can be verbose and hard to read</td>
+                        <td style="padding:0.5rem;">Usually clearer</td>
+                    </tr>
+                </table>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Template &mdash; same logic for any type with operator+</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">add</span>(<span class="type">T</span> a, <span class="type">T</span> b) {
+    <span class="keyword">return</span> a + b;
+}
+
+<span class="comment">// Overload &mdash; special logic for strings</span>
+<span class="type">string</span> <span class="function">add</span>(<span class="keyword">const</span> <span class="type">string</span>&amp; a, <span class="keyword">const</span> <span class="type">string</span>&amp; b) {
+    <span class="keyword">return</span> a + <span class="string">" "</span> + b;  <span class="comment">// adds a space between strings</span>
+}
+
+<span class="type">int</span> <span class="function">main</span>() {
+    cout &lt;&lt; <span class="function">add</span>(<span class="number">3</span>, <span class="number">4</span>) &lt;&lt; endl;                         <span class="comment">// Template: 7</span>
+    cout &lt;&lt; <span class="function">add</span>(<span class="number">1.5</span>, <span class="number">2.5</span>) &lt;&lt; endl;                     <span class="comment">// Template: 4.0</span>
+    cout &lt;&lt; <span class="function">add</span>(<span class="type">string</span>(<span class="string">"Hello"</span>), <span class="type">string</span>(<span class="string">"World"</span>)) &lt;&lt; endl; <span class="comment">// Overload: Hello World</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>When both a template and a non-template (overload) match a call, the compiler <strong>prefers the non-template</strong> version. This is called the &ldquo;non-template is preferred&rdquo; rule.</p>
+
+                <!-- ===== Templates with Non-Type Parameters ===== -->
+                <h2>Templates with Non-Type Parameters</h2>
+                <p>Template parameters aren&rsquo;t limited to types. You can also use <strong>non-type parameters</strong> &mdash; compile-time constants such as integers, pointers, or references:</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="comment">// Non-type parameter: N is a compile-time constant</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>, <span class="type">int</span> N&gt;
+<span class="type">T</span> <span class="function">arraySum</span>(<span class="keyword">const</span> <span class="type">T</span> (&amp;arr)[N]) {
+    <span class="type">T</span> total = <span class="number">0</span>;
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) {
+        total += arr[i];
+    }
+    <span class="keyword">return</span> total;
+}
+
+<span class="keyword">template</span> &lt;<span class="type">int</span> N&gt;
+<span class="keyword">void</span> <span class="function">printLine</span>() {
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) {
+        cout &lt;&lt; <span class="string">"-"</span>;
+    }
+    cout &lt;&lt; endl;
+}
+
+<span class="type">int</span> <span class="function">main</span>() {
+    <span class="type">int</span> nums[] = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>};
+    cout &lt;&lt; <span class="string">"Sum: "</span> &lt;&lt; <span class="function">arraySum</span>(nums) &lt;&lt; endl;   <span class="comment">// T = int, N = 5 &rarr; 15</span>
+
+    <span class="type">double</span> vals[] = {<span class="number">1.1</span>, <span class="number">2.2</span>, <span class="number">3.3</span>};
+    cout &lt;&lt; <span class="string">"Sum: "</span> &lt;&lt; <span class="function">arraySum</span>(vals) &lt;&lt; endl;   <span class="comment">// T = double, N = 3 &rarr; 6.6</span>
+
+    <span class="function">printLine</span>&lt;<span class="number">40</span>&gt;();  <span class="comment">// prints 40 dashes</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+                <p>Non-type parameters must be <strong>compile-time constants</strong>. You cannot pass a variable whose value is only known at runtime. Common uses include array sizes, buffer lengths, and mathematical constants.</p>
+
+                <!-- ===== Common Pitfalls and Error Messages ===== -->
+                <h2>Common Pitfalls and Error Messages</h2>
+                <p>Template errors are notoriously <strong>verbose and confusing</strong>. Here are the most common issues and how to fix them:</p>
+
+                <h3>1. Ambiguous Deduction</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">getMax</span>(<span class="type">T</span> a, <span class="type">T</span> b);
+
+<span class="comment">// getMax(10, 3.14);  // ERROR: cannot deduce T (int vs double)</span>
+<span class="comment">// Fix: getMax&lt;double&gt;(10, 3.14);</span></code></pre>
+                </div>
+
+                <h3>2. Unsupported Operations</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">multiply</span>(<span class="type">T</span> a, <span class="type">T</span> b) {
+    <span class="keyword">return</span> a * b;
+}
+
+<span class="comment">// multiply(string("a"), string("b"));  // ERROR: no operator* for string</span>
+<span class="comment">// The template compiles fine &mdash; the error appears only when you</span>
+<span class="comment">// instantiate it with a type that doesn&rsquo;t support operator*.</span></code></pre>
+                </div>
+
+                <h3>3. Linker Errors from Separate Compilation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="comment">// utils.h &mdash; declare AND define templates in the header</span>
+<span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">T</span>&gt;
+<span class="type">T</span> <span class="function">getMax</span>(<span class="type">T</span> a, <span class="type">T</span> b) {
+    <span class="keyword">return</span> (a &gt; b) ? a : b;
+}
+
+<span class="comment">// DO NOT put template definitions in a .cpp file.</span>
+<span class="comment">// The compiler needs to see the full definition</span>
+<span class="comment">// at every call site to instantiate it.</span></code></pre>
+                </div>
+
+                <h3>4. Missing <code>typename</code> for Dependent Types</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div>
+                    <pre><code><span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="type">Container</span>&gt;
+<span class="keyword">void</span> <span class="function">printFirst</span>(<span class="keyword">const</span> <span class="type">Container</span>&amp; c) {
+    <span class="comment">// ERROR without typename:</span>
+    <span class="comment">// Container::const_iterator it = c.begin();</span>
+
+    <span class="comment">// CORRECT:</span>
+    <span class="keyword">typename</span> <span class="type">Container</span>::const_iterator it = c.begin();
+    cout &lt;&lt; *it &lt;&lt; endl;
+
+    <span class="comment">// Or simply use auto (C++11):</span>
+    <span class="keyword">auto</span> it2 = c.begin();
+}</code></pre>
+                </div>
+                <p><strong>Tip:</strong> When a type depends on a template parameter, you must precede it with <code>typename</code> to tell the compiler it&rsquo;s a type, not a value.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Function templates</strong> let you write <strong>generic, type-independent</strong> functions &mdash; one definition serves all compatible types.</li>
+                    <li>The syntax is <code>template &lt;typename T&gt;</code> followed by the function that uses <code>T</code>.</li>
+                    <li>The compiler <strong>instantiates</strong> a concrete function for each type used &mdash; no runtime overhead.</li>
+                    <li>You can have <strong>multiple type parameters</strong> (<code>T</code>, <code>U</code>, &hellip;) and <strong>non-type parameters</strong> (e.g., <code>int N</code>).</li>
+                    <li><strong>Template argument deduction</strong> usually lets you call templates without specifying types explicitly.</li>
+                    <li>Use <strong>explicit specialisation</strong> or <strong>overloading</strong> when a type needs different logic.</li>
+                    <li>Always define templates in <strong>header files</strong> &mdash; the compiler needs the full definition at every call site.</li>
+                    <li>Template errors can be verbose; read the <strong>first error</strong> carefully and work from there.</li>
+                    <li>Templates are the foundation of the <strong>Standard Template Library (STL)</strong> &mdash; mastering them unlocks the full power of C++.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/I-hZkUa9mIs" title="C++ Function Templates" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a function template in C++?","o":["A pre-compiled function","A blueprint for creating functions that work with any data type","A function that runs at runtime only","A macro replacement"],"a":1},
+                {"q":"Which keyword introduces a template parameter list?","o":["generic","typename","template","class"],"a":2},
+                {"q":"What is the correct syntax to declare a function template?","o":["<code>template &lt;typename T&gt; T func(T a);</code>","<code>generic T func(T a);</code>","<code>T template func(T a);</code>","<code>function&lt;T&gt; func(T a);</code>"],"a":0},
+                {"q":"Are <code>typename</code> and <code>class</code> interchangeable in template parameter lists?","o":["No, they have different meanings","Yes, both declare a type parameter","Only in C++20","Only with structs"],"a":1},
+                {"q":"What is template instantiation?","o":["Running a template at runtime","The compiler generating a concrete function for a specific type","Deleting a template","Declaring a template"],"a":1},
+                {"q":"When does template instantiation occur?","o":["At runtime","At link time","At compile time when the template is used with a specific type","At preprocessing time"],"a":2},
+                {"q":"What is template argument deduction?","o":["The programmer must always specify types explicitly","The compiler automatically determines template arguments from function arguments","Templates cannot deduce arguments","A runtime type-checking mechanism"],"a":1},
+                {"q":"What happens if you call <code>getMax(10, 3.14)</code> with <code>template&lt;typename T&gt; T getMax(T a, T b)</code>?","o":["T is deduced as double","T is deduced as int","Compilation error due to ambiguous deduction","A runtime error occurs"],"a":2},
+                {"q":"How do you fix the ambiguous deduction for <code>getMax(10, 3.14)</code>?","o":["Use <code>getMax&lt;double&gt;(10, 3.14)</code>","Use a cast on one argument","Use two type parameters","All of the above"],"a":3},
+                {"q":"Can a function template have multiple type parameters?","o":["No, only one is allowed","Yes, e.g. <code>template&lt;typename T, typename U&gt;</code>","Only in C++17","Only with class templates"],"a":1},
+                {"q":"What does <code>template &lt;typename T, typename U&gt;</code> declare?","o":["Two functions","A template with two type parameters","A template specialisation","An overloaded template"],"a":1},
+                {"q":"What is a non-type template parameter?","o":["A parameter that accepts any type","A compile-time constant value (like int N) used as a template parameter","A parameter with no name","A pointer parameter"],"a":1},
+                {"q":"Which of these is a valid non-type template parameter?","o":["<code>template&lt;int N&gt;</code>","<code>template&lt;string s&gt;</code> (before C++20)","<code>template&lt;double d&gt;</code> (before C++20)","<code>template&lt;vector&lt;int&gt; v&gt;</code>"],"a":0},
+                {"q":"What must a non-type template parameter be?","o":["A runtime variable","A compile-time constant","A pointer to a function","A reference to a global"],"a":1},
+                {"q":"What is explicit template specialisation?","o":["Using templates implicitly","Providing a custom implementation of a template for a specific type","Deleting a template","Forward declaring a template"],"a":1},
+                {"q":"What is the syntax for a full template specialisation?","o":["<code>template &lt;&gt; ReturnType func&lt;SpecificType&gt;(...);</code>","<code>special template func(...);</code>","<code>override template func(...);</code>","<code>template func&lt;SpecificType&gt;(...);</code>"],"a":0},
+                {"q":"Why might you specialise <code>getMax</code> for <code>const char*</code>?","o":["Because char pointers are faster","Because operator&gt; compares pointer addresses, not string content","Because C-strings are always shorter","Because the compiler requires it"],"a":1},
+                {"q":"What does <code>template &lt;&gt;</code> with an empty parameter list indicate?","o":["A partial specialisation","A full (explicit) specialisation","A default template","An error"],"a":1},
+                {"q":"Must the primary template be declared before a specialisation?","o":["No, order doesn&rsquo;t matter","Yes, the primary template must come first","Only for class templates","Only in header files"],"a":1},
+                {"q":"When both a template and a non-template function match a call, which is preferred?","o":["The template version","The non-template (overloaded) version","It causes an error","The one defined first"],"a":1},
+                {"q":"Why should templates be defined in header files?","o":["For faster linking","Because the compiler needs the full definition at each call site for instantiation","To save memory","To avoid name mangling"],"a":1},
+                {"q":"What happens if you define a template in a .cpp file and use it in another .cpp file?","o":["It works fine","A linker error occurs because the template cannot be instantiated","A runtime crash","A warning but it compiles"],"a":1},
+                {"q":"What is the role of <code>decltype</code> with templates?","o":["It deletes a type","It allows the compiler to deduce the return type from an expression","It declares a template","It specialises a template"],"a":1},
+                {"q":"What does the trailing return type <code>-&gt; decltype(a + b)</code> do?","o":["Forces a runtime check","Lets the compiler determine the return type based on the expression a + b","Causes an error","Converts both arguments to the same type"],"a":1},
+                {"q":"In C++14, can you use <code>auto</code> as a return type for template functions?","o":["No","Yes, the compiler deduces the return type automatically","Only with non-type parameters","Only with specialisation"],"a":1},
+                {"q":"What error do you get if you call <code>multiply(string, string)</code> with a template that uses <code>operator*</code>?","o":["A runtime error","A compile-time error: no match for operator*","A linker error","No error"],"a":1},
+                {"q":"When does the compiler check if template operations are valid for a given type?","o":["When the template is defined","When the template is instantiated with that type","At link time","At runtime"],"a":1},
+                {"q":"What is a dependent type in a template?","o":["A type that depends on another template&rsquo;s parameter","A type that depends on a template parameter, e.g. Container::iterator","A type with no dependencies","A built-in type"],"a":1},
+                {"q":"Why do you need <code>typename</code> before <code>Container::const_iterator</code> inside a template?","o":["Because it&rsquo;s a constant","To tell the compiler that the dependent name is a type, not a value","Because iterators are always typenames","To prevent overloading"],"a":1},
+                {"q":"What is the benefit of using <code>auto</code> instead of <code>typename Container::iterator</code>?","o":["It&rsquo;s slower","It avoids the need for the typename disambiguator and is more concise","It prevents template instantiation","It only works with int"],"a":1},
+                {"q":"Do templates cause runtime overhead?","o":["Yes, significant overhead","No, templates are resolved at compile time with zero runtime overhead","Only with specialisations","Only with non-type parameters"],"a":1},
+                {"q":"What is a potential downside of heavy template usage?","o":["Slower runtime performance","Increased compile time and binary size (code bloat)","Memory leaks","Thread safety issues"],"a":1},
+                {"q":"What is code bloat in the context of templates?","o":["Writing too many comments","The compiler generating many similar function instantiations, increasing binary size","Using too many variables","Having too many headers"],"a":1},
+                {"q":"How does the STL use function templates?","o":["It doesn&rsquo;t use templates","Algorithms like std::sort and std::find are function templates that work with any container","Only for containers","Only for iterators"],"a":1},
+                {"q":"Can a function template have default template arguments?","o":["No","Yes, e.g. <code>template&lt;typename T = int&gt;</code>","Only class templates can","Only in C++20"],"a":1},
+                {"q":"What is partial specialisation?","o":["Specialising a template for a subset of its parameters","Partially defining a function","A deprecated feature","Same as full specialisation"],"a":0},
+                {"q":"Can function templates be partially specialised?","o":["Yes, freely","No, only class templates support partial specialisation; use overloading instead","Only in C++20","Only with two parameters"],"a":1},
+                {"q":"What is SFINAE in C++ templates?","o":["A compiler error","Substitution Failure Is Not An Error &mdash; invalid substitutions are silently discarded","A type of specialisation","A linker error"],"a":1},
+                {"q":"What does SFINAE stand for?","o":["Special Function Is Not An Error","Substitution Failure Is Not An Error","Static Function Inline Not Allowed Elsewhere","Specific Format Is Not Always Evaluated"],"a":1},
+                {"q":"Which C++ standard introduced <code>auto</code> return type deduction for functions?","o":["C++98","C++11","C++14","C++20"],"a":2},
+                {"q":"What is a variadic template?","o":["A template with a fixed number of parameters","A template that accepts a variable number of template arguments using <code>...</code>","A template with no parameters","A deprecated template"],"a":1},
+                {"q":"How are variadic templates related to function templates?","o":["They are unrelated","You can create function templates that accept any number of arguments","They replace function templates","They only work with classes"],"a":1},
+                {"q":"What is the conventional name for a single type parameter in templates?","o":["Type","Tp","T","Param"],"a":2},
+                {"q":"Can you overload a function template with another function template?","o":["No","Yes, multiple function templates with the same name but different parameters are allowed","Only non-template overloads are allowed","Only in C++17"],"a":1},
+                {"q":"What version of C++ introduced templates?","o":["C++98","C++03","C++11","C++14"],"a":0},
+                {"q":"What is the difference between <code>template&lt;typename T&gt;</code> and <code>template&lt;class T&gt;</code>?","o":["class T only works with class types","typename T only works with primitive types","They are identical in template parameter lists","class T is deprecated"],"a":2},
+                {"q":"What does &ldquo;generic programming&rdquo; mean?","o":["Writing code that only works with one type","Writing code that works with many types through parameterisation (templates)","Writing code in multiple languages","Writing code without functions"],"a":1},
+                {"q":"Can a template function call another template function?","o":["No","Yes, template functions can call other template functions","Only within the same file","Only if they share the same type parameter"],"a":1},
+                {"q":"What happens if no code ever calls a function template?","o":["A linker error","Nothing &mdash; the compiler does not instantiate it and no code is generated","A warning is issued","The template is compiled anyway"],"a":1},
+                {"q":"Which is better for providing type-specific behaviour: specialisation or overloading?","o":["Specialisation is always better","Overloading is generally preferred because it participates in overload resolution","They are always equivalent","Neither works"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="abstraction.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Abstraction</span>
+                </a>
+                <a href="class-templates.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Class Templates</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ STL Lists &amp; Deques - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-lists-deques">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html" class="active"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 40 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="73" style="width:73%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; STL Lists &amp; Deques
+                </div>
+                <h1>40. STL Lists &amp; Deques</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 40 of 55</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is std::list? ===== -->
+                <h2>What Is std::list?</h2>
+                <p><code>std::list</code> is a <strong>doubly-linked list</strong> provided by the C++ Standard Template Library. It is defined in the <code>&lt;list&gt;</code> header. Unlike <code>std::vector</code>, which stores elements in contiguous memory, a list stores each element in a separate <strong>node</strong> that contains pointers to the previous and next nodes.</p>
+                <p>Key characteristics of <code>std::list</code>:</p>
+                <ul>
+                    <li><strong>Constant-time insertions and deletions</strong> &mdash; inserting or removing elements anywhere in the list is O(1) once you have an iterator to the position.</li>
+                    <li><strong>No random access</strong> &mdash; you cannot use <code>operator[]</code> or <code>at()</code>. Accessing the n-th element requires O(n) traversal.</li>
+                    <li><strong>No iterator invalidation on insert/erase</strong> &mdash; inserting or erasing elements does not invalidate other iterators (only iterators to erased elements are invalidated).</li>
+                    <li><strong>Bidirectional iterators</strong> &mdash; you can traverse forward and backward, but you cannot jump to an arbitrary position.</li>
+                    <li><strong>Higher memory overhead</strong> &mdash; each node carries two extra pointers (prev &amp; next) compared to a vector&rsquo;s flat array.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;list&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::list&lt;<span class="keyword">int</span>&gt; nums = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>};
+
+    nums.<span class="function">push_back</span>(<span class="number">40</span>);   <span class="comment">// add to the end</span>
+    nums.<span class="function">push_front</span>(<span class="number">5</span>);   <span class="comment">// add to the front</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : nums) {
+        std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    }
+    <span class="comment">// Output: 5 10 20 30 40</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Creating and Initializing Lists ===== -->
+                <h2>Creating and Initializing Lists</h2>
+                <p>Creating a <code>std::list</code> follows patterns similar to other STL containers:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;list&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    <span class="comment">// 1. Empty list</span>
+    list&lt;<span class="keyword">int</span>&gt; l1;
+
+    <span class="comment">// 2. Initializer list</span>
+    list&lt;<span class="keyword">int</span>&gt; l2 = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>};
+
+    <span class="comment">// 3. N copies of a value</span>
+    list&lt;<span class="keyword">int</span>&gt; l3(<span class="number">5</span>, <span class="number">0</span>);  <span class="comment">// {0, 0, 0, 0, 0}</span>
+
+    <span class="comment">// 4. Copy constructor</span>
+    list&lt;<span class="keyword">int</span>&gt; l4(l2);  <span class="comment">// copy of l2</span>
+
+    <span class="comment">// 5. From iterators (range)</span>
+    list&lt;<span class="keyword">int</span>&gt; l5(l2.<span class="function">begin</span>(), l2.<span class="function">end</span>());
+
+    <span class="comment">// 6. Move constructor</span>
+    list&lt;<span class="keyword">int</span>&gt; l6 = std::<span class="function">move</span>(l3);  <span class="comment">// l3 is now empty</span>
+
+    <span class="comment">// 7. Using assign()</span>
+    list&lt;<span class="keyword">int</span>&gt; l7;
+    l7.<span class="function">assign</span>(<span class="number">4</span>, <span class="number">99</span>);  <span class="comment">// {99, 99, 99, 99}</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Adding and Removing Elements ===== -->
+                <h2>Adding and Removing Elements</h2>
+                <p><code>std::list</code> supports efficient insertion and removal at <strong>both ends</strong> as well as at <strong>any position</strong> via iterators:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;list&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::list&lt;<span class="keyword">int</span>&gt; lst = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>};
+
+    <span class="comment">// Adding elements</span>
+    lst.<span class="function">push_back</span>(<span class="number">40</span>);       <span class="comment">// {10, 20, 30, 40}</span>
+    lst.<span class="function">push_front</span>(<span class="number">5</span>);       <span class="comment">// {5, 10, 20, 30, 40}</span>
+    lst.<span class="function">emplace_back</span>(<span class="number">50</span>);    <span class="comment">// {5, 10, 20, 30, 40, 50}</span>
+    lst.<span class="function">emplace_front</span>(<span class="number">1</span>);    <span class="comment">// {1, 5, 10, 20, 30, 40, 50}</span>
+
+    <span class="comment">// Insert before the third element</span>
+    <span class="keyword">auto</span> it = lst.<span class="function">begin</span>();
+    std::<span class="function">advance</span>(it, <span class="number">2</span>);     <span class="comment">// move iterator to index 2</span>
+    lst.<span class="function">insert</span>(it, <span class="number">7</span>);        <span class="comment">// {1, 5, 7, 10, 20, 30, 40, 50}</span>
+
+    <span class="comment">// Removing elements</span>
+    lst.<span class="function">pop_back</span>();            <span class="comment">// removes 50</span>
+    lst.<span class="function">pop_front</span>();           <span class="comment">// removes 1</span>
+
+    <span class="comment">// Erase the element at iterator position</span>
+    it = lst.<span class="function">begin</span>();
+    std::<span class="function">advance</span>(it, <span class="number">1</span>);
+    lst.<span class="function">erase</span>(it);             <span class="comment">// removes 7 &rarr; {5, 10, 20, 30, 40}</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : lst)
+        std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    <span class="comment">// Output: 5 10 20 30 40</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== List-Specific Operations ===== -->
+                <h2>List-Specific Operations</h2>
+                <p><code>std::list</code> provides several member functions that are not available on <code>std::vector</code>:</p>
+                <ul>
+                    <li><code>splice()</code> &mdash; transfers elements from one list to another in O(1) without copying.</li>
+                    <li><code>merge()</code> &mdash; merges two <strong>sorted</strong> lists into one sorted list in O(n).</li>
+                    <li><code>unique()</code> &mdash; removes <strong>consecutive duplicate</strong> elements.</li>
+                    <li><code>sort()</code> &mdash; sorts the list (uses merge sort internally, O(n log n)).</li>
+                    <li><code>reverse()</code> &mdash; reverses the order of elements in O(n).</li>
+                    <li><code>remove(val)</code> &mdash; removes all elements equal to <code>val</code>.</li>
+                    <li><code>remove_if(pred)</code> &mdash; removes all elements satisfying the predicate.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;list&gt;</span>
+
+<span class="keyword">void</span> <span class="function">print</span>(<span class="keyword">const</span> std::list&lt;<span class="keyword">int</span>&gt;&amp; lst) {
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : lst) std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+}
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::list&lt;<span class="keyword">int</span>&gt; a = {<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">2</span>, <span class="number">6</span>};
+
+    <span class="comment">// sort the list</span>
+    a.<span class="function">sort</span>();
+    <span class="function">print</span>(a);  <span class="comment">// 1 1 2 3 4 5 6 9</span>
+
+    <span class="comment">// remove duplicates (must be sorted first)</span>
+    a.<span class="function">unique</span>();
+    <span class="function">print</span>(a);  <span class="comment">// 1 2 3 4 5 6 9</span>
+
+    <span class="comment">// reverse the list</span>
+    a.<span class="function">reverse</span>();
+    <span class="function">print</span>(a);  <span class="comment">// 9 6 5 4 3 2 1</span>
+
+    <span class="comment">// remove all elements equal to 5</span>
+    a.<span class="function">remove</span>(<span class="number">5</span>);
+    <span class="function">print</span>(a);  <span class="comment">// 9 6 4 3 2 1</span>
+
+    <span class="comment">// remove all even numbers</span>
+    a.<span class="function">remove_if</span>([](<span class="keyword">int</span> n) { <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">0</span>; });
+    <span class="function">print</span>(a);  <span class="comment">// 9 3 1</span>
+
+    <span class="comment">// merge two sorted lists</span>
+    std::list&lt;<span class="keyword">int</span>&gt; b = {<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>};
+    a.<span class="function">sort</span>();   <span class="comment">// a must be sorted: 1 3 9</span>
+    a.<span class="function">merge</span>(b); <span class="comment">// b is now empty; a = 1 2 3 5 8 9</span>
+    <span class="function">print</span>(a);
+
+    <span class="comment">// splice &mdash; transfer elements between lists</span>
+    std::list&lt;<span class="keyword">int</span>&gt; c = {<span class="number">100</span>, <span class="number">200</span>};
+    <span class="keyword">auto</span> it = a.<span class="function">begin</span>();
+    std::<span class="function">advance</span>(it, <span class="number">2</span>);
+    a.<span class="function">splice</span>(it, c);  <span class="comment">// insert all of c before position it</span>
+    <span class="function">print</span>(a);  <span class="comment">// 1 2 100 200 3 5 8 9</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Iterating Over Lists ===== -->
+                <h2>Iterating Over Lists</h2>
+                <p>Since <code>std::list</code> only supports <strong>bidirectional iterators</strong>, you can traverse forward and backward but cannot use arithmetic like <code>it + 5</code>. Use <code>std::advance()</code> or <code>std::next()</code> / <code>std::prev()</code> to move iterators.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;list&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::list&lt;<span class="keyword">int</span>&gt; lst = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>};
+
+    <span class="comment">// 1. Range-based for loop</span>
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : lst)
+        std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// 2. Forward iterator</span>
+    <span class="keyword">for</span> (<span class="keyword">auto</span> it = lst.<span class="function">begin</span>(); it != lst.<span class="function">end</span>(); ++it)
+        std::cout &lt;&lt; *it &lt;&lt; <span class="string">" "</span>;
+    std::cout &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="comment">// 3. Reverse iterator</span>
+    <span class="keyword">for</span> (<span class="keyword">auto</span> rit = lst.<span class="function">rbegin</span>(); rit != lst.<span class="function">rend</span>(); ++rit)
+        std::cout &lt;&lt; *rit &lt;&lt; <span class="string">" "</span>;
+    std::cout &lt;&lt; <span class="string">"\n"</span>;  <span class="comment">// 50 40 30 20 10</span>
+
+    <span class="comment">// 4. Using std::next / std::prev</span>
+    <span class="keyword">auto</span> second = std::<span class="function">next</span>(lst.<span class="function">begin</span>());       <span class="comment">// 20</span>
+    <span class="keyword">auto</span> last   = std::<span class="function">prev</span>(lst.<span class="function">end</span>());         <span class="comment">// 50</span>
+    std::cout &lt;&lt; *second &lt;&lt; <span class="string">", "</span> &lt;&lt; *last &lt;&lt; <span class="string">"\n"</span>;
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== What Is std::deque? ===== -->
+                <h2>What Is std::deque?</h2>
+                <p><code>std::deque</code> (pronounced &ldquo;deck&rdquo;) stands for <strong>double-ended queue</strong>. It is defined in the <code>&lt;deque&gt;</code> header. A deque provides <strong>fast insertion and removal at both ends</strong> (O(1) amortized) while <em>also</em> supporting <strong>random access</strong> via <code>operator[]</code> and <code>at()</code>.</p>
+                <p>Internally, a deque is typically implemented as a <strong>sequence of fixed-size arrays</strong> (chunks) managed by a central map. This gives it unique performance characteristics:</p>
+                <ul>
+                    <li><strong>O(1) push/pop at both front and back</strong> &mdash; unlike <code>std::vector</code>, which is O(n) for <code>insert(begin(), val)</code>.</li>
+                    <li><strong>O(1) random access</strong> &mdash; unlike <code>std::list</code>, which requires O(n) traversal.</li>
+                    <li><strong>Non-contiguous memory</strong> &mdash; elements are <em>not</em> stored in a single contiguous block, so <code>data()</code> is not available.</li>
+                    <li><strong>Iterator invalidation</strong> &mdash; insertions at either end do not invalidate references to existing elements but <em>do</em> invalidate all iterators.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;deque&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::deque&lt;<span class="keyword">int</span>&gt; dq = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>};
+
+    dq.<span class="function">push_front</span>(<span class="number">5</span>);   <span class="comment">// {5, 10, 20, 30}  O(1)</span>
+    dq.<span class="function">push_back</span>(<span class="number">40</span>);   <span class="comment">// {5, 10, 20, 30, 40}  O(1)</span>
+
+    std::cout &lt;&lt; dq[<span class="number">0</span>] &lt;&lt; <span class="string">"\n"</span>;       <span class="comment">// 5   (random access)</span>
+    std::cout &lt;&lt; dq.<span class="function">at</span>(<span class="number">3</span>) &lt;&lt; <span class="string">"\n"</span>;   <span class="comment">// 30  (bounds-checked)</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : dq)
+        std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    <span class="comment">// Output: 5 10 20 30 40</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Creating and Using Deques ===== -->
+                <h2>Creating and Using Deques</h2>
+                <p>Deque initialization mirrors the patterns you already know from <code>std::vector</code>:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;deque&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    deque&lt;<span class="keyword">int</span>&gt; d1;                         <span class="comment">// empty deque</span>
+    deque&lt;<span class="keyword">int</span>&gt; d2 = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>};          <span class="comment">// initializer list</span>
+    deque&lt;<span class="keyword">int</span>&gt; d3(<span class="number">5</span>, <span class="number">0</span>);                    <span class="comment">// {0, 0, 0, 0, 0}</span>
+    deque&lt;<span class="keyword">int</span>&gt; d4(d2);                       <span class="comment">// copy of d2</span>
+    deque&lt;<span class="keyword">int</span>&gt; d5(d2.<span class="function">begin</span>(), d2.<span class="function">end</span>());    <span class="comment">// range constructor</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Deque Operations ===== -->
+                <h2>Deque Operations</h2>
+                <p>A <code>std::deque</code> supports all the operations <code>std::vector</code> does, plus efficient front operations:</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;deque&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::deque&lt;<span class="keyword">int</span>&gt; dq;
+
+    <span class="comment">// Adding elements</span>
+    dq.<span class="function">push_back</span>(<span class="number">10</span>);       <span class="comment">// {10}</span>
+    dq.<span class="function">push_back</span>(<span class="number">20</span>);       <span class="comment">// {10, 20}</span>
+    dq.<span class="function">push_front</span>(<span class="number">5</span>);       <span class="comment">// {5, 10, 20}</span>
+    dq.<span class="function">push_front</span>(<span class="number">1</span>);       <span class="comment">// {1, 5, 10, 20}</span>
+
+    <span class="comment">// Random access</span>
+    std::cout &lt;&lt; <span class="string">"dq[0] = "</span> &lt;&lt; dq[<span class="number">0</span>] &lt;&lt; <span class="string">"\n"</span>;      <span class="comment">// 1</span>
+    std::cout &lt;&lt; <span class="string">"dq.at(2) = "</span> &lt;&lt; dq.<span class="function">at</span>(<span class="number">2</span>) &lt;&lt; <span class="string">"\n"</span>; <span class="comment">// 10</span>
+    std::cout &lt;&lt; <span class="string">"front = "</span> &lt;&lt; dq.<span class="function">front</span>() &lt;&lt; <span class="string">"\n"</span>;    <span class="comment">// 1</span>
+    std::cout &lt;&lt; <span class="string">"back  = "</span> &lt;&lt; dq.<span class="function">back</span>() &lt;&lt; <span class="string">"\n"</span>;     <span class="comment">// 20</span>
+
+    <span class="comment">// Removing elements</span>
+    dq.<span class="function">pop_front</span>();          <span class="comment">// removes 1 &rarr; {5, 10, 20}</span>
+    dq.<span class="function">pop_back</span>();           <span class="comment">// removes 20 &rarr; {5, 10}</span>
+
+    <span class="comment">// Insert at arbitrary position</span>
+    dq.<span class="function">insert</span>(dq.<span class="function">begin</span>() + <span class="number">1</span>, <span class="number">7</span>);  <span class="comment">// {5, 7, 10}</span>
+
+    <span class="comment">// Erase at position</span>
+    dq.<span class="function">erase</span>(dq.<span class="function">begin</span>());             <span class="comment">// {7, 10}</span>
+
+    <span class="comment">// Size and clear</span>
+    std::cout &lt;&lt; <span class="string">"Size: "</span> &lt;&lt; dq.<span class="function">size</span>() &lt;&lt; <span class="string">"\n"</span>;   <span class="comment">// 2</span>
+    dq.<span class="function">clear</span>();
+    std::cout &lt;&lt; <span class="string">"Empty: "</span> &lt;&lt; dq.<span class="function">empty</span>() &lt;&lt; <span class="string">"\n"</span>;  <span class="comment">// 1 (true)</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== std::forward_list ===== -->
+                <h2>std::forward_list &mdash; Singly-Linked List</h2>
+                <p><code>std::forward_list</code> (from <code>&lt;forward_list&gt;</code>, C++11) is a <strong>singly-linked list</strong>. Each node points only to the <strong>next</strong> node, making it the most memory-efficient linked list in the STL.</p>
+                <ul>
+                    <li><strong>Forward-only iteration</strong> &mdash; no <code>rbegin()</code> / <code>rend()</code>.</li>
+                    <li><strong>No <code>size()</code></strong> &mdash; to keep it minimal; use <code>std::distance()</code> if you need the count.</li>
+                    <li><strong>No <code>push_back()</code></strong> &mdash; only <code>push_front()</code>, <code>insert_after()</code>, and <code>erase_after()</code>.</li>
+                    <li>Best for use cases where you only need forward traversal and minimal overhead.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;forward_list&gt;</span>
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    std::forward_list&lt;<span class="keyword">int</span>&gt; fl = {<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>};
+
+    fl.<span class="function">push_front</span>(<span class="number">5</span>);   <span class="comment">// {5, 10, 20, 30}</span>
+
+    <span class="comment">// Insert after the first element</span>
+    fl.<span class="function">insert_after</span>(fl.<span class="function">begin</span>(), <span class="number">7</span>);  <span class="comment">// {5, 7, 10, 20, 30}</span>
+
+    <span class="comment">// Erase the element after the first</span>
+    fl.<span class="function">erase_after</span>(fl.<span class="function">begin</span>());     <span class="comment">// {5, 10, 20, 30}</span>
+
+    fl.<span class="function">remove</span>(<span class="number">20</span>);   <span class="comment">// {5, 10, 30}</span>
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> n : fl)
+        std::cout &lt;&lt; n &lt;&lt; <span class="string">" "</span>;
+    <span class="comment">// Output: 5 10 30</span>
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+                </div>
+
+                <!-- ===== Comparison Table ===== -->
+                <h2>Comparison: vector vs list vs deque vs forward_list</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>vector</th>
+                            <th>list</th>
+                            <th>deque</th>
+                            <th>forward_list</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Memory layout</td>
+                            <td>Contiguous</td>
+                            <td>Nodes (scattered)</td>
+                            <td>Chunks of arrays</td>
+                            <td>Nodes (scattered)</td>
+                        </tr>
+                        <tr>
+                            <td>Random access (<code>[]</code>)</td>
+                            <td>O(1) &#10004;</td>
+                            <td>N/A &#10008;</td>
+                            <td>O(1) &#10004;</td>
+                            <td>N/A &#10008;</td>
+                        </tr>
+                        <tr>
+                            <td>push_back</td>
+                            <td>O(1) amortized</td>
+                            <td>O(1)</td>
+                            <td>O(1) amortized</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>push_front</td>
+                            <td>O(n)</td>
+                            <td>O(1)</td>
+                            <td>O(1) amortized</td>
+                            <td>O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Insert in middle</td>
+                            <td>O(n)</td>
+                            <td>O(1)*</td>
+                            <td>O(n)</td>
+                            <td>O(1)*</td>
+                        </tr>
+                        <tr>
+                            <td>Erase in middle</td>
+                            <td>O(n)</td>
+                            <td>O(1)*</td>
+                            <td>O(n)</td>
+                            <td>O(1)*</td>
+                        </tr>
+                        <tr>
+                            <td>Iterator type</td>
+                            <td>Random-access</td>
+                            <td>Bidirectional</td>
+                            <td>Random-access</td>
+                            <td>Forward</td>
+                        </tr>
+                        <tr>
+                            <td>Memory overhead</td>
+                            <td>Low</td>
+                            <td>High (2 ptrs/node)</td>
+                            <td>Medium</td>
+                            <td>Medium (1 ptr/node)</td>
+                        </tr>
+                        <tr>
+                            <td>Cache friendliness</td>
+                            <td>Excellent</td>
+                            <td>Poor</td>
+                            <td>Good</td>
+                            <td>Poor</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><em>* O(1) once you have an iterator to the position; finding the position may be O(n).</em></p>
+
+                <!-- ===== When to Use Each Container ===== -->
+                <h2>When to Use Each Container</h2>
+                <ul>
+                    <li><strong>Use <code>std::vector</code></strong> as the default sequential container. It has the best cache performance and covers most use cases.</li>
+                    <li><strong>Use <code>std::deque</code></strong> when you need fast insertion/removal at <em>both</em> ends (e.g., sliding windows, BFS queues) and also need random access.</li>
+                    <li><strong>Use <code>std::list</code></strong> when you need frequent insertion/removal in the <em>middle</em> of the sequence and you already hold iterators to the target positions. Also useful when <em>iterator stability</em> is critical &mdash; iterators/references to other elements are never invalidated by insertions or erasures.</li>
+                    <li><strong>Use <code>std::forward_list</code></strong> when memory is at a premium and you only need forward traversal (e.g., implementing a hash table&rsquo;s chain).</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>&#128161; Rule of thumb:</strong> Start with <code>std::vector</code>. Switch to another container only when profiling shows that its specific performance characteristics provide a measurable benefit for your workload.
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>std::list</code> is a <strong>doubly-linked list</strong> that supports O(1) insert/erase at any position (given an iterator) but has <strong>no random access</strong>.</li>
+                    <li><code>std::list</code> has special member functions: <code>splice()</code>, <code>merge()</code>, <code>unique()</code>, <code>sort()</code>, <code>reverse()</code>, <code>remove()</code>, and <code>remove_if()</code>.</li>
+                    <li><code>std::deque</code> is a <strong>double-ended queue</strong> offering O(1) push/pop at both ends <em>and</em> random access.</li>
+                    <li><code>std::deque</code> supports <code>operator[]</code>, <code>at()</code>, <code>front()</code>, <code>back()</code>, <code>push_front()</code>, and <code>push_back()</code>.</li>
+                    <li><code>std::forward_list</code> is a <strong>singly-linked list</strong> &mdash; the most lightweight linked list, with forward-only iteration and no <code>size()</code>.</li>
+                    <li>Always <strong>prefer <code>std::vector</code></strong> unless you have a specific reason to choose another container.</li>
+                    <li>Use the <strong>comparison table</strong> to select the right container based on your access patterns, insertion/removal needs, and memory constraints.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/bOOYOlNOPXY" title="C++ STL Lists &amp; Deques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header must you include to use <code>std::list</code>?","o":["<code>&lt;vector&gt;</code>","<code>&lt;list&gt;</code>","<code>&lt;deque&gt;</code>","<code>&lt;forward_list&gt;</code>"],"a":1},
+                {"q":"What kind of data structure is <code>std::list</code>?","o":["A dynamic array","A singly-linked list","A doubly-linked list","A hash table"],"a":2},
+                {"q":"Does <code>std::list</code> support random access via <code>operator[]</code>?","o":["Yes","No","Only for integer lists","Only in C++20"],"a":1},
+                {"q":"What is the time complexity of inserting an element in the middle of a <code>std::list</code> given an iterator?","o":["O(n)","O(log n)","O(1)","O(n log n)"],"a":2},
+                {"q":"Which of the following is <strong>not</strong> available on <code>std::list</code>?","o":["<code>push_back()</code>","<code>push_front()</code>","<code>operator[]</code>","<code>erase()</code>"],"a":2},
+                {"q":"How do you create an empty list of strings?","o":["<code>std::list&lt;std::string&gt; lst;</code>","<code>std::list lst&lt;string&gt;;</code>","<code>list string lst;</code>","<code>std::list(string) lst;</code>"],"a":0},
+                {"q":"What does <code>std::list&lt;int&gt; lst(5, 42);</code> create?","o":["A list with one element: 42","A list with 5 elements all set to 42","A list with 42 elements","A compile error"],"a":1},
+                {"q":"What does <code>push_front(val)</code> do on a list?","o":["Adds val to the end","Adds val to the front","Removes the first element","Sorts the list"],"a":1},
+                {"q":"What does <code>pop_back()</code> do on a list?","o":["Removes the first element","Removes the last element","Returns and removes the last element","Clears the list"],"a":1},
+                {"q":"Does <code>pop_front()</code> return the removed element?","o":["Yes","No, it returns void","It returns an iterator","It returns a boolean"],"a":1},
+                {"q":"How do you move an iterator forward by 3 positions in a <code>std::list</code>?","o":["<code>it + 3</code>","<code>it += 3</code>","<code>std::advance(it, 3)</code>","<code>it.forward(3)</code>"],"a":2},
+                {"q":"What does <code>lst.sort()</code> do?","o":["Nothing &mdash; must use <code>std::sort()</code>","Sorts the list using merge sort","Reverses the list","Removes duplicates"],"a":1},
+                {"q":"Why can't you use <code>std::sort()</code> directly on a <code>std::list</code>?","o":["<code>std::sort()</code> requires random-access iterators","Lists are always sorted","<code>std::sort()</code> only works on arrays","No reason &mdash; you can use it"],"a":0},
+                {"q":"What does <code>lst.reverse()</code> do?","o":["Sorts in descending order","Reverses the order of elements","Removes the last element","Creates a reversed copy"],"a":1},
+                {"q":"What does <code>lst.unique()</code> remove?","o":["All duplicate elements","Consecutive duplicate elements","The first element","Non-unique elements from two lists"],"a":1},
+                {"q":"What must be true before calling <code>lst.unique()</code> to remove all duplicates?","o":["The list must be empty","The list must be sorted","The list must have fewer than 10 elements","Nothing"],"a":1},
+                {"q":"What does <code>lst.remove(val)</code> do?","o":["Removes the element at index val","Removes all elements equal to val","Removes the first occurrence of val","Removes the last element"],"a":1},
+                {"q":"What does <code>lst.remove_if(pred)</code> do?","o":["Removes the first element matching pred","Removes all elements satisfying pred","Checks if pred is true","Sorts by pred"],"a":1},
+                {"q":"What does <code>lst.merge(other)</code> do?","o":["Copies other into lst","Merges two sorted lists; other becomes empty","Appends other to lst","Swaps lst and other"],"a":1},
+                {"q":"What requirement must both lists meet before calling <code>merge()</code>?","o":["Both must be empty","Both must be sorted","Both must have the same size","No requirement"],"a":1},
+                {"q":"What does <code>splice()</code> do?","o":["Copies elements between lists","Transfers elements from one list to another without copying","Splits a list into two halves","Sorts and merges"],"a":1},
+                {"q":"What is the time complexity of <code>splice()</code> when transferring an entire list?","o":["O(n)","O(n log n)","O(1)","O(n&sup2;)"],"a":2},
+                {"q":"Does inserting into a <code>std::list</code> invalidate existing iterators?","o":["Yes, all iterators are invalidated","No, existing iterators remain valid","Only reverse iterators are invalidated","Only if the list is empty"],"a":1},
+                {"q":"Which header defines <code>std::deque</code>?","o":["<code>&lt;deque&gt;</code>","<code>&lt;queue&gt;</code>","<code>&lt;list&gt;</code>","<code>&lt;vector&gt;</code>"],"a":0},
+                {"q":"What does deque stand for?","o":["Dynamic queue","Double-ended queue","Dual entry queue","Distributed queue"],"a":1},
+                {"q":"Does <code>std::deque</code> support random access?","o":["No","Yes, via <code>operator[]</code> and <code>at()</code>","Only via <code>at()</code>","Only for numeric types"],"a":1},
+                {"q":"What is the time complexity of <code>push_front()</code> on a deque?","o":["O(n)","O(log n)","O(1) amortized","O(n log n)"],"a":2},
+                {"q":"What is the time complexity of <code>push_back()</code> on a deque?","o":["O(n)","O(1) amortized","O(log n)","O(n&sup2;)"],"a":1},
+                {"q":"How does a deque store its elements internally?","o":["A single contiguous array","A linked list of nodes","A sequence of fixed-size array chunks","A hash table"],"a":2},
+                {"q":"Does <code>std::deque</code> provide a <code>data()</code> member function?","o":["Yes","No, because memory is not contiguous","Only in C++20","Only for primitive types"],"a":1},
+                {"q":"What does <code>dq.at(i)</code> throw when <code>i</code> is out of range?","o":["<code>std::runtime_error</code>","<code>std::out_of_range</code>","<code>std::logic_error</code>","Nothing &mdash; undefined behaviour"],"a":1},
+                {"q":"Which operation is <strong>not</strong> O(1) on a deque?","o":["<code>push_back()</code>","<code>push_front()</code>","Insert in the middle","<code>pop_front()</code>"],"a":2},
+                {"q":"What type of iterators does <code>std::deque</code> provide?","o":["Forward only","Bidirectional","Random-access","Input only"],"a":2},
+                {"q":"Which header defines <code>std::forward_list</code>?","o":["<code>&lt;list&gt;</code>","<code>&lt;forward_list&gt;</code>","<code>&lt;slist&gt;</code>","<code>&lt;flist&gt;</code>"],"a":1},
+                {"q":"What kind of data structure is <code>std::forward_list</code>?","o":["Doubly-linked list","Singly-linked list","Dynamic array","Circular buffer"],"a":1},
+                {"q":"Does <code>std::forward_list</code> have a <code>size()</code> member function?","o":["Yes","No","Only in C++17","Only if the list is non-empty"],"a":1},
+                {"q":"How do you get the number of elements in a <code>std::forward_list</code>?","o":["<code>fl.size()</code>","<code>std::distance(fl.begin(), fl.end())</code>","<code>fl.length()</code>","<code>fl.count()</code>"],"a":1},
+                {"q":"Does <code>std::forward_list</code> support <code>push_back()</code>?","o":["Yes","No, only <code>push_front()</code>","Only in C++20","Only for small lists"],"a":1},
+                {"q":"Which insertion function does <code>std::forward_list</code> provide instead of <code>insert()</code>?","o":["<code>insert_after()</code>","<code>insert_before()</code>","<code>emplace()</code>","<code>add()</code>"],"a":0},
+                {"q":"What does <code>fl.erase_after(it)</code> do?","o":["Erases the element at <code>it</code>","Erases the element after <code>it</code>","Erases all elements after <code>it</code>","Erases the entire list"],"a":1},
+                {"q":"Which container has the lowest memory overhead per element?","o":["<code>std::list</code>","<code>std::deque</code>","<code>std::forward_list</code>","<code>std::vector</code>"],"a":3},
+                {"q":"Which linked list container has the lowest per-node overhead?","o":["<code>std::list</code> (2 pointers)","<code>std::forward_list</code> (1 pointer)","They are the same","<code>std::deque</code>"],"a":1},
+                {"q":"Which container has the best cache performance?","o":["<code>std::list</code>","<code>std::forward_list</code>","<code>std::vector</code>","<code>std::deque</code>"],"a":2},
+                {"q":"Which container should you use as the default sequential container?","o":["<code>std::list</code>","<code>std::deque</code>","<code>std::array</code>","<code>std::vector</code>"],"a":3},
+                {"q":"When is <code>std::deque</code> preferred over <code>std::vector</code>?","o":["When you need contiguous memory","When you need fast push/pop at both ends","When you only push_back","When elements are very large"],"a":1},
+                {"q":"When is <code>std::list</code> preferred over <code>std::vector</code>?","o":["When you need random access","When you need frequent mid-sequence insertions with stable iterators","When you need cache-friendly access","Always"],"a":1},
+                {"q":"Can you use <code>std::sort()</code> from <code>&lt;algorithm&gt;</code> on a <code>std::deque</code>?","o":["No","Yes, because deque has random-access iterators","Only in C++17","Only with a custom comparator"],"a":1},
+                {"q":"Which container is typically used to implement <code>std::queue</code> by default?","o":["<code>std::vector</code>","<code>std::list</code>","<code>std::deque</code>","<code>std::forward_list</code>"],"a":2},
+                {"q":"What does <code>lst.emplace_front(args...)</code> do?","o":["Copies an element to the front","Constructs an element in-place at the front","Moves the first element","Erases the front element"],"a":1},
+                {"q":"What happens to iterators of a <code>std::deque</code> after a <code>push_front()</code>?","o":["All iterators remain valid","All iterators are invalidated","Only the front iterator is invalidated","Only reverse iterators are invalidated"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="vectors.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">STL Vectors</span>
+                </a>
+                <a href="maps-sets.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">STL Maps &amp; Sets</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

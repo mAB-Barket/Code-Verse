@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ If/Else Statements - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-if-else">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html" class="active"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 10 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="18" style="width:18%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; If/Else Statements
+                </div>
+                <h1>10. If/Else Statements</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 10 of 55</span>
+                    <span>&#9201; 20 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ==================== INTRODUCTION ==================== -->
+                <h2>What Is Conditional Execution?</h2>
+                <p>So far, every program you have written executes its statements from top to bottom, one after another. But real-world programs need to <em>make decisions</em>. Should the app show a welcome message or an error? Should the game move the player left or right? Should the bank approve or deny a withdrawal?</p>
+                <p><strong>Conditional execution</strong> lets your program choose which code to run based on whether a condition is <code>true</code> or <code>false</code>. In C++ the primary tool for this is the <code>if</code> statement and its companions <code>else</code> and <code>else if</code>.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>How the <code>if</code> statement works</li>
+                    <li>How to add an alternative path with <code>else</code></li>
+                    <li>How to chain multiple conditions with <code>else if</code></li>
+                    <li>How to nest <code>if</code> statements inside one another</li>
+                    <li>How to use comparison and logical operators in conditions</li>
+                    <li>Short-circuit evaluation</li>
+                    <li>Common mistakes like <code>=</code> vs <code>==</code> and the dangling else</li>
+                    <li>The ternary operator (<code>? :</code>) as a shorthand</li>
+                    <li>C++17&rsquo;s <code>if</code> with initializer</li>
+                    <li>Practical examples: grade calculator, number classifier, menu system</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>A condition in C++ is any expression that evaluates to a boolean value. The value <code>0</code> is treated as <code>false</code>; every other value (including negative numbers) is treated as <code>true</code>.</p>
+                </div>
+
+                <!-- ==================== THE IF STATEMENT ==================== -->
+                <h2>The <code>if</code> Statement</h2>
+                <p>The simplest form of conditional execution: run a block of code <em>only if</em> a condition is true.</p>
+
+                <h3>Syntax</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>if (condition) {
+    // Executes only when condition is true
+}</pre></div>
+
+                <p>The parentheses around the condition are <strong>required</strong>. The braces <code>{ }</code> define the body. If the body contains only a single statement, braces are technically optional&mdash;but always using them is strongly recommended to prevent bugs.</p>
+
+                <h3>Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int temperature = 35;
+
+    if (temperature &gt; 30) {
+        cout &lt;&lt; "It's a hot day!" &lt;&lt; endl;
+    }
+
+    cout &lt;&lt; "Program continues..." &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>It's a hot day!
+Program continues...</pre></div>
+
+                <p>Because <code>temperature</code> (35) is greater than 30, the condition is <code>true</code> and the message prints. If you change <code>temperature</code> to 25, the <code>if</code> body is skipped and only &ldquo;Program continues...&rdquo; prints.</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Always use braces <code>{ }</code> even for single-statement bodies. This prevents subtle bugs when you later add a second statement and forget to add braces.</p>
+                </div>
+
+                <!-- ==================== THE IF-ELSE STATEMENT ==================== -->
+                <h2>The <code>if-else</code> Statement</h2>
+                <p>Often you want to do one thing when a condition is true and a <em>different</em> thing when it is false. That is what <code>else</code> provides.</p>
+
+                <h3>Syntax</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>if (condition) {
+    // Runs when condition is true
+} else {
+    // Runs when condition is false
+}</pre></div>
+
+                <h3>Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 16;
+
+    if (age &gt;= 18) {
+        cout &lt;&lt; "You are eligible to vote." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "You are not old enough to vote." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>You are not old enough to vote.</pre></div>
+
+                <p>Exactly one of the two branches will execute&mdash;never both, never neither.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>else</code> block has no condition of its own. It is simply the &ldquo;otherwise&rdquo; path that runs whenever the <code>if</code> condition evaluates to <code>false</code>.</p>
+                </div>
+
+                <!-- ==================== IF-ELSE IF-ELSE CHAIN ==================== -->
+                <h2>The <code>if &ndash; else if &ndash; else</code> Chain</h2>
+                <p>When you have more than two possibilities, chain multiple conditions together with <code>else if</code>.</p>
+
+                <h3>Syntax</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>if (condition1) {
+    // Runs if condition1 is true
+} else if (condition2) {
+    // Runs if condition1 is false AND condition2 is true
+} else if (condition3) {
+    // Runs if condition1 and condition2 are false AND condition3 is true
+} else {
+    // Runs if ALL conditions above are false
+}</pre></div>
+
+                <p>The conditions are tested <em>in order</em>. As soon as one is true, its block runs and the rest are skipped. The final <code>else</code> is optional but acts as a catch-all default.</p>
+
+                <h3>Example: Grade Calculator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int score;
+    cout &lt;&lt; "Enter your score (0-100): ";
+    cin &gt;&gt; score;
+
+    if (score &gt;= 90) {
+        cout &lt;&lt; "Grade: A" &lt;&lt; endl;
+    } else if (score &gt;= 80) {
+        cout &lt;&lt; "Grade: B" &lt;&lt; endl;
+    } else if (score &gt;= 70) {
+        cout &lt;&lt; "Grade: C" &lt;&lt; endl;
+    } else if (score &gt;= 60) {
+        cout &lt;&lt; "Grade: D" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Grade: F" &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p>If the user enters 85, the program checks: is 85 &ge; 90? No. Is 85 &ge; 80? Yes &rarr; prints &ldquo;Grade: B&rdquo; and skips the remaining conditions.</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Order matters! Because earlier conditions are checked first, you do not need to write <code>score &gt;= 80 &amp;&amp; score &lt; 90</code>. If you reach the <code>else if (score &gt;= 80)</code> branch, you already know the score is less than 90.</p>
+                </div>
+
+                <!-- ==================== NESTED IF STATEMENTS ==================== -->
+                <h2>Nested <code>if</code> Statements</h2>
+                <p>You can place an <code>if</code> statement inside another <code>if</code> (or <code>else</code>) block. This is called <strong>nesting</strong> and is useful when a second decision depends on the result of the first.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    bool hasLicense = true;
+
+    if (age &gt;= 18) {
+        if (hasLicense) {
+            cout &lt;&lt; "You can drive." &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "You are old enough but need a license." &lt;&lt; endl;
+        }
+    } else {
+        cout &lt;&lt; "You are too young to drive." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>You can drive.</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Deep nesting (three or more levels) makes code hard to read. Consider using logical operators (<code>&amp;&amp;</code>, <code>||</code>) or restructuring into functions to flatten nested conditions.</p>
+                </div>
+
+                <!-- ==================== COMPARISON OPERATORS ==================== -->
+                <h2>Comparison (Relational) Operators in Conditions</h2>
+                <p>Conditions in <code>if</code> statements most often use comparison operators to compare two values. Here is the full set:</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Meaning</th><th>Example</th><th>Result (a=5, b=3)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>==</code></td><td>Equal to</td><td><code>a == b</code></td><td><code>false</code></td></tr>
+                        <tr><td><code>!=</code></td><td>Not equal to</td><td><code>a != b</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&gt;</code></td><td>Greater than</td><td><code>a &gt; b</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&lt;</code></td><td>Less than</td><td><code>a &lt; b</code></td><td><code>false</code></td></tr>
+                        <tr><td><code>&gt;=</code></td><td>Greater than or equal</td><td><code>a &gt;= b</code></td><td><code>true</code></td></tr>
+                        <tr><td><code>&lt;=</code></td><td>Less than or equal</td><td><code>a &lt;= b</code></td><td><code>false</code></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 10, y = 20;
+
+    if (x == y) {
+        cout &lt;&lt; "x and y are equal" &lt;&lt; endl;
+    }
+    if (x != y) {
+        cout &lt;&lt; "x and y are NOT equal" &lt;&lt; endl;
+    }
+    if (x &lt; y) {
+        cout &lt;&lt; "x is less than y" &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>x and y are NOT equal
+x is less than y</pre></div>
+
+                <!-- ==================== LOGICAL OPERATORS ==================== -->
+                <h2>Logical Operators in Conditions</h2>
+                <p>Logical operators combine multiple conditions into a single expression.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operator</th><th>Name</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>&amp;&amp;</code></td><td>Logical AND</td><td>True only if <em>both</em> operands are true</td></tr>
+                        <tr><td><code>||</code></td><td>Logical OR</td><td>True if <em>at least one</em> operand is true</td></tr>
+                        <tr><td><code>!</code></td><td>Logical NOT</td><td>Reverses the truth value</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>AND (<code>&amp;&amp;</code>)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int age = 25;
+bool hasTicket = true;
+
+if (age &gt;= 18 &amp;&amp; hasTicket) {
+    cout &lt;&lt; "You may enter the concert." &lt;&lt; endl;
+}</pre></div>
+
+                <p>Both conditions must be true. If <code>age</code> is 15, the entire expression is <code>false</code> regardless of <code>hasTicket</code>.</p>
+
+                <h3>OR (<code>||</code>)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>bool isWeekend = true;
+bool isHoliday = false;
+
+if (isWeekend || isHoliday) {
+    cout &lt;&lt; "You can sleep in!" &lt;&lt; endl;
+}</pre></div>
+
+                <p>At least one must be true. Here <code>isWeekend</code> is <code>true</code>, so the message prints.</p>
+
+                <h3>NOT (<code>!</code>)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>bool isRaining = false;
+
+if (!isRaining) {
+    cout &lt;&lt; "Let's go for a walk!" &lt;&lt; endl;
+}</pre></div>
+
+                <p><code>!isRaining</code> flips <code>false</code> to <code>true</code>, so the body executes.</p>
+
+                <h3>Combining Operators</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int temp = 22;
+bool isSunny = true;
+
+if (temp &gt; 20 &amp;&amp; temp &lt; 35 &amp;&amp; isSunny) {
+    cout &lt;&lt; "Perfect weather for the beach!" &lt;&lt; endl;
+}
+
+// Using parentheses for clarity
+if ((temp &gt; 30 || isSunny) &amp;&amp; !isRaining) {
+    cout &lt;&lt; "Go outside!" &lt;&lt; endl;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Operator precedence: <code>!</code> binds tightest, then <code>&amp;&amp;</code>, then <code>||</code>. Use parentheses to make your intent clear: <code>(a || b) &amp;&amp; c</code> is very different from <code>a || (b &amp;&amp; c)</code>.</p>
+                </div>
+
+                <!-- ==================== SHORT-CIRCUIT EVALUATION ==================== -->
+                <h2>Short-Circuit Evaluation</h2>
+                <p>C++ evaluates logical expressions from left to right and <strong>stops as soon as the result is determined</strong>. This is called <em>short-circuit evaluation</em>.</p>
+
+                <ul>
+                    <li><code>&amp;&amp;</code> (AND): If the left operand is <code>false</code>, the result is <code>false</code>&mdash;the right operand is <strong>not evaluated</strong>.</li>
+                    <li><code>||</code> (OR): If the left operand is <code>true</code>, the result is <code>true</code>&mdash;the right operand is <strong>not evaluated</strong>.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 0;
+
+    // Short-circuit prevents division by zero!
+    if (x != 0 &amp;&amp; 10 / x &gt; 2) {
+        cout &lt;&lt; "This won't cause a crash." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "x is zero, division skipped." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <p>Because <code>x != 0</code> is <code>false</code>, C++ never evaluates <code>10 / x</code>, avoiding a division-by-zero error.</p>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Short-circuit evaluation is a powerful tool. Place the &ldquo;cheaper&rdquo; or &ldquo;safer&rdquo; check on the left side of <code>&amp;&amp;</code> and <code>||</code> to guard against expensive computations or runtime errors.</p>
+                </div>
+
+                <!-- ==================== COMMON MISTAKES ==================== -->
+                <h2>Common Mistakes</h2>
+
+                <h3>Mistake 1: <code>=</code> vs <code>==</code></h3>
+                <p>One of the most frequent bugs in C++. The single <code>=</code> is the <em>assignment</em> operator; the double <code>==</code> is the <em>comparison</em> operator.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int x = 5;
+
+// BUG: This ASSIGNS 10 to x, then evaluates 10 as true
+if (x = 10) {
+    cout &lt;&lt; "This always runs!" &lt;&lt; endl;
+}
+
+// CORRECT: This COMPARES x with 10
+if (x == 10) {
+    cout &lt;&lt; "x is 10" &lt;&lt; endl;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Using <code>=</code> instead of <code>==</code> inside an <code>if</code> condition is a legal C++ expression (it assigns and then tests the assigned value). The compiler may warn but will not error. Always double-check your conditions!</p>
+                </div>
+
+                <h3>Mistake 2: The Dangling Else</h3>
+                <p>Without braces, an <code>else</code> attaches to the <em>nearest</em> preceding <code>if</code>, which can produce surprising behavior:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int x = 5, y = 10;
+
+// Misleading indentation!
+if (x &gt; 0)
+    if (y &gt; 0)
+        cout &lt;&lt; "Both positive" &lt;&lt; endl;
+else
+    cout &lt;&lt; "This looks like it belongs to the first if..." &lt;&lt; endl;
+    // But it actually belongs to the SECOND if (y &gt; 0)</pre></div>
+
+                <p>The compiler reads it as:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>if (x &gt; 0) {
+    if (y &gt; 0) {
+        cout &lt;&lt; "Both positive" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "This belongs to the second if" &lt;&lt; endl;
+    }
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Always use braces to make the structure explicit. This completely avoids the dangling else ambiguity and makes your code easier to read and maintain.</p>
+                </div>
+
+                <h3>Mistake 3: Semicolon After the <code>if</code> Condition</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int x = 5;
+
+// BUG: The semicolon creates an empty body
+if (x &gt; 0);   // &lt;-- empty statement!
+{
+    cout &lt;&lt; "This ALWAYS runs, regardless of x" &lt;&lt; endl;
+}
+
+// CORRECT:
+if (x &gt; 0) {
+    cout &lt;&lt; "x is positive" &lt;&lt; endl;
+}</pre></div>
+
+                <h3>Mistake 4: Comparing Floating-Point Numbers</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>double a = 0.1 + 0.2;
+
+// BUG: May be false due to floating-point imprecision
+if (a == 0.3) {
+    cout &lt;&lt; "Equal" &lt;&lt; endl;
+}
+
+// CORRECT: Compare within a tolerance
+#include &lt;cmath&gt;
+if (fabs(a - 0.3) &lt; 1e-9) {
+    cout &lt;&lt; "Approximately equal" &lt;&lt; endl;
+}</pre></div>
+
+                <!-- ==================== TERNARY OPERATOR ==================== -->
+                <h2>The Ternary Operator (<code>? :</code>)</h2>
+                <p>The <strong>ternary</strong> (conditional) operator is a compact shorthand for a simple <code>if-else</code> that assigns or returns a value.</p>
+
+                <h3>Syntax</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>result = (condition) ? value_if_true : value_if_false;</pre></div>
+
+                <h3>Examples</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 20;
+
+    // Instead of if-else:
+    string status = (age &gt;= 18) ? "Adult" : "Minor";
+    cout &lt;&lt; status &lt;&lt; endl;  // Adult
+
+    // Inline in output:
+    cout &lt;&lt; "You are " &lt;&lt; ((age &gt;= 18) ? "an adult" : "a minor") &lt;&lt; endl;
+
+    // Finding the maximum:
+    int a = 7, b = 12;
+    int maxVal = (a &gt; b) ? a : b;
+    cout &lt;&lt; "Max: " &lt;&lt; maxVal &lt;&lt; endl;  // 12
+
+    // Absolute value:
+    int num = -5;
+    int absVal = (num &gt;= 0) ? num : -num;
+    cout &lt;&lt; "Absolute: " &lt;&lt; absVal &lt;&lt; endl;  // 5
+
+    return 0;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>The ternary operator is great for short, simple conditions. If your expression becomes complex or spans multiple lines, use a regular <code>if-else</code> for clarity.</p>
+                </div>
+
+                <h3>Nested Ternary (Use Sparingly)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int score = 85;
+
+// Nested ternary &mdash; hard to read!
+string grade = (score &gt;= 90) ? "A"
+             : (score &gt;= 80) ? "B"
+             : (score &gt;= 70) ? "C"
+             : (score &gt;= 60) ? "D"
+             : "F";
+cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; endl;  // Grade: B</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Nested ternary operators are legal but reduce readability. Most style guides discourage nesting more than one level deep. Prefer <code>if-else if</code> chains for multi-way decisions.</p>
+                </div>
+
+                <!-- ==================== IF WITH INITIALIZER (C++17) ==================== -->
+                <h2><code>if</code> with Initializer (C++17)</h2>
+                <p>C++17 introduced a powerful feature: you can declare and initialize a variable <em>inside</em> the <code>if</code> statement. The variable&rsquo;s scope is limited to the <code>if-else</code> block, keeping the enclosing scope clean.</p>
+
+                <h3>Syntax</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>if (init-statement; condition) {
+    // variable from init-statement is in scope here
+} else {
+    // ...and here too
+}
+// variable is OUT of scope here</pre></div>
+
+                <h3>Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;map&gt;
+using namespace std;
+
+int main() {
+    map&lt;string, int&gt; scores = {{"Alice", 92}, {"Bob", 78}};
+
+    // C++17: declare 'it' inside the if
+    if (auto it = scores.find("Alice"); it != scores.end()) {
+        cout &lt;&lt; "Found: " &lt;&lt; it-&gt;second &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Not found" &lt;&lt; endl;
+    }
+    // 'it' is no longer accessible here
+
+    return 0;
+}</pre></div>
+
+                <p>Without C++17, you would have to declare <code>it</code> before the <code>if</code>, polluting the outer scope.</p>
+
+                <h3>Another Example</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Lock a mutex and check a condition in one statement
+if (auto val = getValue(); val &gt; 0) {
+    cout &lt;&lt; "Positive value: " &lt;&lt; val &lt;&lt; endl;
+} else {
+    cout &lt;&lt; "Non-positive: " &lt;&lt; val &lt;&lt; endl;
+}</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>To use C++17 features, compile with the <code>-std=c++17</code> flag (GCC/Clang) or set the C++ Language Standard to C++17 in your IDE project settings.</p>
+                </div>
+
+                <!-- ==================== PRACTICAL EXAMPLES ==================== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Number Classifier</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int num;
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; num;
+
+    // Check positive, negative, or zero
+    if (num &gt; 0) {
+        cout &lt;&lt; num &lt;&lt; " is positive." &lt;&lt; endl;
+    } else if (num &lt; 0) {
+        cout &lt;&lt; num &lt;&lt; " is negative." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "The number is zero." &lt;&lt; endl;
+    }
+
+    // Check even or odd (only for non-zero)
+    if (num != 0) {
+        if (num % 2 == 0) {
+            cout &lt;&lt; num &lt;&lt; " is even." &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; num &lt;&lt; " is odd." &lt;&lt; endl;
+        }
+    }
+
+    // Check divisibility
+    if (num % 3 == 0 &amp;&amp; num % 5 == 0) {
+        cout &lt;&lt; num &lt;&lt; " is divisible by both 3 and 5." &lt;&lt; endl;
+    } else if (num % 3 == 0) {
+        cout &lt;&lt; num &lt;&lt; " is divisible by 3." &lt;&lt; endl;
+    } else if (num % 5 == 0) {
+        cout &lt;&lt; num &lt;&lt; " is divisible by 5." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 2: Grade Calculator with Input Validation</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int score;
+    cout &lt;&lt; "Enter your test score (0-100): ";
+    cin &gt;&gt; score;
+
+    // Validate input first
+    if (score &lt; 0 || score &gt; 100) {
+        cout &lt;&lt; "Error: Score must be between 0 and 100." &lt;&lt; endl;
+    } else {
+        char grade;
+        if (score &gt;= 90) {
+            grade = 'A';
+        } else if (score &gt;= 80) {
+            grade = 'B';
+        } else if (score &gt;= 70) {
+            grade = 'C';
+        } else if (score &gt;= 60) {
+            grade = 'D';
+        } else {
+            grade = 'F';
+        }
+
+        cout &lt;&lt; "Your grade: " &lt;&lt; grade &lt;&lt; endl;
+
+        // Additional feedback
+        if (grade == 'A' || grade == 'B') {
+            cout &lt;&lt; "Great job! Keep it up!" &lt;&lt; endl;
+        } else if (grade == 'F') {
+            cout &lt;&lt; "Please see the instructor for help." &lt;&lt; endl;
+        }
+    }
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 3: Simple Menu System</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "===== Calculator =====" &lt;&lt; endl;
+    cout &lt;&lt; "1. Add" &lt;&lt; endl;
+    cout &lt;&lt; "2. Subtract" &lt;&lt; endl;
+    cout &lt;&lt; "3. Multiply" &lt;&lt; endl;
+    cout &lt;&lt; "4. Divide" &lt;&lt; endl;
+    cout &lt;&lt; "Choose an option (1-4): ";
+
+    int choice;
+    cin &gt;&gt; choice;
+
+    double a, b;
+    cout &lt;&lt; "Enter two numbers: ";
+    cin &gt;&gt; a &gt;&gt; b;
+
+    if (choice == 1) {
+        cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a + b) &lt;&lt; endl;
+    } else if (choice == 2) {
+        cout &lt;&lt; a &lt;&lt; " - " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a - b) &lt;&lt; endl;
+    } else if (choice == 3) {
+        cout &lt;&lt; a &lt;&lt; " * " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a * b) &lt;&lt; endl;
+    } else if (choice == 4) {
+        if (b != 0) {
+            cout &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a / b) &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "Error: Cannot divide by zero!" &lt;&lt; endl;
+        }
+    } else {
+        cout &lt;&lt; "Invalid choice." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 4: Leap Year Checker</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int year;
+    cout &lt;&lt; "Enter a year: ";
+    cin &gt;&gt; year;
+
+    // A year is a leap year if:
+    // - Divisible by 4 AND not divisible by 100
+    // - OR divisible by 400
+    if ((year % 4 == 0 &amp;&amp; year % 100 != 0) || (year % 400 == 0)) {
+        cout &lt;&lt; year &lt;&lt; " is a leap year." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; year &lt;&lt; " is not a leap year." &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <!-- ==================== SUMMARY ==================== -->
+                <h2>Summary</h2>
+                <ul>
+                    <li><code>if</code> runs code only when its condition is <code>true</code>.</li>
+                    <li><code>if-else</code> provides two mutually exclusive paths.</li>
+                    <li><code>if-else if-else</code> handles multiple conditions in sequence; the first true condition wins.</li>
+                    <li>Nested <code>if</code> statements allow multi-level decisions but should be kept shallow for readability.</li>
+                    <li>Use <strong>comparison operators</strong> (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>) to form conditions.</li>
+                    <li>Use <strong>logical operators</strong> (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>) to combine conditions.</li>
+                    <li><strong>Short-circuit evaluation</strong>: <code>&amp;&amp;</code> stops on <code>false</code>; <code>||</code> stops on <code>true</code>.</li>
+                    <li>Watch out for <code>=</code> vs <code>==</code>, the dangling else, and an accidental semicolon after <code>if</code>.</li>
+                    <li>The <strong>ternary operator</strong> (<code>condition ? a : b</code>) is a compact alternative for simple cases.</li>
+                    <li><strong>C++17 if-with-initializer</strong> confines variables to the <code>if-else</code> block scope.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/CkXJeBqvKLY" title="C++ If/Else" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which keyword starts a conditional statement in C++?","o":["for","if","while","switch"],"a":1},
+                {"q":"What must surround the condition in an if statement?","o":["Curly braces {}","Square brackets []","Parentheses ()","Angle brackets <>"],"a":2},
+                {"q":"What happens if the condition in an if statement is false?","o":["The program crashes","The body of the if is skipped","The body runs anyway","A compile error occurs"],"a":1},
+                {"q":"Which value does C++ treat as false?","o":["1","-1","0","100"],"a":2},
+                {"q":"Which of these values is treated as true in C++?","o":["0","false","NULL","-5"],"a":3},
+                {"q":"What is the output? int x = 3; if (x > 5) cout << \"A\"; cout << \"B\";","o":["A","B","AB","No output"],"a":1},
+                {"q":"What is the purpose of the else keyword?","o":["To repeat the if block","To provide an alternative path when the if condition is false","To end the program","To create a loop"],"a":1},
+                {"q":"How many branches execute in an if-else statement?","o":["Both branches","Neither branch","Exactly one","It depends on the compiler"],"a":2},
+                {"q":"What is the output? int x = 10; if (x > 5) cout << \"Yes\"; else cout << \"No\";","o":["Yes","No","YesNo","Error"],"a":0},
+                {"q":"What does 'else if' allow you to do?","o":["Create infinite loops","Test multiple conditions in sequence","Declare variables","Include header files"],"a":1},
+                {"q":"In an if-else if-else chain, how many blocks execute?","o":["All of them","Only the first one whose condition is true","The last one","Two of them"],"a":1},
+                {"q":"What is the final else in an if-else if-else chain?","o":["Mandatory","A catch-all default that runs if no condition is true","A syntax error","Another condition to check"],"a":1},
+                {"q":"What is the correct order of conditions in a grade calculator (A >= 90, B >= 80, etc.)?","o":["Check lowest grade first","Check highest grade first","Order doesn't matter","Check alphabetically"],"a":1},
+                {"q":"Why don't you need to write 'score >= 80 && score < 90' in an else-if chain?","o":["Because C++ does it automatically","Because reaching that branch means score < 90 already","Because && is not allowed","Because else if ignores the first condition"],"a":1},
+                {"q":"What is nesting in the context of if statements?","o":["Placing an if inside another if","Writing if statements on the same line","Using multiple else blocks","Combining conditions with &&"],"a":0},
+                {"q":"What is the main drawback of deeply nested if statements?","o":["They run slower","They cause compile errors","They are hard to read and maintain","They use more memory"],"a":2},
+                {"q":"Which operator checks if two values are equal?","o":["=","==","!=","==="],"a":1},
+                {"q":"Which operator checks if two values are NOT equal?","o":["=","==","!=","<>"],"a":2},
+                {"q":"What does the > operator do?","o":["Checks greater than","Checks less than","Assigns a value","Shifts bits right"],"a":0},
+                {"q":"What does the <= operator check?","o":["Less than only","Less than or equal to","Greater than or equal to","Not equal"],"a":1},
+                {"q":"What is the result of 5 >= 5?","o":["true","false","Error","Undefined"],"a":0},
+                {"q":"What is the result of 5 > 5?","o":["true","false","Error","Undefined"],"a":1},
+                {"q":"What does the && operator do?","o":["Bitwise AND","Logical AND","Logical OR","Assignment"],"a":1},
+                {"q":"What does the || operator do?","o":["Bitwise OR","Logical AND","Logical OR","Concatenation"],"a":2},
+                {"q":"What does the ! operator do?","o":["Factorial","Logical NOT (negation)","Assignment","Bitwise NOT"],"a":1},
+                {"q":"What is the result of true && false?","o":["true","false","Error","1"],"a":1},
+                {"q":"What is the result of true || false?","o":["true","false","Error","0"],"a":0},
+                {"q":"What is the result of !true?","o":["true","false","1","Error"],"a":1},
+                {"q":"What is the result of !false?","o":["true","false","0","Error"],"a":0},
+                {"q":"What is the result of (5 > 3) && (2 < 4)?","o":["true","false","Error","Undefined"],"a":0},
+                {"q":"What is the result of (5 > 3) || (2 > 4)?","o":["true","false","Error","Undefined"],"a":0},
+                {"q":"What is short-circuit evaluation?","o":["Evaluating all conditions always","Stopping evaluation as soon as the result is determined","Skipping the if block","Running the else block first"],"a":1},
+                {"q":"In expr1 && expr2, when is expr2 NOT evaluated?","o":["When expr1 is true","When expr1 is false","Always evaluated","When expr2 is false"],"a":1},
+                {"q":"In expr1 || expr2, when is expr2 NOT evaluated?","o":["When expr1 is true","When expr1 is false","Always evaluated","When expr2 is true"],"a":0},
+                {"q":"How can short-circuit evaluation prevent a division by zero?","o":["It can't","By checking the divisor is non-zero with && before dividing","By using ||","By catching exceptions"],"a":1},
+                {"q":"What is the bug in: if (x = 5)?","o":["Missing semicolon","Uses assignment (=) instead of comparison (==)","Parentheses are wrong","x is undefined"],"a":1},
+                {"q":"What does if (x = 5) actually do in C++?","o":["Compares x to 5","Assigns 5 to x, then evaluates 5 as true","Causes a compile error","Nothing"],"a":1},
+                {"q":"What is the 'dangling else' problem?","o":["An else with no matching if","An else that attaches to the wrong if when braces are missing","A syntax error in else","An else that runs twice"],"a":1},
+                {"q":"Which if does an else attach to when braces are omitted?","o":["The first if","The nearest preceding unmatched if","The outermost if","It causes an error"],"a":1},
+                {"q":"How do you avoid the dangling else problem?","o":["Use semicolons","Always use braces {}","Use comments","Use goto"],"a":1},
+                {"q":"What happens with: if (x > 0); { cout << x; }","o":["Prints x only when positive","Always prints x (semicolon creates empty if body)","Compile error","Prints nothing"],"a":1},
+                {"q":"Why is comparing floating-point numbers with == risky?","o":["It's not allowed in C++","Floating-point precision errors can cause unexpected results","== only works with integers","It causes a crash"],"a":1},
+                {"q":"How should you compare floating-point numbers?","o":["Use ==","Use != only","Compare within a small tolerance (epsilon)","Cast to int first"],"a":2},
+                {"q":"What is the ternary operator in C++?","o":["::","? :","<=>","->"],"a":1},
+                {"q":"What is the syntax of the ternary operator?","o":["condition ? value_if_true : value_if_false","condition : value_if_true ? value_if_false","value ? condition : default","if condition then a else b"],"a":0},
+                {"q":"What does int max = (a > b) ? a : b; do?","o":["Returns the minimum","Assigns the larger of a or b to max","Causes a compile error","Returns the sum"],"a":1},
+                {"q":"When should you use the ternary operator instead of if-else?","o":["Never","For complex multi-line logic","For simple, short conditional assignments","Always"],"a":2},
+                {"q":"What is the output? cout << ((5 > 3) ? \"Yes\" : \"No\");","o":["Yes","No","5 > 3","Error"],"a":0},
+                {"q":"Is nesting ternary operators recommended?","o":["Yes, always","No, it reduces readability","Only in C++17","Only with parentheses"],"a":1},
+                {"q":"What C++ standard introduced if-with-initializer?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What is the syntax of if-with-initializer?","o":["if (condition; init)","if (init; condition)","if init; condition","if {init} (condition)"],"a":1},
+                {"q":"What is the benefit of if-with-initializer?","o":["Faster execution","Variable scope is limited to the if-else block","It replaces all loops","It removes the need for else"],"a":1},
+                {"q":"Which compiler flag enables C++17 features in GCC?","o":["-std=c++11","-std=c++14","-std=c++17","-std=c++03"],"a":2},
+                {"q":"What is the output? if (auto x = 10; x > 5) cout << x;","o":["10","5","Error","Nothing"],"a":0},
+                {"q":"Is the variable from if-with-initializer accessible after the if-else block?","o":["Yes","No, it goes out of scope","Only in the else block","Only with static"],"a":1},
+                {"q":"What is the output? int x = 7; if (x > 10) cout << \"A\"; else if (x > 5) cout << \"B\"; else cout << \"C\";","o":["A","B","C","ABC"],"a":1},
+                {"q":"What is the output? int x = 3; if (x > 0) if (x > 10) cout << \"Big\"; else cout << \"Small\";","o":["Big","Small","No output","Error"],"a":1},
+                {"q":"What is the output? int x = -1; if (x > 0) if (x > 10) cout << \"Big\"; else cout << \"Small\";","o":["Big","Small","No output","Error"],"a":2},
+                {"q":"What is the output? bool b = false; if (!b) cout << \"Yes\";","o":["Yes","No output","false","Error"],"a":0},
+                {"q":"What is the output? int x = 0; if (x) cout << \"A\"; else cout << \"B\";","o":["A","B","0","Error"],"a":1},
+                {"q":"What does if (1) always do?","o":["Skips the body","Executes the body","Causes an error","Depends on the compiler"],"a":1},
+                {"q":"What does if (0) always do?","o":["Executes the body","Skips the body","Causes an error","Depends on the compiler"],"a":1},
+                {"q":"A condition expression in if evaluates to what type?","o":["int","string","bool","double"],"a":2},
+                {"q":"Which is the correct way to check if x is between 1 and 10?","o":["if (1 < x < 10)","if (x > 1 && x < 10)","if (x > 1 || x < 10)","if (1 < x > 10)"],"a":1},
+                {"q":"Why is if (1 < x < 10) wrong?","o":["Syntax error","1 < x evaluates to 0 or 1, which is then compared with 10","It works correctly","It causes a runtime error"],"a":1},
+                {"q":"What is the output? int a = 5; cout << ((a % 2 == 0) ? \"Even\" : \"Odd\");","o":["Even","Odd","5","Error"],"a":1},
+                {"q":"What is operator precedence between && and ||?","o":["&& has higher precedence than ||","|| has higher precedence than &&","They have equal precedence","It depends on the compiler"],"a":0},
+                {"q":"What is the result of true || false && false?","o":["true","false","Error","Undefined"],"a":0},
+                {"q":"What is the result of (true || false) && false?","o":["true","false","Error","Undefined"],"a":1},
+                {"q":"Which logical operator has the highest precedence?","o":["&&","||","!","They are all equal"],"a":2},
+                {"q":"How do you negate a complex condition like (a > 5 && b < 3)?","o":["!(a > 5 && b < 3)","!a > 5 && b < 3","not(a > 5) && b < 3","a <= 5 || b >= 3"],"a":0},
+                {"q":"By De Morgan's law, !(A && B) equals what?","o":["!A && !B","!A || !B","A || B","A && B"],"a":1},
+                {"q":"By De Morgan's law, !(A || B) equals what?","o":["!A && !B","!A || !B","A && B","A || B"],"a":0},
+                {"q":"What is the output? int n = 15; if (n % 3 == 0 && n % 5 == 0) cout << \"FizzBuzz\";","o":["Fizz","Buzz","FizzBuzz","No output"],"a":2},
+                {"q":"Can you write an if statement without braces?","o":["No, braces are required","Yes, if the body is one statement","Yes, for any number of statements","Only in C++17"],"a":1},
+                {"q":"Why is it recommended to always use braces with if?","o":["Required by the standard","Prevents bugs when adding more statements later","Faster execution","Reduces binary size"],"a":1},
+                {"q":"What is the output? int x = 5; if (x == 5) cout << \"A\"; cout << \"B\";","o":["A","B","AB","Error"],"a":2},
+                {"q":"What is the output? int x = 3; if (x == 5) cout << \"A\"; cout << \"B\";","o":["A","B","AB","Error"],"a":1},
+                {"q":"What keyword is used together with if to handle the false case?","o":["then","else","otherwise","default"],"a":1},
+                {"q":"Can an else block exist without an if?","o":["Yes","No, it must follow an if","Only in C++20","Only with switch"],"a":1},
+                {"q":"Can you have multiple else blocks for a single if?","o":["Yes","No","Only with else if","Only in C++17"],"a":1},
+                {"q":"Is the else block mandatory?","o":["Yes, always","No, it is optional","Only with else if","Depends on the compiler"],"a":1},
+                {"q":"What is a compound condition?","o":["A condition using only one operator","Multiple conditions combined with logical operators","A condition in a nested if","A condition with a ternary operator"],"a":1},
+                {"q":"What is the output? string s = \"\"; if (s.empty()) cout << \"Empty\";","o":["Empty","Error","Nothing","s"],"a":0},
+                {"q":"How do you check if a char variable holds a digit?","o":["if (c >= '0' && c <= '9')","if (c > 0 && c < 9)","if (isdigit(c)) only","if (c == digit)"],"a":0},
+                {"q":"What is the output? int x = 10; if (x > 0) { cout << \"P\"; } if (x > 5) { cout << \"Q\"; }","o":["P","Q","PQ","Error"],"a":2},
+                {"q":"Why does the previous example print both P and Q?","o":["Because of else","Because they are separate if statements, not if-else if","Because of &&","Because of short-circuit evaluation"],"a":1},
+                {"q":"What is the difference between two separate ifs and an if-else if?","o":["No difference","Separate ifs both get checked; if-else if stops after first match","Separate ifs are faster","if-else if checks all conditions"],"a":1},
+                {"q":"What is the output? bool a = true, b = false; if (a && !b) cout << \"Yes\";","o":["Yes","No output","Error","false"],"a":0},
+                {"q":"Can you use a function call as a condition?","o":["No","Yes, if the function returns bool or a value convertible to bool","Only void functions","Only static functions"],"a":1},
+                {"q":"What is the output? if (true) cout << 1; if (false) cout << 2; if (true) cout << 3;","o":["123","13","1","3"],"a":1},
+                {"q":"What is the output? int x = 4; if (x > 5) cout << \"A\"; else if (x > 3) cout << \"B\"; else if (x > 1) cout << \"C\";","o":["A","B","C","BC"],"a":1},
+                {"q":"What does the condition if (ptr) check when ptr is a pointer?","o":["If ptr is positive","If ptr is not null","If ptr is an integer","If ptr points to true"],"a":1},
+                {"q":"What does if (nullptr) evaluate to?","o":["true","false","Error","Undefined"],"a":1},
+                {"q":"What is the correct way to check if a number is in the range [1, 100]?","o":["if (1 <= x <= 100)","if (x >= 1 && x <= 100)","if (x >= 1 || x <= 100)","if (x == 1..100)"],"a":1},
+                {"q":"What is the output? int a = 3, b = 7; int min = (a < b) ? a : b; cout << min;","o":["3","7","0","Error"],"a":0},
+                {"q":"What is the output? cout << ((10 > 20) ? 100 : 200);","o":["100","200","10","20"],"a":1},
+                {"q":"What is the output? int x = 0; cout << (x ? \"NonZero\" : \"Zero\");","o":["NonZero","Zero","0","Error"],"a":1},
+                {"q":"Can the ternary operator be used as a standalone statement?","o":["No, it must assign a value","Yes, it can be used as an expression statement","Only in C++17","Only inside cout"],"a":1},
+                {"q":"What is the output? int x = 5; (x > 3) ? cout << \"Hi\" : cout << \"Bye\";","o":["Hi","Bye","Error","HiBye"],"a":0},
+                {"q":"What is the return type of a comparison operator?","o":["int","bool","char","void"],"a":1},
+                {"q":"What is the output? if ('A') cout << \"True\";","o":["True","False","A","Error"],"a":0},
+                {"q":"Why does if ('A') evaluate to true?","o":["Because 'A' is a char with ASCII value 65, which is non-zero","Because 'A' is a string","Because 'A' equals true","It's a compiler bug"],"a":0},
+                {"q":"What is the output? int x = 10; if (x > 5 && x < 20) cout << \"Yes\"; else cout << \"No\";","o":["Yes","No","Error","YesNo"],"a":0},
+                {"q":"What is the output? int x = 10; if (x > 5 || x < 3) cout << \"Yes\"; else cout << \"No\";","o":["Yes","No","Error","YesNo"],"a":0},
+                {"q":"What is the output? int x = 2; if (x > 5 || x < 3) cout << \"Yes\"; else cout << \"No\";","o":["Yes","No","Error","YesNo"],"a":0},
+                {"q":"What is the output? int x = 4; if (x > 5 && x < 3) cout << \"Yes\"; else cout << \"No\";","o":["Yes","No","Error","YesNo"],"a":1},
+                {"q":"What is the output? int x = 4; if (x > 5 || x < 3) cout << \"Yes\"; else cout << \"No\";","o":["Yes","No","Error","YesNo"],"a":1},
+                {"q":"How do you check if a character is an uppercase letter?","o":["if (c >= 'A' && c <= 'Z')","if (c > 'a' && c < 'z')","if (c == uppercase)","if (isupper(c))"],"a":0},
+                {"q":"What is a Boolean expression?","o":["An expression that returns a number","An expression that evaluates to true or false","An expression with && only","A string comparison"],"a":1},
+                {"q":"Which header provides the isupper() and isdigit() functions?","o":["<iostream>","<ctype.h> or <cctype>","<string>","<cmath>"],"a":1},
+                {"q":"What does if (!(x > 5)) simplify to?","o":["if (x > 5)","if (x <= 5)","if (x < 5)","if (x == 5)"],"a":1},
+                {"q":"What does if (!(x == 5)) simplify to?","o":["if (x == 5)","if (x != 5)","if (x > 5)","if (x < 5)"],"a":1},
+                {"q":"What does if (!(x != 5)) simplify to?","o":["if (x != 5)","if (x == 5)","if (x > 5)","if (x < 5)"],"a":1},
+                {"q":"What is the output? int x = -3; if (x) cout << \"True\"; else cout << \"False\";","o":["True","False","Error","-3"],"a":0},
+                {"q":"Can you use an enum value in an if condition?","o":["No","Yes, enums implicitly convert to int","Only scoped enums","Only with =="],"a":1},
+                {"q":"What is a 'guard clause'?","o":["A condition that protects a header file","An if statement at the start of a function that returns early for invalid cases","A try-catch block","A const variable"],"a":1},
+                {"q":"What is the advantage of guard clauses?","o":["Faster execution","They reduce nesting and improve readability","They prevent crashes","They are required by the standard"],"a":1},
+                {"q":"What does const correctness have to do with if statements?","o":["Nothing","If you compare with a const, you can't accidentally assign","Const prevents if from compiling","Const makes if faster"],"a":1},
+                {"q":"What is 'Yoda notation'? (e.g., if (5 == x))","o":["A joke","Placing the constant on the left side to prevent accidental assignment","A C++20 feature","A naming convention"],"a":1},
+                {"q":"Which is valid: if constexpr or if consteval in C++17?","o":["if constexpr","if consteval","Both","Neither"],"a":0},
+                {"q":"What does if constexpr do?","o":["Runtime conditional check","Compile-time conditional; discards the false branch at compile time","Creates a constant variable","Throws an exception"],"a":1},
+                {"q":"Can if-else be used to initialize a const variable?","o":["No, use ternary instead","Yes, with braces","Only in C++20","Only with auto"],"a":0},
+                {"q":"How do you initialize a const with a condition?","o":["if-else then assign","Use the ternary operator: const int x = (cond) ? a : b;","You can't","Use #define"],"a":1},
+                {"q":"What is the scope of variables declared inside an if block?","o":["Global","Limited to the if block only","The entire function","The file"],"a":1},
+                {"q":"Can a variable declared in the if block be used in the else block?","o":["Yes","No, it is out of scope","Only if declared static","Only in C++17"],"a":1},
+                {"q":"What is the output? int x = 5; if (x > 0) { int y = 10; } cout << y;","o":["10","5","Compile error: y is out of scope","0"],"a":2},
+                {"q":"What is the difference between = and == in an if condition?","o":["No difference","= assigns a value; == compares two values","== assigns; = compares","= is for strings; == is for numbers"],"a":1},
+                {"q":"Which operator is used for assignment?","o":["==","=","!=","<-"],"a":1},
+                {"q":"Which operator is used for equality comparison?","o":["=","==","===","eq"],"a":1},
+                {"q":"Will if (int x = getValue()) compile?","o":["No","Yes, and it checks if the assigned value is non-zero","Only in C++17","Only with auto"],"a":1},
+                {"q":"What is the output? int x = 5, y = 10; if (x < y) { int temp = x; x = y; y = temp; } cout << x << \" \" << y;","o":["5 10","10 5","Error","10 10"],"a":1},
+                {"q":"How do you check if a number is positive?","o":["if (num >= 0)","if (num > 0)","if (num)","if (num == positive)"],"a":1},
+                {"q":"How do you check if a number is non-negative?","o":["if (num > 0)","if (num >= 0)","if (num != negative)","if (!num)"],"a":1},
+                {"q":"What is the output? char grade = 'B'; if (grade == 'A') cout << \"Excellent\"; else if (grade == 'B') cout << \"Good\"; else cout << \"Try harder\";","o":["Excellent","Good","Try harder","Error"],"a":1},
+                {"q":"What does the 'flow of control' mean?","o":["The speed of the program","The order in which statements execute","The memory allocation","The compilation order"],"a":1},
+                {"q":"What structure is if-else an example of?","o":["Sequence","Selection/Decision","Iteration/Loop","Jump"],"a":1},
+                {"q":"Can you use string comparison in an if condition?","o":["No","Yes, with == for std::string","Only with strcmp()","Only with compare()"],"a":1},
+                {"q":"What is the output? string name = \"Alice\"; if (name == \"Alice\") cout << \"Hi Alice\";","o":["Hi Alice","Error","Nothing","true"],"a":0},
+                {"q":"How do you compare C-style strings in an if statement?","o":["Using ==","Using strcmp() from <cstring>","Using = operator","Using is_equal()"],"a":1},
+                {"q":"What does strcmp() return when strings are equal?","o":["1","0","-1","true"],"a":1},
+                {"q":"What is the output? int year = 2000; if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) cout << \"Leap\"; else cout << \"Not\";","o":["Leap","Not","Error","2000"],"a":0},
+                {"q":"What is the output? int year = 1900; if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) cout << \"Leap\"; else cout << \"Not\";","o":["Leap","Not","Error","1900"],"a":1},
+                {"q":"What is the output? int x = 10; if (x >= 10 && x <= 20) cout << \"In range\";","o":["In range","Error","Nothing","10"],"a":0},
+                {"q":"Can you chain more than three else-if blocks?","o":["No, maximum three","Yes, any number of else if blocks","Only five","Only with switch"],"a":1},
+                {"q":"What is a 'truth table'?","o":["A database table","A table showing all combinations of inputs and their boolean results","A table of variable names","A debugging tool"],"a":1},
+                {"q":"How many rows does a truth table for two boolean variables have?","o":["2","3","4","8"],"a":2},
+                {"q":"What is the output? bool a = true; if (a == true) cout << 1; if (a) cout << 2;","o":["1","2","12","Error"],"a":2},
+                {"q":"Why is if (a) preferred over if (a == true) for booleans?","o":["It's faster","It's shorter and avoids accidental assignment to true","It's required","It's the same thing"],"a":1},
+                {"q":"What does if (cin >> x) check?","o":["If x is positive","If the input operation succeeded","If cin is a valid stream","If x equals cin"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="comments.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Comments</span>
+                </a>
+                <a href="switch.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Switch</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

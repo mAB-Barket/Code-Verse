@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Practice Projects - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-projects">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html" class="active"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 55 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="100" style="width:100%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Practice Projects
+                </div>
+                <h1>55. Practice Projects &amp; Challenges</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 55 of 55</span>
+                    <span>&#9201; 25 min read</span>
+                    <span>&#127942; All Levels</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== Congratulations ===== -->
+                <h2>&#127881; Congratulations!</h2>
+                <p>You&rsquo;ve made it to the final lesson of the CodeVerse C++ course! Over the past 54 lessons you&rsquo;ve journeyed from writing your very first <code>Hello, World!</code> program all the way through modern C++ features, multithreading, testing, and version control. That is an incredible accomplishment.</p>
+                <p>Now it&rsquo;s time to put everything you&rsquo;ve learned into practice. This capstone lesson contains <strong>five full projects</strong> and <strong>five coding challenges</strong> that draw on concepts from across the entire course. Build them, break them, improve them &ndash; that is how real developers grow.</p>
+                <p>Each project includes a complete, working code listing that you can compile and run immediately. Once you have the baseline working, try the suggested extensions to push your skills further.</p>
+
+                <!-- ===== Project 1: Console Calculator ===== -->
+                <h2>Project 1: Console Calculator</h2>
+                <p>This project brings together <strong>variables</strong>, <strong>operators</strong>, <strong>control flow</strong>, <strong>functions</strong>, and <strong>input validation</strong>. The calculator performs basic arithmetic, handles division-by-zero gracefully, and loops so the user can perform multiple calculations without restarting the program.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Addition, subtraction, multiplication, and division</li>
+                    <li>Input validation &ndash; rejects non-numeric input</li>
+                    <li>Division-by-zero protection</li>
+                    <li>Loop for continuous use until the user decides to quit</li>
+                </ul>
+                <h3>Full Code</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+double calculate(double a, double b, char op) {
+    switch (op) {
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
+        case '/':
+            if (b == 0) {
+                cout &lt;&lt; "Error: Division by zero!" &lt;&lt; endl;
+                return 0;
+            }
+            return a / b;
+        default:
+            cout &lt;&lt; "Error: Invalid operator!" &lt;&lt; endl;
+            return 0;
+    }
+}
+
+bool getNumber(const string&amp; prompt, double&amp; result) {
+    cout &lt;&lt; prompt;
+    if (!(cin &gt;&gt; result)) {
+        cin.clear();
+        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+        cout &lt;&lt; "Invalid input. Please enter a number." &lt;&lt; endl;
+        return false;
+    }
+    return true;
+}
+
+int main() {
+    cout &lt;&lt; "===== Console Calculator =====" &lt;&lt; endl;
+    char choice = 'y';
+
+    while (choice == 'y' || choice == 'Y') {
+        double num1, num2;
+        char op;
+
+        if (!getNumber("Enter first number: ", num1)) continue;
+
+        cout &lt;&lt; "Enter operator (+, -, *, /): ";
+        cin &gt;&gt; op;
+
+        if (!getNumber("Enter second number: ", num2)) continue;
+
+        double result = calculate(num1, num2, op);
+        cout &lt;&lt; num1 &lt;&lt; " " &lt;&lt; op &lt;&lt; " " &lt;&lt; num2
+             &lt;&lt; " = " &lt;&lt; result &lt;&lt; endl;
+
+        cout &lt;&lt; "\nAnother calculation? (y/n): ";
+        cin &gt;&gt; choice;
+    }
+
+    cout &lt;&lt; "Goodbye!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                <h3>Suggested Extensions</h3>
+                <ul>
+                    <li>Add support for exponentiation (<code>^</code>) and modulus (<code>%</code>).</li>
+                    <li>Implement a history feature that stores and displays the last 10 calculations.</li>
+                    <li>Parse an entire expression string (e.g., <code>3 + 5 * 2</code>) using operator precedence.</li>
+                </ul>
+
+                <!-- ===== Project 2: Number Guessing Game ===== -->
+                <h2>Project 2: Number Guessing Game</h2>
+                <p>This project reinforces <strong>random numbers</strong>, <strong>loops</strong>, <strong>conditionals</strong>, and <strong>user input</strong>. The program picks a random number and gives the player hints (&ldquo;Too high&rdquo; / &ldquo;Too low&rdquo;) until they guess correctly, tracking the number of attempts.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Random number generation with <code>&lt;cstdlib&gt;</code> and <code>&lt;ctime&gt;</code></li>
+                    <li>Configurable difficulty (range of numbers)</li>
+                    <li>Attempt counter and final score</li>
+                    <li>Input validation</li>
+                </ul>
+                <h3>Full Code</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    srand(static_cast&lt;unsigned&gt;(time(nullptr)));
+
+    cout &lt;&lt; "===== Number Guessing Game =====" &lt;&lt; endl;
+    cout &lt;&lt; "Select difficulty:" &lt;&lt; endl;
+    cout &lt;&lt; "1. Easy   (1-50)" &lt;&lt; endl;
+    cout &lt;&lt; "2. Medium (1-100)" &lt;&lt; endl;
+    cout &lt;&lt; "3. Hard   (1-500)" &lt;&lt; endl;
+    cout &lt;&lt; "Choice: ";
+
+    int difficulty;
+    cin &gt;&gt; difficulty;
+
+    int maxRange;
+    switch (difficulty) {
+        case 1:  maxRange = 50;  break;
+        case 3:  maxRange = 500; break;
+        default: maxRange = 100; break;
+    }
+
+    int secretNumber = rand() % maxRange + 1;
+    int guess = 0;
+    int attempts = 0;
+
+    cout &lt;&lt; "\nI'm thinking of a number between 1 and "
+         &lt;&lt; maxRange &lt;&lt; "." &lt;&lt; endl;
+
+    while (guess != secretNumber) {
+        cout &lt;&lt; "Enter your guess: ";
+        if (!(cin &gt;&gt; guess)) {
+            cin.clear();
+            cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+            cout &lt;&lt; "Please enter a valid number." &lt;&lt; endl;
+            continue;
+        }
+        attempts++;
+
+        if (guess &lt; secretNumber) {
+            cout &lt;&lt; "Too low! Try again." &lt;&lt; endl;
+        } else if (guess &gt; secretNumber) {
+            cout &lt;&lt; "Too high! Try again." &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "\nCongratulations! You guessed it in "
+                 &lt;&lt; attempts &lt;&lt; " attempt"
+                 &lt;&lt; (attempts == 1 ? "" : "s") &lt;&lt; "!" &lt;&lt; endl;
+        }
+    }
+
+    if (attempts &lt;= 5) {
+        cout &lt;&lt; "Rating: EXCELLENT!" &lt;&lt; endl;
+    } else if (attempts &lt;= 10) {
+        cout &lt;&lt; "Rating: Good job!" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Rating: Keep practising!" &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                <h3>Suggested Extensions</h3>
+                <ul>
+                    <li>Add a &ldquo;play again&rdquo; loop.</li>
+                    <li>Implement a high-score system that saves the best scores to a file.</li>
+                    <li>Add &ldquo;warmer / colder&rdquo; hints based on how close the guess is compared to the previous guess.</li>
+                </ul>
+
+                <!-- ===== Project 3: Student Grade Manager ===== -->
+                <h2>Project 3: Student Grade Manager</h2>
+                <p>This project combines <strong>structs/classes</strong>, <strong>vectors</strong>, <strong>file I/O</strong>, and <strong>algorithms</strong> to build a small student records system. Users can add students, view all records, calculate GPAs, and save/load data to a file.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Student struct with name, ID, and vector of grades</li>
+                    <li>Add, view, and search students</li>
+                    <li>GPA calculation per student and class average</li>
+                    <li>Save records to a text file and load on startup</li>
+                </ul>
+                <h3>Full Code</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;numeric&gt;
+#include &lt;iomanip&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+struct Student {
+    string name;
+    int id;
+    vector&lt;double&gt; grades;
+
+    double gpa() const {
+        if (grades.empty()) return 0.0;
+        double sum = accumulate(grades.begin(), grades.end(), 0.0);
+        return sum / grades.size();
+    }
+
+    string letterGrade() const {
+        double g = gpa();
+        if (g &gt;= 90) return "A";
+        if (g &gt;= 80) return "B";
+        if (g &gt;= 70) return "C";
+        if (g &gt;= 60) return "D";
+        return "F";
+    }
+};
+
+void saveToFile(const vector&lt;Student&gt;&amp; students,
+                const string&amp; filename) {
+    ofstream file(filename);
+    if (!file) {
+        cerr &lt;&lt; "Error: Cannot open file for writing." &lt;&lt; endl;
+        return;
+    }
+    for (const auto&amp; s : students) {
+        file &lt;&lt; s.id &lt;&lt; "|" &lt;&lt; s.name;
+        for (double g : s.grades) {
+            file &lt;&lt; "|" &lt;&lt; g;
+        }
+        file &lt;&lt; "\n";
+    }
+    cout &lt;&lt; "Data saved to " &lt;&lt; filename &lt;&lt; endl;
+}
+
+vector&lt;Student&gt; loadFromFile(const string&amp; filename) {
+    vector&lt;Student&gt; students;
+    ifstream file(filename);
+    if (!file) return students;
+
+    string line;
+    while (getline(file, line)) {
+        Student s;
+        size_t pos = line.find('|');
+        s.id = stoi(line.substr(0, pos));
+        line = line.substr(pos + 1);
+
+        pos = line.find('|');
+        if (pos == string::npos) {
+            s.name = line;
+        } else {
+            s.name = line.substr(0, pos);
+            line = line.substr(pos + 1);
+
+            while (!line.empty()) {
+                pos = line.find('|');
+                if (pos == string::npos) {
+                    s.grades.push_back(stod(line));
+                    break;
+                }
+                s.grades.push_back(stod(line.substr(0, pos)));
+                line = line.substr(pos + 1);
+            }
+        }
+        students.push_back(s);
+    }
+    return students;
+}
+
+void displayStudents(const vector&lt;Student&gt;&amp; students) {
+    if (students.empty()) {
+        cout &lt;&lt; "No students in the system." &lt;&lt; endl;
+        return;
+    }
+    cout &lt;&lt; left &lt;&lt; setw(8) &lt;&lt; "ID"
+         &lt;&lt; setw(20) &lt;&lt; "Name"
+         &lt;&lt; setw(10) &lt;&lt; "GPA"
+         &lt;&lt; "Grade" &lt;&lt; endl;
+    cout &lt;&lt; string(45, '-') &lt;&lt; endl;
+
+    for (const auto&amp; s : students) {
+        cout &lt;&lt; left &lt;&lt; setw(8) &lt;&lt; s.id
+             &lt;&lt; setw(20) &lt;&lt; s.name
+             &lt;&lt; fixed &lt;&lt; setprecision(2)
+             &lt;&lt; setw(10) &lt;&lt; s.gpa()
+             &lt;&lt; s.letterGrade() &lt;&lt; endl;
+    }
+}
+
+void addStudent(vector&lt;Student&gt;&amp; students) {
+    Student s;
+    cout &lt;&lt; "Enter student ID: ";
+    cin &gt;&gt; s.id;
+    cin.ignore();
+    cout &lt;&lt; "Enter student name: ";
+    getline(cin, s.name);
+
+    int numGrades;
+    cout &lt;&lt; "How many grades? ";
+    cin &gt;&gt; numGrades;
+
+    for (int i = 0; i &lt; numGrades; i++) {
+        double g;
+        cout &lt;&lt; "  Grade " &lt;&lt; (i + 1) &lt;&lt; ": ";
+        cin &gt;&gt; g;
+        s.grades.push_back(g);
+    }
+    students.push_back(s);
+    cout &lt;&lt; "Student added successfully!" &lt;&lt; endl;
+}
+
+void searchStudent(const vector&lt;Student&gt;&amp; students) {
+    cout &lt;&lt; "Enter student name to search: ";
+    string query;
+    cin.ignore();
+    getline(cin, query);
+
+    bool found = false;
+    for (const auto&amp; s : students) {
+        if (s.name.find(query) != string::npos) {
+            cout &lt;&lt; "ID: " &lt;&lt; s.id &lt;&lt; "  Name: " &lt;&lt; s.name
+                 &lt;&lt; "  GPA: " &lt;&lt; fixed &lt;&lt; setprecision(2)
+                 &lt;&lt; s.gpa() &lt;&lt; "  Grade: "
+                 &lt;&lt; s.letterGrade() &lt;&lt; endl;
+            found = true;
+        }
+    }
+    if (!found) cout &lt;&lt; "No matching student found." &lt;&lt; endl;
+}
+
+int main() {
+    const string filename = "students.txt";
+    vector&lt;Student&gt; students = loadFromFile(filename);
+    cout &lt;&lt; "===== Student Grade Manager =====" &lt;&lt; endl;
+
+    int choice;
+    do {
+        cout &lt;&lt; "\n1. Add Student\n2. View All Students"
+             &lt;&lt; "\n3. Search Student\n4. Class Average"
+             &lt;&lt; "\n5. Save &amp; Quit\nChoice: ";
+        cin &gt;&gt; choice;
+
+        switch (choice) {
+            case 1: addStudent(students); break;
+            case 2: displayStudents(students); break;
+            case 3: searchStudent(students); break;
+            case 4: {
+                if (students.empty()) {
+                    cout &lt;&lt; "No students." &lt;&lt; endl;
+                } else {
+                    double total = 0;
+                    for (const auto&amp; s : students)
+                        total += s.gpa();
+                    cout &lt;&lt; "Class average GPA: " &lt;&lt; fixed
+                         &lt;&lt; setprecision(2)
+                         &lt;&lt; total / students.size() &lt;&lt; endl;
+                }
+                break;
+            }
+            case 5:
+                saveToFile(students, filename);
+                cout &lt;&lt; "Goodbye!" &lt;&lt; endl;
+                break;
+            default:
+                cout &lt;&lt; "Invalid choice." &lt;&lt; endl;
+        }
+    } while (choice != 5);
+
+    return 0;
+}</code></pre>
+                <h3>Suggested Extensions</h3>
+                <ul>
+                    <li>Add the ability to delete or edit a student record.</li>
+                    <li>Sort students by GPA or name.</li>
+                    <li>Use a class with proper encapsulation instead of a struct.</li>
+                    <li>Export reports to CSV format.</li>
+                </ul>
+
+                <!-- ===== Project 4: Text-Based Adventure Game ===== -->
+                <h2>Project 4: Text-Based Adventure Game</h2>
+                <p>This project showcases <strong>OOP</strong>, <strong>inheritance</strong>, <strong>polymorphism</strong>, and <strong>choice-based navigation</strong>. The player explores rooms, collects items, and makes decisions that affect the outcome of the game.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Room base class with virtual methods for description and actions</li>
+                    <li>Multiple room types using inheritance</li>
+                    <li>Player inventory system</li>
+                    <li>Choice-driven navigation between rooms</li>
+                </ul>
+                <h3>Full Code</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;memory&gt;
+#include &lt;map&gt;
+using namespace std;
+
+// ---- Player ----
+class Player {
+    string name;
+    int health;
+    vector&lt;string&gt; inventory;
+public:
+    Player(const string&amp; n) : name(n), health(100) {}
+
+    const string&amp; getName() const { return name; }
+    int getHealth() const { return health; }
+
+    void takeDamage(int dmg) {
+        health -= dmg;
+        if (health &lt; 0) health = 0;
+        cout &lt;&lt; name &lt;&lt; " took " &lt;&lt; dmg
+             &lt;&lt; " damage! HP: " &lt;&lt; health &lt;&lt; endl;
+    }
+
+    void heal(int amt) {
+        health += amt;
+        if (health &gt; 100) health = 100;
+        cout &lt;&lt; name &lt;&lt; " healed " &lt;&lt; amt
+             &lt;&lt; " HP! HP: " &lt;&lt; health &lt;&lt; endl;
+    }
+
+    void addItem(const string&amp; item) {
+        inventory.push_back(item);
+        cout &lt;&lt; "Picked up: " &lt;&lt; item &lt;&lt; endl;
+    }
+
+    bool hasItem(const string&amp; item) const {
+        for (const auto&amp; i : inventory)
+            if (i == item) return true;
+        return false;
+    }
+
+    void showInventory() const {
+        cout &lt;&lt; "Inventory: ";
+        if (inventory.empty()) { cout &lt;&lt; "(empty)" &lt;&lt; endl; return; }
+        for (size_t i = 0; i &lt; inventory.size(); i++) {
+            if (i &gt; 0) cout &lt;&lt; ", ";
+            cout &lt;&lt; inventory[i];
+        }
+        cout &lt;&lt; endl;
+    }
+
+    bool isAlive() const { return health &gt; 0; }
+};
+
+// ---- Room (base) ----
+class Room {
+protected:
+    string name;
+    string description;
+public:
+    Room(const string&amp; n, const string&amp; desc)
+        : name(n), description(desc) {}
+    virtual ~Room() = default;
+
+    virtual void enter(Player&amp; player) {
+        cout &lt;&lt; "\n--- " &lt;&lt; name &lt;&lt; " ---" &lt;&lt; endl;
+        cout &lt;&lt; description &lt;&lt; endl;
+    }
+
+    virtual int getChoices() { return 2; }
+    const string&amp; getName() const { return name; }
+};
+
+// ---- Derived rooms ----
+class ForestRoom : public Room {
+public:
+    ForestRoom()
+        : Room("Dark Forest",
+               "Tall trees surround you. A faint path leads north.\n"
+               "You hear rustling in the bushes.") {}
+
+    void enter(Player&amp; p) override {
+        Room::enter(p);
+        cout &lt;&lt; "1. Follow the path north\n"
+             &lt;&lt; "2. Investigate the bushes" &lt;&lt; endl;
+    }
+};
+
+class CaveRoom : public Room {
+public:
+    CaveRoom()
+        : Room("Mysterious Cave",
+               "The cave is cold and damp. You see a glowing crystal\n"
+               "on a pedestal and a dark tunnel deeper inside.") {}
+
+    void enter(Player&amp; p) override {
+        Room::enter(p);
+        cout &lt;&lt; "1. Take the crystal\n"
+             &lt;&lt; "2. Enter the dark tunnel" &lt;&lt; endl;
+    }
+};
+
+class TreasureRoom : public Room {
+public:
+    TreasureRoom()
+        : Room("Treasure Chamber",
+               "Gold coins and jewels fill the room!\n"
+               "A locked chest sits in the centre.") {}
+
+    void enter(Player&amp; p) override {
+        Room::enter(p);
+        if (p.hasItem("Crystal Key")) {
+            cout &lt;&lt; "You use the Crystal Key to open the chest!\n"
+                 &lt;&lt; "Inside you find the Legendary Sword!" &lt;&lt; endl;
+            p.addItem("Legendary Sword");
+        } else {
+            cout &lt;&lt; "The chest is locked. You need a key." &lt;&lt; endl;
+        }
+        cout &lt;&lt; "1. Go back\n2. Search the room" &lt;&lt; endl;
+    }
+};
+
+class DragonRoom : public Room {
+public:
+    DragonRoom()
+        : Room("Dragon's Lair",
+               "A massive dragon blocks your path!\n"
+               "Its eyes glow red as it stares you down.") {}
+
+    void enter(Player&amp; p) override {
+        Room::enter(p);
+        if (p.hasItem("Legendary Sword")) {
+            cout &lt;&lt; "You raise the Legendary Sword! The dragon retreats!\n"
+                 &lt;&lt; "*** YOU WIN! Congratulations, " &lt;&lt; p.getName()
+                 &lt;&lt; "! ***" &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "Without a weapon, the dragon attacks!" &lt;&lt; endl;
+            p.takeDamage(50);
+        }
+        cout &lt;&lt; "1. Go back\n2. Stand your ground" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    cout &lt;&lt; "===== Text Adventure =====" &lt;&lt; endl;
+    cout &lt;&lt; "Enter your name: ";
+    string name;
+    getline(cin, name);
+    Player player(name);
+
+    // Create rooms
+    vector&lt;unique_ptr&lt;Room&gt;&gt; rooms;
+    rooms.push_back(make_unique&lt;ForestRoom&gt;());   // 0
+    rooms.push_back(make_unique&lt;CaveRoom&gt;());     // 1
+    rooms.push_back(make_unique&lt;TreasureRoom&gt;()); // 2
+    rooms.push_back(make_unique&lt;DragonRoom&gt;());   // 3
+
+    // Room connections: room index -&gt; {choice1 destination, choice2}
+    map&lt;int, pair&lt;int, int&gt;&gt; connections = {
+        {0, {1, 2}}, // Forest -&gt; Cave or Treasure
+        {1, {0, 3}}, // Cave -&gt; Forest or Dragon
+        {2, {0, 3}}, // Treasure -&gt; Forest or Dragon
+        {3, {1, 2}}  // Dragon -&gt; Cave or Treasure
+    };
+
+    int currentRoom = 0;
+
+    while (player.isAlive()) {
+        rooms[currentRoom]-&gt;enter(player);
+        player.showInventory();
+
+        // Pick up Crystal Key in cave
+        if (currentRoom == 1) {
+            player.addItem("Crystal Key");
+        }
+
+        cout &lt;&lt; "Your choice: ";
+        int choice;
+        cin &gt;&gt; choice;
+
+        if (choice == 1)
+            currentRoom = connections[currentRoom].first;
+        else
+            currentRoom = connections[currentRoom].second;
+
+        if (player.hasItem("Legendary Sword")
+            &amp;&amp; currentRoom == 3) {
+            rooms[currentRoom]-&gt;enter(player);
+            break;
+        }
+    }
+
+    if (!player.isAlive()) {
+        cout &lt;&lt; "\nGame Over. " &lt;&lt; player.getName()
+             &lt;&lt; " has fallen." &lt;&lt; endl;
+    }
+
+    return 0;
+}</code></pre>
+                <h3>Suggested Extensions</h3>
+                <ul>
+                    <li>Add more rooms and a branching storyline.</li>
+                    <li>Implement a combat system with attack, defend, and flee options.</li>
+                    <li>Add an NPC dialogue system.</li>
+                    <li>Save and load game state to a file.</li>
+                </ul>
+
+                <!-- ===== Project 5: Contact Book ===== -->
+                <h2>Project 5: Contact Book</h2>
+                <p>This project applies <strong>CRUD operations</strong>, <strong>file persistence</strong>, <strong>string manipulation</strong>, and <strong>searching</strong>. The user can create, read, update, and delete contacts, with all data persisted to a file between sessions.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Add, view, update, and delete contacts</li>
+                    <li>Search by name (case-insensitive partial match)</li>
+                    <li>Persistent storage using a text file</li>
+                    <li>Input validation and clean menu system</li>
+                </ul>
+                <h3>Full Code</h3>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;cctype&gt;
+using namespace std;
+
+struct Contact {
+    string name;
+    string phone;
+    string email;
+};
+
+string toLower(string s) {
+    transform(s.begin(), s.end(), s.begin(),
+              [](unsigned char c) { return tolower(c); });
+    return s;
+}
+
+class ContactBook {
+    vector&lt;Contact&gt; contacts;
+    string filename;
+
+    void save() {
+        ofstream file(filename);
+        for (const auto&amp; c : contacts) {
+            file &lt;&lt; c.name &lt;&lt; "|" &lt;&lt; c.phone
+                 &lt;&lt; "|" &lt;&lt; c.email &lt;&lt; "\n";
+        }
+    }
+
+    void load() {
+        ifstream file(filename);
+        string line;
+        while (getline(file, line)) {
+            Contact c;
+            size_t p1 = line.find('|');
+            size_t p2 = line.find('|', p1 + 1);
+            if (p1 == string::npos || p2 == string::npos)
+                continue;
+            c.name  = line.substr(0, p1);
+            c.phone = line.substr(p1 + 1, p2 - p1 - 1);
+            c.email = line.substr(p2 + 1);
+            contacts.push_back(c);
+        }
+    }
+
+public:
+    ContactBook(const string&amp; file) : filename(file) { load(); }
+
+    void addContact() {
+        Contact c;
+        cin.ignore();
+        cout &lt;&lt; "Name:  ";  getline(cin, c.name);
+        cout &lt;&lt; "Phone: ";  getline(cin, c.phone);
+        cout &lt;&lt; "Email: ";  getline(cin, c.email);
+        contacts.push_back(c);
+        save();
+        cout &lt;&lt; "Contact added!" &lt;&lt; endl;
+    }
+
+    void viewAll() const {
+        if (contacts.empty()) {
+            cout &lt;&lt; "No contacts." &lt;&lt; endl;
+            return;
+        }
+        for (size_t i = 0; i &lt; contacts.size(); i++) {
+            cout &lt;&lt; "[" &lt;&lt; (i + 1) &lt;&lt; "] "
+                 &lt;&lt; contacts[i].name &lt;&lt; " | "
+                 &lt;&lt; contacts[i].phone &lt;&lt; " | "
+                 &lt;&lt; contacts[i].email &lt;&lt; endl;
+        }
+    }
+
+    void search() const {
+        cin.ignore();
+        cout &lt;&lt; "Search name: ";
+        string query;
+        getline(cin, query);
+        string lowerQuery = toLower(query);
+        bool found = false;
+
+        for (const auto&amp; c : contacts) {
+            if (toLower(c.name).find(lowerQuery) != string::npos) {
+                cout &lt;&lt; c.name &lt;&lt; " | " &lt;&lt; c.phone
+                     &lt;&lt; " | " &lt;&lt; c.email &lt;&lt; endl;
+                found = true;
+            }
+        }
+        if (!found) cout &lt;&lt; "No matches found." &lt;&lt; endl;
+    }
+
+    void updateContact() {
+        viewAll();
+        cout &lt;&lt; "Enter contact number to update: ";
+        int idx;
+        cin &gt;&gt; idx;
+        if (idx &lt; 1 || idx &gt; static_cast&lt;int&gt;(contacts.size())) {
+            cout &lt;&lt; "Invalid number." &lt;&lt; endl;
+            return;
+        }
+        Contact&amp; c = contacts[idx - 1];
+        cin.ignore();
+        cout &lt;&lt; "New name  (" &lt;&lt; c.name &lt;&lt; "): ";
+        string input;
+        getline(cin, input);
+        if (!input.empty()) c.name = input;
+
+        cout &lt;&lt; "New phone (" &lt;&lt; c.phone &lt;&lt; "): ";
+        getline(cin, input);
+        if (!input.empty()) c.phone = input;
+
+        cout &lt;&lt; "New email (" &lt;&lt; c.email &lt;&lt; "): ";
+        getline(cin, input);
+        if (!input.empty()) c.email = input;
+
+        save();
+        cout &lt;&lt; "Contact updated!" &lt;&lt; endl;
+    }
+
+    void deleteContact() {
+        viewAll();
+        cout &lt;&lt; "Enter contact number to delete: ";
+        int idx;
+        cin &gt;&gt; idx;
+        if (idx &lt; 1 || idx &gt; static_cast&lt;int&gt;(contacts.size())) {
+            cout &lt;&lt; "Invalid number." &lt;&lt; endl;
+            return;
+        }
+        cout &lt;&lt; "Delete " &lt;&lt; contacts[idx - 1].name &lt;&lt; "? (y/n): ";
+        char confirm;
+        cin &gt;&gt; confirm;
+        if (confirm == 'y' || confirm == 'Y') {
+            contacts.erase(contacts.begin() + (idx - 1));
+            save();
+            cout &lt;&lt; "Contact deleted." &lt;&lt; endl;
+        }
+    }
+};
+
+int main() {
+    ContactBook book("contacts.txt");
+    cout &lt;&lt; "===== Contact Book =====" &lt;&lt; endl;
+    int choice;
+
+    do {
+        cout &lt;&lt; "\n1. Add Contact\n2. View All\n3. Search"
+             &lt;&lt; "\n4. Update Contact\n5. Delete Contact"
+             &lt;&lt; "\n6. Quit\nChoice: ";
+        cin &gt;&gt; choice;
+
+        switch (choice) {
+            case 1: book.addContact();    break;
+            case 2: book.viewAll();       break;
+            case 3: book.search();        break;
+            case 4: book.updateContact(); break;
+            case 5: book.deleteContact(); break;
+            case 6: cout &lt;&lt; "Goodbye!" &lt;&lt; endl; break;
+            default: cout &lt;&lt; "Invalid choice." &lt;&lt; endl;
+        }
+    } while (choice != 6);
+
+    return 0;
+}</code></pre>
+                <h3>Suggested Extensions</h3>
+                <ul>
+                    <li>Add contact groups or categories.</li>
+                    <li>Implement sorting (alphabetical, by date added).</li>
+                    <li>Export contacts to JSON or CSV.</li>
+                    <li>Add favourites and speed-dial numbers.</li>
+                </ul>
+
+                <!-- ===== Coding Challenges ===== -->
+                <h2>Coding Challenges</h2>
+                <p>These shorter challenges test fundamental concepts. Each one can be solved in a single file. Try solving them on your own first, then compare with the solutions below.</p>
+
+                <!-- Challenge 1 -->
+                <h3>Challenge 1: FizzBuzz</h3>
+                <p>Print numbers 1 to 100. For multiples of 3, print <code>Fizz</code>; for multiples of 5, print <code>Buzz</code>; for multiples of both, print <code>FizzBuzz</code>.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 1; i &lt;= 100; i++) {
+        if (i % 15 == 0)      cout &lt;&lt; "FizzBuzz";
+        else if (i % 3 == 0)  cout &lt;&lt; "Fizz";
+        else if (i % 5 == 0)  cout &lt;&lt; "Buzz";
+        else                  cout &lt;&lt; i;
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+
+                <!-- Challenge 2 -->
+                <h3>Challenge 2: Palindrome Checker</h3>
+                <p>Write a function that checks if a string reads the same forwards and backwards, ignoring case and non-alphanumeric characters.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;cctype&gt;
+using namespace std;
+
+bool isPalindrome(const string&amp; input) {
+    string cleaned;
+    for (char c : input) {
+        if (isalnum(static_cast&lt;unsigned char&gt;(c)))
+            cleaned += tolower(static_cast&lt;unsigned char&gt;(c));
+    }
+    string reversed = cleaned;
+    reverse(reversed.begin(), reversed.end());
+    return cleaned == reversed;
+}
+
+int main() {
+    string tests[] = {
+        "racecar", "A man, a plan, a canal: Panama",
+        "hello", "Was it a car or a cat I saw?"
+    };
+    for (const auto&amp; t : tests) {
+        cout &lt;&lt; "\"" &lt;&lt; t &lt;&lt; "\" -&gt; "
+             &lt;&lt; (isPalindrome(t) ? "Palindrome" : "Not a palindrome")
+             &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+
+                <!-- Challenge 3 -->
+                <h3>Challenge 3: Matrix Transposition</h3>
+                <p>Given an <em>M&times;N</em> matrix, produce the <em>N&times;M</em> transpose.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+using Matrix = vector&lt;vector&lt;int&gt;&gt;;
+
+Matrix transpose(const Matrix&amp; mat) {
+    if (mat.empty()) return {};
+    int rows = mat.size();
+    int cols = mat[0].size();
+    Matrix result(cols, vector&lt;int&gt;(rows));
+    for (int i = 0; i &lt; rows; i++)
+        for (int j = 0; j &lt; cols; j++)
+            result[j][i] = mat[i][j];
+    return result;
+}
+
+void printMatrix(const Matrix&amp; mat) {
+    for (const auto&amp; row : mat) {
+        for (int val : row)
+            cout &lt;&lt; val &lt;&lt; "\t";
+        cout &lt;&lt; endl;
+    }
+}
+
+int main() {
+    Matrix mat = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    cout &lt;&lt; "Original:" &lt;&lt; endl;
+    printMatrix(mat);
+
+    Matrix t = transpose(mat);
+    cout &lt;&lt; "\nTransposed:" &lt;&lt; endl;
+    printMatrix(t);
+
+    return 0;
+}</code></pre>
+
+                <!-- Challenge 4 -->
+                <h3>Challenge 4: Linked List Implementation</h3>
+                <p>Implement a singly linked list with insert, remove, search, and display operations using dynamic memory and pointers.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+    Node(int val) : data(val), next(nullptr) {}
+};
+
+class LinkedList {
+    Node* head;
+public:
+    LinkedList() : head(nullptr) {}
+
+    ~LinkedList() {
+        while (head) {
+            Node* temp = head;
+            head = head-&gt;next;
+            delete temp;
+        }
+    }
+
+    void insertFront(int val) {
+        Node* node = new Node(val);
+        node-&gt;next = head;
+        head = node;
+    }
+
+    void insertBack(int val) {
+        Node* node = new Node(val);
+        if (!head) { head = node; return; }
+        Node* curr = head;
+        while (curr-&gt;next) curr = curr-&gt;next;
+        curr-&gt;next = node;
+    }
+
+    bool remove(int val) {
+        if (!head) return false;
+        if (head-&gt;data == val) {
+            Node* temp = head;
+            head = head-&gt;next;
+            delete temp;
+            return true;
+        }
+        Node* curr = head;
+        while (curr-&gt;next &amp;&amp; curr-&gt;next-&gt;data != val)
+            curr = curr-&gt;next;
+        if (!curr-&gt;next) return false;
+        Node* temp = curr-&gt;next;
+        curr-&gt;next = temp-&gt;next;
+        delete temp;
+        return true;
+    }
+
+    bool search(int val) const {
+        Node* curr = head;
+        while (curr) {
+            if (curr-&gt;data == val) return true;
+            curr = curr-&gt;next;
+        }
+        return false;
+    }
+
+    void display() const {
+        Node* curr = head;
+        while (curr) {
+            cout &lt;&lt; curr-&gt;data;
+            if (curr-&gt;next) cout &lt;&lt; " -&gt; ";
+            curr = curr-&gt;next;
+        }
+        cout &lt;&lt; " -&gt; NULL" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    LinkedList list;
+    list.insertBack(10);
+    list.insertBack(20);
+    list.insertBack(30);
+    list.insertFront(5);
+
+    cout &lt;&lt; "List: ";
+    list.display();          // 5 -&gt; 10 -&gt; 20 -&gt; 30 -&gt; NULL
+
+    cout &lt;&lt; "Search 20: "
+         &lt;&lt; (list.search(20) ? "Found" : "Not found") &lt;&lt; endl;
+
+    list.remove(20);
+    cout &lt;&lt; "After removing 20: ";
+    list.display();          // 5 -&gt; 10 -&gt; 30 -&gt; NULL
+
+    return 0;
+}</code></pre>
+
+                <!-- Challenge 5 -->
+                <h3>Challenge 5: Simple Stack Implementation</h3>
+                <p>Implement a stack data structure from scratch using a dynamic array (vector). Support <code>push</code>, <code>pop</code>, <code>top</code>, <code>isEmpty</code>, and <code>size</code>.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+template &lt;typename T&gt;
+class Stack {
+    vector&lt;T&gt; data;
+public:
+    void push(const T&amp; val) {
+        data.push_back(val);
+    }
+
+    void pop() {
+        if (data.empty())
+            throw underflow_error("Stack underflow");
+        data.pop_back();
+    }
+
+    const T&amp; top() const {
+        if (data.empty())
+            throw underflow_error("Stack is empty");
+        return data.back();
+    }
+
+    bool isEmpty() const { return data.empty(); }
+    size_t size() const  { return data.size(); }
+
+    void display() const {
+        cout &lt;&lt; "Stack (top -&gt; bottom): ";
+        for (int i = data.size() - 1; i &gt;= 0; i--) {
+            cout &lt;&lt; data[i];
+            if (i &gt; 0) cout &lt;&lt; ", ";
+        }
+        cout &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Stack&lt;int&gt; stack;
+
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    stack.display();           // 30, 20, 10
+
+    cout &lt;&lt; "Top: " &lt;&lt; stack.top() &lt;&lt; endl;       // 30
+    cout &lt;&lt; "Size: " &lt;&lt; stack.size() &lt;&lt; endl;     // 3
+
+    stack.pop();
+    cout &lt;&lt; "After pop, top: " &lt;&lt; stack.top() &lt;&lt; endl; // 20
+    stack.display();           // 20, 10
+
+    cout &lt;&lt; "Empty? "
+         &lt;&lt; (stack.isEmpty() ? "Yes" : "No") &lt;&lt; endl; // No
+
+    // Test with strings
+    Stack&lt;string&gt; strStack;
+    strStack.push("Hello");
+    strStack.push("World");
+    strStack.display();        // World, Hello
+
+    return 0;
+}</code></pre>
+
+                <!-- ===== What's Next? ===== -->
+                <h2>What&rsquo;s Next?</h2>
+                <p>Completing this course is a major milestone, but your C++ journey is far from over. Here are some paths you can explore to deepen your skills:</p>
+                <ul>
+                    <li><strong>Data Structures &amp; Algorithms</strong> &ndash; Study arrays, linked lists, trees, graphs, sorting, searching, and dynamic programming. Practise on platforms like LeetCode, HackerRank, and Codeforces.</li>
+                    <li><strong>Game Development</strong> &ndash; Learn libraries such as SFML, SDL2, or Unreal Engine (which uses C++ extensively). Build 2D and 3D games to apply OOP, graphics, and physics concepts.</li>
+                    <li><strong>Systems Programming</strong> &ndash; Explore operating system concepts, network programming with sockets, and embedded systems. C++ is a dominant language in these domains.</li>
+                    <li><strong>Competitive Programming</strong> &ndash; Participate in coding contests (Codeforces, AtCoder, USACO). This sharpens your problem-solving speed and algorithmic thinking.</li>
+                    <li><strong>Open Source Contributions</strong> &ndash; Find a C++ open-source project on GitHub that interests you. Start with &ldquo;good first issue&rdquo; labels and learn from real-world codebases.</li>
+                    <li><strong>Advanced C++</strong> &ndash; Dive into metaprogramming, SFINAE, concepts (C++20), coroutines, modules, and ranges. Read books like <em>Effective Modern C++</em> by Scott Meyers.</li>
+                    <li><strong>Build Your Own Projects</strong> &ndash; The best way to learn is to build something you care about. A chat application, a file compressor, a ray tracer, a database engine &ndash; the possibilities are endless.</li>
+                </ul>
+                <p>Remember: <strong>consistency beats intensity</strong>. Code a little every day, and you will be amazed at how quickly you improve.</p>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Practice is essential</strong> &ndash; Reading about code is no substitute for writing it. Build projects and solve challenges regularly.</li>
+                    <li><strong>Start simple, then iterate</strong> &ndash; Get a working prototype first, then add features incrementally. This mirrors professional software development.</li>
+                    <li><strong>Use the full language</strong> &ndash; These projects touch on variables, functions, classes, templates, file I/O, STL containers, smart pointers, and more &ndash; don&rsquo;t shy away from any concept.</li>
+                    <li><strong>Read others&rsquo; code</strong> &ndash; Study open-source C++ projects to learn idiomatic patterns and best practices you won&rsquo;t find in tutorials.</li>
+                    <li><strong>Debug fearlessly</strong> &ndash; Use debuggers, add logging, write tests. Bugs are learning opportunities, not failures.</li>
+                    <li><strong>Version control everything</strong> &ndash; Use Git from day one for every project, no matter how small.</li>
+                    <li><strong>Never stop learning</strong> &ndash; C++ evolves with each standard (C++11, 14, 17, 20, 23). Stay current and keep pushing your boundaries.</li>
+                    <li>You have completed all <strong>55 lessons</strong> of the CodeVerse C++ course &ndash; congratulations on your dedication and hard work!</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/SYd5F4gIH90" title="C++ Projects for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="testing.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Testing &amp; Assertions</span>
+                </a>
+                <a href="index.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Back to C++ Home</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

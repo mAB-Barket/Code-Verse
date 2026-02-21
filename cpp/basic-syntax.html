@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Basic Syntax - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-basic-syntax">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html" class="active"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 4 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="7" style="width:7%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Basic Syntax
+                </div>
+                <h1>4. C++ Basic Syntax</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 4 of 55</span>
+                    <span>&#9201; 12 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>Understanding C++ Program Structure</h2>
+                <p>Every C++ program follows a well-defined structure. Before you can write complex applications, you need to understand the fundamental building blocks that make up a C++ program. Syntax is the set of rules that defines how a C++ program is written and interpreted by the compiler. Just as English has grammar rules, C++ has syntax rules that must be followed precisely for the compiler to understand your code.</p>
+                <p>A typical C++ program consists of the following components, in order:</p>
+                <ol>
+                    <li><strong>Preprocessor directives</strong> &mdash; instructions for the preprocessor (e.g., <code>#include</code>)</li>
+                    <li><strong>Namespace declarations</strong> &mdash; such as <code>using namespace std;</code></li>
+                    <li><strong>Function definitions</strong> &mdash; including the <code>main()</code> function</li>
+                    <li><strong>Statements</strong> &mdash; the actual instructions inside functions</li>
+                </ol>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// 1. Preprocessor directive
+#include &lt;iostream&gt;
+
+// 2. Namespace declaration
+using namespace std;
+
+// 3. Main function definition
+int main() {
+    // 4. Statements
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ syntax is strict &mdash; even a single missing semicolon or misplaced brace can prevent your program from compiling. Understanding the basic syntax rules is essential before moving on to more advanced topics like variables, functions, and classes.</p>
+                </div>
+
+                <h2>Preprocessor Directives</h2>
+                <p>Preprocessor directives are special instructions that begin with the <code>#</code> symbol. They are processed <strong>before</strong> the actual compilation of your code begins. The preprocessor is a separate program that runs first and transforms your source code before the compiler sees it.</p>
+                <p>The most common preprocessor directive is <code>#include</code>, which tells the preprocessor to insert the contents of another file into your source code. This is how you gain access to libraries and their functions.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Include standard I/O library
+#include &lt;iostream&gt;
+
+// Include string library
+#include &lt;string&gt;
+
+// Include math library
+#include &lt;cmath&gt;
+
+// Include a custom header file
+#include "myheader.h"</pre></div>
+
+                <p>There are two forms of <code>#include</code>:</p>
+                <ul>
+                    <li><code>#include &lt;filename&gt;</code> &mdash; searches for the file in the system include directories (used for standard library headers).</li>
+                    <li><code>#include "filename"</code> &mdash; searches for the file in the current directory first, then in the system directories (used for your own header files).</li>
+                </ul>
+
+                <p>Other common preprocessor directives include:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Define a constant
+#define PI 3.14159265
+
+// Conditional compilation
+#ifdef DEBUG
+    cout &lt;&lt; "Debug mode is ON" &lt;&lt; endl;
+#endif
+
+// Include guard (prevents double inclusion)
+#ifndef MYHEADER_H
+#define MYHEADER_H
+// header contents here
+#endif</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Preprocessor directives do <strong>not</strong> end with a semicolon. They are not C++ statements &mdash; they are instructions for the preprocessor. Adding a semicolon after <code>#include &lt;iostream&gt;;</code> is a common beginner mistake and can cause unexpected errors.</p>
+                </div>
+
+                <h2>The main() Function</h2>
+                <p>Every C++ program must have exactly one function named <code>main()</code>. This is the <strong>entry point</strong> of the program &mdash; the first function that the operating system calls when your program starts executing. Without <code>main()</code>, the linker will produce an error because it does not know where to begin execution.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// The simplest valid C++ program
+int main() {
+    return 0;
+}</pre></div>
+
+                <p>The <code>int</code> before <code>main()</code> specifies the return type. The function returns an integer value to the operating system: <code>0</code> means success, and any non-zero value indicates an error. In C++11 and later, if you omit the <code>return 0;</code> statement, the compiler implicitly returns <code>0</code>.</p>
+
+                <p>The <code>main()</code> function can also accept command-line arguments:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// main with command-line arguments
+int main(int argc, char* argv[]) {
+    // argc = number of arguments
+    // argv = array of argument strings
+    return 0;
+}</pre></div>
+
+                <h2>Statements and Semicolons</h2>
+                <p>A <strong>statement</strong> is an instruction that tells the computer to perform a specific action. In C++, most statements must end with a <strong>semicolon</strong> (<code>;</code>). The semicolon is the statement terminator &mdash; it tells the compiler where one statement ends.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 10;              // declaration statement
+    cout &lt;&lt; x &lt;&lt; endl;       // expression statement
+    x = x + 5;               // assignment statement
+    return 0;                 // return statement
+}</pre></div>
+
+                <p>There are several types of statements in C++:</p>
+                <ul>
+                    <li><strong>Declaration statements:</strong> Declare variables or functions &mdash; <code>int age = 25;</code></li>
+                    <li><strong>Expression statements:</strong> Evaluate an expression &mdash; <code>cout &lt;&lt; "Hello";</code> or <code>x = x + 1;</code></li>
+                    <li><strong>Compound statements (blocks):</strong> Groups of statements enclosed in braces <code>{ }</code></li>
+                    <li><strong>Selection statements:</strong> <code>if</code>, <code>else</code>, <code>switch</code></li>
+                    <li><strong>Iteration statements:</strong> <code>for</code>, <code>while</code>, <code>do-while</code></li>
+                    <li><strong>Jump statements:</strong> <code>return</code>, <code>break</code>, <code>continue</code>, <code>goto</code></li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Forgetting a semicolon is one of the most common mistakes in C++. The compiler error message may sometimes point to the line <em>after</em> the missing semicolon, which can be confusing for beginners. Always check the line above when you get an unexpected error.</p>
+                </div>
+
+                <h2>Blocks and Curly Braces</h2>
+                <p>A <strong>block</strong> (also called a <strong>compound statement</strong>) is a group of zero or more statements enclosed in curly braces <code>{ }</code>. Blocks define the scope of variables and group statements together. The body of every function is a block.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {                    // opening brace of main block
+    int a = 10;
+
+    {                            // inner block (nested block)
+        int b = 20;
+        cout &lt;&lt; a + b &lt;&lt; endl;  // can access both a and b
+    }                            // b goes out of scope here
+
+    // cout &lt;&lt; b;               // ERROR: b is not accessible here
+
+    return 0;
+}                                // closing brace of main block</pre></div>
+
+                <p>Important rules about blocks:</p>
+                <ul>
+                    <li>Variables declared inside a block are <strong>local</strong> to that block and cannot be accessed outside of it.</li>
+                    <li>Blocks can be <strong>nested</strong> &mdash; you can have blocks inside other blocks.</li>
+                    <li>An inner block can access variables from outer blocks, but not vice versa.</li>
+                    <li>Curly braces do <strong>not</strong> require a semicolon after the closing brace (except for class and struct definitions).</li>
+                </ul>
+
+                <h2>Whitespace and Indentation</h2>
+                <p>C++ is a <strong>free-form language</strong>, which means the compiler ignores most whitespace (spaces, tabs, and newlines). You could technically write an entire program on a single line:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// This compiles and runs perfectly (but is terrible to read!)
+#include &lt;iostream&gt;
+int main(){std::cout&lt;&lt;"Hello";return 0;}</pre></div>
+
+                <p>However, just because you <em>can</em> does not mean you <em>should</em>. Proper whitespace and indentation make your code readable, maintainable, and professional. Here is the same program written with proper formatting:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello";
+    return 0;
+}</pre></div>
+
+                <p>Common indentation conventions:</p>
+                <ul>
+                    <li>Use consistent indentation &mdash; either <strong>4 spaces</strong> or <strong>1 tab</strong> per level (never mix them).</li>
+                    <li>Indent the contents of every block (between <code>{</code> and <code>}</code>).</li>
+                    <li>Align closing braces with the statement or keyword that opened the block.</li>
+                    <li>Use blank lines to separate logical sections of code.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Although C++ ignores extra whitespace, well-formatted code is essential for collaboration and maintenance. Most teams and companies have coding style guides that specify indentation rules. Always write code as if the person who will maintain it is a violent psychopath who knows where you live.</p>
+                </div>
+
+                <h2>Identifiers and Naming Rules</h2>
+                <p>An <strong>identifier</strong> is a name given to a variable, function, class, or any other user-defined item. C++ has strict rules for what constitutes a valid identifier:</p>
+                <ul>
+                    <li>Can contain letters (<code>a-z</code>, <code>A-Z</code>), digits (<code>0-9</code>), and underscores (<code>_</code>).</li>
+                    <li>Must begin with a letter or an underscore &mdash; <strong>cannot start with a digit</strong>.</li>
+                    <li>Cannot be a C++ keyword (reserved word).</li>
+                    <li>Are <strong>case-sensitive</strong> &mdash; <code>myVar</code> and <code>MyVar</code> are different identifiers.</li>
+                    <li>Cannot contain spaces or special characters like <code>@</code>, <code>$</code>, <code>%</code>.</li>
+                    <li>Should not start with double underscores (<code>__</code>) or underscore followed by a capital letter (<code>_A</code>) &mdash; these are reserved for the compiler and standard library.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// VALID identifiers
+int age;
+int _count;
+int totalScore;
+int player1Score;
+int MAX_SIZE;
+int myLongVariableName;
+
+// INVALID identifiers
+// int 2ndPlace;       // cannot start with a digit
+// int my-var;         // hyphens not allowed
+// int my var;         // spaces not allowed
+// int class;          // 'class' is a reserved keyword
+// int hello@world;    // special characters not allowed</pre></div>
+
+                <p>Common naming conventions in C++:</p>
+                <ul>
+                    <li><strong>camelCase</strong> for variables and functions: <code>studentName</code>, <code>calculateTotal()</code></li>
+                    <li><strong>PascalCase</strong> for classes and structs: <code>StudentRecord</code>, <code>LinkedList</code></li>
+                    <li><strong>UPPER_SNAKE_CASE</strong> for constants and macros: <code>MAX_SIZE</code>, <code>PI</code></li>
+                    <li><strong>snake_case</strong> is also common (used by the C++ standard library): <code>my_variable</code>, <code>push_back</code></li>
+                </ul>
+
+                <h2>C++ Keywords (Reserved Words)</h2>
+                <p>C++ has a set of <strong>reserved words</strong> (keywords) that have special meanings and cannot be used as identifiers. These words are part of the language itself and are understood by the compiler. Here is a list of the most commonly used C++ keywords:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// C++ Keywords (Reserved Words)
+alignas      alignof      and          and_eq       asm
+auto         bitand       bitor        bool         break
+case         catch        char         char8_t      char16_t
+char32_t     class        compl        concept      const
+consteval    constexpr    constinit    const_cast   continue
+co_await     co_return    co_yield     decltype     default
+delete       do           double       dynamic_cast else
+enum         explicit     export       extern       false
+float        for          friend       goto         if
+inline       int          long         mutable      namespace
+new          noexcept     not          not_eq       nullptr
+operator     or           or_eq        private      protected
+public       register     reinterpret_cast  requires return
+short        signed       sizeof       static       static_assert
+static_cast  struct       switch       template     this
+thread_local throw        true         try          typedef
+typeid       typename     union        unsigned     using
+virtual      void         volatile     wchar_t      while
+xor          xor_eq</pre></div>
+
+                <p>You do not need to memorize all of these right now. As you progress through the lessons, you will learn what most of these keywords do. For now, just remember that you cannot use any of these words as variable names, function names, or class names.</p>
+
+                <h2>Case Sensitivity</h2>
+                <p>C++ is a <strong>case-sensitive</strong> language. This means that uppercase and lowercase letters are treated as completely different characters. The identifier <code>count</code> is not the same as <code>Count</code>, <code>COUNT</code>, or <code>cOuNt</code>.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int score = 100;
+    int Score = 200;
+    int SCORE = 300;
+
+    // These are three DIFFERENT variables
+    cout &lt;&lt; score &lt;&lt; endl;   // 100
+    cout &lt;&lt; Score &lt;&lt; endl;   // 200
+    cout &lt;&lt; SCORE &lt;&lt; endl;   // 300
+
+    return 0;
+}</pre></div>
+
+                <p>This case sensitivity extends to everything in C++:</p>
+                <ul>
+                    <li><code>int</code> is a keyword, but <code>Int</code>, <code>INT</code>, and <code>iNt</code> are not.</li>
+                    <li><code>main</code> is the entry point, but <code>Main</code> or <code>MAIN</code> will not be recognized.</li>
+                    <li><code>cout</code> is the output stream, but <code>Cout</code> or <code>COUT</code> will cause errors.</li>
+                    <li><code>return</code> is a keyword, but <code>Return</code> or <code>RETURN</code> are just ordinary identifiers.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Because C++ is case-sensitive, always be consistent with your naming. If you declare a variable as <code>playerScore</code>, you must use that exact capitalization every time you refer to it. Writing <code>playerscore</code> or <code>PlayerScore</code> would refer to a <em>different</em> variable (or cause an "undeclared identifier" error).</p>
+                </div>
+
+                <h2>The std Namespace and Scope Resolution Operator ::</h2>
+                <p>A <strong>namespace</strong> is a container that groups related identifiers (names) together to prevent naming conflicts. The C++ Standard Library puts all of its components (like <code>cout</code>, <code>cin</code>, <code>string</code>, <code>endl</code>) inside a namespace called <code>std</code> (short for "standard").</p>
+                <p>To access something inside a namespace, you use the <strong>scope resolution operator</strong> <code>::</code>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+
+int main() {
+    // Using the scope resolution operator
+    std::cout &lt;&lt; "Hello from std namespace!" &lt;&lt; std::endl;
+    return 0;
+}</pre></div>
+
+                <p>Writing <code>std::</code> before every standard library name can be tedious, so many programs use the <code>using</code> directive:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;   // bring all std names into scope
+
+int main() {
+    cout &lt;&lt; "No need for std:: prefix now!" &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p>You can also selectively import specific names from a namespace:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+
+// Only import cout and endl
+using std::cout;
+using std::endl;
+
+int main() {
+    cout &lt;&lt; "Only cout and endl are imported." &lt;&lt; endl;
+    // std::cin is still required for cin usage
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Using <code>using namespace std;</code> is convenient for small programs and tutorials, but it is considered bad practice in larger projects and header files because it can cause <strong>name collisions</strong>. In professional code, prefer using <code>std::cout</code> or selective <code>using std::cout;</code> declarations.</p>
+                </div>
+
+                <h2>Basic Data Type Overview</h2>
+                <p>C++ provides several built-in (fundamental) data types. Here is a quick overview of the most commonly used ones:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    int age = 25;             // whole numbers (integers)
+    double price = 19.99;     // decimal numbers (floating-point)
+    char grade = 'A';         // single character
+    bool isPassed = true;     // boolean (true or false)
+    string name = "Alice";    // text string (from &lt;string&gt; library)
+
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "Price: $" &lt;&lt; price &lt;&lt; endl;
+    cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; endl;
+    cout &lt;&lt; "Passed: " &lt;&lt; isPassed &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <p>Here is a quick reference table of the fundamental data types:</p>
+                <ul>
+                    <li><code>int</code> &mdash; stores whole numbers (e.g., <code>42</code>, <code>-7</code>, <code>0</code>)</li>
+                    <li><code>double</code> &mdash; stores decimal (floating-point) numbers (e.g., <code>3.14</code>, <code>-0.001</code>)</li>
+                    <li><code>float</code> &mdash; stores decimal numbers with less precision than double (e.g., <code>3.14f</code>)</li>
+                    <li><code>char</code> &mdash; stores a single character (e.g., <code>'A'</code>, <code>'9'</code>, <code>'$'</code>)</li>
+                    <li><code>bool</code> &mdash; stores <code>true</code> or <code>false</code></li>
+                    <li><code>string</code> &mdash; stores a sequence of characters (requires <code>#include &lt;string&gt;</code>)</li>
+                    <li><code>void</code> &mdash; represents the absence of a type (used with functions that return nothing)</li>
+                </ul>
+
+                <h2>Variable Declaration and Initialization</h2>
+                <p>In C++, you must <strong>declare</strong> a variable before you can use it. Declaration tells the compiler the variable's name and type. You can also <strong>initialize</strong> a variable (give it an initial value) at the time of declaration.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Declaration without initialization
+int count;            // count has an indeterminate value
+
+// Declaration with initialization (copy initialization)
+int score = 100;
+
+// Direct initialization (using parentheses)
+int total(250);
+
+// Uniform initialization / brace initialization (C++11)
+int value{42};
+
+// Multiple variable declarations
+int a = 1, b = 2, c = 3;
+
+// Constant variable (value cannot be changed)
+const double PI = 3.14159265;
+
+// Auto type deduction (C++11)
+auto x = 10;         // compiler deduces x as int
+auto y = 3.14;       // compiler deduces y as double
+auto z = 'A';        // compiler deduces z as char</pre></div>
+
+                <p>There are important differences between the initialization styles:</p>
+                <ul>
+                    <li><strong>Copy initialization</strong> (<code>int x = 5;</code>) &mdash; the traditional C-style initialization.</li>
+                    <li><strong>Direct initialization</strong> (<code>int x(5);</code>) &mdash; uses parentheses, common in class construction.</li>
+                    <li><strong>Brace initialization</strong> (<code>int x{5};</code>) &mdash; the modern C++11 style, prevents narrowing conversions and is generally recommended.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Brace initialization prevents narrowing
+    // int x{3.14};  // ERROR: narrowing conversion from double to int
+    int x = 3.14;    // OK but x becomes 3 (truncated, not rounded)
+
+    cout &lt;&lt; x &lt;&lt; endl; // Output: 3
+
+    return 0;
+}</pre></div>
+
+                <h2>Expression, Declaration, and Compound Statements</h2>
+                <p>C++ categorizes statements into several types. Understanding these categories helps you write correct and organized code.</p>
+
+                <h3>Expression Statements</h3>
+                <p>An expression statement is an expression followed by a semicolon. Expressions can involve arithmetic, assignments, function calls, or any computation:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>x = 5;                    // assignment expression statement
+x + y;                    // valid but useless (result is discarded)
+cout &lt;&lt; "Hi";             // function call expression statement
+x++;                      // increment expression statement
+myFunction(a, b);         // function call expression statement</pre></div>
+
+                <h3>Declaration Statements</h3>
+                <p>Declaration statements introduce new identifiers (variables, constants, types) into the program:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>int x = 10;               // declares and initializes x
+double pi = 3.14;         // declares and initializes pi
+const int MAX = 100;      // declares a constant
+string greeting = "Hi";   // declares a string variable</pre></div>
+
+                <h3>Compound Statements (Blocks)</h3>
+                <p>A compound statement is a group of statements enclosed in curly braces. It is treated as a single statement by the compiler:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>{
+    int temp = a;
+    a = b;
+    b = temp;
+}  // this entire block is one compound statement</pre></div>
+
+                <h2>Header Files and #include</h2>
+                <p>Header files contain declarations of functions, classes, and other resources that your program needs. By including a header file, you tell the compiler about the existence of these resources so you can use them in your code.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Standard C++ library headers (no .h extension)
+#include &lt;iostream&gt;     // cout, cin, endl
+#include &lt;string&gt;       // string class
+#include &lt;vector&gt;       // vector container
+#include &lt;cmath&gt;        // math functions (sqrt, pow, etc.)
+#include &lt;fstream&gt;      // file I/O
+#include &lt;algorithm&gt;    // sort, find, etc.
+#include &lt;iomanip&gt;      // output formatting (setw, setprecision)
+
+// C-style headers (legacy, available in C++)
+#include &lt;cstdio&gt;       // printf, scanf (C++ version of stdio.h)
+#include &lt;cstdlib&gt;      // rand, srand, exit
+#include &lt;cstring&gt;      // C-string functions (strlen, strcpy)</pre></div>
+
+                <p>The standard C++ headers use angle brackets and do not have a <code>.h</code> extension. The old C headers (like <code>stdio.h</code>) have been renamed with a <code>c</code> prefix and no <code>.h</code> (e.g., <code>cstdio</code>) for use in C++, and their contents are placed in the <code>std</code> namespace.</p>
+
+                <h2>Putting It All Together: A Complete Example</h2>
+                <p>Here is a complete example that demonstrates many of the basic syntax elements we have covered in this lesson:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;    // for cout, cin, endl
+#include &lt;string&gt;      // for string class
+using namespace std;
+
+// A constant using const
+const double TAX_RATE = 0.08;
+
+int main() {
+    // Variable declarations and initialization
+    string productName;
+    double price;
+    int quantity;
+
+    // User input
+    cout &lt;&lt; "Enter product name: ";
+    getline(cin, productName);
+
+    cout &lt;&lt; "Enter price: $";
+    cin &gt;&gt; price;
+
+    cout &lt;&lt; "Enter quantity: ";
+    cin &gt;&gt; quantity;
+
+    // Calculations using a block
+    {
+        double subtotal = price * quantity;
+        double tax = subtotal * TAX_RATE;
+        double total = subtotal + tax;
+
+        // Output results
+        cout &lt;&lt; "\n--- Receipt ---" &lt;&lt; endl;
+        cout &lt;&lt; "Product: " &lt;&lt; productName &lt;&lt; endl;
+        cout &lt;&lt; "Price: $" &lt;&lt; price &lt;&lt; endl;
+        cout &lt;&lt; "Quantity: " &lt;&lt; quantity &lt;&lt; endl;
+        cout &lt;&lt; "Subtotal: $" &lt;&lt; subtotal &lt;&lt; endl;
+        cout &lt;&lt; "Tax: $" &lt;&lt; tax &lt;&lt; endl;
+        cout &lt;&lt; "Total: $" &lt;&lt; total &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <h2>Multiple Statements on One Line and Multiple Lines for One Statement</h2>
+                <p>C++ allows you to place multiple statements on a single line, and you can also split a single statement across multiple lines:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Multiple statements on one line (legal but discouraged)
+int a = 5; int b = 10; int c = a + b;
+
+// One statement across multiple lines (perfectly fine)
+cout &lt;&lt; "The sum of "
+     &lt;&lt; a
+     &lt;&lt; " and "
+     &lt;&lt; b
+     &lt;&lt; " is "
+     &lt;&lt; c
+     &lt;&lt; endl;</pre></div>
+
+                <p>While both are technically valid, best practices recommend:</p>
+                <ul>
+                    <li>Put only <strong>one statement per line</strong> for clarity.</li>
+                    <li>Split long statements across multiple lines for readability, aligning continuation lines.</li>
+                </ul>
+
+                <h2>Common Syntax Errors</h2>
+                <p>Here are some of the most frequent syntax mistakes beginners make in C++:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// ERROR 1: Missing semicolon
+int x = 10   // ERROR: expected ';' at end of declaration
+
+// ERROR 2: Mismatched braces
+int main() {
+    cout &lt;&lt; "Hello";
+// Missing closing brace!
+
+// ERROR 3: Using a keyword as an identifier
+int class = 5;   // ERROR: 'class' is a reserved keyword
+
+// ERROR 4: Starting identifier with a digit
+int 1stPlace;    // ERROR: identifier cannot start with a digit
+
+// ERROR 5: Wrong case for keywords
+Int main() {     // ERROR: 'Int' is not the same as 'int'
+    Return 0;    // ERROR: 'Return' is not the same as 'return'
+}
+
+// ERROR 6: Semicolon after #include
+#include &lt;iostream&gt;;  // Unexpected semicolon
+
+// ERROR 7: Using undeclared variable
+cout &lt;&lt; myVar;  // ERROR if myVar was never declared</pre></div>
+
+                <h2>Summary</h2>
+                <p>In this lesson, you learned the fundamental syntax rules of C++:</p>
+                <ul>
+                    <li>C++ programs consist of preprocessor directives, namespace declarations, function definitions, and statements.</li>
+                    <li>Preprocessor directives start with <code>#</code> and do not end with semicolons.</li>
+                    <li>Every C++ program must have exactly one <code>main()</code> function.</li>
+                    <li>Statements end with semicolons; blocks use curly braces <code>{ }</code>.</li>
+                    <li>C++ is a free-form language &mdash; whitespace is ignored, but proper indentation is essential for readability.</li>
+                    <li>Identifiers must start with a letter or underscore, are case-sensitive, and cannot be keywords.</li>
+                    <li>The <code>std</code> namespace contains all standard library components; use <code>::</code> to access them.</li>
+                    <li>C++ has several fundamental data types: <code>int</code>, <code>double</code>, <code>char</code>, <code>bool</code>, and <code>string</code>.</li>
+                    <li>Variables must be declared before use and can be initialized using copy, direct, or brace initialization.</li>
+                    <li>Header files are included with <code>#include</code> to access library functions and classes.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Mastering the basic syntax of C++ is the foundation for everything that follows. Every concept you learn &mdash; variables, functions, classes, templates &mdash; builds on these fundamental rules. Take the time to understand each rule, practice writing small programs, and pay careful attention to the compiler's error messages when things go wrong.</p>
+                </div>
+
+                <h2>Practice Exercises</h2>
+                <p>Try these exercises to reinforce your understanding of C++ basic syntax:</p>
+                <ol>
+                    <li><strong>Fix the Errors:</strong> Given a program with 5 syntax errors (missing semicolons, wrong cases, invalid identifiers), find and fix all of them.</li>
+                    <li><strong>Identifier Check:</strong> Write down 10 identifiers and determine which ones are valid and which are invalid according to C++ naming rules.</li>
+                    <li><strong>Reformat Code:</strong> Take a poorly formatted C++ program written on a single line and reformat it with proper indentation and spacing.</li>
+                    <li><strong>Namespace Practice:</strong> Rewrite a program that uses <code>using namespace std;</code> to instead use explicit <code>std::</code> prefixes everywhere.</li>
+                    <li><strong>Data Types:</strong> Write a program that declares at least one variable of each basic data type (<code>int</code>, <code>double</code>, <code>char</code>, <code>bool</code>, <code>string</code>) and prints their values.</li>
+                    <li><strong>Initialization Styles:</strong> Write a program demonstrating all three initialization styles (copy, direct, brace) and print the results.</li>
+                </ol>
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/vLnPwxZdW4Y" title="C++ Basic Syntax" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What symbol starts a preprocessor directive in C++?","o":["@","#","$","&"],"a":1},
+                {"q":"Which of these is a preprocessor directive?","o":["int main()","using namespace std;","#include <iostream>","return 0;"],"a":2},
+                {"q":"Do preprocessor directives end with a semicolon?","o":["Yes, always","No, they do not","Only #include does","Only #define does"],"a":1},
+                {"q":"What does #include do?","o":["Defines a variable","Inserts the contents of a file into your source code","Creates a function","Starts the program"],"a":1},
+                {"q":"What is the difference between #include <file> and #include \"file\"?","o":["No difference","<> searches system directories; \"\" searches local first","<> is for C++; \"\" is for C","<> is newer"],"a":1},
+                {"q":"What is the entry point of every C++ program?","o":["start()","begin()","main()","run()"],"a":2},
+                {"q":"How many main() functions can a C++ program have?","o":["Unlimited","Two","Exactly one","Zero or more"],"a":2},
+                {"q":"What does 'int' before main() signify?","o":["main takes an integer parameter","main returns an integer value","main uses integer variables","It is optional"],"a":1},
+                {"q":"What does return 0 mean in main()?","o":["The program failed","The program ended successfully","The program returns nothing","An error occurred"],"a":1},
+                {"q":"What does a non-zero return value from main() indicate?","o":["Success","An error or abnormal termination","The program needs to restart","Nothing meaningful"],"a":1},
+                {"q":"What character terminates most C++ statements?","o":["Colon (:)","Period (.)","Semicolon (;)","Comma (,)"],"a":2},
+                {"q":"Which of these is a declaration statement?","o":["cout << x;","x = 5;","int x = 10;","return 0;"],"a":2},
+                {"q":"Which of these is an expression statement?","o":["int x;","#include <iostream>","x = x + 1;","using namespace std;"],"a":2},
+                {"q":"What is a compound statement?","o":["A statement with multiple operators","A group of statements enclosed in curly braces","A statement with commas","A statement on multiple lines"],"a":1},
+                {"q":"What do curly braces { } define in C++?","o":["Array elements","A block (compound statement)","String literals","Comments"],"a":1},
+                {"q":"What happens to variables declared inside a block?","o":["They become global","They are local to that block and destroyed when the block ends","They persist forever","They are moved to main"],"a":1},
+                {"q":"Can inner blocks access variables from outer blocks?","o":["No, never","Yes","Only if declared static","Only if declared global"],"a":1},
+                {"q":"Can outer blocks access variables declared in inner blocks?","o":["Yes","No","Only if returned","Only if passed as parameter"],"a":1},
+                {"q":"Does a closing curly brace } require a semicolon after it?","o":["Always","Never","Only for class/struct definitions","Only for functions"],"a":2},
+                {"q":"Is C++ a free-form language?","o":["No, whitespace matters like Python","Yes, the compiler ignores most whitespace","Only in modern C++","Only outside of strings"],"a":1},
+                {"q":"Which indentation style is recommended?","o":["Random indentation","Consistent use of 4 spaces or 1 tab per level","No indentation needed","2 spaces only"],"a":1},
+                {"q":"Can you write an entire C++ program on one line?","o":["No, that causes errors","Yes, but it is terrible for readability","Only the main function","Only preprocessor directives"],"a":1},
+                {"q":"What is an identifier in C++?","o":["A keyword","A name given to a variable, function, class, or other item","A semicolon","A data type"],"a":1},
+                {"q":"Which of these is a valid C++ identifier?","o":["2ndPlace","my-var","_count","class"],"a":2},
+                {"q":"Can an identifier start with a digit?","o":["Yes","No","Only if followed by a letter","Only for constants"],"a":1},
+                {"q":"Can an identifier contain underscores?","o":["No","Yes","Only at the beginning","Only at the end"],"a":1},
+                {"q":"Which character is NOT allowed in a C++ identifier?","o":["Underscore (_)","Letter (a-z)","Digit (0-9)","Hyphen (-)"],"a":3},
+                {"q":"Why should you avoid starting identifiers with double underscores?","o":["It causes errors","They are reserved for the compiler and standard library","It slows compilation","It makes code unreadable"],"a":1},
+                {"q":"Is C++ case-sensitive?","o":["No","Yes","Only for variables","Only for keywords"],"a":1},
+                {"q":"Are 'myVar' and 'MyVar' the same identifier in C++?","o":["Yes, they are identical","No, they are different identifiers","Only in global scope","Only in local scope"],"a":1},
+                {"q":"What happens if you write 'Int' instead of 'int'?","o":["It works fine","Compilation error — C++ is case-sensitive","Warning only","Runtime error"],"a":1},
+                {"q":"What happens if you write 'Main()' instead of 'main()'?","o":["It works fine","The linker won't find the entry point","Warning only","Runtime error"],"a":1},
+                {"q":"What is a namespace in C++?","o":["A file extension","A container that groups identifiers to prevent name conflicts","A data type","A compiler flag"],"a":1},
+                {"q":"What does 'std' stand for?","o":["Standard","String data","System type","Static"],"a":0},
+                {"q":"What is the scope resolution operator?","o":["->",".","::","=>"],"a":2},
+                {"q":"What does std::cout mean?","o":["A variable named std.cout","Access cout from the std namespace","A function call","A class method"],"a":1},
+                {"q":"What does 'using namespace std;' do?","o":["Creates a new namespace","Brings all std names into the current scope","Deletes the std namespace","Defines the standard library"],"a":1},
+                {"q":"Why is 'using namespace std;' discouraged in large projects?","o":["It slows compilation","It can cause name collisions","It is deprecated","It uses more memory"],"a":1},
+                {"q":"How do you selectively import only cout from std?","o":["import std.cout;","using std::cout;","include std::cout;","from std use cout;"],"a":1},
+                {"q":"Which data type stores whole numbers?","o":["double","string","int","char"],"a":2},
+                {"q":"Which data type stores decimal numbers with high precision?","o":["int","char","bool","double"],"a":3},
+                {"q":"Which data type stores a single character?","o":["string","int","char","bool"],"a":2},
+                {"q":"Which data type stores true or false?","o":["int","char","bool","string"],"a":2},
+                {"q":"Which header is needed to use the string class?","o":["<iostream>","<string>","<cstring>","<text>"],"a":1},
+                {"q":"What is the difference between float and double?","o":["No difference","double has more precision than float","float has more precision","double is for integers"],"a":1},
+                {"q":"What does bool stand for?","o":["Boolean","Binary output option list","Block of logic","Buffer object"],"a":0},
+                {"q":"What does void mean as a return type?","o":["Returns zero","Returns nothing","Returns a string","Returns any type"],"a":1},
+                {"q":"What is copy initialization syntax?","o":["int x(5);","int x{5};","int x = 5;","auto x = 5;"],"a":2},
+                {"q":"What is direct initialization syntax?","o":["int x = 5;","int x(5);","int x{5};","int x: 5;"],"a":1},
+                {"q":"What is brace (uniform) initialization syntax?","o":["int x = 5;","int x(5);","int x{5};","int x[5];"],"a":2},
+                {"q":"Which initialization style prevents narrowing conversions?","o":["Copy initialization","Direct initialization","Brace initialization","All of them"],"a":2},
+                {"q":"What happens with 'int x{3.14};'?","o":["x becomes 3","x becomes 3.14","Compilation error: narrowing conversion","x becomes 4"],"a":2},
+                {"q":"What happens with 'int x = 3.14;'?","o":["x becomes 3 (truncated)","x becomes 3.14","Compilation error","x becomes 4"],"a":0},
+                {"q":"How do you declare a constant in C++?","o":["constant int x = 5;","const int x = 5;","final int x = 5;","static int x = 5;"],"a":1},
+                {"q":"What does the 'auto' keyword do in C++11?","o":["Makes a variable automatic","Lets the compiler deduce the variable type","Creates an automatic function","Defines an auto-incrementing variable"],"a":1},
+                {"q":"What type does 'auto x = 10;' deduce?","o":["double","string","int","char"],"a":2},
+                {"q":"What type does 'auto y = 3.14;' deduce?","o":["int","float","double","string"],"a":2},
+                {"q":"Can you declare multiple variables on one line?","o":["No, never","Yes, separated by commas with the same type","Yes, with different types","Only in C"],"a":1},
+                {"q":"Which of these correctly declares multiple int variables?","o":["int a, b, c;","int a; int b; int c;","Both A and B are correct","Neither is correct"],"a":2},
+                {"q":"What is the value of an uninitialized local int variable?","o":["0","Indeterminate (garbage value)","null","1"],"a":1},
+                {"q":"Which statement introduces a new identifier into the program?","o":["Expression statement","Declaration statement","Jump statement","Return statement"],"a":1},
+                {"q":"What is 'x++;' an example of?","o":["Declaration statement","Expression statement","Compound statement","Jump statement"],"a":1},
+                {"q":"What is '{ int a = 1; int b = 2; }' an example of?","o":["Expression statement","Declaration statement","Compound statement (block)","Jump statement"],"a":2},
+                {"q":"What is 'return 0;' an example of?","o":["Expression statement","Declaration statement","Compound statement","Jump statement"],"a":3},
+                {"q":"Which of these is a selection statement?","o":["for","while","if","return"],"a":2},
+                {"q":"Which of these is an iteration statement?","o":["if","switch","return","while"],"a":3},
+                {"q":"What is 'break;' an example of?","o":["Expression statement","Declaration statement","Compound statement","Jump statement"],"a":3},
+                {"q":"What do header files contain?","o":["Compiled machine code","Declarations of functions, classes, and resources","Executable programs","Images and media"],"a":1},
+                {"q":"What extension do standard C++ headers use?","o":[".h",".hpp","No extension",".cpp"],"a":2},
+                {"q":"What is the C++ version of the C header <stdio.h>?","o":["<cstdio>","<stdio>","<stdiopp>","<iostream>"],"a":0},
+                {"q":"Which header provides the sqrt() and pow() functions?","o":["<iostream>","<string>","<cmath>","<algorithm>"],"a":2},
+                {"q":"Which header provides the vector container?","o":["<array>","<list>","<vector>","<container>"],"a":2},
+                {"q":"Which header provides sort() and find() functions?","o":["<cmath>","<iostream>","<sorting>","<algorithm>"],"a":3},
+                {"q":"What is the purpose of #define?","o":["To include a file","To define a macro or constant","To declare a variable","To create a function"],"a":1},
+                {"q":"What does #ifdef check?","o":["If a variable is defined","If a macro is defined","If a file exists","If a function exists"],"a":1},
+                {"q":"What is an include guard?","o":["A security feature","A mechanism to prevent double inclusion of header files","A type of firewall","A compiler optimization"],"a":1},
+                {"q":"What directives form a typical include guard?","o":["#if and #endif","#ifndef, #define, and #endif","#include and #exclude","#guard and #endguard"],"a":1},
+                {"q":"Can you place multiple statements on a single line?","o":["No, it causes errors","Yes, but it reduces readability","Only declaration statements","Only expression statements"],"a":1},
+                {"q":"Can you split a single statement across multiple lines?","o":["No, each statement must be on one line","Yes, C++ ignores line breaks within statements","Only strings can be split","Only with a backslash"],"a":1},
+                {"q":"How many statements should you ideally put per line?","o":["As many as possible","One","Two","Three"],"a":1},
+                {"q":"What is the recommended way to handle long statements?","o":["Keep them on one line no matter what","Split across multiple lines with aligned continuation","Abbreviate variable names","Use macros"],"a":1},
+                {"q":"What error results from a missing semicolon?","o":["Runtime error","Logic error","Compilation error","Warning"],"a":2},
+                {"q":"Where might the compiler report an error for a missing semicolon?","o":["On the exact line","On the line AFTER the missing semicolon","At the end of the file","In a different file"],"a":1},
+                {"q":"What error results from using a keyword as a variable name?","o":["Runtime error","Warning","Compilation error","No error"],"a":2},
+                {"q":"What error results from writing 'Int' instead of 'int'?","o":["Runtime error","No error — they are equivalent","Compilation error","Warning"],"a":2},
+                {"q":"What happens if you add a semicolon after #include <iostream>?","o":["Nothing, it is fine","It can cause unexpected errors","It improves compilation","It is required"],"a":1},
+                {"q":"What is a string literal in C++?","o":["A variable name","Text enclosed in double quotes","A number","A char value"],"a":1},
+                {"q":"What type of quotes are used for char values?","o":["Double quotes","Single quotes","Backticks","No quotes"],"a":1},
+                {"q":"What type of quotes are used for string values?","o":["Single quotes","Double quotes","Backticks","Either single or double"],"a":1},
+                {"q":"What is the syntax for a single-line comment in C++?","o":["# comment","// comment","/* comment */","-- comment"],"a":1},
+                {"q":"What is the syntax for a multi-line comment?","o":["// comment //","/* comment */","## comment ##","<!-- comment -->"],"a":1},
+                {"q":"What is the main() function's signature with command-line arguments?","o":["void main(args)","int main(int argc, char* argv[])","int main(string args)","int main(args[])"],"a":1},
+                {"q":"What does argc represent in main(int argc, char* argv[])?","o":["Argument count","Argument character","Array count","Application code"],"a":0},
+                {"q":"What does argv[] represent in main()?","o":["A character variable","An array of argument strings","A single string","An integer array"],"a":1},
+                {"q":"In C++11, what happens if main() has no return statement?","o":["Compilation error","Runtime error","It implicitly returns 0","Undefined behavior"],"a":2},
+                {"q":"What is the minimum valid C++ program?","o":["int main() {}","main()","#include <iostream>","void main() {}"],"a":0},
+                {"q":"What does the compiler do with whitespace between tokens?","o":["Treats it as syntax","Ignores it (mostly)","Counts it","Reports it as errors"],"a":1},
+                {"q":"Which is NOT a fundamental data type in C++?","o":["int","double","string","bool"],"a":2},
+                {"q":"Why is string not a fundamental type?","o":["It is from early C","It is a class from the standard library, not a built-in type","It was removed in C++11","It is a keyword"],"a":1},
+                {"q":"What does 'const' do to a variable?","o":["Makes it a constant whose value cannot be changed","Makes it private","Makes it static","Makes it volatile"],"a":0},
+                {"q":"Can a const variable be modified after declaration?","o":["Yes","No, it causes a compilation error","Only in the same block","Only with a cast"],"a":1},
+                {"q":"What naming convention uses 'studentName' style?","o":["PascalCase","snake_case","camelCase","UPPER_SNAKE_CASE"],"a":2},
+                {"q":"What naming convention uses 'StudentRecord' style?","o":["camelCase","PascalCase","snake_case","UPPER_SNAKE_CASE"],"a":1},
+                {"q":"What naming convention is typically used for constants?","o":["camelCase","PascalCase","snake_case","UPPER_SNAKE_CASE"],"a":3},
+                {"q":"What naming convention does the C++ standard library use?","o":["camelCase","PascalCase","snake_case","UPPER_SNAKE_CASE"],"a":2},
+                {"q":"What is a narrowing conversion?","o":["Converting a larger type to a smaller type with potential data loss","Converting int to double","Converting char to string","Converting bool to int"],"a":0},
+                {"q":"Which initialization style catches narrowing conversions?","o":["int x = 5;","int x(5);","int x{5};","All of them"],"a":2},
+                {"q":"What does #define PI 3.14 do?","o":["Declares an int variable","Creates a macro that replaces PI with 3.14 during preprocessing","Creates a const variable","Imports the math library"],"a":1},
+                {"q":"What is the difference between #define PI 3.14 and const double PI = 3.14?","o":["No difference","#define is a text replacement; const creates a typed constant","#define is faster","const is only C++11"],"a":1},
+                {"q":"What is the scope of a variable declared inside main()?","o":["Global scope","Local to main()","File scope","Namespace scope"],"a":1},
+                {"q":"What is the scope of a variable declared inside an inner block?","o":["Global scope","Local to main()","Local to that inner block only","File scope"],"a":2},
+                {"q":"Can you redeclare a variable with the same name in an inner block?","o":["No, it causes an error","Yes, the inner variable shadows the outer one","Only with different types","Only with const"],"a":1},
+                {"q":"What is variable shadowing?","o":["Hiding a variable by declaring one with the same name in an inner scope","Making a variable invisible","Deleting a variable","Copying a variable"],"a":0},
+                {"q":"What output does this produce: cout << 5 + 3;","o":["5 + 3","8","53","Error"],"a":1},
+                {"q":"What output does this produce: cout << \"5 + 3\";","o":["8","53","5 + 3","Error"],"a":2},
+                {"q":"Where are standard library headers located?","o":["In your project directory","In system include directories","In the home directory","In a temporary directory"],"a":1},
+                {"q":"What is the purpose of <iomanip> header?","o":["Input/output manipulators for formatting output","Image manipulation","Mathematical operations","Memory management"],"a":0},
+                {"q":"What is the purpose of <fstream> header?","o":["Function streams","File input/output operations","Format streams","Float streams"],"a":1},
+                {"q":"What does <cstdlib> provide?","o":["Standard library I/O","General utilities like rand, srand, exit","String functions","Container classes"],"a":1},
+                {"q":"Is 'goto' a valid C++ keyword?","o":["No, it was removed","Yes, but its use is discouraged","Only in C","Only in C++20"],"a":1},
+                {"q":"Is 'nullptr' a C++ keyword?","o":["No, it is a variable","Yes, introduced in C++11","Only in C","It is a macro"],"a":1},
+                {"q":"What does nullptr represent?","o":["Zero","A null pointer literal","An empty string","A boolean value"],"a":1},
+                {"q":"Is 'true' a keyword in C++?","o":["No, it is user-defined","Yes, it is a boolean literal keyword","Only with #include <bool>","Only in C++17"],"a":1},
+                {"q":"Is 'false' a keyword in C++?","o":["No","Yes, it is a boolean literal keyword","Only in C","Only with a macro"],"a":1},
+                {"q":"What does the 'sizeof' operator do?","o":["Counts characters in a string","Returns the size in bytes of a type or variable","Returns array length","Counts function parameters"],"a":1},
+                {"q":"Is 'sizeof' a function or an operator?","o":["A function","An operator","A macro","A preprocessor directive"],"a":1},
+                {"q":"What does 'constexpr' allow?","o":["Runtime constant evaluation","Compile-time constant evaluation","Dynamic typing","Variable deletion"],"a":1},
+                {"q":"What is the difference between const and constexpr?","o":["No difference","const can be set at runtime; constexpr must be evaluated at compile time","constexpr is slower","const is only for integers"],"a":1},
+                {"q":"What is the 'auto' keyword used for?","o":["Automatic memory management","Automatic type deduction by the compiler","Automatic function creation","Automatic compilation"],"a":1},
+                {"q":"In which C++ standard was 'auto' type deduction introduced?","o":["C++98","C++03","C++11","C++17"],"a":2},
+                {"q":"What is the result of auto z = 'A';?","o":["z is int","z is string","z is char","z is bool"],"a":2},
+                {"q":"Can you use auto without an initializer?","o":["Yes","No, the compiler needs the initializer to deduce the type","Only with const","Only in functions"],"a":1},
+                {"q":"What is a translation unit?","o":["A compiled library","A source file after all #include files have been inserted","A line of code","A function definition"],"a":1},
+                {"q":"What is the correct order of C++ program components?","o":["main, includes, statements","includes, namespace, main, statements","statements, main, includes","main, namespace, includes"],"a":1},
+                {"q":"What does the preprocessor do before compilation?","o":["Runs the program","Processes directives like #include and #define","Optimizes machine code","Links libraries"],"a":1},
+                {"q":"What is a token in C++?","o":["A security key","The smallest individual unit of a program (keyword, identifier, operator, etc.)","A comment","A blank line"],"a":1},
+                {"q":"Which of these is NOT a valid way to initialize an int?","o":["int x = 5;","int x(5);","int x{5};","int x: 5;"],"a":3},
+                {"q":"What does 'endl' do beyond inserting a newline?","o":["Nothing extra","Flushes the output buffer","Clears the screen","Resets the cursor"],"a":1},
+                {"q":"Is '\\n' faster than endl?","o":["No, endl is faster","Yes, because \\n does not flush the buffer","They are identical in speed","Only in debug mode"],"a":1},
+                {"q":"What is the output of: int a = 5; cout << a;","o":["a","5","int a","Error"],"a":1},
+                {"q":"Which of these is a valid constant declaration?","o":["constant int x = 5;","const int x = 5;","final int x = 5;","fixed int x = 5;"],"a":1},
+                {"q":"What operator is used to access members of the std namespace?","o":["Dot (.)","Arrow (->)","Scope resolution (::)","Comma (,)"],"a":2},
+                {"q":"What is the output of: bool flag = true; cout << flag;","o":["true","1","flag","Error"],"a":1},
+                {"q":"How do you print 'true' instead of '1' for a bool?","o":["cout << true;","cout << boolalpha << flag;","cout << string(flag);","cout << bool(flag);"],"a":1},
+                {"q":"What header provides boolalpha?","o":["<string>","<iostream>","<cstdlib>","<bool>"],"a":1},
+                {"q":"What is meant by 'scope' in C++?","o":["The speed of the program","The region of code where a variable is accessible","The size of a variable","The type of a variable"],"a":1},
+                {"q":"What does 'using std::cout;' do?","o":["Imports everything from std","Imports only cout from the std namespace","Creates a new cout","Deletes cout"],"a":1},
+                {"q":"Which statement correctly declares a double variable?","o":["double x = 3.14;","decimal x = 3.14;","real x = 3.14;","number x = 3.14;"],"a":0},
+                {"q":"What is the difference between a statement and an expression?","o":["No difference","An expression produces a value; a statement performs an action","Expressions end with semicolons","Statements produce values"],"a":1},
+                {"q":"Which of these is NOT a jump statement?","o":["return","break","continue","if"],"a":3}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="first-program.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous</span>
+                    <span class="nav-title">Your First C++ Program</span>
+                </a>
+                <a href="variables.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Variables &amp; Constants</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

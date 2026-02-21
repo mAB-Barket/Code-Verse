@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Debugging Techniques - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-debugging">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html" class="active"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 51 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="93" style="width:93%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Debugging Techniques
+                </div>
+                <h1>51. Debugging Techniques</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 51 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Debugging? ===== -->
+                <h2>What Is Debugging?</h2>
+                <p><strong>Debugging</strong> is the systematic process of finding, diagnosing, and fixing <em>bugs</em> &ndash; errors or unexpected behaviour &ndash; in your code. Every programmer, no matter how experienced, spends a significant portion of their time debugging. Mastering debugging techniques makes you dramatically more productive.</p>
+                <p>The term &ldquo;debugging&rdquo; dates back to 1947, when a moth was found inside the Harvard Mark&nbsp;II computer causing a malfunction. Today the process involves reading error messages, using debugger tools, writing tests, and applying logical reasoning to isolate the root cause of a problem.</p>
+                <p>A typical debugging workflow looks like this:</p>
+                <ol>
+                    <li><strong>Reproduce</strong> &ndash; Trigger the bug reliably so you can observe it.</li>
+                    <li><strong>Isolate</strong> &ndash; Narrow down the section of code responsible.</li>
+                    <li><strong>Identify</strong> &ndash; Determine the root cause (not just the symptom).</li>
+                    <li><strong>Fix</strong> &ndash; Apply the correction.</li>
+                    <li><strong>Verify</strong> &ndash; Confirm the fix works and hasn&rsquo;t introduced new bugs.</li>
+                </ol>
+
+                <!-- ===== Types of Bugs ===== -->
+                <h2>Types of Bugs</h2>
+                <p>Understanding the <em>category</em> of a bug helps you choose the right debugging strategy:</p>
+                <ul>
+                    <li><strong>Syntax Errors</strong> &ndash; Violations of the language grammar caught by the compiler. Missing semicolons, unmatched braces, and misspelled keywords are common examples.</li>
+                    <li><strong>Runtime Errors</strong> &ndash; Errors that occur while the program is running: division by zero, null-pointer dereferences, stack overflows, and out-of-bounds array accesses.</li>
+                    <li><strong>Logic Errors</strong> &ndash; The program compiles and runs without crashing, but produces <em>incorrect results</em>. These are often the hardest bugs to find because there is no error message &ndash; only wrong output.</li>
+                    <li><strong>Linker Errors</strong> &ndash; Occur when the linker cannot resolve symbols: undefined references, multiple definitions, or missing libraries.</li>
+                    <li><strong>Resource Errors</strong> &ndash; Leaking memory, file handles, or network sockets. These may not cause an immediate crash but degrade performance over time and eventually lead to failures.</li>
+                    <li><strong>Concurrency Errors</strong> &ndash; Data races, deadlocks, and race conditions in multithreaded programs. These bugs are notoriously hard to reproduce because they depend on thread scheduling.</li>
+                </ul>
+
+<pre><code class="language-cpp">// Syntax error &ndash; missing semicolon
+int x = 10  // error: expected &lsquo;;&rsquo; at end of declaration
+
+// Runtime error &ndash; division by zero
+int a = 5, b = 0;
+int c = a / b;  // undefined behaviour
+
+// Logic error &ndash; off-by-one
+for (int i = 0; i &lt;= size; ++i) {  // should be i &lt; size
+    std::cout &lt;&lt; arr[i];
+}
+
+// Linker error &ndash; undefined reference
+void greet();  // declared but never defined
+int main() { greet(); }  // linker error: undefined reference to greet()</code></pre>
+
+                <!-- ===== Reading Compiler Error Messages ===== -->
+                <h2>Reading Compiler Error Messages</h2>
+                <p>Compiler error messages can look intimidating, especially with templates, but they follow a consistent pattern:</p>
+                <ol>
+                    <li><strong>File name and line number</strong> &ndash; tells you <em>where</em> the error was detected.</li>
+                    <li><strong>Error code or keyword</strong> &ndash; e.g., <code>error:</code>, <code>warning:</code>, <code>note:</code>.</li>
+                    <li><strong>Description</strong> &ndash; a human-readable explanation of the problem.</li>
+                    <li><strong>Caret indicator</strong> &ndash; a <code>^</code> character pointing to the exact column.</li>
+                </ol>
+
+<pre><code class="language-text">main.cpp:7:15: error: use of undeclared identifier &lsquo;cot&rsquo;
+    std::cot &lt;&lt; &quot;Hello&quot;;
+              ^
+main.cpp:7:15: note: did you mean &lsquo;cout&rsquo;?</code></pre>
+
+                <p><strong>Tips for reading errors:</strong></p>
+                <ul>
+                    <li>Always start with the <em>first</em> error &ndash; later messages are often cascading consequences.</li>
+                    <li>Look for the <code>note:</code> lines; they often contain the most useful context.</li>
+                    <li>When template errors are long, scroll to the bottom &ndash; the &ldquo;required from here&rdquo; line shows where the template was instantiated.</li>
+                    <li>Enable <code>-Wall -Wextra -Wpedantic</code> to catch more issues early.</li>
+                </ul>
+
+                <!-- ===== Using cout for Debugging ===== -->
+                <h2>Using <code>cout</code> for Debugging</h2>
+                <p><strong>Print debugging</strong> (also called <em>printf debugging</em>) is the oldest and simplest technique: insert output statements to display variable values at key points in your program. Despite its simplicity, it remains one of the most commonly used methods even among professional developers.</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int factorial(int n) {
+    std::cerr &lt;&lt; &quot;[DEBUG] factorial called with n = &quot; &lt;&lt; n &lt;&lt; std::endl;
+    if (n &lt;= 1) return 1;
+    int result = n * factorial(n - 1);
+    std::cerr &lt;&lt; &quot;[DEBUG] factorial(&quot; &lt;&lt; n &lt;&lt; &quot;) = &quot; &lt;&lt; result &lt;&lt; std::endl;
+    return result;
+}
+
+int main() {
+    int val = factorial(5);
+    std::cout &lt;&lt; &quot;Result: &quot; &lt;&lt; val &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+
+                <p><strong>Best practices for print debugging:</strong></p>
+                <ul>
+                    <li>Use <code>std::cerr</code> instead of <code>std::cout</code> &ndash; <code>cerr</code> is unbuffered and writes immediately, so output appears even if the program crashes.</li>
+                    <li>Prefix debug lines with a tag like <code>[DEBUG]</code> so they are easy to find and remove later.</li>
+                    <li>Use a preprocessor macro to toggle debug output:</li>
+                </ul>
+
+<pre><code class="language-cpp">#ifdef DEBUG
+    #define DBG(x) std::cerr &lt;&lt; &quot;[DBG] &quot; &lt;&lt; #x &lt;&lt; &quot; = &quot; &lt;&lt; (x) &lt;&lt; std::endl
+#else
+    #define DBG(x)
+#endif
+
+// Compile with: g++ -DDEBUG -o app main.cpp
+int main() {
+    int total = 42;
+    DBG(total);  // prints: [DBG] total = 42
+}</code></pre>
+
+                <!-- ===== Debugger Basics ===== -->
+                <h2>Debugger Basics &ndash; GDB</h2>
+                <p>A <strong>debugger</strong> is a tool that lets you pause a running program, inspect its state, and step through code line by line. <strong>GDB</strong> (GNU Debugger) is the most widely used command-line debugger for C++. <strong>LLDB</strong> is its counterpart on macOS/Clang and supports a very similar command set.</p>
+                <p>First, compile with debug symbols and disable optimisations so the debugger can map machine instructions back to your source code:</p>
+
+<pre><code class="language-bash">g++ -g -O0 -o myapp main.cpp</code></pre>
+
+                <p>Then launch GDB:</p>
+
+<pre><code class="language-bash">gdb ./myapp</code></pre>
+
+                <p>Essential GDB commands:</p>
+
+<pre><code class="language-text">run               # Start executing the program
+break main        # Set a breakpoint at the start of main()
+break 42          # Set a breakpoint at line 42
+next              # Step over &ndash; execute current line, skip into functions
+step              # Step into &ndash; enter the called function
+finish            # Step out &ndash; run until the current function returns
+continue          # Resume execution until the next breakpoint
+print x           # Print the current value of variable x
+print *ptr        # Dereference and print a pointer
+display x         # Automatically print x after every step
+watch x           # Break whenever the value of x changes
+backtrace         # Show the call stack (also: bt)
+frame 2           # Switch to stack frame 2
+info locals       # Print all local variables in the current frame
+info breakpoints  # List all breakpoints
+delete 1          # Delete breakpoint number 1
+quit              # Exit GDB</code></pre>
+
+                <!-- ===== Debugging in VS Code and Visual Studio ===== -->
+                <h2>Debugging in VS Code &amp; Visual Studio</h2>
+                <p>Modern IDEs wrap debuggers in a graphical interface, making debugging more intuitive. The underlying engine is still GDB or LLDB, but the IDE provides visual controls, inline variable display, and integrated panels.</p>
+
+                <h3>VS Code (with C/C++ Extension)</h3>
+                <ul>
+                    <li>Install the <strong>C/C++</strong> extension by Microsoft.</li>
+                    <li>Create a <code>launch.json</code> configuration:</li>
+                </ul>
+
+<pre><code class="language-json">{
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;name&quot;: &quot;Debug C++&quot;,
+            &quot;type&quot;: &quot;cppdbg&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;program&quot;: &quot;${workspaceFolder}/myapp&quot;,
+            &quot;args&quot;: [],
+            &quot;stopAtEntry&quot;: false,
+            &quot;cwd&quot;: &quot;${workspaceFolder}&quot;,
+            &quot;environment&quot;: [],
+            &quot;MIMode&quot;: &quot;gdb&quot;,
+            &quot;miDebuggerPath&quot;: &quot;/usr/bin/gdb&quot;
+        }
+    ]
+}</code></pre>
+
+                <ul>
+                    <li>Click in the gutter next to a line number to set a <strong>breakpoint</strong>.</li>
+                    <li>Press <kbd>F5</kbd> to start debugging. The program pauses at your breakpoints.</li>
+                    <li>Use the toolbar buttons: <strong>Continue</strong> (F5), <strong>Step Over</strong> (F10), <strong>Step Into</strong> (F11), <strong>Step Out</strong> (Shift+F11).</li>
+                    <li>Inspect variables in the <strong>Variables</strong> panel and add <strong>Watch</strong> expressions.</li>
+                </ul>
+
+                <h3>Visual Studio</h3>
+                <ul>
+                    <li>Open your project and press <kbd>F5</kbd> to start debugging (or <kbd>F9</kbd> to toggle a breakpoint).</li>
+                    <li>The <strong>Locals</strong>, <strong>Watch</strong>, and <strong>Call Stack</strong> windows update automatically.</li>
+                    <li>Use <strong>Autos</strong> to see variables used in the current and previous statements.</li>
+                    <li>The <strong>Immediate Window</strong> lets you evaluate expressions while paused.</li>
+                </ul>
+
+                <!-- ===== Breakpoints ===== -->
+                <h2>Breakpoints</h2>
+                <p>Breakpoints tell the debugger to pause execution at a specific location. Effective use of breakpoints is one of the most important debugging skills. There are several types:</p>
+
+                <h3>Regular Breakpoints</h3>
+                <p>Pause every time the debugger reaches the specified line or function.</p>
+
+<pre><code class="language-text">(gdb) break main.cpp:25
+Breakpoint 1 at 0x401234: file main.cpp, line 25.</code></pre>
+
+                <h3>Conditional Breakpoints</h3>
+                <p>Pause only when a condition is true &ndash; invaluable for debugging loops:</p>
+
+<pre><code class="language-text">(gdb) break 30 if i == 999
+Breakpoint 2 at 0x401250: file main.cpp, line 30.</code></pre>
+
+                <p>In VS Code, right-click a breakpoint and choose <strong>Edit Breakpoint&hellip;</strong> to add a condition.</p>
+
+                <h3>Data Breakpoints (Watchpoints)</h3>
+                <p>Pause whenever a variable&rsquo;s value changes &ndash; useful for tracking down unexpected mutations:</p>
+
+<pre><code class="language-text">(gdb) watch counter
+Hardware watchpoint 3: counter
+// GDB will now break every time &lsquo;counter&rsquo; is modified</code></pre>
+
+                <h3>Hit-Count Breakpoints</h3>
+                <p>In some debuggers you can set a breakpoint that only triggers after it has been hit a certain number of times. For example, in GDB:</p>
+
+<pre><code class="language-text">(gdb) break 30
+Breakpoint 2 at 0x401250: file main.cpp, line 30.
+(gdb) ignore 2 99
+// Breakpoint 2 will be skipped 99 times, then trigger on the 100th hit</code></pre>
+
+                <!-- ===== Stepping Through Code ===== -->
+                <h2>Stepping Through Code</h2>
+                <p>Once paused at a breakpoint, you can advance execution with fine-grained control:</p>
+                <ul>
+                    <li><strong>Step Over</strong> (<code>next</code> / F10) &ndash; Execute the current line. If it contains a function call, run the entire function and stop on the next line.</li>
+                    <li><strong>Step Into</strong> (<code>step</code> / F11) &ndash; If the current line calls a function, enter that function and stop at its first line.</li>
+                    <li><strong>Step Out</strong> (<code>finish</code> / Shift+F11) &ndash; Run until the current function returns, then pause in the caller.</li>
+                    <li><strong>Continue</strong> (<code>continue</code> / F5) &ndash; Resume normal execution until the next breakpoint or program termination.</li>
+                </ul>
+                <p><strong>Tip:</strong> Use <em>Step Over</em> for standard-library calls you trust, and <em>Step Into</em> for your own functions where the bug might lurk.</p>
+
+                <p>Here is a practical example. Given this code:</p>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int sumPositive(const std::vector&lt;int&gt;&amp; v) {
+    int total = 0;
+    for (size_t i = 0; i &lt; v.size(); ++i) {
+        if (v[i] &gt; 0)
+            total += v[i];
+    }
+    return total;
+}
+
+int main() {
+    std::vector&lt;int&gt; data = {3, -1, 7, -4, 2};
+    std::cout &lt;&lt; sumPositive(data) &lt;&lt; std::endl;  // expected: 12
+    return 0;
+}</code></pre>
+
+                <p>Suppose the result is wrong. Set a breakpoint inside the loop, then use <em>Step Over</em> to advance iteration by iteration while watching <code>total</code> and <code>v[i]</code>. You will quickly see which iteration causes the incorrect accumulation.</p>
+
+                <!-- ===== Inspecting Variables and Watch Expressions ===== -->
+                <h2>Inspecting Variables &amp; Watch Expressions</h2>
+                <p>While paused, you can examine the program&rsquo;s state:</p>
+
+<pre><code class="language-text">(gdb) print myVector
+$1 = std::vector of length 5 = {10, 20, 30, 40, 50}
+
+(gdb) print myVector[2]
+$2 = 30
+
+(gdb) print myMap
+$3 = std::map with 3 elements = {[&quot;alpha&quot;] = 1, [&quot;beta&quot;] = 2, [&quot;gamma&quot;] = 3}
+
+(gdb) print sizeof(myStruct)
+$4 = 24
+
+(gdb) display total          // auto-print after each step
+1: total = 150</code></pre>
+
+                <p>In VS Code and Visual Studio you can:</p>
+                <ul>
+                    <li><strong>Hover</strong> over any variable to see its current value in a tooltip.</li>
+                    <li>Add variables to the <strong>Watch</strong> panel to monitor them across steps.</li>
+                    <li>Use <strong>complex expressions</strong> in Watch, e.g., <code>arr[i] * 2</code> or <code>ptr-&gt;name.size()</code>.</li>
+                </ul>
+
+                <!-- ===== Call Stack Analysis ===== -->
+                <h2>Call Stack Analysis</h2>
+                <p>The <strong>call stack</strong> (or <em>stack trace</em>) shows the chain of function calls that led to the current point of execution. It is essential for understanding <em>how</em> you arrived at a particular line of code and is your primary tool when investigating crashes.</p>
+
+<pre><code class="language-text">(gdb) backtrace
+#0  computeAverage (data=0x7ffd..., n=5) at stats.cpp:18
+#1  processData (input=...) at analysis.cpp:42
+#2  main () at main.cpp:10</code></pre>
+
+                <p>Read the call stack from <strong>bottom to top</strong>: <code>main()</code> called <code>processData()</code>, which called <code>computeAverage()</code> where execution is currently paused.</p>
+                <p>When your program crashes with a segmentation fault, the backtrace is your most important clue. It shows exactly which function was executing at the time of the crash and the full chain of callers.</p>
+                <p>You can switch between frames to inspect local variables in each function:</p>
+
+<pre><code class="language-text">(gdb) frame 1
+#1  processData (input=...) at analysis.cpp:42
+(gdb) info locals
+input = &quot;data.csv&quot;
+count = 100</code></pre>
+
+                <!-- ===== Memory Debugging ===== -->
+                <h2>Memory Debugging</h2>
+                <p>Memory bugs &ndash; leaks, use-after-free, buffer overflows &ndash; are notoriously difficult to find by inspection alone. They may not crash immediately but corrupt data silently, causing failures much later. Specialised tools can detect them automatically.</p>
+
+                <h3>Valgrind</h3>
+                <p><strong>Valgrind</strong> is a memory-analysis tool available on Linux and macOS. It intercepts every memory access and reports errors. Although it slows your program by 10&ndash;50&times;, its reports are extremely detailed:</p>
+
+<pre><code class="language-bash"># Compile with debug info
+g++ -g -O0 -o myapp main.cpp
+
+# Run under Valgrind
+valgrind --leak-check=full ./myapp</code></pre>
+
+                <p>Sample Valgrind output:</p>
+
+<pre><code class="language-text">==12345== Invalid read of size 4
+==12345==    at 0x401234: main (main.cpp:15)
+==12345==  Address 0x5204050 is 0 bytes after a block of size 20 alloc&rsquo;d
+==12345==    at 0x4C2E0: operator new[](unsigned long) (vg_replace_malloc.c:431)
+==12345==    by 0x401200: main (main.cpp:10)
+==12345==
+==12345== LEAK SUMMARY:
+==12345==    definitely lost: 40 bytes in 1 blocks</code></pre>
+
+                <h3>AddressSanitizer (ASan)</h3>
+                <p><strong>AddressSanitizer</strong> is a compiler-based tool built into GCC and Clang. It instruments your code at compile time and is much faster than Valgrind:</p>
+
+<pre><code class="language-bash"># Compile with ASan
+g++ -g -fsanitize=address -fno-omit-frame-pointer -o myapp main.cpp
+
+# Run normally &ndash; ASan reports errors automatically
+./myapp</code></pre>
+
+                <p>ASan detects heap/stack buffer overflows, use-after-free, use-after-return, double-free, and memory leaks. The error reports include a full stack trace pinpointing the exact source line. ASan is typically only 2&times; slower than a normal run, making it practical for testing workflows.</p>
+
+                <p>Example ASan output for a heap-buffer-overflow:</p>
+
+<pre><code class="language-text">==54321==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000014
+READ of size 4 at 0x602000000014 thread T0
+    #0 0x401234 in main /home/user/main.cpp:12
+    #1 0x7f123 in __libc_start_main
+0x602000000014 is located 0 bytes to the right of 20-byte region
+    [0x602000000000,0x602000000014)
+allocated by thread T0 here:
+    #0 0x4c0 in operator new[](unsigned long)
+    #1 0x401200 in main /home/user/main.cpp:10</code></pre>
+
+                <p>Other sanitizers worth knowing:</p>
+                <ul>
+                    <li><code>-fsanitize=undefined</code> &ndash; <strong>UBSan</strong> &ndash; detects undefined behaviour (signed overflow, null dereference, etc.).</li>
+                    <li><code>-fsanitize=thread</code> &ndash; <strong>TSan</strong> &ndash; detects data races in multithreaded programs.</li>
+                    <li><code>-fsanitize=memory</code> &ndash; <strong>MSan</strong> (Clang only) &ndash; detects reads of uninitialised memory.</li>
+                </ul>
+
+                <!-- ===== Common Debugging Strategies ===== -->
+                <h2>Common Debugging Strategies</h2>
+
+                <h3>Binary Search Debugging</h3>
+                <p>If you have a large function and know the output is wrong, <strong>bisect</strong> the code: add a print/breakpoint in the middle, determine which half contains the bug, and repeat. This narrows down the faulty line in O(log&nbsp;n) steps. The same principle applies at a higher level with <code>git bisect</code>, which binary-searches through commits to find the one that introduced a regression.</p>
+
+<pre><code class="language-bash"># Let Git find the bad commit automatically
+git bisect start
+git bisect bad          # current commit is broken
+git bisect good abc123  # this older commit was working
+# Git checks out the midpoint; you test and report good/bad
+git bisect good         # or: git bisect bad
+# Repeat until Git identifies the first bad commit</code></pre>
+
+                <h3>Rubber Duck Debugging</h3>
+                <p>Explain your code line by line to an inanimate object (traditionally a rubber duck). The act of verbalising forces you to slow down and often reveals the flaw in your reasoning. This technique is surprisingly effective.</p>
+
+                <h3>Divide and Conquer</h3>
+                <p>Isolate the buggy component by creating a <strong>minimal reproducible example</strong> (MRE). Strip away unrelated code until the bug is exposed in the smallest possible program. This eliminates confounding factors and makes the root cause obvious.</p>
+
+                <h3>Reverting Recent Changes</h3>
+                <p>If the code was working before, use <code>git diff</code> or <code>git bisect</code> to identify which commit introduced the bug. Then focus your investigation on the changed lines.</p>
+
+                <h3>Logging</h3>
+                <p>For bugs that are difficult to reproduce (especially in production), structured <strong>logging</strong> is invaluable. Instead of ad-hoc <code>cout</code> statements, use a logging library (e.g., <strong>spdlog</strong>, <strong>glog</strong>) with severity levels:</p>
+
+<pre><code class="language-cpp">#include &lt;spdlog/spdlog.h&gt;
+
+void processOrder(int orderId) {
+    spdlog::info(&quot;Processing order {}&quot;, orderId);
+    // ... logic ...
+    spdlog::warn(&quot;Order {} has no items&quot;, orderId);
+    // ... error handling ...
+    spdlog::error(&quot;Failed to save order {}: {}&quot;, orderId, ec.message());
+}</code></pre>
+
+                <p>Logging lets you reconstruct the program&rsquo;s behaviour after the fact, without needing to attach a debugger.</p>
+
+                <!-- ===== assert() and static_assert() ===== -->
+                <h2><code>assert()</code> and <code>static_assert()</code></h2>
+                <p>Assertions are a powerful defensive-programming technique that document and enforce assumptions in your code.</p>
+
+                <h3><code>assert()</code> &ndash; Runtime Assertion</h3>
+                <p>Defined in <code>&lt;cassert&gt;</code>. If the expression evaluates to <code>false</code>, the program prints a diagnostic message and calls <code>std::abort()</code>:</p>
+
+<pre><code class="language-cpp">#include &lt;cassert&gt;
+
+double divide(double a, double b) {
+    assert(b != 0.0 &amp;&amp; &quot;Divisor must not be zero&quot;);
+    return a / b;
+}
+
+int main() {
+    double result = divide(10.0, 0.0);
+    // Output: Assertion failed: b != 0.0 &amp;&amp; &quot;Divisor must not be zero&quot;,
+    //         file main.cpp, line 4
+}</code></pre>
+
+                <p>Assertions are disabled in release builds when you define the <code>NDEBUG</code> macro (e.g., <code>g++ -DNDEBUG</code>). Use them for conditions that should <em>never</em> fail if the code is correct &ndash; not for validating user input.</p>
+
+                <h3><code>static_assert()</code> &ndash; Compile-Time Assertion</h3>
+                <p>Introduced in C++11, <code>static_assert</code> evaluates a constant expression at compile time. If the expression is <code>false</code>, compilation fails with the given message:</p>
+
+<pre><code class="language-cpp">static_assert(sizeof(int) == 4, &quot;int must be 4 bytes on this platform&quot;);
+static_assert(sizeof(void*) == 8, &quot;This code requires a 64-bit platform&quot;);
+
+template &lt;typename T&gt;
+class Buffer {
+    static_assert(std::is_trivially_copyable_v&lt;T&gt;,
+                  &quot;Buffer&lt;T&gt; requires a trivially copyable type&quot;);
+    T data[1024];
+};</code></pre>
+
+                <p><code>static_assert</code> is invaluable in template code for providing clear error messages instead of cryptic template-instantiation failures.</p>
+
+                <!-- ===== Debugging Checklist ===== -->
+                <h2>Debugging Checklist</h2>
+                <p>When you encounter a bug, work through this checklist systematically:</p>
+                <ol>
+                    <li><strong>Read the error message carefully.</strong> Compilers and sanitizers give you file, line, and a description.</li>
+                    <li><strong>Reproduce the bug.</strong> Write down the exact steps, inputs, and environment.</li>
+                    <li><strong>Minimise the test case.</strong> Remove unrelated code until you have the smallest program that still triggers the bug.</li>
+                    <li><strong>Form a hypothesis.</strong> Based on the evidence, guess what might be wrong.</li>
+                    <li><strong>Test your hypothesis.</strong> Use a debugger, print statement, or targeted assertion.</li>
+                    <li><strong>Fix and verify.</strong> Apply the fix, re-run the test case, and run the full test suite.</li>
+                    <li><strong>Prevent recurrence.</strong> Add a test that would catch this bug if it reappears.</li>
+                </ol>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Bugs fall into four main categories: <strong>syntax</strong>, <strong>runtime</strong>, <strong>logic</strong>, and <strong>linker</strong> errors.</li>
+                    <li>Always read the <strong>first</strong> compiler error message &ndash; later ones are often cascading effects.</li>
+                    <li><strong>Print debugging</strong> with <code>std::cerr</code> is quick and effective for simple issues.</li>
+                    <li>A <strong>debugger</strong> (GDB, LLDB, or IDE-integrated) lets you set breakpoints, step through code, and inspect variables interactively.</li>
+                    <li><strong>Conditional breakpoints</strong> and <strong>watchpoints</strong> help you pause only when specific conditions occur.</li>
+                    <li>The <strong>call stack</strong> tells you the full chain of function calls leading to the current execution point.</li>
+                    <li>Use <strong>Valgrind</strong> or <strong>AddressSanitizer</strong> to catch memory bugs automatically.</li>
+                    <li>Strategies like <strong>binary search debugging</strong>, <strong>rubber duck debugging</strong>, and creating a <strong>minimal reproducible example</strong> accelerate root-cause analysis.</li>
+                    <li>Use <code>assert()</code> for runtime invariants and <code>static_assert()</code> for compile-time constraints.</li>
+                    <li>Compile with <code>-g -Wall -Wextra -Wpedantic</code> during development for maximum diagnostic information.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0ebzPwixrJA" title="C++ Debugging" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="modern-cpp.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Modern C++</span>
+                </a>
+                <a href="code-style.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Code Style &amp; Documentation</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

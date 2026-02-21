@@ -8,6 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 </head>
 <body data-page="cpp-introduction">
+    <div class="scroll-progress"></div>
     <header class="site-header">
         <div class="header-inner">
             <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
@@ -31,98 +32,648 @@
             <div class="sidebar-title">C++ Lessons</div>
             <nav class="sidebar-nav">
                 <a href="introduction.html" class="active"><span class="lesson-number">1</span> Introduction</a>
-                <a href="variables.html"><span class="lesson-number">2</span> Variables</a>
-                <a href="comments.html"><span class="lesson-number">3</span> Comments</a>
-                <a href="arrays.html"><span class="lesson-number">4</span> Arrays</a>
-                <a href="functions.html"><span class="lesson-number">5</span> Functions</a>
-                <a href="loops.html"><span class="lesson-number">6</span> Loops</a>
-                <a href="ifelse.html"><span class="lesson-number">7</span> If &amp; If Else</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
             </nav>
             <div class="sidebar-progress">
-                <span class="progress-text">Progress: 1 / 7</span>
-                <div class="progress-bar"><div class="progress-fill" data-progress="14" style="width:14%"></div></div>
+                <span class="progress-text">Progress: 1 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="2" style="width:2%"></div></div>
             </div>
         </aside>
 
-        <div class="tutorial-content">
+        <main class="tutorial-content">
             <div class="tutorial-header">
                 <div class="breadcrumb">
                     <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Introduction
                 </div>
                 <h1>1. Introduction to C++</h1>
                 <div class="tutorial-meta">
-                    <span>&#128218; Lesson 1 of 7</span>
-                    <span>&#9201; 10 min read</span>
+                    <span>&#128218; Lesson 1 of 55</span>
+                    <span>&#9201; 15 min read</span>
                     <span>&#127793; Beginner</span>
                 </div>
             </div>
 
             <div class="content-body">
-                <p>C++ is a high-level, general-purpose programming language that was developed by Bjarne Stroustrup in 1979 as an extension of the C programming language. It combines the efficiency and flexibility of C with powerful features like object-oriented programming (OOP), which makes it a versatile tool for a wide range of applications.</p>
 
-                <p>One of C++'s key features is its support for object-oriented programming, which helps in organizing complex programs into simpler, reusable components. This is done through the use of classes and objects, encapsulation, inheritance, and polymorphism.</p>
+                <h2>What is C++?</h2>
+                <p>C++ is a powerful, high-performance, general-purpose programming language that has been at the heart of software development for over four decades. It is one of the most widely used languages in the world, powering everything from operating systems and video games to web browsers and financial trading systems.</p>
+                <p>C++ is often described as a <strong>middle-level language</strong> because it combines the features of both high-level languages (like Python or Java) and low-level languages (like Assembly). This unique combination gives programmers the ability to write efficient, hardware-close code while still enjoying the convenience of modern programming constructs like classes, templates, and the Standard Template Library (STL).</p>
+                <p>At its core, C++ is an extension of the C programming language. It retains full compatibility with C, meaning that virtually all valid C code is also valid C++ code. However, C++ goes far beyond C by adding support for object-oriented programming (OOP), generic programming, functional programming, and many other paradigms.</p>
 
-                <p>C++ is a compiled language, meaning that programs written in C++ must be converted into machine code by a compiler before they can be executed. This compiled nature leads to highly efficient and fast execution, which is particularly useful in performance-critical applications.</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Your very first C++ program
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}</pre></div>
+
+                <p>The program above is the classic "Hello, World!" example in C++. It uses the <code>&lt;iostream&gt;</code> header to access the standard output stream (<code>std::cout</code>) and prints a message to the console. The <code>main()</code> function is the entry point of every C++ program, and <code>return 0;</code> tells the operating system that the program finished successfully.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ is a statically typed, compiled, general-purpose programming language that supports procedural, object-oriented, and generic programming paradigms. It gives developers fine-grained control over system resources and memory, making it ideal for performance-critical applications.</p>
+                </div>
+
+                <h2>History of C++</h2>
+                <p>The story of C++ begins in <strong>1979</strong> at <strong>Bell Laboratories</strong> in Murray Hill, New Jersey, USA. A Danish computer scientist named <strong>Bjarne Stroustrup</strong> began working on an extension of the C programming language. He called his creation <strong>"C with Classes"</strong> because its primary addition to C was the concept of classes &mdash; a fundamental building block of object-oriented programming.</p>
+                <p>Stroustrup's motivation came from his PhD research at Cambridge University, where he had used a language called Simula. Simula had excellent support for organizing large programs through classes and objects, but it was far too slow for practical systems programming. On the other hand, C was blazingly fast and close to the hardware, but it lacked the organizational tools needed for large-scale software. Stroustrup set out to combine the best of both worlds.</p>
+
+                <h3>Timeline of Key Events</h3>
+                <ul>
+                    <li><strong>1979</strong> &mdash; Bjarne Stroustrup begins developing "C with Classes" at Bell Labs.</li>
+                    <li><strong>1983</strong> &mdash; The language is renamed to <strong>C++</strong>. The "++" is the increment operator in C, symbolizing an evolutionary step beyond C.</li>
+                    <li><strong>1985</strong> &mdash; The first edition of <em>"The C++ Programming Language"</em> book is published by Stroustrup. The first commercial implementation (Cfront) is released.</li>
+                    <li><strong>1989</strong> &mdash; C++ 2.0 is released, adding multiple inheritance, abstract classes, static member functions, and more.</li>
+                    <li><strong>1990</strong> &mdash; <em>"The Annotated C++ Reference Manual"</em> is published, serving as the basis for future standardization.</li>
+                    <li><strong>1998</strong> &mdash; The first official ISO standard, <strong>C++98</strong> (ISO/IEC 14882:1998), is ratified.</li>
+                    <li><strong>2003</strong> &mdash; <strong>C++03</strong> is released as a bug-fix revision of C++98.</li>
+                    <li><strong>2011</strong> &mdash; <strong>C++11</strong> is released, a landmark update that modernized the language dramatically.</li>
+                    <li><strong>2014</strong> &mdash; <strong>C++14</strong> is released with incremental improvements.</li>
+                    <li><strong>2017</strong> &mdash; <strong>C++17</strong> adds structured bindings, filesystem library, and more.</li>
+                    <li><strong>2020</strong> &mdash; <strong>C++20</strong> introduces concepts, ranges, coroutines, and modules.</li>
+                    <li><strong>2023</strong> &mdash; <strong>C++23</strong> continues the evolution with further library and language improvements.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ was created by Bjarne Stroustrup in 1979 at Bell Labs as an extension of C. Originally called "C with Classes," it was renamed C++ in 1983. The "++" in C++ is the increment operator from C, representing an advancement beyond C.</p>
+                </div>
+
+                <h2>Key Features of C++</h2>
+                <p>C++ has an extraordinarily rich feature set that makes it suitable for a wide range of applications. Let's explore the key features that have made C++ one of the most important programming languages ever created.</p>
+
+                <h3>1. Object-Oriented Programming (OOP)</h3>
+                <p>C++ was one of the earliest mainstream languages to support object-oriented programming. OOP allows developers to model real-world entities as <strong>objects</strong> that combine data (attributes) and behavior (methods) into cohesive units called <strong>classes</strong>. The four pillars of OOP in C++ are:</p>
+                <ul>
+                    <li><strong>Encapsulation</strong> &mdash; Bundling data and methods together and restricting direct access to internal details.</li>
+                    <li><strong>Inheritance</strong> &mdash; Creating new classes based on existing ones, promoting code reuse.</li>
+                    <li><strong>Polymorphism</strong> &mdash; Allowing objects of different classes to be treated through a common interface.</li>
+                    <li><strong>Abstraction</strong> &mdash; Hiding complex implementation details and exposing only the essential features.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Example of a simple class in C++
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Animal {
+private:
+    std::string name;
+    int age;
+
+public:
+    Animal(std::string n, int a) : name(n), age(a) {}
+
+    void speak() {
+        std::cout &lt;&lt; name &lt;&lt; " says hello! Age: " &lt;&lt; age &lt;&lt; std::endl;
+    }
+
+    std::string getName() { return name; }
+};
+
+int main() {
+    Animal cat("Whiskers", 3);
+    cat.speak();  // Output: Whiskers says hello! Age: 3
+    return 0;
+}</pre></div>
+
+                <h3>2. Low-Level Memory Access</h3>
+                <p>Unlike many modern languages, C++ provides direct access to memory through <strong>pointers</strong> and <strong>references</strong>. This means you can allocate, deallocate, and manipulate memory at the byte level. While this requires more care from the programmer, it enables maximum performance and is essential for systems programming, embedded development, and game engines.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Pointer example in C++
+#include &lt;iostream&gt;
+
+int main() {
+    int value = 42;
+    int* ptr = &amp;value;  // ptr holds the memory address of value
+
+    std::cout &lt;&lt; "Value: " &lt;&lt; value &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Address: " &lt;&lt; ptr &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Via pointer: " &lt;&lt; *ptr &lt;&lt; std::endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>3. Compiled Language</h3>
+                <p>C++ is a <strong>compiled language</strong>, which means that source code is translated directly into machine code by a compiler before execution. This is in contrast to interpreted languages (like Python) where code is executed line-by-line at runtime. Compilation produces highly optimized native executables, which is why C++ programs typically run significantly faster than programs written in interpreted languages.</p>
+                <p>Popular C++ compilers include:</p>
+                <ul>
+                    <li><strong>GCC (GNU Compiler Collection)</strong> &mdash; Open-source, widely used on Linux and macOS.</li>
+                    <li><strong>Clang/LLVM</strong> &mdash; Known for excellent error messages and fast compilation.</li>
+                    <li><strong>MSVC (Microsoft Visual C++)</strong> &mdash; The default compiler on Windows, integrated into Visual Studio.</li>
+                    <li><strong>Intel C++ Compiler</strong> &mdash; Optimized for Intel processors.</li>
+                </ul>
+
+                <h3>4. Multi-Paradigm Language</h3>
+                <p>C++ doesn't force you into a single programming style. It supports multiple paradigms:</p>
+                <ul>
+                    <li><strong>Procedural Programming</strong> &mdash; Writing code as a sequence of instructions using functions (inherited from C).</li>
+                    <li><strong>Object-Oriented Programming</strong> &mdash; Organizing code into classes and objects.</li>
+                    <li><strong>Generic Programming</strong> &mdash; Writing code that works with any data type using templates.</li>
+                    <li><strong>Functional Programming</strong> &mdash; Using lambda expressions, higher-order functions, and immutable data (enhanced in C++11 and later).</li>
+                </ul>
+
+                <h3>5. Platform Portability</h3>
+                <p>C++ code can be compiled and run on virtually any platform &mdash; Windows, macOS, Linux, embedded systems, mobile devices, and more. While C++ source code is portable, the compiled binary is platform-specific. You write once and compile for each target platform, achieving native performance everywhere.</p>
+
+                <h3>6. Rich Standard Library</h3>
+                <p>C++ comes with a comprehensive <strong>Standard Template Library (STL)</strong> that provides ready-to-use data structures (vectors, lists, maps, sets), algorithms (sorting, searching, transforming), and utilities (smart pointers, string handling, file I/O).</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Using the STL - vectors and algorithms
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+
+int main() {
+    std::vector&lt;int&gt; numbers = {5, 2, 8, 1, 9, 3};
+
+    // Sort the vector
+    std::sort(numbers.begin(), numbers.end());
+
+    // Print sorted numbers
+    for (int n : numbers) {
+        std::cout &lt;&lt; n &lt;&lt; " ";
+    }
+    // Output: 1 2 3 5 8 9
+
+    return 0;
+}</pre></div>
+
+                <h3>7. Performance and Efficiency</h3>
+                <p>C++ offers performance that is close to raw C and assembly language. It gives programmers control over memory allocation, cache optimization, and hardware-level operations. This is why C++ remains the language of choice for performance-critical applications where every millisecond matters.</p>
+
+                <h3>8. Backward Compatibility with C</h3>
+                <p>C++ maintains nearly full backward compatibility with C. This means that existing C codebases can be integrated into C++ projects, and C libraries can be used directly in C++ programs. This interoperability has been crucial in the adoption and longevity of C++.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The key features that make C++ unique are: object-oriented programming, low-level memory access through pointers, compilation to native machine code, multi-paradigm support, platform portability, a rich standard library (STL), exceptional performance, and backward compatibility with C.</p>
+                </div>
+
+                <h2>Applications of C++</h2>
+                <p>C++ is used in an incredibly wide range of applications. Its combination of performance, flexibility, and control makes it indispensable in many critical domains.</p>
+
+                <h3>1. Game Development</h3>
+                <p>C++ is the <strong>dominant language</strong> in the game industry. Major game engines like <strong>Unreal Engine</strong>, <strong>Unity's core engine</strong> (written in C/C++), and <strong>CryEngine</strong> are built with C++. AAA games such as Call of Duty, The Witcher, and Fortnite rely heavily on C++ for their performance-critical game logic, physics simulations, and rendering pipelines.</p>
+
+                <h3>2. Operating Systems</h3>
+                <p>The majority of modern operating systems are written primarily in C and C++. <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong>, <strong>Android</strong> (via the NDK), and <strong>iOS</strong> all have significant portions written in C++. The operating system kernel, device drivers, and system utilities all demand the low-level control and high performance that C++ provides.</p>
+
+                <h3>3. Embedded Systems and IoT</h3>
+                <p>C++ is widely used in <strong>embedded systems</strong> &mdash; microcontrollers, automotive ECUs, medical devices, drones, robotics, and IoT devices. These systems have strict memory and processing constraints, making C++ ideal due to its minimal runtime overhead and direct hardware access.</p>
+
+                <h3>4. Web Browsers</h3>
+                <p>The world's most popular web browsers are written in C++. <strong>Google Chrome</strong> (and Chromium), <strong>Mozilla Firefox</strong>, <strong>Microsoft Edge</strong>, and <strong>Safari's WebKit engine</strong> are all built using C++. The rendering engine, JavaScript engine (V8 in Chrome), and networking stack all require the performance that C++ delivers.</p>
+
+                <h3>5. Databases</h3>
+                <p>High-performance database systems are typically written in C or C++. Notable examples include <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>MongoDB</strong>, <strong>Oracle Database</strong>, and <strong>Microsoft SQL Server</strong>. C++ ensures that these databases can handle millions of queries per second efficiently.</p>
+
+                <h3>6. Compilers and Interpreters</h3>
+                <p>Many programming language compilers and interpreters are written in C++. For example, the <strong>Clang/LLVM</strong> compiler infrastructure, the <strong>GCC</strong> compiler, the <strong>V8 JavaScript engine</strong>, and the <strong>Java Virtual Machine (HotSpot)</strong> are all implemented in C++.</p>
+
+                <h3>7. Financial Systems and High-Frequency Trading</h3>
+                <p>Wall Street and financial institutions use C++ extensively for <strong>high-frequency trading (HFT)</strong> systems, risk analysis, and algorithmic trading platforms. In these applications, microsecond-level latency differences can translate to millions of dollars.</p>
+
+                <h3>8. Scientific Computing and Simulations</h3>
+                <p>C++ powers many scientific computing frameworks, physics simulations, weather modeling, computational fluid dynamics, and bioinformatics tools. Libraries like <strong>ROOT</strong> (used by CERN), <strong>Eigen</strong>, and <strong>Boost</strong> demonstrate C++'s dominance in scientific applications.</p>
+
+                <h3>9. Graphics and Animation</h3>
+                <p>3D graphics applications, animation software, and CAD tools rely on C++. <strong>Adobe Photoshop</strong>, <strong>Adobe Illustrator</strong>, <strong>Blender</strong>, <strong>Autodesk Maya</strong>, and <strong>AutoCAD</strong> are all built with C++.</p>
+
+                <h3>10. Telecommunications</h3>
+                <p>C++ is used in networking equipment, telecom switches, routers, and protocol implementations. The performance requirements of real-time communication make C++ the natural choice.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ is used in game development (Unreal Engine), operating systems (Windows, Linux), embedded systems, web browsers (Chrome, Firefox), databases (MySQL, MongoDB), compilers (Clang, GCC), financial trading systems, scientific computing, graphics software, and telecommunications.</p>
+                </div>
+
+                <h2>C++ vs C vs Java: A Comparison</h2>
+                <p>Understanding how C++ compares to other major languages helps clarify its strengths and trade-offs. Here is a detailed comparison between C++, its predecessor C, and its contemporary Java:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C</th>
+                            <th>C++</th>
+                            <th>Java</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paradigm</td>
+                            <td>Procedural</td>
+                            <td>Multi-paradigm (Procedural, OOP, Generic, Functional)</td>
+                            <td>Object-Oriented (with some functional)</td>
+                        </tr>
+                        <tr>
+                            <td>Creator</td>
+                            <td>Dennis Ritchie (1972)</td>
+                            <td>Bjarne Stroustrup (1979)</td>
+                            <td>James Gosling (1995)</td>
+                        </tr>
+                        <tr>
+                            <td>Memory Management</td>
+                            <td>Manual (malloc/free)</td>
+                            <td>Manual (new/delete) + Smart Pointers</td>
+                            <td>Automatic (Garbage Collection)</td>
+                        </tr>
+                        <tr>
+                            <td>Pointers</td>
+                            <td>Yes</td>
+                            <td>Yes (plus references)</td>
+                            <td>No (uses references only)</td>
+                        </tr>
+                        <tr>
+                            <td>Classes &amp; Objects</td>
+                            <td>No (uses structs)</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Multiple Inheritance</td>
+                            <td>N/A</td>
+                            <td>Yes</td>
+                            <td>No (uses interfaces)</td>
+                        </tr>
+                        <tr>
+                            <td>Operator Overloading</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Templates / Generics</td>
+                            <td>No</td>
+                            <td>Templates (compile-time)</td>
+                            <td>Generics (type erasure)</td>
+                        </tr>
+                        <tr>
+                            <td>Platform Dependency</td>
+                            <td>Compiled to native (platform-specific binary)</td>
+                            <td>Compiled to native (platform-specific binary)</td>
+                            <td>Compiled to bytecode (runs on JVM, platform-independent)</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Very High</td>
+                            <td>Very High</td>
+                            <td>High (JIT compilation)</td>
+                        </tr>
+                        <tr>
+                            <td>Standard Library</td>
+                            <td>Minimal (C Standard Library)</td>
+                            <td>Rich (STL: containers, algorithms, iterators)</td>
+                            <td>Very Rich (Java Class Library)</td>
+                        </tr>
+                        <tr>
+                            <td>Exception Handling</td>
+                            <td>No (uses error codes)</td>
+                            <td>Yes (try/catch/throw)</td>
+                            <td>Yes (try/catch/finally)</td>
+                        </tr>
+                        <tr>
+                            <td>Preprocessor</td>
+                            <td>Yes (#include, #define)</td>
+                            <td>Yes (#include, #define)</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Header Files</td>
+                            <td>Yes</td>
+                            <td>Yes (modules in C++20)</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Use Cases</td>
+                            <td>OS kernels, embedded systems, drivers</td>
+                            <td>Games, OS, browsers, databases, HFT</td>
+                            <td>Enterprise apps, Android, web backends</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C is procedural and minimal; C++ extends C with OOP, templates, and a rich standard library while keeping low-level power; Java prioritizes safety and portability through garbage collection and the JVM, but sacrifices direct memory access and some performance.</p>
+                </div>
+
+                <h2>C++ Standards Evolution</h2>
+                <p>C++ is governed by the <strong>ISO (International Organization for Standardization)</strong>. Since its first standardization in 1998, C++ has undergone major revisions approximately every three years, each bringing significant improvements to the language and its standard library.</p>
+
+                <h3>C++98 &mdash; The First Standard (1998)</h3>
+                <p>C++98 was the first formally standardized version of C++. It codified the core language features including classes, inheritance, polymorphism, templates, exceptions, namespaces, and the Standard Template Library (STL). This standard gave the C++ community a common specification that all compilers could target.</p>
+
+                <h3>C++03 &mdash; Bug Fix Release (2003)</h3>
+                <p>C++03 was a minor revision of C++98, primarily fixing defects and ambiguities in the standard. It did not introduce any significant new features but improved the consistency and clarity of the specification.</p>
+
+                <h3>C++11 &mdash; The Modern C++ Revolution (2011)</h3>
+                <p>C++11 was a <strong>landmark release</strong> that fundamentally modernized C++. It is often considered the beginning of "Modern C++." Key features introduced include:</p>
+                <ul>
+                    <li><strong>auto</strong> keyword for type inference</li>
+                    <li><strong>Range-based for loops</strong> for cleaner iteration</li>
+                    <li><strong>Lambda expressions</strong> for anonymous functions</li>
+                    <li><strong>Smart pointers</strong> (unique_ptr, shared_ptr, weak_ptr)</li>
+                    <li><strong>Move semantics</strong> and rvalue references</li>
+                    <li><strong>nullptr</strong> to replace NULL</li>
+                    <li><strong>Multithreading support</strong> (std::thread, mutexes, futures)</li>
+                    <li><strong>Uniform initialization</strong> with braces {}</li>
+                    <li><strong>constexpr</strong> for compile-time computation</li>
+                    <li><strong>Variadic templates</strong> for functions/classes with variable arguments</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// C++11 features demonstration
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;memory&gt;
+
+int main() {
+    // auto keyword
+    auto message = "Hello, Modern C++!";
+
+    // Range-based for loop
+    std::vector&lt;int&gt; nums = {1, 2, 3, 4, 5};
+    for (auto n : nums) {
+        std::cout &lt;&lt; n &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    // Lambda expression
+    auto square = [](int x) { return x * x; };
+    std::cout &lt;&lt; "5 squared = " &lt;&lt; square(5) &lt;&lt; std::endl;
+
+    // Smart pointer
+    auto ptr = std::make_unique&lt;int&gt;(42);
+    std::cout &lt;&lt; "Smart pointer value: " &lt;&lt; *ptr &lt;&lt; std::endl;
+
+    // nullptr
+    int* raw = nullptr;
+
+    return 0;
+}</pre></div>
+
+                <h3>C++14 &mdash; Incremental Improvements (2014)</h3>
+                <p>C++14 refined the features introduced in C++11. Key additions include:</p>
+                <ul>
+                    <li>Generic lambdas (auto parameters in lambdas)</li>
+                    <li>Return type deduction for functions</li>
+                    <li>Relaxed constexpr restrictions</li>
+                    <li>Binary literals (0b prefix)</li>
+                    <li>Digit separators using single quotes (1'000'000)</li>
+                    <li>std::make_unique</li>
+                </ul>
+
+                <h3>C++17 &mdash; Major Library Additions (2017)</h3>
+                <p>C++17 brought significant improvements to both the language and the standard library:</p>
+                <ul>
+                    <li><strong>Structured bindings</strong> for decomposing objects</li>
+                    <li><strong>if constexpr</strong> for compile-time conditional compilation</li>
+                    <li><strong>std::optional</strong>, <strong>std::variant</strong>, <strong>std::any</strong> for safer value handling</li>
+                    <li><strong>std::filesystem</strong> for cross-platform file system operations</li>
+                    <li><strong>std::string_view</strong> for efficient string references</li>
+                    <li>Nested namespaces (namespace A::B::C {})</li>
+                    <li>Fold expressions for variadic templates</li>
+                </ul>
+
+                <h3>C++20 &mdash; The Next Big Leap (2020)</h3>
+                <p>C++20 is considered the most significant update since C++11. Major features include:</p>
+                <ul>
+                    <li><strong>Concepts</strong> &mdash; Constrain templates with readable requirements</li>
+                    <li><strong>Ranges</strong> &mdash; A modern approach to working with sequences</li>
+                    <li><strong>Coroutines</strong> &mdash; Support for asynchronous programming</li>
+                    <li><strong>Modules</strong> &mdash; A modern alternative to header files</li>
+                    <li><strong>Three-way comparison (spaceship operator &lt;=&gt;)</strong></li>
+                    <li><strong>Calendar and timezone library</strong></li>
+                    <li><strong>std::format</strong> for Python-style string formatting</li>
+                    <li><strong>Designated initializers</strong></li>
+                </ul>
+
+                <h3>C++23 &mdash; Continued Evolution (2023)</h3>
+                <p>C++23 continues to refine and expand the language. Notable additions include:</p>
+                <ul>
+                    <li><strong>std::print / std::println</strong> for convenient output</li>
+                    <li><strong>Deducing this</strong> for simplified method definitions</li>
+                    <li><strong>std::expected</strong> for error handling</li>
+                    <li><strong>Multidimensional subscript operator</strong> (operator[])</li>
+                    <li><strong>std::flat_map</strong> and <strong>std::flat_set</strong></li>
+                    <li>Improved ranges and views</li>
+                    <li><strong>std::generator</strong> for coroutine-based generators</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ follows a three-year release cycle. C++98 was the first standard; C++11 was a landmark "Modern C++" release; C++14 and C++17 added incremental improvements; C++20 introduced concepts, ranges, coroutines, and modules; and C++23 continues the evolution with features like std::print and std::expected.</p>
+                </div>
+
+                <h2>The C++ Compilation Process</h2>
+                <p>Understanding how C++ programs are compiled is fundamental to mastering the language. The compilation process transforms human-readable source code into machine-executable binary code through several stages:</p>
+
+                <h3>Stage 1: Preprocessing</h3>
+                <p>The <strong>preprocessor</strong> handles directives that begin with <code>#</code>, such as <code>#include</code>, <code>#define</code>, and <code>#ifdef</code>. It expands macros, includes header files, and removes comments. The output is a single translation unit of pure C++ code.</p>
+
+                <h3>Stage 2: Compilation</h3>
+                <p>The <strong>compiler</strong> translates the preprocessed C++ source code into <strong>assembly language</strong>. It performs syntax checking, type checking, semantic analysis, and optimization during this stage.</p>
+
+                <h3>Stage 3: Assembly</h3>
+                <p>The <strong>assembler</strong> converts assembly language into <strong>object code</strong> (machine code). The resulting object file (.o or .obj) contains binary instructions but is not yet a complete executable.</p>
+
+                <h3>Stage 4: Linking</h3>
+                <p>The <strong>linker</strong> combines one or more object files together with library code to produce the final <strong>executable</strong> file. It resolves references between different object files and links system libraries.</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Compilation process example (command line)
+// Step 1: Preprocess only
+// g++ -E program.cpp -o program.i
+
+// Step 2: Compile to assembly
+// g++ -S program.cpp -o program.s
+
+// Step 3: Assemble to object file
+// g++ -c program.cpp -o program.o
+
+// Step 4: Link to executable
+// g++ program.o -o program
+
+// Or do it all in one step:
+// g++ program.cpp -o program</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The C++ compilation process has four stages: Preprocessing (#include expansion, macro substitution) &rarr; Compilation (source to assembly) &rarr; Assembly (assembly to object code) &rarr; Linking (combining object files into an executable).</p>
+                </div>
+
+                <h2>Structure of a C++ Program</h2>
+                <p>Every C++ program follows a basic structure. Understanding this structure is essential before you start writing code. Let's break down the anatomy of a C++ program:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// 1. Preprocessor Directives
+#include &lt;iostream&gt;    // Input/Output stream library
+#include &lt;string&gt;      // String library
+
+// 2. Using Declarations (optional)
+using namespace std;
+
+// 3. Function Declarations (prototypes)
+void greet(string name);
+
+// 4. The main() function - entry point
+int main() {
+    // 5. Variable declarations
+    string userName = "CodeVerse Learner";
+
+    // 6. Statements and expressions
+    greet(userName);
+
+    // 7. Return statement
+    return 0;
+}
+
+// 8. Function Definitions
+void greet(string name) {
+    cout &lt;&lt; "Welcome to C++, " &lt;&lt; name &lt;&lt; "!" &lt;&lt; endl;
+}</pre></div>
+
+                <p>Let's understand each part:</p>
+                <ul>
+                    <li><strong>Preprocessor Directives</strong> &mdash; Lines starting with <code>#</code> that instruct the preprocessor. <code>#include &lt;iostream&gt;</code> includes the standard I/O library.</li>
+                    <li><strong>Namespaces</strong> &mdash; <code>using namespace std;</code> allows you to use standard library names without the <code>std::</code> prefix.</li>
+                    <li><strong>main() Function</strong> &mdash; Every C++ program must have exactly one <code>main()</code> function. Execution begins here.</li>
+                    <li><strong>Statements</strong> &mdash; Instructions that the program executes. Each statement ends with a semicolon (<code>;</code>).</li>
+                    <li><strong>Return Statement</strong> &mdash; <code>return 0;</code> indicates successful program termination.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>A C++ program consists of preprocessor directives (#include), namespace declarations, the main() function (the entry point), statements ending with semicolons, and function definitions. Every C++ program must have exactly one main() function.</p>
+                </div>
+
+                <h2>Why Learn C++ Today?</h2>
+                <p>In an era of Python, JavaScript, and countless new languages appearing every year, you might wonder: why should anyone learn C++ in the 2020s? Here are compelling reasons:</p>
+
+                <h3>1. Unmatched Performance</h3>
+                <p>When speed matters, C++ is king. No other high-level language can match the raw performance of well-written C++ code. For real-time systems, game engines, and high-frequency trading, C++ is simply irreplaceable.</p>
+
+                <h3>2. Massive Industry Demand</h3>
+                <p>C++ developers are consistently among the most sought-after and highest-paid programmers. Companies like Google, Microsoft, Apple, Amazon, Meta (Facebook), NVIDIA, and nearly every game studio require C++ expertise. The language consistently ranks in the top 3-5 on the TIOBE Index.</p>
+
+                <h3>3. Foundation for Understanding Computing</h3>
+                <p>Learning C++ gives you a deep understanding of how computers actually work &mdash; memory management, CPU architecture, compilation, and the relationship between hardware and software. This knowledge makes you a better programmer in <em>any</em> language.</p>
+
+                <h3>4. Evergreen and Evolving</h3>
+                <p>Unlike many languages that rise and fall, C++ has remained relevant for over 40 years and continues to evolve with regular standards updates. Code written decades ago still compiles, and modern C++ (C++11 and beyond) is significantly more expressive and safer than older versions.</p>
+
+                <h3>5. Gateway to Systems Programming</h3>
+                <p>If you want to work on operating systems, drivers, compilers, virtual machines, or any other low-level system software, C++ is essential. It opens doors to fields that are inaccessible with higher-level languages alone.</p>
+
+                <h3>6. Huge Ecosystem and Community</h3>
+                <p>With decades of development, C++ has an enormous ecosystem of libraries, frameworks, tools, and resources. The community is vast and includes some of the world's most experienced software engineers. Resources like cppreference.com, Stack Overflow, and countless books and courses are readily available.</p>
+
+                <h3>7. Transferable Skills</h3>
+                <p>If you know C++, learning other languages becomes much easier. C++&rsquo;s concepts of memory management, pointers, compilation, and type systems provide a foundation that transfers directly to languages like C, Rust, C#, Java, and even Python (whose runtime is written in C/C++).</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Learning C++ is valuable because of its unmatched performance, strong industry demand, ability to deepen your understanding of computing, continuous evolution through modern standards, gateway to systems programming, massive ecosystem, and transferable skills to other languages.</p>
+                </div>
+
+                <h2>C++ in the Real World: Who Uses It?</h2>
+                <p>Here are some notable products and companies that rely heavily on C++:</p>
+                <ul>
+                    <li><strong>Google</strong> &mdash; Chrome browser, TensorFlow (core), search engine infrastructure, YouTube backend systems</li>
+                    <li><strong>Microsoft</strong> &mdash; Windows OS, Office suite, Visual Studio, Azure cloud services, DirectX</li>
+                    <li><strong>Apple</strong> &mdash; macOS, iOS (core components), Safari (WebKit), Xcode toolchain</li>
+                    <li><strong>Meta (Facebook)</strong> &mdash; HHVM, Folly library, backend infrastructure handling billions of requests</li>
+                    <li><strong>Amazon</strong> &mdash; AWS core services, Kindle reader, fulfillment systems</li>
+                    <li><strong>Epic Games</strong> &mdash; Unreal Engine, Fortnite</li>
+                    <li><strong>Adobe</strong> &mdash; Photoshop, Illustrator, Premiere Pro, After Effects</li>
+                    <li><strong>Bloomberg</strong> &mdash; Financial terminal and trading systems</li>
+                    <li><strong>NASA / SpaceX</strong> &mdash; Flight software, simulation systems</li>
+                    <li><strong>CERN</strong> &mdash; ROOT framework for physics data analysis</li>
+                </ul>
+
+                <h2>Getting Started: Your C++ Journey</h2>
+                <p>Now that you understand what C++ is, where it came from, what it can do, and why it matters, you're ready to begin your C++ journey. In the next lesson, we'll set up your development environment so you can start writing and compiling C++ code.</p>
+                <p>Throughout this course, you'll progress from the basics &mdash; variables, data types, and control flow &mdash; all the way to advanced topics like templates, STL, smart pointers, move semantics, and multithreading. By the end, you'll have the knowledge and skills to build real-world C++ applications.</p>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>C++ is used by the world's largest technology companies. Whether you're interested in game development, systems programming, financial technology, scientific computing, or embedded systems, C++ opens doors to some of the most challenging and rewarding careers in software development.</p>
+                </div>
+
             </div>
 
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/j8nAHeVKL08"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/ZzaPdXTrSb8" title="C++ Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
-
-            <section class="quiz-section">
-                <h2>Test Your Knowledge</h2>
-                <div class="quiz-question">
-                    <h3>1. Who developed C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">Bjarne Stroustrup</div>
-                        <div class="quiz-option">Dennis Ritchie</div>
-                        <div class="quiz-option">James Gosling</div>
-                        <div class="quiz-option">Guido van Rossum</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>2. What year was C++ developed?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option" data-correct="true">1979</div>
-                        <div class="quiz-option">1989</div>
-                        <div class="quiz-option">1969</div>
-                        <div class="quiz-option">1999</div>
-                    </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h3>3. Which of these is NOT a feature of C++?</h3>
-                    <div class="quiz-options">
-                        <div class="quiz-option">Object-oriented programming</div>
-                        <div class="quiz-option">Manual memory management</div>
-                        <div class="quiz-option" data-correct="true">Automatic garbage collection</div>
-                        <div class="quiz-option">Multiple inheritance</div>
-                    </div>
-                </div>
-
-                <button class="submit-quiz">Submit Answers</button>
-            </section>
 
             <div class="tutorial-nav">
                 <div></div>
-                <a href="variables.html" class="next-lesson">
+                <a href="setup.html" class="next-lesson">
                     <span class="nav-label">Next Lesson &rsaquo;</span>
-                    <span class="nav-title">Variables &amp; Data Types</span>
+                    <span class="nav-title">Setting Up C++ Environment</span>
                 </a>
             </div>
-        </div>
+        </main>
     </div>
 
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
-                <p>A free, open-source platform to learn programming through interactive tutorials, video lessons, and quizzes.</p>
+                <p>Free, open-source programming tutorials for everyone.</p>
             </div>
             <div class="footer-column">
                 <h4>Languages</h4>
@@ -134,20 +685,20 @@
             <div class="footer-column">
                 <h4>More</h4>
                 <a href="../csharp/index.html">C#</a>
-                <a href="../webdev/index.html">Web Development</a>
+                <a href="../webdev/index.html">Web Dev</a>
                 <a href="../rust/index.html">Rust</a>
                 <a href="../go/index.html">Go</a>
             </div>
             <div class="footer-column">
                 <h4>Platform</h4>
-                <a href="../about.html">About Us</a>
+                <a href="../about.html">About</a>
                 <a href="../resources.html">Resources</a>
                 <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
                 <div class="footer-socials">
                     <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
                 </div>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Move Semantics - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-move-semantics">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html" class="active"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 48 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="87" style="width:87%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Move Semantics
+                </div>
+                <h1>48. Move Semantics</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 48 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Move Semantics? ===== -->
+                <h2>What Are Move Semantics?</h2>
+                <p>In pre-C++11 code, passing objects around almost always meant <strong>copying</strong> the underlying data. If a <code>std::string</code> held a 10&nbsp;MB buffer, returning it from a function duplicated all 10&nbsp;MB&mdash;even when the source was about to be destroyed and would never be used again.</p>
+                <p><strong>Move semantics</strong>, introduced in C++11, let you <em>transfer</em> (or &ldquo;steal&rdquo;) the internal resources of one object into another instead of copying them. The source object is left in a valid but <strong>unspecified</strong> state (typically empty), and the destination now owns the resources at near-zero cost.</p>
+                <p>Think of it like handing someone a suitcase rather than photocopying every item inside and packing a brand-new suitcase. The contents stay the same; they simply change hands.</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;utility&gt;  // std::move
+
+int main() {
+    std::string a = "Hello, Move Semantics!";
+
+    // Copy &mdash; a is unchanged, b holds a duplicate
+    std::string b = a;
+    std::cout &lt;&lt; "After copy:  a = \"" &lt;&lt; a &lt;&lt; "\"\n";
+    std::cout &lt;&lt; "             b = \"" &lt;&lt; b &lt;&lt; "\"\n";
+
+    // Move &mdash; a&rsquo;s resources are transferred to c
+    std::string c = std::move(a);
+    std::cout &lt;&lt; "After move:  a = \"" &lt;&lt; a &lt;&lt; "\"\n";   // typically empty
+    std::cout &lt;&lt; "             c = \"" &lt;&lt; c &lt;&lt; "\"\n";
+
+    return 0;
+}</code></pre></div>
+                <p>Output (typical):</p>
+<div class="code-block"><pre><code>After copy:  a = "Hello, Move Semantics!"
+             b = "Hello, Move Semantics!"
+After move:  a = ""
+             c = "Hello, Move Semantics!"</code></pre></div>
+                <p>The move eliminated a heap allocation and a <code>memcpy</code> of the entire string buffer. For large objects, the performance difference is dramatic.</p>
+
+                <!-- ===== Lvalues vs Rvalues ===== -->
+                <h2>Lvalues vs Rvalues</h2>
+                <p>Before understanding move semantics fully, you need to be comfortable with the <strong>value categories</strong> of expressions in C++.</p>
+                <ul>
+                    <li><strong>Lvalue</strong> &ndash; an expression that refers to a <em>persistent</em> object in memory. It has an identifiable address. Examples: variables, array elements, dereferenced pointers.</li>
+                    <li><strong>Rvalue</strong> &ndash; an expression that represents a <em>temporary</em> value or an object that is about to be destroyed. It usually does not have a persistent address. Examples: literals, arithmetic results, function return values.</li>
+                </ul>
+<div class="code-block"><pre><code>int x = 10;      // x is an lvalue; 10 is an rvalue
+int y = x + 5;   // (x + 5) is an rvalue
+
+int* p = &amp;x;     // OK &mdash; x is an lvalue, you can take its address
+// int* q = &amp;(x + 5);  // ERROR &mdash; (x + 5) is an rvalue</code></pre></div>
+                <p>The core insight is: if an object is an <strong>rvalue</strong>, it is safe to move from because nobody else can use it afterwards. Lvalues, on the other hand, might still be referenced later, so they must be copied unless the programmer explicitly opts into a move.</p>
+
+                <h3>Simplified Value Category Tree (C++11+)</h3>
+<div class="code-block"><pre><code>         expression
+          /      \
+       glvalue   rvalue
+        /   \     /   \
+    lvalue  xvalue  prvalue</code></pre></div>
+                <ul>
+                    <li><strong>prvalue</strong> (pure rvalue) &ndash; temporaries, literals, <code>42</code>, <code>std::string("hi")</code>.</li>
+                    <li><strong>xvalue</strong> (expiring value) &ndash; the result of <code>std::move(x)</code>, or a function returning <code>T&amp;&amp;</code>.</li>
+                    <li><strong>lvalue</strong> &ndash; named variables, references, <code>*ptr</code>.</li>
+                </ul>
+
+                <!-- ===== Rvalue References (&&) ===== -->
+                <h2>Rvalue References (<code>&amp;&amp;</code>)</h2>
+                <p>An <strong>rvalue reference</strong> is declared with <code>&amp;&amp;</code>. It can <em>only</em> bind to rvalues (temporaries or expressions cast to an rvalue via <code>std::move</code>).</p>
+<div class="code-block"><pre><code>void process(int&amp;&amp; val) {
+    std::cout &lt;&lt; "rvalue ref: " &lt;&lt; val &lt;&lt; "\n";
+}
+
+int main() {
+    int a = 5;
+    // process(a);         // ERROR &mdash; a is an lvalue
+    process(10);           // OK &mdash; 10 is an rvalue
+    process(std::move(a)); // OK &mdash; std::move casts a to an rvalue
+}</code></pre></div>
+                <p>Rvalue references extend the lifetime of the temporary they bind to, similar to <code>const&amp;</code>, but they allow <strong>non-const access</strong>. This is the mechanism that enables move constructors and move assignment operators to &ldquo;steal&rdquo; resources.</p>
+
+                <h3>Overloading on Value Category</h3>
+<div class="code-block"><pre><code>void greet(const std::string&amp; s) {
+    std::cout &lt;&lt; "copy: " &lt;&lt; s &lt;&lt; "\n";
+}
+
+void greet(std::string&amp;&amp; s) {
+    std::cout &lt;&lt; "move: " &lt;&lt; s &lt;&lt; "\n";
+}
+
+int main() {
+    std::string name = "Alice";
+    greet(name);              // calls const&amp; overload (lvalue)
+    greet("Bob");             // calls &amp;&amp; overload   (rvalue / temporary)
+    greet(std::move(name));   // calls &amp;&amp; overload   (xvalue)
+}</code></pre></div>
+
+                <!-- ===== The std::move Function ===== -->
+                <h2>The <code>std::move</code> Function</h2>
+                <p><code>std::move</code> (defined in <code>&lt;utility&gt;</code>) does <strong>not</strong> move anything. It is simply an <strong>unconditional cast</strong> to an rvalue reference. Its implementation is essentially:</p>
+<div class="code-block"><pre><code>template &lt;typename T&gt;
+constexpr std::remove_reference_t&lt;T&gt;&amp;&amp; move(T&amp;&amp; t) noexcept {
+    return static_cast&lt;std::remove_reference_t&lt;T&gt;&amp;&amp;&gt;(t);
+}</code></pre></div>
+                <p>After calling <code>std::move(obj)</code>, the variable <code>obj</code> is still a valid object, but you have given the compiler permission to treat it as a temporary. The actual resource transfer happens inside the <strong>move constructor</strong> or <strong>move assignment operator</strong> of the receiving type.</p>
+                <p><strong>Important:</strong> Do not use an object after it has been moved from, except to <em>assign a new value</em> to it or <em>destroy</em> it.</p>
+
+                <!-- ===== Move Constructor ===== -->
+                <h2>Move Constructor</h2>
+                <p>A <strong>move constructor</strong> takes an rvalue reference to the same class type. Inside, it transfers (steals) the resources of the source and leaves the source in a valid empty state.</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;utility&gt;
+
+class Buffer {
+    char* data_;
+    std::size_t size_;
+public:
+    // Normal constructor
+    explicit Buffer(std::size_t sz)
+        : data_(new char[sz]()), size_(sz) {
+        std::cout &lt;&lt; "Constructed " &lt;&lt; size_ &lt;&lt; " bytes\n";
+    }
+
+    // Copy constructor (deep copy)
+    Buffer(const Buffer&amp; other)
+        : data_(new char[other.size_]), size_(other.size_) {
+        std::memcpy(data_, other.data_, size_);
+        std::cout &lt;&lt; "Copied " &lt;&lt; size_ &lt;&lt; " bytes\n";
+    }
+
+    // Move constructor (steal resources)
+    Buffer(Buffer&amp;&amp; other) noexcept
+        : data_(other.data_), size_(other.size_) {
+        other.data_ = nullptr;   // leave source in valid state
+        other.size_ = 0;
+        std::cout &lt;&lt; "Moved " &lt;&lt; size_ &lt;&lt; " bytes\n";
+    }
+
+    ~Buffer() {
+        delete[] data_;
+        std::cout &lt;&lt; "Destroyed (size " &lt;&lt; size_ &lt;&lt; ")\n";
+    }
+};
+
+int main() {
+    Buffer a(1024);
+    Buffer b = std::move(a);   // invokes move constructor
+    // a is now empty (data_ == nullptr, size_ == 0)
+}</code></pre></div>
+                <p>Output:</p>
+<div class="code-block"><pre><code>Constructed 1024 bytes
+Moved 1024 bytes
+Destroyed (size 1024)
+Destroyed (size 0)</code></pre></div>
+                <p>The move constructor swapped two pointers and an integer&mdash;no heap allocation, no <code>memcpy</code>. This is <strong>O(1)</strong> instead of <strong>O(n)</strong>.</p>
+                <p>Always mark move constructors <code>noexcept</code>. STL containers (e.g., <code>std::vector</code>) will only use the move constructor during reallocation if it is <code>noexcept</code>; otherwise, they fall back to copying for strong exception safety.</p>
+
+                <!-- ===== Move Assignment Operator ===== -->
+                <h2>Move Assignment Operator</h2>
+                <p>The move assignment operator works the same way as the move constructor but must also release any resources the destination already owns.</p>
+<div class="code-block"><pre><code>class Buffer {
+    // ... (same members as above)
+public:
+    // Move assignment operator
+    Buffer&amp; operator=(Buffer&amp;&amp; other) noexcept {
+        if (this != &amp;other) {
+            delete[] data_;            // free existing resource
+            data_ = other.data_;       // steal source&rsquo;s resource
+            size_ = other.size_;
+            other.data_ = nullptr;     // leave source valid
+            other.size_ = 0;
+        }
+        return *this;
+    }
+};
+
+int main() {
+    Buffer x(512);
+    Buffer y(256);
+    y = std::move(x);   // invokes move assignment
+    // x is now empty; y owns the 512-byte buffer
+}</code></pre></div>
+                <p>The self-assignment check (<code>this != &amp;other</code>) prevents the object from accidentally deleting its own data when assigned to itself.</p>
+
+                <!-- ===== Rule of Five ===== -->
+                <h2>Rule of Five</h2>
+                <p>If your class manages a resource (raw pointer, file handle, socket, etc.) and you define <em>any</em> of the following five special member functions, you should define <strong>all five</strong>:</p>
+                <ol>
+                    <li><strong>Destructor</strong> &ndash; <code>~ClassName()</code></li>
+                    <li><strong>Copy constructor</strong> &ndash; <code>ClassName(const ClassName&amp;)</code></li>
+                    <li><strong>Copy assignment operator</strong> &ndash; <code>ClassName&amp; operator=(const ClassName&amp;)</code></li>
+                    <li><strong>Move constructor</strong> &ndash; <code>ClassName(ClassName&amp;&amp;) noexcept</code></li>
+                    <li><strong>Move assignment operator</strong> &ndash; <code>ClassName&amp; operator=(ClassName&amp;&amp;) noexcept</code></li>
+                </ol>
+<div class="code-block"><pre><code>class Widget {
+    int* data_;
+public:
+    explicit Widget(int val) : data_(new int(val)) {}
+
+    // 1. Destructor
+    ~Widget() { delete data_; }
+
+    // 2. Copy constructor
+    Widget(const Widget&amp; other) : data_(new int(*other.data_)) {}
+
+    // 3. Copy assignment
+    Widget&amp; operator=(const Widget&amp; other) {
+        if (this != &amp;other) {
+            *data_ = *other.data_;
+        }
+        return *this;
+    }
+
+    // 4. Move constructor
+    Widget(Widget&amp;&amp; other) noexcept : data_(other.data_) {
+        other.data_ = nullptr;
+    }
+
+    // 5. Move assignment
+    Widget&amp; operator=(Widget&amp;&amp; other) noexcept {
+        if (this != &amp;other) {
+            delete data_;
+            data_ = other.data_;
+            other.data_ = nullptr;
+        }
+        return *this;
+    }
+};</code></pre></div>
+                <p><strong>Rule of Zero:</strong> If your class does <em>not</em> manage a resource directly (e.g., it only contains <code>std::string</code>, <code>std::vector</code>, and smart pointers), you should define <strong>none</strong> of the five&mdash;the compiler-generated defaults will do the right thing.</p>
+
+                <!-- ===== Copy vs Move Performance Comparison ===== -->
+                <h2>Copy vs Move Performance Comparison</h2>
+                <p>To see the real impact, consider filling a <code>std::vector</code> with large objects:</p>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;chrono&gt;
+
+int main() {
+    const int N = 1'000'000;
+    std::string src(1000, 'x');   // 1 KB string
+
+    // Copying
+    auto t1 = std::chrono::high_resolution_clock::now();
+    std::vector&lt;std::string&gt; v1;
+    for (int i = 0; i &lt; N; ++i)
+        v1.push_back(src);        // copy each time
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+    // Moving
+    auto t3 = std::chrono::high_resolution_clock::now();
+    std::vector&lt;std::string&gt; v2;
+    for (int i = 0; i &lt; N; ++i)
+        v2.push_back(std::string(1000, 'x'));  // temporary &rarr; moved
+    auto t4 = std::chrono::high_resolution_clock::now();
+
+    using ms = std::chrono::milliseconds;
+    std::cout &lt;&lt; "Copy: "
+              &lt;&lt; std::chrono::duration_cast&lt;ms&gt;(t2 - t1).count()
+              &lt;&lt; " ms\n";
+    std::cout &lt;&lt; "Move: "
+              &lt;&lt; std::chrono::duration_cast&lt;ms&gt;(t4 - t3).count()
+              &lt;&lt; " ms\n";
+}</code></pre></div>
+                <p>On a typical system the move version can be <strong>3&ndash;10&times; faster</strong> because it avoids a million 1&nbsp;KB heap allocations and memory copies.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Operation</th><th>Complexity</th><th>Heap Allocation?</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Copy a <code>std::string</code></td><td>O(n)</td><td>Yes</td></tr>
+                        <tr><td>Move a <code>std::string</code></td><td>O(1)</td><td>No</td></tr>
+                        <tr><td>Copy a <code>std::vector</code></td><td>O(n)</td><td>Yes</td></tr>
+                        <tr><td>Move a <code>std::vector</code></td><td>O(1)</td><td>No</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Move Semantics with STL Containers ===== -->
+                <h2>Move Semantics with STL Containers</h2>
+                <p>All standard containers are <strong>move-aware</strong>. They provide move constructors and move assignment operators, and their mutating operations (like <code>push_back</code>) have overloads accepting rvalue references.</p>
+
+                <h3>Moving Elements into Containers</h3>
+<div class="code-block"><pre><code>std::vector&lt;std::string&gt; names;
+
+std::string name = "CodeVerse";
+names.push_back(name);              // copies name
+names.push_back(std::move(name));   // moves name (name is now empty)
+names.push_back("Temporary");       // moves the temporary directly
+
+// emplace_back constructs in-place &mdash; no copy or move of the string itself
+names.emplace_back(10, 'A');        // creates "AAAAAAAAAA" in place</code></pre></div>
+
+                <h3>Moving Entire Containers</h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; a = {1, 2, 3, 4, 5};
+std::vector&lt;int&gt; b = std::move(a);
+// a is now empty; b owns {1, 2, 3, 4, 5}
+std::cout &lt;&lt; "a.size() = " &lt;&lt; a.size() &lt;&lt; "\n";  // 0
+std::cout &lt;&lt; "b.size() = " &lt;&lt; b.size() &lt;&lt; "\n";  // 5</code></pre></div>
+
+                <h3><code>std::move</code> with Algorithms</h3>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+
+std::vector&lt;std::string&gt; src = {"alpha", "beta", "gamma"};
+std::vector&lt;std::string&gt; dst(3);
+
+std::move(src.begin(), src.end(), dst.begin());
+// src elements are now in a moved-from state
+// dst = {"alpha", "beta", "gamma"}</code></pre></div>
+
+                <!-- ===== Perfect Forwarding ===== -->
+                <h2>Perfect Forwarding</h2>
+                <p>When writing <strong>generic wrapper functions</strong> or <strong>factory functions</strong>, you want to forward arguments to another function while preserving their original value category (lvalue or rvalue). This is called <strong>perfect forwarding</strong> and relies on two features:</p>
+                <ol>
+                    <li><strong>Universal references</strong> (also called <em>forwarding references</em>): <code>T&amp;&amp;</code> where <code>T</code> is a deduced template parameter.</li>
+                    <li><code>std::forward&lt;T&gt;(arg)</code> &ndash; a <em>conditional</em> cast that preserves the value category.</li>
+                </ol>
+
+                <h3>Universal References</h3>
+<div class="code-block"><pre><code>template &lt;typename T&gt;
+void wrapper(T&amp;&amp; arg) {      // T&amp;&amp; here is a universal reference
+    // If called with an lvalue, T = int&amp;,  T&amp;&amp; = int&amp;   (reference collapsing)
+    // If called with an rvalue, T = int,   T&amp;&amp; = int&amp;&amp;
+}</code></pre></div>
+
+                <h3><code>std::forward</code></h3>
+<div class="code-block"><pre><code>#include &lt;utility&gt;
+#include &lt;iostream&gt;
+
+void target(int&amp; x)  { std::cout &lt;&lt; "lvalue\n"; }
+void target(int&amp;&amp; x) { std::cout &lt;&lt; "rvalue\n"; }
+
+template &lt;typename T&gt;
+void relay(T&amp;&amp; arg) {
+    target(std::forward&lt;T&gt;(arg));   // preserves value category
+}
+
+int main() {
+    int n = 42;
+    relay(n);       // lvalue &rarr; calls target(int&amp;)
+    relay(100);     // rvalue &rarr; calls target(int&amp;&amp;)
+}</code></pre></div>
+
+                <h3>Variadic Perfect Forwarding</h3>
+                <p>The pattern is most powerful with variadic templates. The standard library&rsquo;s <code>std::make_unique</code> and <code>emplace_back</code> use exactly this technique:</p>
+<div class="code-block"><pre><code>template &lt;typename T, typename... Args&gt;
+std::unique_ptr&lt;T&gt; make_unique(Args&amp;&amp;... args) {
+    return std::unique_ptr&lt;T&gt;(new T(std::forward&lt;Args&gt;(args)...));
+}</code></pre></div>
+
+                <!-- ===== Return Value Optimization (RVO / NRVO) ===== -->
+                <h2>Return Value Optimization (RVO / NRVO)</h2>
+                <p>Compilers are allowed&mdash;and in C++17 <em>required</em> (for prvalues)&mdash;to <strong>elide</strong> (eliminate) copies and moves when returning objects from functions. This is even better than a move because <em>no</em> constructor is called for the transfer.</p>
+
+                <h3>RVO (Return Value Optimization)</h3>
+<div class="code-block"><pre><code>std::string create() {
+    return std::string("Hello");   // prvalue &rarr; mandatory copy elision in C++17
+}
+
+std::string s = create();  // constructed directly in s; no copy, no move</code></pre></div>
+
+                <h3>NRVO (Named Return Value Optimization)</h3>
+<div class="code-block"><pre><code>std::string build() {
+    std::string result;
+    result += "Hello, ";
+    result += "World!";
+    return result;   // named variable &rarr; NRVO (not mandatory but widely applied)
+}
+
+std::string s = build();  // typically constructed in place; no copy, no move</code></pre></div>
+                <p><strong>Do not write <code>return std::move(result);</code></strong> &ndash; this actually <em>prevents</em> NRVO because the compiler can no longer treat <code>result</code> as eligible for elision. The standard already applies an <em>implicit move</em> when returning a local variable by value if NRVO does not kick in.</p>
+
+                <!-- ===== When to Use std::move ===== -->
+                <h2>When to Use <code>std::move</code></h2>
+                <p>Use <code>std::move</code> when:</p>
+                <ul>
+                    <li>You are <strong>done</strong> with a local variable and want to transfer its resources (e.g., inserting into a container).</li>
+                    <li>You are implementing a <strong>move constructor</strong> or <strong>move assignment operator</strong> and need to move member sub-objects.</li>
+                    <li>You are passing a <strong>sink parameter</strong> (a parameter that will be stored) by value and want to move into the stored member.</li>
+                    <li>You are transferring ownership of a <code>unique_ptr</code>.</li>
+                </ul>
+                <p>Do <strong>not</strong> use <code>std::move</code> when:</p>
+                <ul>
+                    <li>Returning a <strong>local variable</strong> from a function&mdash;let RVO/NRVO do its job.</li>
+                    <li>The object is <strong>small and trivially copyable</strong> (e.g., <code>int</code>, <code>double</code>)&mdash;move and copy are identical.</li>
+                    <li>You intend to <strong>use the object again</strong> after the supposed &ldquo;move&rdquo;.</li>
+                    <li>Returning a <strong>parameter</strong> passed by reference&mdash;this is undefined behaviour territory.</li>
+                </ul>
+
+                <h3>Sink Pattern (Pass by Value &amp; Move)</h3>
+<div class="code-block"><pre><code>class Person {
+    std::string name_;
+public:
+    // Accept by value and move into member
+    explicit Person(std::string name) : name_(std::move(name)) {}
+};
+
+// Caller decides copy vs move:
+std::string n = "Alice";
+Person p1(n);              // n is copied into the parameter, then moved into name_
+Person p2(std::move(n));   // n is moved into the parameter, then moved into name_
+Person p3("Bob");          // temporary is moved twice (compiler often elides one)</code></pre></div>
+
+                <!-- ===== Common Mistakes ===== -->
+                <h2>Common Mistakes</h2>
+
+                <h3>1. Moving from an Object You Plan to Use Later</h3>
+<div class="code-block"><pre><code>std::string greeting = "Hello";
+std::string other = std::move(greeting);
+
+// BUG: greeting is now in a moved-from state
+std::cout &lt;&lt; greeting.size() &lt;&lt; "\n";  // valid but value is unspecified</code></pre></div>
+
+                <h3>2. Writing <code>return std::move(local);</code></h3>
+<div class="code-block"><pre><code>std::vector&lt;int&gt; build() {
+    std::vector&lt;int&gt; v = {1, 2, 3};
+    return std::move(v);   // BAD &mdash; prevents NRVO/copy elision
+    // return v;            // GOOD
+}</code></pre></div>
+
+                <h3>3. Moving from <code>const</code> Objects</h3>
+<div class="code-block"><pre><code>const std::string s = "Immovable";
+std::string t = std::move(s);   // compiles but actually COPIES
+// std::move(s) produces const std::string&amp;&amp; which binds to const&amp; &rarr; copy ctor</code></pre></div>
+
+                <h3>4. Forgetting <code>noexcept</code> on Move Operations</h3>
+<div class="code-block"><pre><code>class Fragile {
+public:
+    Fragile(Fragile&amp;&amp; other) /* missing noexcept */ {
+        // std::vector will prefer copying instead of moving during reallocation
+    }
+};</code></pre></div>
+
+                <h3>5. Moving Members in the Wrong Order</h3>
+<div class="code-block"><pre><code>class Pair {
+    std::string first_;
+    std::string second_;
+public:
+    Pair(Pair&amp;&amp; other) noexcept
+        : first_(std::move(other.first_)),
+          second_(std::move(other.second_)) {}   // correct: move each member
+};</code></pre></div>
+
+                <h3>6. Not Implementing Self-Assignment Check</h3>
+<div class="code-block"><pre><code>Buffer&amp; operator=(Buffer&amp;&amp; other) noexcept {
+    // Without the self-assignment check:
+    delete[] data_;           // deletes our own data!
+    data_ = other.data_;     // other.data_ was just deleted
+    // ...
+}</code></pre></div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Move semantics</strong> transfer resources from one object to another in <strong>O(1)</strong> instead of O(n), avoiding expensive deep copies.</li>
+                    <li>An <strong>rvalue reference</strong> (<code>T&amp;&amp;</code>) binds to temporaries and to the result of <code>std::move</code>.</li>
+                    <li><code>std::move</code> is a <strong>cast</strong>, not a move&mdash;the actual transfer is performed by the <strong>move constructor</strong> or <strong>move assignment operator</strong>.</li>
+                    <li>Mark move operations <code>noexcept</code> so STL containers can use them during reallocation.</li>
+                    <li>Follow the <strong>Rule of Five</strong> (or the <strong>Rule of Zero</strong>) when managing resources.</li>
+                    <li>Use <strong>perfect forwarding</strong> (<code>std::forward</code>) in generic code to preserve value categories.</li>
+                    <li>Let the compiler apply <strong>RVO/NRVO</strong>&mdash;do not write <code>return std::move(local);</code>.</li>
+                    <li>Never use a moved-from object for anything other than destruction or reassignment.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/ehMg6zvXuMY" title="C++ Move Semantics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What do move semantics allow you to do?","o":["Copy objects more safely","Transfer resources from one object to another without copying","Allocate memory on the stack","Avoid using constructors"],"a":1},
+                {"q":"In which C++ standard were move semantics introduced?","o":["C++03","C++11","C++14","C++17"],"a":1},
+                {"q":"What is an lvalue?","o":["A temporary value","An expression that refers to a persistent object in memory","A literal constant","A function return value"],"a":1},
+                {"q":"What is an rvalue?","o":["A named variable","A value that has a persistent memory address","A temporary value or an expression about to expire","A reference to a pointer"],"a":2},
+                {"q":"Which operator declares an rvalue reference?","o":["<code>&amp;</code>","<code>&amp;&amp;</code>","<code>*</code>","<code>**</code>"],"a":1},
+                {"q":"Can an rvalue reference bind to an lvalue directly?","o":["Yes, always","Only with <code>const</code>","No, you must use <code>std::move</code>","Only in C++20"],"a":2},
+                {"q":"What does <code>std::move</code> actually do?","o":["Moves the object to a new memory location","Performs a deep copy","Casts an lvalue to an rvalue reference","Deletes the original object"],"a":2},
+                {"q":"Which header provides <code>std::move</code>?","o":["<code>&lt;algorithm&gt;</code>","<code>&lt;memory&gt;</code>","<code>&lt;utility&gt;</code>","<code>&lt;type_traits&gt;</code>"],"a":2},
+                {"q":"After <code>std::string b = std::move(a);</code>, what is the state of <code>a</code>?","o":["Unchanged","Deleted","Valid but unspecified (typically empty)","Null pointer"],"a":2},
+                {"q":"Is it safe to use a moved-from object?","o":["Yes, it retains its original value","Only for destruction or reassignment","No, it causes undefined behaviour","Only if it&rsquo;s a primitive type"],"a":1},
+                {"q":"What is the signature of a move constructor?","o":["<code>ClassName(ClassName&amp; other)</code>","<code>ClassName(const ClassName&amp;&amp; other)</code>","<code>ClassName(ClassName&amp;&amp; other) noexcept</code>","<code>ClassName(ClassName* other)</code>"],"a":2},
+                {"q":"Why should move constructors be marked <code>noexcept</code>?","o":["To prevent the object from being destroyed","So STL containers use moves instead of copies during reallocation","To enable copy elision","It is mandatory by the standard"],"a":1},
+                {"q":"What happens if a move constructor is not <code>noexcept</code> and the class is stored in a <code>std::vector</code>?","o":["The vector refuses to compile","The vector uses the copy constructor during reallocation","The vector throws an exception","The move constructor is called anyway"],"a":1},
+                {"q":"What does a move constructor typically do with the source object&rsquo;s pointer?","o":["Deletes it","Copies it deeply","Sets it to <code>nullptr</code> after stealing","Leaves it unchanged"],"a":2},
+                {"q":"What is the time complexity of a move operation on a <code>std::vector</code>?","o":["O(n)","O(log n)","O(1)","O(n log n)"],"a":2},
+                {"q":"What is the time complexity of a copy operation on a <code>std::string</code> of length n?","o":["O(1)","O(log n)","O(n)","O(n&sup2;)"],"a":2},
+                {"q":"What is the move assignment operator&rsquo;s signature?","o":["<code>ClassName&amp; operator=(ClassName&amp; other)</code>","<code>ClassName&amp; operator=(ClassName&amp;&amp; other) noexcept</code>","<code>void operator=(ClassName&amp;&amp; other)</code>","<code>ClassName operator=(const ClassName&amp;&amp; other)</code>"],"a":1},
+                {"q":"What must the move assignment operator do before stealing the source&rsquo;s resources?","o":["Copy them first","Release the destination&rsquo;s existing resources","Increment a reference count","Nothing extra is needed"],"a":1},
+                {"q":"Why is a self-assignment check needed in the move assignment operator?","o":["To prevent copy elision","To avoid deleting the object&rsquo;s own resources before reading them","To increase performance","It is not needed"],"a":1},
+                {"q":"How many special member functions does the Rule of Five include?","o":["3","4","5","6"],"a":2},
+                {"q":"Which of these is NOT one of the Rule of Five functions?","o":["Destructor","Copy constructor","Default constructor","Move assignment operator"],"a":2},
+                {"q":"What does the Rule of Zero state?","o":["Never define any constructors","If you don&rsquo;t manage resources directly, define none of the five","Always define all five","Use raw pointers for everything"],"a":1},
+                {"q":"What is a universal (forwarding) reference?","o":["Any reference declared with <code>&amp;</code>","<code>T&amp;&amp;</code> where <code>T</code> is a deduced template parameter","<code>const T&amp;&amp;</code>","<code>void&amp;&amp;</code>"],"a":1},
+                {"q":"What does <code>std::forward</code> do?","o":["Unconditionally casts to rvalue","Conditionally preserves the value category of the argument","Creates a deep copy","Deletes the argument"],"a":1},
+                {"q":"In a forwarding reference <code>T&amp;&amp;</code>, if called with an lvalue of type <code>int</code>, what is <code>T</code>?","o":["<code>int</code>","<code>int&amp;</code>","<code>int&amp;&amp;</code>","<code>const int</code>"],"a":1},
+                {"q":"In a forwarding reference <code>T&amp;&amp;</code>, if called with an rvalue of type <code>int</code>, what is <code>T</code>?","o":["<code>int</code>","<code>int&amp;</code>","<code>int&amp;&amp;</code>","<code>const int&amp;&amp;</code>"],"a":0},
+                {"q":"What is reference collapsing?","o":["Removing all references from a type","Rules that determine the final reference type when references are combined","Converting pointers to references","A compiler error"],"a":1},
+                {"q":"What does <code>int&amp; &amp;&amp;</code> collapse to?","o":["<code>int&amp;&amp;</code>","<code>int&amp;</code>","<code>int</code>","Compile error"],"a":1},
+                {"q":"What does <code>int&amp;&amp; &amp;&amp;</code> collapse to?","o":["<code>int&amp;</code>","<code>int&amp;&amp;</code>","<code>int</code>","Compile error"],"a":1},
+                {"q":"What is RVO?","o":["Reference Value Overloading","Return Value Optimization","Rvalue Variable Operation","Runtime Value Output"],"a":1},
+                {"q":"What is the difference between RVO and NRVO?","o":["RVO applies to prvalues; NRVO applies to named local variables","They are identical","RVO is a C++11 feature; NRVO is C++17","RVO is faster"],"a":0},
+                {"q":"In C++17, is RVO for prvalues mandatory?","o":["No, it is always optional","Yes, it is mandatory (guaranteed copy elision)","Only with <code>-O2</code>","Only for trivially copyable types"],"a":1},
+                {"q":"Why is <code>return std::move(local);</code> typically harmful?","o":["It causes a compile error","It prevents RVO/NRVO from kicking in","It deletes the local variable early","It has no effect at all"],"a":1},
+                {"q":"What does the compiler do if NRVO cannot be applied to a returned local variable?","o":["Performs a copy","Performs an implicit move","Throws an exception","Refuses to compile"],"a":1},
+                {"q":"What happens when you call <code>std::move</code> on a <code>const</code> object?","o":["The object is moved normally","A compile error occurs","A copy occurs because the rvalue reference is <code>const</code>","Undefined behaviour"],"a":2},
+                {"q":"Which function is preferred for inserting elements in-place into a container?","o":["<code>push_back</code>","<code>insert</code>","<code>emplace_back</code>","<code>append</code>"],"a":2},
+                {"q":"How does <code>emplace_back</code> differ from <code>push_back</code> with <code>std::move</code>?","o":["<code>emplace_back</code> copies; <code>push_back</code> moves","<code>emplace_back</code> constructs the element directly in place","They are identical","<code>emplace_back</code> is slower"],"a":1},
+                {"q":"What does <code>std::move</code> from <code>&lt;algorithm&gt;</code> (the range version) do?","o":["Casts elements to rvalue references","Moves elements from one range to another","Sorts a range","Removes elements from a range"],"a":1},
+                {"q":"Can <code>std::unique_ptr</code> be copied?","o":["Yes","No, it can only be moved","Only in C++17","Only with a custom deleter"],"a":1},
+                {"q":"What is the &ldquo;sink parameter&rdquo; pattern?","o":["Passing by const reference","Accepting a parameter by value and then moving it into a member","Passing a raw pointer","Using a global variable"],"a":1},
+                {"q":"In the sink pattern <code>Person(std::string name) : name_(std::move(name)) {}</code>, how many moves occur when called with an rvalue?","o":["Zero","One (into the parameter; member constructed via move)","Two","Three"],"a":1},
+                {"q":"What value category does <code>std::move(x)</code> produce?","o":["lvalue","prvalue","xvalue","glvalue"],"a":2},
+                {"q":"What is an xvalue?","o":["An extra-large value","An expiring value whose resources can be reused","A deleted value","A constant expression"],"a":1},
+                {"q":"Can you move a primitive type like <code>int</code>?","o":["Yes, and it is faster than copying","Technically yes, but move and copy are identical for primitives","No, it is a compile error","Only in C++20"],"a":1},
+                {"q":"What does <code>std::move_if_noexcept</code> do?","o":["Always moves","Moves if the move constructor is <code>noexcept</code>; otherwise copies","Throws if the move fails","Deletes the object"],"a":1},
+                {"q":"Which of these containers does NOT benefit from move semantics internally?","o":["<code>std::vector</code>","<code>std::string</code>","<code>std::array</code>","<code>std::map</code>"],"a":2},
+                {"q":"Why doesn&rsquo;t <code>std::array</code> benefit much from move semantics?","o":["It stores elements on the heap","It is always empty","Its elements are stored inline (no separate heap buffer to steal)","It doesn&rsquo;t support <code>&amp;&amp;</code>"],"a":2},
+                {"q":"What is the typical state of a moved-from <code>std::vector</code>?","o":["It retains all elements","It is empty (size 0)","It contains garbage data","It is deleted"],"a":1},
+                {"q":"What keyword ensures a function does not throw exceptions?","o":["<code>throw()</code>","<code>noexcept</code>","<code>nothrow</code>","<code>safe</code>"],"a":1},
+                {"q":"What does <code>std::exchange(a, b)</code> do?","o":["Swaps a and b","Replaces a with b and returns the old value of a","Deletes both a and b","Moves b into a and deletes b"],"a":1},
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="smart-pointers.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Smart Pointers</span>
+                </a>
+                <a href="multithreading.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Multithreading</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Pointers - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-pointers">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html" class="active"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 26 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="47" style="width:47%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Pointers
+                </div>
+                <h1>26. Pointers</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 26 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Pointers? ===== -->
+                <h2>What Are Pointers?</h2>
+                <p>A <strong>pointer</strong> is a variable that stores the <strong>memory address</strong> of another variable. Instead of holding a data value directly, a pointer &ldquo;points to&rdquo; the location in memory where a value lives. Every variable you create occupies a numbered slot in RAM &mdash; a pointer simply records that slot number.</p>
+                <p>Think of memory as a massive row of mailboxes. Each mailbox has a unique address. A pointer is like a slip of paper that has a mailbox number written on it &mdash; you can follow that number to find the actual contents.</p>
+                <p>Pointers are fundamental to C++ and matter for several reasons:</p>
+                <ul>
+                    <li><strong>Efficiency:</strong> Pass large objects by address instead of copying them.</li>
+                    <li><strong>Dynamic memory:</strong> Allocate memory at runtime with <code>new</code> and <code>delete</code>.</li>
+                    <li><strong>Data structures:</strong> Build linked lists, trees, graphs, and other node-based structures.</li>
+                    <li><strong>Polymorphism:</strong> Use base-class pointers to call derived-class methods.</li>
+                    <li><strong>Low-level access:</strong> Interact with hardware, OS APIs, and legacy C libraries.</li>
+                </ul>
+
+                <!-- ===== Declaring Pointers ===== -->
+                <h2>Declaring Pointers</h2>
+                <p>To declare a pointer you write the <strong>base type</strong> followed by an <strong>asterisk</strong> (<code>*</code>) and the variable name. The base type tells the compiler what kind of data the pointer will point to.</p>
+<pre><code>int*    iPtr;   // pointer to int
+double* dPtr;   // pointer to double
+char*   cPtr;   // pointer to char
+bool*   bPtr;   // pointer to bool</code></pre>
+                <p>The asterisk can be placed next to the type, next to the name, or in between &mdash; all three are valid:</p>
+<pre><code>int* p1;   // style 1 &ndash; asterisk with type (recommended)
+int *p2;   // style 2 &ndash; asterisk with name
+int * p3;  // style 3 &ndash; space on both sides</code></pre>
+                <p><strong>Important:</strong> When declaring multiple pointers on one line, each name needs its own asterisk:</p>
+<pre><code>int *a, *b;   // both are pointers to int
+int* c, d;    // GOTCHA: c is a pointer, d is a plain int!</code></pre>
+
+                <!-- ===== Address-of Operator (&) ===== -->
+                <h2>Address-of Operator (<code>&amp;</code>)</h2>
+                <p>The <strong>address-of operator</strong> <code>&amp;</code> returns the memory address of a variable. You use it to initialise or assign a value to a pointer.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int age = 25;
+    int* ptr = &amp;age;   // ptr now holds the address of age
+
+    cout &lt;&lt; "Value of age:    " &lt;&lt; age  &lt;&lt; endl;
+    cout &lt;&lt; "Address of age:  " &lt;&lt; &amp;age &lt;&lt; endl;
+    cout &lt;&lt; "Value of ptr:    " &lt;&lt; ptr  &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                <p><strong>Output (addresses vary):</strong></p>
+<pre><code>Value of age:    25
+Address of age:  0x7ffc2a3b4c5d
+Value of ptr:    0x7ffc2a3b4c5d</code></pre>
+                <p>Notice that <code>ptr</code> and <code>&amp;age</code> print the same hex address &mdash; the pointer is simply storing that address.</p>
+
+                <!-- ===== Dereference Operator (*) ===== -->
+                <h2>Dereference Operator (<code>*</code>)</h2>
+                <p>The <strong>dereference operator</strong> (also called the <em>indirection operator</em>) <code>*</code> lets you access or modify the value <em>at</em> the address the pointer holds. Dereferencing &ldquo;follows&rdquo; the pointer to the data it points to.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int score = 100;
+    int* ptr = &amp;score;
+
+    cout &lt;&lt; "score via variable:  " &lt;&lt; score &lt;&lt; endl;
+    cout &lt;&lt; "score via pointer:   " &lt;&lt; *ptr  &lt;&lt; endl;  // dereference
+
+    *ptr = 200;   // modify the value through the pointer
+    cout &lt;&lt; "score after *ptr=200: " &lt;&lt; score &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>score via variable:  100
+score via pointer:   100
+score after *ptr=200: 200</code></pre>
+                <p>The asterisk has <strong>two roles</strong> depending on context &mdash; in a <em>declaration</em> it creates a pointer; in an <em>expression</em> it dereferences one. Don&rsquo;t confuse them.</p>
+
+                <!-- ===== Pointer Initialization and nullptr ===== -->
+                <h2>Pointer Initialization and <code>nullptr</code></h2>
+                <p>An <strong>uninitialized pointer</strong> contains a garbage address. Dereferencing it causes <strong>undefined behaviour</strong> &mdash; crashes, data corruption, or silent bugs. Always initialise pointers.</p>
+<pre><code>int* p1 = nullptr;   // C++11 null pointer literal (recommended)
+int* p2 = NULL;      // C-style null (works but less type-safe)
+int* p3 = 0;         // also null, but unclear intent</code></pre>
+                <p><code>nullptr</code> is a keyword of type <code>std::nullptr_t</code>. It implicitly converts to any pointer type but <strong>not</strong> to integers, preventing subtle bugs that <code>NULL</code> (which is just <code>0</code>) can introduce during function overload resolution.</p>
+                <p>You can check whether a pointer is null before dereferencing:</p>
+<pre><code>if (ptr != nullptr) {
+    cout &lt;&lt; *ptr &lt;&lt; endl;   // safe
+}
+
+// Or simply:
+if (ptr) {
+    cout &lt;&lt; *ptr &lt;&lt; endl;   // non-null evaluates to true
+}</code></pre>
+
+                <!-- ===== Pointers and Variables ===== -->
+                <h2>Pointers and Variables</h2>
+                <p>Because a pointer stores a variable&rsquo;s address, you can use it as an <strong>alias</strong> to read or change the original variable from anywhere that has the pointer.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 10;
+    int* p = &amp;x;
+
+    cout &lt;&lt; "x = " &lt;&lt; x  &lt;&lt; endl;   // 10
+    cout &lt;&lt; "*p = " &lt;&lt; *p &lt;&lt; endl;  // 10
+
+    *p = 42;
+    cout &lt;&lt; "x after *p = 42: " &lt;&lt; x &lt;&lt; endl;   // 42
+
+    x = 99;
+    cout &lt;&lt; "*p after x = 99: " &lt;&lt; *p &lt;&lt; endl;  // 99
+
+    // Re-point to a different variable
+    int y = 7;
+    p = &amp;y;
+    cout &lt;&lt; "*p now points to y: " &lt;&lt; *p &lt;&lt; endl; // 7
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>x = 10
+*p = 10
+x after *p = 42: 42
+*p after x = 99: 99
+*p now points to y: 7</code></pre>
+
+                <!-- ===== Pointers to Pointers ===== -->
+                <h2>Pointers to Pointers (Double Pointers)</h2>
+                <p>A <strong>pointer to a pointer</strong> stores the address of another pointer variable. You declare it with <code>**</code> and dereference twice to reach the underlying value.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int val = 50;
+    int* ptr  = &amp;val;    // pointer to val
+    int** pptr = &amp;ptr;   // pointer to ptr
+
+    cout &lt;&lt; "val         = " &lt;&lt; val    &lt;&lt; endl;  // 50
+    cout &lt;&lt; "*ptr        = " &lt;&lt; *ptr   &lt;&lt; endl;  // 50
+    cout &lt;&lt; "**pptr      = " &lt;&lt; **pptr &lt;&lt; endl;  // 50
+
+    cout &lt;&lt; "Address of val:  " &lt;&lt; ptr   &lt;&lt; endl;
+    cout &lt;&lt; "Address of ptr:  " &lt;&lt; pptr  &lt;&lt; endl;
+
+    **pptr = 75;          // modify val through double pointer
+    cout &lt;&lt; "val after **pptr = 75: " &lt;&lt; val &lt;&lt; endl; // 75
+
+    return 0;
+}</code></pre>
+                <p>Double (and even triple) pointers appear in C-style APIs, dynamic 2-D arrays, and functions that need to modify a pointer argument itself.</p>
+
+                <!-- ===== Pointers and Arrays ===== -->
+                <h2>Pointers and Arrays</h2>
+                <p>In C++, the <strong>name of an array</strong> decays to a pointer to its first element in most expressions. This means you can traverse an array using pointer arithmetic instead of indexing.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+    int* p = nums;            // equivalent to &amp;nums[0]
+
+    cout &lt;&lt; "First element:  " &lt;&lt; *p       &lt;&lt; endl;  // 10
+    cout &lt;&lt; "Second element: " &lt;&lt; *(p + 1) &lt;&lt; endl;  // 20
+    cout &lt;&lt; "Third element:  " &lt;&lt; *(p + 2) &lt;&lt; endl;  // 30
+
+    // Traverse with a pointer loop
+    cout &lt;&lt; "All elements: ";
+    for (int* it = nums; it != nums + 5; ++it) {
+        cout &lt;&lt; *it &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>First element:  10
+Second element: 20
+Third element:  30
+All elements: 10 20 30 40 50</code></pre>
+                <p>Key facts to remember:</p>
+                <ul>
+                    <li><code>nums</code> and <code>&amp;nums[0]</code> yield the same address.</li>
+                    <li><code>nums[i]</code> is equivalent to <code>*(nums + i)</code>.</li>
+                    <li><code>sizeof(nums)</code> still gives the total array size, but <code>sizeof(p)</code> gives the pointer size (4 or 8 bytes).</li>
+                </ul>
+
+                <!-- ===== Pointers and Functions ===== -->
+                <h2>Pointers and Functions</h2>
+                <p>Passing a pointer to a function lets the function <strong>modify the caller&rsquo;s variable</strong> directly. This is called <em>pass by pointer</em>.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void increment(int* p) {
+    (*p)++;       // dereference, then increment
+}
+
+int main() {
+    int n = 10;
+    increment(&amp;n);
+    cout &lt;&lt; "n after increment: " &lt;&lt; n &lt;&lt; endl; // 11
+    return 0;
+}</code></pre>
+                <p>A classic example is the <strong>swap function</strong>:</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void swapValues(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 5, y = 9;
+    cout &lt;&lt; "Before swap: x=" &lt;&lt; x &lt;&lt; " y=" &lt;&lt; y &lt;&lt; endl;
+
+    swapValues(&amp;x, &amp;y);
+    cout &lt;&lt; "After swap:  x=" &lt;&lt; x &lt;&lt; " y=" &lt;&lt; y &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+                <p><strong>Output:</strong></p>
+<pre><code>Before swap: x=5 y=9
+After swap:  x=9 y=5</code></pre>
+                <p>Modern C++ often prefers <strong>references</strong> over pointers for function parameters (covered in Lesson 29), but pointers remain essential when nullability, pointer arithmetic, or C-API compatibility is needed.</p>
+
+                <!-- ===== Const Pointers ===== -->
+                <h2>Const Pointers</h2>
+                <p>The <code>const</code> keyword can be applied to pointers in <strong>three distinct ways</strong>. Read declarations <em>right to left</em> to decode them:</p>
+
+                <h3>1. Pointer to <code>const</code> Data</h3>
+                <p>You cannot modify the data through the pointer, but you can re-point the pointer elsewhere.</p>
+<pre><code>int a = 10, b = 20;
+const int* ptr = &amp;a;   // pointer to const int
+
+// *ptr = 50;   // ERROR: cannot modify data
+ptr = &amp;b;      // OK: can change what ptr points to</code></pre>
+
+                <h3>2. <code>const</code> Pointer</h3>
+                <p>The pointer itself is constant &mdash; it always points to the same address &mdash; but you can change the data through it.</p>
+<pre><code>int a = 10;
+int* const ptr = &amp;a;   // const pointer to int
+
+*ptr = 50;     // OK: can modify data
+// ptr = &amp;b;   // ERROR: cannot re-point</code></pre>
+
+                <h3>3. <code>const</code> Pointer to <code>const</code> Data</h3>
+                <p>Neither the pointer nor the data it points to can be changed.</p>
+<pre><code>int a = 10;
+const int* const ptr = &amp;a;
+
+// *ptr = 50;   // ERROR
+// ptr = &amp;b;    // ERROR</code></pre>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Declaration</th>
+                            <th>Change Data?</th>
+                            <th>Re-point?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>const int* ptr</code></td>
+                            <td>&#10060; No</td>
+                            <td>&#9989; Yes</td>
+                        </tr>
+                        <tr>
+                            <td><code>int* const ptr</code></td>
+                            <td>&#9989; Yes</td>
+                            <td>&#10060; No</td>
+                        </tr>
+                        <tr>
+                            <td><code>const int* const ptr</code></td>
+                            <td>&#10060; No</td>
+                            <td>&#10060; No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Void Pointers ===== -->
+                <h2>Void Pointers</h2>
+                <p>A <strong>void pointer</strong> (<code>void*</code>) is a <em>generic pointer</em> that can hold the address of <strong>any data type</strong>. However, you cannot dereference it directly &mdash; you must cast it to the appropriate type first.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int    n = 42;
+    double d = 3.14;
+
+    void* vp;
+
+    vp = &amp;n;
+    cout &lt;&lt; "int value: " &lt;&lt; *(static_cast&lt;int*&gt;(vp)) &lt;&lt; endl;    // 42
+
+    vp = &amp;d;
+    cout &lt;&lt; "double value: " &lt;&lt; *(static_cast&lt;double*&gt;(vp)) &lt;&lt; endl; // 3.14
+
+    return 0;
+}</code></pre>
+                <p><strong>Key rules for <code>void*</code>:</strong></p>
+                <ul>
+                    <li>You <strong>cannot</strong> dereference a <code>void*</code> without a cast.</li>
+                    <li>You <strong>cannot</strong> perform pointer arithmetic on a <code>void*</code> (the compiler doesn&rsquo;t know the element size).</li>
+                    <li><code>void*</code> is common in C-style callbacks and low-level interfaces but should be avoided in modern C++ where templates or <code>std::any</code> are available.</li>
+                </ul>
+
+                <!-- ===== Dangling Pointers and Common Mistakes ===== -->
+                <h2>Dangling Pointers and Common Mistakes</h2>
+                <p>A <strong>dangling pointer</strong> points to memory that has already been freed or to a local variable that has gone out of scope. Using a dangling pointer causes <strong>undefined behaviour</strong>.</p>
+
+                <h3>Example 1: Returning a local variable&rsquo;s address</h3>
+<pre><code>int* bad() {
+    int local = 10;
+    return &amp;local;   // WARNING: local is destroyed after return
+}
+
+int main() {
+    int* p = bad();
+    // *p is undefined behaviour &ndash; local no longer exists
+    return 0;
+}</code></pre>
+
+                <h3>Example 2: Using memory after <code>delete</code></h3>
+<pre><code>int* p = new int(5);
+delete p;
+// p is now dangling
+// *p = 10;   // undefined behaviour!
+p = nullptr;  // good practice: nullify after delete</code></pre>
+
+                <h3>Common Pointer Mistakes</h3>
+                <ul>
+                    <li><strong>Uninitialized pointers:</strong> Always set to <code>nullptr</code> or a valid address.</li>
+                    <li><strong>Forgetting to dereference:</strong> <code>cout &lt;&lt; ptr</code> prints the address, not the value.</li>
+                    <li><strong>Type mismatch:</strong> Assigning an <code>int*</code> to a <code>double*</code> without a cast.</li>
+                    <li><strong>Memory leaks:</strong> Allocating with <code>new</code> but never calling <code>delete</code>.</li>
+                    <li><strong>Double deletion:</strong> Calling <code>delete</code> twice on the same pointer.</li>
+                    <li><strong>Wild pointer:</strong> Using a pointer that was never assigned any address.</li>
+                </ul>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Prefer <strong>references</strong> when you don&rsquo;t need nullability or re-seating.</li>
+                    <li>Prefer <strong>smart pointers</strong> (<code>std::unique_ptr</code>, <code>std::shared_ptr</code>) over raw <code>new</code>/<code>delete</code>.</li>
+                    <li>Set pointers to <code>nullptr</code> after <code>delete</code>.</li>
+                    <li>Check for <code>nullptr</code> before dereferencing when the pointer might be null.</li>
+                    <li>Use <code>const</code> pointers to express intent and catch accidental modifications.</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>A pointer stores a <strong>memory address</strong>, not a value.</li>
+                    <li><code>&amp;</code> (address-of) gives a variable&rsquo;s address; <code>*</code> (dereference) accesses the value at that address.</li>
+                    <li>Always initialise pointers &mdash; use <code>nullptr</code> when you have no target yet.</li>
+                    <li>The name of an array decays to a pointer to its first element.</li>
+                    <li>Pass-by-pointer lets functions modify the caller&rsquo;s data.</li>
+                    <li><code>const</code> can protect the data, the pointer, or both.</li>
+                    <li><code>void*</code> is a generic, type-erased pointer that must be cast before dereferencing.</li>
+                    <li>Dangling &amp; uninitialized pointers are the most common source of pointer bugs &mdash; nullify after <code>delete</code> and never return addresses of locals.</li>
+                    <li>Modern C++ prefers smart pointers and references for memory safety.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/sB_gGGpVbEk" title="C++ Pointers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <!-- ===== Quiz ===== -->
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What does a pointer store?","o":["A data value","A memory address","The size of a variable","A reference to a function"],"a":1},
+                {"q":"Which operator returns the memory address of a variable?","o":["*","->","&amp;","::"],"a":2},
+                {"q":"Which operator dereferences a pointer?","o":["&amp;","*","->","::"],"a":1},
+                {"q":"What is the correct way to declare a pointer to an int?","o":["int ptr;","int &amp;ptr;","ptr int*;","int* ptr;"],"a":3},
+                {"q":"What value does nullptr represent?","o":["Zero integer","Null pointer literal","Empty string","Void type"],"a":1},
+                {"q":"What is the output of *ptr if ptr points to a variable holding 42?","o":["The address of the variable","42","0","Compilation error"],"a":1},
+                {"q":"Which C++ standard introduced nullptr?","o":["C++98","C++03","C++11","C++20"],"a":2},
+                {"q":"What happens if you dereference an uninitialized pointer?","o":["It returns 0","Compilation error","Undefined behaviour","It returns nullptr"],"a":2},
+                {"q":"In 'int* a, b;', what type is b?","o":["int*","int","int**","void*"],"a":1},
+                {"q":"How do you make a pointer point to variable x?","o":["ptr = x;","ptr = *x;","ptr = &amp;x;","*ptr = x;"],"a":2},
+                {"q":"What does *ptr = 10; do?","o":["Sets the pointer address to 10","Sets the value at the pointed address to 10","Creates a new pointer","Deletes the pointer"],"a":1},
+                {"q":"Which declaration creates a pointer to a double?","o":["double ptr;","double &amp;ptr;","double* ptr;","*double ptr;"],"a":2},
+                {"q":"What is a dangling pointer?","o":["A pointer set to nullptr","A pointer to freed or out-of-scope memory","A const pointer","A void pointer"],"a":1},
+                {"q":"How do you safely check if a pointer is null?","o":["if (ptr == 0)","if (ptr != nullptr)","if (ptr)","All of the above"],"a":3},
+                {"q":"What does int** pptr; declare?","o":["A pointer to int","A pointer to a pointer to int","A double int","A reference to int*"],"a":1},
+                {"q":"How do you access the value through a double pointer pptr?","o":["*pptr","&amp;pptr","**pptr","pptr**"],"a":2},
+                {"q":"What does an array name decay to in most expressions?","o":["An integer","A reference","A pointer to its first element","A copy of the array"],"a":2},
+                {"q":"Which is equivalent to nums[3]?","o":["*(nums + 3)","&amp;nums + 3","nums * 3","*nums[3]"],"a":0},
+                {"q":"What does sizeof(ptr) return on a 64-bit system for any pointer?","o":["4 bytes","8 bytes","Size of the pointed-to type","0"],"a":1},
+                {"q":"What is the purpose of pass-by-pointer?","o":["To create a copy of the variable","To allow the function to modify the caller's variable","To hide the variable","To convert the type"],"a":1},
+                {"q":"In a swap function using pointers, what stores the temporary value?","o":["A pointer","A dereferenced value in a local variable","A reference","The return value"],"a":1},
+                {"q":"What does const int* ptr mean?","o":["The pointer is constant","The data pointed to is constant","Both are constant","Neither is constant"],"a":1},
+                {"q":"What does int* const ptr mean?","o":["The pointer is constant","The data pointed to is constant","Both are constant","Neither is constant"],"a":0},
+                {"q":"Which declaration prevents both re-pointing and modifying data?","o":["const int* ptr","int* const ptr","const int* const ptr","int const ptr"],"a":2},
+                {"q":"Can you re-point a const int* ptr to a new address?","o":["Yes","No","Only if the data is non-const","Only with a cast"],"a":0},
+                {"q":"What is a void pointer (void*)?","o":["A pointer that cannot be used","A pointer that can hold any address type","A null pointer","An invalid pointer"],"a":1},
+                {"q":"Can you dereference a void* directly?","o":["Yes","No, you must cast it first","Only in C++17","Only for int types"],"a":1},
+                {"q":"Which cast is safest for converting void* to int*?","o":["(int*)vp","reinterpret_cast&lt;int*&gt;(vp)","static_cast&lt;int*&gt;(vp)","dynamic_cast&lt;int*&gt;(vp)"],"a":2},
+                {"q":"What should you do with a pointer after calling delete on it?","o":["Dereference it immediately","Set it to nullptr","Leave it unchanged","Set it to 0xFF"],"a":1},
+                {"q":"Which is NOT a common pointer mistake?","o":["Using an uninitialized pointer","Forgetting to dereference","Initializing with nullptr","Double deletion"],"a":2},
+                {"q":"What is a wild pointer?","o":["A pointer set to nullptr","A pointer that was never assigned any address","A pointer to dynamic memory","A pointer used in templates"],"a":1},
+                {"q":"Why is nullptr preferred over NULL in C++?","o":["nullptr is faster","nullptr is type-safe and won't convert to int","NULL works only in C","nullptr uses less memory"],"a":1},
+                {"q":"What type is nullptr in C++?","o":["int","void*","std::nullptr_t","bool"],"a":2},
+                {"q":"Can a pointer to int be assigned to a pointer to double without a cast?","o":["Yes","No","Only in C","Only if both are const"],"a":1},
+                {"q":"What happens when you print a char* with cout?","o":["Prints the address","Prints the character string","Prints the first char","Compilation error"],"a":1},
+                {"q":"How do you print the address stored in a char* ptr?","o":["cout &lt;&lt; ptr;","cout &lt;&lt; (void*)ptr;","cout &lt;&lt; &amp;ptr;","cout &lt;&lt; *ptr;"],"a":1},
+                {"q":"Which operation is illegal on a void*?","o":["Assigning an int* to it","Comparing it with nullptr","Pointer arithmetic","Casting it to int*"],"a":2},
+                {"q":"In 'int a = 5; int* p = &amp;a;', what is &amp;p?","o":["Address of a","Value of a","Address of pointer p itself","5"],"a":2},
+                {"q":"What is the result of ptr + 1 if ptr is an int* on a system with 4-byte ints?","o":["Address increases by 1 byte","Address increases by 4 bytes","Address increases by 8 bytes","Compilation error"],"a":1},
+                {"q":"Which best describes the relationship between arrays and pointers?","o":["They are identical","Arrays decay to pointers but are not the same","Pointers decay to arrays","There is no relationship"],"a":1},
+                {"q":"What does *(arr + i) access in an array arr?","o":["The address at index i","The element at index i","The size of the array","The pointer to index i"],"a":1},
+                {"q":"Can you perform ++ on a const pointer (int* const p)?","o":["Yes","No, the pointer cannot be modified","Only inside functions","Only with a cast"],"a":1},
+                {"q":"Can you perform ++ on a pointer to const (const int* p)?","o":["Yes, you can move the pointer","No, you cannot move the pointer","Only for array pointers","Compilation error"],"a":0},
+                {"q":"What does int* p = new int(10); do?","o":["Creates a stack int set to 10","Allocates heap memory for an int initialized to 10","Allocates an array of 10 ints","Creates a pointer set to 10"],"a":1},
+                {"q":"Which modern C++ feature replaces raw pointer ownership?","o":["References","const pointers","Smart pointers","void pointers"],"a":2},
+                {"q":"What does 'delete p;' do?","o":["Removes the pointer variable","Frees the memory p points to","Sets p to nullptr","Removes all references to p"],"a":1},
+                {"q":"What is a memory leak?","o":["Reading uninitialized memory","Allocated memory that is never freed","A buffer overflow","A stack overflow"],"a":1},
+                {"q":"How many bytes does a pointer occupy on a 32-bit system?","o":["2","4","8","Depends on the data type"],"a":1},
+                {"q":"Which statement creates a null pointer in C++11 or later?","o":["int* p = 0;","int* p = NULL;","int* p = nullptr;","All of the above compile, but nullptr is preferred"],"a":3},
+                {"q":"Which is true about pointer assignment?","o":["Pointers can only point to dynamically allocated memory","Pointers can point to any object of matching type in scope","Pointers must be global","Pointers cannot be reassigned"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="strings.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">std::string</span>
+                </a>
+                <a href="pointer-arithmetic.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Pointer Arithmetic</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

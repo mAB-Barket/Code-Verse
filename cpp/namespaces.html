@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Namespaces - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-namespaces">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html" class="active"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 46 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="84" style="width:84%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Namespaces
+                </div>
+                <h1>46. Namespaces</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 46 of 55</span>
+                    <span>&#9201; 14 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Namespaces? ===== -->
+                <h2>What Are Namespaces?</h2>
+                <p>A <strong>namespace</strong> is a declarative region in C++ that provides a scope for the identifiers (names of types, functions, variables, etc.) inside it. Namespaces are used to organise code into logical groups and to <strong>prevent naming conflicts</strong> that can occur when your code base includes multiple libraries or modules.</p>
+                <p>Imagine two libraries that both define a function called <code>log()</code>. Without namespaces the compiler would see two definitions of the same name and produce an error. By placing each library&rsquo;s code inside its own namespace, both <code>log()</code> functions can coexist peacefully:</p>
+                <pre><code>// Library A
+namespace LibA {
+    void log(const std::string&amp; msg) { /* ... */ }
+}
+
+// Library B
+namespace LibB {
+    void log(double value) { /* ... */ }
+}
+
+int main() {
+    LibA::log("Hello");   // calls LibA&rsquo;s version
+    LibB::log(3.14);      // calls LibB&rsquo;s version
+}</code></pre>
+                <p>Key benefits of namespaces:</p>
+                <ul>
+                    <li><strong>Name collision avoidance</strong> &mdash; different libraries can use identical names without conflict.</li>
+                    <li><strong>Logical grouping</strong> &mdash; related declarations are grouped together, improving readability.</li>
+                    <li><strong>Versioning</strong> &mdash; inline namespaces allow API versioning within a single library.</li>
+                    <li><strong>Encapsulation</strong> &mdash; unnamed namespaces restrict visibility to a single translation unit.</li>
+                </ul>
+
+                <!-- ===== Defining a Namespace ===== -->
+                <h2>Defining a Namespace</h2>
+                <p>You define a namespace with the <code>namespace</code> keyword followed by a name and a pair of braces. Everything between the braces belongs to that namespace:</p>
+                <pre><code>namespace Math {
+    const double PI = 3.141592653589793;
+
+    double square(double x) {
+        return x * x;
+    }
+
+    double cube(double x) {
+        return x * x * x;
+    }
+}</code></pre>
+                <p>Rules for namespace names:</p>
+                <ul>
+                    <li>Must be a valid C++ identifier (letters, digits, underscores; cannot start with a digit).</li>
+                    <li>By convention, namespace names are lowercase or PascalCase.</li>
+                    <li>There is no semicolon after the closing brace (unlike classes and structs).</li>
+                    <li>Namespaces can only be defined at <strong>global scope</strong> or inside another namespace&mdash;never inside a function or class.</li>
+                </ul>
+
+                <!-- ===== Accessing Members with :: ===== -->
+                <h2>Accessing Members with <code>::</code></h2>
+                <p>The <strong>scope resolution operator</strong> (<code>::</code>) is used to access members of a namespace from outside that namespace:</p>
+                <pre><code>#include &lt;iostream&gt;
+
+namespace Geometry {
+    double circleArea(double r) {
+        return 3.14159265 * r * r;
+    }
+}
+
+int main() {
+    double area = Geometry::circleArea(5.0);
+    std::cout &lt;&lt; "Area: " &lt;&lt; area &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+                <p>The syntax is <code>NamespaceName::member</code>. You have already been using this every time you write <code>std::cout</code>&mdash;<code>cout</code> lives inside the <code>std</code> namespace.</p>
+                <p>If namespaces are nested, you chain the <code>::</code> operators:</p>
+                <pre><code>namespace Company {
+    namespace Graphics {
+        void render() { /* ... */ }
+    }
+}
+
+Company::Graphics::render();  // fully qualified name</code></pre>
+
+                <!-- ===== Using Declarations ===== -->
+                <h2>Using Declarations</h2>
+                <p>A <strong>using declaration</strong> introduces a <em>single</em> name from a namespace into the current scope, allowing you to use it without the namespace prefix:</p>
+                <pre><code>#include &lt;iostream&gt;
+
+using std::cout;
+using std::endl;
+
+int main() {
+    cout &lt;&lt; "No prefix needed!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                <p>Using declarations are the <strong>recommended</strong> approach when you only need a few names from a namespace. They are precise and do not pollute the current scope with unwanted identifiers.</p>
+                <p>You can place a using declaration inside a function to limit its effect to that function&rsquo;s scope:</p>
+                <pre><code>void printMessage() {
+    using std::cout;
+    using std::endl;
+    cout &lt;&lt; "Scoped using declaration" &lt;&lt; endl;
+}
+
+// cout and endl are NOT available here without std:: prefix</code></pre>
+
+                <!-- ===== Using Directives ===== -->
+                <h2>Using Directives</h2>
+                <p>A <strong>using directive</strong> makes <em>all</em> names from a namespace available in the current scope without qualification:</p>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+    string name = "CodeVerse";
+    cout &lt;&lt; "Welcome to " &lt;&lt; name &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                <p>While convenient&mdash;especially for small programs or quick prototypes&mdash;using directives come with significant drawbacks in larger projects.</p>
+
+                <!-- ===== Why "using namespace std" Is Discouraged ===== -->
+                <h2>Why <code>using namespace std;</code> Is Discouraged</h2>
+                <p>The <code>std</code> namespace contains <em>thousands</em> of identifiers. Dumping them all into the global scope defeats the very purpose of namespaces and can cause subtle, hard-to-debug conflicts:</p>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+// Your own function named &ldquo;count&rdquo;
+int count(int arr[], int n) {   // ERROR: ambiguous with std::count
+    int total = 0;
+    for (int i = 0; i &lt; n; ++i) total += arr[i];
+    return total;
+}</code></pre>
+                <p>Best practices:</p>
+                <ul>
+                    <li><strong>Never</strong> place <code>using namespace std;</code> in a header file&mdash;it forces the directive on every file that includes the header.</li>
+                    <li>In source (<code>.cpp</code>) files, prefer <strong>using declarations</strong> for the specific names you need.</li>
+                    <li>In small, self-contained programs or competitive programming, a using directive is acceptable for brevity.</li>
+                    <li>If you must use a directive, place it inside a function to limit its reach.</li>
+                </ul>
+
+                <!-- ===== Nested Namespaces ===== -->
+                <h2>Nested Namespaces</h2>
+                <p>Namespaces can be nested to create hierarchical structures:</p>
+                <pre><code>namespace Company {
+    namespace Engine {
+        namespace Physics {
+            void simulate() {
+                // ...
+            }
+        }
+    }
+}</code></pre>
+                <p>Accessing deeply nested names requires chaining <code>::</code>:</p>
+                <pre><code>Company::Engine::Physics::simulate();</code></pre>
+
+                <h3>C++17 Simplified Nested Namespace Syntax</h3>
+                <p>C++17 introduced a compact syntax that lets you define nested namespaces in a single line:</p>
+                <pre><code>// C++17 and later
+namespace Company::Engine::Physics {
+    void simulate() {
+        // ...
+    }
+}</code></pre>
+                <p>This is exactly equivalent to the nested form above but is much cleaner and easier to read. The compiler will create each namespace in the chain if it does not already exist.</p>
+
+                <!-- ===== Anonymous / Unnamed Namespaces ===== -->
+                <h2>Anonymous (Unnamed) Namespaces</h2>
+                <p>An <strong>unnamed namespace</strong> is a namespace defined without a name. Its members have <strong>internal linkage</strong>, meaning they are only visible within the translation unit (source file) where they are defined:</p>
+                <pre><code>// helpers.cpp
+namespace {
+    int helperCounter = 0;
+
+    void incrementCounter() {
+        ++helperCounter;
+    }
+}
+
+// helperCounter and incrementCounter() are NOT accessible
+// from any other .cpp file</code></pre>
+                <p>Unnamed namespaces are the modern C++ replacement for the <code>static</code> keyword at file scope. They are preferred because they work with types (classes, structs, enums) as well as functions and variables, whereas <code>static</code> at file scope only applies to functions and variables.</p>
+                <pre><code>// Old C-style approach (still valid but discouraged)
+static int helperCounter = 0;
+static void incrementCounter() { ++helperCounter; }
+
+// Modern C++ approach (preferred)
+namespace {
+    int helperCounter = 0;
+    void incrementCounter() { ++helperCounter; }
+}</code></pre>
+
+                <!-- ===== Namespace Aliases ===== -->
+                <h2>Namespace Aliases</h2>
+                <p>When a namespace name (or a nested chain) is long, you can create a shorter <strong>alias</strong>:</p>
+                <pre><code>namespace CEP = Company::Engine::Physics;
+
+CEP::simulate();  // much shorter!</code></pre>
+                <p>Aliases are especially useful when working with deeply nested namespaces or third-party libraries with verbose names:</p>
+                <pre><code>namespace fs = std::filesystem;   // C++17
+
+for (const auto&amp; entry : fs::directory_iterator(".")) {
+    std::cout &lt;&lt; entry.path() &lt;&lt; std::endl;
+}</code></pre>
+                <p>You can define aliases at any scope&mdash;global, namespace, or function scope.</p>
+
+                <!-- ===== Extending Namespaces ===== -->
+                <h2>Extending Namespaces</h2>
+                <p>Namespaces are <strong>open</strong>&mdash;you can add new members to an existing namespace at any time by simply reopening it:</p>
+                <pre><code>// file: math_basics.h
+namespace Math {
+    double square(double x) { return x * x; }
+}
+
+// file: math_trig.h
+namespace Math {
+    double sinDeg(double deg) {
+        return std::sin(deg * 3.14159265 / 180.0);
+    }
+}
+
+// Both square() and sinDeg() are now in Math</code></pre>
+                <p>This is how the C++ Standard Library itself is organised&mdash;the <code>std</code> namespace is defined across dozens of header files (<code>&lt;iostream&gt;</code>, <code>&lt;vector&gt;</code>, <code>&lt;string&gt;</code>, etc.), each adding its own declarations to the same namespace.</p>
+                <p><strong>Important:</strong> While you can extend your own namespaces freely, adding declarations to the <code>std</code> namespace is <em>undefined behaviour</em> (with very few exceptions such as template specialisations).</p>
+
+                <!-- ===== Inline Namespaces ===== -->
+                <h2>Inline Namespaces (C++11)</h2>
+                <p>An <strong>inline namespace</strong> is a namespace whose members are automatically visible in the enclosing namespace, as if they were declared there directly:</p>
+                <pre><code>namespace MyLib {
+    inline namespace v2 {
+        void doSomething() {
+            std::cout &lt;&lt; "v2 implementation" &lt;&lt; std::endl;
+        }
+    }
+
+    namespace v1 {
+        void doSomething() {
+            std::cout &lt;&lt; "v1 implementation" &lt;&lt; std::endl;
+        }
+    }
+}
+
+int main() {
+    MyLib::doSomething();       // calls v2 (the inline version)
+    MyLib::v1::doSomething();   // explicitly calls v1
+    MyLib::v2::doSomething();   // explicitly calls v2
+}</code></pre>
+                <p>Inline namespaces are primarily used for <strong>API versioning</strong>. A library author can introduce a new version as the default (inline) while keeping older versions accessible via explicit qualification. Users who do not specify a version automatically get the latest.</p>
+                <p>C++17 allows combining <code>inline</code> with the simplified nested syntax:</p>
+                <pre><code>// The innermost namespace (v2) is inline
+namespace MyLib::inline v2 {
+    void doSomething() { /* ... */ }
+}</code></pre>
+
+                <!-- ===== The std Namespace ===== -->
+                <h2>The <code>std</code> Namespace</h2>
+                <p>The entire C++ Standard Library is enclosed in the <code>std</code> namespace. Every class, function, object, and type alias you use from the standard library&mdash;<code>cout</code>, <code>vector</code>, <code>string</code>, <code>sort</code>, <code>unique_ptr</code>&mdash;lives here.</p>
+                <pre><code>std::cout              // console output stream
+std::vector&lt;int&gt;       // dynamic array
+std::string            // string class
+std::sort(...)         // sorting algorithm
+std::unique_ptr&lt;T&gt;     // smart pointer
+std::filesystem::path  // file path (C++17)</code></pre>
+                <p>The <code>std</code> namespace is subdivided with nested namespaces for newer features:</p>
+                <ul>
+                    <li><code>std::chrono</code> &mdash; time utilities.</li>
+                    <li><code>std::filesystem</code> &mdash; file system operations (C++17).</li>
+                    <li><code>std::ranges</code> &mdash; range-based algorithms (C++20).</li>
+                    <li><code>std::literals</code> &mdash; user-defined literal operators.</li>
+                    <li><code>std::this_thread</code> &mdash; current-thread utilities.</li>
+                    <li><code>std::placeholders</code> &mdash; bind placeholders.</li>
+                </ul>
+
+                <!-- ===== Organizing Code with Namespaces ===== -->
+                <h2>Organising Code with Namespaces</h2>
+                <p>In real-world projects, namespaces work hand-in-hand with header and source files to create clean, modular code.</p>
+
+                <h3>Header File (<code>math_utils.h</code>)</h3>
+                <pre><code>#ifndef MATH_UTILS_H
+#define MATH_UTILS_H
+
+namespace MyProject::Math {
+    double add(double a, double b);
+    double multiply(double a, double b);
+    double power(double base, int exp);
+}
+
+#endif</code></pre>
+
+                <h3>Source File (<code>math_utils.cpp</code>)</h3>
+                <pre><code>#include "math_utils.h"
+#include &lt;cmath&gt;
+
+namespace MyProject::Math {
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    double multiply(double a, double b) {
+        return a * b;
+    }
+
+    double power(double base, int exp) {
+        return std::pow(base, exp);
+    }
+}</code></pre>
+
+                <h3>Using the Namespace</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include "math_utils.h"
+
+namespace pm = MyProject::Math;   // alias for convenience
+
+int main() {
+    std::cout &lt;&lt; pm::add(2.5, 3.5) &lt;&lt; std::endl;       // 6
+    std::cout &lt;&lt; pm::multiply(4.0, 2.0) &lt;&lt; std::endl;   // 8
+    std::cout &lt;&lt; pm::power(2.0, 10) &lt;&lt; std::endl;       // 1024
+    return 0;
+}</code></pre>
+
+                <p>Guidelines for organising with namespaces:</p>
+                <ul>
+                    <li>Use a <strong>top-level namespace</strong> matching your project or company name.</li>
+                    <li>Add <strong>sub-namespaces</strong> for major modules (e.g., <code>MyProject::Math</code>, <code>MyProject::IO</code>).</li>
+                    <li>Keep <strong>implementation details</strong> in unnamed namespaces within your <code>.cpp</code> files.</li>
+                    <li>Provide namespace aliases in consuming code for readability.</li>
+                    <li><strong>Never</strong> put <code>using namespace</code> directives in headers.</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>A <strong>namespace</strong> is a named scope that groups related identifiers and prevents naming conflicts.</li>
+                    <li>Use the <strong>scope resolution operator</strong> (<code>::</code>) to access namespace members: <code>Namespace::member</code>.</li>
+                    <li><strong>Using declarations</strong> (<code>using std::cout;</code>) import a single name&mdash;prefer these for clarity.</li>
+                    <li><strong>Using directives</strong> (<code>using namespace std;</code>) import all names&mdash;avoid in headers and large projects.</li>
+                    <li><strong>Nested namespaces</strong> create hierarchies; C++17 offers the compact <code>A::B::C</code> syntax.</li>
+                    <li><strong>Unnamed namespaces</strong> give internal linkage, replacing file-scope <code>static</code>.</li>
+                    <li><strong>Namespace aliases</strong> (<code>namespace fs = std::filesystem;</code>) shorten long names.</li>
+                    <li>Namespaces are <strong>open</strong>&mdash;you can extend them across multiple files.</li>
+                    <li><strong>Inline namespaces</strong> (C++11) enable seamless API versioning.</li>
+                    <li>The entire Standard Library lives in the <code>std</code> namespace, subdivided into nested namespaces for newer features.</li>
+                    <li>Organise real projects with a top-level namespace, sub-namespaces for modules, unnamed namespaces for implementation details, and aliases for convenience.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/ts1Eek5w7SA" title="C++ Namespaces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is the primary purpose of namespaces in C++?","o":["To speed up compilation","To prevent naming conflicts and organise code","To allocate memory","To enable polymorphism"],"a":1},
+                {"q":"Which keyword is used to define a namespace?","o":["<code>scope</code>","<code>module</code>","<code>namespace</code>","<code>package</code>"],"a":2},
+                {"q":"Which operator is used to access a member of a namespace?","o":["<code>.</code> (dot)","<code>-&gt;</code> (arrow)","<code>::</code> (scope resolution)","<code>:</code> (colon)"],"a":2},
+                {"q":"What does <code>std::cout</code> mean?","o":["<code>cout</code> is a global variable","<code>cout</code> is a member of the <code>std</code> namespace","<code>cout</code> is a macro","<code>std</code> is a class and <code>cout</code> is a method"],"a":1},
+                {"q":"What is a <strong>using declaration</strong>?","o":["A statement that imports all names from a namespace","A statement that imports a single name from a namespace","A statement that defines a new namespace","A statement that deletes a namespace"],"a":1},
+                {"q":"Which of these is a using declaration?","o":["<code>using namespace std;</code>","<code>using std::cout;</code>","<code>namespace std = cout;</code>","<code>import std.cout;</code>"],"a":1},
+                {"q":"What is a <strong>using directive</strong>?","o":["A statement that imports a single name","A statement that imports all names from a namespace","A statement that creates an alias","A preprocessor command"],"a":1},
+                {"q":"Which of these is a using directive?","o":["<code>using std::cout;</code>","<code>using namespace std;</code>","<code>namespace std;</code>","<code>#using std</code>"],"a":1},
+                {"q":"Why is <code>using namespace std;</code> discouraged in large projects?","o":["It causes a compile error","It imports thousands of names, risking conflicts","It is deprecated in C++20","It slows down the program at runtime"],"a":1},
+                {"q":"Where should you <strong>never</strong> place <code>using namespace std;</code>?","o":["Inside a function","In a header file","In <code>main()</code>","In a <code>.cpp</code> file"],"a":1},
+                {"q":"What happens if two namespaces contain a function with the same name and you use both with using directives?","o":["The compiler picks the first one","A compile-time ambiguity error occurs","The program crashes at runtime","The second definition replaces the first"],"a":1},
+                {"q":"Can namespaces be nested inside other namespaces?","o":["No, namespaces cannot be nested","Yes, but only one level deep","Yes, to any depth","Only with C++20"],"a":2},
+                {"q":"What does the C++17 simplified nested namespace syntax look like?","o":["<code>namespace A.B.C { }</code>","<code>namespace A::B::C { }</code>","<code>namespace A/B/C { }</code>","<code>namespace A-&gt;B-&gt;C { }</code>"],"a":1},
+                {"q":"Which C++ standard introduced the simplified nested namespace syntax?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What is an <strong>unnamed (anonymous) namespace</strong>?","o":["A namespace with a random compiler-generated name","A namespace without a name, giving internal linkage","A namespace that is automatically deleted","A namespace that cannot contain functions"],"a":1},
+                {"q":"What linkage do members of an unnamed namespace have?","o":["External linkage","Internal linkage","No linkage","Dynamic linkage"],"a":1},
+                {"q":"Unnamed namespaces are the modern replacement for which keyword at file scope?","o":["<code>extern</code>","<code>inline</code>","<code>static</code>","<code>const</code>"],"a":2},
+                {"q":"Why are unnamed namespaces preferred over file-scope <code>static</code>?","o":["They are faster at runtime","They work with types (classes, structs, enums), not just functions and variables","They use less memory","They are required by the standard"],"a":1},
+                {"q":"What is a <strong>namespace alias</strong>?","o":["A way to delete a namespace","A shorter name for an existing namespace","A way to merge two namespaces","A deprecated feature"],"a":1},
+                {"q":"Which syntax creates a namespace alias?","o":["<code>alias fs = std::filesystem;</code>","<code>namespace fs = std::filesystem;</code>","<code>using fs = std::filesystem;</code>","<code>typedef std::filesystem fs;</code>"],"a":1},
+                {"q":"Can you add new members to an existing namespace in a different file?","o":["No, namespaces are sealed after first definition","Yes, namespaces are open and can be extended","Only if the namespace is marked <code>open</code>","Only in header files"],"a":1},
+                {"q":"How is the <code>std</code> namespace defined across the Standard Library?","o":["In a single header file","Across many header files, each adding declarations to <code>std</code>","In a compiled binary","In the compiler itself"],"a":1},
+                {"q":"Is it legal to add your own declarations to the <code>std</code> namespace?","o":["Yes, always","No, it is undefined behaviour (with few exceptions)","Only for functions","Only in C++20"],"a":1},
+                {"q":"What is an <strong>inline namespace</strong>?","o":["A namespace optimised by the compiler","A namespace whose members are automatically visible in the enclosing namespace","A namespace that can only contain inline functions","A namespace defined on a single line"],"a":1},
+                {"q":"Which C++ standard introduced inline namespaces?","o":["C++03","C++11","C++14","C++17"],"a":1},
+                {"q":"What is the primary use case for inline namespaces?","o":["Performance optimisation","API versioning","Memory management","Error handling"],"a":1},
+                {"q":"Given <code>inline namespace v2</code> inside <code>MyLib</code>, what does <code>MyLib::func()</code> call?","o":["The global <code>func()</code>","<code>v2::func()</code>","Nothing, it is an error","The oldest version of <code>func()</code>"],"a":1},
+                {"q":"Can you still explicitly access an inline namespace&rsquo;s members?","o":["No, the namespace name is hidden","Yes, e.g., <code>MyLib::v2::func()</code>","Only with an alias","Only in debug mode"],"a":1},
+                {"q":"Is a semicolon required after a namespace&rsquo;s closing brace?","o":["Yes, always","No, unlike classes and structs","Only for unnamed namespaces","Only for inline namespaces"],"a":1},
+                {"q":"Can a namespace be defined inside a function?","o":["Yes","No, namespaces can only be at global or namespace scope","Only anonymous namespaces","Only in C++20"],"a":1},
+                {"q":"Can a namespace be defined inside a class?","o":["Yes","No, namespaces cannot be inside classes","Only static namespaces","Only inline namespaces"],"a":1},
+                {"q":"What does <code>namespace { int x = 5; }</code> do?","o":["Creates a global variable <code>x</code>","Creates <code>x</code> with internal linkage in the current translation unit","Creates <code>x</code> in the <code>std</code> namespace","Causes a compile error"],"a":1},
+                {"q":"Which of these is a valid nested namespace definition in C++17?","o":["<code>namespace A { namespace B { } }</code>","<code>namespace A::B { }</code>","Both A and B","Neither"],"a":2},
+                {"q":"What scope does a using declaration have when placed inside a function?","o":["Global scope","File scope","Function (local) scope","Namespace scope"],"a":2},
+                {"q":"What happens if you place <code>using std::cout;</code> inside a function?","o":["<code>cout</code> is available globally","<code>cout</code> is available without <code>std::</code> only inside that function","A compile error occurs","<code>cout</code> is removed from <code>std</code>"],"a":1},
+                {"q":"Which is safer in header files: using declarations or using directives?","o":["Using directives","Using declarations","Both are equally safe","Neither should be used in headers"],"a":3},
+                {"q":"How do you define a function outside its namespace?","o":["<code>void MyNS::func() { }</code>","<code>void func() : MyNS { }</code>","<code>MyNS.func() { }</code>","You cannot define functions outside their namespace"],"a":0},
+                {"q":"What is the <strong>global namespace</strong>?","o":["The <code>std</code> namespace","The unnamed default namespace at the top level of a program","A namespace called <code>global</code>","A special namespace for constants"],"a":1},
+                {"q":"How do you explicitly refer to something in the global namespace?","o":["<code>global::name</code>","<code>::name</code> (leading <code>::</code>)","<code>__global::name</code>","<code>root::name</code>"],"a":1},
+                {"q":"What does <code>::sqrt(4.0)</code> refer to?","o":["<code>std::sqrt</code>","<code>sqrt</code> in the global namespace (e.g., from <code>&lt;cmath&gt;</code> C linkage)","A compile error","The most recently defined <code>sqrt</code>"],"a":1},
+                {"q":"Which of these sub-namespaces belongs to the C++ Standard Library?","o":["<code>std::chrono</code>","<code>std::graphics</code>","<code>std::gui</code>","<code>std::database</code>"],"a":0},
+                {"q":"What does <code>std::filesystem</code> provide?","o":["Network socket operations","File system operations like paths and directories","Database access","Thread management"],"a":1},
+                {"q":"Which C++ standard introduced <code>std::filesystem</code>?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"What advantage does <code>namespace fs = std::filesystem;</code> offer?","o":["It renames the namespace permanently","It provides a shorter alias for convenience","It deletes the original namespace","It merges two namespaces"],"a":1},
+                {"q":"Can multiple namespace aliases point to the same namespace?","o":["No, only one alias is allowed","Yes, you can create as many aliases as needed","Only two aliases maximum","Only with inline namespaces"],"a":1},
+                {"q":"What is the output when both <code>v1</code> and <code>inline v2</code> define <code>greet()</code> in <code>MyLib</code> and you call <code>MyLib::greet()</code>?","o":["<code>v1</code>&rsquo;s version","<code>v2</code>&rsquo;s version (the inline one)","Ambiguity error","Undefined behaviour"],"a":1},
+                {"q":"In C++17, how do you make the innermost namespace inline in a nested definition?","o":["<code>inline namespace A::B { }</code>","<code>namespace A::inline B { }</code>","<code>namespace inline A::B { }</code>","It is not possible"],"a":1},
+                {"q":"What is the recommended way to include only <code>cout</code> and <code>endl</code> from <code>std</code>?","o":["<code>using namespace std;</code>","<code>using std::cout; using std::endl;</code>","<code>#include &lt;cout&gt;</code>","<code>import std.cout;</code>"],"a":1},
+                {"q":"Which of the following correctly declares a namespace alias?","o":["<code>namespace short = Very::Long::Namespace::Name;</code>","<code>using short = Very::Long::Namespace::Name;</code>","<code>alias short Very::Long::Namespace::Name;</code>","<code>typedef Very::Long::Namespace::Name short;</code>"],"a":0},
+                {"q":"Which mechanism provides the strongest encapsulation for file-local helpers?","o":["<code>private</code> access specifier","Unnamed namespace","<code>protected</code> access specifier","<code>friend</code> declaration"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="file-io.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">File I/O</span>
+                </a>
+                <a href="smart-pointers.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Smart Pointers</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Access Specifiers - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-access-specifiers">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html" class="active"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 32 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="58" style="width:58%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Access Specifiers
+                </div>
+                <h1>32. Access Specifiers</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 32 of 55</span>
+                    <span>&#9201; 14 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Access Specifiers? ===== -->
+                <h2>What Are Access Specifiers?</h2>
+                <p><strong>Access specifiers</strong> (also called <em>access modifiers</em>) are keywords in C++ that control <strong>who</strong> can access the members (variables and functions) of a class. They are a cornerstone of <strong>encapsulation</strong> &mdash; one of the four pillars of object-oriented programming.</p>
+                <p>C++ provides three access specifiers:</p>
+                <ul>
+                    <li><code>public</code> &mdash; members are accessible from <strong>anywhere</strong> the object is visible.</li>
+                    <li><code>private</code> &mdash; members are accessible <strong>only</strong> within the class itself.</li>
+                    <li><code>protected</code> &mdash; members are accessible within the class and by <strong>derived (child) classes</strong>.</li>
+                </ul>
+                <p>Access specifiers appear inside a class definition followed by a colon. Every member declared after a specifier has that access level until the next specifier or the end of the class.</p>
+                <div class="code-block">
+<pre><code>class MyClass {
+public:       // accessible from anywhere
+    int x;
+
+private:      // accessible only inside this class
+    int y;
+
+protected:    // accessible in this class and derived classes
+    int z;
+};</code></pre>
+                </div>
+
+                <!-- ===== public Members ===== -->
+                <h2>public Members</h2>
+                <p>Members declared under <code>public</code> can be accessed from <strong>any</strong> part of the program &mdash; inside the class, from derived classes, or from completely unrelated code using an object of the class.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Animal {
+public:
+    string name;
+    int age;
+
+    void speak() {
+        cout &lt;&lt; name &lt;&lt; " says hello!" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Animal cat;
+    cat.name = "Whiskers";   // OK &ndash; public member
+    cat.age  = 3;            // OK &ndash; public member
+    cat.speak();             // OK &ndash; public member function
+    return 0;
+}</code></pre>
+                </div>
+                <p>Public members form the <strong>interface</strong> of a class &mdash; the set of operations that outside code is allowed to use. Keep the public interface small and well-defined.</p>
+
+                <!-- ===== private Members ===== -->
+                <h2>private Members</h2>
+                <p>Members declared under <code>private</code> are <strong>hidden</strong> from everything outside the class. Only member functions (and friends) of the same class can access them.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Secret {
+private:
+    int code;
+
+public:
+    void setCode(int c) {
+        if (c &gt; 0)
+            code = c;       // OK &ndash; accessing private member inside the class
+    }
+
+    int getCode() {
+        return code;        // OK
+    }
+};
+
+int main() {
+    Secret s;
+    // s.code = 42;         // ERROR: 'code' is private
+    s.setCode(42);          // OK &ndash; using public setter
+    cout &lt;&lt; s.getCode() &lt;&lt; endl;  // 42
+    return 0;
+}</code></pre>
+                </div>
+                <p>Private access is the <strong>default</strong> for members of a <code>class</code>. If you do not specify any access specifier, members are private. This is one way <code>class</code> differs from <code>struct</code>.</p>
+
+                <!-- ===== protected Members ===== -->
+                <h2>protected Members</h2>
+                <p><code>protected</code> members sit between <code>public</code> and <code>private</code>. They <strong>cannot</strong> be accessed from outside the class hierarchy, but <strong>can</strong> be accessed by derived classes.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Vehicle {
+protected:
+    int speed;
+
+public:
+    Vehicle() : speed(0) {}
+};
+
+class Car : public Vehicle {
+public:
+    void accelerate(int amount) {
+        speed += amount;     // OK &ndash; protected member accessible in derived class
+    }
+    void showSpeed() {
+        cout &lt;&lt; "Speed: " &lt;&lt; speed &lt;&lt; " km/h" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Car c;
+    // c.speed = 100;       // ERROR: 'speed' is protected
+    c.accelerate(60);       // OK &ndash; public method
+    c.showSpeed();           // Speed: 60 km/h
+    return 0;
+}</code></pre>
+                </div>
+                <p>Use <code>protected</code> when you want derived classes to have direct access to a member, but you still want to hide it from the rest of the program.</p>
+
+                <!-- ===== Access Specifier Comparison Table ===== -->
+                <h2>Access Specifier Comparison Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Access Level</th>
+                            <th>Same Class</th>
+                            <th>Derived Class</th>
+                            <th>Outside Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>public</code></td>
+                            <td>&#10004; Yes</td>
+                            <td>&#10004; Yes</td>
+                            <td>&#10004; Yes</td>
+                        </tr>
+                        <tr>
+                            <td><code>protected</code></td>
+                            <td>&#10004; Yes</td>
+                            <td>&#10004; Yes</td>
+                            <td>&#10008; No</td>
+                        </tr>
+                        <tr>
+                            <td><code>private</code></td>
+                            <td>&#10004; Yes</td>
+                            <td>&#10008; No</td>
+                            <td>&#10008; No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Getters and Setters ===== -->
+                <h2>Getters and Setters</h2>
+                <p>Because private data members cannot be accessed directly from outside the class, we use <strong>getter</strong> (accessor) and <strong>setter</strong> (mutator) functions to provide controlled access. This pattern lets you add <strong>validation</strong> or <strong>side effects</strong> when reading or writing data.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int grade;   // 0&ndash;100
+
+public:
+    // Getter (accessor)
+    string getName() const {
+        return name;
+    }
+
+    // Setter (mutator) with validation
+    void setName(const string&amp; n) {
+        if (!n.empty())
+            name = n;
+    }
+
+    // Getter
+    int getGrade() const {
+        return grade;
+    }
+
+    // Setter with validation
+    void setGrade(int g) {
+        if (g &gt;= 0 &amp;&amp; g &lt;= 100)
+            grade = g;
+        else
+            cout &lt;&lt; "Invalid grade!" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.setName("Alice");
+    s.setGrade(95);
+    cout &lt;&lt; s.getName() &lt;&lt; ": " &lt;&lt; s.getGrade() &lt;&lt; endl;  // Alice: 95
+
+    s.setGrade(150);       // Invalid grade!
+    cout &lt;&lt; s.getGrade() &lt;&lt; endl;    // still 95
+    return 0;
+}</code></pre>
+                </div>
+                <p><strong>Why use getters/setters instead of public members?</strong></p>
+                <ul>
+                    <li>You can <strong>validate</strong> input before storing it.</li>
+                    <li>You can make a member <strong>read-only</strong> (provide a getter but no setter).</li>
+                    <li>You can change the internal representation without breaking outside code.</li>
+                    <li>You can add logging, triggers, or computed values.</li>
+                </ul>
+
+                <!-- ===== Default Access: class vs struct ===== -->
+                <h2>Default Access: class vs struct</h2>
+                <p>In C++, <code>class</code> and <code>struct</code> are almost identical. The <strong>only</strong> difference is the <em>default access level</em>:</p>
+                <ul>
+                    <li><code>class</code> &rarr; members are <strong>private</strong> by default.</li>
+                    <li><code>struct</code> &rarr; members are <strong>public</strong> by default.</li>
+                </ul>
+                <div class="code-block">
+<pre><code>class ClassExample {
+    int a;       // private by default
+};
+
+struct StructExample {
+    int a;       // public by default
+};
+
+int main() {
+    ClassExample c;
+    // c.a = 10;    // ERROR: 'a' is private
+
+    StructExample s;
+    s.a = 10;       // OK: 'a' is public
+    return 0;
+}</code></pre>
+                </div>
+                <p>The same applies to <strong>inheritance</strong>: inheriting from a <code>class</code> is <code>private</code> by default, while inheriting from a <code>struct</code> is <code>public</code> by default.</p>
+                <div class="code-block">
+<pre><code>class Base { public: int x; };
+
+class  DerivedA : Base {};          // private inheritance (default for class)
+struct DerivedB : Base {};          // public inheritance  (default for struct)</code></pre>
+                </div>
+
+                <!-- ===== The friend Keyword ===== -->
+                <h2>The friend Keyword</h2>
+                <p>Sometimes you need an external function or another class to access the private or protected members of a class. The <code>friend</code> keyword grants this access.</p>
+
+                <h3>Friend Functions</h3>
+                <p>A <strong>friend function</strong> is declared inside a class with the <code>friend</code> keyword. It is <em>not</em> a member of the class, but it can access all private and protected members.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Box {
+private:
+    double width;
+
+public:
+    Box(double w) : width(w) {}
+
+    // Declare a non-member function as a friend
+    friend void printWidth(const Box&amp; b);
+};
+
+// Definition of the friend function (not a member)
+void printWidth(const Box&amp; b) {
+    cout &lt;&lt; "Width: " &lt;&lt; b.width &lt;&lt; endl;  // can access private member
+}
+
+int main() {
+    Box box(15.5);
+    printWidth(box);   // Width: 15.5
+    return 0;
+}</code></pre>
+                </div>
+
+                <h3>Friend Classes</h3>
+                <p>When an entire class is declared as a <code>friend</code>, <strong>all</strong> of its member functions can access the private and protected members of the granting class.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Engine {
+private:
+    int horsepower;
+
+public:
+    Engine(int hp) : horsepower(hp) {}
+
+    // Grant Mechanic class full access
+    friend class Mechanic;
+};
+
+class Mechanic {
+public:
+    void inspect(const Engine&amp; e) {
+        // Can access private member because Mechanic is a friend
+        cout &lt;&lt; "Engine HP: " &lt;&lt; e.horsepower &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Engine v8(450);
+    Mechanic mike;
+    mike.inspect(v8);   // Engine HP: 450
+    return 0;
+}</code></pre>
+                </div>
+                <p><strong>Important points about <code>friend</code>:</strong></p>
+                <ul>
+                    <li>Friendship is <strong>not mutual</strong> &mdash; if <code>A</code> declares <code>B</code> as a friend, <code>B</code> can access <code>A</code>&rsquo;s private members, but <code>A</code> cannot access <code>B</code>&rsquo;s.</li>
+                    <li>Friendship is <strong>not inherited</strong> &mdash; a derived class of a friend does not automatically become a friend.</li>
+                    <li>Friendship is <strong>not transitive</strong> &mdash; a friend of a friend is not automatically a friend.</li>
+                    <li>Use <code>friend</code> sparingly &mdash; it breaks encapsulation by design, so only use it when there is a clear benefit.</li>
+                </ul>
+
+                <!-- ===== Best Practices for Access Control ===== -->
+                <h2>Best Practices for Access Control</h2>
+                <ul>
+                    <li><strong>Make data members <code>private</code></strong> by default. Expose them only through public getter/setter methods when necessary.</li>
+                    <li><strong>Keep the public interface minimal.</strong> Only make functions public if outside code genuinely needs to call them.</li>
+                    <li><strong>Use <code>protected</code> thoughtfully.</strong> Prefer <code>private</code> plus public/protected accessors over raw <code>protected</code> data.</li>
+                    <li><strong>Prefer <code>class</code> over <code>struct</code></strong> for types that have invariants or non-trivial behaviour. Use <code>struct</code> for simple data aggregates.</li>
+                    <li><strong>Use <code>const</code> on getters</strong> to indicate they do not modify the object.</li>
+                    <li><strong>Validate in setters.</strong> This is the whole point of controlled access &mdash; enforce your class invariants.</li>
+                    <li><strong>Limit <code>friend</code> usage.</strong> Every friend declaration is a window through encapsulation. Document why it is needed.</li>
+                    <li><strong>Think about the maintenance cost.</strong> Once a member is public, changing it can break every consumer of your class.</li>
+                </ul>
+
+                <!-- ===== Complete Example: BankAccount Class ===== -->
+                <h2>Complete Example: BankAccount Class</h2>
+                <p>The following example brings together all the concepts &mdash; <code>private</code> data, <code>public</code> interface, getters/setters with validation, a <code>friend</code> function, and a <code>protected</code> member for inheritance.</p>
+                <div class="code-block">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class BankAccount {
+private:
+    string owner;
+    double balance;
+
+protected:
+    string accountType;      // accessible to derived classes
+
+public:
+    // Constructor
+    BankAccount(const string&amp; name, double initial, const string&amp; type)
+        : owner(name), balance(initial), accountType(type) {}
+
+    // Getter &ndash; owner
+    string getOwner() const { return owner; }
+
+    // Getter &ndash; balance
+    double getBalance() const { return balance; }
+
+    // Getter &ndash; account type
+    string getType() const { return accountType; }
+
+    // Deposit with validation
+    void deposit(double amount) {
+        if (amount &gt; 0) {
+            balance += amount;
+            cout &lt;&lt; "Deposited $" &lt;&lt; amount &lt;&lt; endl;
+        } else {
+            cout &lt;&lt; "Invalid deposit amount!" &lt;&lt; endl;
+        }
+    }
+
+    // Withdraw with validation
+    bool withdraw(double amount) {
+        if (amount &gt; 0 &amp;&amp; amount &lt;= balance) {
+            balance -= amount;
+            cout &lt;&lt; "Withdrew $" &lt;&lt; amount &lt;&lt; endl;
+            return true;
+        }
+        cout &lt;&lt; "Insufficient funds or invalid amount!" &lt;&lt; endl;
+        return false;
+    }
+
+    // Friend function &ndash; can access private members
+    friend void auditAccount(const BankAccount&amp; acc);
+};
+
+// Friend function definition
+void auditAccount(const BankAccount&amp; acc) {
+    cout &lt;&lt; "=== Audit ===" &lt;&lt; endl;
+    cout &lt;&lt; "Owner:   " &lt;&lt; acc.owner   &lt;&lt; endl;
+    cout &lt;&lt; "Balance: $" &lt;&lt; acc.balance &lt;&lt; endl;
+    cout &lt;&lt; "Type:    " &lt;&lt; acc.accountType &lt;&lt; endl;
+}
+
+// Derived class uses protected member
+class SavingsAccount : public BankAccount {
+private:
+    double interestRate;
+
+public:
+    SavingsAccount(const string&amp; name, double initial, double rate)
+        : BankAccount(name, initial, "Savings"), interestRate(rate) {}
+
+    void applyInterest() {
+        double interest = getBalance() * interestRate;
+        deposit(interest);
+        // accountType is accessible because it is protected
+        cout &lt;&lt; "[" &lt;&lt; accountType &lt;&lt; "] Interest applied: $"
+             &lt;&lt; interest &lt;&lt; endl;
+    }
+};
+
+int main() {
+    SavingsAccount sa("Alice", 1000.0, 0.05);
+
+    sa.deposit(500);          // Deposited $500
+    sa.withdraw(200);         // Withdrew $200
+
+    cout &lt;&lt; "Balance: $" &lt;&lt; sa.getBalance() &lt;&lt; endl;  // $1300
+
+    sa.applyInterest();       // Deposited $65, Interest applied
+
+    auditAccount(sa);         // Friend function accesses private members
+
+    // sa.balance = 999999;   // ERROR: balance is private
+    // sa.owner = "Hacker";   // ERROR: owner is private
+
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>C++ has three access specifiers: <code>public</code>, <code>private</code>, and <code>protected</code>.</li>
+                    <li><code>public</code> members are accessible from <strong>anywhere</strong>; they form the class&rsquo;s external interface.</li>
+                    <li><code>private</code> members are accessible <strong>only</strong> inside the class &mdash; this is the default for <code>class</code>.</li>
+                    <li><code>protected</code> members are like <code>private</code>, but also accessible in <strong>derived classes</strong>.</li>
+                    <li>Use <strong>getters</strong> and <strong>setters</strong> to provide controlled, validated access to private data.</li>
+                    <li>The only difference between <code>class</code> and <code>struct</code> is the <strong>default access level</strong> (<code>private</code> vs <code>public</code>).</li>
+                    <li>The <code>friend</code> keyword lets specific functions or classes access private/protected members &mdash; use it sparingly.</li>
+                    <li>Friendship is <strong>not mutual</strong>, <strong>not inherited</strong>, and <strong>not transitive</strong>.</li>
+                    <li>Always default to <code>private</code> data and the smallest public interface possible.</li>
+                    <li>Good access control makes code easier to maintain, debug, and extend.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/3dHBFBw13E0" title="C++ Access Specifiers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"How many access specifiers does C++ provide?","o":["One","Two","Three","Four"],"a":2},
+                {"q":"Which access specifier makes members accessible from anywhere?","o":["private","protected","friend","public"],"a":3},
+                {"q":"Which access specifier restricts access to only the class itself?","o":["public","private","protected","static"],"a":1},
+                {"q":"What is the default access level for members of a <code>class</code>?","o":["public","protected","private","friend"],"a":2},
+                {"q":"What is the default access level for members of a <code>struct</code>?","o":["private","protected","public","static"],"a":2},
+                {"q":"Which specifier allows access in derived classes but not from outside the hierarchy?","o":["public","private","protected","friend"],"a":2},
+                {"q":"What syntax is used to declare a public section?","o":["public { }","public:","public;","@public"],"a":1},
+                {"q":"Can a class have multiple <code>public:</code> sections?","o":["No &ndash; only one is allowed","Yes &ndash; you can have as many as you want","Only if no private section exists","Only in structs"],"a":1},
+                {"q":"What is a getter function?","o":["A function that deletes a member","A public function that returns the value of a private member","A constructor variant","A static factory method"],"a":1},
+                {"q":"What is a setter function?","o":["A function that returns a value","A public function that sets the value of a private member","A destructor variant","A friend function"],"a":1},
+                {"q":"Why should getters be marked <code>const</code>?","o":["To make them faster","To indicate they do not modify the object","To prevent overriding","Because the compiler requires it"],"a":1},
+                {"q":"What advantage do setters provide over public data members?","o":["They are faster","They allow input validation","They allocate memory","They support templates"],"a":1},
+                {"q":"Given:<br><code>class A { int x; };</code><br>What is the access level of <code>x</code>?","o":["public","protected","private","unspecified"],"a":2},
+                {"q":"Given:<br><code>struct B { int x; };</code><br>What is the access level of <code>x</code>?","o":["private","protected","public","unspecified"],"a":2},
+                {"q":"Which keyword grants a non-member function access to private members?","o":["access","grant","friend","permit"],"a":2},
+                {"q":"Is friendship mutual in C++?","o":["Yes &ndash; always","No &ndash; if A friends B, B cannot access A unless declared","Only for classes","Only for functions"],"a":1},
+                {"q":"Is friendship inherited by derived classes?","o":["Yes","No","Only with public inheritance","Only if re-declared"],"a":1},
+                {"q":"Is friendship transitive?","o":["Yes","No","Only in the same namespace","Only for friend classes"],"a":1},
+                {"q":"What does <code>friend class X;</code> inside class <code>Y</code> do?","o":["Makes Y a friend of X","Makes X a friend of Y, granting X access to Y&rsquo;s private members","Creates a nested class","Inherits from X"],"a":1},
+                {"q":"Where is a friend function <strong>declared</strong>?","o":["Outside the class only","Inside the class with the friend keyword","In the constructor","In main()"],"a":1},
+                {"q":"Is a friend function a member of the class that declares it?","o":["Yes","No &ndash; it is a non-member","Only if defined inside the class","Only if it is static"],"a":1},
+                {"q":"Which code correctly accesses a public member?","o":["obj-&gt;member (for a pointer)","obj::member","obj.member (for an object)","Both A and C"],"a":3},
+                {"q":"What error occurs when accessing a private member from <code>main()</code>?","o":["Runtime error","Compile-time error","Warning only","Undefined behaviour"],"a":1},
+                {"q":"Can a derived class access <code>private</code> members of its base class?","o":["Yes &ndash; always","No &ndash; never directly","Only with protected inheritance","Only with friend declaration"],"a":1},
+                {"q":"Can a derived class access <code>protected</code> members of its base class?","o":["No","Yes","Only through getters","Only if the member is also static"],"a":1},
+                {"q":"What is the default inheritance mode for <code>class Derived : Base {};</code>?","o":["public","protected","private","virtual"],"a":2},
+                {"q":"What is the default inheritance mode for <code>struct Derived : Base {};</code>?","o":["private","protected","public","virtual"],"a":2},
+                {"q":"With <code>private</code> inheritance, public members of the base become what in the derived class?","o":["public","protected","private","deleted"],"a":2},
+                {"q":"With <code>protected</code> inheritance, public members of the base become what in the derived class?","o":["public","protected","private","deleted"],"a":1},
+                {"q":"With <code>public</code> inheritance, public members of the base remain:","o":["private","protected","public","friend"],"a":2},
+                {"q":"Where should you declare the <code>friend</code> keyword &mdash; in the granting or receiving class?","o":["In the receiving class","In the granting class","In both","In neither"],"a":1},
+                {"q":"Why should you limit the use of <code>friend</code>?","o":["It slows down the compiler","It breaks encapsulation","It prevents inheritance","It uses extra memory"],"a":1},
+                {"q":"Which is better practice: public data or private data with getters/setters?","o":["Public data &ndash; it is simpler","Private data with getters/setters &ndash; it provides controlled access","Both are equally good","Neither &ndash; use protected"],"a":1},
+                {"q":"Can a <code>friend</code> function access <code>protected</code> members?","o":["No &ndash; only public","No &ndash; only private","Yes &ndash; both private and protected","Only in derived classes"],"a":2},
+                {"q":"What does it mean to make a member read-only?","o":["Declare it const","Provide a getter but no setter","Make it static","Use the friend keyword"],"a":1},
+                {"q":"Which statement about <code>class</code> vs <code>struct</code> is true in C++?","o":["struct cannot have member functions","class cannot have public members","They differ only in default access level","struct does not support inheritance"],"a":2},
+                {"q":"Can a struct have private members?","o":["No","Yes &ndash; by explicitly using private:","Only if it inherits from a class","Only in C++17"],"a":1},
+                {"q":"Can a class have public members?","o":["No","Yes &ndash; by explicitly using public:","Only if it inherits from a struct","Only static members"],"a":1},
+                {"q":"Which access specifier should data members use by default?","o":["public","protected","private","friend"],"a":2},
+                {"q":"What does the following output?<br><code>class C { int x = 5; public: int getX() { return x; } }; int main() { C c; cout &lt;&lt; c.getX(); }</code>","o":["0","5","Compile error","Undefined"],"a":1},
+                {"q":"Can you change the access level of a base class member in a derived class?","o":["No &ndash; never","Yes &ndash; with a using declaration in a different access section","Only friend can do this","Only with templates"],"a":1},
+                {"q":"What does <code>using Base::member;</code> in a derived class&rsquo;s public section do?","o":["Creates an alias","Brings the base member into the derived class&rsquo;s public interface","Deletes the member","Makes it private"],"a":1},
+                {"q":"In which scenario would you use <code>protected</code> over <code>private</code>?","o":["When outside code needs access","When derived classes need direct access to the member","When you want to hide data from everyone","When you want friend access"],"a":1},
+                {"q":"What does <code>friend void f();</code> inside a class declaration do?","o":["Defines a member function f","Declares the non-member function f as a friend","Makes f a virtual function","Deletes the function f"],"a":1},
+                {"q":"Can two classes be mutual friends?","o":["No","Yes &ndash; each class declares the other as a friend","Only if one inherits from the other","Only if they are in the same namespace"],"a":1},
+                {"q":"How does <code>friend</code> affect encapsulation?","o":["It strengthens encapsulation","It has no effect","It weakens encapsulation by granting external access","It makes all members public"],"a":2},
+                {"q":"What is the access of members between two <code>public:</code> labels?","o":["private","protected","public","depends on order"],"a":2},
+                {"q":"Which of these is NOT an access specifier in C++?","o":["public","private","protected","internal"],"a":3},
+                {"q":"In the BankAccount example, why is <code>balance</code> private?","o":["To allow anyone to modify it","To prevent uncontrolled modification and enforce validation","Because private is faster","Because protected would cause errors"],"a":1},
+                {"q":"What is the best practice for the public interface of a class?","o":["Make everything public for convenience","Keep it as small and well-defined as possible","Avoid public methods entirely","Only use friend functions"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="constructors.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Constructors &amp; Destructors</span>
+                </a>
+                <a href="encapsulation.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Encapsulation</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

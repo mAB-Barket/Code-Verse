@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Iterators - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-iterators">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html" class="active"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 43 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="78" style="width:78%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Iterators
+                </div>
+                <h1>43. Iterators</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 43 of 55</span>
+                    <span>&#9201; 16 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Iterators? ===== -->
+                <h2>What Are Iterators?</h2>
+                <p>An <strong>iterator</strong> is a <em>generalized pointer</em>&mdash;an object that lets you traverse the elements of a container without exposing the container&rsquo;s internal structure. Just as a pointer can step through a raw array, an iterator can step through a <code>std::vector</code>, a <code>std::list</code>, a <code>std::map</code>, or any other Standard Library container.</p>
+                <p>Iterators are the glue between <strong>containers</strong> and <strong>algorithms</strong> in the STL. An algorithm such as <code>std::sort</code> never needs to know <em>which</em> container it operates on&mdash;it only needs a pair of iterators that define a range <code>[first, last)</code>.</p>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; nums = {10, 20, 30, 40, 50};
+
+    // Declare an iterator and traverse the vector
+    std::vector&lt;int&gt;::iterator it;
+    for (it = nums.begin(); it != nums.end(); ++it) {
+        std::cout &lt;&lt; *it &lt;&lt; " ";   // dereference the iterator
+    }
+    // Output: 10 20 30 40 50
+
+    return 0;
+}</code></pre></div>
+                <p>The expression <code>*it</code> dereferences the iterator&mdash;exactly like dereferencing a pointer&mdash;to access the element it currently points to. The expression <code>++it</code> advances the iterator to the next element.</p>
+
+                <!-- ===== Iterator Categories ===== -->
+                <h2>Iterator Categories</h2>
+                <p>The C++ standard groups iterators into five categories, ranked from least to most powerful:</p>
+                <table>
+                    <thead>
+                        <tr><th>Category</th><th>Can Read?</th><th>Can Write?</th><th>Direction</th><th>Example Container</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Input</strong></td><td>&#10003;</td><td></td><td>Forward only, single-pass</td><td><code>istream_iterator</code></td></tr>
+                        <tr><td><strong>Output</strong></td><td></td><td>&#10003;</td><td>Forward only, single-pass</td><td><code>ostream_iterator</code></td></tr>
+                        <tr><td><strong>Forward</strong></td><td>&#10003;</td><td>&#10003;</td><td>Forward only, multi-pass</td><td><code>std::forward_list</code></td></tr>
+                        <tr><td><strong>Bidirectional</strong></td><td>&#10003;</td><td>&#10003;</td><td>Forward &amp; backward</td><td><code>std::list</code>, <code>std::set</code>, <code>std::map</code></td></tr>
+                        <tr><td><strong>Random Access</strong></td><td>&#10003;</td><td>&#10003;</td><td>Arbitrary jumps</td><td><code>std::vector</code>, <code>std::deque</code>, raw arrays</td></tr>
+                    </tbody>
+                </table>
+                <p>Every higher category supports all the operations of the categories below it. For example, a <strong>random-access</strong> iterator can do everything a bidirectional iterator can, plus <code>+n</code>, <code>-n</code>, <code>[n]</code>, and comparison operators (<code>&lt;</code>, <code>&gt;</code>, <code>&le;</code>, <code>&ge;</code>).</p>
+
+                <!-- ===== begin() and end() ===== -->
+                <h2>begin() and end()</h2>
+                <p>Every STL container provides <code>begin()</code> and <code>end()</code> member functions. Together they define the <strong>iterator range</strong> <code>[begin, end)</code>&mdash;a half-open interval where <code>begin()</code> points to the first element and <code>end()</code> points to <em>one past the last</em> element.</p>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;std::string&gt; langs = {"C++", "Python", "Rust"};
+
+    // Free-function versions (preferred since C++11)
+    auto first = std::begin(langs);   // iterator to "C++"
+    auto last  = std::end(langs);     // one past "Rust"
+
+    while (first != last) {
+        std::cout &lt;&lt; *first &lt;&lt; "\n";
+        ++first;
+    }
+
+    return 0;
+}</code></pre></div>
+                <p>The free functions <code>std::begin()</code> and <code>std::end()</code> also work with plain C-style arrays, making generic code easier to write.</p>
+
+                <!-- ===== Using Iterators with Different Containers ===== -->
+                <h2>Using Iterators with Different Containers</h2>
+                <p>Every standard container provides iterators. The <em>category</em> of the iterator depends on the container&rsquo;s internal structure.</p>
+
+                <h3>vector (Random Access)</h3>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+
+    // Random-access: jump directly to the 3rd element
+    auto it = v.begin() + 2;
+    std::cout &lt;&lt; *it &lt;&lt; "\n";   // 3
+
+    // Subscript through iterator
+    std::cout &lt;&lt; it[1] &lt;&lt; "\n"; // 4  (same as *(it + 1))
+
+    return 0;
+}</code></pre></div>
+
+                <h3>list (Bidirectional)</h3>
+<div class="code-block"><pre><code>#include &lt;list&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::list&lt;int&gt; lst = {10, 20, 30, 40};
+
+    auto it = lst.begin();
+    ++it;                        // OK: move forward
+    --it;                        // OK: move backward
+    // it = it + 2;              // ERROR: no random access
+
+    for (auto i = lst.begin(); i != lst.end(); ++i)
+        std::cout &lt;&lt; *i &lt;&lt; " ";
+    // Output: 10 20 30 40
+
+    return 0;
+}</code></pre></div>
+
+                <h3>map (Bidirectional, key-value pairs)</h3>
+<div class="code-block"><pre><code>#include &lt;map&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::map&lt;std::string, int&gt; scores = {
+        {"Alice", 95}, {"Bob", 82}, {"Charlie", 90}
+    };
+
+    for (auto it = scores.begin(); it != scores.end(); ++it) {
+        // it-&gt;first  = key
+        // it-&gt;second = value
+        std::cout &lt;&lt; it-&gt;first &lt;&lt; ": " &lt;&lt; it-&gt;second &lt;&lt; "\n";
+    }
+
+    return 0;
+}</code></pre></div>
+
+                <h3>set (Bidirectional, read-only elements)</h3>
+<div class="code-block"><pre><code>#include &lt;set&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::set&lt;int&gt; s = {5, 3, 8, 1};
+
+    for (auto it = s.begin(); it != s.end(); ++it)
+        std::cout &lt;&lt; *it &lt;&lt; " ";
+    // Output: 1 3 5 8  (sorted automatically)
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Iterator Operations ===== -->
+                <h2>Iterator Operations</h2>
+                <p>The operators available depend on the iterator category:</p>
+                <table>
+                    <thead>
+                        <tr><th>Operation</th><th>Meaning</th><th>Minimum Category</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>*it</code></td><td>Dereference &ndash; access the element</td><td>Input / Output</td></tr>
+                        <tr><td><code>it-&gt;member</code></td><td>Access a member of the pointed-to object</td><td>Input</td></tr>
+                        <tr><td><code>++it</code> / <code>it++</code></td><td>Move to the next element</td><td>Input / Output</td></tr>
+                        <tr><td><code>--it</code> / <code>it--</code></td><td>Move to the previous element</td><td>Bidirectional</td></tr>
+                        <tr><td><code>it == jt</code> / <code>it != jt</code></td><td>Equality comparison</td><td>Input</td></tr>
+                        <tr><td><code>it + n</code> / <code>it - n</code></td><td>Jump forward or backward by <em>n</em></td><td>Random Access</td></tr>
+                        <tr><td><code>it[n]</code></td><td>Access element at offset <em>n</em></td><td>Random Access</td></tr>
+                        <tr><td><code>it &lt; jt</code></td><td>Ordering comparison</td><td>Random Access</td></tr>
+                    </tbody>
+                </table>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {10, 20, 30, 40, 50};
+
+    auto it = v.begin();
+
+    std::cout &lt;&lt; *it     &lt;&lt; "\n";  // 10 (dereference)
+    std::cout &lt;&lt; *(it+3) &lt;&lt; "\n";  // 40 (random-access jump)
+    std::cout &lt;&lt; it[4]   &lt;&lt; "\n";  // 50 (subscript)
+
+    auto diff = v.end() - v.begin();
+    std::cout &lt;&lt; "Size: " &lt;&lt; diff &lt;&lt; "\n"; // 5
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Reverse Iterators ===== -->
+                <h2>Reverse Iterators</h2>
+                <p>Reverse iterators traverse a container from the <strong>last</strong> element to the <strong>first</strong>. They are obtained via <code>rbegin()</code> (pointing to the last element) and <code>rend()</code> (pointing to one before the first element).</p>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {1, 2, 3, 4, 5};
+
+    // Traverse in reverse
+    for (auto rit = v.rbegin(); rit != v.rend(); ++rit) {
+        std::cout &lt;&lt; *rit &lt;&lt; " ";
+    }
+    // Output: 5 4 3 2 1
+
+    return 0;
+}</code></pre></div>
+                <p>Internally, <code>++rit</code> on a reverse iterator moves <em>backward</em> through the container&rsquo;s memory. You can convert a reverse iterator to a normal (base) iterator with <code>rit.base()</code>.</p>
+
+                <!-- ===== Const Iterators ===== -->
+                <h2>Const Iterators</h2>
+                <p>A <strong>const iterator</strong> provides read-only access to container elements. You cannot modify the element through a const iterator&mdash;only observe it. Use <code>cbegin()</code> and <code>cend()</code> (or <code>crbegin()</code>/<code>crend()</code> for reverse).</p>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {10, 20, 30};
+
+    // const_iterator &mdash; read only
+    for (auto cit = v.cbegin(); cit != v.cend(); ++cit) {
+        std::cout &lt;&lt; *cit &lt;&lt; " ";
+        // *cit = 99;  // ERROR: cannot modify through const_iterator
+    }
+    // Output: 10 20 30
+
+    // Also available: v.crbegin(), v.crend()
+
+    return 0;
+}</code></pre></div>
+                <p>Prefer <code>cbegin()</code>/<code>cend()</code> when you have no intention of modifying elements. It makes your intent clear and catches accidental writes at compile time.</p>
+
+                <!-- ===== Insert Iterators ===== -->
+                <h2>Insert Iterators</h2>
+                <p>Insert iterators (also called <strong>inserter adaptors</strong>) are output iterators that <em>insert</em> new elements into a container instead of overwriting existing ones. They are defined in <code>&lt;iterator&gt;</code>.</p>
+                <table>
+                    <thead>
+                        <tr><th>Adaptor</th><th>Inserts via</th><th>Works with</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>std::back_inserter(c)</code></td><td><code>c.push_back()</code></td><td><code>vector</code>, <code>deque</code>, <code>list</code>, <code>string</code></td></tr>
+                        <tr><td><code>std::front_inserter(c)</code></td><td><code>c.push_front()</code></td><td><code>deque</code>, <code>list</code></td></tr>
+                        <tr><td><code>std::inserter(c, pos)</code></td><td><code>c.insert(pos, &hellip;)</code></td><td>All containers with <code>insert()</code></td></tr>
+                    </tbody>
+                </table>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;list&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; src = {1, 2, 3, 4, 5};
+    std::vector&lt;int&gt; dst;      // empty
+
+    // back_inserter: appends each copied element via push_back
+    std::copy(src.begin(), src.end(), std::back_inserter(dst));
+    // dst = {1, 2, 3, 4, 5}
+
+    // front_inserter: prepends via push_front (only deque, list)
+    std::list&lt;int&gt; lst;
+    std::copy(src.begin(), src.end(), std::front_inserter(lst));
+    // lst = {5, 4, 3, 2, 1}  (reversed order!)
+
+    // inserter: insert at a specific position
+    std::vector&lt;int&gt; mid = {10, 20};
+    std::copy(src.begin(), src.begin() + 2,
+              std::inserter(mid, mid.begin() + 1));
+    // mid = {10, 1, 2, 20}
+
+    for (int x : dst)  std::cout &lt;&lt; x &lt;&lt; " ";
+    std::cout &lt;&lt; "\n";
+    for (int x : lst)  std::cout &lt;&lt; x &lt;&lt; " ";
+    std::cout &lt;&lt; "\n";
+    for (int x : mid)  std::cout &lt;&lt; x &lt;&lt; " ";
+    std::cout &lt;&lt; "\n";
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Stream Iterators ===== -->
+                <h2>Stream Iterators</h2>
+                <p>Stream iterators let you treat I/O streams as iterator ranges, enabling seamless interaction with algorithms.</p>
+                <ul>
+                    <li><code>std::istream_iterator&lt;T&gt;</code> &mdash; reads values of type <code>T</code> from an input stream.</li>
+                    <li><code>std::ostream_iterator&lt;T&gt;</code> &mdash; writes values of type <code>T</code> to an output stream.</li>
+                </ul>
+<div class="code-block"><pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+
+int main() {
+    // Read integers from stdin until EOF (Ctrl+Z on Windows, Ctrl+D on Unix)
+    std::istream_iterator&lt;int&gt; in(std::cin), eof;
+    std::vector&lt;int&gt; nums(in, eof);   // range constructor
+
+    // Sort and write to stdout separated by ", "
+    std::sort(nums.begin(), nums.end());
+    std::ostream_iterator&lt;int&gt; out(std::cout, ", ");
+    std::copy(nums.begin(), nums.end(), out);
+    // Example input:  5 3 8 1
+    // Output:         1, 3, 5, 8,
+
+    return 0;
+}</code></pre></div>
+                <p>A default-constructed <code>istream_iterator</code> (with no stream argument) represents the <strong>end-of-stream</strong> sentinel&mdash;compare against it to detect when input is exhausted.</p>
+
+                <!-- ===== Iterator Invalidation ===== -->
+                <h2>Iterator Invalidation</h2>
+                <p>An iterator becomes <strong>invalid</strong> when the underlying container changes in a way that invalidates the memory the iterator refers to. Using an invalid iterator is <strong>undefined behaviour</strong>.</p>
+                <table>
+                    <thead>
+                        <tr><th>Container</th><th>Invalidated by</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>vector</code></td><td>Insertion that triggers reallocation; erase invalidates iterators at or after the erased position.</td></tr>
+                        <tr><td><code>deque</code></td><td>Any insertion or erasure (except at front or back for references).</td></tr>
+                        <tr><td><code>list</code> / <code>forward_list</code></td><td>Only the iterator to the erased element is invalidated; other iterators remain valid.</td></tr>
+                        <tr><td><code>set</code> / <code>map</code></td><td>Only the iterator to the erased element; insertions never invalidate.</td></tr>
+                        <tr><td><code>unordered_*</code></td><td>Rehashing (triggered by insertion) invalidates all iterators.</td></tr>
+                    </tbody>
+                </table>
+<div class="code-block"><pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; v = {1, 2, 3};
+    auto it = v.begin();           // points to 1
+
+    v.push_back(4);                // may reallocate!
+    // 'it' is now POTENTIALLY INVALID &mdash; do NOT dereference
+
+    // Safe approach: re-obtain the iterator after modification
+    it = v.begin();
+    std::cout &lt;&lt; *it &lt;&lt; "\n";     // OK: 1
+
+    return 0;
+}</code></pre></div>
+                <p><strong>Rule of thumb:</strong> after any operation that may resize or restructure a container, assume your existing iterators are invalid unless the container&rsquo;s documentation explicitly guarantees otherwise.</p>
+
+                <!-- ===== std::advance, std::next, std::prev, std::distance ===== -->
+                <h2>std::advance, std::next, std::prev, std::distance</h2>
+                <p>These utility functions (from <code>&lt;iterator&gt;</code>) let you work with iterators in a category-agnostic way:</p>
+                <table>
+                    <thead>
+                        <tr><th>Function</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>std::advance(it, n)</code></td><td>Moves <code>it</code> forward (or backward if <em>n</em> &lt; 0) by <em>n</em> positions <strong>in place</strong>.</td></tr>
+                        <tr><td><code>std::next(it, n)</code></td><td>Returns a new iterator <em>n</em> positions ahead of <code>it</code>. Default <em>n</em> = 1.</td></tr>
+                        <tr><td><code>std::prev(it, n)</code></td><td>Returns a new iterator <em>n</em> positions before <code>it</code>. Default <em>n</em> = 1.</td></tr>
+                        <tr><td><code>std::distance(first, last)</code></td><td>Returns the number of increments needed to go from <code>first</code> to <code>last</code>.</td></tr>
+                    </tbody>
+                </table>
+<div class="code-block"><pre><code>#include &lt;list&gt;
+#include &lt;iterator&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::list&lt;int&gt; lst = {10, 20, 30, 40, 50};
+
+    auto it = lst.begin();
+
+    // std::advance &mdash; modifies 'it' in place
+    std::advance(it, 3);
+    std::cout &lt;&lt; *it &lt;&lt; "\n";         // 40
+
+    // std::next &mdash; returns a new iterator
+    auto it2 = std::next(lst.begin(), 2);
+    std::cout &lt;&lt; *it2 &lt;&lt; "\n";        // 30
+
+    // std::prev &mdash; move backward
+    auto it3 = std::prev(lst.end());
+    std::cout &lt;&lt; *it3 &lt;&lt; "\n";        // 50
+
+    // std::distance
+    auto d = std::distance(lst.begin(), lst.end());
+    std::cout &lt;&lt; "Size: " &lt;&lt; d &lt;&lt; "\n"; // 5
+
+    return 0;
+}</code></pre></div>
+                <p>For <strong>random-access</strong> iterators, these functions run in O(1). For <strong>bidirectional</strong> or <strong>forward</strong> iterators they run in O(n) because they must step one element at a time.</p>
+
+                <!-- ===== Iterators and Algorithms ===== -->
+                <h2>Iterators and Algorithms</h2>
+                <p>Iterators are the bridge that connects <strong>containers</strong> to <strong>algorithms</strong>. Every STL algorithm is expressed in terms of iterator ranges, so the same algorithm works on any container that provides the required iterator category.</p>
+<div class="code-block"><pre><code>#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;list&gt;
+#include &lt;set&gt;
+#include &lt;iterator&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    // std::find works with any forward iterator (or better)
+    std::vector&lt;int&gt; vec = {5, 3, 8, 1, 4};
+    auto vit = std::find(vec.begin(), vec.end(), 8);
+    if (vit != vec.end())
+        std::cout &lt;&lt; "Found in vector: " &lt;&lt; *vit &lt;&lt; "\n";
+
+    std::list&lt;int&gt; lst = {5, 3, 8, 1, 4};
+    auto lit = std::find(lst.begin(), lst.end(), 8);
+    if (lit != lst.end())
+        std::cout &lt;&lt; "Found in list:   " &lt;&lt; *lit &lt;&lt; "\n";
+
+    // std::sort requires random-access iterators
+    std::sort(vec.begin(), vec.end());          // OK: vector
+    // std::sort(lst.begin(), lst.end());       // ERROR: list is bidirectional only
+    lst.sort();                                 // Use member function instead
+
+    // std::copy with back_inserter
+    std::vector&lt;int&gt; result;
+    std::copy_if(vec.begin(), vec.end(),
+                 std::back_inserter(result),
+                 [](int x){ return x &gt; 3; });
+    // result = {4, 5, 8}
+
+    for (int x : result)
+        std::cout &lt;&lt; x &lt;&lt; " ";
+    std::cout &lt;&lt; "\n";
+
+    return 0;
+}</code></pre></div>
+                <p>When choosing an algorithm, check which <strong>iterator category</strong> it requires. Common requirements:</p>
+                <ul>
+                    <li><code>std::sort</code>, <code>std::nth_element</code> &mdash; Random Access</li>
+                    <li><code>std::reverse</code>, <code>std::copy_backward</code> &mdash; Bidirectional</li>
+                    <li><code>std::find</code>, <code>std::for_each</code>, <code>std::count</code> &mdash; Input (Forward in practice)</li>
+                    <li><code>std::copy</code>, <code>std::transform</code> &mdash; Input + Output</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Iterators are <strong>generalized pointers</strong> that abstract traversal of any STL container.</li>
+                    <li>There are five iterator categories: <strong>Input</strong>, <strong>Output</strong>, <strong>Forward</strong>, <strong>Bidirectional</strong>, and <strong>Random Access</strong>.</li>
+                    <li><code>begin()</code>/<code>end()</code> define a half-open range <code>[first, last)</code>.</li>
+                    <li><strong>Reverse iterators</strong> (<code>rbegin</code>/<code>rend</code>) traverse a container backward.</li>
+                    <li><strong>Const iterators</strong> (<code>cbegin</code>/<code>cend</code>) guarantee read-only access.</li>
+                    <li><strong>Insert iterators</strong> (<code>back_inserter</code>, <code>front_inserter</code>, <code>inserter</code>) insert instead of overwrite.</li>
+                    <li><strong>Stream iterators</strong> let you treat I/O streams as ranges usable with algorithms.</li>
+                    <li>Always be aware of <strong>iterator invalidation</strong> rules&mdash;modifying a container can silently invalidate existing iterators.</li>
+                    <li>Use <code>std::advance</code>, <code>std::next</code>, <code>std::prev</code>, and <code>std::distance</code> for portable, category-agnostic iterator manipulation.</li>
+                    <li>Iterators connect <strong>containers</strong> to <strong>algorithms</strong>&mdash;understanding them is essential to mastering the STL.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/SgcHcbQ0RCQ" title="C++ Iterators" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is an iterator in C++?","o":["A container that stores elements","A generalized pointer for traversing containers","A sorting algorithm","A type of smart pointer"],"a":1},
+                {"q":"Which header defines <code>std::advance</code>, <code>std::next</code>, and <code>std::prev</code>?","o":["<code>&lt;algorithm&gt;</code>","<code>&lt;vector&gt;</code>","<code>&lt;iterator&gt;</code>","<code>&lt;functional&gt;</code>"],"a":2},
+                {"q":"What does <code>*it</code> do when <code>it</code> is an iterator?","o":["Moves the iterator forward","Deletes the element","Dereferences the iterator to access the element","Compares two iterators"],"a":2},
+                {"q":"How many iterator categories does the C++ standard define?","o":["3","4","5","6"],"a":2},
+                {"q":"Which iterator category supports only single-pass forward reading?","o":["Output","Input","Bidirectional","Random Access"],"a":1},
+                {"q":"Which iterator category allows both forward and backward traversal?","o":["Forward","Input","Bidirectional","Output"],"a":2},
+                {"q":"Which container provides random-access iterators?","o":["<code>std::list</code>","<code>std::set</code>","<code>std::vector</code>","<code>std::forward_list</code>"],"a":2},
+                {"q":"What does <code>end()</code> point to?","o":["The last element","One past the last element","The first element","The middle element"],"a":1},
+                {"q":"The range <code>[begin, end)</code> is called:","o":["Closed interval","Open interval","Half-open interval","Empty interval"],"a":2},
+                {"q":"How do you declare a const iterator for a <code>std::vector&lt;int&gt;</code>?","o":["<code>std::vector&lt;int&gt;::iterator</code>","<code>std::vector&lt;int&gt;::const_iterator</code>","<code>const std::vector&lt;int&gt;::iterator</code>","<code>std::vector&lt;int&gt;::reverse_iterator</code>"],"a":1},
+                {"q":"Which function returns a const iterator to the beginning?","o":["<code>begin()</code>","<code>cbegin()</code>","<code>rbegin()</code>","<code>front()</code>"],"a":1},
+                {"q":"What do <code>rbegin()</code> and <code>rend()</code> provide?","o":["Forward iterators","Const iterators","Reverse iterators","Output iterators"],"a":2},
+                {"q":"When you <code>++rit</code> on a reverse iterator, the iterator moves:","o":["Forward in memory","Backward through the container","To a random position","Nowhere"],"a":1},
+                {"q":"Which function converts a reverse iterator to a normal iterator?","o":["<code>rit.convert()</code>","<code>rit.base()</code>","<code>rit.forward()</code>","<code>rit.normal()</code>"],"a":1},
+                {"q":"What does <code>std::back_inserter(c)</code> do?","o":["Erases the last element","Creates an output iterator that calls <code>c.push_back()</code>","Sorts the container","Returns an input iterator"],"a":1},
+                {"q":"Which insert iterator calls <code>push_front()</code>?","o":["<code>std::back_inserter</code>","<code>std::front_inserter</code>","<code>std::inserter</code>","<code>std::forward_inserter</code>"],"a":1},
+                {"q":"<code>std::inserter(c, pos)</code> inserts elements via:","o":["<code>c.push_back()</code>","<code>c.push_front()</code>","<code>c.insert(pos, &hellip;)</code>","<code>c.emplace()</code>"],"a":2},
+                {"q":"Can you use <code>std::front_inserter</code> with <code>std::vector</code>?","o":["Yes","No, vector has no <code>push_front()</code>","Only in C++20","Only with reserve()"],"a":1},
+                {"q":"What does a default-constructed <code>std::istream_iterator</code> represent?","o":["The beginning of the stream","The end-of-stream sentinel","An error state","A null pointer"],"a":1},
+                {"q":"<code>std::ostream_iterator&lt;int&gt;(std::cout, \", \")</code> writes:","o":["Integers separated by commas and spaces","Only commas","Only integers","Nothing"],"a":0},
+                {"q":"Which algorithm is commonly used with <code>std::ostream_iterator</code> to print container elements?","o":["<code>std::sort</code>","<code>std::copy</code>","<code>std::find</code>","<code>std::count</code>"],"a":1},
+                {"q":"What happens if you dereference an invalidated iterator?","o":["A compile error","A runtime exception is thrown","Undefined behaviour","The program safely returns 0"],"a":2},
+                {"q":"For <code>std::vector</code>, which operation may invalidate all iterators?","o":["<code>front()</code>","<code>push_back()</code> that causes reallocation","<code>size()</code>","<code>empty()</code>"],"a":1},
+                {"q":"For <code>std::list</code>, does inserting an element invalidate existing iterators?","o":["Yes, all iterators are invalidated","Only iterators at the insertion point","No, existing iterators remain valid","Only reverse iterators"],"a":2},
+                {"q":"For <code>std::map</code>, does inserting a new key invalidate iterators?","o":["Yes","No","Only if the map rehashes","Only const iterators"],"a":1},
+                {"q":"What does <code>std::advance(it, 3)</code> do?","o":["Returns a new iterator 3 positions ahead","Moves <code>it</code> forward by 3 positions in place","Erases 3 elements","Creates 3 copies of the iterator"],"a":1},
+                {"q":"What does <code>std::next(it, 2)</code> return?","o":["Moves <code>it</code> in place","A new iterator 2 positions ahead of <code>it</code>","The value at position 2","A boolean"],"a":1},
+                {"q":"What does <code>std::prev(it)</code> return?","o":["A new iterator one position before <code>it</code>","Moves <code>it</code> backward in place","The previous container","A boolean"],"a":0},
+                {"q":"What does <code>std::distance(first, last)</code> compute?","o":["The memory address difference","The number of increments from <code>first</code> to <code>last</code>","The byte size of the range","The number of elements greater than zero"],"a":1},
+                {"q":"What is the time complexity of <code>std::distance</code> for a list iterator?","o":["O(1)","O(log n)","O(n)","O(n&sup2;)"],"a":2},
+                {"q":"What is the time complexity of <code>std::distance</code> for a vector iterator?","o":["O(n)","O(1)","O(log n)","O(n log n)"],"a":1},
+                {"q":"Which algorithm requires random-access iterators?","o":["<code>std::find</code>","<code>std::sort</code>","<code>std::for_each</code>","<code>std::copy</code>"],"a":1},
+                {"q":"Can you use <code>std::sort</code> on a <code>std::list</code>?","o":["Yes, directly with <code>std::sort</code>","No, you must use the member function <code>lst.sort()</code>","Only with random-access adaptors","Only in C++20"],"a":1},
+                {"q":"Which free functions work with both containers and C-style arrays?","o":["<code>container.begin()</code>/<code>container.end()</code>","<code>std::begin()</code>/<code>std::end()</code>","<code>std::start()</code>/<code>std::stop()</code>","<code>std::first()</code>/<code>std::last()</code>"],"a":1},
+                {"q":"What type does <code>auto it = v.begin();</code> deduce for a <code>std::vector&lt;int&gt;</code>?","o":["<code>int*</code>","<code>std::vector&lt;int&gt;::iterator</code>","<code>std::vector&lt;int&gt;::const_iterator</code>","<code>int&amp;</code>"],"a":1},
+                {"q":"How do you iterate over key-value pairs in a <code>std::map</code> using iterators?","o":["<code>it-&gt;key</code> and <code>it-&gt;value</code>","<code>it-&gt;first</code> and <code>it-&gt;second</code>","<code>it.key()</code> and <code>it.val()</code>","<code>(*it).k</code> and <code>(*it).v</code>"],"a":1},
+                {"q":"What does <code>it-&gt;member</code> do?","o":["Compares the iterator with member","Accesses a member of the object the iterator points to","Moves the iterator to member","Deletes the member"],"a":1},
+                {"q":"Which insert iterator would you use to copy elements into the middle of a vector?","o":["<code>std::back_inserter</code>","<code>std::front_inserter</code>","<code>std::inserter</code>","<code>std::mid_inserter</code>"],"a":2},
+                {"q":"What order do elements appear in when using <code>std::front_inserter</code>?","o":["Same order as the source","Reversed order","Random order","Sorted order"],"a":1},
+                {"q":"Can <code>std::istream_iterator</code> be used to read strings from a file?","o":["No, only integers","Yes, by specifying <code>std::istream_iterator&lt;std::string&gt;</code>","Only with <code>getline</code>","Only binary data"],"a":1},
+                {"q":"What is <code>std::move_iterator</code> used for?","o":["Moving the iterator position","Converting dereferenced values into rvalue references for move semantics","Copying elements","Sorting elements"],"a":1},
+                {"q":"In the expression <code>it[n]</code>, what iterator category is required?","o":["Input","Forward","Bidirectional","Random Access"],"a":3},
+                {"q":"Which comparison operators are supported only by random-access iterators?","o":["<code>==</code> and <code>!=</code>","<code>&lt;</code>, <code>&gt;</code>, <code>&le;</code>, <code>&ge;</code>","Only <code>==</code>","None"],"a":1},
+                {"q":"Does <code>std::set::iterator</code> allow modifying elements through the iterator?","o":["Yes","No, set elements are const to preserve ordering","Only the first element","Only with <code>const_cast</code>"],"a":1},
+                {"q":"After <code>v.erase(it)</code> on a vector, which iterators are invalidated?","o":["None","Only <code>it</code>","<code>it</code> and all iterators after the erased position","All iterators including those before the erased position"],"a":2},
+                {"q":"How can you safely erase elements from a vector while iterating?","o":["Use a reverse loop","Use the return value of <code>erase()</code> as the new iterator","Skip every other element","You cannot erase during iteration"],"a":1},
+                {"q":"<code>crbegin()</code> returns a:","o":["Const forward iterator","Const reverse iterator","Mutable reverse iterator","Random-access iterator"],"a":1},
+                {"q":"What header must you include to use <code>std::back_inserter</code>?","o":["<code>&lt;algorithm&gt;</code>","<code>&lt;vector&gt;</code>","<code>&lt;iterator&gt;</code>","<code>&lt;functional&gt;</code>"],"a":2},
+                {"q":"Which is a valid way to read all integers from stdin into a vector using iterators?","o":["<code>std::vector&lt;int&gt; v(std::istream_iterator&lt;int&gt;(std::cin), {});</code>","<code>std::vector&lt;int&gt; v = std::cin;</code>","<code>std::cin &gt;&gt; v;</code>","<code>std::copy(std::cin, v);</code>"],"a":0},
+                {"q":"What does <code>std::advance(it, -2)</code> do?","o":["Moves the iterator forward by 2","Moves the iterator backward by 2 (requires bidirectional or better)","Throws an exception","Returns a new iterator"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="stl-algorithms.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">STL Algorithms</span>
+                </a>
+                <a href="exceptions.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Exception Handling</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

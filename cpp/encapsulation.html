@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Encapsulation - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-encapsulation">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html" class="active"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 33 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="60" style="width:60%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Encapsulation
+                </div>
+                <h1>33. Encapsulation</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 33 of 55</span>
+                    <span>&#9201; 14 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Encapsulation? ===== -->
+                <h2>What Is Encapsulation?</h2>
+                <p><strong>Encapsulation</strong> is one of the four fundamental pillars of Object-Oriented Programming (OOP). It refers to the practice of <strong>bundling data (variables)</strong> and the <strong>methods (functions)</strong> that operate on that data into a single unit &mdash; a <em>class</em> &mdash; while <strong>restricting direct access</strong> to some of the object&rsquo;s internal components.</p>
+                <p>Encapsulation combines two key ideas:</p>
+                <ul>
+                    <li><strong>Data Hiding</strong> &mdash; keeping the internal state of an object hidden from the outside world by marking data members as <code>private</code> or <code>protected</code>.</li>
+                    <li><strong>Bundling</strong> &mdash; grouping related data and behaviour together inside a class so they form a cohesive, self-contained unit.</li>
+                </ul>
+                <p>Think of a class as a <strong>capsule</strong>: everything the object needs is packed inside, and the outside world interacts with it only through a well-defined <strong>public interface</strong>.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>class BankAccount {
+private:
+    string owner;       // Hidden data
+    double balance;     // Hidden data
+
+public:
+    // Public interface &mdash; the only way to interact
+    BankAccount(string name, double initial)
+        : owner(name), balance(initial) {}
+
+    void deposit(double amount) {
+        if (amount &gt; 0) balance += amount;
+    }
+    double getBalance() const { return balance; }
+};</code></pre>
+                </div>
+
+                <!-- ===== Why Encapsulation Matters ===== -->
+                <h2>Why Encapsulation Matters</h2>
+                <p>Without encapsulation, any piece of code can freely modify an object&rsquo;s internal state, leading to bugs that are hard to track. Encapsulation provides several critical benefits:</p>
+                <table>
+                    <thead>
+                        <tr><th>Benefit</th><th>Explanation</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Maintainability</strong></td><td>Internal implementation can change without affecting code that uses the class, because the public interface stays the same.</td></tr>
+                        <tr><td><strong>Security</strong></td><td>Sensitive data (passwords, balances) cannot be modified directly &mdash; access is controlled through validated methods.</td></tr>
+                        <tr><td><strong>Flexibility</strong></td><td>You can add logging, validation, or side-effects inside setters without changing the external API.</td></tr>
+                        <tr><td><strong>Reduced Complexity</strong></td><td>Users of the class only need to know the public interface, not the internal details.</td></tr>
+                        <tr><td><strong>Debugging</strong></td><td>Since data can only be changed through specific methods, it is easy to set breakpoints and track modifications.</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Implementing Encapsulation ===== -->
+                <h2>Implementing Encapsulation</h2>
+                <p>The standard pattern for encapsulation in C++ is straightforward:</p>
+                <ol>
+                    <li>Declare data members as <code>private</code> (or <code>protected</code> if derived classes need access).</li>
+                    <li>Provide <code>public</code> member functions (getters, setters, and other methods) that form the class&rsquo;s <strong>public interface</strong>.</li>
+                    <li>Add <strong>validation logic</strong> inside setters to enforce invariants.</li>
+                </ol>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+    double gpa;
+
+public:
+    // Constructor
+    Student(string n, int a, double g) {
+        setName(n);
+        setAge(a);
+        setGPA(g);
+    }
+
+    // Getter &mdash; returns private data
+    string getName() const { return name; }
+    int getAge() const { return age; }
+    double getGPA() const { return gpa; }
+
+    // Setter &mdash; validates before setting
+    void setName(string n) {
+        if (!n.empty()) name = n;
+    }
+    void setAge(int a) {
+        if (a &gt; 0 &amp;&amp; a &lt; 150) age = a;
+    }
+    void setGPA(double g) {
+        if (g &gt;= 0.0 &amp;&amp; g &lt;= 4.0) gpa = g;
+    }
+
+    void display() const {
+        cout &lt;&lt; name &lt;&lt; " | Age: " &lt;&lt; age
+             &lt;&lt; " | GPA: " &lt;&lt; gpa &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Student s("Alice", 20, 3.8);
+    s.display();        // Alice | Age: 20 | GPA: 3.8
+
+    s.setAge(-5);       // Ignored &mdash; invalid
+    s.setGPA(5.0);      // Ignored &mdash; out of range
+    s.display();        // Alice | Age: 20 | GPA: 3.8 (unchanged)
+
+    s.setAge(21);       // Valid
+    s.display();        // Alice | Age: 21 | GPA: 3.8
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Getters and Setters with Validation ===== -->
+                <h2>Getters and Setters with Validation</h2>
+                <p><strong>Getters</strong> (accessors) return the value of private members. <strong>Setters</strong> (mutators) modify private members after checking that the new value is valid. This is the heart of encapsulation.</p>
+                <h3>Guidelines for Getters</h3>
+                <ul>
+                    <li>Mark getters as <code>const</code> &mdash; they do not modify the object.</li>
+                    <li>Return by value for primitive types; return by <code>const</code> reference for large objects (e.g., strings, vectors).</li>
+                    <li>Never return a non-const reference or pointer to private data &mdash; it defeats encapsulation.</li>
+                </ul>
+                <h3>Guidelines for Setters</h3>
+                <ul>
+                    <li>Always validate the input before assigning.</li>
+                    <li>Throw an exception or return a <code>bool</code> to signal invalid input.</li>
+                    <li>Consider logging or notifying observers when data changes.</li>
+                </ul>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Product {
+private:
+    string name;
+    double price;
+    int quantity;
+
+public:
+    Product(string n, double p, int q)
+        : name(n), price(0), quantity(0) {
+        setPrice(p);
+        setQuantity(q);
+    }
+
+    // Getters
+    const string&amp; getName() const { return name; }
+    double getPrice() const { return price; }
+    int getQuantity() const { return quantity; }
+
+    // Setter with exception-based validation
+    void setPrice(double p) {
+        if (p &lt; 0)
+            throw invalid_argument("Price cannot be negative.");
+        price = p;
+    }
+
+    // Setter with bool-based validation
+    bool setQuantity(int q) {
+        if (q &lt; 0) return false;
+        quantity = q;
+        return true;
+    }
+
+    double totalValue() const {
+        return price * quantity;
+    }
+};
+
+int main() {
+    Product p("Laptop", 999.99, 10);
+    cout &lt;&lt; p.getName() &lt;&lt; ": $" &lt;&lt; p.getPrice()
+         &lt;&lt; " x " &lt;&lt; p.getQuantity()
+         &lt;&lt; " = $" &lt;&lt; p.totalValue() &lt;&lt; endl;
+
+    // p.setPrice(-50);  // Throws invalid_argument
+    p.setQuantity(-3);   // Returns false, quantity unchanged
+
+    cout &lt;&lt; "Quantity after invalid set: "
+         &lt;&lt; p.getQuantity() &lt;&lt; endl;  // Still 10
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Read-Only and Write-Only Properties ===== -->
+                <h2>Read-Only and Write-Only Properties</h2>
+                <p>By selectively providing getters and setters, you can create properties that are <strong>read-only</strong> or <strong>write-only</strong>.</p>
+                <h3>Read-Only Property</h3>
+                <p>Provide a <strong>getter</strong> but <strong>no setter</strong>. The value is set only through the constructor or internal methods.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>class Invoice {
+private:
+    int id;
+    double amount;
+
+public:
+    Invoice(int i, double a) : id(i), amount(a) {}
+
+    // Read-only: getter only
+    int getId() const { return id; }
+    double getAmount() const { return amount; }
+
+    // No setId() or setAmount() &mdash; values are immutable
+};</code></pre>
+                </div>
+                <h3>Write-Only Property</h3>
+                <p>Provide a <strong>setter</strong> but <strong>no getter</strong>. This is rare but useful for sensitive data like passwords.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>class UserAccount {
+private:
+    string username;
+    string passwordHash;
+
+    string hashPassword(const string&amp; pw) const {
+        // Simplified hash (use a real library in production)
+        size_t h = hash&lt;string&gt;{}(pw);
+        return to_string(h);
+    }
+
+public:
+    UserAccount(string user, string pw)
+        : username(user), passwordHash(hashPassword(pw)) {}
+
+    string getUsername() const { return username; }
+
+    // Write-only: setter with no getter for password
+    void setPassword(const string&amp; pw) {
+        if (pw.length() &lt; 8)
+            throw invalid_argument("Password must be at least 8 characters.");
+        passwordHash = hashPassword(pw);
+    }
+
+    bool authenticate(const string&amp; pw) const {
+        return passwordHash == hashPassword(pw);
+    }
+};</code></pre>
+                </div>
+
+                <!-- ===== Encapsulation Benefits: With vs Without ===== -->
+                <h2>Encapsulation Benefits: With vs Without</h2>
+                <p>The following comparison illustrates the difference between a class that uses encapsulation and one that does not.</p>
+                <h3>&#10060; Without Encapsulation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++ &mdash; No Encapsulation</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>struct Rectangle {
+    double width;
+    double height;
+};
+
+int main() {
+    Rectangle r;
+    r.width = -10;   // No validation &mdash; negative width!
+    r.height = 0;    // No validation &mdash; zero height!
+    double area = r.width * r.height;  // -0 &mdash; nonsensical
+    return 0;
+}</code></pre>
+                </div>
+                <h3>&#9989; With Encapsulation</h3>
+                <div class="code-block">
+                    <div class="code-header"><span>C++ &mdash; Encapsulated</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>class Rectangle {
+private:
+    double width;
+    double height;
+
+public:
+    Rectangle(double w, double h) {
+        setWidth(w);
+        setHeight(h);
+    }
+
+    void setWidth(double w) {
+        if (w &gt; 0) width = w;
+        else throw invalid_argument("Width must be positive.");
+    }
+    void setHeight(double h) {
+        if (h &gt; 0) height = h;
+        else throw invalid_argument("Height must be positive.");
+    }
+
+    double getWidth() const { return width; }
+    double getHeight() const { return height; }
+    double area() const { return width * height; }
+    double perimeter() const { return 2 * (width + height); }
+};</code></pre>
+                </div>
+                <p>With encapsulation, invalid states are <strong>impossible</strong> &mdash; the object always maintains consistent, valid data.</p>
+
+                <!-- ===== Real-World Analogy: ATM Machine ===== -->
+                <h2>Real-World Analogy: ATM Machine</h2>
+                <p>An <strong>ATM machine</strong> is a perfect real-world example of encapsulation:</p>
+                <table>
+                    <thead>
+                        <tr><th>ATM Feature</th><th>Encapsulation Equivalent</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Cash stored inside</td><td><code>private</code> data members</td></tr>
+                        <tr><td>Screen, buttons, card slot</td><td><code>public</code> interface (getters/setters)</td></tr>
+                        <tr><td>PIN verification</td><td>Validation logic in setters</td></tr>
+                        <tr><td>Internal circuitry hidden</td><td>Implementation details hidden</td></tr>
+                        <tr><td>Withdrawal limit enforced</td><td>Business rules inside methods</td></tr>
+                    </tbody>
+                </table>
+                <p>You don&rsquo;t need to know <em>how</em> the ATM processes your transaction internally. You interact only through the public interface (screen, keypad, card reader), and the machine enforces rules (PIN check, balance check) behind the scenes.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++ &mdash; ATM Analogy</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class ATM {
+private:
+    string cardNumber;
+    int pin;
+    double balance;
+    int dailyWithdrawn;
+    static const int DAILY_LIMIT = 1000;
+
+    bool verifyPin(int enteredPin) const {
+        return enteredPin == pin;
+    }
+
+public:
+    ATM(string card, int p, double bal)
+        : cardNumber(card), pin(p), balance(bal), dailyWithdrawn(0) {}
+
+    // Public interface
+    bool withdraw(int enteredPin, double amount) {
+        if (!verifyPin(enteredPin)) {
+            cout &lt;&lt; "Incorrect PIN." &lt;&lt; endl;
+            return false;
+        }
+        if (amount &lt;= 0) {
+            cout &lt;&lt; "Invalid amount." &lt;&lt; endl;
+            return false;
+        }
+        if (amount &gt; balance) {
+            cout &lt;&lt; "Insufficient funds." &lt;&lt; endl;
+            return false;
+        }
+        if (dailyWithdrawn + amount &gt; DAILY_LIMIT) {
+            cout &lt;&lt; "Daily limit exceeded." &lt;&lt; endl;
+            return false;
+        }
+        balance -= amount;
+        dailyWithdrawn += amount;
+        cout &lt;&lt; "Dispensed $" &lt;&lt; amount &lt;&lt; endl;
+        return true;
+    }
+
+    double checkBalance(int enteredPin) const {
+        if (!verifyPin(enteredPin)) return -1;
+        return balance;
+    }
+};</code></pre>
+                </div>
+
+                <!-- ===== Complete Example: Temperature Class ===== -->
+                <h2>Complete Example: Temperature Class</h2>
+                <p>This class stores temperature in Celsius internally and provides conversion methods. Validation ensures the temperature never goes below absolute zero (&minus;273.15&deg;C).</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Temperature {
+private:
+    double celsius;
+
+    // Internal validation
+    void validate(double c) const {
+        if (c &lt; -273.15)
+            throw out_of_range("Temperature below absolute zero!");
+    }
+
+public:
+    // Constructor
+    Temperature(double c = 0.0) {
+        validate(c);
+        celsius = c;
+    }
+
+    // Getter
+    double getCelsius() const { return celsius; }
+
+    // Setter with validation
+    void setCelsius(double c) {
+        validate(c);
+        celsius = c;
+    }
+
+    // Conversions
+    double toFahrenheit() const {
+        return (celsius * 9.0 / 5.0) + 32.0;
+    }
+    double toKelvin() const {
+        return celsius + 273.15;
+    }
+
+    // Static factory methods
+    static Temperature fromFahrenheit(double f) {
+        return Temperature((f - 32.0) * 5.0 / 9.0);
+    }
+    static Temperature fromKelvin(double k) {
+        return Temperature(k - 273.15);
+    }
+
+    // Display
+    void display() const {
+        cout &lt;&lt; celsius &lt;&lt; " &deg;C = "
+             &lt;&lt; toFahrenheit() &lt;&lt; " &deg;F = "
+             &lt;&lt; toKelvin() &lt;&lt; " K" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Temperature t1(100);
+    t1.display();   // 100 &deg;C = 212 &deg;F = 373.15 K
+
+    Temperature t2 = Temperature::fromFahrenheit(72);
+    t2.display();   // 22.2222 &deg;C = 72 &deg;F = 295.372 K
+
+    Temperature t3 = Temperature::fromKelvin(0);
+    t3.display();   // -273.15 &deg;C = -459.67 &deg;F = 0 K
+
+    t1.setCelsius(37);
+    t1.display();   // 37 &deg;C = 98.6 &deg;F = 310.15 K
+
+    try {
+        Temperature bad(-300);  // Below absolute zero!
+    } catch (const out_of_range&amp; e) {
+        cout &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Complete Example: Employee Management ===== -->
+                <h2>Complete Example: Employee Management</h2>
+                <p>A more comprehensive example demonstrating encapsulation in a realistic scenario with multiple validation rules, computed properties, and controlled state transitions.</p>
+                <div class="code-block">
+                    <div class="code-header"><span>C++</span><button class="copy-btn">&#128203; Copy</button></div>
+                    <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;stdexcept&gt;
+using namespace std;
+
+class Employee {
+private:
+    static int nextId;
+    int id;
+    string name;
+    string department;
+    double salary;
+    int yearsOfService;
+    bool active;
+
+    // Internal helper
+    double calculateBonus() const {
+        if (yearsOfService &lt; 2) return salary * 0.05;
+        if (yearsOfService &lt; 5) return salary * 0.10;
+        if (yearsOfService &lt; 10) return salary * 0.15;
+        return salary * 0.20;
+    }
+
+public:
+    Employee(string n, string dept, double sal)
+        : id(nextId++), name(n), department(dept),
+          salary(0), yearsOfService(0), active(true) {
+        setSalary(sal);
+    }
+
+    // Getters
+    int getId() const { return id; }
+    string getName() const { return name; }
+    string getDepartment() const { return department; }
+    double getSalary() const { return salary; }
+    int getYearsOfService() const { return yearsOfService; }
+    bool isActive() const { return active; }
+
+    // Setters with validation
+    void setName(const string&amp; n) {
+        if (n.empty())
+            throw invalid_argument("Name cannot be empty.");
+        name = n;
+    }
+
+    void setDepartment(const string&amp; dept) {
+        if (dept.empty())
+            throw invalid_argument("Department cannot be empty.");
+        department = dept;
+    }
+
+    void setSalary(double sal) {
+        if (sal &lt; 0)
+            throw invalid_argument("Salary cannot be negative.");
+        salary = sal;
+    }
+
+    // Controlled state transitions
+    void promote(double raisePercent) {
+        if (!active) throw logic_error("Cannot promote inactive employee.");
+        if (raisePercent &lt;= 0 || raisePercent &gt; 50)
+            throw invalid_argument("Raise must be between 0% and 50%.");
+        salary *= (1 + raisePercent / 100.0);
+    }
+
+    void addYear() { yearsOfService++; }
+
+    void deactivate() { active = false; }
+    void reactivate() { active = true; }
+
+    // Computed property
+    double getBonus() const { return calculateBonus(); }
+
+    double getTotalCompensation() const {
+        return salary + calculateBonus();
+    }
+
+    void display() const {
+        cout &lt;&lt; "ID: " &lt;&lt; id
+             &lt;&lt; " | " &lt;&lt; name
+             &lt;&lt; " | " &lt;&lt; department
+             &lt;&lt; " | Salary: $" &lt;&lt; salary
+             &lt;&lt; " | Years: " &lt;&lt; yearsOfService
+             &lt;&lt; " | Bonus: $" &lt;&lt; calculateBonus()
+             &lt;&lt; " | " &lt;&lt; (active ? "Active" : "Inactive")
+             &lt;&lt; endl;
+    }
+};
+
+int Employee::nextId = 1001;
+
+int main() {
+    Employee e1("Alice", "Engineering", 85000);
+    Employee e2("Bob", "Marketing", 72000);
+
+    e1.addYear(); e1.addYear(); e1.addYear();  // 3 years
+    e1.promote(10);  // 10% raise
+
+    e2.addYear();
+    e2.setSalary(75000);
+
+    e1.display();
+    e2.display();
+
+    cout &lt;&lt; "Alice total compensation: $"
+         &lt;&lt; e1.getTotalCompensation() &lt;&lt; endl;
+
+    // e1.salary = 0;       // ERROR: private
+    // e1.id = 9999;        // ERROR: private
+    // e1.active = false;   // ERROR: use deactivate()
+
+    return 0;
+}</code></pre>
+                </div>
+
+                <!-- ===== Encapsulation vs Abstraction ===== -->
+                <h2>Encapsulation vs Abstraction</h2>
+                <p>These two OOP concepts are closely related but distinct:</p>
+                <table>
+                    <thead>
+                        <tr><th>Aspect</th><th>Encapsulation</th><th>Abstraction</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Focus</strong></td><td>Hiding <em>data</em> and controlling access</td><td>Hiding <em>complexity</em> and showing only essentials</td></tr>
+                        <tr><td><strong>Mechanism</strong></td><td>Access specifiers (<code>private</code>, <code>public</code>, <code>protected</code>)</td><td>Abstract classes, interfaces, pure virtual functions</td></tr>
+                        <tr><td><strong>Goal</strong></td><td>Protect data integrity</td><td>Simplify usage for the consumer</td></tr>
+                        <tr><td><strong>Level</strong></td><td>Implementation level (how data is stored)</td><td>Design level (what operations are available)</td></tr>
+                        <tr><td><strong>Example</strong></td><td>Private <code>balance</code> with public <code>getBalance()</code></td><td>A <code>Shape</code> interface with <code>area()</code> method</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>Encapsulation</strong> answers: &ldquo;How do I protect my data?&rdquo;<br><strong>Abstraction</strong> answers: &ldquo;What do I expose to the user?&rdquo;</p>
+                <p>In practice, they work together. A well-designed class uses encapsulation to hide its internals and abstraction to present a clean, intuitive interface.</p>
+
+                <!-- ===== Best Practices ===== -->
+                <h2>Best Practices</h2>
+                <ol>
+                    <li><strong>Default to <code>private</code></strong> &mdash; make all data members private unless there is a compelling reason not to.</li>
+                    <li><strong>Minimal public interface</strong> &mdash; expose only what external code truly needs. A smaller interface is easier to maintain and harder to misuse.</li>
+                    <li><strong>Validate in setters</strong> &mdash; never blindly assign values. Check ranges, formats, and constraints.</li>
+                    <li><strong>Mark getters <code>const</code></strong> &mdash; this documents and enforces that they don&rsquo;t modify the object.</li>
+                    <li><strong>Return by <code>const</code> reference</strong> for large types (strings, vectors) to avoid unnecessary copies.</li>
+                    <li><strong>Never return non-const references</strong> to private data &mdash; this creates a &ldquo;back door&rdquo; around encapsulation.</li>
+                    <li><strong>Use constructors to establish invariants</strong> &mdash; an object should be in a valid state from the moment it is created.</li>
+                    <li><strong>Prefer computed properties</strong> over stored data when possible (e.g., <code>area()</code> instead of storing area separately).</li>
+                    <li><strong>Use <code>friend</code> sparingly</strong> &mdash; it breaks encapsulation. Reserve it for operator overloads and tightly coupled helper classes.</li>
+                    <li><strong>Document the public interface</strong> &mdash; comments on public methods help users understand the class without reading the implementation.</li>
+                </ol>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Encapsulation</strong> bundles data and methods into a class while restricting direct access to internal state.</li>
+                    <li>It combines <strong>data hiding</strong> (private members) with a <strong>public interface</strong> (getters, setters, methods).</li>
+                    <li><strong>Getters</strong> provide read access; <strong>setters</strong> provide validated write access.</li>
+                    <li>You can create <strong>read-only</strong> properties (getter only) or <strong>write-only</strong> properties (setter only).</li>
+                    <li>Encapsulation improves <strong>maintainability</strong>, <strong>security</strong>, <strong>flexibility</strong>, and <strong>debuggability</strong>.</li>
+                    <li>A real-world analogy: an <strong>ATM</strong> hides internal cash and circuitry, exposing only a user interface with validation.</li>
+                    <li>Encapsulation focuses on <strong>data protection</strong>; abstraction focuses on <strong>hiding complexity</strong>. They complement each other.</li>
+                    <li>Always default to <code>private</code> data, validate in setters, mark getters <code>const</code>, and keep the public interface minimal.</li>
+                    <li>Well-encapsulated classes are easier to <strong>test</strong>, <strong>debug</strong>, <strong>refactor</strong>, and <strong>extend</strong>.</li>
+                    <li>Encapsulation is not just a C++ concept &mdash; it is a fundamental principle of <strong>good software design</strong>.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="C++ Encapsulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="" title="Video Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is encapsulation in C++?","o":["A way to inherit from multiple classes","Bundling data and methods while restricting direct access","A type of loop structure","A memory allocation technique"],"a":1},
+                {"q":"Which two ideas does encapsulation combine?","o":["Inheritance and polymorphism","Data hiding and bundling","Abstraction and templates","Overloading and overriding"],"a":1},
+                {"q":"Which access specifier is used to hide data members?","o":["public","protected","private","friend"],"a":2},
+                {"q":"What is a getter function?","o":["A function that deletes a member","A public function that returns the value of a private member","A constructor variant","A static factory method"],"a":1},
+                {"q":"What is a setter function?","o":["A function that reads a value","A public function that sets the value of a private member after validation","A destructor variant","A friend function"],"a":1},
+                {"q":"Why should getters be marked <code>const</code>?","o":["To make them faster","To indicate they do not modify the object","To prevent overriding","Because the compiler requires it"],"a":1},
+                {"q":"What advantage do setters provide over public data members?","o":["They are faster","They allow input validation before assignment","They allocate memory","They support templates"],"a":1},
+                {"q":"What is a read-only property?","o":["A property with only a setter","A property with only a getter and no setter","A property declared const","A static property"],"a":1},
+                {"q":"What is a write-only property?","o":["A property with only a getter","A property with only a setter and no getter","A property that cannot be changed","A virtual property"],"a":1},
+                {"q":"When would you use a write-only property?","o":["For public counters","For sensitive data like passwords","For loop variables","For array indices"],"a":1},
+                {"q":"Which of these breaks encapsulation?","o":["Returning a value from a getter","Returning a non-const reference to private data","Using a const getter","Validating in a setter"],"a":1},
+                {"q":"In the ATM analogy, what do private data members represent?","o":["The screen and buttons","The cash and internal circuitry","The user&rsquo;s PIN entry","The receipt printer"],"a":1},
+                {"q":"In the ATM analogy, what does the public interface represent?","o":["Internal wiring","The screen, keypad, and card slot","The vault","The power supply"],"a":1},
+                {"q":"What does validation in a setter correspond to in the ATM analogy?","o":["Printing a receipt","PIN verification and balance checking","Dispensing cash","Powering on"],"a":1},
+                {"q":"What happens if you try to set a negative value in a properly encapsulated setter?","o":["The value is silently accepted","The setter rejects or throws an exception","The program crashes","The value wraps around"],"a":1},
+                {"q":"What is the default access level of members in a C++ <code>class</code>?","o":["public","protected","private","friend"],"a":2},
+                {"q":"What is the default access level of members in a C++ <code>struct</code>?","o":["private","protected","public","static"],"a":2},
+                {"q":"Why is encapsulation important for maintainability?","o":["It makes code run faster","Internal changes don&rsquo;t affect code using the class","It reduces file size","It enables multiple inheritance"],"a":1},
+                {"q":"Why is encapsulation important for security?","o":["It encrypts data","It prevents direct modification of sensitive data","It hides the source code","It blocks network access"],"a":1},
+                {"q":"How does encapsulation improve debugging?","o":["It eliminates all bugs","Data changes go through specific methods where breakpoints can be set","It adds automatic logging","It prevents compilation errors"],"a":1},
+                {"q":"Which code correctly demonstrates encapsulation?","o":["<code>struct S { int x; };</code>","<code>class C { int x; public: int getX() const { return x; } };</code>","<code>int x = 5;</code>","<code>void f() { int x; }</code>"],"a":1},
+                {"q":"What is wrong with: <code>class C { public: int balance; };</code>?","o":["Nothing, it is perfect","balance can be modified without validation, breaking encapsulation","It won&rsquo;t compile","balance is private by default"],"a":1},
+                {"q":"How should a getter return a large object like a <code>string</code>?","o":["By value always","By non-const reference","By const reference to avoid copies","By pointer"],"a":2},
+                {"q":"What does a static factory method like <code>fromFahrenheit()</code> do?","o":["Modifies the current object","Creates and returns a new object from different input","Deletes the object","Copies the object"],"a":1},
+                {"q":"In the Temperature class, what validates the input?","o":["The getter","The constructor and setter call a validate() method","The main() function","The compiler"],"a":1},
+                {"q":"What is absolute zero in Celsius?","o":["0 &deg;C","-100 &deg;C","-273.15 &deg;C","-459.67 &deg;C"],"a":2},
+                {"q":"What exception is thrown for a temperature below absolute zero?","o":["invalid_argument","out_of_range","runtime_error","logic_error"],"a":1},
+                {"q":"In the Employee example, why is <code>id</code> read-only?","o":["It is public","It has only a getter, no setter &mdash; assigned once in the constructor","It is a static member","It is protected"],"a":1},
+                {"q":"What does the <code>promote()</code> method check before applying a raise?","o":["Nothing","That the employee is active and the raise is between 0% and 50%","That the employee has a manager","That the salary is above minimum wage"],"a":1},
+                {"q":"What is a computed property?","o":["A stored data member","A value calculated from other data on demand, like <code>area()</code>","A constant value","A template parameter"],"a":1},
+                {"q":"Why prefer computed properties over storing derived values?","o":["They use more memory","They avoid data inconsistency when source data changes","They are faster","They are required by the standard"],"a":1},
+                {"q":"What is the difference between encapsulation and abstraction?","o":["They are the same thing","Encapsulation hides data; abstraction hides complexity","Abstraction hides data; encapsulation hides complexity","Neither hides anything"],"a":1},
+                {"q":"Which mechanism does encapsulation use?","o":["Abstract classes and interfaces","Access specifiers (private, public, protected)","Templates","Namespaces"],"a":1},
+                {"q":"Which mechanism does abstraction use?","o":["Access specifiers only","Abstract classes, interfaces, and pure virtual functions","Macros","Preprocessor directives"],"a":1},
+                {"q":"What question does encapsulation answer?","o":["What operations are available?","How do I protect my data?","How do I inherit behaviour?","How do I allocate memory?"],"a":1},
+                {"q":"What question does abstraction answer?","o":["How do I protect my data?","What do I expose to the user?","How do I loop efficiently?","How do I manage memory?"],"a":1},
+                {"q":"Should every private member have a getter and setter?","o":["Yes, always","No &mdash; only expose what external code truly needs","Yes, but only getters","Only if the member is an int"],"a":1},
+                {"q":"Why should the public interface be minimal?","o":["To save memory","A smaller interface is easier to maintain and harder to misuse","Compilers require it","It prevents inheritance"],"a":1},
+                {"q":"Can encapsulation prevent all bugs?","o":["Yes","No, but it makes bugs easier to find and fix","Only in debug mode","Only with smart pointers"],"a":1},
+                {"q":"What happens when you try <code>obj.salary = 0;</code> on a private member?","o":["It succeeds","Compile-time error","Runtime error","Warning only"],"a":1},
+                {"q":"Why use <code>friend</code> sparingly with encapsulation?","o":["It is deprecated","It breaks encapsulation by granting external access to private data","It slows compilation","It prevents polymorphism"],"a":1},
+                {"q":"Which is an example of using encapsulation with constructors?","o":["Leaving members uninitialised","Setting and validating all members in the constructor so the object starts valid","Making the constructor private","Using default arguments only"],"a":1},
+                {"q":"What does <code>const string&amp; getName() const</code> mean?","o":["Returns a mutable reference; modifies the object","Returns a const reference; does not modify the object","Returns a copy; modifies the object","Returns void"],"a":1},
+                {"q":"What is the benefit of throwing exceptions in setters?","o":["It skips validation","It immediately signals an error to the caller with a descriptive message","It silently ignores bad input","It terminates the program"],"a":1},
+                {"q":"What does bool-based validation in a setter return on invalid input?","o":["true","false to indicate failure without throwing","It throws an exception","It returns -1"],"a":1},
+                {"q":"How does encapsulation help with testing?","o":["It makes testing impossible","You can test the public interface independently without knowing internals","It requires fewer tests","It only works in production"],"a":1},
+                {"q":"What is the relationship between encapsulation and information hiding?","o":["They are unrelated","Information hiding is a key aspect of encapsulation","Encapsulation opposes information hiding","Information hiding replaces encapsulation"],"a":1},
+                {"q":"In the Employee example, what does <code>static int nextId</code> do?","o":["Creates a public counter","Automatically assigns a unique ID to each new employee","Deletes old employees","Tracks salary changes"],"a":1},
+                {"q":"Which OOP pillar does encapsulation belong to?","o":["It is not an OOP pillar","It is one of the four fundamental OOP pillars","It belongs to procedural programming","It is a design pattern"],"a":1},
+                {"q":"What best describes a well-encapsulated class?","o":["All members are public for easy access","Private data, validated setters, const getters, minimal public interface","No methods, only data","Only static members"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="access-specifiers.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Access Specifiers</span>
+                </a>
+                <a href="inheritance.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Inheritance</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

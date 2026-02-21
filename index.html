@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <meta name="description" content="CodeVerse - Your comprehensive platform to learn C++, Python, JavaScript, Java, and more programming languages with interactive tutorials, quizzes, and video lessons.">
     <meta name="keywords" content="learn programming, C++, Python, JavaScript, Java, coding tutorials, programming courses, learn to code">
     <meta name="author" content="CodeVerse Team">
@@ -13,173 +12,6 @@
     <title>CodeVerse - Learn Any Programming Language | Interactive Tutorials</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-=======
-    <link rel="shortcut icon" href="Favicon(1)(1).png" type="image/x-icon">
-    <title>CodeMaster - C++ Programming Tutorials</title>
-    <style>
-        /* Reset default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Variables */
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --background-color: #f8fafc;
-            --text-color: #1e293b;
-            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1rem 0;
-            box-shadow: var(--card-shadow);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .header-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .header-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: white;
-            padding: 1rem 0;
-            box-shadow: var(--card-shadow);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        .tutorial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .tutorial-card {
-            background-color: white;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .tutorial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .tutorial-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .tutorial-card p {
-            margin-bottom: 1rem;
-            color: #64748b;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 0.5rem;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-color);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .tutorial-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
->>>>>>> 691cc5cd7bc3f34c44f4b40710ea12b55ff103e3
 </head>
 <body data-page="home">
 
@@ -212,6 +44,13 @@
             </nav>
 
             <div class="nav-actions">
+                <div class="header-search">
+                    <button class="header-search-toggle" aria-label="Search">&#128269;</button>
+                    <input type="text" class="header-search-input" placeholder="Search courses, lessons..." aria-label="Search site">
+                    <span class="header-search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+                    <div class="header-search-dropdown"></div>
+                </div>
+
                 <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <div class="hamburger">
@@ -239,11 +78,11 @@
                         <span class="stat-label">Languages</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-count="50" data-suffix="+">0</span>
+                        <span class="stat-number" data-count="55" data-suffix="+">0</span>
                         <span class="stat-label">Tutorials</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-count="200" data-suffix="+">0</span>
+                        <span class="stat-number" data-count="2450" data-suffix="+">0</span>
                         <span class="stat-label">Quiz Questions</span>
                     </div>
                     <div class="stat-item">
@@ -289,6 +128,14 @@
             <div class="search-container animate-on-scroll">
                 <span class="search-icon">&#128269;</span>
                 <input type="text" class="search-input" placeholder="Search languages, topics, or tutorials..." aria-label="Search">
+                <button class="search-clear" aria-label="Clear search">&times;</button>
+                <span class="search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+            </div>
+            <div class="search-results-info"></div>
+            <div class="search-empty-state">
+                <div class="empty-icon">&#128269;</div>
+                <h3>No results found</h3>
+                <p>Try a different search term or browse the languages below.</p>
             </div>
 
             <div class="language-grid stagger-children">
@@ -303,7 +150,7 @@
                     </div>
                     <p class="description">Master system-level programming, game development, and high-performance applications with C++.</p>
                     <div class="language-meta">
-                        <span class="lessons">&#128218; 7 Lessons</span>
+                        <span class="lessons">&#128218; 55 Lessons</span>
                         <span class="level">
                             <div class="difficulty-dots">
                                 <span class="filled"></span>
@@ -539,15 +386,15 @@
                     <span class="stat-label">Programming Languages</span>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <span class="stat-number" data-count="50" data-suffix="+">0</span>
+                    <span class="stat-number" data-count="55" data-suffix="+">0</span>
                     <span class="stat-label">In-Depth Tutorials</span>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <span class="stat-number" data-count="200" data-suffix="+">0</span>
+                    <span class="stat-number" data-count="2450" data-suffix="+">0</span>
                     <span class="stat-label">Practice Questions</span>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <span class="stat-number" data-count="40" data-suffix="+">0</span>
+                    <span class="stat-number" data-count="55" data-suffix="+">0</span>
                     <span class="stat-label">Video Lessons</span>
                 </div>
             </div>
@@ -605,7 +452,7 @@
                 <p>Not sure which language to learn? Compare their strengths at a glance.</p>
             </div>
 
-            <div class="animate-on-scroll" style="overflow-x:auto;">
+            <div class="animate-on-scroll comparison-table-wrapper">
                 <table class="comparison-table">
                     <thead>
                         <tr>
@@ -723,7 +570,8 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made with &#10084; for learners.</p>
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved. Made by <a href="https://github.com/mAB-Barket">mAB-Barket</a> </p>
+            
                 <div class="footer-socials">
                     <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer" aria-label="GitHub">&#128187;</a>
                 </div>
@@ -734,8 +582,4 @@
     <button class="back-to-top" aria-label="Back to top">&#8593;</button>
     <script src="assets/js/script.js"></script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>`                        
->>>>>>> 691cc5cd7bc3f34c44f4b40710ea12b55ff103e3

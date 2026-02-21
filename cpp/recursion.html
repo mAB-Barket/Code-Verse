@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Recursion - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-recursion">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html" class="active"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 20 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="36" style="width:36%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Recursion
+                </div>
+                <h1>20. Recursion</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 20 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Recursion? ===== -->
+                <h2>What Is Recursion?</h2>
+                <p><strong>Recursion</strong> is a programming technique where a <strong>function calls itself</strong> to solve a problem. Instead of using loops, a recursive function breaks a problem into smaller, similar sub-problems and solves each one by calling itself with modified arguments until it reaches a simple case that can be answered directly.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>What recursion is and how it works</li>
+                    <li>The two essential parts: <strong>base case</strong> and <strong>recursive case</strong></li>
+                    <li>Classic examples: factorial, Fibonacci, power, and more</li>
+                    <li>How the <strong>call stack</strong> manages recursive calls</li>
+                    <li>Recursion vs iteration &mdash; when to use which</li>
+                    <li>Tail recursion and optimization</li>
+                    <li>Common mistakes and best practices</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Every recursive function <strong>must</strong> have a <strong>base case</strong> &mdash; a condition that stops the recursion. Without it, the function will call itself infinitely, causing a <strong>stack overflow</strong> crash.</p>
+                </div>
+
+                <!-- ===== How Recursion Works ===== -->
+                <h2>How Recursion Works</h2>
+                <p>A recursive function has two essential components:</p>
+                <ol>
+                    <li><strong>Base Case</strong> &mdash; the simplest version of the problem that can be solved directly without further recursion. This is the stopping condition.</li>
+                    <li><strong>Recursive Case</strong> &mdash; the function calls itself with a <em>smaller</em> or <em>simpler</em> version of the original problem, moving closer to the base case with each call.</li>
+                </ol>
+                <p>Here is the general structure of a recursive function:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>returnType functionName(parameters) {
+    if (base_condition) {
+        return base_value;        // Base case: stop recursion
+    }
+    // Recursive case: call itself with a smaller problem
+    return functionName(modified_parameters);
+}</pre></div>
+
+                <p>When a function calls itself, the current call is <strong>paused</strong> and a new copy of the function is pushed onto the <strong>call stack</strong>. Once the base case is reached, the results &ldquo;unwind&rdquo; back through each paused call until the original call returns its final answer.</p>
+
+                <div class="tip">
+                    <h3>&#128161; Think of It This Way</h3>
+                    <p>Imagine you&rsquo;re standing in a line and want to know your position. You ask the person in front of you, &ldquo;What&rsquo;s your position?&rdquo; They ask the person in front of <em>them</em>, and so on. The person at the front says &ldquo;I&rsquo;m number 1.&rdquo; Each person then adds 1 and passes the answer back. That&rsquo;s recursion!</p>
+                </div>
+
+                <!-- ===== Factorial Example ===== -->
+                <h2>Factorial Example</h2>
+                <p>The <strong>factorial</strong> of a non-negative integer <em>n</em> (written as <code>n!</code>) is the product of all positive integers from 1 to <em>n</em>. By definition, <code>0! = 1</code>.</p>
+                <p>Mathematically: <code>n! = n &times; (n-1) &times; (n-2) &times; &hellip; &times; 1</code></p>
+                <p>This can be expressed recursively as:</p>
+                <ul>
+                    <li><strong>Base case:</strong> <code>factorial(0) = 1</code></li>
+                    <li><strong>Recursive case:</strong> <code>factorial(n) = n &times; factorial(n - 1)</code></li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0) {
+        return 1;           // Base case
+    }
+    return n * factorial(n - 1);  // Recursive case
+}
+
+int main() {
+    cout &lt;&lt; "5! = " &lt;&lt; factorial(5) &lt;&lt; endl;
+    cout &lt;&lt; "0! = " &lt;&lt; factorial(0) &lt;&lt; endl;
+    cout &lt;&lt; "8! = " &lt;&lt; factorial(8) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>5! = 120
+0! = 1
+8! = 40320</pre></div>
+
+                <h3>Step-by-Step Walkthrough: factorial(5)</h3>
+                <p>Let&rsquo;s trace through how <code>factorial(5)</code> is evaluated:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>factorial(5)
+  = 5 * factorial(4)
+  = 5 * (4 * factorial(3))
+  = 5 * (4 * (3 * factorial(2)))
+  = 5 * (4 * (3 * (2 * factorial(1))))
+  = 5 * (4 * (3 * (2 * (1 * factorial(0)))))
+  = 5 * (4 * (3 * (2 * (1 * 1))))       &larr; base case reached
+  = 5 * (4 * (3 * (2 * 1)))
+  = 5 * (4 * (3 * 2))
+  = 5 * (4 * 6)
+  = 5 * 24
+  = 120</pre></div>
+
+                <p>Each call waits for the next one to return. Once <code>factorial(0)</code> returns <code>1</code>, the results cascade back up, multiplying at each level.</p>
+
+                <!-- ===== Fibonacci Sequence ===== -->
+                <h2>Fibonacci Sequence</h2>
+                <p>The <strong>Fibonacci sequence</strong> is a series where each number is the sum of the two preceding ones: 0, 1, 1, 2, 3, 5, 8, 13, 21, &hellip;</p>
+                <ul>
+                    <li><strong>Base cases:</strong> <code>fib(0) = 0</code>, <code>fib(1) = 1</code></li>
+                    <li><strong>Recursive case:</strong> <code>fib(n) = fib(n-1) + fib(n-2)</code></li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int fibonacci(int n) {
+    if (n == 0) return 0;     // Base case 1
+    if (n == 1) return 1;     // Base case 2
+    return fibonacci(n - 1) + fibonacci(n - 2);  // Recursive case
+}
+
+int main() {
+    cout &lt;&lt; "Fibonacci sequence: ";
+    for (int i = 0; i &lt; 10; i++) {
+        cout &lt;&lt; fibonacci(i) &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Fibonacci sequence: 0 1 1 2 3 5 8 13 21 34 </pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The naive recursive Fibonacci has <strong>exponential time complexity</strong> O(2<sup>n</sup>) because it recalculates the same values many times. For example, <code>fib(5)</code> calls <code>fib(3)</code> twice. For large <em>n</em>, use <strong>memoization</strong> or an <strong>iterative</strong> approach instead.</p>
+                </div>
+
+                <!-- ===== Sum of Natural Numbers ===== -->
+                <h2>Sum of Natural Numbers</h2>
+                <p>Calculate the sum <code>1 + 2 + 3 + &hellip; + n</code> using recursion:</p>
+                <ul>
+                    <li><strong>Base case:</strong> <code>sum(0) = 0</code></li>
+                    <li><strong>Recursive case:</strong> <code>sum(n) = n + sum(n - 1)</code></li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int sum(int n) {
+    if (n == 0) return 0;       // Base case
+    return n + sum(n - 1);      // Recursive case
+}
+
+int main() {
+    cout &lt;&lt; "Sum of 1 to 10: " &lt;&lt; sum(10) &lt;&lt; endl;
+    cout &lt;&lt; "Sum of 1 to 100: " &lt;&lt; sum(100) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Sum of 1 to 10: 55
+Sum of 1 to 100: 5050</pre></div>
+
+                <!-- ===== Power Function ===== -->
+                <h2>Power Function (x<sup>n</sup>)</h2>
+                <p>Compute <code>x</code> raised to the power <code>n</code> recursively:</p>
+                <ul>
+                    <li><strong>Base case:</strong> <code>power(x, 0) = 1</code> (any number to the power of 0 is 1)</li>
+                    <li><strong>Recursive case:</strong> <code>power(x, n) = x &times; power(x, n - 1)</code></li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+double power(double x, int n) {
+    if (n == 0) return 1;             // Base case
+    if (n &lt; 0) return 1.0 / power(x, -n);  // Handle negative exponents
+    return x * power(x, n - 1);       // Recursive case
+}
+
+int main() {
+    cout &lt;&lt; "2^10 = " &lt;&lt; power(2, 10) &lt;&lt; endl;
+    cout &lt;&lt; "3^4  = " &lt;&lt; power(3, 4) &lt;&lt; endl;
+    cout &lt;&lt; "5^0  = " &lt;&lt; power(5, 0) &lt;&lt; endl;
+    cout &lt;&lt; "2^-3 = " &lt;&lt; power(2, -3) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>2^10 = 1024
+3^4  = 81
+5^0  = 1
+2^-3 = 0.125</pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; Efficient Power</h3>
+                    <p>The above approach has O(n) complexity. A more efficient method is <strong>exponentiation by squaring</strong>: if <em>n</em> is even, <code>x<sup>n</sup> = (x<sup>n/2</sup>)<sup>2</sup></code>. This reduces the complexity to O(log n).</p>
+                </div>
+
+                <!-- ===== Counting Digits ===== -->
+                <h2>Counting Digits</h2>
+                <p>Count the number of digits in a positive integer using recursion:</p>
+                <ul>
+                    <li><strong>Base case:</strong> if <code>n &lt; 10</code>, it has 1 digit</li>
+                    <li><strong>Recursive case:</strong> <code>countDigits(n) = 1 + countDigits(n / 10)</code></li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int countDigits(int n) {
+    if (n &lt; 10) return 1;              // Base case: single digit
+    return 1 + countDigits(n / 10);    // Remove last digit, add 1
+}
+
+int main() {
+    cout &lt;&lt; "Digits in 12345: " &lt;&lt; countDigits(12345) &lt;&lt; endl;
+    cout &lt;&lt; "Digits in 7:     " &lt;&lt; countDigits(7) &lt;&lt; endl;
+    cout &lt;&lt; "Digits in 1000000: " &lt;&lt; countDigits(1000000) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Digits in 12345: 5
+Digits in 7:     1
+Digits in 1000000: 7</pre></div>
+
+                <!-- ===== Reversing a String ===== -->
+                <h2>Reversing a String</h2>
+                <p>Reverse a string by recursively moving the first character to the end:</p>
+                <ul>
+                    <li><strong>Base case:</strong> if the string has 0 or 1 characters, it&rsquo;s already reversed</li>
+                    <li><strong>Recursive case:</strong> reverse the substring after the first character, then append the first character</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+string reverseStr(string s) {
+    if (s.length() &lt;= 1) return s;   // Base case
+    // Reverse everything after the first char, then add first char at end
+    return reverseStr(s.substr(1)) + s[0];
+}
+
+int main() {
+    cout &lt;&lt; reverseStr("hello") &lt;&lt; endl;
+    cout &lt;&lt; reverseStr("CodeVerse") &lt;&lt; endl;
+    cout &lt;&lt; reverseStr("A") &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>olleh
+esreVedoC
+A</pre></div>
+
+                <p>For <code>"hello"</code>, the calls unfold like this:</p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>reverseStr("hello")
+  = reverseStr("ello") + 'h'
+  = (reverseStr("llo") + 'e') + 'h'
+  = ((reverseStr("lo") + 'l') + 'e') + 'h'
+  = (((reverseStr("o") + 'l') + 'l') + 'e') + 'h'
+  = ((("o" + 'l') + 'l') + 'e') + 'h'
+  = "olleh"</pre></div>
+
+                <!-- ===== Tower of Hanoi ===== -->
+                <h2>Tower of Hanoi</h2>
+                <p>The <strong>Tower of Hanoi</strong> is a classic recursion puzzle. You have three pegs and <em>n</em> disks of different sizes stacked on the first peg (smallest on top). The goal is to move all disks to the third peg, following these rules:</p>
+                <ol>
+                    <li>Only one disk can be moved at a time.</li>
+                    <li>Only the top disk of a peg can be moved.</li>
+                    <li>A larger disk cannot be placed on top of a smaller disk.</li>
+                </ol>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+void hanoi(int n, char from, char to, char aux) {
+    if (n == 1) {
+        cout &lt;&lt; "Move disk 1 from " &lt;&lt; from &lt;&lt; " to " &lt;&lt; to &lt;&lt; endl;
+        return;
+    }
+    hanoi(n - 1, from, aux, to);     // Move n-1 disks from source to auxiliary
+    cout &lt;&lt; "Move disk " &lt;&lt; n &lt;&lt; " from " &lt;&lt; from &lt;&lt; " to " &lt;&lt; to &lt;&lt; endl;
+    hanoi(n - 1, aux, to, from);     // Move n-1 disks from auxiliary to target
+}
+
+int main() {
+    int n = 3;
+    cout &lt;&lt; "Tower of Hanoi with " &lt;&lt; n &lt;&lt; " disks:" &lt;&lt; endl;
+    hanoi(n, 'A', 'C', 'B');
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Tower of Hanoi with 3 disks:
+Move disk 1 from A to C
+Move disk 2 from A to B
+Move disk 1 from C to B
+Move disk 3 from A to C
+Move disk 1 from B to A
+Move disk 2 from B to C
+Move disk 1 from A to C</pre></div>
+
+                <p>The Tower of Hanoi requires <code>2<sup>n</sup> - 1</code> moves. For 3 disks, that&rsquo;s 7 moves. The recursive approach elegantly breaks the problem: move the top <code>n-1</code> disks out of the way, move the largest disk, then move the <code>n-1</code> disks on top of it.</p>
+
+                <!-- ===== Recursion vs Iteration ===== -->
+                <h2>Recursion vs Iteration</h2>
+                <p>Both recursion and iteration (loops) can solve repetitive problems. Here is a side-by-side comparison:</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Recursion</th>
+                            <th>Iteration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Approach</strong></td>
+                            <td>Function calls itself</td>
+                            <td>Uses loops (<code>for</code>, <code>while</code>)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Termination</strong></td>
+                            <td>Base case</td>
+                            <td>Loop condition becomes false</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory</strong></td>
+                            <td>Uses call stack (more memory)</td>
+                            <td>Uses fixed variables (less memory)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speed</strong></td>
+                            <td>Overhead from function calls</td>
+                            <td>Generally faster</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Readability</strong></td>
+                            <td>Elegant for tree/divide-and-conquer problems</td>
+                            <td>Simpler for linear problems</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stack overflow risk</strong></td>
+                            <td>Yes, with deep recursion</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best for</strong></td>
+                            <td>Trees, graphs, divide &amp; conquer, backtracking</td>
+                            <td>Simple counting, array traversal</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Here&rsquo;s the factorial function written both ways for comparison:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Recursive version
+int factorialRecursive(int n) {
+    if (n == 0) return 1;
+    return n * factorialRecursive(n - 1);
+}
+
+// Iterative version
+int factorialIterative(int n) {
+    int result = 1;
+    for (int i = 2; i &lt;= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+int main() {
+    cout &lt;&lt; "Recursive: " &lt;&lt; factorialRecursive(6) &lt;&lt; endl;
+    cout &lt;&lt; "Iterative: " &lt;&lt; factorialIterative(6) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Recursive: 720
+Iterative: 720</pre></div>
+
+                <div class="tip">
+                    <h3>&#128161; When to Choose Recursion</h3>
+                    <p>Use recursion when the problem is naturally recursive &mdash; tree traversals, graph searches, parsing nested structures, or divide-and-conquer algorithms. Use iteration when a simple loop suffices, as it&rsquo;s usually more efficient.</p>
+                </div>
+
+                <!-- ===== Tail Recursion ===== -->
+                <h2>Tail Recursion</h2>
+                <p><strong>Tail recursion</strong> is a special form of recursion where the recursive call is the <strong>very last operation</strong> in the function &mdash; there&rsquo;s no computation after the recursive call returns. Some compilers can <strong>optimize</strong> tail-recursive functions by reusing the current stack frame instead of creating a new one, effectively turning recursion into iteration.</p>
+
+                <p>Here&rsquo;s a tail-recursive version of factorial:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+// Tail-recursive factorial using an accumulator
+int factorialTail(int n, int accumulator = 1) {
+    if (n == 0) return accumulator;           // Base case
+    return factorialTail(n - 1, n * accumulator);  // Tail call
+}
+
+int main() {
+    cout &lt;&lt; "5! = " &lt;&lt; factorialTail(5) &lt;&lt; endl;
+    cout &lt;&lt; "10! = " &lt;&lt; factorialTail(10) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>5! = 120
+10! = 3628800</pre></div>
+
+                <p>Compare the two forms:</p>
+                <ul>
+                    <li><strong>Normal recursion:</strong> <code>return n * factorial(n - 1);</code> &mdash; the multiplication happens <em>after</em> the recursive call returns.</li>
+                    <li><strong>Tail recursion:</strong> <code>return factorialTail(n - 1, n * accumulator);</code> &mdash; nothing happens after the call; the result is passed along via the <code>accumulator</code>.</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The C++ standard does <strong>not guarantee</strong> tail call optimization (TCO). However, most modern compilers (GCC, Clang) will apply it when compiling with optimizations enabled (e.g., <code>-O2</code>). Always verify with your compiler if performance is critical.</p>
+                </div>
+
+                <!-- ===== Understanding the Call Stack and Stack Overflow ===== -->
+                <h2>Understanding the Call Stack and Stack Overflow</h2>
+                <p>Every time a function is called, the system allocates a <strong>stack frame</strong> on the <strong>call stack</strong>. This frame stores the function&rsquo;s local variables, parameters, and the return address (where to continue after the function finishes).</p>
+                <p>With recursion, each recursive call adds a <em>new</em> stack frame. For <code>factorial(5)</code>, there are 6 frames on the stack simultaneously (one for each call from <code>factorial(5)</code> down to <code>factorial(0)</code>).</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// Visualizing the call stack for factorial(4):
+
+|  factorial(0)  |  &larr; top of stack (base case reached)
+|  factorial(1)  |
+|  factorial(2)  |
+|  factorial(3)  |
+|  factorial(4)  |
+|     main()     |  &larr; bottom of stack
+|________________|</pre></div>
+
+                <p>The call stack has a <strong>limited size</strong> (typically 1&ndash;8 MB depending on the platform). If recursion goes too deep, the stack runs out of space, causing a <strong>stack overflow</strong>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// &#9888; WARNING: This will crash with a stack overflow!
+#include &lt;iostream&gt;
+using namespace std;
+
+void infinite() {
+    cout &lt;&lt; "Calling..." &lt;&lt; endl;
+    infinite();   // No base case &mdash; infinite recursion!
+}
+
+int main() {
+    infinite();
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>Calling...
+Calling...
+Calling...
+... (crashes with stack overflow / segmentation fault)</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>A <strong>stack overflow</strong> occurs when the call stack exceeds its allocated memory. This is almost always caused by <strong>missing or incorrect base cases</strong> in recursive functions. Always ensure your recursion converges toward the base case.</p>
+                </div>
+
+                <!-- ===== Common Mistakes and Best Practices ===== -->
+                <h2>Common Mistakes and Best Practices</h2>
+
+                <h3>Common Mistakes</h3>
+                <ol>
+                    <li>
+                        <strong>Missing base case</strong> &mdash; the most common error. Without a base case, the function recurses forever.
+                        <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// &#10060; WRONG: no base case
+int factorial(int n) {
+    return n * factorial(n - 1);  // Never stops!
+}
+
+// &#9989; CORRECT: base case included
+int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}</pre></div>
+                    </li>
+                    <li>
+                        <strong>Base case that is never reached</strong> &mdash; the recursive call doesn&rsquo;t move toward the base case.
+                        <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// &#10060; WRONG: n increases instead of decreasing
+int sum(int n) {
+    if (n == 0) return 0;
+    return n + sum(n + 1);  // Moves away from base case!
+}</pre></div>
+                    </li>
+                    <li>
+                        <strong>Not handling edge cases</strong> &mdash; forgetting to handle negative inputs or empty containers.
+                    </li>
+                    <li>
+                        <strong>Excessive recursion depth</strong> &mdash; calling with very large inputs without considering stack limits.
+                    </li>
+                    <li>
+                        <strong>Redundant computation</strong> &mdash; like naive Fibonacci, recalculating the same sub-problems many times.
+                    </li>
+                </ol>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li><strong>Always define a clear base case</strong> &mdash; identify the simplest scenario first.</li>
+                    <li><strong>Ensure progress toward the base case</strong> &mdash; each recursive call should reduce the problem size.</li>
+                    <li><strong>Consider iteration for simple problems</strong> &mdash; if a loop works cleanly, use it.</li>
+                    <li><strong>Use memoization for overlapping sub-problems</strong> &mdash; store already-computed results to avoid redundant work.</li>
+                    <li><strong>Prefer tail recursion when possible</strong> &mdash; it may be optimized by the compiler.</li>
+                    <li><strong>Test with small inputs first</strong> &mdash; trace through the recursion manually before running with large data.</li>
+                    <li><strong>Add input validation</strong> &mdash; handle negative numbers, empty collections, and other edge cases.</li>
+                </ul>
+
+                <div class="tip">
+                    <h3>&#128161; Memoization Example</h3>
+                    <p>Here&rsquo;s a memoized Fibonacci that avoids exponential blowup:</p>
+                </div>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;map&gt;
+using namespace std;
+
+map&lt;int, long long&gt; memo;
+
+long long fib(int n) {
+    if (n &lt;= 1) return n;
+    if (memo.count(n)) return memo[n];  // Already computed?
+    memo[n] = fib(n - 1) + fib(n - 2);
+    return memo[n];
+}
+
+int main() {
+    for (int i = 0; i &lt; 15; i++) {
+        cout &lt;&lt; fib(i) &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "fib(40) = " &lt;&lt; fib(40) &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="code-output"><strong>Output:</strong><pre>0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 
+fib(40) = 102334155</pre></div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Recursion</strong> is when a function calls itself to solve smaller instances of the same problem.</li>
+                    <li>Every recursive function needs a <strong>base case</strong> (stopping condition) and a <strong>recursive case</strong> (the self-call with a smaller problem).</li>
+                    <li>Classic examples include <strong>factorial</strong>, <strong>Fibonacci</strong>, <strong>power</strong>, <strong>counting digits</strong>, <strong>string reversal</strong>, and the <strong>Tower of Hanoi</strong>.</li>
+                    <li>Recursive calls are managed on the <strong>call stack</strong>. Too many nested calls cause a <strong>stack overflow</strong>.</li>
+                    <li><strong>Tail recursion</strong> places the recursive call as the last operation, allowing potential compiler optimization.</li>
+                    <li>Use <strong>memoization</strong> to avoid redundant computation in problems with overlapping sub-problems.</li>
+                    <li>Choose <strong>recursion</strong> for naturally recursive structures (trees, graphs, divide &amp; conquer). Choose <strong>iteration</strong> when a simple loop is clearer and more efficient.</li>
+                    <li>Always <strong>validate inputs</strong> and ensure the recursion <strong>converges</strong> toward the base case.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Watch: C++ Recursion</h2>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/rf60MejMz3E" title="C++ Recursion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- ===== Quiz Section ===== -->
+            <div class="quiz-btn-wrapper">
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is recursion?","o":["A loop that runs forever","A function that calls itself","A variable that references itself","A class that inherits from itself"],"a":1},
+                {"q":"What are the two essential parts of a recursive function?","o":["Header and body","Declaration and definition","Base case and recursive case","Input and output"],"a":2},
+                {"q":"What happens if a recursive function has no base case?","o":["It returns 0","It runs once and stops","It causes infinite recursion and a stack overflow","It automatically creates a base case"],"a":2},
+                {"q":"What is the base case in a recursive factorial function?","o":["factorial(1) = 0","factorial(n) = n * factorial(n-1)","factorial(0) = 1","factorial(n) = n + factorial(n-1)"],"a":2},
+                {"q":"What is the output of factorial(0)?","o":["0","1","Undefined","Error"],"a":1},
+                {"q":"What is the output of factorial(5)?","o":["25","120","60","720"],"a":1},
+                {"q":"In the Fibonacci sequence, what is fib(6)?","o":["5","6","8","13"],"a":2},
+                {"q":"What are the base cases for recursive Fibonacci?","o":["fib(0) = 0, fib(1) = 1","fib(0) = 1, fib(1) = 1","fib(1) = 0, fib(2) = 1","fib(0) = 0, fib(1) = 2"],"a":0},
+                {"q":"Why is naive recursive Fibonacci inefficient?","o":["It uses too much memory for variables","It recalculates the same values many times","It cannot handle numbers greater than 10","It requires global variables"],"a":1},
+                {"q":"What is the time complexity of naive recursive Fibonacci?","o":["O(n)","O(n log n)","O(2^n)","O(n^2)"],"a":2},
+                {"q":"What technique avoids redundant computation in recursive Fibonacci?","o":["Tail recursion","Memoization","Operator overloading","Polymorphism"],"a":1},
+                {"q":"What does the call stack store for each function call?","o":["Only the return value","Local variables, parameters, and return address","Global variables only","The entire program"],"a":1},
+                {"q":"What causes a stack overflow?","o":["Using too many variables","Calling too many different functions","Too many nested recursive calls exceeding stack memory","Dividing by zero"],"a":2},
+                {"q":"What is the result of sum(10) where sum(n) = n + sum(n-1) and sum(0) = 0?","o":["10","45","55","100"],"a":2},
+                {"q":"What is the output of power(2, 10)?","o":["20","100","512","1024"],"a":3},
+                {"q":"What is the base case for the power function power(x, n)?","o":["power(x, 1) = 1","power(x, 0) = 1","power(0, n) = 0","power(1, n) = n"],"a":1},
+                {"q":"How many digits does the number 100000 have according to countDigits?","o":["5","6","7","100000"],"a":1},
+                {"q":"What is the base case for countDigits(n)?","o":["n == 0","n &lt; 10","n &lt; 100","n == 1"],"a":1},
+                {"q":"What is the output of reverseStr(\"hello\")?","o":["hello","olleh","lehlo","olelh"],"a":1},
+                {"q":"How many moves are needed to solve Tower of Hanoi with 4 disks?","o":["8","15","16","31"],"a":1},
+                {"q":"In Tower of Hanoi, what is the formula for the minimum number of moves for n disks?","o":["n^2","2n","2^n - 1","n! - 1"],"a":2},
+                {"q":"What is tail recursion?","o":["Recursion at the beginning of a function","Recursion where the recursive call is the last operation","Recursion with two base cases","Recursion that uses arrays"],"a":1},
+                {"q":"Why is tail recursion beneficial?","o":["It always runs faster","The compiler can optimize it to reuse the stack frame","It uses more memory","It eliminates the need for a base case"],"a":1},
+                {"q":"Does the C++ standard guarantee tail call optimization?","o":["Yes, always","No, but many compilers support it with optimizations enabled","Only in C++20","Only for void functions"],"a":1},
+                {"q":"In a tail-recursive factorial, what is the purpose of the accumulator parameter?","o":["To count recursive calls","To carry the computed result forward through each call","To store the base case","To handle negative numbers"],"a":1},
+                {"q":"Which is generally more memory-efficient: recursion or iteration?","o":["Recursion","Iteration","They use the same amount","Depends on the compiler"],"a":1},
+                {"q":"When is recursion preferred over iteration?","o":["For simple counting loops","For tree traversals and divide-and-conquer algorithms","For printing numbers 1 to 100","For reading user input"],"a":1},
+                {"q":"What data structure does the system use to manage recursive calls?","o":["Queue","Heap","Stack","Linked list"],"a":2},
+                {"q":"What is the output? int f(int n){if(n==0)return 0;return n+f(n-1);} cout&lt;&lt;f(5);","o":["5","10","15","20"],"a":2},
+                {"q":"What is the output? int f(int n){if(n&lt;=1)return n;return f(n-1)+f(n-2);} cout&lt;&lt;f(7);","o":["7","8","13","21"],"a":2},
+                {"q":"Which of these is NOT a valid base case for a string recursion?","o":["String is empty","String has one character","String length is less than 0","String equals a specific value"],"a":2},
+                {"q":"What is the output? int f(int n){if(n==1)return 0;return 1+f(n/2);} cout&lt;&lt;f(16);","o":["2","3","4","16"],"a":2},
+                {"q":"What common mistake causes a base case to never be reached?","o":["Using return statements","The recursive call moves away from the base case","Having too many parameters","Using cout in the function"],"a":1},
+                {"q":"What is the maximum typical stack size on most systems?","o":["1 KB","1-8 MB","1 GB","Unlimited"],"a":1},
+                {"q":"Which problem is a classic example of recursion?","o":["Bubble sort only","Tower of Hanoi","Variable declaration","File reading"],"a":1},
+                {"q":"How can memoization be implemented in C++?","o":["Using goto statements","Using a map or array to store computed results","Using #define macros","Using inline functions"],"a":1},
+                {"q":"What is the space complexity of recursive factorial?","o":["O(1)","O(n)","O(n^2)","O(log n)"],"a":1},
+                {"q":"What is the output? int f(int a,int b){if(b==0)return a;return f(b,a%b);} cout&lt;&lt;f(12,8);","o":["2","4","8","12"],"a":1},
+                {"q":"The function in the previous question computes the:","o":["LCM","GCD","Sum","Product"],"a":1},
+                {"q":"What is indirect recursion?","o":["A function that calls itself","Function A calls function B, which calls function A","A function with no base case","A function that uses loops"],"a":1},
+                {"q":"What is the output? int f(int n){if(n==0)return 1;return 2*f(n-1);} cout&lt;&lt;f(5);","o":["10","16","32","64"],"a":2},
+                {"q":"Which compiler flag typically enables tail call optimization in GCC?","o":["-Wall","-g","-O2","-std=c++17"],"a":2},
+                {"q":"What is the output? void f(int n){if(n&gt;0){f(n-1);cout&lt;&lt;n&lt;&lt;\" \";}} f(4);","o":["4 3 2 1","1 2 3 4","4 3 2 1 0","0 1 2 3 4"],"a":1},
+                {"q":"What is the output? void f(int n){if(n&gt;0){cout&lt;&lt;n&lt;&lt;\" \";f(n-1);}} f(4);","o":["4 3 2 1","1 2 3 4","4 3 2 1 0","0 1 2 3 4"],"a":0},
+                {"q":"In question 43, the cout is BEFORE the recursive call. This prints in which order?","o":["Ascending","Descending","Random","No output"],"a":1},
+                {"q":"In question 42, the cout is AFTER the recursive call. This prints in which order?","o":["Ascending","Descending","Random","No output"],"a":0},
+                {"q":"What is mutual recursion?","o":["Two functions that never call each other","Two or more functions that call each other","A function with two base cases","A function that uses two loops"],"a":1},
+                {"q":"What is the output? int f(int n){if(n&lt;10)return n;return f(n/10)+n%10;} cout&lt;&lt;f(123);","o":["3","6","123","321"],"a":1},
+                {"q":"The function in the previous question computes the:","o":["Reverse of digits","Sum of digits","Count of digits","Product of digits"],"a":1},
+                {"q":"Can every recursive solution be converted to an iterative one?","o":["No, some problems require recursion","Yes, using explicit stacks or loops","Only if tail recursion is used","Only for numeric problems"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="function-overloading.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Function Overloading</span>
+                </a>
+                <a href="inline-lambda.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Inline &amp; Lambda</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Code Style &amp; Documentation - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-code-style">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html" class="active"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 52 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="95" style="width:95%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Code Style &amp; Documentation
+                </div>
+                <h1>52. Code Style &amp; Documentation</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 52 of 55</span>
+                    <span>&#9201; 14 min read</span>
+                    <span>&#128296; Advanced</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== Why Code Style Matters ===== -->
+                <h2>Why Code Style Matters</h2>
+                <p><strong>Code style</strong> is the set of conventions that govern how source code is written and formatted. While the compiler does not care whether you use tabs or spaces, <em>humans</em> read code far more often than they write it. Consistent style dramatically improves readability, maintainability, and team collaboration.</p>
+                <p>Studies show that developers spend roughly <strong>70&ndash;80%</strong> of their time reading existing code rather than writing new code. A well-styled codebase reduces cognitive load, makes bugs easier to spot, and accelerates onboarding for new team members.</p>
+                <p>Key benefits of a consistent code style:</p>
+                <ul>
+                    <li><strong>Readability</strong> &ndash; Anyone can quickly understand the intent of the code.</li>
+                    <li><strong>Maintainability</strong> &ndash; Modifications are safer and faster when the codebase is uniform.</li>
+                    <li><strong>Collaboration</strong> &ndash; Teams avoid &ldquo;style wars&rdquo; during code reviews.</li>
+                    <li><strong>Fewer bugs</strong> &ndash; Clean, well-organised code makes errors stand out.</li>
+                    <li><strong>Automation</strong> &ndash; Tools like <code>clang-format</code> can enforce style automatically.</li>
+                </ul>
+                <p>The golden rule: <em>pick a style guide and follow it consistently</em>. The specific style matters far less than consistency across the entire project.</p>
+
+                <!-- ===== Naming Conventions ===== -->
+                <h2>Naming Conventions</h2>
+                <p>Good names are one of the most important aspects of readable code. A well-chosen name tells the reader <em>what</em> something is and <em>why</em> it exists without requiring a comment.</p>
+
+                <h3>Variables &amp; Functions</h3>
+                <p>Use descriptive names that convey meaning. Avoid single-letter names except for loop counters or well-known mathematical variables.</p>
+<pre><code>// Bad
+int x = 42;
+void fn(int a, int b);
+
+// Good &ndash; snake_case (common in STL-like code)
+int student_count = 42;
+void calculate_average(int total_score, int num_students);
+
+// Good &ndash; camelCase (common in many C++ projects)
+int studentCount = 42;
+void calculateAverage(int totalScore, int numStudents);</code></pre>
+
+                <h3>Classes &amp; Structs</h3>
+                <p>Use <strong>PascalCase</strong> (also called UpperCamelCase) for class and struct names. This is universally adopted across almost every C++ style guide.</p>
+<pre><code>class HttpRequest { };
+struct PixelColor { };
+class FileManager { };</code></pre>
+
+                <h3>Constants &amp; Enumerators</h3>
+                <p>Constants and enum values are typically written in <strong>ALL_CAPS</strong> with underscores, or with a <code>k</code> prefix in PascalCase (Google style).</p>
+<pre><code>// ALL_CAPS style
+constexpr int MAX_BUFFER_SIZE = 1024;
+enum class Colour { RED, GREEN, BLUE };
+
+// Google k-prefix style
+constexpr int kMaxBufferSize = 1024;</code></pre>
+
+                <h3>Files</h3>
+                <p>Header files use <code>.h</code> or <code>.hpp</code>; source files use <code>.cpp</code>. File names should match the primary class they contain and use <strong>snake_case</strong> or <strong>kebab-case</strong>:</p>
+<pre><code>http_request.h    // header
+http_request.cpp  // source
+// or
+HttpRequest.h
+HttpRequest.cpp</code></pre>
+
+                <h3>Prefixes &amp; Suffixes</h3>
+                <p>Some teams use a prefix or suffix to distinguish member variables:</p>
+<pre><code>class Widget {
+    int m_width;   // m_ prefix for members
+    int width_;    // trailing underscore (Google style)
+};</code></pre>
+
+                <!-- ===== Indentation and Formatting ===== -->
+                <h2>Indentation and Formatting</h2>
+                <p>Consistent indentation is the foundation of readable code. The two dominant schools are <strong>spaces</strong> and <strong>tabs</strong>. Most modern C++ style guides prefer <strong>4 spaces</strong> per indent level (Google uses 2 spaces).</p>
+                <ul>
+                    <li><strong>Spaces</strong> &ndash; Render identically on every editor and terminal.</li>
+                    <li><strong>Tabs</strong> &ndash; Allow each developer to choose their visual width.</li>
+                </ul>
+                <p>Configure your editor to insert spaces when you press the Tab key. This prevents mixing tabs and spaces, which creates misaligned code in different environments.</p>
+<pre><code>// 4-space indentation
+if (isValid) {
+    processData();
+    if (hasMore) {
+        loadNextBatch();
+    }
+}</code></pre>
+
+                <!-- ===== Brace Styles ===== -->
+                <h2>Brace Styles</h2>
+                <p>Where you place curly braces is one of the most debated formatting choices. Here are the three most common styles used in C++:</p>
+
+                <h3>K&amp;R (Kernighan &amp; Ritchie) Style</h3>
+                <p>The opening brace goes on the <strong>same line</strong> as the statement. This is the most common style in modern C++ projects and is used by the Google and LLVM style guides.</p>
+<pre><code>if (condition) {
+    doSomething();
+} else {
+    doOther();
+}
+
+void process() {
+    // ...
+}</code></pre>
+
+                <h3>Allman Style</h3>
+                <p>The opening brace goes on its <strong>own line</strong>, aligned with the statement. This style is popular in C# and some C++ codebases.</p>
+<pre><code>if (condition)
+{
+    doSomething();
+}
+else
+{
+    doOther();
+}
+
+void process()
+{
+    // ...
+}</code></pre>
+
+                <h3>Stroustrup Style</h3>
+                <p>A variant of K&amp;R where <code>else</code>, <code>catch</code>, etc. start on a <strong>new line</strong> after the closing brace. Named after Bjarne Stroustrup, the creator of C++.</p>
+<pre><code>if (condition) {
+    doSomething();
+}
+else {
+    doOther();
+}
+
+void process() {
+    // ...
+}</code></pre>
+                <p>All three styles are valid. The most important rule is: <strong>never mix styles within a project</strong>.</p>
+
+                <!-- ===== Line Length and Whitespace ===== -->
+                <h2>Line Length and Whitespace</h2>
+                <p>Most style guides recommend a maximum line length of <strong>80</strong> or <strong>120</strong> characters. Long lines force horizontal scrolling and make side-by-side diffs harder to read.</p>
+                <p>Strategies for handling long lines:</p>
+<pre><code>// Break after an operator
+double result = firstOperand + secondOperand
+              + thirdOperand + fourthOperand;
+
+// Break function arguments
+void sendMessage(const std::string&amp; recipient,
+                 const std::string&amp; subject,
+                 const std::string&amp; body,
+                 Priority priority);</code></pre>
+
+                <p>Use <strong>blank lines</strong> to separate logical sections within a function, but avoid excessive blank lines:</p>
+<pre><code>void processOrder(const Order&amp; order) {
+    // Validate
+    if (!order.isValid()) {
+        throw std::invalid_argument("Invalid order");
+    }
+
+    // Calculate totals
+    double subtotal = calculateSubtotal(order);
+    double tax = subtotal * TAX_RATE;
+    double total = subtotal + tax;
+
+    // Persist
+    database.save(order, total);
+}</code></pre>
+
+                <p>Use spaces around binary operators and after commas, but not inside parentheses:</p>
+<pre><code>// Good
+int sum = a + b;
+call(x, y, z);
+
+// Bad
+int sum=a+b;
+call( x,y,z );</code></pre>
+
+                <!-- ===== Commenting Best Practices ===== -->
+                <h2>Commenting Best Practices</h2>
+                <p>Comments should explain <strong>why</strong>, not <strong>what</strong>. The code itself should be clear enough to convey <em>what</em> it does. Reserve comments for intent, rationale, warnings, and non-obvious behaviour.</p>
+
+                <h3>When to Comment</h3>
+                <ul>
+                    <li><strong>Why</strong> a decision was made (e.g., &ldquo;Using insertion sort because n &lt; 16 in practice&rdquo;)</li>
+                    <li><strong>Workarounds</strong> for bugs or platform quirks</li>
+                    <li><strong>TODOs</strong> and <strong>FIXMEs</strong> for future work</li>
+                    <li><strong>Legal notices</strong> and copyright headers</li>
+                    <li><strong>Public API</strong> documentation (see Doxygen below)</li>
+                </ul>
+
+                <h3>When NOT to Comment</h3>
+                <ul>
+                    <li>Restating what the code already says: <code>i++; // increment i</code></li>
+                    <li>Commenting out dead code &ndash; delete it (version control remembers)</li>
+                    <li>Describing obvious variable names: <code>int age; // the age</code></li>
+                </ul>
+
+                <h3>Comment Styles</h3>
+<pre><code>// Single-line comment &ndash; preferred for brief notes
+
+/*
+ * Multi-line comment &ndash; good for longer explanations,
+ * file headers, and legal notices.
+ */
+
+// TODO(alice): Refactor this after the API migration
+// FIXME: Off-by-one error when index == max_size</code></pre>
+
+                <!-- ===== Documentation Comments (Doxygen) ===== -->
+                <h2>Documentation Comments (Doxygen Format)</h2>
+                <p><strong>Doxygen</strong> is the de-facto standard tool for generating API documentation from annotated C++ source code. It reads specially-formatted comments and produces HTML, PDF, or man-page output.</p>
+
+                <h3>Basic Doxygen Syntax</h3>
+<pre><code>/**
+ * @brief Calculates the area of a circle.
+ *
+ * Uses the formula A = &pi;r&sup2;. The radius must be
+ * non-negative; otherwise the behaviour is undefined.
+ *
+ * @param radius  The radius of the circle (must be &ge; 0).
+ * @return The area of the circle.
+ *
+ * @throws std::invalid_argument if radius is negative.
+ *
+ * @see circumference()
+ */
+double area(double radius);</code></pre>
+
+                <h3>Common Doxygen Tags</h3>
+                <table>
+                    <thead>
+                        <tr><th>Tag</th><th>Purpose</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>@brief</code></td><td>Short one-line summary</td></tr>
+                        <tr><td><code>@param</code></td><td>Describes a function parameter</td></tr>
+                        <tr><td><code>@return</code></td><td>Describes the return value</td></tr>
+                        <tr><td><code>@throws</code></td><td>Documents exceptions thrown</td></tr>
+                        <tr><td><code>@see</code></td><td>Cross-reference another symbol</td></tr>
+                        <tr><td><code>@note</code></td><td>Highlights important information</td></tr>
+                        <tr><td><code>@warning</code></td><td>Warns about potential pitfalls</td></tr>
+                        <tr><td><code>@deprecated</code></td><td>Marks a symbol as deprecated</td></tr>
+                        <tr><td><code>@file</code></td><td>Documents the current file</td></tr>
+                        <tr><td><code>@class</code></td><td>Documents a class</td></tr>
+                        <tr><td><code>@code / @endcode</code></td><td>Embeds a code example</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Documenting a Class</h3>
+<pre><code>/**
+ * @class Matrix
+ * @brief A simple 2D matrix of doubles.
+ *
+ * Supports basic arithmetic operations and element access.
+ * Stores elements in row-major order.
+ *
+ * @tparam T The element type.
+ *
+ * @code
+ * Matrix&lt;double&gt; m(3, 3);
+ * m(0, 0) = 1.0;
+ * @endcode
+ */
+template &lt;typename T&gt;
+class Matrix { /* ... */ };</code></pre>
+
+                <h3>Generating Documentation</h3>
+                <p>Install Doxygen, then create a configuration file and build:</p>
+<pre><code># Generate a default config file
+doxygen -g Doxyfile
+
+# Edit Doxyfile to set PROJECT_NAME, INPUT, etc.
+
+# Generate documentation
+doxygen Doxyfile</code></pre>
+                <p>The output (typically HTML) can be hosted on a web server or browsed locally.</p>
+
+                <!-- ===== Header Guards and #pragma once ===== -->
+                <h2>Header Guards and <code>#pragma once</code></h2>
+                <p>Header files must be protected against multiple inclusion. Without protection, the same declarations appear multiple times, causing compilation errors.</p>
+
+                <h3>Traditional Header Guards</h3>
+<pre><code>#ifndef HTTP_REQUEST_H
+#define HTTP_REQUEST_H
+
+class HttpRequest {
+    // ...
+};
+
+#endif // HTTP_REQUEST_H</code></pre>
+                <p>The macro name should be unique &ndash; typically the file path in uppercase with underscores replacing slashes and dots.</p>
+
+                <h3><code>#pragma once</code></h3>
+<pre><code>#pragma once
+
+class HttpRequest {
+    // ...
+};</code></pre>
+                <p><code>#pragma once</code> is simpler, avoids macro name collisions, and is supported by all major compilers (GCC, Clang, MSVC). However, it is not part of the ISO C++ standard, so some strict codebases still prefer traditional guards.</p>
+
+                <!-- ===== Code Organization ===== -->
+                <h2>Code Organisation</h2>
+                <p>Properly organising your source files is essential for scaling beyond a single-file program. The standard C++ approach separates <strong>declarations</strong> (in headers) from <strong>definitions</strong> (in source files).</p>
+
+                <h3>Header Files (<code>.h</code> / <code>.hpp</code>)</h3>
+                <ul>
+                    <li>Class declarations</li>
+                    <li>Function prototypes</li>
+                    <li><code>inline</code> and <code>constexpr</code> function definitions</li>
+                    <li>Template definitions (must be in headers)</li>
+                    <li>Type aliases and constants</li>
+                </ul>
+
+                <h3>Source Files (<code>.cpp</code>)</h3>
+                <ul>
+                    <li>Function and method definitions</li>
+                    <li>Static variable initialisation</li>
+                    <li>Implementation details hidden from consumers</li>
+                </ul>
+
+                <h3>Example Structure</h3>
+<pre><code>// vector3d.h
+#pragma once
+
+class Vector3D {
+public:
+    Vector3D(double x, double y, double z);
+    double magnitude() const;
+    Vector3D normalised() const;
+
+private:
+    double x_, y_, z_;
+};
+
+// vector3d.cpp
+#include "vector3d.h"
+#include &lt;cmath&gt;
+
+Vector3D::Vector3D(double x, double y, double z)
+    : x_(x), y_(y), z_(z) {}
+
+double Vector3D::magnitude() const {
+    return std::sqrt(x_ * x_ + y_ * y_ + z_ * z_);
+}
+
+Vector3D Vector3D::normalised() const {
+    double mag = magnitude();
+    return {x_ / mag, y_ / mag, z_ / mag};
+}</code></pre>
+
+                <h3>Forward Declarations</h3>
+                <p>Use <strong>forward declarations</strong> instead of <code>#include</code> when only a pointer or reference to a type is needed. This reduces compilation time and breaks circular dependencies:</p>
+<pre><code>// Avoid: #include "database.h"
+class Database; // forward declaration
+
+class UserService {
+public:
+    void save(const Database&amp; db);
+};</code></pre>
+
+                <h3>Include Order</h3>
+                <p>A recommended include order (Google style) to catch missing headers early:</p>
+                <ol>
+                    <li>The corresponding header (e.g., <code>foo.h</code> in <code>foo.cpp</code>)</li>
+                    <li>C system headers (<code>&lt;cstdlib&gt;</code>)</li>
+                    <li>C++ standard library headers (<code>&lt;vector&gt;</code>)</li>
+                    <li>Third-party library headers</li>
+                    <li>Your project&rsquo;s headers</li>
+                </ol>
+<pre><code>// foo.cpp
+#include "foo.h"
+
+#include &lt;cstdlib&gt;
+
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+#include &lt;fmt/core.h&gt;
+
+#include "bar.h"
+#include "utils/logger.h"</code></pre>
+
+                <!-- ===== Popular C++ Style Guides ===== -->
+                <h2>Popular C++ Style Guides</h2>
+                <p>Rather than inventing your own conventions from scratch, adopt one of the widely-used style guides listed below. Each has extensive documentation and tooling support.</p>
+
+                <table>
+                    <thead>
+                        <tr><th>Style Guide</th><th>Key Characteristics</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Google C++ Style Guide</strong></td>
+                            <td>2-space indent, 80-char lines, <code>snake_case</code> for variables/functions, <code>PascalCase</code> for types, <code>k</code>-prefix constants, trailing underscores for members. Very detailed and prescriptive.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LLVM Coding Standards</strong></td>
+                            <td>2-space indent, 80-char lines, <code>PascalCase</code> for nearly everything, K&amp;R braces. Used by the LLVM/Clang project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mozilla C++ Style</strong></td>
+                            <td>2-space indent, 80-char lines, camelCase for functions, PascalCase for types, <code>m</code>-prefix for members. Used by Firefox.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C++ Core Guidelines</strong></td>
+                            <td>Authored by Bjarne Stroustrup and Herb Sutter. Focuses on safety, performance, and modern idioms rather than cosmetic formatting.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Microsoft C++ Guidelines</strong></td>
+                            <td>4-space indent, Allman braces, PascalCase functions, widely used in Windows/MSVC projects.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Linting Tools ===== -->
+                <h2>Linting Tools</h2>
+                <p>Linting tools automatically check and enforce code style, detect potential bugs, and suggest improvements. Integrating them into your build pipeline ensures consistent quality.</p>
+
+                <h3>clang-format</h3>
+                <p><code>clang-format</code> is the industry-standard tool for automatically formatting C++ code. It supports all major style guides out of the box.</p>
+<pre><code># Format a single file using the Google style
+clang-format -i --style=Google main.cpp
+
+# Format all .cpp and .h files recursively
+find src/ -name "*.cpp" -o -name "*.h" | xargs clang-format -i</code></pre>
+                <p>Create a <code>.clang-format</code> configuration file in your project root to customise rules:</p>
+<pre><code># .clang-format
+BasedOnStyle: Google
+IndentWidth: 4
+ColumnLimit: 120
+BreakBeforeBraces: Stroustrup
+PointerAlignment: Left</code></pre>
+
+                <h3>clang-tidy</h3>
+                <p><code>clang-tidy</code> is a linter and static analysis tool that goes beyond formatting. It detects bugs, performance issues, readability problems, and modernisation opportunities.</p>
+<pre><code># Run clang-tidy with modernise checks
+clang-tidy main.cpp -- -std=c++20
+
+# Common checks
+clang-tidy -checks="modernize-*,readability-*,bugprone-*" main.cpp</code></pre>
+                <p>Create a <code>.clang-tidy</code> file for project-wide configuration:</p>
+<pre><code># .clang-tidy
+Checks: >
+  -*,
+  bugprone-*,
+  modernize-*,
+  readability-*,
+  performance-*
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'</code></pre>
+
+                <h3>cppcheck</h3>
+                <p><code>cppcheck</code> is a standalone static analyser focused on detecting <strong>undefined behaviour</strong>, memory leaks, null-pointer dereferences, and other defects. It works without requiring a compilation database.</p>
+<pre><code># Basic analysis
+cppcheck --enable=all --std=c++20 src/
+
+# Suppress specific warnings
+cppcheck --suppress=missingIncludeSystem src/</code></pre>
+
+                <h3>Integrating Linters into Your Workflow</h3>
+                <ul>
+                    <li><strong>Editor integration</strong> &ndash; Most IDEs (VS Code, CLion, Visual Studio) support <code>clang-format</code> and <code>clang-tidy</code> natively or via extensions.</li>
+                    <li><strong>Pre-commit hooks</strong> &ndash; Run <code>clang-format --dry-run --Werror</code> before each Git commit to reject unformatted code.</li>
+                    <li><strong>CI/CD pipelines</strong> &ndash; Add linting steps to GitHub Actions, GitLab CI, or Jenkins to enforce style on every pull request.</li>
+                </ul>
+
+                <!-- ===== Code Review Checklist ===== -->
+                <h2>Code Review Checklist</h2>
+                <p>A structured checklist ensures that code reviews are thorough and consistent. Use the following categories when reviewing C++ code:</p>
+                <table>
+                    <thead>
+                        <tr><th>Category</th><th>Check</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Style</strong></td><td>Does the code follow the project&rsquo;s style guide? Has <code>clang-format</code> been run?</td></tr>
+                        <tr><td><strong>Naming</strong></td><td>Are names descriptive and consistent with conventions?</td></tr>
+                        <tr><td><strong>Comments</strong></td><td>Are comments meaningful? Is the public API documented?</td></tr>
+                        <tr><td><strong>Correctness</strong></td><td>Does the code do what it claims? Are edge cases handled?</td></tr>
+                        <tr><td><strong>Safety</strong></td><td>Is memory managed correctly? Are raw pointers avoided where smart pointers apply?</td></tr>
+                        <tr><td><strong>Performance</strong></td><td>Are unnecessary copies avoided? Are containers used appropriately?</td></tr>
+                        <tr><td><strong>Error handling</strong></td><td>Are errors checked and reported? Are exceptions used consistently?</td></tr>
+                        <tr><td><strong>Testing</strong></td><td>Are new features accompanied by unit tests?</td></tr>
+                        <tr><td><strong>Dependencies</strong></td><td>Are includes minimal? Are forward declarations used where possible?</td></tr>
+                        <tr><td><strong>Simplicity</strong></td><td>Could the code be simpler? Is there any dead code?</td></tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Consistency</strong> is more important than any particular style &ndash; pick a guide and stick to it.</li>
+                    <li>Use <strong>descriptive names</strong>: <code>PascalCase</code> for types, <code>snake_case</code> or <code>camelCase</code> for variables/functions, <code>ALL_CAPS</code> for constants.</li>
+                    <li>Choose a <strong>brace style</strong> (K&amp;R, Allman, or Stroustrup) and apply it uniformly.</li>
+                    <li>Keep lines under <strong>80&ndash;120 characters</strong> and use blank lines to separate logical sections.</li>
+                    <li>Comment <strong>why</strong>, not <strong>what</strong>. Use <strong>Doxygen</strong> for public API documentation.</li>
+                    <li>Protect headers with <code>#pragma once</code> or traditional <strong>include guards</strong>.</li>
+                    <li>Separate <strong>declarations</strong> (headers) from <strong>definitions</strong> (source files) and use <strong>forward declarations</strong> to reduce coupling.</li>
+                    <li>Adopt a well-known style guide: <strong>Google</strong>, <strong>LLVM</strong>, <strong>Mozilla</strong>, or the <strong>C++ Core Guidelines</strong>.</li>
+                    <li>Automate formatting with <code>clang-format</code> and catch bugs with <code>clang-tidy</code> and <code>cppcheck</code>.</li>
+                    <li>Use a <strong>code review checklist</strong> to ensure quality across your team.</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/tKMRpXst4qI" title="C++ Code Style" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="tutorial-nav">
+                <a href="debugging.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Debugging Techniques</span>
+                </a>
+                <a href="version-control.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Version Control with Git</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

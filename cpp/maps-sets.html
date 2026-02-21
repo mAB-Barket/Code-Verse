@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ STL Maps &amp; Sets - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-maps-sets">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html" class="active"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 41 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="75" style="width:75%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; STL Maps &amp; Sets
+                </div>
+                <h1>41. STL Maps &amp; Sets</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 41 of 55</span>
+                    <span>&#9201; 17 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Are Associative Containers? ===== -->
+                <h2>What Are Associative Containers?</h2>
+                <p>The C++ Standard Template Library divides its containers into three families: <strong>sequence containers</strong> (vector, list, deque), <strong>associative containers</strong>, and <strong>unordered associative containers</strong>. This lesson covers the last two families.</p>
+                <p>Associative containers store elements in a <strong>sorted order</strong> determined by a comparison function (default: <code>operator&lt;</code>). They are implemented as <strong>self-balancing binary search trees</strong> (typically red-black trees), which means most operations&mdash;lookup, insertion, and deletion&mdash;run in <strong>O(log n)</strong> time.</p>
+                <p>The four ordered associative containers are:</p>
+                <ul>
+                    <li><code>std::map</code> &mdash; sorted key-value pairs with <strong>unique</strong> keys.</li>
+                    <li><code>std::multimap</code> &mdash; sorted key-value pairs that allow <strong>duplicate</strong> keys.</li>
+                    <li><code>std::set</code> &mdash; sorted collection of <strong>unique</strong> values.</li>
+                    <li><code>std::multiset</code> &mdash; sorted collection that allows <strong>duplicate</strong> values.</li>
+                </ul>
+                <p>Their unordered counterparts (<code>unordered_map</code>, <code>unordered_set</code>, etc.) use <strong>hash tables</strong> and offer <strong>O(1) average</strong> time for the same operations, at the cost of losing sorted order.</p>
+
+                <!-- ===== std::map ===== -->
+                <h2>std::map &mdash; Ordered Key-Value Store</h2>
+                <p><code>std::map</code> is defined in the <code>&lt;map&gt;</code> header. It stores elements as <code>std::pair&lt;const Key, Value&gt;</code>, sorted by key. Each key in a map is <strong>unique</strong>&mdash;inserting a duplicate key does not overwrite the existing entry (unless you use <code>operator[]</code>).</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+
+int main() {
+    // Create an empty map: string -&gt; int
+    std::map&lt;std::string, int&gt; ages;
+
+    // You can also initialise with an initializer list
+    std::map&lt;std::string, int&gt; scores = {
+        {"Alice", 95},
+        {"Bob",   87},
+        {"Carol", 92}
+    };
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Creating, Inserting, and Accessing map Elements ===== -->
+                <h2>Creating, Inserting, and Accessing map Elements</h2>
+                <p>There are several ways to insert and access elements in a <code>std::map</code>:</p>
+
+                <h3>operator[] &mdash; Insert or Overwrite</h3>
+                <p><code>map[key]</code> returns a <strong>reference</strong> to the value associated with <code>key</code>. If the key does not exist, it is <strong>default-constructed and inserted</strong>. This is convenient but can cause unintended insertions.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>std::map&lt;std::string, int&gt; ages;
+
+ages["Alice"] = 30;   // inserts {"Alice", 30}
+ages["Bob"]   = 25;   // inserts {"Bob", 25}
+ages["Alice"] = 31;   // overwrites Alice's value to 31
+
+// Caution: accessing a non-existent key creates it!
+int x = ages["Charlie"]; // inserts {"Charlie", 0}
+std::cout &lt;&lt; ages.size(); // 3 (Alice, Bob, Charlie)</code></pre></div>
+
+                <h3>at() &mdash; Safe Access</h3>
+                <p><code>map.at(key)</code> returns a reference to the value but throws <code>std::out_of_range</code> if the key is not found. Use this when you do <strong>not</strong> want silent insertion.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>std::cout &lt;&lt; ages.at("Alice"); // 31
+// ages.at("Zack"); // throws std::out_of_range</code></pre></div>
+
+                <h3>insert() and emplace()</h3>
+                <p><code>insert()</code> only adds the element if the key does <strong>not</strong> already exist. It returns a <code>pair&lt;iterator, bool&gt;</code> where the bool indicates success.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>auto result = ages.insert({"Dave", 40});
+if (result.second) {
+    std::cout &lt;&lt; "Inserted Dave\n";
+}
+
+// emplace constructs the pair in-place (avoids extra copies)
+ages.emplace("Eve", 28);
+
+// insert does NOT overwrite existing keys
+ages.insert({"Alice", 99}); // no-op &mdash; Alice already exists</code></pre></div>
+
+                <!-- ===== Iterating Over Maps ===== -->
+                <h2>Iterating Over Maps</h2>
+                <p>Iterating over a <code>std::map</code> visits elements in <strong>sorted key order</strong>. Each element is a <code>std::pair&lt;const Key, Value&gt;</code>.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>std::map&lt;std::string, int&gt; scores = {
+    {"Alice", 95}, {"Bob", 87}, {"Carol", 92}
+};
+
+// Range-based for with structured bindings (C++17)
+for (const auto&amp; [name, score] : scores) {
+    std::cout &lt;&lt; name &lt;&lt; ": " &lt;&lt; score &lt;&lt; "\n";
+}
+// Output (sorted by key):
+// Alice: 95
+// Bob: 87
+// Carol: 92
+
+// Classic iterator approach
+for (auto it = scores.begin(); it != scores.end(); ++it) {
+    std::cout &lt;&lt; it-&gt;first &lt;&lt; " =&gt; " &lt;&lt; it-&gt;second &lt;&lt; "\n";
+}
+
+// Reverse iteration
+for (auto rit = scores.rbegin(); rit != scores.rend(); ++rit) {
+    std::cout &lt;&lt; rit-&gt;first &lt;&lt; "\n";
+}</code></pre></div>
+
+                <!-- ===== Finding and Erasing Elements ===== -->
+                <h2>Finding and Erasing Elements</h2>
+
+                <h3>find()</h3>
+                <p><code>map.find(key)</code> returns an iterator to the element if found, or <code>map.end()</code> otherwise. This is faster than <code>count()</code> when you also need the value.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>auto it = scores.find("Bob");
+if (it != scores.end()) {
+    std::cout &lt;&lt; "Found Bob: " &lt;&lt; it-&gt;second &lt;&lt; "\n";
+} else {
+    std::cout &lt;&lt; "Bob not found\n";
+}</code></pre></div>
+
+                <h3>count()</h3>
+                <p>For <code>std::map</code>, <code>count(key)</code> returns <strong>0 or 1</strong> (since keys are unique). It is useful as a quick existence check.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>if (scores.count("Carol")) {
+    std::cout &lt;&lt; "Carol exists\n";
+}
+
+// C++20: contains() is even cleaner
+// if (scores.contains("Carol")) { ... }</code></pre></div>
+
+                <h3>erase()</h3>
+                <p>You can erase by key, by iterator, or by range.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>scores.erase("Bob");           // erase by key
+scores.erase(scores.begin());  // erase by iterator
+
+// Erase all elements with key &gt;= "C"
+auto lo = scores.lower_bound("C");
+scores.erase(lo, scores.end());</code></pre></div>
+
+                <!-- ===== std::multimap ===== -->
+                <h2>std::multimap &mdash; Duplicate Keys Allowed</h2>
+                <p><code>std::multimap</code> is also defined in <code>&lt;map&gt;</code>. It works exactly like <code>std::map</code> except that <strong>multiple elements can share the same key</strong>. Because keys are not unique, <code>operator[]</code> and <code>at()</code> are <strong>not available</strong>.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::multimap&lt;std::string, int&gt; grades;
+
+    grades.insert({"Alice", 90});
+    grades.insert({"Alice", 85});  // duplicate key OK
+    grades.insert({"Bob",   78});
+
+    // count() can return &gt; 1
+    std::cout &lt;&lt; "Alice entries: " &lt;&lt; grades.count("Alice") &lt;&lt; "\n"; // 2
+
+    // equal_range returns a pair of iterators [first, second)
+    auto [lo, hi] = grades.equal_range("Alice");
+    for (auto it = lo; it != hi; ++it) {
+        std::cout &lt;&lt; it-&gt;first &lt;&lt; ": " &lt;&lt; it-&gt;second &lt;&lt; "\n";
+    }
+
+    return 0;
+}</code></pre></div>
+
+                <div class="info-box">
+                    <strong>&#128161; Tip:</strong> Use <code>equal_range()</code> to iterate over all values for a given key in a multimap. Combining <code>find()</code> with manual incrementing is error-prone.
+                </div>
+
+                <!-- ===== std::set ===== -->
+                <h2>std::set &mdash; Ordered Unique Collection</h2>
+                <p><code>std::set</code> is defined in the <code>&lt;set&gt;</code> header. It stores <strong>unique</strong> elements in <strong>sorted order</strong>. Like <code>std::map</code>, it is backed by a balanced BST and provides O(log n) insertion, lookup, and deletion.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>#include &lt;iostream&gt;
+#include &lt;set&gt;
+
+int main() {
+    std::set&lt;int&gt; nums = {5, 3, 8, 1, 3, 5};
+    // Duplicates are silently ignored: nums = {1, 3, 5, 8}
+
+    std::cout &lt;&lt; "Size: " &lt;&lt; nums.size() &lt;&lt; "\n"; // 4
+
+    for (int n : nums) {
+        std::cout &lt;&lt; n &lt;&lt; " ";
+    }
+    // Output: 1 3 5 8
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Set Operations ===== -->
+                <h2>Set Operations: insert, find, erase, count</h2>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>std::set&lt;int&gt; s = {10, 20, 30};
+
+// insert &mdash; returns pair&lt;iterator, bool&gt;
+auto [it, success] = s.insert(25);
+std::cout &lt;&lt; *it &lt;&lt; " " &lt;&lt; success &lt;&lt; "\n"; // 25 1
+
+s.insert(20); // no-op, 20 already exists
+
+// find
+auto found = s.find(20);
+if (found != s.end()) {
+    std::cout &lt;&lt; "Found: " &lt;&lt; *found &lt;&lt; "\n";
+}
+
+// count &mdash; 0 or 1 for set
+std::cout &lt;&lt; s.count(99) &lt;&lt; "\n"; // 0
+
+// erase by value
+s.erase(10);
+
+// erase by iterator
+s.erase(s.begin());
+
+// lower_bound / upper_bound
+auto lb = s.lower_bound(22);
+std::cout &lt;&lt; *lb &lt;&lt; "\n"; // 25</code></pre></div>
+
+                <!-- ===== std::multiset ===== -->
+                <h2>std::multiset &mdash; Duplicates Allowed</h2>
+                <p><code>std::multiset</code> (from <code>&lt;set&gt;</code>) is like <code>std::set</code> but allows <strong>duplicate</strong> elements. All duplicates are stored and maintained in sorted order.</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>#include &lt;iostream&gt;
+#include &lt;set&gt;
+
+int main() {
+    std::multiset&lt;int&gt; ms = {5, 3, 5, 1, 3, 5};
+    // ms = {1, 3, 3, 5, 5, 5}
+
+    std::cout &lt;&lt; "Size: " &lt;&lt; ms.size() &lt;&lt; "\n"; // 6
+    std::cout &lt;&lt; "Count of 5: " &lt;&lt; ms.count(5) &lt;&lt; "\n"; // 3
+
+    // erase(value) removes ALL occurrences
+    ms.erase(5);
+    std::cout &lt;&lt; "After erase(5), size: " &lt;&lt; ms.size() &lt;&lt; "\n"; // 3
+
+    // To erase only ONE occurrence, erase by iterator
+    auto it = ms.find(3);
+    if (it != ms.end()) {
+        ms.erase(it); // removes one 3
+    }
+    std::cout &lt;&lt; "Count of 3: " &lt;&lt; ms.count(3) &lt;&lt; "\n"; // 1
+
+    return 0;
+}</code></pre></div>
+
+                <!-- ===== Unordered Variants ===== -->
+                <h2>Unordered Variants &mdash; Hash-Based Containers</h2>
+                <p>C++11 introduced four unordered associative containers defined in <code>&lt;unordered_map&gt;</code> and <code>&lt;unordered_set&gt;</code>. They use <strong>hash tables</strong> internally, which gives <strong>O(1) average-case</strong> lookup, insertion, and deletion&mdash;but elements are <strong>not stored in any particular order</strong>.</p>
+
+                <ul>
+                    <li><code>std::unordered_map</code> &mdash; hash map with unique keys.</li>
+                    <li><code>std::unordered_multimap</code> &mdash; hash map allowing duplicate keys.</li>
+                    <li><code>std::unordered_set</code> &mdash; hash set with unique elements.</li>
+                    <li><code>std::unordered_multiset</code> &mdash; hash set allowing duplicates.</li>
+                </ul>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+#include &lt;unordered_set&gt;
+#include &lt;string&gt;
+
+int main() {
+    // unordered_map
+    std::unordered_map&lt;std::string, int&gt; umap = {
+        {"apple", 3}, {"banana", 5}, {"cherry", 2}
+    };
+
+    umap["date"] = 7;
+
+    for (const auto&amp; [fruit, qty] : umap) {
+        std::cout &lt;&lt; fruit &lt;&lt; ": " &lt;&lt; qty &lt;&lt; "\n";
+    }
+    // Order is NOT guaranteed
+
+    // unordered_set
+    std::unordered_set&lt;int&gt; uset = {10, 20, 30, 10};
+    std::cout &lt;&lt; "Size: " &lt;&lt; uset.size() &lt;&lt; "\n"; // 3
+
+    // Bucket information
+    std::cout &lt;&lt; "Buckets: " &lt;&lt; uset.bucket_count() &lt;&lt; "\n";
+    std::cout &lt;&lt; "Load factor: " &lt;&lt; uset.load_factor() &lt;&lt; "\n";
+
+    return 0;
+}</code></pre></div>
+
+                <p>Key differences from ordered variants:</p>
+                <ul>
+                    <li>Keys must be <strong>hashable</strong> (built-in types and <code>std::string</code> are hashable by default; custom types need a hash function).</li>
+                    <li>No <code>lower_bound()</code> or <code>upper_bound()</code> because elements are not sorted.</li>
+                    <li>Worst-case complexity is <strong>O(n)</strong> if many collisions occur, but this is rare with a good hash function.</li>
+                    <li>Iterators are <strong>forward-only</strong> (no reverse iteration).</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>&#128161; Custom hash example:</strong> To use a custom type as a key in <code>unordered_map</code>, provide a hash functor:
+                </div>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>struct Point { int x, y; };
+
+struct PointHash {
+    std::size_t operator()(const Point&amp; p) const {
+        // Combine hashes of x and y
+        auto h1 = std::hash&lt;int&gt;{}(p.x);
+        auto h2 = std::hash&lt;int&gt;{}(p.y);
+        return h1 ^ (h2 &lt;&lt; 1);
+    }
+};
+
+struct PointEqual {
+    bool operator()(const Point&amp; a, const Point&amp; b) const {
+        return a.x == b.x &amp;&amp; a.y == b.y;
+    }
+};
+
+std::unordered_set&lt;Point, PointHash, PointEqual&gt; points;
+points.insert({1, 2});
+points.insert({3, 4});</code></pre></div>
+
+                <!-- ===== Comparison Table ===== -->
+                <h2>Comparison Table</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>map</th>
+                            <th>unordered_map</th>
+                            <th>set</th>
+                            <th>unordered_set</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Header</td>
+                            <td><code>&lt;map&gt;</code></td>
+                            <td><code>&lt;unordered_map&gt;</code></td>
+                            <td><code>&lt;set&gt;</code></td>
+                            <td><code>&lt;unordered_set&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Underlying structure</td>
+                            <td>Red-black tree</td>
+                            <td>Hash table</td>
+                            <td>Red-black tree</td>
+                            <td>Hash table</td>
+                        </tr>
+                        <tr>
+                            <td>Sorted order</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Unique keys/values</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Lookup complexity</td>
+                            <td>O(log n)</td>
+                            <td>O(1) avg</td>
+                            <td>O(log n)</td>
+                            <td>O(1) avg</td>
+                        </tr>
+                        <tr>
+                            <td>Insert complexity</td>
+                            <td>O(log n)</td>
+                            <td>O(1) avg</td>
+                            <td>O(log n)</td>
+                            <td>O(1) avg</td>
+                        </tr>
+                        <tr>
+                            <td>Erase complexity</td>
+                            <td>O(log n)</td>
+                            <td>O(1) avg</td>
+                            <td>O(log n)</td>
+                            <td>O(1) avg</td>
+                        </tr>
+                        <tr>
+                            <td>lower_bound / upper_bound</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Key requirement</td>
+                            <td><code>operator&lt;</code></td>
+                            <td>Hash + <code>operator==</code></td>
+                            <td><code>operator&lt;</code></td>
+                            <td>Hash + <code>operator==</code></td>
+                        </tr>
+                        <tr>
+                            <td>Stores key-value pairs</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>No (values only)</td>
+                            <td>No (values only)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- ===== Practical Example: Word Frequency Counter ===== -->
+                <h2>Practical Example: Word Frequency Counter</h2>
+                <p>This program reads words from a string and counts the frequency of each word using both a <code>std::map</code> (sorted output) and a <code>std::unordered_map</code> (faster counting).</p>
+
+                <div class="code-block"><div class="code-header"><span>C++</span><button class="copy-btn">Copy</button></div><pre><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;unordered_map&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string text = "the cat sat on the mat the cat";
+
+    // ----- Using std::map (sorted output) -----
+    std::map&lt;std::string, int&gt; wordCount;
+    std::istringstream stream1(text);
+    std::string word;
+
+    while (stream1 &gt;&gt; word) {
+        wordCount[word]++;   // operator[] default-inserts 0, then increments
+    }
+
+    std::cout &lt;&lt; "=== Sorted (std::map) ===\n";
+    for (const auto&amp; [w, c] : wordCount) {
+        std::cout &lt;&lt; w &lt;&lt; ": " &lt;&lt; c &lt;&lt; "\n";
+    }
+    // Output:
+    // cat: 2
+    // mat: 1
+    // on: 1
+    // sat: 1
+    // the: 3
+
+    // ----- Using std::unordered_map (faster) -----
+    std::unordered_map&lt;std::string, int&gt; fastCount;
+    std::istringstream stream2(text);
+
+    while (stream2 &gt;&gt; word) {
+        fastCount[word]++;
+    }
+
+    std::cout &lt;&lt; "\n=== Unsorted (std::unordered_map) ===\n";
+    for (const auto&amp; [w, c] : fastCount) {
+        std::cout &lt;&lt; w &lt;&lt; ": " &lt;&lt; c &lt;&lt; "\n";
+    }
+
+    // ----- Finding the most frequent word -----
+    std::string maxWord;
+    int maxFreq = 0;
+    for (const auto&amp; [w, c] : wordCount) {
+        if (c &gt; maxFreq) {
+            maxFreq = c;
+            maxWord = w;
+        }
+    }
+    std::cout &lt;&lt; "\nMost frequent: \"" &lt;&lt; maxWord
+              &lt;&lt; "\" (" &lt;&lt; maxFreq &lt;&lt; " times)\n";
+
+    return 0;
+}</code></pre></div>
+
+                <div class="info-box">
+                    <strong>&#128161; Why <code>wordCount[word]++</code> works:</strong> When <code>operator[]</code> encounters a key that doesn&rsquo;t exist, it <strong>value-initialises</strong> the mapped type. For <code>int</code>, that is <strong>0</strong>. The <code>++</code> then increments it to 1. On subsequent encounters, it simply increments the existing count.
+                </div>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><code>std::map</code> stores <strong>sorted, unique key-value pairs</strong> with O(log n) operations. Use <code>operator[]</code> for insert-or-update, <code>at()</code> for safe access, and <code>insert()</code>/<code>emplace()</code> for insert-if-absent.</li>
+                    <li><code>std::multimap</code> allows <strong>duplicate keys</strong> and requires <code>equal_range()</code> or <code>find()</code> for lookup. It does <strong>not</strong> provide <code>operator[]</code> or <code>at()</code>.</li>
+                    <li><code>std::set</code> stores <strong>sorted, unique values</strong>. Insertions of duplicates are silently ignored.</li>
+                    <li><code>std::multiset</code> allows <strong>duplicate values</strong>. Use <code>erase(iterator)</code> to remove a single duplicate, or <code>erase(value)</code> to remove all.</li>
+                    <li><code>unordered_map</code> and <code>unordered_set</code> use <strong>hash tables</strong> for O(1) average-case performance but do not maintain sorted order.</li>
+                    <li>Choose <strong>ordered</strong> containers when you need sorted traversal or range queries (<code>lower_bound</code>/<code>upper_bound</code>). Choose <strong>unordered</strong> containers when raw speed matters and order is irrelevant.</li>
+                    <li>Custom types used as keys in ordered containers must define <code>operator&lt;</code>; for unordered containers they need a <strong>hash function</strong> and <code>operator==</code>.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>&#127916; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/aEgG4pidcKU" title="C++ STL Maps &amp; Sets" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header must you include to use <code>std::map</code>?","o":["<code>&lt;map&gt;</code>","<code>&lt;unordered_map&gt;</code>","<code>&lt;set&gt;</code>","<code>&lt;vector&gt;</code>"],"a":0},
+                {"q":"What underlying data structure does <code>std::map</code> typically use?","o":["Hash table","AVL tree","Red-black tree","B-tree"],"a":2},
+                {"q":"What is the average time complexity of lookup in <code>std::map</code>?","o":["O(1)","O(log n)","O(n)","O(n log n)"],"a":1},
+                {"q":"What happens when you use <code>map[key]</code> and the key does not exist?","o":["An exception is thrown","The key is inserted with a default-constructed value","Nothing happens","The program crashes"],"a":1},
+                {"q":"Which method throws <code>std::out_of_range</code> if a key is not found?","o":["<code>operator[]</code>","<code>find()</code>","<code>at()</code>","<code>count()</code>"],"a":2},
+                {"q":"What does <code>map.insert({key, val})</code> do if the key already exists?","o":["Overwrites the existing value","Does nothing &mdash; the element is not inserted","Throws an exception","Inserts a duplicate"],"a":1},
+                {"q":"What does <code>map.emplace(key, val)</code> do?","o":["Erases the key","Constructs the element in-place if key is absent","Always overwrites","Moves the key"],"a":1},
+                {"q":"What type does <code>insert()</code> return for a <code>std::map</code>?","o":["<code>bool</code>","<code>iterator</code>","<code>pair&lt;iterator, bool&gt;</code>","<code>void</code>"],"a":2},
+                {"q":"In which order does iterating over a <code>std::map</code> visit elements?","o":["Insertion order","Random order","Sorted by key (ascending)","Sorted by value"],"a":2},
+                {"q":"What type does each element in a <code>std::map&lt;K,V&gt;</code> have?","o":["<code>K</code>","<code>V</code>","<code>std::pair&lt;const K, V&gt;</code>","<code>std::tuple&lt;K, V&gt;</code>"],"a":2},
+                {"q":"How do you access the key of a map iterator <code>it</code>?","o":["<code>it-&gt;key</code>","<code>it-&gt;first</code>","<code>it-&gt;second</code>","<code>*it</code>"],"a":1},
+                {"q":"How do you access the value of a map iterator <code>it</code>?","o":["<code>it-&gt;value</code>","<code>it-&gt;first</code>","<code>it-&gt;second</code>","<code>*it</code>"],"a":2},
+                {"q":"What does <code>map.find(key)</code> return if the key is not found?","o":["<code>nullptr</code>","<code>map.end()</code>","<code>-1</code>","<code>map.begin()</code>"],"a":1},
+                {"q":"What does <code>map.count(key)</code> return for a <code>std::map</code>?","o":["The value associated with the key","0 or 1","The number of total elements","The bucket index"],"a":1},
+                {"q":"Which C++20 method provides a cleaner existence check than <code>count()</code>?","o":["<code>has()</code>","<code>exists()</code>","<code>contains()</code>","<code>includes()</code>"],"a":2},
+                {"q":"What does <code>map.erase(key)</code> return?","o":["A bool","The number of elements erased","An iterator","Nothing"],"a":1},
+                {"q":"What does <code>map.lower_bound(key)</code> return?","o":["Iterator to the first element not less than key","Iterator to the first element greater than key","Iterator to the exact key only","<code>map.end()</code> always"],"a":0},
+                {"q":"Can <code>std::multimap</code> have duplicate keys?","o":["No","Yes","Only for integer keys","Only up to 2 duplicates"],"a":1},
+                {"q":"Does <code>std::multimap</code> provide <code>operator[]</code>?","o":["Yes","No","Only in C++17","Only for string keys"],"a":1},
+                {"q":"Which function retrieves all values for a given key in <code>std::multimap</code>?","o":["<code>find_all()</code>","<code>equal_range()</code>","<code>range()</code>","<code>get_all()</code>"],"a":1},
+                {"q":"Which header defines <code>std::set</code>?","o":["<code>&lt;set&gt;</code>","<code>&lt;map&gt;</code>","<code>&lt;vector&gt;</code>","<code>&lt;unordered_set&gt;</code>"],"a":0},
+                {"q":"What happens when you insert a duplicate value into a <code>std::set</code>?","o":["The duplicate replaces the original","An exception is thrown","The duplicate is silently ignored","Both copies are kept"],"a":2},
+                {"q":"What does <code>set.insert(val)</code> return?","o":["<code>void</code>","<code>bool</code>","<code>pair&lt;iterator, bool&gt;</code>","<code>iterator</code>"],"a":2},
+                {"q":"Does <code>std::set</code> store key-value pairs?","o":["Yes","No, it stores single values","Only with custom comparators","Only for strings"],"a":1},
+                {"q":"What is the time complexity of <code>find()</code> in a <code>std::set</code>?","o":["O(1)","O(log n)","O(n)","O(n log n)"],"a":1},
+                {"q":"Does <code>std::multiset</code> allow duplicate elements?","o":["No","Yes","Only two duplicates","Only for numeric types"],"a":1},
+                {"q":"What does <code>multiset.erase(value)</code> do?","o":["Erases the first occurrence","Erases all occurrences of value","Erases the last occurrence","Does nothing"],"a":1},
+                {"q":"How do you erase only one occurrence in a <code>std::multiset</code>?","o":["<code>ms.erase(value)</code>","<code>ms.erase(ms.find(value))</code>","<code>ms.remove(value)</code>","<code>ms.pop(value)</code>"],"a":1},
+                {"q":"Which header defines <code>std::unordered_map</code>?","o":["<code>&lt;map&gt;</code>","<code>&lt;unordered_map&gt;</code>","<code>&lt;hash_map&gt;</code>","<code>&lt;hashmap&gt;</code>"],"a":1},
+                {"q":"What does <code>std::unordered_map</code> use internally?","o":["Red-black tree","AVL tree","Hash table","Linked list"],"a":2},
+                {"q":"What is the average-case lookup time for <code>std::unordered_map</code>?","o":["O(log n)","O(n)","O(1)","O(n log n)"],"a":2},
+                {"q":"What is the worst-case lookup time for <code>std::unordered_map</code>?","o":["O(1)","O(log n)","O(n)","O(n&sup2;)"],"a":2},
+                {"q":"Does <code>std::unordered_map</code> maintain sorted order?","o":["Yes","No","Only for integer keys","Only if explicitly sorted"],"a":1},
+                {"q":"Does <code>std::unordered_map</code> provide <code>lower_bound()</code>?","o":["Yes","No","Only in C++20","Only for numeric keys"],"a":1},
+                {"q":"What must a type provide to be used as a key in <code>std::unordered_map</code>?","o":["<code>operator&lt;</code>","A hash function and <code>operator==</code>","<code>operator&gt;</code>","A comparator only"],"a":1},
+                {"q":"What must a type provide to be used as a key in <code>std::map</code>?","o":["A hash function","<code>operator==</code>","<code>operator&lt;</code> (or a custom comparator)","<code>operator&gt;</code>"],"a":2},
+                {"q":"Which function returns the number of hash buckets in an <code>unordered_set</code>?","o":["<code>size()</code>","<code>bucket_count()</code>","<code>count()</code>","<code>capacity()</code>"],"a":1},
+                {"q":"What does <code>unordered_set.load_factor()</code> return?","o":["The number of elements","The ratio of elements to buckets","The bucket size","The hash value"],"a":1},
+                {"q":"Which of these containers allows duplicate keys and maintains sorted order?","o":["<code>std::map</code>","<code>std::unordered_multimap</code>","<code>std::multimap</code>","<code>std::set</code>"],"a":2},
+                {"q":"Which container is best for fast lookup when order doesn&rsquo;t matter?","o":["<code>std::map</code>","<code>std::set</code>","<code>std::unordered_map</code>","<code>std::list</code>"],"a":2},
+                {"q":"Which container should you use if you need range queries (e.g., all keys between A and B)?","o":["<code>std::unordered_map</code>","<code>std::map</code>","<code>std::unordered_set</code>","<code>std::vector</code>"],"a":1},
+                {"q":"What does structured binding <code>auto&amp; [k, v]</code> extract from a map element?","o":["The key only","The value only","The key and value","The iterator"],"a":2},
+                {"q":"In which C++ standard were structured bindings introduced?","o":["C++11","C++14","C++17","C++20"],"a":2},
+                {"q":"In which C++ standard were unordered containers introduced?","o":["C++03","C++11","C++14","C++17"],"a":1},
+                {"q":"What does <code>map.clear()</code> do?","o":["Removes the first element","Removes all elements","Resets values to zero","Deletes the map object"],"a":1},
+                {"q":"What does <code>map.empty()</code> return?","o":["The number of elements","<code>true</code> if the map has no elements","An empty map","<code>void</code>"],"a":1},
+                {"q":"Can you modify the key of a <code>std::map</code> element through an iterator?","o":["Yes, directly","No, the key is <code>const</code>","Only with <code>at()</code>","Only in C++20"],"a":1},
+                {"q":"What is the output of <code>wordCount[word]++</code> when <code>word</code> is seen for the first time?","o":["Compilation error","The value becomes 1","The value becomes 0","An exception is thrown"],"a":1},
+                {"q":"Which of these is NOT a member of <code>std::set</code>?","o":["<code>insert()</code>","<code>find()</code>","<code>operator[]</code>","<code>erase()</code>"],"a":2},
+                {"q":"What iterator type do unordered containers provide?","o":["Random-access","Bidirectional","Forward","Output"],"a":2}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="lists-deques.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">STL Lists &amp; Deques</span>
+                </a>
+                <a href="stl-algorithms.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">STL Algorithms</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

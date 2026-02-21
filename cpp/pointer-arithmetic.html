@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Pointer Arithmetic - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-pointer-arithmetic">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html" class="active"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 27 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="49" style="width:49%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Pointer Arithmetic
+                </div>
+                <h1>27. Pointer Arithmetic</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 27 of 55</span>
+                    <span>&#9201; 15 min read</span>
+                    <span>&#128296; Intermediate</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <!-- ===== What Is Pointer Arithmetic? ===== -->
+                <h2>What Is Pointer Arithmetic?</h2>
+                <p><strong>Pointer arithmetic</strong> is the set of operations you can perform on pointers to move them through memory. Because a pointer holds a memory address, arithmetic on that pointer doesn&rsquo;t work in single bytes &mdash; it works in <strong>multiples of the pointed-to type&rsquo;s size</strong>. This is what makes pointer arithmetic both powerful and type-aware.</p>
+                <p>In the previous lesson you learned that a pointer stores an address and that an array name decays to a pointer. Pointer arithmetic builds on those foundations and lets you navigate through contiguous blocks of memory &mdash; most commonly arrays &mdash; without using subscripts.</p>
+                <p>The C++ standard permits four categories of pointer arithmetic:</p>
+                <ul>
+                    <li><strong>Increment / Decrement</strong> &mdash; <code>++ptr</code>, <code>ptr++</code>, <code>--ptr</code>, <code>ptr--</code></li>
+                    <li><strong>Addition / Subtraction of an integer</strong> &mdash; <code>ptr + n</code>, <code>ptr - n</code></li>
+                    <li><strong>Pointer difference</strong> &mdash; <code>ptr2 - ptr1</code> (yields an integer)</li>
+                    <li><strong>Pointer comparison</strong> &mdash; <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code></li>
+                </ul>
+                <p>All other arithmetic (multiplication, division, addition of two pointers, bitwise ops on pointers) is <strong>illegal</strong> and will cause a compilation error.</p>
+                <p>Understanding pointer arithmetic is essential for:</p>
+                <ul>
+                    <li><strong>Efficient array traversal</strong> &mdash; iterate through arrays without index overhead.</li>
+                    <li><strong>Implementing data structures</strong> &mdash; linked lists, ring buffers, and custom allocators all rely on address calculations.</li>
+                    <li><strong>Low-level programming</strong> &mdash; device drivers, embedded systems, and OS kernels manipulate memory at the pointer level.</li>
+                    <li><strong>Understanding iterators</strong> &mdash; STL iterators model pointer arithmetic, so mastering pointers helps you master the Standard Library.</li>
+                </ul>
+
+                <h3>How the Compiler Translates Pointer Arithmetic</h3>
+                <p>When you write <code>ptr + n</code>, the compiler generates machine code equivalent to:</p>
+<pre><code>// Pseudo-formula (conceptual, not real C++)
+new_address = current_address + n * sizeof(*ptr);</code></pre>
+                <p>The multiplication by <code>sizeof</code> is automatic; you never write it yourself. This &ldquo;scaled addition&rdquo; ensures the pointer always lands on a valid element boundary &mdash; provided you stay within the bounds of the array.</p>
+
+                <!-- ===== Incrementing and Decrementing Pointers ===== -->
+                <h2>Incrementing and Decrementing Pointers</h2>
+                <p>The increment (<code>++</code>) and decrement (<code>--</code>) operators move a pointer forward or backward by <strong>one element</strong>. The actual number of bytes skipped equals <code>sizeof(T)</code>, where <code>T</code> is the type the pointer points to.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nums[] = {10, 20, 30, 40, 50};
+    int* ptr = nums;            // points to nums[0]
+
+    cout &lt;&lt; *ptr &lt;&lt; endl;       // 10
+
+    ptr++;                      // move to nums[1]
+    cout &lt;&lt; *ptr &lt;&lt; endl;       // 20
+
+    ptr++;                      // move to nums[2]
+    cout &lt;&lt; *ptr &lt;&lt; endl;       // 30
+
+    ptr--;                      // back to nums[1]
+    cout &lt;&lt; *ptr &lt;&lt; endl;       // 20
+
+    return 0;
+}</code></pre>
+                <p>Although the address changes by 4 bytes (on a typical 32/64-bit system where <code>sizeof(int) == 4</code>), the <code>++</code> operator hides that detail and simply advances by one <code>int</code>.</p>
+
+                <h3>Decrementing Through an Array (Right to Left)</h3>
+                <p>You can also walk backward through an array by starting at the last element and decrementing the pointer:</p>
+<pre><code>int arr[] = {10, 20, 30, 40, 50};
+int n = 5;
+int* p = arr + n - 1;      // points to last element (50)
+
+while (p &gt;= arr) {
+    cout &lt;&lt; *p &lt;&lt; " ";
+    --p;
+}
+cout &lt;&lt; endl;
+// Output: 50 40 30 20 10</code></pre>
+                <p><strong>Note:</strong> Forming a pointer <em>before</em> the start of an array (<code>arr - 1</code>) is technically <strong>undefined behaviour</strong> in the standard, even though many implementations handle it. A safer approach is to use index-based loops or iterate with an unsigned counter.</p>
+
+                <h3>Prefix vs. Postfix</h3>
+                <p>Just like with integers, the prefix form (<code>++ptr</code>) increments first and then yields the new value, while the postfix form (<code>ptr++</code>) yields the current value and then increments:</p>
+<pre><code>int arr[] = {100, 200, 300};
+int* p = arr;
+
+cout &lt;&lt; *p++ &lt;&lt; endl;   // prints 100, then p moves to arr[1]
+cout &lt;&lt; *++p &lt;&lt; endl;   // p moves to arr[2], then prints 300</code></pre>
+                <p>A very common C idiom for copying a C-string character-by-character uses postfix increment on both source and destination pointers:</p>
+<pre><code>void myStrcpy(char* dest, const char* src) {
+    while ((*dest++ = *src++) != '\0')
+        ;   // loop body is empty &mdash; all work happens in the condition
+}</code></pre>
+                <p>This compact style is idiomatic C/C++ but can be hard to read. Let&rsquo;s break it down:</p>
+                <ol>
+                    <li><code>*src</code> &mdash; dereference source to get the current character.</li>
+                    <li><code>*dest = ...</code> &mdash; copy that character to the destination.</li>
+                    <li><code>src++</code> and <code>dest++</code> &mdash; advance both pointers after the copy.</li>
+                    <li>The loop ends when the copied character is <code>'\0'</code>.</li>
+                </ol>
+
+                <!-- ===== Adding / Subtracting Integers to Pointers ===== -->
+                <h2>Adding and Subtracting Integers</h2>
+                <p>You can add or subtract any integer value to/from a pointer. The pointer jumps by <code>n * sizeof(T)</code> bytes, effectively skipping <code>n</code> elements:</p>
+<pre><code>int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
+int* p = arr;          // points to arr[0]
+
+cout &lt;&lt; *(p + 3) &lt;&lt; endl;  // 4  (arr[3])
+cout &lt;&lt; *(p + 7) &lt;&lt; endl;  // 8  (arr[7])
+
+p = p + 4;                 // now points to arr[4]
+cout &lt;&lt; *p &lt;&lt; endl;        // 5
+
+p = p - 2;                 // back to arr[2]
+cout &lt;&lt; *p &lt;&lt; endl;        // 3</code></pre>
+
+                <h3>Using <code>+=</code> and <code>-=</code></h3>
+                <p>Compound-assignment operators work with pointers just as they do with integers:</p>
+<pre><code>int data[] = {10, 20, 30, 40, 50};
+int* q = data;
+
+q += 3;                    // skip 3 elements forward
+cout &lt;&lt; *q &lt;&lt; endl;        // 40
+
+q -= 2;                    // go back 2 elements
+cout &lt;&lt; *q &lt;&lt; endl;        // 20</code></pre>
+
+                <!-- ===== Pointer Difference ===== -->
+                <h2>Pointer Difference</h2>
+                <p>Subtracting one pointer from another gives the <strong>number of elements</strong> between them, not the number of bytes. Both pointers must point into the <strong>same array</strong> (or one past the end); otherwise the result is <strong>undefined behaviour</strong>.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int* start = &amp;arr[0];
+    int* end   = &amp;arr[4];
+
+    ptrdiff_t diff = end - start;
+    cout &lt;&lt; "Elements apart: " &lt;&lt; diff &lt;&lt; endl;  // 4
+
+    return 0;
+}</code></pre>
+                <p>The result type is <code>std::ptrdiff_t</code> (a signed integer defined in <code>&lt;cstddef&gt;</code>). It can be negative if the second pointer precedes the first.</p>
+<pre><code>int arr[] = {5, 10, 15, 20, 25};
+int* a = &amp;arr[4];
+int* b = &amp;arr[1];
+
+cout &lt;&lt; a - b &lt;&lt; endl;   //  3
+cout &lt;&lt; b - a &lt;&lt; endl;   // -3</code></pre>
+
+                <!-- ===== Pointer Comparison ===== -->
+                <h2>Pointer Comparison</h2>
+                <p>You can compare pointers with the relational operators <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>, and <code>!=</code>. This is meaningful when both pointers refer to elements in the <strong>same array</strong>. A pointer to a later element compares greater than a pointer to an earlier one.</p>
+<pre><code>int arr[] = {1, 2, 3, 4, 5};
+int* p1 = &amp;arr[1];
+int* p2 = &amp;arr[3];
+
+if (p1 &lt; p2)
+    cout &lt;&lt; "p1 comes before p2" &lt;&lt; endl;  // printed
+
+if (p1 == p2)
+    cout &lt;&lt; "same address" &lt;&lt; endl;
+
+if (p1 != p2)
+    cout &lt;&lt; "different addresses" &lt;&lt; endl;  // printed</code></pre>
+                <p>A common idiom is to use a pointer comparison as a loop boundary when iterating over an array:</p>
+<pre><code>int arr[] = {10, 20, 30, 40};
+int* begin = arr;
+int* end   = arr + 4;          // one past the last element
+
+for (int* p = begin; p != end; ++p)
+    cout &lt;&lt; *p &lt;&lt; " ";        // 10 20 30 40
+cout &lt;&lt; endl;</code></pre>
+
+                <!-- ===== Traversing Arrays with Pointers ===== -->
+                <h2>Traversing Arrays with Pointers</h2>
+                <p>One of the most practical uses of pointer arithmetic is walking through every element of an array without an index variable. You simply start a pointer at the first element and increment it until you reach one-past-the-end.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    double grades[] = {88.5, 92.3, 76.0, 95.1, 81.4};
+    int size = sizeof(grades) / sizeof(grades[0]);
+
+    // Pointer-based traversal
+    for (double* p = grades; p &lt; grades + size; ++p)
+        cout &lt;&lt; *p &lt;&lt; " ";
+    cout &lt;&lt; endl;
+    // Output: 88.5 92.3 76 95.1 81.4
+
+    // Compute sum with pointers
+    double sum = 0;
+    for (double* p = grades; p &lt; grades + size; ++p)
+        sum += *p;
+
+    cout &lt;&lt; "Average: " &lt;&lt; sum / size &lt;&lt; endl;
+    // Output: Average: 86.66
+
+    return 0;
+}</code></pre>
+
+                <h3>Printing with an Index Derived from Pointers</h3>
+<pre><code>int arr[] = {5, 10, 15, 20, 25};
+int n = 5;
+
+for (int* p = arr; p &lt; arr + n; ++p)
+    cout &lt;&lt; "Index " &lt;&lt; (p - arr) &lt;&lt; ": " &lt;&lt; *p &lt;&lt; endl;</code></pre>
+                <p>Here <code>p - arr</code> gives the current index, demonstrating how pointer difference and traversal work together.</p>
+
+                <h3>Reverse Traversal with Pointers</h3>
+                <p>Combining pointer comparison and decrement, you can traverse an array in reverse order cleanly:</p>
+<pre><code>int arr[] = {2, 4, 6, 8, 10};
+int n = 5;
+int* last = arr + n - 1;
+
+cout &lt;&lt; "Reverse: ";
+for (int* p = last; p &gt;= arr; --p)
+    cout &lt;&lt; *p &lt;&lt; " ";
+cout &lt;&lt; endl;
+// Output: Reverse: 10 8 6 4 2</code></pre>
+
+                <h3>Conditionally Modifying Elements</h3>
+                <p>You can use pointer traversal with conditions to selectively modify array elements:</p>
+<pre><code>// Double every even number in the array
+int arr[] = {1, 2, 3, 4, 5, 6};
+int n = 6;
+
+for (int* p = arr; p &lt; arr + n; ++p) {
+    if (*p % 2 == 0)
+        *p *= 2;
+}
+
+// arr is now {1, 4, 3, 8, 5, 12}</code></pre>
+
+                <!-- ===== Pointer Arithmetic with Different Data Types ===== -->
+                <h2>Pointer Arithmetic with Different Data Types</h2>
+                <p>The amount a pointer moves depends entirely on the size of the data type it points to. This is sometimes called <strong>&ldquo;scaled arithmetic&rdquo;</strong>. The compiler automatically multiplies the integer operand by <code>sizeof(T)</code>.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char   c_arr[] = {'A', 'B', 'C', 'D'};
+    int    i_arr[] = {10, 20, 30, 40};
+    double d_arr[] = {1.1, 2.2, 3.3, 4.4};
+
+    char*   cp = c_arr;
+    int*    ip = i_arr;
+    double* dp = d_arr;
+
+    cout &lt;&lt; "char*   +1 moves " &lt;&lt; sizeof(char)   &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 1
+    cout &lt;&lt; "int*    +1 moves " &lt;&lt; sizeof(int)    &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 4
+    cout &lt;&lt; "double* +1 moves " &lt;&lt; sizeof(double) &lt;&lt; " byte(s)"  &lt;&lt; endl;  // 8
+
+    // Verify by printing raw addresses
+    cout &lt;&lt; "ip     = " &lt;&lt; ip     &lt;&lt; endl;
+    cout &lt;&lt; "ip + 1 = " &lt;&lt; ip + 1 &lt;&lt; endl;  // address is 4 bytes higher
+
+    cout &lt;&lt; "dp     = " &lt;&lt; dp     &lt;&lt; endl;
+    cout &lt;&lt; "dp + 1 = " &lt;&lt; dp + 1 &lt;&lt; endl;  // address is 8 bytes higher
+
+    return 0;
+}</code></pre>
+                <p>This scaling is what makes pointer arithmetic <strong>type-safe</strong>: a <code>double*</code> incremented by 1 always lands on the next <code>double</code>, never in the middle of one.</p>
+
+                <h3>Visual Memory Layout</h3>
+                <p>Consider four <code>int</code> values stored at consecutive addresses (starting at 1000):</p>
+<pre><code>// Memory layout (sizeof(int) == 4)
+// Address:  1000  1004  1008  1012
+// Value:      10    20    30    40
+
+int arr[] = {10, 20, 30, 40};
+int* p = arr;           // p == 1000
+
+p + 0  &rarr;  1000  (arr[0] == 10)
+p + 1  &rarr;  1004  (arr[1] == 20)
+p + 2  &rarr;  1008  (arr[2] == 30)
+p + 3  &rarr;  1012  (arr[3] == 40)</code></pre>
+                <p>For <code>double</code> (8 bytes) the addresses would be 1000, 1008, 1016, 1024 &mdash; exactly <code>sizeof(double)</code> apart.</p>
+
+                <!-- ===== Pointers and Array Subscript Equivalence ===== -->
+                <h2>Pointers and Array Subscript Equivalence</h2>
+                <p>In C++ the subscript operator applied to an array is defined in terms of pointer arithmetic. The expression <code>a[i]</code> is <strong>exactly</strong> equivalent to <code>*(a + i)</code>. This identity holds in both directions:</p>
+                <ul>
+                    <li><code>a[i]</code> &equiv; <code>*(a + i)</code></li>
+                    <li><code>*(a + i)</code> &equiv; <code>a[i]</code></li>
+                    <li>Because addition is commutative: <code>*(i + a)</code> &equiv; <code>i[a]</code> (legal but weird!)</li>
+                </ul>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[] = {100, 200, 300, 400, 500};
+
+    // All four print the same value: 300
+    cout &lt;&lt; arr[2]       &lt;&lt; endl;   // subscript notation
+    cout &lt;&lt; *(arr + 2)   &lt;&lt; endl;   // pointer arithmetic
+    cout &lt;&lt; *(2 + arr)   &lt;&lt; endl;   // commutative
+    cout &lt;&lt; 2[arr]       &lt;&lt; endl;   // exotic but valid!
+
+    // Using a pointer variable
+    int* p = arr;
+    cout &lt;&lt; p[3]         &lt;&lt; endl;   // 400  (pointer + subscript)
+    cout &lt;&lt; *(p + 3)     &lt;&lt; endl;   // 400  (pointer arithmetic)
+
+    return 0;
+}</code></pre>
+                <p>Although <code>2[arr]</code> compiles, you should <strong>never</strong> use it in real code &mdash; it is confusing and non-idiomatic. This equivalence simply explains <em>why</em> array indexing works internally.</p>
+
+                <h3>Functions That Accept Pointers Instead of Arrays</h3>
+                <p>Because arrays decay to pointers, a function parameter declared as <code>int arr[]</code> is identical to <code>int* arr</code>. Inside the function you can use either subscript or pointer arithmetic interchangeably:</p>
+<pre><code>void printArray(int* arr, int size) {
+    for (int i = 0; i &lt; size; ++i)
+        cout &lt;&lt; *(arr + i) &lt;&lt; " ";
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int nums[] = {1, 2, 3, 4, 5};
+    printArray(nums, 5);     // 1 2 3 4 5
+    return 0;
+}</code></pre>
+
+                <!-- ===== Pointer Arithmetic with Structures ===== -->
+                <h2>Pointer Arithmetic with Structures</h2>
+                <p>Pointer arithmetic is not limited to fundamental types. It works with any complete type, including <code>struct</code> and <code>class</code>. The pointer advances by <code>sizeof(StructType)</code> bytes on each increment.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+struct Point {
+    double x;
+    double y;
+};
+
+int main() {
+    Point pts[] = {{1.0, 2.0}, {3.0, 4.0}, {5.0, 6.0}};
+    int count = sizeof(pts) / sizeof(pts[0]);
+
+    cout &lt;&lt; "sizeof(Point) = " &lt;&lt; sizeof(Point) &lt;&lt; " bytes" &lt;&lt; endl;
+
+    for (Point* p = pts; p &lt; pts + count; ++p)
+        cout &lt;&lt; "(" &lt;&lt; p-&gt;x &lt;&lt; ", " &lt;&lt; p-&gt;y &lt;&lt; ")" &lt;&lt; endl;
+
+    return 0;
+}
+// Output:
+// sizeof(Point) = 16 bytes
+// (1, 2)
+// (3, 4)
+// (5, 6)</code></pre>
+                <p>Here each <code>++p</code> moves the pointer 16 bytes forward (two <code>double</code> members &times; 8 bytes each), landing precisely on the next <code>Point</code> object.</p>
+
+                <h3>Struct with Padding</h3>
+                <p>Be aware that the compiler may add <strong>padding bytes</strong> to structures for alignment. The pointer will still advance by the correct <code>sizeof</code>, which includes any padding:</p>
+<pre><code>struct Record {
+    char   grade;    // 1 byte + 3 bytes padding (typically)
+    int    score;    // 4 bytes
+};
+// sizeof(Record) is usually 8, not 5
+
+Record recs[] = {{'A', 95}, {'B', 82}, {'C', 70}};
+Record* rp = recs;
+
+rp++;   // advances by sizeof(Record) == 8 bytes</code></pre>
+                <p>This is why you should always rely on <code>sizeof</code> rather than manually calculating offsets.</p>
+
+                <!-- ===== Practical Examples ===== -->
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Reverse an Array In-Place</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void reverseArray(int* begin, int* end) {
+    --end;                        // point to last element
+    while (begin &lt; end) {
+        int temp = *begin;
+        *begin = *end;
+        *end   = temp;
+        ++begin;
+        --end;
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    reverseArray(arr, arr + n);
+
+    for (int* p = arr; p &lt; arr + n; ++p)
+        cout &lt;&lt; *p &lt;&lt; " ";
+    cout &lt;&lt; endl;
+    // Output: 5 4 3 2 1
+
+    return 0;
+}</code></pre>
+
+                <h3>Example 2: String Length Using Pointer Arithmetic</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int myStrLen(const char* str) {
+    const char* start = str;
+    while (*str != '\0')
+        ++str;
+    return str - start;           // pointer difference = length
+}
+
+int main() {
+    const char* msg = "Hello, World!";
+    cout &lt;&lt; "Length: " &lt;&lt; myStrLen(msg) &lt;&lt; endl;  // 13
+    return 0;
+}</code></pre>
+
+                <h3>Example 3: Copy an Array</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+void copyArray(const int* src, int* dest, int n) {
+    const int* srcEnd = src + n;
+    while (src &lt; srcEnd) {
+        *dest = *src;
+        ++src;
+        ++dest;
+    }
+}
+
+int main() {
+    int original[] = {10, 20, 30, 40, 50};
+    int n = sizeof(original) / sizeof(original[0]);
+    int copy[5];
+
+    copyArray(original, copy, n);
+
+    for (int* p = copy; p &lt; copy + n; ++p)
+        cout &lt;&lt; *p &lt;&lt; " ";
+    cout &lt;&lt; endl;
+    // Output: 10 20 30 40 50
+
+    return 0;
+}</code></pre>
+
+                <h3>Example 4: Find Maximum Element</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int* findMax(int* begin, int* end) {
+    int* maxPtr = begin;
+    for (int* p = begin + 1; p &lt; end; ++p) {
+        if (*p &gt; *maxPtr)
+            maxPtr = p;
+    }
+    return maxPtr;
+}
+
+int main() {
+    int arr[] = {34, 12, 87, 56, 23};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int* m = findMax(arr, arr + n);
+    cout &lt;&lt; "Max value: " &lt;&lt; *m &lt;&lt; endl;           // 87
+    cout &lt;&lt; "At index:  " &lt;&lt; (m - arr) &lt;&lt; endl;    // 2
+
+    return 0;
+}</code></pre>
+
+                <h3>Example 5: Linear Search with Pointers</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+// Returns pointer to found element, or nullptr if not found
+int* linearSearch(int* begin, int* end, int target) {
+    for (int* p = begin; p &lt; end; ++p) {
+        if (*p == target)
+            return p;
+    }
+    return nullptr;
+}
+
+int main() {
+    int arr[] = {7, 14, 21, 28, 35};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int* result = linearSearch(arr, arr + n, 21);
+
+    if (result != nullptr)
+        cout &lt;&lt; "Found " &lt;&lt; *result &lt;&lt; " at index " &lt;&lt; (result - arr) &lt;&lt; endl;
+    else
+        cout &lt;&lt; "Not found" &lt;&lt; endl;
+
+    // Output: Found 21 at index 2
+    return 0;
+}</code></pre>
+
+                <h3>Example 6: Count Occurrences</h3>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int countOccurrences(const int* begin, const int* end, int value) {
+    int count = 0;
+    for (const int* p = begin; p &lt; end; ++p) {
+        if (*p == value)
+            ++count;
+    }
+    return count;
+}
+
+int main() {
+    int arr[] = {3, 7, 3, 9, 3, 1, 7, 3};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    cout &lt;&lt; "3 appears " &lt;&lt; countOccurrences(arr, arr + n, 3) &lt;&lt; " times" &lt;&lt; endl;
+    // Output: 3 appears 4 times
+    return 0;
+}</code></pre>
+
+                <!-- ===== Common Mistakes and Undefined Behavior ===== -->
+                <h2>Common Mistakes and Undefined Behavior</h2>
+                <p>Pointer arithmetic is powerful, but incorrect usage leads to <strong>undefined behaviour</strong> (UB). Here are the most common pitfalls:</p>
+
+                <h3>1. Going Out of Bounds</h3>
+<pre><code>int arr[5] = {1, 2, 3, 4, 5};
+int* p = arr + 5;      // one-past-end &mdash; legal to form
+cout &lt;&lt; *p &lt;&lt; endl;    // UB! Dereferencing one-past-end</code></pre>
+                <p>You may form a pointer to <strong>one past the last element</strong> (for use in loops), but you must <strong>never dereference</strong> it.</p>
+
+                <h3>2. Subtracting Pointers from Different Arrays</h3>
+<pre><code>int a[3] = {1, 2, 3};
+int b[3] = {4, 5, 6};
+int diff = &amp;b[2] - &amp;a[0];    // UB! Different arrays</code></pre>
+                <p>Pointer subtraction is only defined when both pointers point into the <strong>same array object</strong> (or one past its end).</p>
+
+                <h3>3. Arithmetic on Null or Uninitialized Pointers</h3>
+<pre><code>int* p = nullptr;
+p++;                   // UB!
+
+int* q;                // uninitialized
+q += 2;                // UB!</code></pre>
+
+                <h3>4. Arithmetic on <code>void*</code></h3>
+<pre><code>void* vp = arr;
+// vp++;               // Error: size of void is unknown
+// vp + 1;             // Error: same reason</code></pre>
+                <p>The compiler does not know how many bytes to advance, so pointer arithmetic on <code>void*</code> is <strong>not allowed</strong> in standard C++. (Some compilers allow it as a non-standard extension, treating it like <code>char*</code>.)</p>
+
+                <h3>5. Confusing Operator Precedence</h3>
+<pre><code>int arr[] = {10, 20, 30};
+int* p = arr;
+
+// This increments the VALUE, not the pointer:
+cout &lt;&lt; (*p)++ &lt;&lt; endl;   // prints 10, arr[0] becomes 11
+
+// This increments the POINTER, returns old value:
+cout &lt;&lt; *p++ &lt;&lt; endl;     // prints 11 (arr[0]), then p moves to arr[1]</code></pre>
+                <p>Remember: in <code>*p++</code>, the <code>++</code> binds to <code>p</code> (the pointer), not to <code>*p</code> (the value). If you want to increment the value, use <code>(*p)++</code>.</p>
+
+                <h3>6. Using Freed Memory</h3>
+<pre><code>int* p = new int[5]{1, 2, 3, 4, 5};
+delete[] p;
+// p still holds the old address but memory is freed
+cout &lt;&lt; *(p + 2) &lt;&lt; endl;    // UB! Accessing freed memory</code></pre>
+                <p>After <code>delete</code>, any pointer arithmetic on <code>p</code> is meaningless because the memory no longer belongs to your program.</p>
+
+                <h3>7. Overflow with Large Offsets</h3>
+<pre><code>int arr[10];
+int* p = arr;
+p += 1000000;   // way beyond the array &mdash; UB even without dereferencing</code></pre>
+                <p>Forming a pointer more than one element past the end of an array is undefined. Always keep offsets within <code>[0, n]</code> where <code>n</code> is the array size.</p>
+
+                <h3>Best Practices to Avoid Bugs</h3>
+                <ul>
+                    <li>Always track the array length and never exceed <code>arr + n</code>.</li>
+                    <li>Never dereference the one-past-end pointer.</li>
+                    <li>Initialise pointers before performing arithmetic.</li>
+                    <li>Only subtract or compare pointers that point into the same array.</li>
+                    <li>Use parentheses to make precedence explicit: <code>(*p)++</code> vs <code>*(p++)</code>.</li>
+                    <li>Prefer range-based <code>for</code> loops or STL iterators in modern C++ to avoid manual pointer arithmetic errors.</li>
+                </ul>
+
+                <!-- ===== Key Takeaways ===== -->
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li>Pointer arithmetic moves a pointer by <strong>multiples of <code>sizeof(T)</code></strong>, not individual bytes.</li>
+                    <li><code>++ptr</code> and <code>ptr++</code> advance one element; <code>--ptr</code> and <code>ptr--</code> retreat one element.</li>
+                    <li><code>ptr + n</code> jumps forward <code>n</code> elements; <code>ptr - n</code> jumps backward <code>n</code> elements.</li>
+                    <li><code>ptr2 - ptr1</code> yields the number of <strong>elements</strong> between two pointers (type <code>ptrdiff_t</code>).</li>
+                    <li>Pointers can be compared with <code>&lt;</code>, <code>&gt;</code>, <code>==</code>, <code>!=</code> when they point into the same array.</li>
+                    <li>The subscript identity <code>a[i] &equiv; *(a + i)</code> proves that arrays and pointers share the same underlying mechanism.</li>
+                    <li>Different data types cause different byte jumps: <code>char* +1</code> = 1 byte, <code>int* +1</code> = 4 bytes, <code>double* +1</code> = 8 bytes (typically).</li>
+                    <li>Pointer arithmetic on structures advances by <code>sizeof(StructType)</code>.</li>
+                    <li>Going out of bounds, subtracting pointers from different arrays, and arithmetic on null or <code>void*</code> pointers are all <strong>undefined behaviour</strong>.</li>
+                    <li>Modern C++ often replaces raw pointer arithmetic with STL iterators, ranges, and <code>std::span</code> for safer, more readable code.</li>
+                </ul>
+
+                <h3>When to Use Pointer Arithmetic</h3>
+                <p>Use pointer arithmetic when you need fine-grained control over memory layout &mdash; for example, implementing custom allocators, writing performance-critical inner loops, or interfacing with C libraries. In everyday application code, prefer:</p>
+                <ul>
+                    <li><strong>Range-based <code>for</code></strong> &mdash; <code>for (auto&amp; x : arr)</code></li>
+                    <li><strong>STL algorithms</strong> &mdash; <code>std::find</code>, <code>std::copy</code>, <code>std::reverse</code></li>
+                    <li><strong><code>std::span</code> (C++20)</strong> &mdash; a safe, bounds-aware view over contiguous data</li>
+                </ul>
+
+            </div>
+
+            <!-- ===== Video ===== -->
+            <div class="video-container">
+                <h2>&#127909; Video Tutorial</h2>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/FNsQpGGIVSo" title="C++ Pointer Arithmetic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+                        <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <!-- ===== Quiz ===== -->
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What does pointer arithmetic operate in terms of?","o":["Individual bytes","Bits","Multiples of sizeof(T)","Kilobytes"],"a":2},
+                {"q":"If int* p points to arr[0], what does p + 3 point to?","o":["arr[1]","arr[2]","arr[3]","arr[4]"],"a":2},
+                {"q":"How many bytes does int* p move forward with p++ on a system where sizeof(int) == 4?","o":["1","2","4","8"],"a":2},
+                {"q":"What is the result type of ptr2 - ptr1?","o":["int","size_t","ptrdiff_t","unsigned long"],"a":2},
+                {"q":"Which operation is ILLEGAL on pointers?","o":["ptr + 5","ptr1 - ptr2","ptr1 + ptr2","ptr++"],"a":2},
+                {"q":"What does *(arr + i) equal?","o":["&amp;arr[i]","arr + i","arr[i]","sizeof(arr[i])"],"a":2},
+                {"q":"If double* dp points to arr[0], how many bytes does dp + 1 skip (sizeof(double)==8)?","o":["1","4","8","16"],"a":2},
+                {"q":"What does *p++ do?","o":["Increments the value, returns new value","Dereferences p, then increments the pointer","Increments p, then dereferences","Compilation error"],"a":1},
+                {"q":"What does (*p)++ do?","o":["Increments the pointer","Increments the value pointed to","Dereferences the pointer twice","Compilation error"],"a":1},
+                {"q":"Which is a valid one-past-the-end pointer for int arr[5]?","o":["arr + 4","arr + 5","arr + 6","arr - 1"],"a":1},
+                {"q":"Can you dereference the one-past-the-end pointer?","o":["Yes, it returns 0","Yes, it returns garbage","No, it is undefined behaviour","Only in debug mode"],"a":2},
+                {"q":"What happens when you subtract pointers pointing to different arrays?","o":["Returns 0","Returns the byte difference","Undefined behaviour","Compilation error"],"a":2},
+                {"q":"Which is equivalent to arr[0]?","o":["*(arr + 0)","*arr","arr[0]","All of the above"],"a":3},
+                {"q":"What value does 2[arr] access if arr = {10,20,30}?","o":["10","20","30","Compilation error"],"a":2},
+                {"q":"Why does 2[arr] work?","o":["Special syntax","Subscript is defined as *(a+i), addition is commutative","Compiler bug","It doesn&rsquo;t work"],"a":1},
+                {"q":"What is the output? int a[]={5,10,15}; int* p=a; cout&lt;&lt;*(p+2);","o":["5","10","15","Undefined"],"a":2},
+                {"q":"How do you move a pointer back 3 elements?","o":["p + 3","p - 3","p * 3","p / 3"],"a":1},
+                {"q":"Which compound operator advances a pointer by n positions?","o":["p *= n","p += n","p |= n","p &amp;= n"],"a":1},
+                {"q":"Can you perform pointer arithmetic on void*?","o":["Yes","No, standard C++ forbids it","Only with a cast","Only in C++20"],"a":1},
+                {"q":"What does char* p; p++ advance by?","o":["1 byte","2 bytes","4 bytes","Depends on the platform"],"a":0},
+                {"q":"If p and q point to arr[1] and arr[4] respectively, what is q - p?","o":["1","3","4","Depends on type"],"a":1},
+                {"q":"Which loop correctly traverses arr of size n using pointers?","o":["for(int* p=arr; p&lt;=arr+n; p++)","for(int* p=arr; p&lt;arr+n; p++)","for(int* p=arr; p&lt;n; p++)","for(int* p=0; p&lt;arr+n; p++)"],"a":1},
+                {"q":"What is the danger of int* p = nullptr; p++;?","o":["Moves p to address 4","Sets p to 1","Undefined behaviour","No danger, it is safe"],"a":2},
+                {"q":"In a function receiving int* arr, can you use arr[i]?","o":["No, only *(arr+i) works","Yes, subscript works on pointers too","Only if arr was declared as an array","Only in C, not C++"],"a":1},
+                {"q":"Which expression gives the index of pointer p within array arr?","o":["p - &amp;arr","*p - *arr","p - arr","arr - p"],"a":2},
+                {"q":"How does ++ptr differ from ptr++ in terms of result?","o":["No difference","++ptr returns the new value; ptr++ returns the old value","++ptr is faster","ptr++ skips two elements"],"a":1},
+                {"q":"What does ptr1 == ptr2 test?","o":["Whether values are equal","Whether addresses are equal","Whether types are equal","Whether sizes are equal"],"a":1},
+                {"q":"In the expression *(p + n), what happens first?","o":["Dereferencing","Addition","They happen simultaneously","Depends on compiler"],"a":1},
+                {"q":"Which is true about comparing pointers from different arrays?","o":["Always returns false","Always returns true","Defined only with == and !=","Undefined behaviour with &lt; and &gt;"],"a":3},
+                {"q":"What does p = p + 0 do to a valid pointer p?","o":["Sets p to null","Leaves p unchanged","Undefined behaviour","Moves p one element"],"a":1},
+                {"q":"What is &amp;arr[n] for an array of size n?","o":["Invalid","A valid one-past-the-end pointer","Points to arr[n-1]","Compilation error"],"a":1},
+                {"q":"Pointer arithmetic works with struct pointers advancing by:","o":["1 byte","sizeof the first member","sizeof the struct","Number of members"],"a":2},
+                {"q":"Which code correctly computes a C-string length using pointers?","o":["while(*p) p++; return p-start;","while(p) p++; return *p;","return sizeof(p);","return *p - p;"],"a":0},
+                {"q":"What happens if you add a negative integer to a pointer?","o":["Compilation error","The pointer moves backward","Undefined behaviour always","The integer is ignored"],"a":1},
+                {"q":"For int arr[10], which range is valid for pointer p?","o":["arr to arr+9","arr to arr+10","arr to arr+11","arr-1 to arr+10"],"a":1},
+                {"q":"What does *(arr + n - 1) access in an array of size n?","o":["First element","Last element","One past last","Second to last"],"a":1},
+                {"q":"If p is int* and p == arr + 5, what is p - arr?","o":["0","5","10","20"],"a":1},
+                {"q":"Which is NOT a valid pointer operation?","o":["p + 2","p - 2","p * 2","p1 - p2"],"a":2},
+                {"q":"After int* p = arr; p += 3; what is *p for arr = {10,20,30,40,50}?","o":["10","20","30","40"],"a":3},
+                {"q":"What does &amp;*(arr + i) simplify to?","o":["arr[i]","*(arr+i)","arr + i","&amp;arr + i"],"a":2},
+                {"q":"Subtracting two char* pointers that are 10 bytes apart gives:","o":["10","5","2","Depends on sizeof(char)"],"a":0},
+                {"q":"Which modern C++ feature is preferred over raw pointer traversal?","o":["goto statements","Range-based for loops and iterators","Macros","Global variables"],"a":1},
+                {"q":"What is std::span used for in C++20?","o":["Dynamic allocation","A non-owning view over contiguous elements","String formatting","Thread synchronisation"],"a":1},
+                {"q":"Can const int* p be incremented?","o":["No, it is const","Yes, the pointer can move; only the data is const","Only with a cast","Only backward"],"a":1},
+                {"q":"Can int* const p be incremented?","o":["Yes","No, the pointer itself is const","Only forward","Only in functions"],"a":1},
+                {"q":"What is the output? int a[]={2,4,6}; cout&lt;&lt;*a+1;","o":["2","3","4","6"],"a":1},
+                {"q":"What is the output? int a[]={2,4,6}; cout&lt;&lt;*(a+1);","o":["2","3","4","6"],"a":2},
+                {"q":"Why is pointer arithmetic faster than indexing in some old compilers?","o":["It uses fewer registers","It avoids repeated base+offset calculations","It skips bounds checking","It is not faster in any compiler"],"a":1},
+                {"q":"Which header defines ptrdiff_t?","o":["&lt;cstdlib&gt;","&lt;cstddef&gt;","&lt;cstring&gt;","&lt;cmath&gt;"],"a":1},
+                {"q":"What is the output? int a[]={1,2,3,4}; int* p=a+4; cout&lt;&lt;p-a;","o":["3","4","5","Undefined"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="pointers.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Pointers</span>
+                </a>
+                <a href="dynamic-memory.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Dynamic Memory</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

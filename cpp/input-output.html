@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Input &amp; Output - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-input-output">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html" class="active"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 7 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="13" style="width:13%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Input &amp; Output
+                </div>
+                <h1>7. Input &amp; Output in C++</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 7 of 55</span>
+                    <span>&#9201; 20 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>The iostream Library</h2>
+                <p>Input and output (I/O) are fundamental to any program &mdash; they allow your program to communicate with the outside world. In C++, I/O is handled through a powerful library called <code>&lt;iostream&gt;</code>, which stands for <strong>input/output stream</strong>.</p>
+                <p>A <strong>stream</strong> is an abstraction that represents a flow of data. Think of it like a river: data flows from a source (like the keyboard) to a destination (like the screen). The <code>&lt;iostream&gt;</code> header provides several stream objects that are automatically available when you include it:</p>
+                <ul>
+                    <li><code>cout</code> &mdash; <strong>Character Output</strong>: sends data to the standard output (usually the screen/console)</li>
+                    <li><code>cin</code> &mdash; <strong>Character Input</strong>: reads data from the standard input (usually the keyboard)</li>
+                    <li><code>cerr</code> &mdash; <strong>Character Error</strong>: sends error messages to the standard error stream (unbuffered)</li>
+                    <li><code>clog</code> &mdash; <strong>Character Log</strong>: sends log messages to the standard error stream (buffered)</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;  // Required for cout, cin, cerr, clog
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello from cout!" &lt;&lt; endl;   // Standard output
+    cerr &lt;&lt; "Error from cerr!" &lt;&lt; endl;   // Standard error (unbuffered)
+    clog &lt;&lt; "Log from clog!" &lt;&lt; endl;     // Standard log (buffered)
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>You must include <code>&lt;iostream&gt;</code> at the top of your program to use <code>cout</code>, <code>cin</code>, <code>cerr</code>, and <code>clog</code>. These are objects of stream classes defined in the <code>std</code> namespace. Without <code>using namespace std;</code>, you would need to write <code>std::cout</code>, <code>std::cin</code>, etc.</p>
+                </div>
+
+                <h2>1. Standard Output with cout</h2>
+                <p>The <code>cout</code> object is used to display output on the screen. It uses the <strong>insertion operator</strong> <code>&lt;&lt;</code> (sometimes called "put to") to send data to the output stream. You can think of <code>&lt;&lt;</code> as an arrow pointing in the direction data flows &mdash; from your data into the console.</p>
+
+                <h3>Basic Output</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Output a string
+    cout &lt;&lt; "Hello, World!";
+
+    // Output a number
+    cout &lt;&lt; 42;
+
+    // Output a character
+    cout &lt;&lt; 'A';
+
+    // Output a floating-point number
+    cout &lt;&lt; 3.14;
+
+    return 0;
+}</pre></div>
+
+                <h3>Chaining the Insertion Operator</h3>
+                <p>One of the most powerful features of <code>cout</code> is the ability to <strong>chain</strong> multiple <code>&lt;&lt;</code> operators in a single statement. This lets you combine text, variables, and expressions in one line:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string name = "Alice";
+    int age = 25;
+    double gpa = 3.95;
+
+    // Chaining multiple values
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; ", Age: " &lt;&lt; age &lt;&lt; ", GPA: " &lt;&lt; gpa &lt;&lt; endl;
+
+    // You can also split across lines for readability
+    cout &lt;&lt; "Student Info:" &lt;&lt; endl
+         &lt;&lt; "  Name: " &lt;&lt; name &lt;&lt; endl
+         &lt;&lt; "  Age:  " &lt;&lt; age &lt;&lt; endl
+         &lt;&lt; "  GPA:  " &lt;&lt; gpa &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>endl vs \n</h3>
+                <p>Both <code>endl</code> and <code>\n</code> create a new line, but they behave differently:</p>
+                <ul>
+                    <li><code>\n</code> &mdash; Simply inserts a newline character. It is faster because it does not flush the buffer.</li>
+                    <li><code>endl</code> &mdash; Inserts a newline character <strong>and</strong> flushes the output buffer, forcing all pending output to be written to the screen immediately.</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Using \n (faster, no flush)
+    cout &lt;&lt; "Line 1\n";
+    cout &lt;&lt; "Line 2\n";
+    cout &lt;&lt; "Line 3\n";
+
+    // Using endl (flushes buffer each time)
+    cout &lt;&lt; "Line 4" &lt;&lt; endl;
+    cout &lt;&lt; "Line 5" &lt;&lt; endl;
+    cout &lt;&lt; "Line 6" &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>For most programs, use <code>\n</code> instead of <code>endl</code> for better performance. Flushing the buffer with <code>endl</code> after every line is unnecessary in most situations and can significantly slow down programs that produce a lot of output. Use <code>endl</code> only when you specifically need to ensure the output is displayed immediately (e.g., before waiting for input or before a potential crash).</p>
+                </div>
+
+                <h3>Flushing the Buffer with flush</h3>
+                <p>You can also explicitly flush the output buffer without inserting a newline by using <code>flush</code>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Processing...";
+    cout.flush();  // Force output to appear immediately
+
+    // Or using the flush manipulator
+    cout &lt;&lt; "Still working..." &lt;&lt; flush;
+
+    cout &lt;&lt; " Done!\n";
+    return 0;
+}</pre></div>
+
+                <h3>Escape Sequences in Output</h3>
+                <p>Escape sequences let you include special characters in your output that cannot be typed directly:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Newline: Hello\nWorld" &lt;&lt; endl;
+    cout &lt;&lt; "Tab: Col1\tCol2\tCol3" &lt;&lt; endl;
+    cout &lt;&lt; "Backslash: C:\\Users\\Documents" &lt;&lt; endl;
+    cout &lt;&lt; "Double quote: She said \"Hello\"" &lt;&lt; endl;
+    cout &lt;&lt; "Single quote: It\'s fine" &lt;&lt; endl;
+    cout &lt;&lt; "Carriage return: ABCDE\rXY" &lt;&lt; endl;  // Outputs: XYCDE
+    cout &lt;&lt; "Null character ends here: Hello\0World" &lt;&lt; endl;  // Only prints Hello
+
+    return 0;
+}</pre></div>
+
+                <h2>2. Standard Input with cin</h2>
+                <p>The <code>cin</code> object reads data from the keyboard. It uses the <strong>extraction operator</strong> <code>&gt;&gt;</code> (sometimes called "get from") to extract data from the input stream and store it in a variable. Think of <code>&gt;&gt;</code> as an arrow pointing from the stream into your variable.</p>
+
+                <h3>Reading Different Data Types</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Reading an integer
+    int age;
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+    cout &lt;&lt; "You are " &lt;&lt; age &lt;&lt; " years old.\n";
+
+    // Reading a double
+    double height;
+    cout &lt;&lt; "Enter your height (m): ";
+    cin &gt;&gt; height;
+    cout &lt;&lt; "Height: " &lt;&lt; height &lt;&lt; " meters\n";
+
+    // Reading a character
+    char grade;
+    cout &lt;&lt; "Enter your grade (A-F): ";
+    cin &gt;&gt; grade;
+    cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; "\n";
+
+    // Reading a string (single word)
+    string name;
+    cout &lt;&lt; "Enter your first name: ";
+    cin &gt;&gt; name;
+    cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!\n";
+
+    return 0;
+}</pre></div>
+
+                <h3>Chaining the Extraction Operator</h3>
+                <p>Just like <code>cout</code>, you can chain multiple <code>&gt;&gt;</code> operators to read several values in one statement. Values are separated by whitespace (spaces, tabs, or newlines):</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x, y, z;
+
+    cout &lt;&lt; "Enter three integers separated by spaces: ";
+    cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;
+
+    cout &lt;&lt; "You entered: " &lt;&lt; x &lt;&lt; ", " &lt;&lt; y &lt;&lt; ", " &lt;&lt; z &lt;&lt; endl;
+    cout &lt;&lt; "Sum: " &lt;&lt; (x + y + z) &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>&gt;&gt;</code> operator skips leading whitespace by default and reads until the next whitespace character. This means <code>cin &gt;&gt; name</code> will only read a single word, not a full line. If the user types "John Doe", only "John" will be stored in <code>name</code>. To read an entire line, use <code>getline()</code>.</p>
+                </div>
+
+                <h2>3. Formatting Output</h2>
+                <p>C++ provides powerful tools for formatting output. The <code>&lt;iomanip&gt;</code> header (input/output manipulators) gives you fine-grained control over how numbers, text, and other data appear on screen.</p>
+
+                <h3>Setting Field Width with setw</h3>
+                <p>The <code>setw(n)</code> manipulator sets the <strong>minimum width</strong> of the next output field. If the output is shorter than <code>n</code> characters, it will be padded with spaces (by default, right-aligned):</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; setw(10) &lt;&lt; "Name" &lt;&lt; setw(10) &lt;&lt; "Age" &lt;&lt; setw(10) &lt;&lt; "Score" &lt;&lt; endl;
+    cout &lt;&lt; setw(10) &lt;&lt; "Alice" &lt;&lt; setw(10) &lt;&lt; 25 &lt;&lt; setw(10) &lt;&lt; 95.5 &lt;&lt; endl;
+    cout &lt;&lt; setw(10) &lt;&lt; "Bob" &lt;&lt; setw(10) &lt;&lt; 30 &lt;&lt; setw(10) &lt;&lt; 88.3 &lt;&lt; endl;
+    cout &lt;&lt; setw(10) &lt;&lt; "Charlie" &lt;&lt; setw(10) &lt;&lt; 22 &lt;&lt; setw(10) &lt;&lt; 92.7 &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Setting Precision with setprecision</h3>
+                <p>The <code>setprecision(n)</code> manipulator controls how many digits are displayed for floating-point numbers. Its behavior depends on whether <code>fixed</code> or <code>scientific</code> mode is active:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    double pi = 3.14159265358979;
+    double big = 123456789.123456;
+
+    // Default precision (6 significant digits total)
+    cout &lt;&lt; "Default: " &lt;&lt; pi &lt;&lt; endl;             // 3.14159
+
+    // Set total significant digits
+    cout &lt;&lt; setprecision(3) &lt;&lt; pi &lt;&lt; endl;          // 3.14
+    cout &lt;&lt; setprecision(8) &lt;&lt; pi &lt;&lt; endl;          // 3.1415927
+
+    // Fixed notation: setprecision sets decimal places
+    cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; pi &lt;&lt; endl;  // 3.14
+    cout &lt;&lt; fixed &lt;&lt; setprecision(4) &lt;&lt; pi &lt;&lt; endl;  // 3.1416
+
+    // Scientific notation
+    cout &lt;&lt; scientific &lt;&lt; setprecision(3) &lt;&lt; big &lt;&lt; endl;  // 1.235e+08
+
+    return 0;
+}</pre></div>
+
+                <h3>Alignment: left, right, and internal</h3>
+                <p>You can control text alignment within a field using <code>left</code>, <code>right</code> (default), and <code>internal</code>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    // Right-aligned (default)
+    cout &lt;&lt; "Right: [" &lt;&lt; setw(15) &lt;&lt; right &lt;&lt; "Hello" &lt;&lt; "]" &lt;&lt; endl;
+
+    // Left-aligned
+    cout &lt;&lt; "Left:  [" &lt;&lt; setw(15) &lt;&lt; left &lt;&lt; "Hello" &lt;&lt; "]" &lt;&lt; endl;
+
+    // Internal alignment (sign at left, value at right)
+    cout &lt;&lt; "Internal: [" &lt;&lt; setw(10) &lt;&lt; internal &lt;&lt; -42 &lt;&lt; "]" &lt;&lt; endl;
+
+    return 0;
+}
+// Output:
+// Right: [          Hello]
+// Left:  [Hello          ]
+// Internal: [-        42]</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><code>setw()</code> only affects the <strong>next</strong> output value &mdash; it resets after each use. In contrast, <code>setprecision()</code>, <code>fixed</code>, <code>scientific</code>, <code>left</code>, and <code>right</code> are <strong>sticky</strong> &mdash; they remain in effect until changed. Always remember to reset formatting when you are done with it.</p>
+                </div>
+
+                <h2>4. The iomanip Header</h2>
+                <p>The <code>&lt;iomanip&gt;</code> header provides a rich set of formatting manipulators. Here are the most commonly used ones:</p>
+
+                <h3>setfill &mdash; Custom Padding Character</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    // Fill with dots
+    cout &lt;&lt; setfill('.') &lt;&lt; setw(20) &lt;&lt; left &lt;&lt; "Item" &lt;&lt; "$9.99" &lt;&lt; endl;
+    cout &lt;&lt; setfill('.') &lt;&lt; setw(20) &lt;&lt; left &lt;&lt; "Tax" &lt;&lt; "$0.80" &lt;&lt; endl;
+    cout &lt;&lt; setfill('.') &lt;&lt; setw(20) &lt;&lt; left &lt;&lt; "Total" &lt;&lt; "$10.79" &lt;&lt; endl;
+
+    // Fill with zeros (common for IDs)
+    cout &lt;&lt; "\nOrder #" &lt;&lt; setfill('0') &lt;&lt; setw(6) &lt;&lt; right &lt;&lt; 42 &lt;&lt; endl;    // Order #000042
+    cout &lt;&lt; "Order #" &lt;&lt; setfill('0') &lt;&lt; setw(6) &lt;&lt; right &lt;&lt; 1337 &lt;&lt; endl;  // Order #001337
+
+    // Reset fill character
+    cout &lt;&lt; setfill(' ');
+
+    return 0;
+}</pre></div>
+
+                <h3>showpoint, showpos, uppercase</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    double x = 100.0;
+    double y = 3.14;
+
+    // showpoint: always show decimal point and trailing zeros
+    cout &lt;&lt; showpoint &lt;&lt; x &lt;&lt; endl;       // 100.000
+    cout &lt;&lt; noshowpoint &lt;&lt; x &lt;&lt; endl;     // 100
+
+    // showpos: show + sign for positive numbers
+    cout &lt;&lt; showpos &lt;&lt; 42 &lt;&lt; endl;         // +42
+    cout &lt;&lt; showpos &lt;&lt; -7 &lt;&lt; endl;         // -7
+    cout &lt;&lt; noshowpos;
+
+    // uppercase: use uppercase E in scientific, X in hex
+    cout &lt;&lt; uppercase &lt;&lt; scientific &lt;&lt; y &lt;&lt; endl;   // 3.140000E+00
+    cout &lt;&lt; nouppercase;
+
+    // hex, oct, dec for integer bases
+    int num = 255;
+    cout &lt;&lt; "Decimal: " &lt;&lt; dec &lt;&lt; num &lt;&lt; endl;      // 255
+    cout &lt;&lt; "Hex: " &lt;&lt; hex &lt;&lt; num &lt;&lt; endl;          // ff
+    cout &lt;&lt; "Octal: " &lt;&lt; oct &lt;&lt; num &lt;&lt; endl;        // 377
+    cout &lt;&lt; "Hex (showbase): " &lt;&lt; showbase &lt;&lt; hex &lt;&lt; num &lt;&lt; endl;  // 0xff
+    cout &lt;&lt; dec &lt;&lt; noshowbase;
+
+    return 0;
+}</pre></div>
+
+                <h3>boolalpha</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    bool isReady = true;
+    bool hasError = false;
+
+    // Default: prints 1 and 0
+    cout &lt;&lt; "Ready: " &lt;&lt; isReady &lt;&lt; ", Error: " &lt;&lt; hasError &lt;&lt; endl;
+    // Output: Ready: 1, Error: 0
+
+    // boolalpha: prints true and false
+    cout &lt;&lt; boolalpha;
+    cout &lt;&lt; "Ready: " &lt;&lt; isReady &lt;&lt; ", Error: " &lt;&lt; hasError &lt;&lt; endl;
+    // Output: Ready: true, Error: false
+
+    // Turn it off
+    cout &lt;&lt; noboolalpha;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>The <code>&lt;iomanip&gt;</code> header must be included separately from <code>&lt;iostream&gt;</code>. Manipulators like <code>setw</code>, <code>setprecision</code>, <code>setfill</code> require <code>&lt;iomanip&gt;</code>. However, manipulators like <code>endl</code>, <code>flush</code>, <code>boolalpha</code>, <code>hex</code>, <code>dec</code>, <code>oct</code>, <code>fixed</code>, <code>scientific</code>, <code>left</code>, <code>right</code>, <code>showpos</code>, and <code>showpoint</code> are available directly from <code>&lt;iostream&gt;</code>.</p>
+                </div>
+
+                <h2>5. String Input with getline()</h2>
+                <p>As mentioned earlier, <code>cin &gt;&gt;</code> reads only a single word because it stops at whitespace. To read an entire line of text (including spaces), use the <code>getline()</code> function:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string fullName;
+
+    cout &lt;&lt; "Enter your full name: ";
+    getline(cin, fullName);
+    cout &lt;&lt; "Hello, " &lt;&lt; fullName &lt;&lt; "!" &lt;&lt; endl;
+
+    // Reading multiple lines
+    string address;
+    cout &lt;&lt; "Enter your address: ";
+    getline(cin, address);
+    cout &lt;&lt; "Address: " &lt;&lt; address &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>The cin.ignore() Problem</h3>
+                <p>A very common issue arises when you mix <code>cin &gt;&gt;</code> with <code>getline()</code>. After <code>cin &gt;&gt;</code> reads a value, the newline character (<code>\n</code>) from pressing Enter remains in the input buffer. When <code>getline()</code> is called next, it reads that leftover newline and appears to "skip" the input:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    int age;
+    string name;
+
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+
+    // PROBLEM: getline reads the leftover '\n' and gets an empty string!
+    cout &lt;&lt; "Enter your name: ";
+    getline(cin, name);  // This gets skipped!
+
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; ", Name: '" &lt;&lt; name &lt;&lt; "'" &lt;&lt; endl;
+    // Output: Age: 25, Name: ''
+
+    return 0;
+}</pre></div>
+
+                <h3>The Fix: cin.ignore()</h3>
+                <p>Use <code>cin.ignore()</code> to discard the leftover newline character from the buffer before calling <code>getline()</code>:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    int age;
+    string name;
+
+    cout &lt;&lt; "Enter your age: ";
+    cin &gt;&gt; age;
+
+    // Discard leftover newline (and any extra characters)
+    cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+
+    cout &lt;&lt; "Enter your name: ";
+    getline(cin, name);  // Now works correctly!
+
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; ", Name: " &lt;&lt; name &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Always call <code>cin.ignore()</code> after using <code>cin &gt;&gt;</code> and before using <code>getline()</code>. The safest version is <code>cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n')</code>, which discards all characters up to and including the next newline. A simpler alternative is <code>cin.ignore()</code> (with no arguments), which discards exactly one character.</p>
+                </div>
+
+                <h3>Custom Delimiters with getline()</h3>
+                <p>The <code>getline()</code> function can also read until a custom delimiter character instead of the default newline:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string data;
+
+    cout &lt;&lt; "Enter comma-separated values (end with newline):\n";
+
+    // Read until comma
+    getline(cin, data, ',');
+    cout &lt;&lt; "First value: " &lt;&lt; data &lt;&lt; endl;
+
+    getline(cin, data, ',');
+    cout &lt;&lt; "Second value: " &lt;&lt; data &lt;&lt; endl;
+
+    getline(cin, data);  // Read rest of line
+    cout &lt;&lt; "Third value: " &lt;&lt; data &lt;&lt; endl;
+
+    return 0;
+}
+// Input: Apple,Banana,Cherry
+// Output:
+// First value: Apple
+// Second value: Banana
+// Third value: Cherry</pre></div>
+
+                <h2>6. Multiple Inputs and Validation Basics</h2>
+                <p>Real programs often need to read multiple values and ensure the user provides valid input. Here are common patterns for handling multiple inputs:</p>
+
+                <h3>Reading Multiple Values</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Method 1: Chained extraction
+    int day, month, year;
+    cout &lt;&lt; "Enter date (day month year): ";
+    cin &gt;&gt; day &gt;&gt; month &gt;&gt; year;
+    cout &lt;&lt; "Date: " &lt;&lt; day &lt;&lt; "/" &lt;&lt; month &lt;&lt; "/" &lt;&lt; year &lt;&lt; endl;
+
+    // Method 2: Separate prompts
+    double length, width;
+    cout &lt;&lt; "Enter length: ";
+    cin &gt;&gt; length;
+    cout &lt;&lt; "Enter width: ";
+    cin &gt;&gt; width;
+    cout &lt;&lt; "Area: " &lt;&lt; length * width &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Basic Input Validation</h3>
+                <p>When the user enters the wrong type of data (e.g., typing "abc" when a number is expected), <code>cin</code> enters a <strong>fail state</strong>. You can detect and recover from this:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    int number;
+
+    cout &lt;&lt; "Enter a number: ";
+    cin &gt;&gt; number;
+
+    if (cin.fail()) {
+        cout &lt;&lt; "That's not a valid number!" &lt;&lt; endl;
+        cin.clear();   // Clear the error state
+        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');  // Discard bad input
+    } else {
+        cout &lt;&lt; "You entered: " &lt;&lt; number &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <h2>7. Error Handling with cin</h2>
+                <p>Understanding how <code>cin</code> handles errors is crucial for writing robust programs. The input stream has several state flags that indicate its current condition:</p>
+                <ul>
+                    <li><code>cin.good()</code> &mdash; Returns <code>true</code> if the stream is in a good state (no errors)</li>
+                    <li><code>cin.fail()</code> &mdash; Returns <code>true</code> if an input operation failed (e.g., type mismatch)</li>
+                    <li><code>cin.bad()</code> &mdash; Returns <code>true</code> if a serious I/O error occurred</li>
+                    <li><code>cin.eof()</code> &mdash; Returns <code>true</code> if end-of-file was reached</li>
+                </ul>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    int age;
+
+    // Robust input loop
+    while (true) {
+        cout &lt;&lt; "Enter your age (1-150): ";
+        cin &gt;&gt; age;
+
+        if (cin.fail()) {
+            // Non-numeric input
+            cout &lt;&lt; "Invalid input! Please enter a number.\n";
+            cin.clear();                                          // Reset error flags
+            cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');  // Discard bad input
+        } else if (age &lt; 1 || age &gt; 150) {
+            // Out of range
+            cout &lt;&lt; "Age must be between 1 and 150.\n";
+        } else {
+            // Valid input
+            break;
+        }
+    }
+
+    cout &lt;&lt; "Your age is: " &lt;&lt; age &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>Stream State Recovery Pattern</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+// Reusable function for safe integer input
+int getValidInt(const string&amp; prompt) {
+    int value;
+    while (true) {
+        cout &lt;&lt; prompt;
+        if (cin &gt;&gt; value) {
+            cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+            return value;
+        }
+        cout &lt;&lt; "Invalid input. Please enter a whole number.\n";
+        cin.clear();
+        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+    }
+}
+
+double getValidDouble(const string&amp; prompt) {
+    double value;
+    while (true) {
+        cout &lt;&lt; prompt;
+        if (cin &gt;&gt; value) {
+            cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+            return value;
+        }
+        cout &lt;&lt; "Invalid input. Please enter a number.\n";
+        cin.clear();
+        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+    }
+}
+
+int main() {
+    int count = getValidInt("How many items? ");
+    double price = getValidDouble("Price per item: $");
+
+    cout &lt;&lt; "Total: $" &lt;&lt; count * price &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>When <code>cin</code> fails, you must do two things to recover: (1) call <code>cin.clear()</code> to reset the error flags, and (2) call <code>cin.ignore()</code> to discard the invalid input from the buffer. If you forget either step, the program will enter an infinite loop because <code>cin</code> will keep trying to read the same bad data.</p>
+                </div>
+
+                <h2>8. cerr and clog &mdash; Error and Log Streams</h2>
+                <p>Besides <code>cout</code>, C++ provides two additional output streams specifically for error and diagnostic messages:</p>
+
+                <h3>cerr &mdash; Standard Error (Unbuffered)</h3>
+                <p><code>cerr</code> sends output directly to the error stream without buffering. This means the message appears immediately, even if the program crashes right after. It is ideal for error messages:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int divisor;
+    cout &lt;&lt; "Enter a divisor: ";
+    cin &gt;&gt; divisor;
+
+    if (divisor == 0) {
+        cerr &lt;&lt; "Error: Division by zero is not allowed!" &lt;&lt; endl;
+        return 1;  // Exit with error code
+    }
+
+    cout &lt;&lt; "100 / " &lt;&lt; divisor &lt;&lt; " = " &lt;&lt; 100 / divisor &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>clog &mdash; Standard Log (Buffered)</h3>
+                <p><code>clog</code> is similar to <code>cerr</code> but is <strong>buffered</strong>, meaning output is collected and written in chunks for efficiency. It is suitable for non-critical log messages:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    clog &lt;&lt; "Program started." &lt;&lt; endl;
+
+    int sum = 0;
+    for (int i = 1; i &lt;= 10; i++) {
+        sum += i;
+        clog &lt;&lt; "Step " &lt;&lt; i &lt;&lt; ": sum = " &lt;&lt; sum &lt;&lt; endl;
+    }
+
+    cout &lt;&lt; "Final sum: " &lt;&lt; sum &lt;&lt; endl;
+    clog &lt;&lt; "Program finished." &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Use <code>cout</code> for normal program output, <code>cerr</code> for error messages (unbuffered, so messages appear immediately), and <code>clog</code> for log/diagnostic messages (buffered for efficiency). In a terminal, you can redirect <code>cout</code> and <code>cerr/clog</code> separately. For example: <code>./program &gt; output.txt 2&gt; errors.txt</code> redirects normal output to one file and errors to another.</p>
+                </div>
+
+                <h2>9. printf and scanf &mdash; C-Style I/O</h2>
+                <p>C++ inherits the <code>printf()</code> and <code>scanf()</code> functions from C. While <code>cout</code>/<code>cin</code> are preferred in modern C++, knowing C-style I/O is useful because you may encounter it in older codebases and it can be more concise for formatted output:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;cstdio&gt;  // Required for printf and scanf
+
+int main() {
+    // printf - formatted output
+    printf("Hello, World!\n");
+
+    // Format specifiers
+    int age = 25;
+    double gpa = 3.95;
+    char grade = 'A';
+
+    printf("Age: %d\n", age);           // %d for int
+    printf("GPA: %.2f\n", gpa);         // %.2f for double with 2 decimal places
+    printf("Grade: %c\n", grade);       // %c for char
+    printf("Name: %s\n", "Alice");      // %s for string
+
+    // Width and alignment
+    printf("[%10d]\n", 42);             // Right-aligned in 10 chars: [        42]
+    printf("[%-10d]\n", 42);            // Left-aligned in 10 chars:  [42        ]
+    printf("[%010d]\n", 42);            // Zero-padded:               [0000000042]
+
+    // scanf - formatted input
+    int x;
+    printf("Enter a number: ");
+    scanf("%d", &amp;x);                    // Note: &amp; (address-of) is required!
+    printf("You entered: %d\n", x);
+
+    return 0;
+}</pre></div>
+
+                <h3>Comparison: cout/cin vs printf/scanf</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>// C++ style (type-safe, extensible)
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+// C style (concise formatting, but not type-safe)
+#include &lt;cstdio&gt;
+
+int main() {
+    double price = 9.99;
+    int qty = 3;
+
+    // C++ way
+    cout &lt;&lt; fixed &lt;&lt; setprecision(2);
+    cout &lt;&lt; "Total: $" &lt;&lt; price * qty &lt;&lt; endl;
+
+    // C way
+    printf("Total: $%.2f\n", price * qty);
+
+    // Both produce: Total: $29.97
+    return 0;
+}</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p><code>cout</code>/<code>cin</code> are <strong>type-safe</strong> (the compiler checks types automatically) and <strong>extensible</strong> (you can overload <code>&lt;&lt;</code> for custom types). <code>printf</code>/<code>scanf</code> are <strong>not type-safe</strong> (wrong format specifiers cause undefined behavior) but offer more concise formatting syntax. Modern C++ code should prefer <code>cout</code>/<code>cin</code>, but <code>printf</code> is sometimes used for complex formatting or performance-critical code.</p>
+                </div>
+
+                <h2>10. Practical Examples</h2>
+
+                <h3>Example 1: Interactive Calculator</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    double num1, num2;
+    char op;
+
+    cout &lt;&lt; "=== Simple Calculator ===\n\n";
+
+    cout &lt;&lt; "Enter first number: ";
+    cin &gt;&gt; num1;
+
+    cout &lt;&lt; "Enter operator (+, -, *, /): ";
+    cin &gt;&gt; op;
+
+    cout &lt;&lt; "Enter second number: ";
+    cin &gt;&gt; num2;
+
+    cout &lt;&lt; fixed &lt;&lt; setprecision(2);
+
+    switch (op) {
+        case '+':
+            cout &lt;&lt; num1 &lt;&lt; " + " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 + num2) &lt;&lt; endl;
+            break;
+        case '-':
+            cout &lt;&lt; num1 &lt;&lt; " - " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 - num2) &lt;&lt; endl;
+            break;
+        case '*':
+            cout &lt;&lt; num1 &lt;&lt; " * " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 * num2) &lt;&lt; endl;
+            break;
+        case '/':
+            if (num2 == 0) {
+                cerr &lt;&lt; "Error: Cannot divide by zero!" &lt;&lt; endl;
+            } else {
+                cout &lt;&lt; num1 &lt;&lt; " / " &lt;&lt; num2 &lt;&lt; " = " &lt;&lt; (num1 / num2) &lt;&lt; endl;
+            }
+            break;
+        default:
+            cerr &lt;&lt; "Error: Invalid operator '" &lt;&lt; op &lt;&lt; "'" &lt;&lt; endl;
+    }
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 2: Formatted Student Report</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    // Table header
+    cout &lt;&lt; string(50, '=') &lt;&lt; endl;
+    cout &lt;&lt; setw(30) &lt;&lt; "STUDENT REPORT CARD" &lt;&lt; endl;
+    cout &lt;&lt; string(50, '=') &lt;&lt; endl;
+
+    cout &lt;&lt; left
+         &lt;&lt; setw(5) &lt;&lt; "No."
+         &lt;&lt; setw(15) &lt;&lt; "Name"
+         &lt;&lt; setw(10) &lt;&lt; "Math"
+         &lt;&lt; setw(10) &lt;&lt; "Science"
+         &lt;&lt; setw(10) &lt;&lt; "Average"
+         &lt;&lt; endl;
+    cout &lt;&lt; string(50, '-') &lt;&lt; endl;
+
+    // Student data
+    cout &lt;&lt; fixed &lt;&lt; setprecision(1);
+
+    cout &lt;&lt; setw(5) &lt;&lt; 1
+         &lt;&lt; setw(15) &lt;&lt; "Alice"
+         &lt;&lt; setw(10) &lt;&lt; 95
+         &lt;&lt; setw(10) &lt;&lt; 88
+         &lt;&lt; setw(10) &lt;&lt; 91.5
+         &lt;&lt; endl;
+
+    cout &lt;&lt; setw(5) &lt;&lt; 2
+         &lt;&lt; setw(15) &lt;&lt; "Bob"
+         &lt;&lt; setw(10) &lt;&lt; 78
+         &lt;&lt; setw(10) &lt;&lt; 92
+         &lt;&lt; setw(10) &lt;&lt; 85.0
+         &lt;&lt; endl;
+
+    cout &lt;&lt; setw(5) &lt;&lt; 3
+         &lt;&lt; setw(15) &lt;&lt; "Charlie"
+         &lt;&lt; setw(10) &lt;&lt; 90
+         &lt;&lt; setw(10) &lt;&lt; 85
+         &lt;&lt; setw(10) &lt;&lt; 87.5
+         &lt;&lt; endl;
+
+    cout &lt;&lt; string(50, '=') &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 3: User Registration Form</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+int main() {
+    string firstName, lastName, email;
+    int age;
+    char gender;
+
+    cout &lt;&lt; "=== User Registration ===\n\n";
+
+    cout &lt;&lt; "First name: ";
+    getline(cin, firstName);
+
+    cout &lt;&lt; "Last name: ";
+    getline(cin, lastName);
+
+    cout &lt;&lt; "Age: ";
+    cin &gt;&gt; age;
+
+    cout &lt;&lt; "Gender (M/F/O): ";
+    cin &gt;&gt; gender;
+
+    cin.ignore(numeric_limits&lt;streamsize&gt;::max(), '\n');
+
+    cout &lt;&lt; "Email: ";
+    getline(cin, email);
+
+    // Display summary
+    cout &lt;&lt; "\n=== Registration Summary ===\n";
+    cout &lt;&lt; "Name:   " &lt;&lt; firstName &lt;&lt; " " &lt;&lt; lastName &lt;&lt; endl;
+    cout &lt;&lt; "Age:    " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "Gender: " &lt;&lt; gender &lt;&lt; endl;
+    cout &lt;&lt; "Email:  " &lt;&lt; email &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h3>Example 4: Formatted Price Table</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; fixed &lt;&lt; setprecision(2);
+
+    // Print header
+    cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; "Product"
+         &lt;&lt; right &lt;&lt; setw(8) &lt;&lt; "Qty"
+         &lt;&lt; setw(12) &lt;&lt; "Price"
+         &lt;&lt; setw(12) &lt;&lt; "Total"
+         &lt;&lt; endl;
+    cout &lt;&lt; string(52, '-') &lt;&lt; endl;
+
+    // Print items
+    double subtotal = 0;
+
+    double p1 = 12.99, p2 = 5.49, p3 = 24.95;
+    int q1 = 2, q2 = 5, q3 = 1;
+
+    cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; "Widget Pro"
+         &lt;&lt; right &lt;&lt; setw(8) &lt;&lt; q1
+         &lt;&lt; "$" &lt;&lt; setw(11) &lt;&lt; p1
+         &lt;&lt; "$" &lt;&lt; setw(11) &lt;&lt; p1 * q1
+         &lt;&lt; endl;
+    subtotal += p1 * q1;
+
+    cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; "Gadget Mini"
+         &lt;&lt; right &lt;&lt; setw(8) &lt;&lt; q2
+         &lt;&lt; "$" &lt;&lt; setw(11) &lt;&lt; p2
+         &lt;&lt; "$" &lt;&lt; setw(11) &lt;&lt; p2 * q2
+         &lt;&lt; endl;
+    subtotal += p2 * q2;
+
+    cout &lt;&lt; left &lt;&lt; setw(20) &lt;&lt; "Thingamajig XL"
+         &lt;&lt; right &lt;&lt; setw(8) &lt;&lt; q3
+         &lt;&lt; "$" &lt;&lt; setw(11) &lt;&lt; p3
+         &lt;&lt; "$" &lt;&lt; setw(11) &lt;&lt; p3 * q3
+         &lt;&lt; endl;
+    subtotal += p3 * q3;
+
+    cout &lt;&lt; string(52, '-') &lt;&lt; endl;
+    cout &lt;&lt; left &lt;&lt; setw(40) &lt;&lt; "Subtotal:"
+         &lt;&lt; "$" &lt;&lt; right &lt;&lt; setw(11) &lt;&lt; subtotal &lt;&lt; endl;
+
+    double tax = subtotal * 0.08;
+    cout &lt;&lt; left &lt;&lt; setw(40) &lt;&lt; "Tax (8%):"
+         &lt;&lt; "$" &lt;&lt; right &lt;&lt; setw(11) &lt;&lt; tax &lt;&lt; endl;
+
+    cout &lt;&lt; string(52, '=') &lt;&lt; endl;
+    cout &lt;&lt; left &lt;&lt; setw(40) &lt;&lt; "TOTAL:"
+         &lt;&lt; "$" &lt;&lt; right &lt;&lt; setw(11) &lt;&lt; subtotal + tax &lt;&lt; endl;
+
+    return 0;
+}</pre></div>
+
+                <h2>Summary</h2>
+                <p>In this lesson, you learned everything you need to know about C++ input and output:</p>
+                <ul>
+                    <li><strong>iostream</strong> &mdash; The header that provides <code>cout</code>, <code>cin</code>, <code>cerr</code>, and <code>clog</code></li>
+                    <li><strong>cout</strong> &mdash; Standard output using the <code>&lt;&lt;</code> insertion operator, with chaining support</li>
+                    <li><strong>cin</strong> &mdash; Standard input using the <code>&gt;&gt;</code> extraction operator, reads whitespace-delimited tokens</li>
+                    <li><strong>endl vs \n</strong> &mdash; <code>endl</code> flushes the buffer; <code>\n</code> does not (prefer <code>\n</code>)</li>
+                    <li><strong>Formatting</strong> &mdash; <code>setw</code>, <code>setprecision</code>, <code>fixed</code>, <code>scientific</code>, <code>left</code>, <code>right</code>, <code>setfill</code></li>
+                    <li><strong>iomanip</strong> &mdash; Header for advanced formatting manipulators</li>
+                    <li><strong>getline()</strong> &mdash; Reads a full line of input including spaces</li>
+                    <li><strong>cin.ignore()</strong> &mdash; Clears the input buffer (essential when mixing <code>cin &gt;&gt;</code> and <code>getline()</code>)</li>
+                    <li><strong>Error handling</strong> &mdash; <code>cin.fail()</code>, <code>cin.clear()</code>, <code>cin.ignore()</code> for robust input</li>
+                    <li><strong>cerr &amp; clog</strong> &mdash; Error and log output streams</li>
+                    <li><strong>printf/scanf</strong> &mdash; C-style I/O (available but less preferred in modern C++)</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Mastering I/O is essential for every C++ programmer. Use <code>cout</code> and <code>cin</code> for most tasks, <code>getline()</code> for full-line input, <code>&lt;iomanip&gt;</code> for formatting, and always validate user input with <code>cin.fail()</code> / <code>cin.clear()</code> / <code>cin.ignore()</code>. Prefer <code>\n</code> over <code>endl</code> for performance.</p>
+                </div>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/UGZ9pxGKluY" title="C++ Input Output" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"Which header is required for cout and cin?","o":["<cstdio>","<iostream>","<iomanip>","<string>"],"a":1},
+                {"q":"What does cout stand for?","o":["Character output","Console out","C output","Count output"],"a":0},
+                {"q":"What does cin stand for?","o":["Console input","Character input","C input","Count input"],"a":1},
+                {"q":"What operator is used with cout?","o":[">>","<<","->","::"],"a":1},
+                {"q":"What operator is used with cin?","o":["<<",">>","->","::"],"a":1},
+                {"q":"What is the << operator called in the context of cout?","o":["Extraction operator","Insertion operator","Shift operator","Stream operator"],"a":1},
+                {"q":"What is the >> operator called in the context of cin?","o":["Insertion operator","Extraction operator","Shift operator","Stream operator"],"a":1},
+                {"q":"What does endl do?","o":["Ends the program","Inserts a newline and flushes the buffer","Only inserts a newline","Only flushes the buffer"],"a":1},
+                {"q":"What does '\\n' do in output?","o":["Inserts a newline only","Inserts a newline and flushes the buffer","Inserts a tab","Ends the program"],"a":0},
+                {"q":"Which is faster: endl or '\\n'?","o":["endl","\\n","They are the same speed","Depends on the compiler"],"a":1},
+                {"q":"Why is '\\n' faster than endl?","o":["It uses less memory","It doesn't flush the output buffer","It is a special compiler optimization","It skips error checking"],"a":1},
+                {"q":"What does flushing the buffer mean?","o":["Clearing the screen","Writing all pending output to the destination","Deleting all variables","Resetting the program"],"a":1},
+                {"q":"How do you flush the buffer without a newline?","o":["cout.flush() or cout << flush","cout.clear()","cout.reset()","cout.empty()"],"a":0},
+                {"q":"Can you chain multiple << operators in one cout statement?","o":["No","Yes","Only for strings","Only for numbers"],"a":1},
+                {"q":"What is the output of: cout << 5 << \" + \" << 3 << \" = \" << 8;","o":["5 + 3 = 8","Error","5+3=8","5 3 8"],"a":0},
+                {"q":"What namespace are cout and cin in?","o":["global","std","io","console"],"a":1},
+                {"q":"How do you use cout without 'using namespace std;'?","o":["cout << ...","std::cout << ...","io::cout << ...","console.out << ..."],"a":1},
+                {"q":"What does cin >> x do if the user types 'hello' and x is an int?","o":["Stores 0","cin enters a fail state","Crashes the program","Stores the ASCII value of 'h'"],"a":1},
+                {"q":"Does cin >> skip leading whitespace?","o":["No","Yes","Only for strings","Only for numbers"],"a":1},
+                {"q":"What happens when cin >> reads a string?","o":["Reads the entire line","Reads only one word (stops at whitespace)","Reads only one character","Reads until a comma"],"a":1},
+                {"q":"Which function reads an entire line of input?","o":["cin >>","cin.read()","getline()","cin.getline()"],"a":2},
+                {"q":"What is the correct syntax for getline?","o":["getline(string, cin)","getline(cin, string)","cin.getline(string)","getline(string)"],"a":1},
+                {"q":"What header is needed for getline with std::string?","o":["<cstring>","<string>","<iostream>","<sstream>"],"a":1},
+                {"q":"Why does getline appear to skip input after cin >>?","o":["It's a bug in C++","The leftover newline in the buffer is read by getline","getline doesn't work with cin","The variable is full"],"a":1},
+                {"q":"How do you fix the getline skip problem after cin >>?","o":["Use cin.clear()","Use cin.ignore()","Use cin.reset()","Use cin.flush()"],"a":1},
+                {"q":"What does cin.ignore() do with no arguments?","o":["Ignores the next line","Discards exactly one character from the input buffer","Clears all errors","Resets the stream"],"a":1},
+                {"q":"What does cin.ignore(numeric_limits<streamsize>::max(), '\\n') do?","o":["Ignores one character","Discards all characters up to and including the next newline","Clears the screen","Resets numeric limits"],"a":1},
+                {"q":"What header provides numeric_limits?","o":["<iostream>","<climits>","<limits>","<cstdint>"],"a":2},
+                {"q":"Can getline use a custom delimiter?","o":["No","Yes, as the third argument","Only commas","Only semicolons"],"a":1},
+                {"q":"What does getline(cin, str, ',') do?","o":["Reads until newline","Reads until comma","Reads one word","Reads one character"],"a":1},
+                {"q":"What does cin.fail() return?","o":["true if input succeeded","true if input operation failed","The error message","The number of errors"],"a":1},
+                {"q":"What does cin.good() return?","o":["true if stream is in good state","true if stream has errors","The stream status code","Nothing"],"a":0},
+                {"q":"What does cin.bad() indicate?","o":["A minor error","A serious, unrecoverable I/O error","Invalid input type","End of file"],"a":1},
+                {"q":"What does cin.eof() return?","o":["true if stream is good","true if end-of-file was reached","true if buffer is empty","true if input failed"],"a":1},
+                {"q":"What does cin.clear() do?","o":["Clears the input buffer","Resets the error state flags of the stream","Deletes all variables","Clears the screen"],"a":1},
+                {"q":"After cin.fail(), what two steps are needed to recover?","o":["cin.clear() then cin.ignore()","cin.reset() then cin.flush()","cin.good() then cin.read()","cin.eof() then cin.clear()"],"a":0},
+                {"q":"What happens if you forget cin.clear() after a fail?","o":["Nothing, it recovers automatically","All subsequent cin operations will also fail","The program crashes","The buffer overflows"],"a":1},
+                {"q":"What happens if you forget cin.ignore() after a fail?","o":["cin re-reads the same bad input in a loop","The program crashes","Nothing","The error is auto-cleared"],"a":0},
+                {"q":"What is cerr used for?","o":["Normal output","Error messages (unbuffered)","Log messages","File output"],"a":1},
+                {"q":"What is clog used for?","o":["Normal output","Error messages","Log/diagnostic messages (buffered)","File input"],"a":2},
+                {"q":"Is cerr buffered or unbuffered?","o":["Buffered","Unbuffered","Partially buffered","Neither"],"a":1},
+                {"q":"Is clog buffered or unbuffered?","o":["Unbuffered","Buffered","Partially buffered","Neither"],"a":1},
+                {"q":"Why is cerr unbuffered?","o":["To save memory","So error messages appear immediately, even before a crash","To be faster","It's a design mistake"],"a":1},
+                {"q":"Which stream does cerr write to?","o":["stdout","stderr","stdlog","stdfile"],"a":1},
+                {"q":"Which stream does clog write to?","o":["stdout","stderr","stdlog","stdin"],"a":1},
+                {"q":"Can you redirect cout and cerr to different files?","o":["No","Yes, using shell redirection (> and 2>)","Only on Linux","Only in debug mode"],"a":1},
+                {"q":"What header is needed for printf and scanf?","o":["<iostream>","<cstdio>","<cstdlib>","<stdio>"],"a":1},
+                {"q":"What format specifier is used for int in printf?","o":["%f","%d","%c","%s"],"a":1},
+                {"q":"What format specifier is used for double in printf?","o":["%d","%f or %lf","%c","%s"],"a":1},
+                {"q":"What format specifier is used for char in printf?","o":["%d","%s","%c","%f"],"a":2},
+                {"q":"What format specifier is used for a string in printf?","o":["%d","%c","%f","%s"],"a":3},
+                {"q":"What does %.2f mean in printf?","o":["2 total digits","2 decimal places","2 significant figures","2 leading zeros"],"a":1},
+                {"q":"Does scanf require the & operator for int variables?","o":["No","Yes","Only for arrays","Only for strings"],"a":1},
+                {"q":"Why does scanf need & but cin does not?","o":["scanf needs the memory address; cin uses references internally","No reason","scanf is newer","cin is less safe"],"a":0},
+                {"q":"Is printf type-safe?","o":["Yes","No, wrong format specifiers cause undefined behavior","Only in C++","Only with warnings enabled"],"a":1},
+                {"q":"Is cout type-safe?","o":["No","Yes, the compiler checks types automatically","Only with templates","Only in C++20"],"a":1},
+                {"q":"Which header is needed for setw and setprecision?","o":["<iostream>","<iomanip>","<cmath>","<string>"],"a":1},
+                {"q":"What does setw(10) do?","o":["Sets 10 decimal places","Sets minimum field width to 10 characters","Sets 10 significant digits","Prints 10 spaces"],"a":1},
+                {"q":"Is setw sticky (persistent)?","o":["Yes","No, it only affects the next output value","Only for strings","Only for numbers"],"a":1},
+                {"q":"Is setprecision sticky (persistent)?","o":["No","Yes, it stays in effect until changed","Only with fixed","Only with scientific"],"a":1},
+                {"q":"What does setprecision(3) do in default mode?","o":["Sets 3 decimal places","Sets 3 total significant digits","Sets field width to 3","Rounds to hundreds"],"a":1},
+                {"q":"What does setprecision(3) do with fixed mode?","o":["Sets 3 significant digits","Sets 3 decimal places","Sets field width to 3","Sets exponent to 3"],"a":1},
+                {"q":"What does the 'fixed' manipulator do?","o":["Fixes errors","Displays floats in fixed-point notation (not scientific)","Fixes the field width","Prevents rounding"],"a":1},
+                {"q":"What does the 'scientific' manipulator do?","o":["Does scientific calculations","Displays floats in scientific notation (e.g., 1.23e+04)","Makes output more precise","Enables complex numbers"],"a":1},
+                {"q":"What is the default alignment for numbers with setw?","o":["Left","Right","Center","Internal"],"a":1},
+                {"q":"What does 'left' manipulator do?","o":["Moves cursor left","Left-aligns output within the field width","Shifts bits left","Reverses the string"],"a":1},
+                {"q":"What does 'right' manipulator do?","o":["Moves cursor right","Right-aligns output within the field width","Shifts bits right","Appends spaces"],"a":1},
+                {"q":"What does 'internal' alignment do?","o":["Aligns to center","Places the sign/base at the left and the value at the right","Hides the output","Internal use only"],"a":1},
+                {"q":"What does setfill('*') do?","o":["Fills the screen with stars","Sets the padding character to '*' for setw","Multiplies the output","Creates a comment"],"a":1},
+                {"q":"Is setfill sticky?","o":["No","Yes, it persists until changed","Only for one line","Only with setw"],"a":1},
+                {"q":"What does showpoint do?","o":["Shows a decimal point and trailing zeros for floats","Shows pointers","Shows the output","Enables debugging"],"a":0},
+                {"q":"What does noshowpoint do?","o":["Hides the output","Disables forced display of decimal point and trailing zeros","Shows the point","Crashes the program"],"a":1},
+                {"q":"What does showpos do?","o":["Shows position","Displays a + sign for positive numbers","Shows pointers","Shows the sign only"],"a":1},
+                {"q":"What does noshowpos do?","o":["Hides negative signs","Disables the + sign for positive numbers","Shows all signs","Removes all formatting"],"a":1},
+                {"q":"What does boolalpha do?","o":["Converts bool to int","Prints true/false instead of 1/0","Enables boolean operations","Alphabetizes output"],"a":1},
+                {"q":"What does noboolalpha do?","o":["Prints true/false","Reverts to printing 1/0 for booleans","Disables booleans","Prints yes/no"],"a":1},
+                {"q":"What does 'hex' manipulator do?","o":["Colors output","Displays integers in hexadecimal (base 16)","Converts to ASCII","Encrypts output"],"a":1},
+                {"q":"What does 'oct' manipulator do?","o":["Displays in base 8 (octal)","Displays in base 10","Displays in base 2","Displays in base 16"],"a":0},
+                {"q":"What does 'dec' manipulator do?","o":["Decrypts output","Restores display to decimal (base 10)","Decrements values","Decodes input"],"a":1},
+                {"q":"What does showbase do?","o":["Shows the base class","Prefixes hex with 0x and octal with 0","Shows the database","Shows the base address"],"a":1},
+                {"q":"What does uppercase manipulator do?","o":["Converts strings to uppercase","Uses uppercase letters in hex (A-F) and scientific (E)","Changes case of all output","Enables caps lock"],"a":1},
+                {"q":"What is the output of: cout << hex << 255;","o":["255","ff","0xff","FF"],"a":1},
+                {"q":"What is the output of: cout << oct << 8;","o":["8","10","08","100"],"a":1},
+                {"q":"What is the output of: cout << showbase << hex << 255;","o":["ff","0xff","255","FF"],"a":1},
+                {"q":"How do you reset formatting to default after using fixed?","o":["cout.unsetf(ios::fixed)","cout << nofixed","cout << default","cout.reset()"],"a":0},
+                {"q":"What does cout.unsetf() do?","o":["Sets a format flag","Clears (unsets) the specified format flag","Flushes the buffer","Resets the stream"],"a":1},
+                {"q":"What does cout.setf() do?","o":["Clears format flags","Sets the specified format flag","Sets the fill character","Sets the width"],"a":1},
+                {"q":"What is the escape sequence for a tab character?","o":["\\n","\\t","\\r","\\b"],"a":1},
+                {"q":"What is the escape sequence for a backslash?","o":["\\n","\\\\","\\b","\\s"],"a":1},
+                {"q":"What is the escape sequence for a double quote?","o":["\\\"","\\'","\\q","\\d"],"a":0},
+                {"q":"What is the escape sequence for a carriage return?","o":["\\n","\\t","\\r","\\c"],"a":2},
+                {"q":"What is the escape sequence for a null character?","o":["\\n","\\0","\\null","\\x"],"a":1},
+                {"q":"What does \\a escape sequence do?","o":["Prints 'a'","Produces a bell/alert sound","Aborts the program","Aligns text"],"a":1},
+                {"q":"What does \\b escape sequence do?","o":["Prints a blank","Moves cursor back one position (backspace)","Breaks the line","Makes text bold"],"a":1},
+                {"q":"What is a stream in C++?","o":["A river simulation","An abstraction representing a flow of data","A type of variable","A loop structure"],"a":1},
+                {"q":"What type of object is cout?","o":["int","string","ostream","istream"],"a":2},
+                {"q":"What type of object is cin?","o":["ostream","istream","string","ifstream"],"a":1},
+                {"q":"Can you use cout to output the value of an expression?","o":["No, only variables","Yes, e.g. cout << (5 + 3)","Only constants","Only strings"],"a":1},
+                {"q":"What does cout << (10 > 5) output by default?","o":["true","false","1","10 > 5"],"a":2},
+                {"q":"What does cout << boolalpha << (10 > 5) output?","o":["1","0","true","false"],"a":2},
+                {"q":"What is the default precision for floating-point output?","o":["2 digits","4 digits","6 significant digits","8 digits"],"a":2},
+                {"q":"What does cout.precision() return?","o":["The field width","The current precision setting","The fill character","The alignment"],"a":1},
+                {"q":"What does cout.width() return?","o":["The current field width","The precision","The buffer size","The stream state"],"a":0},
+                {"q":"Can cout output boolean values?","o":["No","Yes, as 1/0 by default, or true/false with boolalpha","Only as strings","Only in debug mode"],"a":1},
+                {"q":"What happens if cin >> reads end-of-file (EOF)?","o":["Nothing","The eofbit is set and cin.eof() returns true","The program crashes","It reads 0"],"a":1},
+                {"q":"How do you signal EOF from the keyboard on Windows?","o":["Ctrl+C","Ctrl+D","Ctrl+Z","Ctrl+X"],"a":2},
+                {"q":"How do you signal EOF from the keyboard on Linux/Mac?","o":["Ctrl+Z","Ctrl+C","Ctrl+D","Ctrl+X"],"a":2},
+                {"q":"Can cin be used in a boolean context (e.g., while(cin >> x))?","o":["No","Yes, it returns true if input succeeded","Only with if","Only for int"],"a":1},
+                {"q":"What does while(cin >> x) do?","o":["Infinite loop","Reads values until input fails or EOF","Reads one value","Prints x repeatedly"],"a":1},
+                {"q":"What does while(getline(cin, line)) do?","o":["Reads one line","Reads lines until EOF or error","Infinite loop","Skips blank lines"],"a":1},
+                {"q":"What is the difference between cin.get() and cin >>?","o":["No difference","cin.get() reads one character including whitespace; cin >> skips whitespace","cin.get() is faster","cin >> reads one character"],"a":1},
+                {"q":"What does cin.get() return when called with no arguments?","o":["A string","The next character as an int (including whitespace)","A boolean","Nothing"],"a":1},
+                {"q":"What does cin.peek() do?","o":["Reads and removes the next character","Returns the next character without removing it from the buffer","Checks for errors","Skips whitespace"],"a":1},
+                {"q":"What does cin.putback(ch) do?","o":["Outputs ch to the screen","Puts a character back into the input buffer","Deletes ch","Ignores ch"],"a":1},
+                {"q":"What is a stream manipulator?","o":["A physical device","A function that modifies stream formatting or behavior","A type of variable","A loop keyword"],"a":1},
+                {"q":"Which manipulators require <iomanip>?","o":["endl, flush, boolalpha","setw, setprecision, setfill, setbase","hex, oct, dec","left, right, internal"],"a":1},
+                {"q":"Which manipulators are available from <iostream> directly?","o":["setw, setprecision, setfill","endl, flush, boolalpha, hex, dec, oct, left, right, fixed, scientific","None","Only endl"],"a":1},
+                {"q":"What does setbase(16) do?","o":["Sets precision to 16","Sets the integer output base to 16 (hexadecimal)","Sets field width to 16","Sets fill character to 16"],"a":1},
+                {"q":"What bases can setbase() use?","o":["Any number","Only 8, 10, and 16","Only 2 and 10","Only 10 and 16"],"a":1},
+                {"q":"What does cout.put('A') do?","o":["Puts A in a variable","Outputs the character 'A'","Puts A back in the buffer","Converts A to int"],"a":1},
+                {"q":"What does cout.write(str, n) do?","o":["Writes n characters from str to output","Writes str n times","Writes to a file","Formats str with n precision"],"a":0},
+                {"q":"In what order are chained << operators evaluated?","o":["Right to left","Left to right","Random","By data type"],"a":1},
+                {"q":"In what order are chained >> operators evaluated?","o":["Right to left","Left to right","Random","Alphabetical"],"a":1},
+                {"q":"What does printf(\"%10.2f\", 3.14) produce?","o":["3.14","      3.14","3.14000000","3.1"],"a":1},
+                {"q":"What does printf(\"%-10s\", \"Hi\") produce?","o":["        Hi","Hi        ","Hi","          "],"a":1},
+                {"q":"What is the return value of printf?","o":["void","The number of characters printed","The string that was printed","A boolean"],"a":1},
+                {"q":"What is the return value of scanf?","o":["void","The number of items successfully read","The string read","A boolean"],"a":1},
+                {"q":"Can you overload << for custom types with cout?","o":["No","Yes, by defining operator<< as a friend function","Only for built-in types","Only with printf"],"a":1},
+                {"q":"What is the signature for overloading << for a custom class?","o":["void operator<<(MyClass)","ostream& operator<<(ostream& os, const MyClass& obj)","string operator<<(MyClass)","MyClass operator<<(ostream)"],"a":1},
+                {"q":"What does 'ws' manipulator do?","o":["Adds whitespace","Extracts and discards leading whitespace from input","Writes space","Wraps string"],"a":1},
+                {"q":"What is the output of: cout << \"Hello\" << \" \" << \"World\";","o":["HelloWorld","Hello World","Hello\\nWorld","Error"],"a":1},
+                {"q":"Can you output the address of a variable with cout?","o":["No","Yes, using cout << &variable","Only with printf","Only for pointers"],"a":1},
+                {"q":"What does cout << &x print (where x is an int)?","o":["The value of x","The memory address of x in hexadecimal","The type of x","Error"],"a":1},
+                {"q":"What happens if you use cout without including <iostream>?","o":["It works fine","Compilation error: cout is undefined","Runtime error","Warning only"],"a":1},
+                {"q":"What does 'using namespace std;' do?","o":["Creates a new namespace","Allows using std:: members without the prefix","Imports all C libraries","Enables debugging"],"a":1},
+                {"q":"Is 'using namespace std;' considered good practice in large projects?","o":["Yes, always use it","No, it can cause name conflicts; prefer std:: prefix","It doesn't matter","Only in main()"],"a":1},
+                {"q":"What is the difference between cout and printf for output?","o":["No difference","cout is type-safe and extensible; printf uses format strings","printf is type-safe; cout is not","cout is faster"],"a":1},
+                {"q":"Can you mix cout and printf in the same program?","o":["No","Yes, but call ios_base::sync_with_stdio(true) for safe mixing","Only in C","Only in C++20"],"a":1},
+                {"q":"What does ios_base::sync_with_stdio(false) do?","o":["Enables synchronization","Disables synchronization between C and C++ I/O (faster but unsafe to mix)","Enables multithreading","Disables buffering"],"a":1},
+                {"q":"What does cin.tie(nullptr) do?","o":["Ties cin to cerr","Unties cin from cout (cout won't auto-flush before cin reads)","Ties cin to a file","Clears the input"],"a":1},
+                {"q":"Why would you use ios_base::sync_with_stdio(false) and cin.tie(nullptr)?","o":["For safer I/O","For faster I/O in competitive programming","For file I/O","For error handling"],"a":1},
+                {"q":"What is the output of: int x = 65; cout << (char)x;","o":["65","A","error","6"],"a":1},
+                {"q":"What does cout << sizeof(int); typically output?","o":["2","4","8","int"],"a":1},
+                {"q":"Can cin read into a bool variable?","o":["No","Yes, 0 becomes false, non-zero becomes true","Only with boolalpha","Only strings"],"a":1},
+                {"q":"What does cin >> boolalpha >> b do (where b is bool)?","o":["Reads 0 or 1","Reads 'true' or 'false' as boolean values","Reads any string","Causes an error"],"a":1},
+                {"q":"What is the difference between cin.get() and cin.peek()?","o":["No difference","get() reads and removes; peek() reads without removing","get() is for strings; peek() is for chars","peek() is faster"],"a":1},
+                {"q":"What does cout << '\\t' print?","o":["The characters \\t","A tab character","The letter t","Nothing"],"a":1},
+                {"q":"How many spaces does a tab (\\t) typically represent?","o":["2","4 or 8 (platform-dependent)","1","10"],"a":1},
+                {"q":"What does cout.fill() return?","o":["The current field width","The current fill character","The precision","The alignment"],"a":1},
+                {"q":"What does %x format specifier mean in printf?","o":["Decimal","Hexadecimal (lowercase)","Octal","String"],"a":1}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="data-types.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Data Types</span>
+                </a>
+                <a href="operators.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Operators</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

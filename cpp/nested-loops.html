@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Nested Loops - CodeVerse</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body data-page="cpp-nested-loops">
+    <div class="scroll-progress"></div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+            <nav class="main-nav" id="mainNav">
+                <a href="../index.html">Home</a>
+                <a href="index.html" class="active">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+                <a href="../about.html">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><div class="hamburger"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="tutorial-layout">
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-title">C++ Lessons</div>
+            <nav class="sidebar-nav">
+                <a href="introduction.html"><span class="lesson-number">1</span> Introduction</a>
+                <a href="setup.html"><span class="lesson-number">2</span> Setup</a>
+                <a href="first-program.html"><span class="lesson-number">3</span> First Program</a>
+                <a href="basic-syntax.html"><span class="lesson-number">4</span> Basic Syntax</a>
+                <a href="variables.html"><span class="lesson-number">5</span> Variables</a>
+                <a href="data-types.html"><span class="lesson-number">6</span> Data Types</a>
+                <a href="input-output.html"><span class="lesson-number">7</span> Input/Output</a>
+                <a href="operators.html"><span class="lesson-number">8</span> Operators</a>
+                <a href="comments.html"><span class="lesson-number">9</span> Comments</a>
+                <a href="if-else.html"><span class="lesson-number">10</span> If/Else</a>
+                <a href="switch.html"><span class="lesson-number">11</span> Switch</a>
+                <a href="for-loops.html"><span class="lesson-number">12</span> For Loops</a>
+                <a href="while-loops.html"><span class="lesson-number">13</span> While Loops</a>
+                <a href="break-continue.html"><span class="lesson-number">14</span> Break/Continue</a>
+                <a href="nested-loops.html" class="active"><span class="lesson-number">15</span> Nested Loops</a>
+                <a href="functions.html"><span class="lesson-number">16</span> Functions</a>
+                <a href="function-parameters.html"><span class="lesson-number">17</span> Parameters</a>
+                <a href="return-values.html"><span class="lesson-number">18</span> Return Values</a>
+                <a href="function-overloading.html"><span class="lesson-number">19</span> Overloading</a>
+                <a href="recursion.html"><span class="lesson-number">20</span> Recursion</a>
+                <a href="inline-lambda.html"><span class="lesson-number">21</span> Inline/Lambda</a>
+                <a href="arrays.html"><span class="lesson-number">22</span> Arrays</a>
+                <a href="multi-arrays.html"><span class="lesson-number">23</span> Multi Arrays</a>
+                <a href="c-strings.html"><span class="lesson-number">24</span> C-Strings</a>
+                <a href="strings.html"><span class="lesson-number">25</span> Strings</a>
+                <a href="pointers.html"><span class="lesson-number">26</span> Pointers</a>
+                <a href="pointer-arithmetic.html"><span class="lesson-number">27</span> Pointer Math</a>
+                <a href="dynamic-memory.html"><span class="lesson-number">28</span> Dynamic Memory</a>
+                <a href="references.html"><span class="lesson-number">29</span> References</a>
+                <a href="classes-objects.html"><span class="lesson-number">30</span> Classes</a>
+                <a href="constructors.html"><span class="lesson-number">31</span> Constructors</a>
+                <a href="access-specifiers.html"><span class="lesson-number">32</span> Access Specifiers</a>
+                <a href="encapsulation.html"><span class="lesson-number">33</span> Encapsulation</a>
+                <a href="inheritance.html"><span class="lesson-number">34</span> Inheritance</a>
+                <a href="polymorphism.html"><span class="lesson-number">35</span> Polymorphism</a>
+                <a href="abstraction.html"><span class="lesson-number">36</span> Abstraction</a>
+                <a href="function-templates.html"><span class="lesson-number">37</span> Func Templates</a>
+                <a href="class-templates.html"><span class="lesson-number">38</span> Class Templates</a>
+                <a href="vectors.html"><span class="lesson-number">39</span> Vectors</a>
+                <a href="lists-deques.html"><span class="lesson-number">40</span> Lists/Deques</a>
+                <a href="maps-sets.html"><span class="lesson-number">41</span> Maps/Sets</a>
+                <a href="stl-algorithms.html"><span class="lesson-number">42</span> STL Algorithms</a>
+                <a href="iterators.html"><span class="lesson-number">43</span> Iterators</a>
+                <a href="exceptions.html"><span class="lesson-number">44</span> Exceptions</a>
+                <a href="file-io.html"><span class="lesson-number">45</span> File I/O</a>
+                <a href="namespaces.html"><span class="lesson-number">46</span> Namespaces</a>
+                <a href="smart-pointers.html"><span class="lesson-number">47</span> Smart Pointers</a>
+                <a href="move-semantics.html"><span class="lesson-number">48</span> Move Semantics</a>
+                <a href="multithreading.html"><span class="lesson-number">49</span> Multithreading</a>
+                <a href="modern-cpp.html"><span class="lesson-number">50</span> Modern C++</a>
+                <a href="debugging.html"><span class="lesson-number">51</span> Debugging</a>
+                <a href="code-style.html"><span class="lesson-number">52</span> Code Style</a>
+                <a href="version-control.html"><span class="lesson-number">53</span> Git</a>
+                <a href="testing.html"><span class="lesson-number">54</span> Testing</a>
+                <a href="projects.html"><span class="lesson-number">55</span> Projects</a>
+            </nav>
+            <div class="sidebar-progress">
+                <span class="progress-text">Progress: 15 / 55</span>
+                <div class="progress-bar"><div class="progress-fill" data-progress="27" style="width:27%"></div></div>
+            </div>
+        </aside>
+
+        <main class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> &rsaquo; <a href="index.html">C++</a> &rsaquo; Nested Loops
+                </div>
+                <h1>15. Nested Loops</h1>
+                <div class="tutorial-meta">
+                    <span>&#128218; Lesson 15 of 55</span>
+                    <span>&#9201; 18 min read</span>
+                    <span>&#127793; Beginner</span>
+                </div>
+            </div>
+
+            <div class="content-body">
+
+                <h2>What Are Nested Loops?</h2>
+                <p>A <strong>nested loop</strong> is a loop placed inside another loop. The inner loop completes all its iterations for each single iteration of the outer loop. This creates a powerful mechanism for working with multi-dimensional data, generating patterns, and solving complex problems.</p>
+                <p>In this lesson you will learn:</p>
+                <ul>
+                    <li>How nested loops work &mdash; execution flow and iteration counts</li>
+                    <li>Nested <code>for</code> loops, <code>while</code> loops, and mixing loop types</li>
+                    <li>Star and number patterns</li>
+                    <li>Working with 2D arrays using nested loops</li>
+                    <li>Multiplication tables</li>
+                    <li>Performance considerations and time complexity</li>
+                    <li>Common mistakes and best practices</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>If the outer loop runs <strong>m</strong> times and the inner loop runs <strong>n</strong> times, the total number of inner loop body executions is <strong>m &times; n</strong>.</p>
+                </div>
+
+                <h2>Basic Nested for Loop</h2>
+                <p>The most common form of nested loop uses two <code>for</code> loops:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 1; i &lt;= 3; i++) {           // Outer loop
+        for (int j = 1; j &lt;= 4; j++) {       // Inner loop
+            cout &lt;&lt; "(" &lt;&lt; i &lt;&lt; "," &lt;&lt; j &lt;&lt; ") ";
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>(1,1) (1,2) (1,3) (1,4)
+(2,1) (2,2) (2,3) (2,4)
+(3,1) (3,2) (3,3) (3,4)</pre></div>
+
+                <p>The outer loop runs 3 times, the inner loop runs 4 times for each outer iteration, so the body executes 3 &times; 4 = 12 times total.</p>
+
+                <h2>How Nested Loops Execute</h2>
+                <p>Understanding the execution flow is crucial:</p>
+                <ol>
+                    <li>Outer loop starts with <code>i = 1</code></li>
+                    <li>Inner loop runs completely: <code>j = 1, 2, 3, 4</code></li>
+                    <li>Outer loop increments: <code>i = 2</code></li>
+                    <li>Inner loop runs completely again: <code>j = 1, 2, 3, 4</code></li>
+                    <li>Outer loop increments: <code>i = 3</code></li>
+                    <li>Inner loop runs completely again: <code>j = 1, 2, 3, 4</code></li>
+                    <li>Outer loop condition fails, both loops end</li>
+                </ol>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>Think of nested loops like a clock: the inner loop is like the minute hand (moves fast), and the outer loop is like the hour hand (moves slow). The minute hand completes a full rotation for each step of the hour hand.</p>
+                </div>
+
+                <h2>Multiplication Table</h2>
+                <p>A classic example of nested loops:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Multiplication Table (1-10):" &lt;&lt; endl;
+    cout &lt;&lt; "    ";
+    for (int j = 1; j &lt;= 10; j++) {
+        cout &lt;&lt; setw(4) &lt;&lt; j;
+    }
+    cout &lt;&lt; endl &lt;&lt; "   " &lt;&lt; string(40, '-') &lt;&lt; endl;
+
+    for (int i = 1; i &lt;= 10; i++) {
+        cout &lt;&lt; setw(2) &lt;&lt; i &lt;&lt; " |";
+        for (int j = 1; j &lt;= 10; j++) {
+            cout &lt;&lt; setw(4) &lt;&lt; i * j;
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <h2>Star Patterns</h2>
+                <p>Nested loops are commonly used to print patterns. The outer loop controls rows, the inner loop controls columns.</p>
+
+                <h3>Right Triangle</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int rows = 5;
+    for (int i = 1; i &lt;= rows; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            cout &lt;&lt; "* ";
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>*
+* *
+* * *
+* * * *
+* * * * *</pre></div>
+
+                <h3>Inverted Triangle</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int rows = 5;
+    for (int i = rows; i &gt;= 1; i--) {
+        for (int j = 1; j &lt;= i; j++) {
+            cout &lt;&lt; "* ";
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>* * * * *
+* * * *
+* * *
+* *
+*</pre></div>
+
+                <h3>Pyramid Pattern</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int rows = 5;
+    for (int i = 1; i &lt;= rows; i++) {
+        // Print leading spaces
+        for (int j = 1; j &lt;= rows - i; j++) {
+            cout &lt;&lt; " ";
+        }
+        // Print stars
+        for (int k = 1; k &lt;= 2 * i - 1; k++) {
+            cout &lt;&lt; "*";
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>    *
+   ***
+  *****
+ *******
+*********</pre></div>
+
+                <h3>Diamond Pattern</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int n = 5;
+    // Upper half
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= n - i; j++) cout &lt;&lt; " ";
+        for (int j = 1; j &lt;= 2 * i - 1; j++) cout &lt;&lt; "*";
+        cout &lt;&lt; endl;
+    }
+    // Lower half
+    for (int i = n - 1; i &gt;= 1; i--) {
+        for (int j = 1; j &lt;= n - i; j++) cout &lt;&lt; " ";
+        for (int j = 1; j &lt;= 2 * i - 1; j++) cout &lt;&lt; "*";
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <h3>Number Triangle</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int rows = 5;
+    for (int i = 1; i &lt;= rows; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            cout &lt;&lt; j &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5</pre></div>
+
+                <h2>Nested while Loops</h2>
+                <p>You can nest <code>while</code> loops just like <code>for</code> loops:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 1;
+    while (i &lt;= 3) {
+        int j = 1;
+        while (j &lt;= 4) {
+            cout &lt;&lt; i * j &lt;&lt; "\t";
+            j++;
+        }
+        cout &lt;&lt; endl;
+        i++;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>1	2	3	4
+2	4	6	8
+3	6	9	12</pre></div>
+
+                <div class="tip">
+                    <h3>Tip</h3>
+                    <p>When using nested <code>while</code> loops, always reset the inner loop counter before the inner loop starts. Forgetting this is a common bug that results in the inner loop executing only during the first outer iteration.</p>
+                </div>
+
+                <h2>Mixing Loop Types</h2>
+                <p>You can mix different loop types in nested structures:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // for loop outside, while loop inside
+    for (int row = 1; row &lt;= 3; row++) {
+        int col = 1;
+        while (col &lt;= row) {
+            cout &lt;&lt; col &lt;&lt; " ";
+            col++;
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <h2>Working with 2D Arrays</h2>
+                <p>Nested loops are the standard way to traverse 2D arrays:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int matrix[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    // Print the matrix
+    for (int i = 0; i &lt; 3; i++) {
+        for (int j = 0; j &lt; 4; j++) {
+            cout &lt;&lt; matrix[i][j] &lt;&lt; "\t";
+        }
+        cout &lt;&lt; endl;
+    }
+
+    // Find the sum of all elements
+    int sum = 0;
+    for (int i = 0; i &lt; 3; i++) {
+        for (int j = 0; j &lt; 4; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; endl;  // 78
+    return 0;
+}</pre></div>
+
+                <h2>Three Levels of Nesting</h2>
+                <p>You can nest more than two levels, though it becomes harder to read:</p>
+
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // 3D coordinates
+    for (int x = 0; x &lt; 2; x++) {
+        for (int y = 0; y &lt; 2; y++) {
+            for (int z = 0; z &lt; 2; z++) {
+                cout &lt;&lt; "(" &lt;&lt; x &lt;&lt; "," &lt;&lt; y &lt;&lt; "," &lt;&lt; z &lt;&lt; ") ";
+            }
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>(0,0,0) (0,0,1) (0,1,0) (0,1,1)
+(1,0,0) (1,0,1) (1,1,0) (1,1,1)</pre></div>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Avoid nesting more than 3 levels deep. If you need deeper nesting, consider extracting inner loops into separate functions for readability.</p>
+                </div>
+
+                <h2>Practical Examples</h2>
+
+                <h3>Example 1: Bubble Sort</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = 5;
+
+    for (int i = 0; i &lt; n - 1; i++) {
+        for (int j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    cout &lt;&lt; "Sorted: ";
+    for (int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <p><strong>Output:</strong></p>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>Sorted: 11 12 22 25 64</pre></div>
+
+                <h3>Example 2: Finding All Prime Numbers (Sieve-like)</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int limit = 50;
+    cout &lt;&lt; "Primes up to " &lt;&lt; limit &lt;&lt; ": ";
+
+    for (int n = 2; n &lt;= limit; n++) {
+        bool isPrime = true;
+        for (int d = 2; d * d &lt;= n; d++) {
+            if (n % d == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) cout &lt;&lt; n &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    return 0;
+}</pre></div>
+
+                <h3>Example 3: Matrix Transpose</h3>
+                <div class="code-block"><button class="code-copy-btn">Copy</button><pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int matrix[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int transpose[3][3];
+
+    for (int i = 0; i &lt; 3; i++) {
+        for (int j = 0; j &lt; 3; j++) {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+
+    cout &lt;&lt; "Transpose:" &lt;&lt; endl;
+    for (int i = 0; i &lt; 3; i++) {
+        for (int j = 0; j &lt; 3; j++) {
+            cout &lt;&lt; transpose[i][j] &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}</pre></div>
+
+                <h2>Performance Considerations</h2>
+                <p>Nested loops multiply the work done:</p>
+                <ul>
+                    <li><strong>Single loop</strong> (n iterations): O(n) &mdash; linear time</li>
+                    <li><strong>Two nested loops</strong> (n &times; n): O(n&sup2;) &mdash; quadratic time</li>
+                    <li><strong>Three nested loops</strong> (n &times; n &times; n): O(n&sup3;) &mdash; cubic time</li>
+                </ul>
+
+                <div class="key-point">
+                    <h3>Key Point</h3>
+                    <p>Be mindful of the total number of iterations. A nested loop with 1000 &times; 1000 iterations runs 1,000,000 times. With three levels, it becomes 1,000,000,000 &mdash; which can take seconds or minutes to complete.</p>
+                </div>
+
+                <h2>Common Mistakes</h2>
+                <ul>
+                    <li><strong>Using the same variable</strong> for both loops &mdash; this causes the outer loop variable to be overwritten.</li>
+                    <li><strong>Forgetting to reset</strong> the inner counter in <code>while</code> loops.</li>
+                    <li><strong>Off-by-one errors</strong> &mdash; carefully match loop bounds to your intended range.</li>
+                    <li><strong>Too many levels</strong> &mdash; more than 3 levels of nesting hurts readability.</li>
+                </ul>
+
+                <h2>Summary</h2>
+                <ul>
+                    <li>A <strong>nested loop</strong> is a loop inside another loop.</li>
+                    <li>The inner loop completes all iterations for each outer loop iteration.</li>
+                    <li>Total iterations = outer count &times; inner count.</li>
+                    <li>Nested loops are essential for patterns, 2D arrays, sorting, and many algorithms.</li>
+                    <li>You can mix <code>for</code>, <code>while</code>, and <code>do-while</code> in nesting.</li>
+                    <li><code>break</code> and <code>continue</code> only affect the innermost loop.</li>
+                    <li>Be mindful of performance &mdash; each nesting level multiplies execution time.</li>
+                    <li>Keep nesting to 3 levels or fewer for readability.</li>
+                </ul>
+
+            </div>
+
+            <div class="video-container">
+                <h2>Video Lecture</h2>
+                <iframe src="https://www.youtube.com/embed/W1DnPsudo6c" title="C++ Nested Loops" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+            <div class="go-for-quiz-wrapper">
+                <button class="go-for-quiz-btn" id="goForQuizBtn"><span class="quiz-btn-icon">&#128221;</span> GO FOR QUIZ</button>
+            </div>
+
+            <section class="quiz-section" id="quizPanel">
+                <h2>&#127941; Test Your Knowledge</h2>
+                <div class="quiz-scoreboard"></div>
+                <p class="quiz-counter">Loading questions...</p>
+                <p class="quiz-progress-indicator"></p>
+                <div id="quizPool"></div>
+                <button class="submit-quiz">Submit Answers</button>
+                <button class="next-quiz btn btn-secondary">&#128260; Try Another Quiz</button>
+            </section>
+
+            <script type="application/json" id="quizData">
+            [
+                {"q":"What is a nested loop?","o":["A loop that runs only once","A loop placed inside another loop","A loop without a condition","A recursive function"],"a":1},
+                {"q":"If the outer loop runs 5 times and the inner loop runs 3 times, how many total inner iterations occur?","o":["8","15","5","3"],"a":1},
+                {"q":"What is the output? for(int i=0;i<2;i++){for(int j=0;j<3;j++){cout<<'*';}}","o":["***","******","**","*****"],"a":1},
+                {"q":"In a nested loop, which loop completes all its iterations first?","o":["The outer loop","The inner loop","Both at the same time","Neither"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=1;j<=i;j++){cout<<j;}cout<<endl;}","o":["1\\n12\\n123","123\\n123\\n123","1\\n1\\n1","111\\n222\\n333"],"a":0},
+                {"q":"What is the time complexity of two nested loops each running n times?","o":["O(n)","O(n^2)","O(2n)","O(n log n)"],"a":1},
+                {"q":"What pattern does this print? for(int i=5;i>=1;i--){for(int j=1;j<=i;j++){cout<<'*';}cout<<endl;}","o":["Right triangle growing","Inverted right triangle","Pyramid","Diamond"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=1;j<=3;j++){cout<<i*j<<' ';}cout<<endl;}","o":["1 2 3\\n2 4 6\\n3 6 9","1 1 1\\n2 2 2\\n3 3 3","1 2 3\\n1 2 3\\n1 2 3","3 6 9\\n2 4 6\\n1 2 3"],"a":0},
+                {"q":"What does break do inside the inner loop of a nested loop?","o":["Exits both loops","Exits only the inner loop","Exits only the outer loop","Pauses the program"],"a":1},
+                {"q":"What does continue do inside the inner loop of a nested loop?","o":["Skips both loops","Skips the current iteration of the inner loop","Skips the outer loop iteration","Restarts both loops"],"a":1},
+                {"q":"Which of the following is used to traverse a 2D array?","o":["Single for loop","Nested for loops","While loop only","Switch statement"],"a":1},
+                {"q":"What is the output? for(int i=0;i<3;i++){for(int j=0;j<3;j++){if(i==j)cout<<1;else cout<<0;}cout<<endl;}","o":["100\\n010\\n001","111\\n111\\n111","000\\n000\\n000","100\\n100\\n100"],"a":0},
+                {"q":"How many times does the inner statement execute? for(int i=0;i<4;i++){for(int j=0;j<5;j++){x++;}}","o":["9","20","4","5"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=4;i++){for(int j=1;j<=4-i;j++){cout<<' ';}for(int k=1;k<=i;k++){cout<<'*';}cout<<endl;}","o":["Right-aligned triangle","Left-aligned triangle","Pyramid","Rectangle"],"a":0},
+                {"q":"Can you nest a for loop inside a while loop?","o":["No","Yes","Only in C++17","Only with do-while"],"a":1},
+                {"q":"What common mistake occurs with nested while loops?","o":["Using break","Forgetting to reset the inner loop counter","Using cout","Using endl"],"a":1},
+                {"q":"What is the output? int c=0;for(int i=0;i<3;i++){for(int j=0;j<3;j++){c++;}}cout<<c;","o":["6","9","3","12"],"a":1},
+                {"q":"What is the maximum recommended nesting depth for readability?","o":["1 level","2 levels","3 levels","10 levels"],"a":2},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=3;j>=i;j--){cout<<j<<' ';}cout<<endl;}","o":["3 2 1\\n3 2\\n3","1 2 3\\n2 3\\n3","3 2 1\\n2 1\\n1","1\\n1 2\\n1 2 3"],"a":0},
+                {"q":"What type of algorithm commonly uses nested loops?","o":["Binary search","Bubble sort","Linear search","Hashing"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=5;i++){for(int j=1;j<=5;j++){if(j<=i)cout<<'*';else cout<<' ';}cout<<endl;}","o":["Left-aligned star triangle","Right-aligned star triangle","Full rectangle","Pyramid"],"a":0},
+                {"q":"What is the output? for(int i=0;i<2;i++){for(int j=0;j<2;j++){for(int k=0;k<2;k++){cout<<i<<j<<k<<' ';}}}","o":["000 001 010 011 100 101 110 111","00 01 10 11","0 1 2 3 4 5 6 7","000 010 100 110"],"a":0},
+                {"q":"How many iterations in 3 nested loops of n=10 each?","o":["30","100","1000","10"],"a":2},
+                {"q":"What is the output? for(int i=5;i>=1;i--){for(int j=1;j<=5-i;j++){cout<<' ';}for(int k=1;k<=i;k++){cout<<'*';}cout<<endl;}","o":["Right-aligned inverted triangle","Left-aligned triangle","Pyramid","Diamond"],"a":0},
+                {"q":"What happens if you use the same variable name for both loops?","o":["Compile error in C++","The inner variable shadows the outer variable","Infinite loop","Nothing special"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=4;i++){for(int j=1;j<=4;j++){if(i==1||i==4||j==1||j==4)cout<<'*';else cout<<' ';}cout<<endl;}","o":["Hollow rectangle","Solid rectangle","Triangle","Diamond"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=1;j<=3;j++){cout<<i+j<<' ';}cout<<endl;}","o":["2 3 4\\n3 4 5\\n4 5 6","1 2 3\\n2 3 4\\n3 4 5","1 1 1\\n2 2 2\\n3 3 3","2 3 4\\n2 3 4\\n2 3 4"],"a":0},
+                {"q":"What is the output? int sum=0;for(int i=1;i<=3;i++){for(int j=1;j<=3;j++){sum+=i*j;}}cout<<sum;","o":["36","18","45","9"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=5;i++){for(int j=1;j<=2*i-1;j++){cout<<'*';}cout<<endl;}","o":["Left-aligned expanding triangle","Pyramid without spaces","Right triangle","Inverted triangle"],"a":1},
+                {"q":"What is the output? for(int i=0;i<3;i++){for(int j=0;j<3;j++){if(j==1)break;cout<<i<<j<<' ';}}","o":["00 10 20","00 01 02 10 11 12 20 21 22","00 10 20 01 11 21","00 02 10 12 20 22"],"a":0},
+                {"q":"What is the output? for(int i=0;i<3;i++){for(int j=0;j<3;j++){if(j==1)continue;cout<<i<<j<<' ';}}","o":["00 02 10 12 20 22","00 10 20","00 01 02 10 11 12","00 01 10 11 20 21"],"a":0},
+                {"q":"What is the output? for(int i='A';i<='C';i++){for(int j=1;j<=3;j++){cout<<(char)i<<j<<' ';}cout<<endl;}","o":["A1 A2 A3\\nB1 B2 B3\\nC1 C2 C3","ABC\\nABC\\nABC","123\\n123\\n123","A B C\\n1 2 3"],"a":0},
+                {"q":"What is the output? int n=4;for(int i=1;i<=n;i++){for(int j=1;j<=n;j++){cout<<(i==j?'X':'.');}cout<<endl;}","o":["X...\\n.X..\\n..X.\\n...X","XXXX\\n....\\n....\\n....","....\\n....\\n....\\nXXXX","X..X\\n.XX.\\n.XX.\\nX..X"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=4;i++){for(int j=i;j<=4;j++){cout<<j;}cout<<endl;}","o":["1234\\n234\\n34\\n4","1\\n12\\n123\\n1234","4\\n34\\n234\\n1234","1111\\n2222\\n3333\\n4444"],"a":0},
+                {"q":"What pattern does a double nested loop from 1 to n with inner limit i create (printing stars)?","o":["Rectangle","Right triangle","Inverted triangle","Pyramid"],"a":1},
+                {"q":"How do you print a lower-left triangle?","o":["Inner loop from 1 to i","Inner loop from 1 to n","Inner loop from i to n","Inner loop from n to 1"],"a":0},
+                {"q":"How do you print an upper-left triangle?","o":["Inner loop from 1 to i","Outer from n to 1, inner from 1 to i","Inner loop from i to n","Only use one loop"],"a":1},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=1;j<=5;j++){if(j>i&&j<6-i)cout<<' ';else cout<<'*';}cout<<endl;}","o":["*   *\\n** **\\n*****","*****\\n ** \\n  *","*\\n**\\n***","  *\\n ***\\n*****"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=1;j<=3;j++){cout<<(i<=j?'*':' ');}cout<<endl;}","o":["***\\n **\\n  *"," **\\n  *\\n   ","*\\n**\\n***","***\\n***\\n***"],"a":0},
+                {"q":"What is a common use of nested loops in image processing?","o":["Reading files","Iterating over pixels (rows and columns)","Sorting colors","Compressing images"],"a":1},
+                {"q":"What is the output? int a[2][3]={{1,2,3},{4,5,6}};int s=0;for(int i=0;i<2;i++){for(int j=0;j<3;j++){s+=a[i][j];}}cout<<s;","o":["21","15","6","10"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=5;i++){for(int j=5;j>=1;j--){if(j==i)cout<<j;else cout<<' ';}cout<<endl;}","o":["1 on row 1 col 5, 2 on row 2 col 4, etc (diagonal from bottom-left to top-right)","12345","54321","Identity matrix"],"a":0},
+                {"q":"How many total iterations for: for(int i=1;i<=n;i++){for(int j=1;j<=i;j++){...}}?","o":["n^2","n*(n+1)/2","n","2n"],"a":1},
+                {"q":"What is the output? for(int i=0;i<4;i++){for(int j=0;j<4;j++){cout<<((i+j)%2==0?'#':' ');}cout<<endl;}","o":["Checkerboard pattern","All #","All spaces","Diagonal pattern"],"a":0},
+                {"q":"What is a triple nested loop's time complexity with each running n times?","o":["O(n)","O(n^2)","O(n^3)","O(3n)"],"a":2},
+                {"q":"What is the output? for(int i=1;i<=5;i++){for(int j=1;j<=5;j++){if(i==1||i==5||j==1||j==5)cout<<i*j;else cout<<' ';}cout<<endl;}","o":["Border values of multiplication table","Full multiplication table","Empty rectangle","Diagonal values only"],"a":0},
+                {"q":"What is the output? for(int i=0;i<3;i++){for(int j=2;j>=0;j--){cout<<i+j<<' ';}cout<<endl;}","o":["2 1 0\\n3 2 1\\n4 3 2","0 1 2\\n1 2 3\\n2 3 4","2 2 2\\n1 1 1\\n0 0 0","0 0 0\\n1 1 1\\n2 2 2"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=4;i++){for(int j=1;j<=i;j++){cout<<i;}cout<<endl;}","o":["1\\n22\\n333\\n4444","1\\n12\\n123\\n1234","1234\\n234\\n34\\n4","1111\\n222\\n33\\n4"],"a":0},
+                {"q":"What is the output? int c=0;for(int i=0;i<5;i++){for(int j=i;j<5;j++){c++;}}cout<<c;","o":["15","25","10","20"],"a":0},
+                {"q":"What is the output? for(int i=1;i<=3;i++){for(int j=1;j<=3;j++){if(i==j)continue;cout<<i<<j<<' ';}}","o":["12 13 21 23 31 32","11 22 33","12 21","13 31 23 32"],"a":0}
+            ]
+            </script>
+
+            <div class="tutorial-nav">
+                <a href="break-continue.html" class="prev-lesson">
+                    <span class="nav-label">&lsaquo; Previous Lesson</span>
+                    <span class="nav-title">Break &amp; Continue</span>
+                </a>
+                <a href="functions.html" class="next-lesson">
+                    <span class="nav-label">Next Lesson &rsaquo;</span>
+                    <span class="nav-title">Functions</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><div class="logo-icon">&lt;/&gt;</div><span>CodeVerse</span></a>
+                <p>Free, open-source programming tutorials for everyone.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Languages</h4>
+                <a href="../cpp/index.html">C++</a>
+                <a href="../python/index.html">Python</a>
+                <a href="../javascript/index.html">JavaScript</a>
+                <a href="../java/index.html">Java</a>
+            </div>
+            <div class="footer-column">
+                <h4>More</h4>
+                <a href="../csharp/index.html">C#</a>
+                <a href="../webdev/index.html">Web Dev</a>
+                <a href="../rust/index.html">Rust</a>
+                <a href="../go/index.html">Go</a>
+            </div>
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <a href="../about.html">About</a>
+                <a href="../resources.html">Resources</a>
+                <a href="https://github.com/mAB-Barket/Code-Verse" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025-2026 CodeVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
